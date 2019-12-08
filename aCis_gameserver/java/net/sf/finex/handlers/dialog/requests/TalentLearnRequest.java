@@ -50,6 +50,7 @@ public class TalentLearnRequest implements IDialogRequest {
 		}
 		
 		player.sendPacket(new ConfirmDlg(SystemMessageId.DO_YOU_REALY_WANT_TO_LEARN_S1_TALENT)
+				.addTime(30000)
 				.addString(talent.getName())
 				.addRequesterId(talent.getId()));
 		return Boolean.TRUE;

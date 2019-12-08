@@ -10136,6 +10136,16 @@ public final class Player extends Playable
 		return false;
 	}
 	
+	public boolean hasTalent(SkillTable.FrequentTalent talentEnum) {
+		for(int i = 0; i < talentList.size(); i++) {
+			if(talentList.get(i).getId() == talentEnum.getId()) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 	public final void removeClassComponent() {
 		final AbstractClassComponent classComponent = getComponent(getClassId().getClassComponent());
 		if(classComponent == null) {

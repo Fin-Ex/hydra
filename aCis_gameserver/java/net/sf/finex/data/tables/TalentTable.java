@@ -19,6 +19,8 @@ import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.finex.StorageTable;
 import net.sf.finex.data.TalentData;
+import net.sf.l2j.gameserver.data.SkillTable;
+import net.sf.l2j.gameserver.model.holder.SkillUseHolder;
 
 /**
  *
@@ -83,7 +85,6 @@ public class TalentTable extends StorageTable {
 				return data;
 			}
 		}
-
 		return null;
 	}
 }

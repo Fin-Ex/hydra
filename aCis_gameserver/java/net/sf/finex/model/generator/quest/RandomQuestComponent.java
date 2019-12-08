@@ -23,46 +23,46 @@ public class RandomQuestComponent extends AbstractComponent {
 	public RandomQuestComponent(Player player) {
 		super(player);
 	}
-	
+
 	public boolean hasQuest() {
 		return quest != null;
 	}
-	
+
 	public boolean hasPenalty() {
 		return timeStamp != 0 && timeStamp > System.currentTimeMillis();
 	}
-	
+
 	/**
-	 * TODO: Shareing quests between players in party
-	 * checks questPass by party members if they have a quest
-	 * Share the current accepted quest with others in party.
+	 * TODO: Shareing quests between players in party checks questPass by party
+	 * members if they have a quest Share the current accepted quest with others
+	 * in party.
 	 */
 	public void share() {
-		if(!getGameObject().isInParty()) {
+		if (!getGameObject().isInParty()) {
 			getGameObject().sendMessage("Can't share without party.");
 			return;
 		}
-		
-		for(Player player : getGameObject().getParty().getMembers()) {
+
+		for (Player player : getGameObject().getParty().getMembers()) {
 			final RandomQuestComponent comp = player.getComponent(RandomQuestComponent.class);
-			if(comp.hasQuest()) {
+			if (comp.hasQuest()) {
 				getGameObject().sendMessage("Player " + player.getName() + " already has a quest.");
 				continue;
 			}
-			
-			if(player.isDead()) {
+
+			if (player.isDead()) {
 				continue;
 			}
-			
+
 			//player.sendPacket(new ConfirmDlg(SystemMessage.getSystemMessage(SystemMessageId.S1_SHARE_S2_QUEST_ACCEPT)).addCharName(getGameObject()).addString(quest.getName()));
 		}
 	}
-	
+
 	@Override
 	public Player getGameObject() {
 		return super.getGameObject().getPlayer();
 	}
-	
+
 	@Override
 	public void onAdd() {
 		restore();

@@ -8,3 +8,5 @@ dist
 .project
 .settings/
 animations.txt
+/nbproject/private/
+/build/

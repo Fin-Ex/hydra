@@ -14,18 +14,21 @@ import lombok.Getter;
  */
 public class RandomQuestIdFactory {
 
-	@Getter private static final RandomQuestIdFactory instance = new RandomQuestIdFactory();
-	@Getter private final AtomicInteger id = new AtomicInteger(0);
+	@Getter
+	private static final RandomQuestIdFactory instance = new RandomQuestIdFactory();
+	@Getter
+	private final AtomicInteger id = new AtomicInteger(0);
 
 	/**
 	 * Generate next id for quest.
+	 *
 	 * @return incremenetAndGet (id)
 	 */
 	public int nextId() {
-		if(id.get() >= Integer.MAX_VALUE || id.get() < 0) {
+		if (id.get() >= Integer.MAX_VALUE || id.get() < 0) {
 			id.set(0);
 		}
-		
+
 		return id.incrementAndGet();
 	}
 }

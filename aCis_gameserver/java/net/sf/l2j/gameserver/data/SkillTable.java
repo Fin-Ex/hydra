@@ -3,6 +3,7 @@ package net.sf.l2j.gameserver.data;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import lombok.Getter;
 import net.sf.l2j.gameserver.model.base.Experience;
 import net.sf.l2j.gameserver.skills.DocumentSkill;
 import net.sf.l2j.gameserver.skills.L2Skill;
@@ -214,6 +215,17 @@ public class SkillTable {
 		public L2Skill getSkill() {
 			return _skill;
 		}
+	}
+	
+	public static enum FrequentTalent {
+		DUAL_SWORD_MASTERY(8),
+		;
+		@Getter private final int id;
+
+		private FrequentTalent(int id) {
+			this.id = id;
+		}
+		
 	}
 
 	private static class SingletonHolder {

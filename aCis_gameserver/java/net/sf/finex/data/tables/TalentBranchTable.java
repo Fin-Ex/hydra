@@ -129,6 +129,7 @@ public final class TalentBranchTable extends StorageTable {
 			}
 			sb.append("</table></center></body></html>");
 			htmlBuilder.put(classId, sb);
+			
 		}
 	}
 	

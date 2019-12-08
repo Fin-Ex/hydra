@@ -26,15 +26,18 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 @Slf4j
 public class RandomQuestHtmlManager {
 
-	@Getter private static final RandomQuestHtmlManager instance = new RandomQuestHtmlManager();
-	@Getter private final Map<ETownType, Map<EGradeType, StringBuilder>> questListTable = new HashMap<>();
-	@Getter private final Map<Integer, String> questDescription = new HashMap<>();
+	@Getter
+	private static final RandomQuestHtmlManager instance = new RandomQuestHtmlManager();
+	@Getter
+	private final Map<ETownType, Map<EGradeType, StringBuilder>> questListTable = new HashMap<>();
+	@Getter
+	private final Map<Integer, String> questDescription = new HashMap<>();
 
 	public void build() {
 		buildQuestList();
 		buildQuestDescription();
 	}
-	
+
 	public void buildQuestList() {
 		questListTable.clear();
 		for (ETownType town : ETownType.VALUES) {
@@ -70,7 +73,7 @@ public class RandomQuestHtmlManager {
 					descrBuilder.append("<html><title>").append(questData.getName()).append(" (").append(grade.getMinLevel()).append("~").append(grade.getMaxLevel())
 							.append("</title><body><br>");
 					descrBuilder.append(questData.getDescription());
-					
+
 					// build rewards
 					descrBuilder.append("<br><center><font color=LEVEL>Rewards</font>");
 					descrBuilder.append("<table width=100><tr>");
@@ -84,7 +87,7 @@ public class RandomQuestHtmlManager {
 						descrBuilder.append("<td><img src=\"v1c01.etc_quest_add_reward_i00\" width=32 height=32></td>");
 					}
 					descrBuilder.append("</tr></table></center>");
-					
+
 					descrBuilder.append("</body></html>");
 					questDescription.put(questData.getId(), descrBuilder.toString());
 				}
@@ -94,19 +97,19 @@ public class RandomQuestHtmlManager {
 
 	private StringBuilder buildRewardDescr(StringBuilder sb, RandomQuestData quest) {
 		sb.append("<table><tr>");
-		if(quest.getExp() > 0) {
+		if (quest.getExp() > 0) {
 			sb.append("<td><img src=\"v1c01.etc_exp_point_i00\" width=32 height=32></td>");
 		}
-		if(quest.getSp() > 0) {
+		if (quest.getSp() > 0) {
 			sb.append("<td><img src=\"v1c01.etc_sp_point_i00\" width=32 height=32></td>");
 		}
-		if(quest.getRewards() != null) {
+		if (quest.getRewards() != null) {
 			sb.append("<td><img src=\"v1c01.etc_quest_add_reward_i00\" width=32 height=32></td>");
 		}
 		sb.append("</tr></table>");
 		return sb;
-	} 
-	
+	}
+
 	/**
 	 * Show quests in list in one HTML window.
 	 *
@@ -149,7 +152,7 @@ public class RandomQuestHtmlManager {
 		player.sendPacket(html);
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
-	
+
 	@Data
 	public static class QuestHtmlData {
 

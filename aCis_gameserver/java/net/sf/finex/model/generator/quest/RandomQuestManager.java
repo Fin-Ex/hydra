@@ -69,22 +69,22 @@ public class RandomQuestManager implements Runnable {
 	@Getter private static final RandomQuestManager instance = new RandomQuestManager();
 	@Getter private final Map<ETownType, Map<EGradeType, List<RandomQuestData>>> holder = new HashMap<>();
 	@Getter private final EventBus eventBus = new EventBus();
-	
+
 	// Monster holders
 	@Getter private final Map<Integer, List<NpcTemplate>> bosses = new HashMap<>();
 	@Getter private final Map<Integer, List<NpcTemplate>> monsters = new HashMap<>();
 	@Getter private final List<NpcTemplate> npcs = new ArrayList<>();
-	
+
 	private final ReentrantLock locker = new ReentrantLock();
 	private LocalDateTime nextGeneration;
 
 	public RandomQuestManager() {
 		// set new next generate time
 		nextGeneration = LocalDateTime.of(LocalDate.now(), Config.RANDOM_QUEST_RESET_TIME);
-		if(LocalDateTime.now().isAfter(nextGeneration)) {
+		if (LocalDateTime.now().isAfter(nextGeneration)) {
 			nextGeneration = nextGeneration.plusDays(1);
 		}
-		
+
 		// create all collections
 		collectNpcs();
 		eventBus.subscribe().cast(OnLogout.class).forEach(this::onLogout);
@@ -94,25 +94,25 @@ public class RandomQuestManager implements Runnable {
 
 	private void onLogout(OnLogout e) {
 		final RandomQuestComponent component = e.getPlayer().getComponent(RandomQuestComponent.class);
-		if(component.hasQuest()) {
+		if (component.hasQuest()) {
 			cancelQuest(e.getPlayer());
 		}
 	}
-	
+
 	public boolean isEmpty() {
 		return holder.isEmpty();
 	}
-	
+
 	public RandomQuestData getQuest(ETownType town, EGradeType grade, int id) {
-		for(RandomQuestData q : holder.get(town).get(grade)) {
-			if(q.getId() == id) {
+		for (RandomQuestData q : holder.get(town).get(grade)) {
+			if (q.getId() == id) {
 				return q;
 			}
 		}
-		
+
 		return null;
 	}
-	
+
 	/**
 	 * Generating random quests by RandomQuestGenerator.class and add generated
 	 * quests to the boards by HTML text. Every
@@ -153,7 +153,7 @@ public class RandomQuestManager implements Runnable {
 	}
 
 	/**
-	 * Give the generated quest from holder to player.Player at one moment can
+	 * Give the generated quest from holder to player. Player at one moment can
 	 * take only 1 quest mission with quest special timer.
 	 *
 	 * @param quest random quest data for giving
@@ -175,16 +175,16 @@ public class RandomQuestManager implements Runnable {
 			player.sendPacket(SystemMessageId.YOUR_LEVEL_TO_HIGH);
 			return;
 		}
-		
+
 		final RandomQuestComponent component = player.getComponent(RandomQuestComponent.class);
-		if(component.hasPenalty()) {
+		if (component.hasPenalty()) {
 			player.sendPacket(SystemMessageId.YOU_HAVE_A_PENALTY_FOR_TAKE_A_QUEST);
 			return;
 		}
-		
+
 		locker.lock();
 		try {
-			if(quest.getType().getHandler().onGetQuest(quest, player, npc)) {
+			if (quest.getType().getHandler().onGetQuest(quest, player, npc)) {
 				quest.setOwnerId(player.getObjectId());
 				quest.setDone(false);
 				quest.setCounter(0);
@@ -209,18 +209,18 @@ public class RandomQuestManager implements Runnable {
 		try {
 			final RandomQuestComponent component = player.getComponent(RandomQuestComponent.class);
 			final RandomQuestData quest = component.getQuest();
-			if(quest == null) {
+			if (quest == null) {
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_QUEST);
 				return;
 			}
-			
+
 			quest.setOwnerId(0);
 			quest.setCounter(0);
 			quest.setDone(false);
-			if(quest.getQuestItems() != null) {
-				for(IntIntHolder itemHolder : quest.getQuestItems()) {
+			if (quest.getQuestItems() != null) {
+				for (IntIntHolder itemHolder : quest.getQuestItems()) {
 					final ItemInstance inst = player.getInventory().getItemByItemId(itemHolder.getId());
-					if(player.getInventory().getItemByItemId(itemHolder.getId()) != null) {
+					if (player.getInventory().getItemByItemId(itemHolder.getId()) != null) {
 						player.getInventory().destroyItem("QuestCancel", inst, player, null);
 					}
 				}
@@ -262,34 +262,34 @@ public class RandomQuestManager implements Runnable {
 			holder.get(quest.getTown()).get(quest.getGrade()).remove(quest);
 			component.setQuest(null);
 			RandomQuestHtmlManager.getInstance().buildQuestList();
-			
+
 			final NpcHtmlMessage html = new NpcHtmlMessage(questBoard.getObjectId());
 			html.setHtml("<html><title>Quest Board</title><body><br>Congradulations!<br1>You have successfully completed the quest!</body></html>");
 			player.sendPacket(html);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			
+
 			player.sendPacket(new PlaySound("ItemSound.quest_finish"));
 		} finally {
 			locker.unlock();
 		}
 	}
-	
+
 	/**
 	 * Collect all npcs in towns.
 	 */
 	private void collectNpcs() {
-		for(NpcTemplate temp : NpcTable.getInstance().getAllNpcs()) {
+		for (NpcTemplate temp : NpcTable.getInstance().getAllNpcs()) {
 			final int level = temp.getLevel();
-			
+
 			// Collect monsters
-			if(temp.isType(Monster.class.getSimpleName()) && !temp.getTitle().startsWith("Quest")) {
+			if (temp.isType(Monster.class.getSimpleName()) && !temp.getTitle().startsWith("Quest")) {
 				List<NpcTemplate> list = monsters.get(level);
 				if (list == null) {
 					monsters.put(level, list = new ArrayList<>());
 				}
 				list.add(temp);
 			}
-			
+
 			// collect raid bosses
 			if (temp.isType(RaidBoss.class.getSimpleName())) {
 				List<NpcTemplate> list = bosses.get(level);
@@ -299,7 +299,7 @@ public class RandomQuestManager implements Runnable {
 
 				list.add(temp);
 			}
-			
+
 			if (temp.isType(ClassMaster.class.getSimpleName())
 					|| temp.isType(Fisherman.class.getSimpleName())
 					|| temp.isType(Folk.class.getSimpleName())
@@ -317,9 +317,8 @@ public class RandomQuestManager implements Runnable {
 					|| temp.isType(VillageMasterMystic.class.getSimpleName())
 					|| temp.isType(VillageMasterOrc.class.getSimpleName())
 					|| temp.isType(VillageMasterPriest.class.getSimpleName())
-					|| temp.isType(WarehouseKeeper.class.getSimpleName())) 
-			{
-				switch(temp.getRace()) {
+					|| temp.isType(WarehouseKeeper.class.getSimpleName())) {
+				switch (temp.getRace()) {
 					case HUMAN:
 					case ORC:
 					case ELVE:
@@ -331,7 +330,7 @@ public class RandomQuestManager implements Runnable {
 			}
 		}
 	}
-	
+
 	public boolean isLocked() {
 		return locker.isLocked();
 	}
@@ -339,7 +338,7 @@ public class RandomQuestManager implements Runnable {
 	@Override
 	public void run() {
 		final LocalDateTime ldt = LocalDateTime.now();
-		if(ldt.isAfter(nextGeneration)) {
+		if (ldt.isAfter(nextGeneration)) {
 			log.info("Start Quest Re-Generating...");
 			nextGeneration = nextGeneration.plusDays(1);
 			generateQuests();

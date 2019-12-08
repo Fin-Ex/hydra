@@ -875,7 +875,7 @@
 		<set name="skillType" val="CONT"/>
 		<set name="operateType" val="OP_TOGGLE"/>
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="35">
+			<effect count="0x7fffffff" name="RiposteStance" time="3" val="35">
 				<!-- Activate effects WITHOUT talent -->
 				<add order="0x40" stat="reflectDamPercent" val="30">
 					<not>
