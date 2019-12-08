@@ -1,0 +1,52 @@
+[
+	{
+		"id":1,
+		"skillId":6000,
+		"name":"Parry",
+		"descr":"Gives the ability to parry the melee and ranged physical attack's, when using a dual swords. With <font color=BDB76B>20% chance</font>, attack will be parryed and you get the \"Prepare Stance\" status for the next 3 seconds."
+	},
+	{
+		"id":2,
+		"skillId":6001,
+		"requiredTalent":1,
+		"name":"Triple Slasher",
+		"descr":"Triple Slash ability is instantly reused after a successful parry."
+	},
+	{
+		"id":3,
+		"skillId":6002,
+		"name":"Dual Wield",
+		"descr":"Dual swords no longer share damage (50% from each), instead of it - they deal <font color=BDB76B>100% damage</font> from each weapon."
+	},
+	{
+		"id":4,
+		"skillId":6003,
+		"name":"Disarm",
+		"descr":"Attack which disarm the righ-hand weapon on enemy. When used in <font color=LEVEL>Parry Stance</font>, it blocks the ability to equip right-hand weapon. <font color=FFA500>Has hidden function.</font>"
+	},
+	{
+		"id":5,
+		"skillId":6004,
+		"name":"Confrontation",
+		"descr":"When 2 or more enemies surrounds you, your attacking abilities increases."
+	},
+	{
+		"id":6,
+		"skillId":6005,
+		"name":"Dual Redirection",
+		"descr":"Ability that allows you to redirect the projectile spell to the selected target of your choice at this point, increasing it's damage by a force that additionally depends from your M.Atk. If there is no selected target, then you will receive damage which increased by your M.Atk."
+	},
+	{
+		"id":7,
+		"skillId":6006,
+		"name":"Heavy Grip",
+		"descr":"Reduce your P.Atk Speed by 15% but increase your resistance agains disarming by 100% and empowers you to summon Two-Handed Dual swords from ancient times in your both hands! <font color=FFA500>Has hidden function.</font>"
+	},
+	{
+		"id":8,
+		"requiredLevel":77,
+		"skillId":6007,
+		"name":"Dual Sword Master",
+		"descr":"Riposte stance not consume MP anymore and increase his effectivness by 50%."
+	}
+]

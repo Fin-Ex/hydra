@@ -1,0 +1,10 @@
+aCis_gameserver/build
+aCis_datapack/build
+game
+server
+dist
+/target/
+.classpath
+.project
+.settings/
+animations.txt

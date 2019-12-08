@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- Usase in Disarm (ID:6003) -->
+	<skill id="5300" levels="7" name="Block Equip">
+		<table name="#stackType">block_rhand block_lhand block_body block_legs block_feet block_gloves block_helmet</table>
+		<table name="#slot">128 256 1024 2048 4096 512 64</table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="BlockEquip" time="6" val="0" stackType="#stackType" stackOrder="1">
+				<param name="slot" val="#slot"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="5301" levels="1" name="Parry">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Parry" time="1" count="3" val="0" stackType="parry" stackOrder="1">
+				<add order="0x40" stat="PhysicalDamage" val="35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="5302" levels="15" name="Stun">
+		<table name="#time">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15</table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="STUN"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isDebuff" val="true" />
+		<for>
+			<effect name="Stun" time="#time" val="0" stackOrder="1" stackType="stun" />
+		</for>
+	</skill>
+	<skill id="5303" levels="1" name="Singing Sword Mastery">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="CriticalRate" val="2">
+				<not>
+					<using kind="SHIELD"/>
+				</not>
+				<and>
+					<using kind="SWORD"/>
+				</and>
+			</mul>
+			<add order="0x40" stat="AttackParry" val="10">
+				<using kind="DUAL"/>
+			</add>
+			<mul order="0x30" stat="CriticalDamage" val="2">
+				<using kind="BIGSWORD"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="5304" levels="1" name="Melody Armor Mastery">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="evasion" val="1.07">
+				<using kind="LIGHT"/>
+			</mul>
+			<mul order="0x30" stat="resilence" val="0.84">
+				<using kind="HEAVY"/>
+			</mul>
+		</for>
+	</skill>
+</list>

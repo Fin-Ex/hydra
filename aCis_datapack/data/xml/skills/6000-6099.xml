@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<skill id="6000" levels="1" name="Parry">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="attackParry" val="20">
+				<using kind="DUAL"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="6001" levels="1" name="Triple Slasher">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<effect name="TripleSlasher" val="0" icon="1" self="1"/>
+		</for>
+	</skill>
+	<skill id="6002" levels="1" name="Dual Wield">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<effect name="DualWield" val="0" self="1"/>
+		</for>
+	</skill>
+	<skill id="6003" levels="1" name="Disarm">
+		<set name="weaponsAllowed" val="DUAL" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="mpConsume" val="48"/>
+		<set name="hitTime" val="1148"/>
+		<set name="reuseDelay" val="30000"/>
+		<set name="castRange" val="40"/>
+		<set name="effectRange" val="400"/>
+		<set name="ignoreResists" val="true"/>
+		<for>
+			<effect name="Disarm" time="6" val="0"/>
+		</for>
+	</skill>
+	<skill id="6004" levels="1" name="Confrontation">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="$TLNT_5_ASPD">
+				<using kind="DUAL"/>
+			</mul>
+			<mul order="0x30" stat="pAtk" val="$TLNT_5_ATK">
+				<using kind="DUAL"/>
+			</mul>
+			<add order="0x40" stat="accuracy" val="$TLNT_5_ACC">
+				<using kind="DUAL"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="6005" levels="1" name="Dual Redirection">
+		<set name="weaponsAllowed" val="DUAL"/>
+		<set name="mpConsume" val="112"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="reuseDelay" val="15000"/>
+		<set name="hitTime" val="770"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="alignment" val="ABILITY"/>
+		<for>
+			<effect name="RedirectionSpell" time="5" val="0"/>
+		</for>
+	</skill>
+	<skill id="6006" levels="1" name="Heavy Grip">
+		<set name="weaponsAllowed" val="DUAL"/>
+		<set name="hpConsume" val="250"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<set name="alignment" val="MAGIC"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="staticReuse" val="true"/>
+		<for>
+			<effect count="0x7fffffff" name="HeavyGrip" val="0">
+				<mul order="0x30" stat="pAtkSpd" val="0.85">
+					<player STRlower="45"/> 
+				</mul>
+				<!-- P.Atk increased in core -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="6007" levels="1" name="Dual Master">
+		<!-- Done in skill Riposte Stance like a conditions for stats -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6008" levels="1" name="Peace of Mind">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.7"/>
+		</for>
+	</skill>
+</list>

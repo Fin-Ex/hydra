@@ -1,0 +1,18 @@
+<html>
+	<title>Ремеслянные заказы</title>
+	<body>
+		%objectName%:<br>
+		<font color=LEVEL>Рецепт</font>: #%recipeId% (%craftItemName%)<br1>
+		<font color=LEVEL>Дней на выполнение</font>: %days%<br1>
+		Укажите сумму оплаты исходя из минимальной стоимости данного заказа (с учётом кол-ва дней)<br1>
+		Минимальная цена: <font color=LEVEL>%minPrice%</font><br>
+		<table width=160>
+			<tr>
+				<td>Оплата:</td>
+				<td><edit var="price" width=100 height=12></td>
+			</tr>
+		</table>
+		<a action="bypass -h npc_%objectId%_quote_setPrice %recipeId% %days% $price %minPrice%">Продолжить</a><br1>
+		<a action="bypass -h npc_%objectId%_Chat 0">Отменить</a>
+	</body>
+</html>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<item id="4500" type="EtcItem" name="Greater Dye of INT (Int+1 Wit-2)">
+		<set name="icon" val="icon.etc_int_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4501" type="EtcItem" name="Greater Dye of MEN (Men+1 Int-2)">
+		<set name="icon" val="icon.etc_wit_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4502" type="EtcItem" name="Greater Dye of MEN (Men+1 Wit-2)">
+		<set name="icon" val="icon.etc_wit_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="21000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4503" type="EtcItem" name="Greater Dye of WIT (Wit+1 Int-2)">
+		<set name="icon" val="icon.etc_men_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4504" type="EtcItem" name="Greater Dye of WIT (Wit+1 Men-2)">
+		<set name="icon" val="icon.etc_men_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4505" type="EtcItem" name="Greater Dye of STR (Str+2 Con-4)">
+		<set name="icon" val="icon.etc_str_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4506" type="EtcItem" name="Greater Dye of STR (Str+2 Dex-4)">
+		<set name="icon" val="icon.etc_str_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4507" type="EtcItem" name="Greater Dye of CON (Con+2 Str-4)">
+		<set name="icon" val="icon.etc_dex_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4508" type="EtcItem" name="Greater Dye of CON (Con+2 Dex-4)">
+		<set name="icon" val="icon.etc_dex_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4509" type="EtcItem" name="Greater Dye of DEX (Dex+2 Str-4)">
+		<set name="icon" val="icon.etc_con_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4510" type="EtcItem" name="Greater Dye of DEX (Dex+2 Con-4)">
+		<set name="icon" val="icon.etc_con_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4511" type="EtcItem" name="Greater Dye of INT (Int+2 Men-4)">
+		<set name="icon" val="icon.etc_int_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4512" type="EtcItem" name="Greater Dye of INT (Int+2 Wit-4)">
+		<set name="icon" val="icon.etc_int_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4513" type="EtcItem" name="Greater Dye of MEN (Men+2 Int-4)">
+		<set name="icon" val="icon.etc_wit_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4514" type="EtcItem" name="Greater Dye of MEN (Men+2 Wit-4)">
+		<set name="icon" val="icon.etc_wit_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="24600" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4515" type="EtcItem" name="Greater Dye of WIT (Wit+2 Int-4)">
+		<set name="icon" val="icon.etc_men_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4516" type="EtcItem" name="Greater Dye of WIT (Wit+2 Men-4)">
+		<set name="icon" val="icon.etc_men_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4517" type="EtcItem" name="Greater Dye of STR (Str+2 Con-3)">
+		<set name="icon" val="icon.etc_str_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="27000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4518" type="EtcItem" name="Greater Dye of STR (Str+2 Dex-3)">
+		<set name="icon" val="icon.etc_str_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="27000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4519" type="EtcItem" name="Greater Dye of CON (Con+2 Str-3)">
+		<set name="icon" val="icon.etc_dex_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="27000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4520" type="EtcItem" name="Greater Dye of CON (Con+2 Dex-3)">
+		<set name="icon" val="icon.etc_dex_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4521" type="EtcItem" name="Greater Dye of DEX (Dex+2 Str-3)">
+		<set name="icon" val="icon.etc_con_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="27000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4522" type="EtcItem" name="Greater Dye of DEX (Dex+2 Con-3)">
+		<set name="icon" val="icon.etc_con_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="27000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4523" type="EtcItem" name="Greater Dye of INT (Int+2 Men-3)">
+		<set name="icon" val="icon.etc_int_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="27000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4524" type="EtcItem" name="Greater Dye of INT (Int+2 Wit-3)">
+		<set name="icon" val="icon.etc_int_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4525" type="EtcItem" name="Greater Dye of MEN (Men+2 Int-3)">
+		<set name="icon" val="icon.etc_wit_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4526" type="EtcItem" name="Greater Dye of MEN (Men+2 Wit-3)">
+		<set name="icon" val="icon.etc_wit_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4527" type="EtcItem" name="Greater Dye of WIT (Wit+2 Int-3)">
+		<set name="icon" val="icon.etc_men_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="27000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4528" type="EtcItem" name="Greater Dye of WIT (Wit+2 Men-3)">
+		<set name="icon" val="icon.etc_men_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4529" type="EtcItem" name="Greater Dye of STR (Str+3 Con-5)">
+		<set name="icon" val="icon.etc_str_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4530" type="EtcItem" name="Greater Dye of STR (Str+3 Dex-5)">
+		<set name="icon" val="icon.etc_str_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4531" type="EtcItem" name="Greater Dye of CON (Con+3 Str-5)">
+		<set name="icon" val="icon.etc_dex_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4532" type="EtcItem" name="Greater Dye of CON (Con+3 Dex-5)">
+		<set name="icon" val="icon.etc_dex_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4533" type="EtcItem" name="Greater Dye of DEX (Dex+3 Str-5)">
+		<set name="icon" val="icon.etc_con_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4534" type="EtcItem" name="Greater Dye of DEX (Dex+3 Con-5)">
+		<set name="icon" val="icon.etc_con_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4535" type="EtcItem" name="Greater Dye of INT (Int+3 Men-5)">
+		<set name="icon" val="icon.etc_int_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4536" type="EtcItem" name="Greater Dye of INT (Int+3 Wit-5)">
+		<set name="icon" val="icon.etc_int_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4537" type="EtcItem" name="Greater Dye of MEN (Men+3 Int-5)">
+		<set name="icon" val="icon.etc_wit_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4538" type="EtcItem" name="Greater Dye of MEN (Men+3 Wit-5)">
+		<set name="icon" val="icon.etc_wit_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4539" type="EtcItem" name="Greater Dye of WIT (Wit+3 Int-5)">
+		<set name="icon" val="icon.etc_men_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4540" type="EtcItem" name="Greater Dye of WIT (Wit+3 Men-5)">
+		<set name="icon" val="icon.etc_men_hena_i01"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4541" type="EtcItem" name="Greater Dye of STR (Str+3 Con-4)">
+		<set name="icon" val="icon.etc_str_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4542" type="EtcItem" name="Greater Dye of STR (Str+3 Dex-4)">
+		<set name="icon" val="icon.etc_str_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4543" type="EtcItem" name="Greater Dye of CON (Con+3 Str-4)">
+		<set name="icon" val="icon.etc_dex_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4544" type="EtcItem" name="Greater Dye of CON (Con+3 Dex-4)">
+		<set name="icon" val="icon.etc_dex_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4545" type="EtcItem" name="Greater Dye of DEX (Dex+3 Str-4)">
+		<set name="icon" val="icon.etc_con_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4546" type="EtcItem" name="Greater Dye of DEX (Dex+3 Con-4)">
+		<set name="icon" val="icon.etc_con_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4547" type="EtcItem" name="Greater Dye of INT (Int+3 Men-4)">
+		<set name="icon" val="icon.etc_int_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4548" type="EtcItem" name="Greater Dye of INT (Int+3 Wit-4)">
+		<set name="icon" val="icon.etc_int_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4549" type="EtcItem" name="Greater Dye of MEN (Men+3 Int-4)">
+		<set name="icon" val="icon.etc_wit_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4550" type="EtcItem" name="Greater Dye of MEN (Men+3 Wit-4)">
+		<set name="icon" val="icon.etc_wit_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4551" type="EtcItem" name="Greater Dye of WIT (Wit+3 Int-4)">
+		<set name="icon" val="icon.etc_men_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="4552" type="EtcItem" name="Greater Dye of WIT (Wit+3 Men-4)">
+		<set name="icon" val="icon.etc_men_hena_i02"/>
+		<set name="etcitem_type" val="dye" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>
