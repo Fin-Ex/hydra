@@ -518,6 +518,12 @@ public abstract class Creature extends WorldObject
 			return;
 		}
 		
+		if (target.isDead()) {
+			removeTarget();
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		if (!isAlikeDead())
 		{
 			if (isNpc() && target.isAlikeDead() || !getKnownType(Creature.class).contains(target))
@@ -4210,5 +4216,11 @@ public abstract class Creature extends WorldObject
 	
 	public boolean isInSameAlly(Creature target) {
 		return false;
+	}
+	
+	public void removeTarget() {
+		setTarget(null);
+		abortAttack();
+		abortCast();
 	}
 }

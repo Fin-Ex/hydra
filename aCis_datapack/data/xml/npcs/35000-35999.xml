@@ -22785,7 +22785,7 @@
 	<npc id="35657" name="Quest Board" title="Talking Island">
 		<set name="level" val="70"/>
 		<set name="radius" val="12.5"/>
-		<set name="height" val="48"/>
+		<set name="height" val="25"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="QuestBoard"/>
