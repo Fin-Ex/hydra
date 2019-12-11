@@ -42,6 +42,9 @@ import net.sf.l2j.gameserver.templates.StatsSet;
 @Slf4j
 public abstract class Item {
 
+	public static final int ADENA = 57;
+	public static final int SLAYER_COIN = 9215;
+	
 	public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
 	public static final int TYPE1_SHIELD_ARMOR = 1;
 	public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;

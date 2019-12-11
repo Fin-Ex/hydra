@@ -111,7 +111,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<!-- 9208~9213 is two handed weapon dual-swords -->
 	<item id="9214" type="EtcItem" name="Delivering Goods">
 		<set name="icon" val="icon.etc_jewel_box_i00"/>
 		<set name="is_tradable" val="false" />

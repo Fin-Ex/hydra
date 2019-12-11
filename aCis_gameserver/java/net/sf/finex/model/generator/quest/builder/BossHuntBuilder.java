@@ -17,6 +17,7 @@ import net.sf.l2j.gameserver.data.MapRegionTable;
 import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.actor.instance.RaidBoss;
 import net.sf.l2j.gameserver.model.actor.template.NpcTemplate;
+import net.sf.l2j.gameserver.model.item.kind.Item;
 
 /**
  *
@@ -46,7 +47,7 @@ public class BossHuntBuilder extends RandomQuestBuilder {
 		final List<QuestRewardData> rewards = new ArrayList<>();
 		final EGradeType grade = quest.getGrade();
 		// give slayer coins
-		rewards.add(new QuestRewardData(9215, Rnd.get(grade.getMinLevel(), grade.getMaxLevel()), true));
+		rewards.add(new QuestRewardData(Item.SLAYER_COIN, Rnd.get(grade.getMinLevel(), grade.getMaxLevel()), true));
 		quest.setRewards(rewards);
 	}
 

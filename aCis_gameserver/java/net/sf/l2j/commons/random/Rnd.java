@@ -1,5 +1,6 @@
 package net.sf.l2j.commons.random;
 
+import java.util.Comparator;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
@@ -90,7 +91,7 @@ public final class Rnd
 	 */
 	public static final <T> T get(List<T> list)
 	{
-		if (list == null || list.size() == 0)
+		if (list == null || list.isEmpty())
 			return null;
 		
 		return list.get(get(list.size()));
@@ -108,5 +109,35 @@ public final class Rnd
 			return null;
 		
 		return array[get(array.length)];
+	}
+	
+	/**
+	 * Returns a random element, which selected from given list by calculating random chance: []
+	 * Guarantee returns last element.
+	 * @param <Element>
+	 * @param limit
+	 * @param list
+	 * @return 
+	 */
+	public static final <Element> Element calcGuarantee(int limit, List<Element> list) {
+		int baseRate = (int) Math.ceil(100 / list.size());
+		for (Element next : list) {
+			if (calcChance(baseRate, limit)) {
+				return next;
+			}
+			baseRate += baseRate;
+		}
+		return list.get(list.size() - 1);
+	}
+	
+	public static final <Value> Value calcGuarantee(int limit, Value[] array) {
+		int baseRate = (int) Math.ceil(100.0 / array.length);
+		for (Value next : array) {
+			if (calcChance(baseRate, limit)) {
+				return next;
+			}
+			baseRate += baseRate;
+		}
+		return array[array.length - 1];
 	}
 }

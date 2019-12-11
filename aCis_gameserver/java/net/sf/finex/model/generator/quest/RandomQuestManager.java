@@ -21,11 +21,14 @@ import net.sf.finex.enums.EGradeType;
 import net.sf.finex.enums.ERandomQuestType;
 import net.sf.finex.enums.ETownType;
 import net.sf.finex.events.EventBus;
+import net.sf.finex.model.generator.quest.builder.DeliverItemBuilder;
 import net.sf.l2j.Config;
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.random.Rnd;
 import net.sf.l2j.gameserver.data.ItemTable;
 import net.sf.l2j.gameserver.data.NpcTable;
+import net.sf.l2j.gameserver.data.SpawnTable;
+import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.actor.Npc;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.events.OnLogout;
@@ -181,6 +184,14 @@ public class RandomQuestManager implements Runnable {
 			player.sendPacket(SystemMessageId.YOU_HAVE_A_PENALTY_FOR_TAKE_A_QUEST);
 			return;
 		}
+		
+		if (quest.getType() == ERandomQuestType.Item_Deliver) {
+			int weightQuestItems = quest.getCondition().getValue() * ItemTable.getInstance().getTemplate(DeliverItemBuilder.DELIVER_ITEM_ID).getWeight();
+			if (!player.getInventory().validateWeight(weightQuestItems)) {
+				player.sendMessage("Your weight is too low for taking this quest.");
+				return;
+			}
+		}
 
 		locker.lock();
 		try {
@@ -275,14 +286,14 @@ public class RandomQuestManager implements Runnable {
 	}
 
 	/**
-	 * Collect all npcs in towns.
+	 * Collect all npcs
 	 */
 	private void collectNpcs() {
 		for (NpcTemplate temp : NpcTable.getInstance().getAllNpcs()) {
 			final int level = temp.getLevel();
 
 			// Collect monsters
-			if (temp.isType(Monster.class.getSimpleName()) && !temp.getTitle().startsWith("Quest")) {
+			if (temp.isType(Monster.class.getSimpleName()) && !temp.getTitle().startsWith("Quest") && temp.getRewardExp() > 0 && temp.getRewardSp() > 0) {
 				List<NpcTemplate> list = monsters.get(level);
 				if (list == null) {
 					monsters.put(level, list = new ArrayList<>());

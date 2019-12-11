@@ -22784,8 +22784,8 @@
 	</npc>
 	<npc id="35657" name="Quest Board" title="Talking Island">
 		<set name="level" val="70"/>
-		<set name="radius" val="12.5"/>
-		<set name="height" val="25"/>
+		<set name="radius" val="8"/>
+		<set name="height" val="30"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="QuestBoard"/>
@@ -22818,8 +22818,8 @@
 	</npc>
 	<npc id="35658" name="Quest Board" title="Elven Village">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
-		<set name="height" val="29"/>
+		<set name="radius" val="21"/>
+		<set name="height" val="23"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="QuestBoard"/>
@@ -22852,7 +22852,7 @@
 	</npc>
 	<npc id="35659" name="Quest Board" title="Orc Village">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
+		<set name="radius" val="8"/>
 		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
@@ -22886,8 +22886,8 @@
 	</npc>
 	<npc id="35660" name="Quest Board" title="Dwarven Village">
 		<set name="level" val="70"/>
-		<set name="radius" val="12.5"/>
-		<set name="height" val="48"/>
+		<set name="radius" val="8"/>
+		<set name="height" val="30.5"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="QuestBoard"/>
@@ -22920,8 +22920,8 @@
 	</npc>
 	<npc id="35661" name="Quest Board" title="Dark Elven Village">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
-		<set name="height" val="32"/>
+		<set name="radius" val="8"/>
+		<set name="height" val="42"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="QuestBoard"/>
@@ -22954,7 +22954,7 @@
 	</npc>
 	<npc id="35662" name="Quest Board" title="Hunter Village">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
+		<set name="radius" val="8"/>
 		<set name="height" val="29"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
@@ -23022,7 +23022,7 @@
 	</npc>
 	<npc id="35664" name="Quest Board" title="Gludin Village">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
+		<set name="radius" val="8"/>
 		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
@@ -23056,8 +23056,8 @@
 	</npc>
 	<npc id="35665" name="Quest Board" title="Town of Gludio">
 		<set name="level" val="70"/>
-		<set name="radius" val="12.5"/>
-		<set name="height" val="48"/>
+		<set name="radius" val="8"/>
+		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="QuestBoard"/>
@@ -23090,8 +23090,8 @@
 	</npc>
 	<npc id="35666" name="Quest Board" title="Town of Dion">
 		<set name="level" val="70"/>
-		<set name="radius" val="12.5"/>
-		<set name="height" val="48"/>
+		<set name="radius" val="8"/>
+		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="QuestBoard"/>
@@ -23124,7 +23124,7 @@
 	</npc>
 	<npc id="35667" name="Quest Board" title="Town of Heine">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
+		<set name="radius" val="8"/>
 		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
@@ -23158,7 +23158,7 @@
 	</npc>
 	<npc id="35668" name="Quest Board" title="Giran Castle Town">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
+		<set name="radius" val="8"/>
 		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
@@ -23192,7 +23192,7 @@
 	</npc>
 	<npc id="35669" name="Quest Board" title="Town of Aden">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
+		<set name="radius" val="8"/>
 		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
@@ -23226,7 +23226,7 @@
 	</npc>
 	<npc id="35670" name="Quest Board" title="Town of Oren">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
+		<set name="radius" val="8"/>
 		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
@@ -23260,7 +23260,7 @@
 	</npc>
 	<npc id="35671" name="Quest Board" title="Town of Goddard">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
+		<set name="radius" val="8"/>
 		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
@@ -23294,7 +23294,7 @@
 	</npc>
 	<npc id="35672" name="Quest Board" title="Town of Rune">
 		<set name="level" val="70"/>
-		<set name="radius" val="15"/>
+		<set name="radius" val="8"/>
 		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
@@ -23329,7 +23329,7 @@
 	<npc id="35673" name="Quest Board" title="Town of Schuttgart">
 		<set name="level" val="70"/>
 		<set name="radius" val="12.5"/>
-		<set name="height" val="48"/>
+		<set name="height" val="32"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="QuestBoard"/>

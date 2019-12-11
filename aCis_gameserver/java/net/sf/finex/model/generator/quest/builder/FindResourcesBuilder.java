@@ -11,10 +11,14 @@ import net.sf.finex.data.QuestRewardData;
 import net.sf.finex.data.RandomQuestConditionData;
 import net.sf.l2j.commons.random.Rnd;
 import net.sf.l2j.gameserver.data.ItemTable;
-import net.sf.l2j.gameserver.model.base.Experience;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 
 /**
+ * Quest for finding resources (charcoal, steel, etc...) Description: Find
+ * needable resource count and return to the quest board. You will receive
+ * reward model [<b>Item</b>]. Item is enchant scroll for weapon or armor. Armor
+ * weapon scroll count depends from random 1 or 3 max. Weapon scrolls every time
+ * is only 1.
  *
  * @author FinFan
  */
@@ -71,7 +75,7 @@ public class FindResourcesBuilder extends RandomQuestBuilder {
 		5554,
 		5552
 	};
-	
+
 	@Override
 	public void buildCondition() {
 		// create the resource from level
@@ -83,8 +87,10 @@ public class FindResourcesBuilder extends RandomQuestBuilder {
 	@Override
 	public void buildRewards() {
 		final List<QuestRewardData> list = new ArrayList<>();
-		final int chance = (int) (Math.sqrt(quest.getCondition().getCount()) + 30);
+		final int chance = (int) Math.sqrt(quest.getCondition().getValue());
 		final boolean success = Rnd.get(chance) > 100;
+		final int cnt = Rnd.calcGuarantee(100, new Integer[]{3, 2, 1});
+
 		switch (quest.getGrade()) {
 			case NG:
 				//reward enchant scroll D grade for armor
@@ -93,42 +99,42 @@ public class FindResourcesBuilder extends RandomQuestBuilder {
 
 			case D:
 				//reward enchant scroll D grade for armor & weapon with chances
-				if (!success) {
-					list.add(new QuestRewardData(956, Rnd.get(1, 3), true));
+				if (success) {
+					list.add(new QuestRewardData(956, 1, true));
 				} else {
-					list.add(new QuestRewardData(955, 1, true));
+					list.add(new QuestRewardData(955, cnt, true));
 				}
 				break;
 
 			case C:
-				if (!success) {
-					list.add(new QuestRewardData(951, Rnd.get(1, 3), true));
+				if (success) {
+					list.add(new QuestRewardData(951, 1, true));
 				} else {
-					list.add(new QuestRewardData(952, 1, true));
+					list.add(new QuestRewardData(952, cnt, true));
 				}
 				break;
 
 			case B:
-				if (!success) {
-					list.add(new QuestRewardData(947, Rnd.get(1, 3), true));
+				if (success) {
+					list.add(new QuestRewardData(947, 1, true));
 				} else {
-					list.add(new QuestRewardData(948, 1, true));
+					list.add(new QuestRewardData(948, cnt, true));
 				}
 				break;
 
 			case A:
-				if (!success) {
-					list.add(new QuestRewardData(729, Rnd.get(1, 3), true));
+				if (success) {
+					list.add(new QuestRewardData(729, 1, true));
 				} else {
-					list.add(new QuestRewardData(730, 1, true));
+					list.add(new QuestRewardData(730, cnt, true));
 				}
 				break;
 
 			case S:
-				if (!success) {
-					list.add(new QuestRewardData(959, Rnd.get(1, 3), true));
+				if (success) {
+					list.add(new QuestRewardData(959, 1, true));
 				} else {
-					list.add(new QuestRewardData(960, 1, true));
+					list.add(new QuestRewardData(960, cnt, true));
 				}
 				break;
 		}
@@ -141,7 +147,7 @@ public class FindResourcesBuilder extends RandomQuestBuilder {
 		final RandomQuestConditionData cond = quest.getCondition();
 		final Item item = (Item) cond.getTarget();
 		descr.append("<center>Description</center><br>");
-		descr.append("Bring the <font color=LEVEL>").append(item.getName()).append(" x").append(cond.getCount())
+		descr.append("Bring the <font color=LEVEL>").append(item.getName()).append(" x").append(cond.getValue())
 				.append("</font> and you will be richly rewarded!<br1>When you finish, do not forget to put a mark on the task (at the board) that it is done.");
 		descr.append("<table width=272>");
 		descr.append("<table><tr>");
@@ -159,12 +165,6 @@ public class FindResourcesBuilder extends RandomQuestBuilder {
 
 	@Override
 	public void buildExpAndSp() {
-		// give only EXP reward
-		final int averageLevel = (int) quest.getGrade().getAverageLevel();
-		final Item item = (Item) quest.getCondition().getTarget();
-		final double resourceCount = Math.sqrt(quest.getCondition().getCount() * item.getReferencePrice()) / 1000.;
-		final long exp = (long) (Experience.LEVEL[Math.max(averageLevel - 1, 5)] * resourceCount);
-		quest.setExp(exp);
 	}
 
 	@Override

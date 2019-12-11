@@ -35,6 +35,6 @@ public class FindResourceHandler extends RandomQuestHandler {
 			return false;
 		}
 		
-		return player.destroyItem("FindResourceItemPass", resource, quest.getCondition().getCount(), null, true);
+		return player.destroyItem("FindResourceItemPass", resource, quest.getCondition().getValue(), null, true);
 	}
 }

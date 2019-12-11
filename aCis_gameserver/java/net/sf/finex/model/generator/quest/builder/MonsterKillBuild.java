@@ -5,23 +5,26 @@
  */
 package net.sf.finex.model.generator.quest.builder;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import net.sf.finex.data.QuestRewardData;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.finex.data.RandomQuestConditionData;
 import net.sf.finex.enums.EGradeType;
 import net.sf.finex.model.generator.quest.RandomQuestManager;
 import net.sf.l2j.commons.random.Rnd;
 import net.sf.l2j.gameserver.data.NpcTable;
 import net.sf.l2j.gameserver.model.actor.template.NpcTemplate;
-import net.sf.l2j.gameserver.model.item.DropCategory;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
 /**
+ * Monster killing quest.<br>
+ * Description: Kill some monster count and return to quest board. Get reward
+ * model <b>[Adena]</b> which depends from your level and quest difficult. Exp &
+ * SP player gets on hunt phase.
  *
  * @author FinFan
  */
+@Slf4j
 public class MonsterKillBuild extends RandomQuestBuilder {
 
 	@Override
@@ -32,27 +35,39 @@ public class MonsterKillBuild extends RandomQuestBuilder {
 				.flatMap(e -> e.getValue().stream())
 				.toArray(NpcTemplate[]::new)
 		);
+
+		int monsterKillCount = 0;
+		switch(quest.getGrade()) {
+			case NG:
+				monsterKillCount = 10;
+				break;
+			
+			case D:
+				monsterKillCount = 20;
+				break;
+				
+			case C:
+				monsterKillCount = 40;
+				break;
+				
+			case B:
+				monsterKillCount = 80;
+				break;
+				
+			case A:
+				monsterKillCount = 160;
+				break;
+				
+			case S:
+				monsterKillCount = 320;
+				break;
+		}
 		
-		final double modifier = (100.0 - 11 + monsterForHunt.getLevel()) / 100.0;
-		final int monsterKillCount = (int) (Rnd.get(18, 72) / Math.max(modifier, 1.0));
 		quest.setCondition(new RandomQuestConditionData(quest.getType(), monsterForHunt, monsterKillCount));
 	}
 
 	@Override
 	public void buildRewards() {
-		final List<QuestRewardData> list = new ArrayList<>();
-		final NpcTemplate monster = (NpcTemplate) quest.getCondition().getTarget();
-		if (monster == null) {
-			return;
-		}
-
-		for (DropCategory cat : monster.getDropData()) {
-			if (cat.isSweep()) {
-				cat.getAllDrops().forEach(drop -> list.add(new QuestRewardData(drop.getItemId(), (int) Math.sqrt(Rnd.get(drop.getMinDrop(), drop.getMaxDrop()) * quest.getCondition().getCount()), true)));
-			}
-		}
-		
-		quest.setRewards(list);
 	}
 
 	@Override
@@ -63,9 +78,9 @@ public class MonsterKillBuild extends RandomQuestBuilder {
 		descr.append("It is necessary to sweep the <font color=LEVEL>")
 				.append(NpcTable.getInstance().getTemplate(monster.getNpcId()).getName())
 				.append("</font>, they too often prevent travelers and merchants!")
-				.append(" Kill at least <font color=LEVEL>").append(quest.getCondition().getCount())
+				.append(" Kill at least <font color=LEVEL>").append(quest.getCondition().getValue())
 				.append("</font> individuals and come back.<br1>Do not forget to put a mark on the task (at the board) that it is done.");
-		
+
 		descr.append("<table width=272><tr>");
 		descr.append("<td align=center><button value=\"Take\" action=\"bypass -h npc_%objectId%_takeQuest ").append(quest.getId()).append("\" width=74 height=24 fore=\"L2UI_CH3.btn1_normal\" back=\"L2UI_CH3.btn1_normal_over\"></td>");
 		descr.append("<td align=center><button value=\"Cancel\" action=\"bypass -h npc_%objectId%_cancelQuest\" width=74 height=23 fore=\"L2UI_CH3.btn1_normal\" back=\"L2UI_CH3.L2UI_CH3.btn1_normal_over\"></td>");
@@ -83,39 +98,32 @@ public class MonsterKillBuild extends RandomQuestBuilder {
 	public void buildExpAndSp() {
 		final NpcTemplate monster = ((NpcTemplate) quest.getCondition().getTarget());
 
-		// calculate base exp for monster kill quest depends from battlerLevel of grade and monster hunt exp rewarding
-		final EGradeType grade = quest.getGrade();
-		
-		// get random level between min and max of that grade for calculating battlerLevel
-		final int battlerLevel = Rnd.get(grade.getMinLevel(), grade.getMaxLevel());
-		
 		// calculate exp & sp base rewards
-		final double battlerValue = Math.sqrt(battlerLevel * 100.0);
-		int exp = (int) (monster.getRewardExp() * battlerValue);
-		int sp = (int) (monster.getRewardSp() * battlerValue);
-
+		long exp = monster.getRewardExp();
+		int sp = monster.getRewardSp();
+		
 		// if mosnter has skill HP muller we increase EXP value to them
-		L2Skill hpSkill = null;
 		for (List<L2Skill> list : monster.getSkills().values()) {
 			for (L2Skill skill : list) {
 				if (skill.getId() == 4408) {
-					hpSkill = skill;
+					final int level = skill.getLevel();
+					exp *= level;
+					sp *= level;
 					break;
 				}
 			}
 		}
-		
-		if(hpSkill != null) {
-			final int level = hpSkill.getLevel();
-			exp *= level;
-			sp *= level;
-		}
-		
+
 		// if monster has minions we give more exp and sp by 25%
-		if(monster.getMinionData() != null) {
-			exp *= 1.25;
-			sp *= 1.25;
+		if (!monster.getMinionData().isEmpty()) {
+			final float minionCount = monster.getMinionData().size();
+			exp *= minionCount;
+			sp *= minionCount;
 		}
+
+		final int value = quest.getCondition().getValue();
+		exp *= value;
+		sp *= value;
 		
 		quest.setExp(exp);
 		quest.setSp(sp);

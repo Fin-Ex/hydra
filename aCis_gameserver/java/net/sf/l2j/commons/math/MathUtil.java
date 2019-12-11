@@ -1,9 +1,11 @@
 package net.sf.l2j.commons.math;
 
+import java.util.List;
 import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
+import net.sf.l2j.gameserver.model.actor.template.NpcTemplate;
 
 public class MathUtil
 {

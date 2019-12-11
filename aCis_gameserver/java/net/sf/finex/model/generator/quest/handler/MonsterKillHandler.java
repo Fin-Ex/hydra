@@ -45,10 +45,10 @@ public class MonsterKillHandler extends RandomQuestHandler {
 			quest.setCounter(quest.getCounter() + 1);
 		}
 		
-		player.sendMessage("Progress: " + String.format("%1.2f", quest.getCounter() * 1. / quest.getCondition().getCount() * 100.) + "%.");
+		player.sendMessage("Progress: " + String.format("%1.2f", quest.getCounter() * 1. / quest.getCondition().getValue() * 100.) + "%.");
 		
 		// check if complete
-		if(quest.getCounter() >= quest.getCondition().getCount()) {
+		if(quest.getCounter() >= quest.getCondition().getValue()) {
 			quest.setDone(true);
 			player.sendMessage("Quest finished! Return to to Quest Board and talk with them!");
 		}

@@ -8,14 +8,18 @@ package net.sf.finex.model.generator.quest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.locks.ReentrantLock;
 import lombok.Data;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import net.sf.finex.data.QuestRewardData;
 import net.sf.finex.data.RandomQuestData;
 import net.sf.finex.enums.EGradeType;
 import net.sf.finex.enums.ETownType;
+import net.sf.l2j.gameserver.data.ItemTable;
 import net.sf.l2j.gameserver.model.actor.Npc;
 import net.sf.l2j.gameserver.model.actor.Player;
+import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -26,12 +30,9 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 @Slf4j
 public class RandomQuestHtmlManager {
 
-	@Getter
-	private static final RandomQuestHtmlManager instance = new RandomQuestHtmlManager();
-	@Getter
-	private final Map<ETownType, Map<EGradeType, StringBuilder>> questListTable = new HashMap<>();
-	@Getter
-	private final Map<Integer, String> questDescription = new HashMap<>();
+	@Getter private static final RandomQuestHtmlManager instance = new RandomQuestHtmlManager();
+	@Getter private final Map<ETownType, Map<EGradeType, StringBuilder>> questListTable = new HashMap<>();
+	@Getter private final Map<Integer, String> questDescription = new HashMap<>();
 
 	public void build() {
 		buildQuestList();
@@ -49,6 +50,10 @@ public class RandomQuestHtmlManager {
 				final List<RandomQuestData> randomQuestList = RandomQuestManager.getInstance().getHolder().get(town).get(grade);
 				sb.append("<table>");
 				for (RandomQuestData questData : randomQuestList) {
+					if (questData.isDone()) {
+						continue;
+					}
+					
 					sb.append("<tr><td>");
 					sb.append("<a action=\"bypass -h npc_%objectId%_rndquest ")
 							.append(questData.getId()).append("\">")
@@ -71,22 +76,25 @@ public class RandomQuestHtmlManager {
 				for (RandomQuestData questData : randomQuestList) {
 					final StringBuilder descrBuilder = new StringBuilder();
 					descrBuilder.append("<html><title>").append(questData.getName()).append(" (").append(grade.getMinLevel()).append("~").append(grade.getMaxLevel())
-							.append("</title><body><br>");
+							.append("</title><body><br1>");
 					descrBuilder.append(questData.getDescription());
 
 					// build rewards
-					descrBuilder.append("<br><center><font color=LEVEL>Rewards</font>");
-					descrBuilder.append("<table width=100><tr>");
+					descrBuilder.append("<br><font color=LEVEL>Rewards:</font><br>");
 					if (questData.getExp() > 0) {
-						descrBuilder.append("<td><img src=\"v1c01.etc_exp_point_i00\" width=32 height=32></td>");
+						descrBuilder.append("<font color=\"00FFFF\">EXP</font>: ").append(questData.getExp()).append("<br1>");
 					}
 					if (questData.getSp() > 0) {
-						descrBuilder.append("<td><img src=\"v1c01.etc_sp_point_i00\" width=32 height=32></td>");
+						descrBuilder.append("<font color=\"00FF7F\">SP</font>: ").append(questData.getSp()).append("<br1>");
 					}
 					if (questData.getRewards() != null) {
-						descrBuilder.append("<td><img src=\"v1c01.etc_quest_add_reward_i00\" width=32 height=32></td>");
+						descrBuilder.append("<font color=\"FFFF00\">Item's</font>: ");
+						for (QuestRewardData qrd : questData.getRewards()) {
+							final Item rewardItem = ItemTable.getInstance().getTemplate(qrd.getId());
+							descrBuilder.append(rewardItem.getName()).append(" x").append(qrd.getCount()).append(", ");
+						}
+						descrBuilder.delete(descrBuilder.length() - 2, descrBuilder.length());
 					}
-					descrBuilder.append("</tr></table></center>");
 
 					descrBuilder.append("</body></html>");
 					questDescription.put(questData.getId(), descrBuilder.toString());
