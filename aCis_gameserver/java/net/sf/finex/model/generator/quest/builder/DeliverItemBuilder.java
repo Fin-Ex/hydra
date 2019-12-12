@@ -94,7 +94,7 @@ public class DeliverItemBuilder extends RandomQuestBuilder {
 	@Override
 	public void buildQuestItems() {
 		quest.setQuestItems(new ArrayList<>(1));
-		quest.getQuestItems().add(new IntIntHolder(DELIVER_ITEM_ID, Rnd.get(1, 80)));
+		quest.getQuestItems().add(new IntIntHolder(DELIVER_ITEM_ID, Rnd.get(1, (int) quest.getGrade().getAverageLevel())));
 	}
 
 	@Data
