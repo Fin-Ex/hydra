@@ -11948,6 +11948,18 @@ public final class SystemMessageId
 	public static final SystemMessageId YOU_DO_NOT_HAVE_A_QUEST;
 	
 	/**
+	 * ID: 2185<br>
+	 * Message: $s1 hunt $s2/$s3.
+	 */
+	public static final SystemMessageId S1_HUNT_S2_S3;
+	
+	/**
+	 * ID: 2186<br>
+	 * Message: Quest $s1 was colmpleted!
+	 */
+	public static final SystemMessageId QUEST_S1_WAS_COMPLETED;
+	
+	/**
 	 * Array containing all SystemMessageIds<br>
 	 * Important: Always initialize with a length of the highest SystemMessageId + 1!!!
 	 */
@@ -13940,6 +13952,8 @@ public final class SystemMessageId
 		YOUR_LEVEL_TO_HIGH = new SystemMessageId(2182);
 		YOU_HAVE_A_PENALTY_FOR_TAKE_A_QUEST = new SystemMessageId(2183);
 		YOU_DO_NOT_HAVE_A_QUEST = new SystemMessageId(2184);
+		S1_HUNT_S2_S3 = new SystemMessageId(2185);
+		QUEST_S1_WAS_COMPLETED = new SystemMessageId(2186);
 		
 		buildFastLookupTable();
 	}

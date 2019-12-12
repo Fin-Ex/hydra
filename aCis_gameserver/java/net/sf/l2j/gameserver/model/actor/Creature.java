@@ -881,9 +881,9 @@ public abstract class Creature extends WorldObject
 
 		eventBus.notify(new OnKill(killer, this));
 		if(killer.isPlayer()) {
-			RandomQuestComponent compoennt = killer.getComponent(RandomQuestComponent.class);
-			if(compoennt.hasQuest()) {
-				compoennt.getQuest().getType().getHandler().getEventBus().notify(new OnKill(killer, this));
+			final RandomQuestComponent component = killer.getComponent(RandomQuestComponent.class);
+			if(component.hasQuest()) {
+				component.getQuest().getType().getHandler().getEventBus().notify(new OnKill(killer, this));
 			}
 		}
 		return true;

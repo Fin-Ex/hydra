@@ -56,6 +56,7 @@ import net.sf.l2j.gameserver.model.actor.template.NpcTemplate;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
+import static net.sf.l2j.gameserver.network.SystemMessageId.QUEST_S1_WAS_COMPLETED;
 import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
@@ -274,12 +275,11 @@ public class RandomQuestManager implements Runnable {
 			component.setQuest(null);
 			RandomQuestHtmlManager.getInstance().buildQuestList();
 
-			final NpcHtmlMessage html = new NpcHtmlMessage(questBoard.getObjectId());
+			final NpcHtmlMessage html = new NpcHtmlMessage(questBoard != null ? questBoard.getObjectId() : 0);
 			html.setHtml("<html><title>Quest Board</title><body><br>Congradulations!<br1>You have successfully completed the quest!</body></html>");
 			player.sendPacket(html);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.QUEST_S1_WAS_COMPLETED).addString(quest.getName()));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-
-			player.sendPacket(new PlaySound("ItemSound.quest_finish"));
 		} finally {
 			locker.unlock();
 		}

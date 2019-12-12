@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : server
-Source Server Version : 50553
-Source Host           : 127.0.0.1:3306
+Source Server Version : 50728
+Source Host           : localhost:3306
 Source Database       : finex_game_database
 
 Target Server Type    : MYSQL
-Target Server Version : 50553
+Target Server Version : 50728
 File Encoding         : 65001
 
-Date: 2019-06-18 16:47:25
+Date: 2019-12-12 07:27:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -39068,7 +39068,6 @@ INSERT INTO `spawnlist` VALUES ('31790', '-83160', '150844', '-3127', '0', '60',
 INSERT INTO `spawnlist` VALUES ('31791', '-83524', '149488', '-3127', '16500', '60', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31792', '-13328', '122720', '-3055', '0', '60', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31794', '-13944', '126384', '-3144', '49000', '60', '0', '0');
-INSERT INTO `spawnlist` VALUES ('31795', '-15518', '124297', '-3112', '49000', '60', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31796', '-16464', '123952', '-3120', '0', '60', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31798', '17388', '146912', '-3104', '3000', '60', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31799', '21088', '145424', '-3088', '16500', '60', '0', '0');
@@ -40693,20 +40692,38 @@ INSERT INTO `spawnlist` VALUES ('31760', '45400', '49320', '-3064', '56078', '1'
 INSERT INTO `spawnlist` VALUES ('30414', '43672', '49672', '-3048', '62583', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31780', '45512', '49368', '-3064', '53485', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31775', '-83288', '242600', '-3728', '38404', '1', '0', '0');
-INSERT INTO `spawnlist` VALUES ('31784', '-45528', '-113000', '-240', '47953', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31782', '115624', '-177608', '-888', '52507', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('30600', '12120', '16760', '-4584', '62422', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31778', '12088', '16616', '-4584', '63125', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31824', '115912', '76440', '-2712', '59508', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31801', '18024', '169960', '-3496', '18939', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31788', '-78712', '155768', '-3160', '57892', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35665', '-13480', '123384', '-3112', '21075', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31793', '-13528', '123384', '-3112', '22178', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31797', '18440', '144664', '-3072', '5324', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31087', '18504', '144568', '-3056', '8578', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31820', '110968', '218616', '-3536', '16166', '1', '0', '0');
-INSERT INTO `spawnlist` VALUES ('31805', '82184', '148664', '-3464', '62923', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31829', '147048', '25560', '-2008', '15344', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31815', '82012', '54321', '-1522', '16215', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31837', '144616', '-57112', '-2976', '4836', '1', '0', '0');
 INSERT INTO `spawnlist` VALUES ('31840', '147464', '-59048', '-2976', '15967', '1', '0', '0');
-INSERT INTO `spawnlist` VALUES ('31733', '87128', '-140824', '-1536', '16626', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35657', '-83301', '242669', '-3727', '38996', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35658', '46817', '51391', '-2984', '8100', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35659', '-45591', '-112970', '-237', '49100', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('31784', '-45541', '-112973', '-237', '48655', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35660', '117366', '-179959', '-1150', '32900', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35661', '12190', '17604', '-4572', '14173', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35662', '117210', '76910', '-2692', '35555', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35664', '-82425', '150140', '-3106', '16384', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35665', '-13755', '122982', '-3115', '32767', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('31795', '-13784', '122920', '-3112', '31946', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35666', '19335', '144472', '-3099', '16320', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35667', '111012', '218568', '-3540', '16383', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35668', '82243', '147488', '-3467', '16400', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('31805', '82302', '147497', '-3467', '16973', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35669', '147117', '26375', '-2104', '65435', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35670', '82936', '53035', '-1494', '16162', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35671', '147506', '-59098', '-2979', '16383', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35673', '87110', '-140871', '-1539', '16383', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('31733', '87160', '-140856', '-1536', '10250', '1', '0', '0');
+INSERT INTO `spawnlist` VALUES ('35672', '45590', '-49927', '-794', '34000', '1', '0', '0');
