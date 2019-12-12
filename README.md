@@ -356,7 +356,7 @@ HP/MP/CP имеют базовое время регена равно 3 сек.
 * Текустуры Quest Board
 * SystemMessages
 
-![Patch(System)](https://drive.google.com/file/d/1r0rG3bdZxdg8Np14XrYZmSFCoWJt6Hfm/view?usp=sharing)
+[Patch(System)](https://drive.google.com/file/d/1r0rG3bdZxdg8Np14XrYZmSFCoWJt6Hfm/view?usp=sharing)
 
 ## Server
 * Фикс бага со слушателями oNEquip/unequip
