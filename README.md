@@ -1,7 +1,7 @@
-[UPD 1.0](https://github.com/finfan222/L2JFinExGithub#upd-10)
-[UPD 2.0](https://github.com/finfan222/L2JFinExGithub#upd-20)
-[UPD 3.0](https://github.com/finfan222/L2JFinExGithub#upd-30)
-[UPD 4.0](https://github.com/finfan222/L2JFinExGithub#upd-40)
+1. [UPD 1.0](https://github.com/finfan222/L2JFinExGithub#upd-10)
+2. [UPD 2.0](https://github.com/finfan222/L2JFinExGithub#upd-20)
+3. [UPD 3.0](https://github.com/finfan222/L2JFinExGithub#upd-30)
+4. [UPD 4.0](https://github.com/finfan222/L2JFinExGithub#upd-40)
 
 # UPD 1.0
 
