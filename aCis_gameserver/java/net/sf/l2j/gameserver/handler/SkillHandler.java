@@ -38,17 +38,15 @@ import net.sf.l2j.gameserver.handler.skillhandlers.TakeCastle;
 import net.sf.l2j.gameserver.handler.skillhandlers.Unlock;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 
-public class SkillHandler
-{
+public class SkillHandler {
+
 	private final Map<Integer, ISkillHandler> _datatable = new HashMap<>();
-	
-	public static SkillHandler getInstance()
-	{
+
+	public static SkillHandler getInstance() {
 		return SingletonHolder._instance;
 	}
-	
-	protected SkillHandler()
-	{
+
+	protected SkillHandler() {
 		registerSkillHandler(new BalanceLife());
 		registerSkillHandler(new Blow());
 		registerSkillHandler(new Cancel());
@@ -81,25 +79,23 @@ public class SkillHandler
 		registerSkillHandler(new TakeCastle());
 		registerSkillHandler(new Unlock());
 	}
-	
-	public void registerSkillHandler(ISkillHandler handler)
-	{
-		for (ESkillType t : handler.getSkillIds())
+
+	public void registerSkillHandler(ISkillHandler handler) {
+		for (ESkillType t : handler.getSkillIds()) {
 			_datatable.put(t.ordinal(), handler);
+		}
 	}
-	
-	public ISkillHandler getSkillHandler(ESkillType skillType)
-	{
+
+	public ISkillHandler getSkillHandler(ESkillType skillType) {
 		return _datatable.get(skillType.ordinal());
 	}
-	
-	public int size()
-	{
+
+	public int size() {
 		return _datatable.size();
 	}
-	
-	private static class SingletonHolder
-	{
+
+	private static class SingletonHolder {
+
 		protected static final SkillHandler _instance = new SkillHandler();
 	}
 }

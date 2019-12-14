@@ -5,20 +5,18 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.actor.instance.Door;
 import net.sf.l2j.gameserver.model.actor.Player;
 
-public class DoorInfo extends L2GameServerPacket
-{
+public class DoorInfo extends L2GameServerPacket {
+
 	private final Door _door;
 	private final Player _activeChar;
-	
-	public DoorInfo(Door door, Player activeChar)
-	{
+
+	public DoorInfo(Door door, Player activeChar) {
 		_door = door;
 		_activeChar = activeChar;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x4c);
 		writeD(_door.getObjectId());
 		writeD(_door.getDoorId());

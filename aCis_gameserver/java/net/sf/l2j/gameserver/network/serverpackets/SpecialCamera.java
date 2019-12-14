@@ -2,8 +2,8 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class SpecialCamera extends L2GameServerPacket
-{
+public class SpecialCamera extends L2GameServerPacket {
+
 	private final int _id;
 	private final int _dist;
 	private final int _yaw;
@@ -14,9 +14,8 @@ public class SpecialCamera extends L2GameServerPacket
 	private final int _rise;
 	private final int _widescreen;
 	private final int _unknown;
-	
-	public SpecialCamera(int id, int dist, int yaw, int pitch, int time, int duration)
-	{
+
+	public SpecialCamera(int id, int dist, int yaw, int pitch, int time, int duration) {
 		_id = id;
 		_dist = dist;
 		_yaw = yaw;
@@ -28,9 +27,8 @@ public class SpecialCamera extends L2GameServerPacket
 		_widescreen = 0;
 		_unknown = 0;
 	}
-	
-	public SpecialCamera(int id, int dist, int yaw, int pitch, int time, int duration, int turn, int rise, int widescreen, int unk)
-	{
+
+	public SpecialCamera(int id, int dist, int yaw, int pitch, int time, int duration, int turn, int rise, int widescreen, int unk) {
 		_id = id;
 		_dist = dist;
 		_yaw = yaw;
@@ -42,10 +40,9 @@ public class SpecialCamera extends L2GameServerPacket
 		_widescreen = widescreen;
 		_unknown = unk;
 	}
-	
+
 	@Override
-	public void writeImpl()
-	{
+	public void writeImpl() {
 		writeC(0xc7);
 		writeD(_id);
 		writeD(_dist);

@@ -5,20 +5,18 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.communitybbs.CommunityBoard;
 
-public final class RequestShowBoard extends L2GameClientPacket
-{
+public final class RequestShowBoard extends L2GameClientPacket {
+
 	@SuppressWarnings("unused")
 	private int _unknown;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_unknown = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		CommunityBoard.getInstance().handleCommands(getClient(), Config.BBS_DEFAULT);
 	}
 }

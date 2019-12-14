@@ -18,7 +18,7 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  */
 @Effect("BlockEquip")
 public class BlockEquip extends L2Effect {
-	
+
 	private final InventoryFlag denyFlag;
 
 	public BlockEquip(Env env, EffectTemplate template) {
@@ -46,5 +46,5 @@ public class BlockEquip extends L2Effect {
 	public void onExit() {
 		getEffected().getInventory().getFlags().removeFlag(denyFlag);
 	}
-	
+
 }

@@ -11,35 +11,33 @@ import net.sf.l2j.gameserver.network.serverpackets.ExClosePartyRoom;
 import net.sf.l2j.gameserver.network.serverpackets.ExPartyRoomMember;
 import net.sf.l2j.gameserver.network.serverpackets.PartyMatchDetail;
 
-public final class RequestWithdrawParty extends L2GameClientPacket
-{
+public final class RequestWithdrawParty extends L2GameClientPacket {
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
-		
+		}
+
 		final Party party = player.getParty();
-		if (party == null)
+		if (party == null) {
 			return;
-		
+		}
+
 		party.removePartyMember(player, EPartyMessageType.LEFT);
-		
-		if (player.isInPartyMatchRoom())
-		{
+
+		if (player.isInPartyMatchRoom()) {
 			PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
-			if (room != null)
-			{
+			if (room != null) {
 				player.sendPacket(new PartyMatchDetail(room));
 				player.sendPacket(new ExPartyRoomMember(room, 0));
 				player.sendPacket(ExClosePartyRoom.STATIC_PACKET);
-				
+
 				room.deleteMember(player);
 			}
 			player.setPartyRoom(0);

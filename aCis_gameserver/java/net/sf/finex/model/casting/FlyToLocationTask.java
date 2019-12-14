@@ -35,5 +35,5 @@ public class FlyToLocationTask implements Runnable {
 			log.error("Failed to execute FlyToLocationTask on {}.", caster, e);
 		}
 	}
-	
+
 }

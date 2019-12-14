@@ -4,18 +4,16 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.pledge.Clan;
 
-public class PledgeShowInfoUpdate extends L2GameServerPacket
-{
+public class PledgeShowInfoUpdate extends L2GameServerPacket {
+
 	private final Clan _clan;
-	
-	public PledgeShowInfoUpdate(Clan clan)
-	{
+
+	public PledgeShowInfoUpdate(Clan clan) {
 		_clan = clan;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x88);
 		writeD(_clan.getClanId());
 		writeD(_clan.getCrestId());

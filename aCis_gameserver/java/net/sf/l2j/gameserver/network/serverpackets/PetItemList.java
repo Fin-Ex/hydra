@@ -8,25 +8,22 @@ import net.sf.l2j.gameserver.model.actor.Pet;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 
-public class PetItemList extends L2GameServerPacket
-{
+public class PetItemList extends L2GameServerPacket {
+
 	private final Set<ItemInstance> _items;
-	
-	public PetItemList(Pet character)
-	{
+
+	public PetItemList(Pet character) {
 		_items = character.getInventory().getItems();
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xB2);
 		writeH(_items.size());
-		
-		for (ItemInstance temp : _items)
-		{
+
+		for (ItemInstance temp : _items) {
 			Item item = temp.getItem();
-			
+
 			writeH(item.getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

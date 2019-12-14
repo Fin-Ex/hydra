@@ -33,17 +33,15 @@ import net.sf.l2j.gameserver.handler.itemhandlers.SpiritShot;
 import net.sf.l2j.gameserver.handler.itemhandlers.SummonItems;
 import net.sf.l2j.gameserver.model.item.kind.EtcItem;
 
-public class ItemHandler
-{
+public class ItemHandler {
+
 	private final Map<Integer, IItemHandler> _datatable = new HashMap<>();
-	
-	public static ItemHandler getInstance()
-	{
+
+	public static ItemHandler getInstance() {
 		return SingletonHolder._instance;
 	}
-	
-	protected ItemHandler()
-	{
+
+	protected ItemHandler() {
 		registerItemHandler(new BeastSoulShot());
 		registerItemHandler(new BeastSpice());
 		registerItemHandler(new BeastSpiritShot());
@@ -71,27 +69,25 @@ public class ItemHandler
 		registerItemHandler(new SpiritShot());
 		registerItemHandler(new SummonItems());
 	}
-	
-	public void registerItemHandler(IItemHandler handler)
-	{
+
+	public void registerItemHandler(IItemHandler handler) {
 		_datatable.put(handler.getClass().getSimpleName().intern().hashCode(), handler);
 	}
-	
-	public IItemHandler getItemHandler(EtcItem item)
-	{
-		if (item == null || item.getHandlerName() == null)
+
+	public IItemHandler getItemHandler(EtcItem item) {
+		if (item == null || item.getHandlerName() == null) {
 			return null;
-		
+		}
+
 		return _datatable.get(item.getHandlerName().hashCode());
 	}
-	
-	public int size()
-	{
+
+	public int size() {
 		return _datatable.size();
 	}
-	
-	private static class SingletonHolder
-	{
+
+	private static class SingletonHolder {
+
 		protected static final ItemHandler _instance = new ItemHandler();
 	}
 }

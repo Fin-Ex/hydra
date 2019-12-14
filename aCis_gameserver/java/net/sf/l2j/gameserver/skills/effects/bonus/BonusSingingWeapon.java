@@ -17,11 +17,11 @@ public class BonusSingingWeapon implements IBonusHandler {
 
 	@Override
 	public double calc(Creature caster) {
-		if(!caster.isPlayer() || !caster.getPlayer().getClassId().equalsOrChildOf(ClassId.Swordsinger)) {
+		if (!caster.isPlayer() || !caster.getPlayer().getClassId().equalsOrChildOf(ClassId.Swordsinger)) {
 			return 1;
 		}
-		
+
 		return caster.getAttackType() == WeaponType.BIGSWORD ? 1.15 : 1;
 	}
-	
+
 }

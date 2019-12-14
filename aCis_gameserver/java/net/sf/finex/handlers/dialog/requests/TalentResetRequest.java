@@ -23,22 +23,22 @@ public class TalentResetRequest implements IDialogRequest {
 	@Override
 	public Boolean handle(Player player, Object... args) {
 		// check for reseting points (if we have all of them)
-		if(player.getLineagePoints() == Config.LINEAGE_REACH_LEVEL.length) {
+		if (player.getLineagePoints() == Config.LINEAGE_REACH_LEVEL.length) {
 			player.sendPacket(SystemMessageId.NOTHING_TO_RESET);
 			return Boolean.FALSE;
 		}
-		
+
 		// check the price
-		if(LineagePointsManager.getInstance().validateReset(player, false) == 0) {
+		if (LineagePointsManager.getInstance().validateReset(player, false) == 0) {
 			return Boolean.FALSE;
 		}
-		
+
 		// send packet
 		final ConfirmDlg dlg;
-		if(Config.TALENT_RESET_ID <= 0 && Config.TALENT_RESET_PRICE <= 0) {
+		if (Config.TALENT_RESET_ID <= 0 && Config.TALENT_RESET_PRICE <= 0) {
 			// FREE
 			dlg = new ConfirmDlg(SystemMessageId.DO_YOU_WANT_TO_RESET_ALL_YOUR_MASTERIES);
-		} else if(Config.TALENT_RESET_ID > 0 && Config.TALENT_RESET_PRICE <= 0) {
+		} else if (Config.TALENT_RESET_ID > 0 && Config.TALENT_RESET_PRICE <= 0) {
 			// ITEM x1
 			dlg = new ConfirmDlg(SystemMessageId.DO_YOU_WANT_TO_RESET_ALL_YOUR_MASTERIES_FOR_S1_S2);
 			dlg.addNumber(1);
@@ -47,7 +47,7 @@ public class TalentResetRequest implements IDialogRequest {
 				throw new NullPointerException("Item with ID " + Config.TALENT_RESET_ID + " doesnt exists.");
 			}
 			dlg.addString(item.getName());
-		} else if(Config.TALENT_RESET_ID <= 0 && Config.TALENT_RESET_PRICE > 0) {
+		} else if (Config.TALENT_RESET_ID <= 0 && Config.TALENT_RESET_PRICE > 0) {
 			// SP
 			dlg = new ConfirmDlg(SystemMessageId.DO_YOU_WANT_TO_RESET_ALL_YOUR_MASTERIES_FOR_S1_S2);
 			dlg.addNumber(player.getLineageResetPrice());
@@ -62,9 +62,9 @@ public class TalentResetRequest implements IDialogRequest {
 			}
 			dlg.addString(item.getName());
 		}
-		
+
 		player.sendPacket(dlg);
 		return Boolean.TRUE;
 	}
-	
+
 }

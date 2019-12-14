@@ -6,18 +6,17 @@ import net.sf.l2j.gameserver.instancemanager.DuelManager;
 
 /**
  * Format:(ch)
+ *
  * @author -Wooden-
  */
-public final class RequestDuelSurrender extends L2GameClientPacket
-{
+public final class RequestDuelSurrender extends L2GameClientPacket {
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		DuelManager.getInstance().doSurrender(getClient().getActiveChar());
 	}
 }

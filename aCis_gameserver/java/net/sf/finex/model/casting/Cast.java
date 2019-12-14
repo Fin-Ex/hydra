@@ -11,6 +11,7 @@ import java.util.concurrent.Future;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+import net.sf.finex.model.talents.handlers.SonicAssault;
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.math.MathUtil;
 import net.sf.l2j.gameserver.geoengine.GeoEngine;
@@ -43,17 +44,28 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 @Slf4j
 public final class Cast {
 
-	@Getter private final Creature caster;
-	@Getter private final L2Skill skill;
-	@Getter private final boolean simultaneously;
-	@Getter private final boolean effectWhileCasting;
+	@Getter
+	private final Creature caster;
+	@Getter
+	private final L2Skill skill;
+	@Getter
+	private final boolean simultaneously;
+	@Getter
+	private final boolean effectWhileCasting;
 
-	@Getter private Creature target;
-	@Getter private WorldObject[] targets;
-	@Getter private int hitTime;
-	@Getter private int coolTime;
-	@Getter private int reuseDelay;
-	@Getter @Setter private long interruptTime;
+	@Getter
+	private Creature target;
+	@Getter
+	private WorldObject[] targets;
+	@Getter
+	private int hitTime;
+	@Getter
+	private int coolTime;
+	@Getter
+	private int reuseDelay;
+	@Getter
+	@Setter
+	private long interruptTime;
 
 	public Cast(Creature caster, L2Skill skill, boolean simultaneously) {
 		this.caster = caster;
@@ -190,7 +202,7 @@ public final class Cast {
 					}
 				}
 
-				if(!skill.isToggle()) {
+				if (!skill.isToggle()) {
 					caster.disableSkill(skill, reuseDelay);
 				}
 			}
@@ -379,21 +391,16 @@ public final class Cast {
 	}
 
 	public void hit(MagicUseTask mut) {
-		if (skill == null || targets == null)
-		{
+		if (skill == null || targets == null) {
 			caster.abortCast();
 			return;
 		}
-		
-		if (caster.getFusionSkill() != null)
-		{
-			if (simultaneously)
-			{
+
+		if (caster.getFusionSkill() != null) {
+			if (simultaneously) {
 				caster.setSkillCast2(null);
 				caster.setIsCastingSimultaneouslyNow(false);
-			}
-			else
-			{
+			} else {
 				caster.setSkillCast(null);
 				caster.setIsCastingNow(false);
 			}
@@ -401,17 +408,13 @@ public final class Cast {
 			caster.notifyQuestEventSkillFinished(skill, targets[0]);
 			return;
 		}
-		
+
 		final L2Effect mog = caster.getFirstEffect(L2EffectType.SIGNET_GROUND);
-		if (mog != null)
-		{
-			if (simultaneously)
-			{
+		if (mog != null) {
+			if (simultaneously) {
 				caster.setSkillCast2(null);
 				caster.setIsCastingSimultaneouslyNow(false);
-			}
-			else
-			{
+			} else {
 				caster.setSkillCast(null);
 				caster.setIsCastingNow(false);
 			}
@@ -419,7 +422,7 @@ public final class Cast {
 			caster.notifyQuestEventSkillFinished(skill, targets[0]);
 			return;
 		}
-		
+
 		// Go through targets table
 		for (WorldObject nextTarget : targets) {
 			if (nextTarget.isPlayable()) {
@@ -432,70 +435,46 @@ public final class Cast {
 				}
 			}
 		}
-		
+
 		StatusUpdate su = new StatusUpdate(caster);
 		boolean isSendStatus = false;
-		
+
 		// Consume MP of the Creature and Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		final double mpConsume = caster.getStat().getMpConsume(skill);
-		if (mpConsume > 0)
-		{
-			if (mpConsume > caster.getCurrentMp())
-			{
+		if (mpConsume > 0) {
+			if (mpConsume > caster.getCurrentMp()) {
 				caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP));
 				caster.abortCast();
 				return;
 			}
-			
+
 			caster.getStatus().reduceMp(mpConsume);
 			su.addAttribute(StatusUpdate.CUR_MP, (int) caster.getCurrentMp());
 			isSendStatus = true;
 		}
-		
+
 		// Consume HP if necessary and Send the Server->Client packet StatusUpdate with current HP and MP to all other Player to inform
 		final double hpConsume = skill.getHpConsume();
-		if (hpConsume > 0)
-		{
-			if (hpConsume > caster.getCurrentHp())
-			{
+		if (hpConsume > 0) {
+			if (hpConsume > caster.getCurrentHp()) {
 				caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_HP));
 				caster.abortCast();
 				return;
 			}
-			
+
 			caster.getStatus().reduceHp(hpConsume, caster, true);
 			su.addAttribute(StatusUpdate.CUR_HP, (int) caster.getCurrentHp());
 			isSendStatus = true;
 		}
-		
+
 		// Send StatusUpdate with MP modification to the Player
-		if (isSendStatus)
+		if (isSendStatus) {
 			caster.sendPacket(su);
-		
-		if (caster.isPlayer())
-		{
-			// check for charges
-			int charges = caster.getPlayer().getCharges();
-			if (skill.getMaxCharges() == 0 && charges < skill.getNumCharges())
-			{
-				caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addSkillName(skill));
-				caster.abortCast();
-				return;
-			}
-			
-			// generate charges if any
-			if (skill.getNumCharges() > 0)
-			{
-				if (skill.getMaxCharges() > 0)
-					caster.getPlayer().increaseCharges(skill.getNumCharges(), skill.getMaxCharges());
-				else
-					caster.getPlayer().decreaseCharges(skill.getNumCharges());
-			}
 		}
-		
+
 		// Launch the magic skill in order to calculate its effects
 		callSkill();
-		
+
 		mut.phase = 3;
 		if (hitTime == 0 || coolTime == 0) {
 			finish(mut);
@@ -506,37 +485,61 @@ public final class Cast {
 				caster.setSkillCast(ThreadPool.schedule(mut, coolTime));
 			}
 		}
-		
+
+		if (caster.isPlayer()) {
+			// check for charges
+
+			final boolean sonicMoveConsume = SonicAssault.validate(skill.getId(), caster.getPlayer());
+			if (sonicMoveConsume) {
+				return;
+			}
+
+			int charges = caster.getPlayer().getCharges();
+			if (skill.getMaxCharges() == 0 && charges < skill.getNumCharges()) {
+				caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addSkillName(skill));
+				caster.abortCast();
+				return;
+			}
+
+			// generate charges if any
+			if (skill.getNumCharges() > 0) {
+				if (skill.getMaxCharges() > 0) {
+					caster.getPlayer().increaseCharges(skill.getNumCharges(), skill.getMaxCharges());
+				} else {
+					caster.getPlayer().decreaseCharges(skill.getNumCharges());
+				}
+			}
+		}
 	}
 
 	public void finish(MagicUseTask mut) {
-		if (simultaneously)
-		{
+		if (simultaneously) {
 			caster.setSkillCast2(null);
 			caster.setIsCastingSimultaneouslyNow(false);
 			return;
 		}
-		
+
 		caster.setSkillCast(null);
 		caster.setIsCastingNow(false);
 		interruptTime = 0;
-		
+
 		final WorldObject tgt = targets.length > 0 ? targets[0] : null;
-		
+
 		// Attack target after skill use
 		if (skill.nextActionIsAttack() && caster.getTarget().isCreature() && caster.getTarget() != caster && caster.getTarget() == tgt && caster.getTarget().isAttackable()) {
 			if (caster.getAI() == null || caster.getAI().getNextIntention() == null || caster.getAI().getNextIntention().getIntention() != CtrlIntention.MOVE_TO) {
 				caster.getAI().setIntention(CtrlIntention.ATTACK, tgt);
 			}
 		}
-		
-		if (skill.isOffensive() && !(skill.getSkillType() == ESkillType.UNLOCK) && !(skill.getSkillType() == ESkillType.DELUXE_KEY_UNLOCK))
+
+		if (skill.isOffensive() && !(skill.getSkillType() == ESkillType.UNLOCK) && !(skill.getSkillType() == ESkillType.DELUXE_KEY_UNLOCK)) {
 			caster.getAI().clientStartAutoAttack();
-		
+		}
+
 		// Notify the AI of the Creature with EVT_FINISH_CASTING
 		caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
 		caster.notifyQuestEventSkillFinished(skill, tgt);
-		
+
 		// If the current character is a summon, refresh _currentPetSkill, otherwise if it's a player, refresh _currentSkill and _queuedSkill.
 		if (caster.isPlayable()) {
 			boolean isPlayer = caster.isPlayer();
@@ -559,7 +562,6 @@ public final class Cast {
 	}
 
 	/* FUNCTIONS *******************/
-	
 	public void onFailure() {
 		if (simultaneously) {
 			caster.setIsCastingSimultaneouslyNow(false);
@@ -575,13 +577,13 @@ public final class Cast {
 
 	private void callSkill() {
 		final boolean absorb = Formulas.calcAbsorb(caster, target, skill);
-		if(skill.isProjectile()) {
+		if (skill.isProjectile()) {
 			ThreadPool.schedule(() -> {
 				if (absorb && caster.isPlayer()) {
 					caster.getPlayer().sendPacket(SystemMessageId.ATTACK_FAILED);
 					return;
 				}
-				
+
 				caster.callSkill(skill, targets);
 				caster.getEventBus().notify(new OnCast(caster, target, skill));
 			}, Formulas.calcSkillFlyTime(caster, targets[0]));
@@ -590,7 +592,7 @@ public final class Cast {
 				caster.getPlayer().sendPacket(SystemMessageId.ATTACK_FAILED);
 				return;
 			}
-			
+
 			caster.callSkill(skill, targets);
 			caster.getEventBus().notify(new OnCast(caster, target, skill));
 		}

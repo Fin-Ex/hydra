@@ -14,5 +14,6 @@ import net.sf.l2j.gameserver.model.actor.Player;
  * @author FinFan
  */
 public interface IDialogRequest {
-	public <T> T handle(Player player, Object...args);
+
+	public <T> T handle(Player player, Object... args);
 }

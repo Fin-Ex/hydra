@@ -4,19 +4,18 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Format: (ch)
+ *
  * @author -Wooden-
  */
-public class ShowPCCafeCouponShowUI extends L2GameServerPacket
-{
+public class ShowPCCafeCouponShowUI extends L2GameServerPacket {
+
 	public static final ShowPCCafeCouponShowUI STATIC_PACKET = new ShowPCCafeCouponShowUI();
-	
-	private ShowPCCafeCouponShowUI()
-	{
+
+	private ShowPCCafeCouponShowUI() {
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x43);
 	}

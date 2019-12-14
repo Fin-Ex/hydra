@@ -29,5 +29,5 @@ public class NotifyAITask implements Runnable {
 			log.error("", t);
 		}
 	}
-	
+
 }

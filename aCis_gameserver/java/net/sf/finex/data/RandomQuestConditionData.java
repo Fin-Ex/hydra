@@ -14,22 +14,23 @@ import net.sf.finex.enums.ERandomQuestType;
  */
 @Data
 public class RandomQuestConditionData<T> {
+
 	private final ERandomQuestType type;
 	private final T target;
 	private int value;
-	
+
 	public RandomQuestConditionData(ERandomQuestType type, T target, int value) {
 		this.type = type;
 		this.target = target;
 		this.value = value;
 	}
-	
+
 	public RandomQuestConditionData(ERandomQuestType type, T target) {
 		this.type = type;
 		this.target = target;
 		this.value = 0;
 	}
-	
+
 	public <T> T getTarget() {
 		return (T) target;
 	}

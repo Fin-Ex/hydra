@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills;
 
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -39,6 +38,7 @@ public final class EffectTemplate {
 	public final ChanceCondition chanceCondition;
 	public final StatsSet stats;
 	public final EEffectBonusType bonus;
+
 	public EffectTemplate(String effectname, StatsSet set) {
 		attachCond = set.getObject("attachCond", Condition.class);
 		applayCond = set.getObject("applayCond", Condition.class);
@@ -55,18 +55,18 @@ public final class EffectTemplate {
 		triggeredLevel = set.getInteger("triggeredLevel", -1);
 		chanceCondition = set.getObject("chanceType", ChanceCondition.class);
 		stats = set;
-		
+
 		effectClass = EffectClassHolder.getInstance().getClass(effectname);
-		if(effectClass == null) {
+		if (effectClass == null) {
 			throw new RuntimeException("Backend effect of '" + effectname + "' not found!");
 		}
-		
+
 		try {
 			effectConstructor = effectClass.getConstructor(Env.class, EffectTemplate.class);
 		} catch (NoSuchMethodException e) {
 			throw new RuntimeException(e);
 		}
-		
+
 		bonus = set.getEnum("bonus", EEffectBonusType.class, EEffectBonusType.NONE);
 	}
 

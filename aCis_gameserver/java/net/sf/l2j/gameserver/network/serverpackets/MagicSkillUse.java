@@ -7,8 +7,8 @@ import net.sf.l2j.gameserver.model.actor.Creature;
 /**
  * format dddddd dddh (h)
  */
-public class MagicSkillUse extends L2GameServerPacket
-{
+public class MagicSkillUse extends L2GameServerPacket {
+
 	private final int _targetId;
 	private final int _skillId;
 	private final int _skillLevel;
@@ -16,15 +16,13 @@ public class MagicSkillUse extends L2GameServerPacket
 	private final int _reuseDelay;
 	private final int _charObjId, _x, _y, _z, _targetx, _targety, _targetz;
 	private boolean _success = false;
-	
-	public MagicSkillUse(Creature cha, Creature target, int skillId, int skillLevel, int hitTime, int reuseDelay, boolean crit)
-	{
+
+	public MagicSkillUse(Creature cha, Creature target, int skillId, int skillLevel, int hitTime, int reuseDelay, boolean crit) {
 		this(cha, target, skillId, skillLevel, hitTime, reuseDelay);
 		_success = crit;
 	}
-	
-	public MagicSkillUse(Creature cha, Creature target, int skillId, int skillLevel, int hitTime, int reuseDelay)
-	{
+
+	public MagicSkillUse(Creature cha, Creature target, int skillId, int skillLevel, int hitTime, int reuseDelay) {
 		_charObjId = cha.getObjectId();
 		_targetId = target.getObjectId();
 		_skillId = skillId;
@@ -38,9 +36,8 @@ public class MagicSkillUse extends L2GameServerPacket
 		_targety = target.getY();
 		_targetz = target.getZ();
 	}
-	
-	public MagicSkillUse(Creature cha, int skillId, int skillLevel, int hitTime, int reuseDelay)
-	{
+
+	public MagicSkillUse(Creature cha, int skillId, int skillLevel, int hitTime, int reuseDelay) {
 		_charObjId = cha.getObjectId();
 		_targetId = cha.getTargetId();
 		_skillId = skillId;
@@ -54,10 +51,9 @@ public class MagicSkillUse extends L2GameServerPacket
 		_targety = cha.getY();
 		_targetz = cha.getZ();
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x48);
 		writeD(_charObjId);
 		writeD(_targetId);
@@ -68,13 +64,12 @@ public class MagicSkillUse extends L2GameServerPacket
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
-		if (_success)
-		{
+		if (_success) {
 			writeD(0x01);
 			writeH(0x00);
-		}
-		else
+		} else {
 			writeD(0x00);
+		}
 		writeD(_targetx);
 		writeD(_targety);
 		writeD(_targetz);

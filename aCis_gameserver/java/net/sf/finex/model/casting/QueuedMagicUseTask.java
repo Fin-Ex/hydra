@@ -10,7 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
-/** Task launching the function useMagic() */
+/**
+ * Task launching the function useMagic()
+ */
 @Slf4j
 public class QueuedMagicUseTask implements Runnable {
 
@@ -34,5 +36,5 @@ public class QueuedMagicUseTask implements Runnable {
 			log.error("Failed executing QueuedMagicUseTask.", e);
 		}
 	}
-	
+
 }

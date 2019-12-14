@@ -7,8 +7,8 @@ import net.sf.l2j.gameserver.model.actor.Player;
 /**
  * @author godson
  */
-public class ExOlympiadUserInfo extends L2GameServerPacket
-{
+public class ExOlympiadUserInfo extends L2GameServerPacket {
+
 	private int _side;
 	private int _objectId;
 	private String _name;
@@ -17,9 +17,8 @@ public class ExOlympiadUserInfo extends L2GameServerPacket
 	private int _maxHp;
 	private int _curCp;
 	private int _maxCp;
-	
-	public ExOlympiadUserInfo(Player player)
-	{
+
+	public ExOlympiadUserInfo(Player player) {
 		_side = player.getOlympiadSide();
 		_objectId = player.getObjectId();
 		_name = player.getName();
@@ -29,10 +28,9 @@ public class ExOlympiadUserInfo extends L2GameServerPacket
 		_curCp = (int) player.getCurrentCp();
 		_maxCp = player.getMaxCp();
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xfe);
 		writeH(0x29);
 		writeC(_side);

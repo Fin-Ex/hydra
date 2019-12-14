@@ -9,42 +9,41 @@ import net.sf.l2j.gameserver.network.serverpackets.ExConfirmVariationItem;
 
 /**
  * Format:(ch) d
+ *
  * @author -Wooden-
  */
-public final class RequestConfirmTargetItem extends AbstractRefinePacket
-{
+public final class RequestConfirmTargetItem extends AbstractRefinePacket {
+
 	private int _itemObjId;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_itemObjId = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
+		}
+
 		final ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjId);
-		if (item == null)
+		if (item == null) {
 			return;
-		
-		if (!isValid(activeChar, item))
-		{
+		}
+
+		if (!isValid(activeChar, item)) {
 			// Different system message here
-			if (item.isAugmented())
-			{
+			if (item.isAugmented()) {
 				activeChar.sendPacket(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);
 				return;
 			}
-			
+
 			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
-		
+
 		activeChar.sendPacket(new ExConfirmVariationItem(_itemObjId));
 	}
 }

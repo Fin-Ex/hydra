@@ -28,36 +28,36 @@ public class RedirectionSkill implements ISkillMechanic {
 	 * <li>[1] (Creature) reflector</li>
 	 * <li>[2] (L2Skill) skill</li>
 	 * </ul>
-	 * @param args 
+	 *
+	 * @param args
 	 */
 	@Override
 	public void invoke(Object... args) {
 		final StatsSet spellStats = (StatsSet) args[0];
 		final Creature reflector = (Creature) args[1];
 		final L2Skill skill = (L2Skill) args[2];
-		if(reflector.isCastingNow() || reflector.isOutOfControl() 
+		if (reflector.isCastingNow() || reflector.isOutOfControl()
 				|| reflector.getParams().getBool(ESkillHandlerType.RETURN_MAGIC.name())) {
 			return;
 		}
-		
-		if(skill.isAoE()) {
+
+		if (skill.isAoE()) {
 			return;
 		}
 
 		final Creature victim;
-		if(reflector.getTarget() == null) {
+		if (reflector.getTarget() == null) {
 			victim = reflector;
 		} else {
 			victim = (Creature) reflector.getTarget();
 		}
-		
+
 		// calc us damage
 		final int damage = (int) (Formulas.calcMagicDam(reflector, victim, skill, Formulas.SHIELD_DEFENSE_FAILED, false,
 				spellStats.getBool("calcmdam_ss"),
 				spellStats.getBool("calcmdam_bss"),
 				spellStats.getBool("calcmdam_mcrit")) + spellStats.getDouble("calcmdam_damage")); // modify us damage by original
 
-		
 		if (victim == reflector) {
 			// hit self
 			victim.sendMessage("You get additional damage cause not controll the power of magic!");

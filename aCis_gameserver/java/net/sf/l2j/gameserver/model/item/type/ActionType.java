@@ -5,8 +5,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author nBd
  */
-public enum ActionType
-{
+public enum ActionType {
 	calc,
 	call_skill,
 	capsule,

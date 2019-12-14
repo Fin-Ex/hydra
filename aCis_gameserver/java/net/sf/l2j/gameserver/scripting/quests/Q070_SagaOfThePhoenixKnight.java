@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q070_SagaOfThePhoenixKnight extends SagasSuperClass
-{
-	public Q070_SagaOfThePhoenixKnight()
-	{
+public class Q070_SagaOfThePhoenixKnight extends SagasSuperClass {
+
+	public Q070_SagaOfThePhoenixKnight() {
 		super(70, "Saga of the Phoenix Knight");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30849,
 			31624,
 			31277,
@@ -25,9 +23,8 @@ public class Q070_SagaOfThePhoenixKnight extends SagasSuperClass
 			31657,
 			31277
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7534,
 			7081,
@@ -41,38 +38,34 @@ public class Q070_SagaOfThePhoenixKnight extends SagasSuperClass
 			7093,
 			6482
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27286,
 			27219,
 			27278
 		};
-		
+
 		classid = 90;
 		prevclass = 0x05;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			191046,
 			46087,
 			46066
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-40640,
 			-36372,
 			-36396
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-3042,
 			-1685,
 			-1685
 		};
-		
+
 		registerNPCs();
 	}
 }

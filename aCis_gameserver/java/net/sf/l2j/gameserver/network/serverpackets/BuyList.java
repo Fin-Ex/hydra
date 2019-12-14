@@ -8,32 +8,28 @@ import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.model.buylist.NpcBuyList;
 import net.sf.l2j.gameserver.model.buylist.Product;
 
-public final class BuyList extends L2GameServerPacket
-{
+public final class BuyList extends L2GameServerPacket {
+
 	private final int _listId, _money;
 	private final Collection<Product> _list;
 	private double _taxRate = 0;
-	
-	public BuyList(NpcBuyList list, int currentMoney, double taxRate)
-	{
+
+	public BuyList(NpcBuyList list, int currentMoney, double taxRate) {
 		_listId = list.getListId();
 		_list = list.getProducts();
 		_money = currentMoney;
 		_taxRate = taxRate;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x11);
 		writeD(_money);
 		writeD(_listId);
 		writeH(_list.size());
-		
-		for (Product product : _list)
-		{
-			if (product.getCount() > 0 || !product.hasLimitedStock())
-			{
+
+		for (Product product : _list) {
+			if (product.getCount() > 0 || !product.hasLimitedStock()) {
 				writeH(product.getItem().getType1());
 				writeD(product.getItemId());
 				writeD(product.getItemId());
@@ -44,11 +40,12 @@ public final class BuyList extends L2GameServerPacket
 				writeH(0x00); // TODO: ItemInstance getEnchantLevel()
 				writeH(0x00); // TODO: ItemInstance getCustomType2()
 				writeH(0x00);
-				
-				if (product.getItemId() >= 3960 && product.getItemId() <= 4026)
+
+				if (product.getItemId() >= 3960 && product.getItemId() <= 4026) {
 					writeD((int) (product.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
-				else
+				} else {
 					writeD((int) (product.getPrice() * (1 + _taxRate)));
+				}
 			}
 		}
 	}

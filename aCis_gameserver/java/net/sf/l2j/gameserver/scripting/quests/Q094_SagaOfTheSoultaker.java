@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q094_SagaOfTheSoultaker extends SagasSuperClass
-{
-	public Q094_SagaOfTheSoultaker()
-	{
+public class Q094_SagaOfTheSoultaker extends SagasSuperClass {
+
+	public Q094_SagaOfTheSoultaker() {
 		super(94, "Saga of the Soultaker");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30832,
 			31623,
 			31279,
@@ -25,9 +23,8 @@ public class Q094_SagaOfTheSoultaker extends SagasSuperClass
 			31657,
 			31279
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7533,
 			7081,
@@ -41,38 +38,34 @@ public class Q094_SagaOfTheSoultaker extends SagasSuperClass
 			7085,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27257,
 			27243,
 			27265
 		};
-		
+
 		classid = 95;
 		prevclass = 0x0d;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			191046,
 			46066,
 			46087
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-40640,
 			-36396,
 			-36372
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-3042,
 			-1685,
 			-1685
 		};
-		
+
 		registerNPCs();
 	}
 }

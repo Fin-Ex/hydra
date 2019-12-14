@@ -26,8 +26,9 @@ import net.sf.finex.data.QuestData;
 @Slf4j
 public class QuestDataTable extends StorageTable {
 
-	@Getter private static final QuestDataTable instance = new QuestDataTable();
-	
+	@Getter
+	private static final QuestDataTable instance = new QuestDataTable();
+
 	private final List<QuestData> holder = new ArrayList<>();
 
 	public QuestDataTable() {
@@ -46,7 +47,8 @@ public class QuestDataTable extends StorageTable {
 		final Gson gson = new Gson();
 		final File file = new File("data/json/quest_data.json");
 		try (Reader reader = new InputStreamReader(new FileInputStream(file))) {
-			holder.addAll(gson.fromJson(reader, new TypeToken<List<QuestData>>() {}.getType()));
+			holder.addAll(gson.fromJson(reader, new TypeToken<List<QuestData>>() {
+			}.getType()));
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}

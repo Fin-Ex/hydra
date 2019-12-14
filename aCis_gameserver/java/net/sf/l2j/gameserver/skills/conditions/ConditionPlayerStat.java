@@ -7,8 +7,8 @@ import net.sf.l2j.gameserver.skills.Stats;
 /**
  * @author mr
  */
-public class ConditionPlayerStat extends Condition
-{
+public class ConditionPlayerStat extends Condition {
+
 	private final Stats stat;
 	private final int value;
 	private final boolean isLower;
@@ -20,8 +20,7 @@ public class ConditionPlayerStat extends Condition
 	}
 
 	@Override
-	public boolean testImpl(Env env)
-	{
+	public boolean testImpl(Env env) {
 		final Creature cha = env.getCharacter();
 		switch (stat) {
 			case STR:

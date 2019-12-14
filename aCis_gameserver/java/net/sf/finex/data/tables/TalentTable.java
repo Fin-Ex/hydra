@@ -5,7 +5,6 @@
  */
 package net.sf.finex.data.tables;
 
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.File;
@@ -19,8 +18,6 @@ import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.finex.StorageTable;
 import net.sf.finex.data.TalentData;
-import net.sf.l2j.gameserver.data.SkillTable;
-import net.sf.l2j.gameserver.model.holder.SkillUseHolder;
 
 /**
  *
@@ -29,14 +26,15 @@ import net.sf.l2j.gameserver.model.holder.SkillUseHolder;
 @Slf4j
 public class TalentTable extends StorageTable {
 
-	@Getter private static final TalentTable instance = new TalentTable();
+	@Getter
+	private static final TalentTable instance = new TalentTable();
 
 	private final List<TalentData> holder = new ArrayList<>();
-	
+
 	private TalentTable() {
 		load();
 	}
-	
+
 	@Override
 	public void reload() {
 		holder.clear();
@@ -48,9 +46,9 @@ public class TalentTable extends StorageTable {
 	protected void load() {
 		final Gson gson = new Gson();
 		final File file = new File("data/json/talents/");
-		for(File f : file.listFiles()) {
+		for (File f : file.listFiles()) {
 			final char symbol = f.getName().charAt(0);
-			if(Character.isDigit(symbol)) {
+			if (Character.isDigit(symbol)) {
 				try (Reader reader = new InputStreamReader(new FileInputStream(f))) {
 					holder.addAll(gson.fromJson(reader, new TypeToken<List<TalentData>>() {
 					}.getType()));
@@ -78,7 +76,7 @@ public class TalentTable extends StorageTable {
 	public List<TalentData> holder() {
 		return holder;
 	}
-	
+
 	public TalentData getBySkillId(int skillId) {
 		for (TalentData data : holder) {
 			if (data.getSkillId() == skillId) {

@@ -16,6 +16,7 @@ import net.sf.l2j.gameserver.skills.Stats;
  */
 @Data
 public class ItemStatData {
+
 	private final Stats stat;
 	private final double value;
 }

@@ -8,26 +8,25 @@ import net.sf.l2j.gameserver.model.location.Location;
 
 /**
  * Format (ch)ddddd
+ *
  * @author -Wooden-
  */
-public class ExFishingStart extends L2GameServerPacket
-{
+public class ExFishingStart extends L2GameServerPacket {
+
 	private final Creature _activeChar;
 	private final Location _loc;
 	private final int _fishType;
 	private final boolean _isNightLure;
-	
-	public ExFishingStart(Creature character, int fishType, Location loc, boolean isNightLure)
-	{
+
+	public ExFishingStart(Creature character, int fishType, Location loc, boolean isNightLure) {
 		_activeChar = character;
 		_fishType = fishType;
 		_loc = loc;
 		_isNightLure = isNightLure;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x13);
 		writeD(_activeChar.getObjectId());

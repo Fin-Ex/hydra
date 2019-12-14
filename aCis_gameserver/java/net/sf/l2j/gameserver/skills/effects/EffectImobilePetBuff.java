@@ -14,44 +14,38 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  * @author demonia
  */
 @Effect("ImobilePetBuff")
-final class EffectImobilePetBuff extends L2Effect
-{
+final class EffectImobilePetBuff extends L2Effect {
+
 	private Summon _pet;
-	
-	public EffectImobilePetBuff(Env env, EffectTemplate template)
-	{
+
+	public EffectImobilePetBuff(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BUFF;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		_pet = null;
-		
-		if (getEffected() instanceof Summon && getEffector() instanceof Player && ((Summon) getEffected()).getPlayer() == getEffector())
-		{
+
+		if (getEffected() instanceof Summon && getEffector() instanceof Player && ((Summon) getEffected()).getPlayer() == getEffector()) {
 			_pet = (Summon) getEffected();
 			_pet.setIsImmobilized(true);
 			return true;
 		}
 		return false;
 	}
-	
+
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		_pet.setIsImmobilized(false);
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 }

@@ -13,38 +13,33 @@ import net.sf.l2j.gameserver.templates.StatsSet;
  * <li>The broken itemId rewarded if absorb failed.</li>
  * </ul>
  */
-public final class SoulCrystal
-{
+public final class SoulCrystal {
+
 	private final int _level;
 	private final int _initialItemId;
 	private final int _stagedItemId;
 	private final int _brokenItemId;
-	
-	public SoulCrystal(StatsSet set)
-	{
+
+	public SoulCrystal(StatsSet set) {
 		_level = set.getInteger("level");
 		_initialItemId = set.getInteger("initial");
 		_stagedItemId = set.getInteger("staged");
 		_brokenItemId = set.getInteger("broken");
 	}
-	
-	public int getLevel()
-	{
+
+	public int getLevel() {
 		return _level;
 	}
-	
-	public int getInitialItemId()
-	{
+
+	public int getInitialItemId() {
 		return _initialItemId;
 	}
-	
-	public int getStagedItemId()
-	{
+
+	public int getStagedItemId() {
 		return _stagedItemId;
 	}
-	
-	public int getBrokenItemId()
-	{
+
+	public int getBrokenItemId() {
 		return _brokenItemId;
 	}
 }

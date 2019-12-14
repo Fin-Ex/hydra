@@ -36,15 +36,15 @@ public class QuestBoard extends Npc {
 		if (command.startsWith("rndquest")) {
 			final int questId = Integer.parseInt(st.nextToken());
 			RandomQuestHtmlManager.getInstance().showQuestDescription(player, this, questId);
-		} else if(command.startsWith("takeQuest")) { 
+		} else if (command.startsWith("takeQuest")) {
 			final ETownType town = ETownType.getTownById(MapRegionTable.getTown(getX(), getY(), getZ()).getTownId());
 			final EGradeType grade = EGradeType.getPlayerGrade(player);
 			final int questId = Integer.parseInt(st.nextToken());
 			final RandomQuestData quest = RandomQuestManager.getInstance().getQuest(town, grade, questId);
 			RandomQuestManager.getInstance().addQuest(quest, player, this);
-		} else if(command.startsWith("cancelQuest")) {
+		} else if (command.startsWith("cancelQuest")) {
 			RandomQuestManager.getInstance().cancelQuest(player);
-		} else if(command.startsWith("showQuestList")) {
+		} else if (command.startsWith("showQuestList")) {
 			showChatWindow(player);
 		} else {
 			super.onBypassFeedback(player, command);
@@ -54,9 +54,9 @@ public class QuestBoard extends Npc {
 	@Override
 	public void showChatWindow(Player player) {
 		final RandomQuestComponent component = player.getComponent(RandomQuestComponent.class);
-		if(component.hasQuest()) {
+		if (component.hasQuest()) {
 			final RandomQuestData quest = component.getQuest();
-			if(quest.getBoardId() == getNpcId()) {
+			if (quest.getBoardId() == getNpcId()) {
 				// show quest description
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				final StringBuilder sb = new StringBuilder();

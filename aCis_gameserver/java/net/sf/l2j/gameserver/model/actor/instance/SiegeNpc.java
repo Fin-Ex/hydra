@@ -8,20 +8,17 @@ import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import net.sf.l2j.gameserver.network.serverpackets.SiegeInfo;
 
-public class SiegeNpc extends Folk
-{
-	public SiegeNpc(int objectId, NpcTemplate template)
-	{
+public class SiegeNpc extends Folk {
+
+	public SiegeNpc(int objectId, NpcTemplate template) {
 		super(objectId, template);
 	}
-	
+
 	@Override
-	public void showChatWindow(Player player)
-	{
-		if (!getCastle().getSiege().isInProgress())
+	public void showChatWindow(Player player) {
+		if (!getCastle().getSiege().isInProgress()) {
 			player.sendPacket(new SiegeInfo(getCastle()));
-		else
-		{
+		} else {
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("data/html/siege/" + getNpcId() + "-busy.htm");
 			html.replace("%castlename%", getCastle().getName());

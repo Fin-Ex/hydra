@@ -55,7 +55,7 @@ public class Mdam implements ISkillHandler {
 				// vengeance reflected damage
 				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0) {
 					ESkillHandlerType.RETURN_MAGIC.getHandler().invoke(caster, target, skill, damage);
-				} else if(target.getFirstEffect(L2EffectType.REDIRECT_SKILL) != null) {
+				} else if (target.getFirstEffect(L2EffectType.REDIRECT_SKILL) != null) {
 					ESkillHandlerType.REDIRECTION_SKILL.getHandler().invoke(caster.getParams(), target, skill);
 					continue;
 				} else {

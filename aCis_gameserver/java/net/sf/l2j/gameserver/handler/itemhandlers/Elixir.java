@@ -8,13 +8,11 @@ import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
-public class Elixir extends ItemSkills
-{
+public class Elixir extends ItemSkills {
+
 	@Override
-	public void useItem(Playable playable, ItemInstance item, boolean forceUse)
-	{
-		if (!(playable instanceof Player))
-		{
+	public void useItem(Playable playable, ItemInstance item, boolean forceUse) {
+		if (!(playable instanceof Player)) {
 			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 			return;
 		}

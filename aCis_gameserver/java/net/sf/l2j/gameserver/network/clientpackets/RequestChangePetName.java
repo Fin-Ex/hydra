@@ -14,71 +14,63 @@ import net.sf.l2j.gameserver.model.actor.Pet;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 
-public final class RequestChangePetName extends L2GameClientPacket
-{
+public final class RequestChangePetName extends L2GameClientPacket {
+
 	private String _name;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_name = readS();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
-		if (_name.length() < 2 || _name.length() > 8)
-		{
+		}
+
+		if (_name.length() < 2 || _name.length() > 8) {
 			activeChar.sendPacket(SystemMessageId.NAMING_PETNAME_UP_TO_8CHARS);
 			return;
 		}
-		
-		if (!StringUtil.isValidName(_name, "^[A-Za-z]{2,8}$"))
-		{
+
+		if (!StringUtil.isValidName(_name, "^[A-Za-z]{2,8}$")) {
 			activeChar.sendPacket(SystemMessageId.NAMING_PETNAME_CONTAINS_INVALID_CHARS);
 			return;
 		}
-		
-		if (!activeChar.hasPet())
+
+		if (!activeChar.hasPet()) {
 			return;
-		
+		}
+
 		final Pet pet = (Pet) activeChar.getActiveSummon();
-		
-		if (pet.getName() != null)
-		{
+
+		if (pet.getName() != null) {
 			activeChar.sendPacket(SystemMessageId.NAMING_YOU_CANNOT_SET_NAME_OF_THE_PET);
 			return;
 		}
-		
-		if (doesPetNameExist(_name))
-		{
+
+		if (doesPetNameExist(_name)) {
 			activeChar.sendPacket(SystemMessageId.NAMING_ALREADY_IN_USE_BY_ANOTHER_PET);
 			return;
 		}
-		
+
 		pet.setName(_name);
 		pet.sendPetInfosToOwner();
 	}
-	
-	private static boolean doesPetNameExist(String name)
-	{
+
+	private static boolean doesPetNameExist(String name) {
 		boolean result = true;
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
-		{
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
 			PreparedStatement statement = con.prepareStatement("SELECT name FROM pets WHERE name=?");
 			statement.setString(1, name);
-			
+
 			ResultSet rset = statement.executeQuery();
 			result = rset.next();
 			rset.close();
 			statement.close();
-		}
-		catch (SQLException e)
-		{
+		} catch (SQLException e) {
 			_log.warn("could not check existing petname:" + e.getMessage());
 		}
 		return result;

@@ -4,10 +4,10 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Material Type enumerated.
+ *
  * @author Adry_85
  */
-public enum MaterialType
-{
+public enum MaterialType {
 	STEEL,
 	FINE_STEEL,
 	COTTON,

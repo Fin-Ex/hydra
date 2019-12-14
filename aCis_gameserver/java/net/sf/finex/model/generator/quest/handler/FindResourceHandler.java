@@ -25,16 +25,16 @@ public class FindResourceHandler extends RandomQuestHandler {
 	protected boolean onPassQuest(Player player, Npc npc) {
 		final RandomQuestComponent component = player.getComponent(RandomQuestComponent.class);
 		final RandomQuestData quest = component.getQuest();
-		if(quest == null) {
+		if (quest == null) {
 			return false;
 		}
-		
+
 		final Item condItem = (Item) quest.getCondition().getTarget();
 		final ItemInstance resource = player.getInventory().getItemByItemId(condItem.getItemId());
-		if(resource == null) {
+		if (resource == null) {
 			return false;
 		}
-		
+
 		return player.destroyItem("FindResourceItemPass", resource, quest.getCondition().getValue(), null, true);
 	}
 }

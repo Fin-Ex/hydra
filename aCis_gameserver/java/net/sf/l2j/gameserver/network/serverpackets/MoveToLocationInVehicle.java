@@ -4,8 +4,8 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.actor.Player;
 
-public class MoveToLocationInVehicle extends L2GameServerPacket
-{
+public class MoveToLocationInVehicle extends L2GameServerPacket {
+
 	private final int _objectId;
 	private final int _boatId;
 	private final int _targetX;
@@ -14,9 +14,8 @@ public class MoveToLocationInVehicle extends L2GameServerPacket
 	private final int _originX;
 	private final int _originY;
 	private final int _originZ;
-	
-	public MoveToLocationInVehicle(Player player, int targetX, int targetY, int targetZ, int originX, int originY, int originZ)
-	{
+
+	public MoveToLocationInVehicle(Player player, int targetX, int targetY, int targetZ, int originX, int originY, int originZ) {
 		_objectId = player.getObjectId();
 		_boatId = player.getBoat().getObjectId();
 		_targetX = targetX;
@@ -26,10 +25,9 @@ public class MoveToLocationInVehicle extends L2GameServerPacket
 		_originY = originY;
 		_originZ = originZ;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0x71);
 		writeD(_objectId);
 		writeD(_boatId);

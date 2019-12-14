@@ -30,8 +30,9 @@ public enum WeaponType implements ItemType {
 
 	private final int mask;
 	private final int range;
-	@Getter private final Stats vuln; 
-	
+	@Getter
+	private final Stats vuln;
+
 	private WeaponType(int range, Stats vuln) {
 		this.mask = 1 << ordinal();
 		this.range = range;
@@ -51,20 +52,20 @@ public enum WeaponType implements ItemType {
 	public int getRange() {
 		return range;
 	}
-	
+
 	public final AbstractHit createHit(Creature attacker, Creature target) {
-		switch(this) {
+		switch (this) {
 			case DUAL:
 			case DUALFIST:
 			case FIST:
 				return new Dual(attacker, target);
-				
+
 			case BOW:
 				return new Bow(attacker, target);
-			
+
 			case POLE:
 				return new Mass(attacker, target);
-				
+
 			default:
 				return new Simple(attacker, target);
 		}

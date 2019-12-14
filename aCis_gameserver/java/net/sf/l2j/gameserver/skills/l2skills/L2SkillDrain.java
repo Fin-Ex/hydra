@@ -55,18 +55,18 @@ public class L2SkillDrain extends L2Skill {
 			final DamageInfo info = new DamageInfo();
 			info.shieldResult = Formulas.calcShldUse(activeChar, target, this);
 			int damage;
-			switch(drainDepend) {
+			switch (drainDepend) {
 				case PhysicalDamage:
 					info.isCrit = Formulas.calcCrit(activeChar.getCriticalHit(target, this));
 					damage = (int) Formulas.calcPhysDam(activeChar, target, this, info, activeChar.isChargedShot(ShotType.SOULSHOT));
 					break;
-					
+
 				default:
 					info.isCrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, this));
 					damage = (int) Formulas.calcMagicDam(activeChar, target, this, info.shieldResult, false, sps, bsps, info.isCrit);
 					break;
 			}
-			
+
 			if (damage > 0) {
 				int drainValue;
 				int targetsCP = (int) target.getCurrentCp();

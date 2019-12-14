@@ -4,20 +4,19 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.actor.Player;
 
-public final class RequestSkillList extends L2GameClientPacket
-{
+public final class RequestSkillList extends L2GameClientPacket {
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player cha = getClient().getActiveChar();
-		if (cha == null)
+		if (cha == null) {
 			return;
-		
+		}
+
 		cha.sendSkillList();
 	}
 }

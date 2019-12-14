@@ -5,18 +5,16 @@ import org.slf4j.LoggerFactory;
 /**
  * format cdd
  */
-public class FriendAddRequest extends L2GameServerPacket
-{
+public class FriendAddRequest extends L2GameServerPacket {
+
 	private final String _requestorName;
-	
-	public FriendAddRequest(String requestorName)
-	{
+
+	public FriendAddRequest(String requestorName) {
 		_requestorName = requestorName;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x7d);
 		writeS(_requestorName);
 		writeD(0);

@@ -13,7 +13,7 @@ import lombok.Getter;
  */
 @Getter
 public class InventoryFlag {
-	
+
 	private final int slot;
 	private boolean canEquip = true;
 	private boolean canUnequip = true;
@@ -21,30 +21,30 @@ public class InventoryFlag {
 	public InventoryFlag(int slot) {
 		this.slot = slot;
 	}
-	
+
 	public InventoryFlag setCanEquip(boolean canEquip) {
 		this.canEquip = canEquip;
 		return this;
 	}
-	
+
 	public InventoryFlag setCanUnequip(boolean canUnequip) {
 		this.canUnequip = canUnequip;
 		return this;
 	}
-	
+
 	protected boolean checkAccess(int slot, FlagPolicy policy) {
-		if(this.slot != slot) {
+		if (this.slot != slot) {
 			return true;
 		}
-		
-		switch(policy) {
+
+		switch (policy) {
 			case Equip:
 				return canEquip;
 			case Unequip:
 				return canUnequip;
 		}
-		
+
 		return true;
 	}
-	
+
 }

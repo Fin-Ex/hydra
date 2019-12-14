@@ -10,25 +10,25 @@
 		"skillId":6001,
 		"requiredTalent":1,
 		"name":"Triple Slasher",
-		"descr":"Triple Slash ability is instantly reused after a successful parry."
+		"descr":"Triple Slash ability is <font color=BDB76B>instantly reused</font> after a <font color=BDB76B>successful</font> parry."
 	},
 	{
 		"id":3,
 		"skillId":6002,
 		"name":"Dual Wield",
-		"descr":"Dual swords no longer share damage (50% from each), instead of it - they deal <font color=BDB76B>100% damage</font> from each weapon."
+		"descr":"Dual swords <font color=BDB76B>no</font> longer <font color=BDB76B>share</font> damage (50% from each), instead of it - they deal <font color=BDB76B>100% damage</font> from each weapon."
 	},
 	{
 		"id":4,
 		"skillId":6003,
 		"name":"Disarm",
-		"descr":"Attack which disarm the righ-hand weapon on enemy. When used in <font color=LEVEL>Parry Stance</font>, it blocks the ability to equip right-hand weapon. <font color=FFA500>Has hidden function.</font>"
+		"descr":"Attack which disarm the righ-hand weapon on enemy. When used in <font color=BDB76B>Parry Stance</font>, it blocks the ability to equip right-hand weapon. <font color=FFA500>Has hidden function.</font>"
 	},
 	{
 		"id":5,
 		"skillId":6004,
 		"name":"Confrontation",
-		"descr":"When 2 or more enemies surrounds you, your attacking abilities increases."
+		"descr":"When <font color=BDB76B>2 or more</font> enemies <font color=BDB76B>surrounds you</font>, your attacking abilities are increases."
 	},
 	{
 		"id":6,
@@ -40,13 +40,51 @@
 		"id":7,
 		"skillId":6006,
 		"name":"Heavy Grip",
-		"descr":"Reduce your P.Atk Speed by 15% but increase your resistance agains disarming by 100% and empowers you to summon Two-Handed Dual swords from ancient times in your both hands! <font color=FFA500>Has hidden function.</font>"
+		"descr":"Reduce your <font color=BDB76B>P.Atk Speed by 15%</font> but increase your <font color=BDB76B>resistance agains disarming by 100%</font> and empowers you to summon Two-Handed Dual swords from ancient times in your both hands! <font color=FFA500>Has hidden function.</font>"
 	},
 	{
 		"id":8,
 		"requiredLevel":77,
 		"skillId":6007,
-		"name":"Dual Sword Master",
-		"descr":"Riposte stance not consume MP anymore and increase his effectivness by 50%."
+		"name":"Dual Master",
+		"descr":"<font color=BDB76B>Riposte Stance</font> ability, not consumes MP anymore and <font color=BDB76B>increase</font> his effectivness by <font color=BDB76B>50%</font>."
+	},
+	{
+		"id":9,
+		"requiredLevel":78,
+		"skillId":6008,
+		"name":"Cumulative Rage",
+		"descr":"The attacks used with <font color=BDB76B>Sonic Rage</font> do more damage depending on the current <font color=BDB76B>number of focuses</font>."
+	},
+	{
+		"id":10,
+		"requiredLevel":62,
+		"skillId":6009,
+		"name":"Sonic Assault",
+		"descr":"<font color=BDB76B>Sonic Move</font> ability not consumes Sonic Force anymore. Has <font color=BDB76B>70% chance</font> to stun all enemies arround you in <font color=BDB76B>150 radius</font> for next <font color=BDB76B>3 sec.</font>"
+	},
+	{
+		"id":11,
+		"skillId":6010,
+		"name":"Challenger",
+		"descr":"Challenge players to a <font color=BDB76B>Duel (action)</font> and win it to increase your <font color=BDB76B>influence as a Gladiator</font>. In order for you to earn points, you must activate the insolence mode (<font color=BDB76B>/challenge</font>) before the call, now that the mode is activated, challenging your opponent to a duel will consume <font color=BDB76B>15,000 adena</font> from your pocket. A duel is <font color=BDB76B>impossible</font> if there is no money. Gladiators taking first places - <font color=BDB76B>increases</font> their probability of a <font color=BDB76B>critical hit</font> with abilities by <font color=BDB76B>100%</font> of their base value. The receivable <font color=BDB76B>EXP and SP</font> are <font color=BDB76B>increased by 100%</font> during the hunt for monsters. In addition, the <font color=BDB76B>top 10</font> gladiators have a <font color=BDB76B>salary of 15,000 adena</font> for <font color=BDB76B>every 100 monsters</font> they kill during the hunt (only those monsters that the gladiators <font color=BDB76B>kill personally</font> are counted). Each weekly, at <font color=BDB76B>6 o’clock in the morning</font>, the points at the first “Slaughter Ten” are reset."
+	},
+	{
+		"id":12,
+		"skillId":6011,
+		"name":"Professional Anger",
+		"descr":"Increase the time of ability: Warcry by <font color=BDB76B>x2 times</font>."
+	},
+	{
+		"id":13,
+		"skillId":6012,
+		"name":"Recoiled Blast",
+		"descr":"<font color=BDB76B>Sonic Blaster</font> wave with <font color=BDB76B>100% chance</font> recoils from main target to another one which stays in <font color=BDB76B>raiuds 150</font> of a main target. After the bounce, the wave <font color=BDB76B>can be recoiled again</font>, but with the <font color=BDB76B>less chance</font>, and so on. A wave cannot recoil into the same target twice."
+	},
+	{
+		"id":14,
+		"skillId":6013,
+		"name":"Mana Control",
+		"descr":"The less health, the less mana consumed. Mana consumption on an abilities: [<font color=BDB76B>Triple Sonic Slash, Double Sonic Slash, Sonic Buster, Sonic Storm</font>] is decreases by <font color=BDB76B>1.5%</font> for every <font color=BDB76B>117 units<font> of lost HP. The maximum reduction limit cannot exceed <font color=BDB76B>50%<font> of the actual MP capacity consumption."
 	}
 ]

@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q083_SagaOfTheMoonlightSentinel extends SagasSuperClass
-{
-	public Q083_SagaOfTheMoonlightSentinel()
-	{
+public class Q083_SagaOfTheMoonlightSentinel extends SagasSuperClass {
+
+	public Q083_SagaOfTheMoonlightSentinel() {
 		super(83, "Saga of the Moonlight Sentinel");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30702,
 			31627,
 			31604,
@@ -25,9 +23,8 @@ public class Q083_SagaOfTheMoonlightSentinel extends SagasSuperClass
 			31658,
 			31641
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7520,
 			7081,
@@ -41,38 +38,34 @@ public class Q083_SagaOfTheMoonlightSentinel extends SagasSuperClass
 			7106,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27297,
 			27232,
 			27306
 		};
-		
+
 		classid = 102;
 		prevclass = 0x18;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			161719,
 			181227,
 			181215
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-92823,
 			36703,
 			36676
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-1893,
 			-4816,
 			-4812
 		};
-		
+
 		registerNPCs();
 	}
 }

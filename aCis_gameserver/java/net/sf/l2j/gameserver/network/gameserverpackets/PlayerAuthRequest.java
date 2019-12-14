@@ -4,10 +4,9 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.network.SessionKey;
 
-public class PlayerAuthRequest extends GameServerBasePacket
-{
-	public PlayerAuthRequest(String account, SessionKey key)
-	{
+public class PlayerAuthRequest extends GameServerBasePacket {
+
+	public PlayerAuthRequest(String account, SessionKey key) {
 		writeC(0x05);
 		writeS(account);
 		writeD(key.playOkID1);
@@ -15,10 +14,9 @@ public class PlayerAuthRequest extends GameServerBasePacket
 		writeD(key.loginOkID1);
 		writeD(key.loginOkID2);
 	}
-	
+
 	@Override
-	public byte[] getContent()
-	{
+	public byte[] getContent() {
 		return getBytes();
 	}
 }

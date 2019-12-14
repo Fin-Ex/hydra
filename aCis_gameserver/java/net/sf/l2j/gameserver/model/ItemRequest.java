@@ -2,50 +2,43 @@ package net.sf.l2j.gameserver.model;
 
 import org.slf4j.LoggerFactory;
 
-public class ItemRequest
-{
+public class ItemRequest {
+
 	int _objectId;
 	int _itemId;
 	int _count;
 	int _price;
-	
-	public ItemRequest(int objectId, int count, int price)
-	{
+
+	public ItemRequest(int objectId, int count, int price) {
 		_objectId = objectId;
 		_count = count;
 		_price = price;
 	}
-	
-	public ItemRequest(int objectId, int itemId, int count, int price)
-	{
+
+	public ItemRequest(int objectId, int itemId, int count, int price) {
 		_objectId = objectId;
 		_itemId = itemId;
 		_count = count;
 		_price = price;
 	}
-	
-	public int getObjectId()
-	{
+
+	public int getObjectId() {
 		return _objectId;
 	}
-	
-	public int getItemId()
-	{
+
+	public int getItemId() {
 		return _itemId;
 	}
-	
-	public void setCount(int count)
-	{
+
+	public void setCount(int count) {
 		_count = count;
 	}
-	
-	public int getCount()
-	{
+
+	public int getCount() {
 		return _count;
 	}
-	
-	public int getPrice()
-	{
+
+	public int getPrice() {
 		return _price;
 	}
 }

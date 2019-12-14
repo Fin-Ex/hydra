@@ -71,7 +71,7 @@ public class PlayerLineageDao {
 			st.setInt(1, player.getObjectId());
 			st.setInt(2, player.getClassIndex());
 			try (ResultSet rset = st.executeQuery()) {
-				while(rset.next()) {
+				while (rset.next()) {
 					player.setLineageReachLevel(rset.getInt("levelReach"));
 					player.setLineagePoints(rset.getInt("lineagePoints"));
 					player.setLineageResetPrice(rset.getInt("resetPrice"));

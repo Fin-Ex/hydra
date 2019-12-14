@@ -25,36 +25,34 @@ import net.sf.l2j.loginserver.network.serverpackets.PlayFail.PlayFailReason;
 /**
  * Represents a client connected into the LoginServer
  */
-public final class LoginClient extends MMOClient<MMOConnection<LoginClient>>
-{
+public final class LoginClient extends MMOClient<MMOConnection<LoginClient>> {
+
 	private static Logger _log = LoggerFactory.getLogger(LoginClient.class.getName());
-	
-	public static enum LoginClientState
-	{
+
+	public static enum LoginClientState {
 		CONNECTED,
 		AUTHED_GG,
 		AUTHED_LOGIN
 	}
-	
+
 	private LoginClientState _state;
-	
+
 	private final LoginCrypt _loginCrypt;
 	private final ScrambledKeyPair _scrambledPair;
 	private final byte[] _blowfishKey;
-	
+
 	private String _account;
 	private int _accessLevel;
 	private int _lastServer;
 	private SessionKey _sessionKey;
 	private final int _sessionId;
 	private boolean _joinedGS;
-	
+
 	private final long _connectionStartTime;
-	
-	public LoginClient(MMOConnection<LoginClient> con)
-	{
+
+	public LoginClient(MMOConnection<LoginClient> con) {
 		super(con);
-		
+
 		_state = LoginClientState.CONNECTED;
 		_scrambledPair = LoginController.getInstance().getScrambledRSAKeyPair();
 		_blowfishKey = LoginController.getInstance().getBlowfishKey();
@@ -63,170 +61,139 @@ public final class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 		_loginCrypt = new LoginCrypt();
 		_loginCrypt.setKey(_blowfishKey);
 	}
-	
+
 	@Override
-	public boolean decrypt(ByteBuffer buf, int size)
-	{
-		try
-		{
-			if (!_loginCrypt.decrypt(buf.array(), buf.position(), size))
-			{
+	public boolean decrypt(ByteBuffer buf, int size) {
+		try {
+			if (!_loginCrypt.decrypt(buf.array(), buf.position(), size)) {
 				_log.warn("Wrong checksum from client: " + toString());
 				super.getConnection().close((SendablePacket<LoginClient>) null);
 				return false;
 			}
 			return true;
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			e.printStackTrace();
 			super.getConnection().close((SendablePacket<LoginClient>) null);
 			return false;
 		}
 	}
-	
+
 	@Override
-	public boolean encrypt(ByteBuffer buf, int size)
-	{
+	public boolean encrypt(ByteBuffer buf, int size) {
 		final int offset = buf.position();
-		try
-		{
+		try {
 			size = _loginCrypt.encrypt(buf.array(), offset, size);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			e.printStackTrace();
 			return false;
 		}
-		
+
 		buf.position(offset + size);
 		return true;
 	}
-	
-	public LoginClientState getState()
-	{
+
+	public LoginClientState getState() {
 		return _state;
 	}
-	
-	public void setState(LoginClientState state)
-	{
+
+	public void setState(LoginClientState state) {
 		_state = state;
 	}
-	
-	public byte[] getBlowfishKey()
-	{
+
+	public byte[] getBlowfishKey() {
 		return _blowfishKey;
 	}
-	
-	public byte[] getScrambledModulus()
-	{
+
+	public byte[] getScrambledModulus() {
 		return _scrambledPair.getScrambledModulus();
 	}
-	
-	public RSAPrivateKey getRSAPrivateKey()
-	{
+
+	public RSAPrivateKey getRSAPrivateKey() {
 		return (RSAPrivateKey) _scrambledPair.getKeyPair().getPrivate();
 	}
-	
-	public String getAccount()
-	{
+
+	public String getAccount() {
 		return _account;
 	}
-	
-	public void setAccount(String account)
-	{
+
+	public void setAccount(String account) {
 		_account = account;
 	}
-	
-	public void setAccessLevel(int accessLevel)
-	{
+
+	public void setAccessLevel(int accessLevel) {
 		_accessLevel = accessLevel;
 	}
-	
-	public int getAccessLevel()
-	{
+
+	public int getAccessLevel() {
 		return _accessLevel;
 	}
-	
-	public void setLastServer(int lastServer)
-	{
+
+	public void setLastServer(int lastServer) {
 		_lastServer = lastServer;
 	}
-	
-	public int getLastServer()
-	{
+
+	public int getLastServer() {
 		return _lastServer;
 	}
-	
-	public int getSessionId()
-	{
+
+	public int getSessionId() {
 		return _sessionId;
 	}
-	
-	public boolean hasJoinedGS()
-	{
+
+	public boolean hasJoinedGS() {
 		return _joinedGS;
 	}
-	
-	public void setJoinedGS(boolean val)
-	{
+
+	public void setJoinedGS(boolean val) {
 		_joinedGS = val;
 	}
-	
-	public void setSessionKey(SessionKey sessionKey)
-	{
+
+	public void setSessionKey(SessionKey sessionKey) {
 		_sessionKey = sessionKey;
 	}
-	
-	public SessionKey getSessionKey()
-	{
+
+	public SessionKey getSessionKey() {
 		return _sessionKey;
 	}
-	
-	public long getConnectionStartTime()
-	{
+
+	public long getConnectionStartTime() {
 		return _connectionStartTime;
 	}
-	
-	public void sendPacket(L2LoginServerPacket lsp)
-	{
+
+	public void sendPacket(L2LoginServerPacket lsp) {
 		getConnection().sendPacket(lsp);
 	}
-	
-	public void close(LoginFailReason reason)
-	{
+
+	public void close(LoginFailReason reason) {
 		getConnection().close(new LoginFail(reason));
 	}
-	
-	public void close(PlayFailReason reason)
-	{
+
+	public void close(PlayFailReason reason) {
 		getConnection().close(new PlayFail(reason));
 	}
-	
-	public void close(L2LoginServerPacket lsp)
-	{
+
+	public void close(L2LoginServerPacket lsp) {
 		getConnection().close(lsp);
 	}
-	
+
 	@Override
-	public void onDisconnection()
-	{
-		if (!hasJoinedGS() || (getConnectionStartTime() + LoginController.LOGIN_TIMEOUT) < System.currentTimeMillis())
+	public void onDisconnection() {
+		if (!hasJoinedGS() || (getConnectionStartTime() + LoginController.LOGIN_TIMEOUT) < System.currentTimeMillis()) {
 			LoginController.getInstance().removeAuthedLoginClient(getAccount());
+		}
 	}
-	
+
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		final InetAddress address = getConnection().getInetAddress();
-		if (getState() == LoginClientState.AUTHED_LOGIN)
+		if (getState() == LoginClientState.AUTHED_LOGIN) {
 			return "[" + getAccount() + " (" + (address == null ? "disconnected" : address.getHostAddress()) + ")]";
-		
+		}
+
 		return "[" + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 	}
-	
+
 	@Override
-	protected void onForcedDisconnection()
-	{
+	protected void onForcedDisconnection() {
 	}
 }

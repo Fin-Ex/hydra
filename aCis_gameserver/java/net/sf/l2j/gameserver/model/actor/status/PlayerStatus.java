@@ -25,7 +25,8 @@ import net.sf.l2j.gameserver.skills.Stats;
 public class PlayerStatus extends PlayableStatus {
 
 	private double currentCp = 0;
-	@Getter private boolean parryed;
+	@Getter
+	private boolean parryed;
 
 	public PlayerStatus(Player activeChar) {
 		super(activeChar);
@@ -253,7 +254,7 @@ public class PlayerStatus extends PlayableStatus {
 	}
 
 	private Future<?> cpTask;
-	
+
 	@Override
 	public void startRegen(ERegenType... regens) {
 		super.startRegen(regens);
@@ -281,10 +282,10 @@ public class PlayerStatus extends PlayableStatus {
 
 	@Override
 	public int interval(ERegenType type) {
-		if(type == ERegenType.CP) {
+		if (type == ERegenType.CP) {
 			return Math.max(getActiveChar().getStat().getCpRegenInterval(), 100);
 		}
-		
+
 		return Math.max(super.interval(type), 100);
 	}
 

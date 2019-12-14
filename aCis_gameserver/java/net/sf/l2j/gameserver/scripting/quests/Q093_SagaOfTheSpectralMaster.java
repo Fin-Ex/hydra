@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q093_SagaOfTheSpectralMaster extends SagasSuperClass
-{
-	public Q093_SagaOfTheSpectralMaster()
-	{
+public class Q093_SagaOfTheSpectralMaster extends SagasSuperClass {
+
+	public Q093_SagaOfTheSpectralMaster() {
 		super(93, "Saga of the Spectral Master");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30175,
 			31287,
 			31613,
@@ -25,9 +23,8 @@ public class Q093_SagaOfTheSpectralMaster extends SagasSuperClass
 			31656,
 			31613
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7606,
 			7081,
@@ -41,38 +38,34 @@ public class Q093_SagaOfTheSpectralMaster extends SagasSuperClass
 			7112,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27315,
 			27242,
 			27312
 		};
-		
+
 		classid = 111;
 		prevclass = 0x29;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			164650,
 			47429,
 			47391
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-74121,
 			-56923,
 			-56929
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-2871,
 			-2383,
 			-2370
 		};
-		
+
 		registerNPCs();
 	}
 }

@@ -1,50 +1,50 @@
 <configuration>
-	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
-		<encoder>
-			<pattern>[%d{dd.MM.yyyy}] [%d{HH:mm:ss}] [%-5level] [%logger]: %msg%n</pattern>
-		</encoder>
-	</appender>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{dd.MM.yyyy}] [%d{HH:mm:ss}] [%-5level] [%logger]: %msg%n</pattern>
+        </encoder>
+    </appender>
 	
-	<appender name="file" class="ch.qos.logback.core.FileAppender">
-		<file>error.log</file>
-		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>warn</level>
-		</filter>
-		<encoder>
-			<pattern>[%d{dd.MM.yyyy}] [%d{HH:mm:ss}] [%-5level] [%logger]: %msg%n</pattern>
-		</encoder>
-	</appender>
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>error.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>warn</level>
+        </filter>
+        <encoder>
+            <pattern>[%d{dd.MM.yyyy}] [%d{HH:mm:ss}] [%-5level] [%logger]: %msg%n</pattern>
+        </encoder>
+    </appender>
 	
-	<appender name="item-file" class="ch.qos.logback.core.FileAppender">
-		<file>item.log</file>
-		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>warn</level>
-		</filter>
-		<encoder>
-			<pattern>[%d{dd.MM.yyyy}] [%d{HH:mm:ss}] [%logger]: %msg%n</pattern>
-		</encoder>
-	</appender>
+    <appender name="item-file" class="ch.qos.logback.core.FileAppender">
+        <file>item.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>warn</level>
+        </filter>
+        <encoder>
+            <pattern>[%d{dd.MM.yyyy}] [%d{HH:mm:ss}] [%logger]: %msg%n</pattern>
+        </encoder>
+    </appender>
 	
-	<appender name="chat-file" class="ch.qos.logback.core.FileAppender">
-		<file>chat.log</file>
-		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>warn</level>
-		</filter>
-		<encoder>
-			<pattern>[%d{dd.MM.yyyy}] [%d{HH:mm:ss}]: %msg%n</pattern>
-		</encoder>
-	</appender>
+    <appender name="chat-file" class="ch.qos.logback.core.FileAppender">
+        <file>chat.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>warn</level>
+        </filter>
+        <encoder>
+            <pattern>[%d{dd.MM.yyyy}] [%d{HH:mm:ss}]: %msg%n</pattern>
+        </encoder>
+    </appender>
 	
-	<root level="info">
-		<appender-ref ref="stdout"/>
-		<appender-ref ref="file"/>
-	</root>
+    <root level="info">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </root>
 	
-	<logger level="info" name="item">
-		<appender-ref ref="item-file"/>
-	</logger>
+    <logger level="info" name="item">
+        <appender-ref ref="item-file"/>
+    </logger>
 	
-	<logger level="info" name="chat">
-		<appender-ref ref="chat-file"/>
-	</logger>
+    <logger level="info" name="chat">
+        <appender-ref ref="chat-file"/>
+    </logger>
 </configuration>

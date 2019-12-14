@@ -4,24 +4,21 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-public class L2ExtractableSkill
-{
+public class L2ExtractableSkill {
+
 	private final int _hash;
 	private final List<L2ExtractableProductItem> _product;
-	
-	public L2ExtractableSkill(int hash, List<L2ExtractableProductItem> products)
-	{
+
+	public L2ExtractableSkill(int hash, List<L2ExtractableProductItem> products) {
 		_hash = hash;
 		_product = products;
 	}
-	
-	public int getSkillHash()
-	{
+
+	public int getSkillHash() {
 		return _hash;
 	}
-	
-	public List<L2ExtractableProductItem> getProductItemsArray()
-	{
+
+	public List<L2ExtractableProductItem> getProductItemsArray() {
 		return _product;
 	}
 }

@@ -11,8 +11,8 @@ import net.sf.l2j.gameserver.skills.L2Effect;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
 /**
- * Урон от дуалов больше не разделяется и каждый клинок наносит
- *  ровно столько урона, сколько наносили оба вместе.
+ * Урон от дуалов больше не разделяется и каждый клинок наносит ровно столько
+ * урона, сколько наносили оба вместе.
  *
  * @author zcxv
  * @date 19.05.2019
@@ -21,7 +21,7 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 public class DualWield extends L2Effect {
 
 	private AbstractEventSubscription<OnDualHit> hitSubscribtion;
-	
+
 	public DualWield(Env env, EffectTemplate template) {
 		super(env, template);
 	}
@@ -35,24 +35,24 @@ public class DualWield extends L2Effect {
 	public boolean onActionTime() {
 		return false;
 	}
-	
+
 	@Override
 	public boolean onStart() {
 		hitSubscribtion = getEffector().getEventBus().subscribe()
 				.cast(OnDualHit.class)
 				.forEach(this::onHit);
-		
+
 		return super.onStart();
 	}
-	
+
 	@Override
 	public void onExit() {
 		getEffector().getEventBus().unsubscribe(hitSubscribtion);
 		super.onExit();
 	}
-	
+
 	private void onHit(OnDualHit e) {
 		e.getDamageInfo().damage *= 2;
 	}
-	
+
 }

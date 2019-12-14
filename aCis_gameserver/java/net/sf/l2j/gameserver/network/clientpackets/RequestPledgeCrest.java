@@ -4,25 +4,22 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.network.serverpackets.PledgeCrest;
 
-public final class RequestPledgeCrest extends L2GameClientPacket
-{
+public final class RequestPledgeCrest extends L2GameClientPacket {
+
 	private int _crestId;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_crestId = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		sendPacket(new PledgeCrest(_crestId));
 	}
-	
+
 	@Override
-	protected boolean triggersOnActionRequest()
-	{
+	protected boolean triggersOnActionRequest() {
 		return false;
 	}
 }

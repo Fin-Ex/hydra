@@ -14,6 +14,7 @@ import lombok.Data;
  */
 @Data
 public class QuestData {
+
 	private final int id;
 	private final long exp;
 	private final int sp;

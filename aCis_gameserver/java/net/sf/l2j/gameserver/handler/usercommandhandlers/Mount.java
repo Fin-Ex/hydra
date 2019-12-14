@@ -7,24 +7,23 @@ import net.sf.l2j.gameserver.model.actor.Player;
 
 /**
  * Support for /mount command.
+ *
  * @author Tempy
  */
-public class Mount implements IUserCommandHandler
-{
-	private static final int[] COMMAND_IDS =
-	{
-		61
-	};
-	
+public class Mount implements IUserCommandHandler {
+
+	private static final int[] COMMAND_IDS
+			= {
+				61
+			};
+
 	@Override
-	public boolean useUserCommand(int id, Player activeChar)
-	{
+	public boolean useUserCommand(int id, Player activeChar) {
 		return activeChar.mountPlayer(activeChar.getActiveSummon());
 	}
-	
+
 	@Override
-	public int[] getUserCommandList()
-	{
+	public int[] getUserCommandList() {
 		return COMMAND_IDS;
 	}
 }

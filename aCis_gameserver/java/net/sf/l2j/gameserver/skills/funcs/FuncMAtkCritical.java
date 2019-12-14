@@ -9,30 +9,27 @@ import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.skills.Stats;
 import net.sf.l2j.gameserver.skills.basefuncs.Func;
 
-public class FuncMAtkCritical extends Func
-{
+public class FuncMAtkCritical extends Func {
+
 	static final FuncMAtkCritical _fac_instance = new FuncMAtkCritical();
-	
-	public static Func getInstance()
-	{
+
+	public static Func getInstance() {
 		return _fac_instance;
 	}
-	
-	private FuncMAtkCritical()
-	{
+
+	private FuncMAtkCritical() {
 		super(Stats.MagicCriticalRate, 0x30, null, null);
 	}
-	
+
 	@Override
-	public void calc(Env env)
-	{
+	public void calc(Env env) {
 		final Creature player = env.getCharacter();
-		if (player instanceof Player)
-		{
-			if (player.getActiveWeaponInstance() != null)
+		if (player instanceof Player) {
+			if (player.getActiveWeaponInstance() != null) {
 				env.mulValue(Formulas.WIT_BONUS[player.getWIT()]);
-		}
-		else
+			}
+		} else {
 			env.mulValue(Formulas.WIT_BONUS[player.getWIT()]);
+		}
 	}
 }

@@ -11,10 +11,10 @@ import org.slf4j.LoggerFactory;
 /**
  * @author mkizub
  */
-public final class FuncTemplate
-{
+public final class FuncTemplate {
+
 	protected static final Logger _log = LoggerFactory.getLogger(FuncTemplate.class.getName());
-	
+
 	public Condition attachCond;
 	public Condition applayCond;
 	public final Class<?> func;
@@ -22,41 +22,33 @@ public final class FuncTemplate
 	public final Stats stat;
 	public final int order;
 	public final Lambda lambda;
-	
-	public FuncTemplate(Condition pAttachCond, Condition pApplayCond, String pFunc, Stats pStat, int pOrder, Lambda pLambda)
-	{
+
+	public FuncTemplate(Condition pAttachCond, Condition pApplayCond, String pFunc, Stats pStat, int pOrder, Lambda pLambda) {
 		attachCond = pAttachCond;
 		applayCond = pApplayCond;
 		stat = pStat;
 		order = pOrder;
 		lambda = pLambda;
-		
-		try
-		{
+
+		try {
 			func = Class.forName("net.sf.l2j.gameserver.skills.basefuncs.Func" + pFunc);
-		}
-		catch (ClassNotFoundException e)
-		{
+		} catch (ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}
-		
-		try
-		{
-			constructor = func.getConstructor(new Class[]
-			{
+
+		try {
+			constructor = func.getConstructor(new Class[]{
 				Stats.class, // stats to update
 				Integer.TYPE, // order of execution
 				Object.class, // owner
 				Lambda.class
-				// value for function
+			// value for function
 			});
-		}
-		catch (NoSuchMethodException e)
-		{
+		} catch (NoSuchMethodException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	
+
 	public Func getFunc(Env env, Object owner) {
 		if (attachCond != null && !attachCond.test(env)) {
 			return null;
@@ -69,7 +61,7 @@ public final class FuncTemplate
 			}
 			return f;
 		} catch (IllegalAccessException | InstantiationException | InvocationTargetException e) {
-			_log.warn( "", e);
+			_log.warn("", e);
 			return null;
 		}
 	}

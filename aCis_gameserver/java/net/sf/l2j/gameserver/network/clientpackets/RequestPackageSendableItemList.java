@@ -8,29 +8,30 @@ import net.sf.l2j.gameserver.network.serverpackets.PackageSendableList;
 
 /**
  * Format: (c)d d: char object id (?)
+ *
  * @author -Wooden-
  */
-public final class RequestPackageSendableItemList extends L2GameClientPacket
-{
+public final class RequestPackageSendableItemList extends L2GameClientPacket {
+
 	private int _objectID;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_objectID = readD();
 	}
-	
+
 	@Override
-	public void runImpl()
-	{
+	public void runImpl() {
 		final Player player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
-		
+		}
+
 		final ItemInstance[] items = player.getInventory().getAvailableItems(true, false);
-		if (items == null)
+		if (items == null) {
 			return;
-		
+		}
+
 		sendPacket(new PackageSendableList(items, _objectID));
 	}
 }

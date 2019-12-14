@@ -10,52 +10,53 @@ import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.scripting.Quest;
 import net.sf.l2j.gameserver.scripting.QuestState;
 
-public class Q385_YokeOfThePast extends Quest
-{
+public class Q385_YokeOfThePast extends Quest {
+
 	private static final String qn = "Q385_YokeOfThePast";
-	
+
 	// NPCs
-	private static final int GATEKEEPER_ZIGGURAT[] =
-	{
-		31095,
-		31096,
-		31097,
-		31098,
-		31099,
-		31100,
-		31101,
-		31102,
-		31103,
-		31104,
-		31105,
-		31106,
-		31107,
-		31108,
-		31109,
-		31110,
-		31114,
-		31115,
-		31116,
-		31117,
-		31118,
-		31119,
-		31120,
-		31121,
-		31122,
-		31123,
-		31124,
-		31125,
-		31126
-	};
-	
+	private static final int GATEKEEPER_ZIGGURAT[]
+			= {
+				31095,
+				31096,
+				31097,
+				31098,
+				31099,
+				31100,
+				31101,
+				31102,
+				31103,
+				31104,
+				31105,
+				31106,
+				31107,
+				31108,
+				31109,
+				31110,
+				31114,
+				31115,
+				31116,
+				31117,
+				31118,
+				31119,
+				31120,
+				31121,
+				31122,
+				31123,
+				31124,
+				31125,
+				31126
+			};
+
 	// Item
 	private static final int ANCIENT_SCROLL = 5902;
-	
+
 	// Reward
 	private static final int BLANK_SCROLL = 5965;
-	
+
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+
 	{
 		CHANCES.put(21208, 70000);
 		CHANCES.put(21209, 80000);
@@ -99,62 +100,57 @@ public class Q385_YokeOfThePast extends Quest
 		CHANCES.put(21254, 910000);
 		CHANCES.put(21255, 860000);
 	}
-	
-	public Q385_YokeOfThePast()
-	{
+
+	public Q385_YokeOfThePast() {
 		super(385, "Yoke of the Past");
-		
+
 		setItemsIds(ANCIENT_SCROLL);
-		
+
 		addStartNpc(GATEKEEPER_ZIGGURAT);
 		addTalkId(GATEKEEPER_ZIGGURAT);
-		
-		for (int npcId : CHANCES.keySet())
+
+		for (int npcId : CHANCES.keySet()) {
 			addKillId(npcId);
+		}
 	}
-	
+
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		if (event.equalsIgnoreCase("05.htm"))
-		{
+		}
+
+		if (event.equalsIgnoreCase("05.htm")) {
 			st.setState(STATE_STARTED);
 			st.set("cond", "1");
 			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("10.htm"))
-		{
+		} else if (event.equalsIgnoreCase("10.htm")) {
 			st.playSound(QuestState.SOUND_FINISH);
 			st.exitQuest(true);
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
+	public String onTalk(Npc npc, Player player) {
 		QuestState st = player.getQuestState(qn);
 		String htmltext = getNoQuestMsg();
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		switch (st.getState())
-		{
+		}
+
+		switch (st.getState()) {
 			case STATE_CREATED:
 				htmltext = (player.getLevel() < 20) ? "02.htm" : "01.htm";
 				break;
-			
+
 			case STATE_STARTED:
-				if (!st.hasQuestItems(ANCIENT_SCROLL))
+				if (!st.hasQuestItems(ANCIENT_SCROLL)) {
 					htmltext = "08.htm";
-				else
-				{
+				} else {
 					htmltext = "09.htm";
 					int count = st.getQuestItemsCount(ANCIENT_SCROLL);
 					st.takeItems(ANCIENT_SCROLL, -1);
@@ -162,19 +158,19 @@ public class Q385_YokeOfThePast extends Quest
 				}
 				break;
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onKill(Npc npc, Player player, boolean isPet)
-	{
+	public String onKill(Npc npc, Player player, boolean isPet) {
 		Player partyMember = getRandomPartyMemberState(player, npc, STATE_STARTED);
-		if (partyMember == null)
+		if (partyMember == null) {
 			return null;
-		
+		}
+
 		partyMember.getQuestState(qn).dropItems(ANCIENT_SCROLL, 1, 0, CHANCES.get(npc.getNpcId()));
-		
+
 		return null;
 	}
 }

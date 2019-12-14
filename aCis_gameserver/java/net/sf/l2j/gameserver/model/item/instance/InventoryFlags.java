@@ -13,29 +13,29 @@ import java.util.List;
  * @author zcxv
  */
 public class InventoryFlags {
-	
+
 	private final List<InventoryFlag> flags = new ArrayList<>();
 
 	public InventoryFlags() {
 	}
-	
+
 	public void addFlag(InventoryFlag flag) {
 		flags.add(flag);
 	}
-	
+
 	public void removeFlag(InventoryFlag flag) {
 		flags.remove(flag);
 	}
-	
+
 	public boolean checkAccess(int slot, FlagPolicy policy) {
-		for(int i = 0; i < flags.size(); i++) {
+		for (int i = 0; i < flags.size(); i++) {
 			final InventoryFlag flag = flags.get(i);
-			if(!flag.checkAccess(slot, policy)) {
+			if (!flag.checkAccess(slot, policy)) {
 				return false;
 			}
 		}
-		
+
 		return true;
 	}
-	
+
 }

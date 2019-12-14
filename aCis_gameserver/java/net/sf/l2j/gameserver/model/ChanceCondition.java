@@ -12,8 +12,8 @@ import net.sf.l2j.gameserver.templates.StatsSet;
 /**
  * @author kombat
  */
-public final class ChanceCondition
-{
+public final class ChanceCondition {
+
 	protected static final Logger _log = LoggerFactory.getLogger(ChanceCondition.class.getName());
 	public static final int EVT_HIT = 1;
 	public static final int EVT_CRIT = 2;
@@ -32,9 +32,8 @@ public final class ChanceCondition
 	public static final int EVT_ON_START = 16384;
 	public static final int EVT_ON_ACTION_TIME = 32768;
 	public static final int EVT_ON_EXIT = 65536;
-	
-	public static enum TriggerType
-	{
+
+	public static enum TriggerType {
 		// You hit an enemy
 		ON_HIT(1),
 		// You hit an enemy - was crit
@@ -69,74 +68,64 @@ public final class ChanceCondition
 		ON_ACTION_TIME(32768),
 		// Effect only - on exit
 		ON_EXIT(65536);
-		
+
 		private final int _mask;
-		
-		private TriggerType(int mask)
-		{
+
+		private TriggerType(int mask) {
 			_mask = mask;
 		}
-		
-		public final boolean check(int event)
-		{
+
+		public final boolean check(int event) {
 			return (_mask & event) != 0; // Trigger (sub-)type contains event (sub-)type
 		}
 	}
-	
+
 	private final TriggerType _triggerType;
 	private final int _chance;
-	
-	private ChanceCondition(TriggerType trigger, int chance)
-	{
+
+	private ChanceCondition(TriggerType trigger, int chance) {
 		_triggerType = trigger;
 		_chance = chance;
 	}
-	
-	public static ChanceCondition parse(StatsSet set)
-	{
-		try
-		{
+
+	public static ChanceCondition parse(StatsSet set) {
+		try {
 			TriggerType trigger = set.getEnum("chanceType", TriggerType.class, null);
 			int chance = set.getInteger("activationChance", -1);
-			
-			if (trigger != null)
+
+			if (trigger != null) {
 				return new ChanceCondition(trigger, chance);
-		}
-		catch (Exception e)
-		{
-			_log.warn( "", e);
+			}
+		} catch (Exception e) {
+			_log.warn("", e);
 		}
 		return null;
 	}
-	
-	public static ChanceCondition parse(String chanceType, int chance)
-	{
-		try
-		{
-			if (chanceType == null)
+
+	public static ChanceCondition parse(String chanceType, int chance) {
+		try {
+			if (chanceType == null) {
 				return null;
-			
+			}
+
 			TriggerType trigger = Enum.valueOf(TriggerType.class, chanceType);
-			
-			if (trigger != null)
+
+			if (trigger != null) {
 				return new ChanceCondition(trigger, chance);
+			}
+		} catch (Exception e) {
+			_log.warn("", e);
 		}
-		catch (Exception e)
-		{
-			_log.warn( "", e);
-		}
-		
+
 		return null;
 	}
-	
-	public boolean trigger(int event)
-	{
+
+	public boolean trigger(int event) {
 		return _triggerType.check(event) && (_chance < 0 || Rnd.get(100) < _chance);
 	}
-	
+
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return "Trigger[" + _chance + ";" + _triggerType.toString() + "]";
 	}
 }

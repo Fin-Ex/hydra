@@ -14,6 +14,7 @@ import net.sf.l2j.gameserver.model.actor.Creature;
  */
 @Data
 public class OnDualHit {
+
 	private final Creature attacker;
 	private final Creature target;
 	private final DamageInfo damageInfo;

@@ -13,6 +13,7 @@ import lombok.Data;
  */
 @Data
 public class QuestRewardData {
+
 	private final int id, count;
 	private final boolean multipliable;
 }

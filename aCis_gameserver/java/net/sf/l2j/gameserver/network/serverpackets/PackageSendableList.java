@@ -8,32 +8,30 @@ import net.sf.l2j.gameserver.model.item.kind.Item;
 /**
  * @author -Wooden-
  */
-public class PackageSendableList extends L2GameServerPacket
-{
+public class PackageSendableList extends L2GameServerPacket {
+
 	private final ItemInstance[] _items;
 	private final int _playerObjId;
-	
-	public PackageSendableList(ItemInstance[] items, int playerObjId)
-	{
+
+	public PackageSendableList(ItemInstance[] items, int playerObjId) {
 		_items = items;
 		_playerObjId = playerObjId;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xC3);
 		writeD(_playerObjId);
 		writeD(getClient().getActiveChar().getAdena());
 		writeD(_items.length);
-		
-		for (ItemInstance temp : _items)
-		{
-			if (temp == null || temp.getItem() == null)
+
+		for (ItemInstance temp : _items) {
+			if (temp == null || temp.getItem() == null) {
 				continue;
-			
+			}
+
 			Item item = temp.getItem();
-			
+
 			writeH(item.getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

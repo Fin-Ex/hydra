@@ -13,86 +13,80 @@ import net.sf.l2j.gameserver.network.serverpackets.ClanHallDecoration;
 
 /**
  * A clan hall zone
+ *
  * @author durgus
  */
-public class L2ClanHallZone extends L2SpawnZone
-{
+public class L2ClanHallZone extends L2SpawnZone {
+
 	private int _clanHallId;
-	
-	public L2ClanHallZone(int id)
-	{
+
+	public L2ClanHallZone(int id) {
 		super(id);
 	}
-	
+
 	@Override
-	public void setParameter(String name, String value)
-	{
-		if (name.equals("clanHallId"))
-		{
+	public void setParameter(String name, String value) {
+		if (name.equals("clanHallId")) {
 			_clanHallId = Integer.parseInt(value);
-			
+
 			// Register self to the correct clan hall
 			ClanHallManager.getInstance().getClanHallById(_clanHallId).setZone(this);
-		}
-		else
+		} else {
 			super.setParameter(name, value);
+		}
 	}
-	
+
 	@Override
-	protected void onEnter(Creature character)
-	{
-		if (character instanceof Player)
-		{
+	protected void onEnter(Creature character) {
+		if (character instanceof Player) {
 			// Set as in clan hall
 			character.setInsideZone(ZoneId.CLAN_HALL, true);
-			
+
 			ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
-			if (clanHall == null)
+			if (clanHall == null) {
 				return;
-			
+			}
+
 			// Send decoration packet
 			ClanHallDecoration deco = new ClanHallDecoration(clanHall);
 			((Player) character).sendPacket(deco);
 		}
 	}
-	
+
 	@Override
-	protected void onExit(Creature character)
-	{
-		if (character instanceof Player)
+	protected void onExit(Creature character) {
+		if (character instanceof Player) {
 			character.setInsideZone(ZoneId.CLAN_HALL, false);
+		}
 	}
-	
+
 	@Override
-	public void onDieInside(Creature character)
-	{
+	public void onDieInside(Creature character) {
 	}
-	
+
 	@Override
-	public void onReviveInside(Creature character)
-	{
+	public void onReviveInside(Creature character) {
 	}
-	
+
 	/**
 	 * Removes all foreigners from the clan hall
+	 *
 	 * @param owningClanId
 	 */
-	public void banishForeigners(int owningClanId)
-	{
-		for (Player player : getKnownTypeInside(Player.class))
-		{
-			if (player.getClanId() == owningClanId)
+	public void banishForeigners(int owningClanId) {
+		for (Player player : getKnownTypeInside(Player.class)) {
+			if (player.getClanId() == owningClanId) {
 				continue;
-			
+			}
+
 			player.teleToLocation(TeleportType.TOWN);
 		}
 	}
-	
+
 	/**
 	 * @return the clanHallId
 	 */
-	public int getClanHallId()
-	{
+	public int getClanHallId() {
 		return _clanHallId;
 	}
 }

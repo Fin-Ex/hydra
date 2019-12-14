@@ -10,29 +10,30 @@ import net.sf.finex.enums.EStoreType;
 import net.sf.l2j.gameserver.network.FloodProtectors;
 import net.sf.l2j.gameserver.network.FloodProtectors.Action;
 
-public final class RequestRecipeItemMakeSelf extends L2GameClientPacket
-{
+public final class RequestRecipeItemMakeSelf extends L2GameClientPacket {
+
 	private int _id;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_id = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
-		if (!FloodProtectors.performAction(getClient(), Action.MANUFACTURE))
+	protected void runImpl() {
+		if (!FloodProtectors.performAction(getClient(), Action.MANUFACTURE)) {
 			return;
-		
+		}
+
 		final Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
-		if (activeChar.getStoreType() == EStoreType.MANUFACTURE || activeChar.isCrafting())
+		}
+
+		if (activeChar.getStoreType() == EStoreType.MANUFACTURE || activeChar.isCrafting()) {
 			return;
-		
+		}
+
 		final Craft craft = new Single(activeChar, RecipeTable.getInstance().get(_id));
 		activeChar.setCraft(craft);
 		craft.create();

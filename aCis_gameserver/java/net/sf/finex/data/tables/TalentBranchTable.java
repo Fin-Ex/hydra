@@ -5,7 +5,6 @@
  */
 package net.sf.finex.data.tables;
 
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.File;
@@ -32,15 +31,16 @@ import net.sf.l2j.gameserver.model.base.ClassId;
 @Slf4j
 public final class TalentBranchTable extends StorageTable {
 
-	@Getter private static final TalentBranchTable instance = new TalentBranchTable();
-	
+	@Getter
+	private static final TalentBranchTable instance = new TalentBranchTable();
+
 	private final List<TalentBranchData> holder = new ArrayList<>();
 	private final Map<ClassId, StringBuilder> htmlBuilder = new HashMap<>();
-	
+
 	private TalentBranchTable() {
 		load();
 	}
-	
+
 	@Override
 	public void reload() {
 		holder.clear();
@@ -54,24 +54,25 @@ public final class TalentBranchTable extends StorageTable {
 		final Gson gson = new Gson();
 		final File file = new File("data/json/talents/branches.json");
 		try (Reader reader = new InputStreamReader(new FileInputStream(file))) {
-			holder.addAll(gson.fromJson(reader, new TypeToken<List<TalentBranchData>>() {}.getType()));
+			holder.addAll(gson.fromJson(reader, new TypeToken<List<TalentBranchData>>() {
+			}.getType()));
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		
+
 		log.info("Loaded {} talent branches for classes.", holder.size());
 		buildHtmlTree();
 	}
 
 	@Override
 	public TalentBranchData get(int identifier) {
-		for(int i = 0; i < holder.size(); i++) {
+		for (int i = 0; i < holder.size(); i++) {
 			final TalentBranchData data = holder.get(i);
-			if(data.getId() == identifier) {
+			if (data.getId() == identifier) {
 				return data;
 			}
 		}
-		
+
 		return null;
 	}
 
@@ -85,15 +86,15 @@ public final class TalentBranchTable extends StorageTable {
 		if (!htmlBuilder.containsKey(oriClass)) {
 			throw new UnsupportedOperationException("Talents not exist in talents.gson for class " + oriClass);
 		}
-		
+
 		return htmlBuilder.get(oriClass);
 	}
-	
+
 	private void buildHtmlTree() {
 		// build html for talents
-		for(TalentBranchData branchData : holder) {
+		for (TalentBranchData branchData : holder) {
 			final ClassId classId = branchData.getClassId();
-			
+
 			// get talent list for class
 			final List<TalentData> talentList = new ArrayList<>();
 			for (int i = 0; i < branchData.getTalents().length; i++) {
@@ -105,7 +106,7 @@ public final class TalentBranchTable extends StorageTable {
 
 				talentList.add(data);
 			}
-			
+
 			// build html view of talents window
 			final StringBuilder sb = new StringBuilder();
 			sb.append("<html imgsrc=v1c01.talent_bg><title>%points%</title><body><a action=\"bypass -h talentReset\"><font color=FAEBD7>Reset</font></a>");
@@ -129,24 +130,25 @@ public final class TalentBranchTable extends StorageTable {
 			}
 			sb.append("</table></center></body></html>");
 			htmlBuilder.put(classId, sb);
-			
+
 		}
 	}
-	
+
 	public TalentBranchData getBranch(ClassId classId) {
-		for(TalentBranchData data : holder) {
-			if(classId.equalsOrChildOf(data.getClassId())) {
+		for (TalentBranchData data : holder) {
+			if (classId.equalsOrChildOf(data.getClassId())) {
 				return data;
 			}
 		}
-		
+
 		return null;
 	}
-	
+
 	/**
 	 * Player classId has a branch
+	 *
 	 * @param player
-	 * @return 
+	 * @return
 	 */
 	public boolean checkBranch(Player player) {
 		return getBranch(player.getClassId()) != null;

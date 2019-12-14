@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q091_SagaOfTheArcanaLord extends SagasSuperClass
-{
-	public Q091_SagaOfTheArcanaLord()
-	{
+public class Q091_SagaOfTheArcanaLord extends SagasSuperClass {
+
+	public Q091_SagaOfTheArcanaLord() {
 		super(91, "Saga of the Arcana Lord");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			31605,
 			31622,
 			31585,
@@ -25,9 +23,8 @@ public class Q091_SagaOfTheArcanaLord extends SagasSuperClass
 			31658,
 			31608
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7604,
 			7081,
@@ -41,38 +38,34 @@ public class Q091_SagaOfTheArcanaLord extends SagasSuperClass
 			7110,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27313,
 			27240,
 			27310
 		};
-		
+
 		classid = 96;
 		prevclass = 0x0e;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			119518,
 			181215,
 			181227
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-28658,
 			36676,
 			36703
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-3811,
 			-4812,
 			-4816
 		};
-		
+
 		registerNPCs();
 	}
 }

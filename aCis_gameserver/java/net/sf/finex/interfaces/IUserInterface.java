@@ -14,5 +14,6 @@ import net.sf.finex.enums.EUIEventType;
  * @author FinFan
  */
 public interface IUserInterface {
+
 	public void showHtml(EUIEventType event);
 }

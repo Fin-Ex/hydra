@@ -14,50 +14,47 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
 /**
  * This class handles following admin commands: - delete = deletes target
  */
-public class AdminDelete implements IAdminCommandHandler
-{
-	private static final String[] ADMIN_COMMANDS =
-	{
-		"admin_delete"
-	};
-	
+public class AdminDelete implements IAdminCommandHandler {
+
+	private static final String[] ADMIN_COMMANDS
+			= {
+				"admin_delete"
+			};
+
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
-	{
-		if (command.equals("admin_delete"))
+	public boolean useAdminCommand(String command, Player activeChar) {
+		if (command.equals("admin_delete")) {
 			handleDelete(activeChar);
-		
+		}
+
 		return true;
 	}
-	
+
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
-	
-	private static void handleDelete(Player activeChar)
-	{
+
+	private static void handleDelete(Player activeChar) {
 		WorldObject obj = activeChar.getTarget();
-		if (obj != null && obj instanceof Npc)
-		{
+		if (obj != null && obj instanceof Npc) {
 			Npc target = (Npc) obj;
-			
+
 			L2Spawn spawn = target.getSpawn();
-			if (spawn != null)
-			{
+			if (spawn != null) {
 				spawn.setRespawnState(false);
-				
-				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId()))
+
+				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId())) {
 					RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
-				else
+				} else {
 					SpawnTable.getInstance().deleteSpawn(spawn, true);
+				}
 			}
 			target.deleteMe();
-			
+
 			activeChar.sendMessage("Deleted " + target.getName() + " from " + target.getObjectId() + ".");
-		}
-		else
+		} else {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+		}
 	}
 }

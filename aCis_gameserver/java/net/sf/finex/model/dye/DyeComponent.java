@@ -31,13 +31,20 @@ public class DyeComponent extends AbstractComponent {
 	private static final String REMOVE_CHAR_HENNA = "DELETE FROM character_hennas WHERE char_obj_id=? AND slot=? AND class_index=?";
 	private static final String DELETE_CHAR_HENNAS = "DELETE FROM character_hennas WHERE char_obj_id=? AND class_index=?";
 
-	@Getter private final DyeData[] dyes = new DyeData[3];
-	@Getter private int dyeSTR;
-	@Getter private int dyeINT;
-	@Getter private int dyeDEX;
-	@Getter private int dyeMEN;
-	@Getter private int dyeWIT;
-	@Getter private int dyeCON;
+	@Getter
+	private final DyeData[] dyes = new DyeData[3];
+	@Getter
+	private int dyeSTR;
+	@Getter
+	private int dyeINT;
+	@Getter
+	private int dyeDEX;
+	@Getter
+	private int dyeMEN;
+	@Getter
+	private int dyeWIT;
+	@Getter
+	private int dyeCON;
 
 	public DyeComponent(Player player) {
 		super(player);
@@ -65,10 +72,10 @@ public class DyeComponent extends AbstractComponent {
 	}
 
 	public boolean removeDye(int index) {
-		if(index > 2) {
+		if (index > 2) {
 			return false;
 		}
-		
+
 		DyeData dye = dyes[index];
 		dyes[index] = null;
 		if (dye == null) {
@@ -146,16 +153,16 @@ public class DyeComponent extends AbstractComponent {
 			return null;
 		}
 	}
-	
+
 	public boolean hasDye(int slot) {
 		return dyes[slot] != null;
 	}
-	
+
 	public DyeData setDye(DyeData data, int slot) {
-		if(dyes[slot] == null) {
+		if (dyes[slot] == null) {
 			dyes[slot] = data;
 		}
-		
+
 		return dyes[slot];
 	}
 
@@ -224,7 +231,7 @@ public class DyeComponent extends AbstractComponent {
 			log.error("Could not remove char dye.", e);
 		}
 	}
-	
+
 	@Override
 	public Player getGameObject() {
 		return super.getGameObject().getPlayer();

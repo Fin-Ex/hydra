@@ -12,5 +12,6 @@ import net.sf.l2j.gameserver.model.actor.Creature;
  * @author FinFan
  */
 public interface IBonusHandler {
+
 	public double calc(Creature creature);
 }

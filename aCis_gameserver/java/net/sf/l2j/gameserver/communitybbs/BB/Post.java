@@ -16,12 +16,12 @@ import net.sf.l2j.gameserver.communitybbs.Manager.PostBBSManager;
 /**
  * @author Maktakien
  */
-public class Post
-{
+public class Post {
+
 	private static final Logger _log = LoggerFactory.getLogger(Post.class.getName());
-	
-	public class CPost
-	{
+
+	public class CPost {
+
 		public int postId;
 		public String postOwner;
 		public int postOwnerId;
@@ -30,11 +30,10 @@ public class Post
 		public int postForumId;
 		public String postTxt;
 	}
-	
+
 	private final List<CPost> _post;
-	
-	public Post(String _PostOwner, int _PostOwnerID, long date, int tid, int _PostForumID, String txt)
-	{
+
+	public Post(String _PostOwner, int _PostOwnerID, long date, int tid, int _PostForumID, String txt) {
 		_post = new ArrayList<>();
 		CPost cp = new CPost();
 		cp.postId = 0;
@@ -47,11 +46,9 @@ public class Post
 		_post.add(cp);
 		insertindb(cp);
 	}
-	
-	public void insertindb(CPost cp)
-	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
-		{
+
+	public void insertindb(CPost cp) {
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
 			PreparedStatement statement = con.prepareStatement("INSERT INTO posts (post_id,post_owner_name,post_ownerid,post_date,post_topic_id,post_forum_id,post_txt) values (?,?,?,?,?,?,?)");
 			statement.setInt(1, cp.postId);
 			statement.setString(2, cp.postOwner);
@@ -62,57 +59,46 @@ public class Post
 			statement.setString(7, cp.postTxt);
 			statement.execute();
 			statement.close();
-		}
-		catch (Exception e)
-		{
-			_log.warn( "Error while saving new Post to db " + e.getMessage(), e);
+		} catch (Exception e) {
+			_log.warn("Error while saving new Post to db " + e.getMessage(), e);
 		}
 	}
-	
-	public Post(Topic t)
-	{
+
+	public Post(Topic t) {
 		_post = new ArrayList<>();
 		load(t);
 	}
-	
-	public CPost getCPost(int id)
-	{
+
+	public CPost getCPost(int id) {
 		int i = 0;
-		for (CPost cp : _post)
-		{
-			if (i++ == id)
+		for (CPost cp : _post) {
+			if (i++ == id) {
 				return cp;
+			}
 		}
 		return null;
 	}
-	
-	public void deleteMe(Topic t)
-	{
+
+	public void deleteMe(Topic t) {
 		PostBBSManager.getInstance().delPostByTopic(t);
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
-		{
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
 			PreparedStatement statement = con.prepareStatement("DELETE FROM posts WHERE post_forum_id=? AND post_topic_id=?");
 			statement.setInt(1, t.getForumID());
 			statement.setInt(2, t.getID());
 			statement.execute();
 			statement.close();
-		}
-		catch (Exception e)
-		{
-			_log.warn( "Error while deleting post: " + e.getMessage(), e);
+		} catch (Exception e) {
+			_log.warn("Error while deleting post: " + e.getMessage(), e);
 		}
 	}
-	
-	private void load(Topic t)
-	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
-		{
+
+	private void load(Topic t) {
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM posts WHERE post_forum_id=? AND post_topic_id=? ORDER BY post_id ASC");
 			statement.setInt(1, t.getForumID());
 			statement.setInt(2, t.getID());
 			ResultSet result = statement.executeQuery();
-			while (result.next())
-			{
+			while (result.next()) {
 				CPost cp = new CPost();
 				cp.postId = result.getInt("post_id");
 				cp.postOwner = result.getString("post_owner_name");
@@ -125,17 +111,13 @@ public class Post
 			}
 			result.close();
 			statement.close();
-		}
-		catch (Exception e)
-		{
-			_log.warn( "Data error on Post " + t.getForumID() + "/" + t.getID() + " : " + e.getMessage(), e);
+		} catch (Exception e) {
+			_log.warn("Data error on Post " + t.getForumID() + "/" + t.getID() + " : " + e.getMessage(), e);
 		}
 	}
-	
-	public void updateText(int i)
-	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
-		{
+
+	public void updateText(int i) {
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
 			CPost cp = getCPost(i);
 			PreparedStatement statement = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?");
 			statement.setString(1, cp.postTxt);
@@ -144,10 +126,8 @@ public class Post
 			statement.setInt(4, cp.postForumId);
 			statement.execute();
 			statement.close();
-		}
-		catch (Exception e)
-		{
-			_log.warn( "Error while saving new Post to db " + e.getMessage(), e);
+		} catch (Exception e) {
+			_log.warn("Error while saving new Post to db " + e.getMessage(), e);
 		}
 	}
 }

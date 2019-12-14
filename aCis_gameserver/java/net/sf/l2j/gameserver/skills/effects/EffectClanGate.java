@@ -17,45 +17,38 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  * @author ZaKaX (Ghost @ L2D)
  */
 @Effect("ClanGate")
-public class EffectClanGate extends L2Effect
-{
-	public EffectClanGate(Env env, EffectTemplate template)
-	{
+public class EffectClanGate extends L2Effect {
+
+	public EffectClanGate(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
-		if (getEffected() instanceof Player)
-		{
+		if (getEffected() instanceof Player) {
 			Clan clan = ((Player) getEffected()).getClan();
-			if (clan != null)
-			{
+			if (clan != null) {
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL);
 				clan.broadcastToOtherOnlineMembers(msg, ((Player) getEffected()));
 			}
 		}
-		
+
 		return true;
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
-	
+
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CLAN_GATE;
 	}
 }

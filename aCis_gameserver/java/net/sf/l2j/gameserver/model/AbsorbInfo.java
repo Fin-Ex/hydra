@@ -3,50 +3,44 @@ package net.sf.l2j.gameserver.model;
 import org.slf4j.LoggerFactory;
 
 /**
- * This class contains all infos of the L2Attackable against the absorber Creature.
+ * This class contains all infos of the L2Attackable against the absorber
+ * Creature.
  * <ul>
  * <li>_absorbedHP : The amount of HP at the moment attacker used the item.</li>
  * <li>_itemObjectId : The item id of the Soul Crystal used.</li>
  * </ul>
  */
-public final class AbsorbInfo
-{
+public final class AbsorbInfo {
+
 	private boolean _registered;
 	private int _itemId;
 	private int _absorbedHpPercent;
-	
-	public AbsorbInfo(int itemId)
-	{
+
+	public AbsorbInfo(int itemId) {
 		_itemId = itemId;
 	}
-	
-	public boolean isRegistered()
-	{
+
+	public boolean isRegistered() {
 		return _registered;
 	}
-	
-	public void setRegistered(boolean state)
-	{
+
+	public void setRegistered(boolean state) {
 		_registered = state;
 	}
-	
-	public int getItemId()
-	{
+
+	public int getItemId() {
 		return _itemId;
 	}
-	
-	public void setItemId(int itemId)
-	{
+
+	public void setItemId(int itemId) {
 		_itemId = itemId;
 	}
-	
-	public void setAbsorbedHpPercent(int percent)
-	{
+
+	public void setAbsorbedHpPercent(int percent) {
 		_absorbedHpPercent = percent;
 	}
-	
-	public boolean isValid(int itemId)
-	{
+
+	public boolean isValid(int itemId) {
 		return _itemId == itemId && _absorbedHpPercent < 50;
 	}
 }

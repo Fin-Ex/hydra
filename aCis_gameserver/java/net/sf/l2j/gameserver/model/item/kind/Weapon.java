@@ -59,7 +59,8 @@ public final class Weapon extends Item {
 
 	private final int _reducedSoulshot;
 	private final int _reducedSoulshotChance;
-	@Getter private Map<Stats, Double> stats = new HashMap<>();
+	@Getter
+	private Map<Stats, Double> stats = new HashMap<>();
 
 	public Weapon(StatsSet set) {
 		super(set);
@@ -98,10 +99,10 @@ public final class Weapon extends Item {
 		}
 
 		skill = set.getString("oncast_skill", null);
-		if(skill != null) {
+		if (skill != null) {
 			final String[] splitter = skill.split("-");
 			final int id = Integer.parseInt(splitter[0]);
-			if(splitter.length > 1) {
+			if (splitter.length > 1) {
 				final int level = Integer.parseInt(splitter[1]);
 				skillOnCastStatic = new IntIntHolder(id, level);
 			} else {
@@ -116,10 +117,10 @@ public final class Weapon extends Item {
 		}
 
 		skill = set.getString("oncrit_skill", null);
-		if(skill != null) {
+		if (skill != null) {
 			final String[] splitter = skill.split("-");
 			final int id = Integer.parseInt(splitter[0]);
-			if(splitter.length > 1) {
+			if (splitter.length > 1) {
 				final int level = Integer.parseInt(splitter[1]);
 				skillsOnCritStatic = new IntIntHolder(id, level);
 			} else {
@@ -133,7 +134,7 @@ public final class Weapon extends Item {
 			skillOnCritDynamic = -1;
 		}
 	}
-	
+
 	/**
 	 * @return the type of weapon.
 	 */
@@ -230,17 +231,17 @@ public final class Weapon extends Item {
 	 * triggered onHit.
 	 */
 	public List<L2Effect> getSkillEffects(Creature caster, Creature target, boolean crit) {
-		if(!crit) {
+		if (!crit) {
 			return Collections.emptyList();
 		}
-		
+
 		L2Skill skill = null;
-		if(skillsOnCritStatic != null) {
+		if (skillsOnCritStatic != null) {
 			skill = skillsOnCritStatic.getSkill();
-		} else if(skillOnCritDynamic > 0) {
+		} else if (skillOnCritDynamic > 0) {
 			skill = SkillTable.getInstance().getLevelFrom(skillOnCritDynamic, caster.getLevel());
 		}
-		
+
 		if (skill == null) {
 			return Collections.emptyList();
 		}
@@ -283,13 +284,13 @@ public final class Weapon extends Item {
 	 */
 	public List<L2Effect> getSkillEffects(Creature caster, Creature target, L2Skill trigger) {
 		L2Skill skillOnCast = null;
-		if(skillOnCastStatic != null) {
+		if (skillOnCastStatic != null) {
 			skillOnCast = skillOnCastStatic.getSkill();
-		} else if(skillOnCastDynamic > 0) {
+		} else if (skillOnCastDynamic > 0) {
 			skillOnCast = SkillTable.getInstance().getLevelFrom(skillOnCastDynamic, caster.getLevel());
 		}
-		
-		if(skillOnCast == null) {
+
+		if (skillOnCast == null) {
 			return Collections.emptyList();
 		}
 
@@ -351,7 +352,7 @@ public final class Weapon extends Item {
 	public void attach(FuncTemplate f) {
 		super.attach(f);
 		// insert only static BASE stats
-		if(f.order == 0x08) {
+		if (f.order == 0x08) {
 			stats.put(f.stat, ((LambdaConst) f.lambda).getValue());
 		}
 	}

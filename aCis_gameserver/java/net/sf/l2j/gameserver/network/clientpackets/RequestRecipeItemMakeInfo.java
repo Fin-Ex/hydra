@@ -5,23 +5,22 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.serverpackets.RecipeItemMakeInfo;
 
-public final class RequestRecipeItemMakeInfo extends L2GameClientPacket
-{
+public final class RequestRecipeItemMakeInfo extends L2GameClientPacket {
+
 	private int _id;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_id = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
+		}
+
 		activeChar.sendPacket(new RecipeItemMakeInfo(_id, activeChar));
 	}
 }

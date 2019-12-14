@@ -10,100 +10,84 @@ import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
 import net.sf.l2j.gameserver.model.item.type.EtcItemType;
 
-public class PetInventory extends Inventory
-{
+public class PetInventory extends Inventory {
+
 	private final Pet _owner;
-	
-	public PetInventory(Pet owner)
-	{
+
+	public PetInventory(Pet owner) {
 		_owner = owner;
 	}
-	
+
 	@Override
-	public Pet getOwner()
-	{
+	public Pet getOwner() {
 		return _owner;
 	}
-	
+
 	@Override
-	public int getOwnerId()
-	{
+	public int getOwnerId() {
 		int id;
-		try
-		{
+		try {
 			id = _owner.getPlayer().getObjectId();
-		}
-		catch (NullPointerException e)
-		{
+		} catch (NullPointerException e) {
 			return 0;
 		}
 		return id;
 	}
-	
+
 	@Override
-	protected void refreshWeight()
-	{
+	protected void refreshWeight() {
 		super.refreshWeight();
-		
+
 		getOwner().updateAndBroadcastStatus(1);
 		getOwner().sendPetInfosToOwner();
 	}
-	
-	public boolean validateCapacity(ItemInstance item)
-	{
+
+	public boolean validateCapacity(ItemInstance item) {
 		int slots = 0;
-		
-		if (!(item.isStackable() && getItemByItemId(item.getItemId()) != null) && item.getItemType() != EtcItemType.HERB)
+
+		if (!(item.isStackable() && getItemByItemId(item.getItemId()) != null) && item.getItemType() != EtcItemType.HERB) {
 			slots++;
-		
+		}
+
 		return validateCapacity(slots);
 	}
-	
+
 	@Override
-	public boolean validateCapacity(int slots)
-	{
+	public boolean validateCapacity(int slots) {
 		return _items.size() + slots <= _owner.getInventoryLimit();
 	}
-	
-	public boolean validateWeight(ItemInstance item, int count)
-	{
+
+	public boolean validateWeight(ItemInstance item, int count) {
 		return validateWeight(count * item.getItem().getWeight());
 	}
-	
+
 	@Override
-	public boolean validateWeight(int weight)
-	{
+	public boolean validateWeight(int weight) {
 		return _totalWeight + weight <= _owner.getMaxLoad();
 	}
-	
+
 	@Override
-	protected ItemLocation getBaseLocation()
-	{
+	protected ItemLocation getBaseLocation() {
 		return ItemLocation.PET;
 	}
-	
+
 	@Override
-	protected ItemLocation getEquipLocation()
-	{
+	protected ItemLocation getEquipLocation() {
 		return ItemLocation.PET_EQUIP;
 	}
-	
+
 	@Override
-	public void deleteMe()
-	{
+	public void deleteMe() {
 		final Player petOwner = getOwner().getPlayer();
-		if (petOwner != null)
-		{
-			for (ItemInstance item : _items)
-			{
-				if (petOwner.getInventory().validateCapacity(1))
+		if (petOwner != null) {
+			for (ItemInstance item : _items) {
+				if (petOwner.getInventory().validateCapacity(1)) {
 					getOwner().transferItem("return", item.getObjectId(), item.getCount(), petOwner.getInventory(), petOwner, getOwner());
-				else
-				{
+				} else {
 					final ItemInstance droppedItem = dropItem("drop", item.getObjectId(), item.getCount(), petOwner, getOwner());
 					droppedItem.dropMe(getOwner(), getOwner().getX() + Rnd.get(-70, 70), getOwner().getY() + Rnd.get(-70, 70), getOwner().getZ() + 30);
 				}
-				
+
 			}
 		}
 		_items.clear();

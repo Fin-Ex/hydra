@@ -486,7 +486,7 @@ public abstract class WorldObject {
 	public Vehicle getVehicle() {
 		return null;
 	}
-	
+
 	public Servitor getServitor() {
 		return null;
 	}
@@ -514,7 +514,7 @@ public abstract class WorldObject {
 	public boolean isPet() {
 		return false;
 	}
-	
+
 	public boolean isServitor() {
 		return false;
 	}
@@ -535,10 +535,10 @@ public abstract class WorldObject {
 	}
 
 	public void removeComponent(AbstractComponent component) {
-		if(!components.containsKey(component.getClass())) {
+		if (!components.containsKey(component.getClass())) {
 			return;
 		}
-		
+
 		components.remove(component.getClass());
 		component.onRemove();
 	}
@@ -546,7 +546,7 @@ public abstract class WorldObject {
 	public <T> T getComponent(Class<T> type) {
 		return (T) components.get(type);
 	}
-	
+
 	public <T> boolean hasComponent(Class<T> type) {
 		return getComponent(type) != null;
 	}

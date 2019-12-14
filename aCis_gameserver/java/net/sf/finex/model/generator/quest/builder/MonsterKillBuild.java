@@ -37,32 +37,32 @@ public class MonsterKillBuild extends RandomQuestBuilder {
 		);
 
 		int monsterKillCount = 0;
-		switch(quest.getGrade()) {
+		switch (quest.getGrade()) {
 			case NG:
 				monsterKillCount = 10;
 				break;
-			
+
 			case D:
 				monsterKillCount = 20;
 				break;
-				
+
 			case C:
 				monsterKillCount = 40;
 				break;
-				
+
 			case B:
 				monsterKillCount = 80;
 				break;
-				
+
 			case A:
 				monsterKillCount = 160;
 				break;
-				
+
 			case S:
 				monsterKillCount = 320;
 				break;
 		}
-		
+
 		quest.setCondition(new RandomQuestConditionData(quest.getType(), monsterForHunt, monsterKillCount));
 	}
 
@@ -101,7 +101,7 @@ public class MonsterKillBuild extends RandomQuestBuilder {
 		// calculate exp & sp base rewards
 		long exp = monster.getRewardExp();
 		int sp = monster.getRewardSp();
-		
+
 		// if mosnter has skill HP muller we increase EXP value to them
 		for (List<L2Skill> list : monster.getSkills().values()) {
 			for (L2Skill skill : list) {
@@ -124,7 +124,7 @@ public class MonsterKillBuild extends RandomQuestBuilder {
 		final int value = quest.getCondition().getValue();
 		exp *= value;
 		sp *= value;
-		
+
 		quest.setExp(exp);
 		quest.setSp(sp);
 	}

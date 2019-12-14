@@ -5,7 +5,6 @@
  */
 package net.sf.finex.handlers.dialog.answers;
 
-
 import net.sf.finex.dao.PlayerLineageDao;
 import net.sf.finex.data.TalentData;
 import net.sf.finex.data.tables.TalentTable;
@@ -32,10 +31,10 @@ public class TalentLearnAnswer implements IDialogAnswer {
 
 			final TalentData talent = TalentTable.getInstance().get(talentId);
 			activeChar.addSkill(SkillTable.getInstance().getInfo(talent.getSkillId(), 1), true);
+			activeChar.sendSkillList();
 			activeChar.setLineagePoints(activeChar.getLineagePoints() - 1);
 			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_LP_WAS_CONSUMED).addNumber(1));
 			PlayerLineageDao.update(activeChar);
-			activeChar.sendSkillList();
 		}
 		LineageCommandHandler.showTalentList(activeChar);
 	}

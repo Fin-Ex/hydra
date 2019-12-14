@@ -52,14 +52,14 @@ public class ItemPassiveSkillsListener implements OnEquipListener {
 
 		// Collect all having skills by this item
 		final List<L2Skill> skills = new ArrayList<>();
-		if(item.hasDynamicSkills()) {
+		if (item.hasDynamicSkills()) {
 			item.getDynamicSkills().forEach(holder -> skills.add(SkillTable.getInstance().getLevelFrom(holder.getId(), actor.getLevel())));
 		}
-		
-		if(item.hasStaticSkills()) {
+
+		if (item.hasStaticSkills()) {
 			item.getStaticSkills().forEach(holder -> skills.add(holder.getSkill()));
 		}
-		
+
 		// handle all skills giving by this item
 		if (!skills.isEmpty()) {
 			for (L2Skill itemSkill : skills) {
@@ -122,7 +122,7 @@ public class ItemPassiveSkillsListener implements OnEquipListener {
 			if (item.hasStaticSkills()) {
 				item.getStaticSkills().forEach(holder -> skills.add(holder.getSkill()));
 			}
-	
+
 			if (!skills.isEmpty()) {
 				for (L2Skill itemSkill : skills) {
 					if (itemSkill != null) {

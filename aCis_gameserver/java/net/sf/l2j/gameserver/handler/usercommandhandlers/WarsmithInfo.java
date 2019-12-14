@@ -16,18 +16,18 @@ import net.sf.l2j.gameserver.model.actor.Player;
  *
  * @author FinFan
  */
-public class WarsmithInfo implements IUserCommandHandler{
+public class WarsmithInfo implements IUserCommandHandler {
 
 	private static final int[] COMMANDS = {
 		114
 	};
-	
+
 	@Override
 	public boolean useUserCommand(int id, Player activeChar) {
-		if(!activeChar.hasComponent(Warsmith.class)) {
+		if (!activeChar.hasComponent(Warsmith.class)) {
 			return false;
 		}
-		
+
 		activeChar.getComponent(Warsmith.class).showHtml(EUIEventType.INFO);
 		return true;
 	}
@@ -36,5 +36,5 @@ public class WarsmithInfo implements IUserCommandHandler{
 	public int[] getUserCommandList() {
 		return COMMANDS;
 	}
-	
+
 }

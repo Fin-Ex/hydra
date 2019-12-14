@@ -23,7 +23,7 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 public class ComboComponent extends AbstractComponent {
 
 	private static final int COMBO_TIME = 30_000;
-	
+
 	private int value;
 	private long time;
 
@@ -32,43 +32,43 @@ public class ComboComponent extends AbstractComponent {
 	}
 
 	public void update(Creature target) {
-		if(getGameObject().getLevel() - target.getLevel() > Config.COMBO_PENALTY) {
+		if (getGameObject().getLevel() - target.getLevel() > Config.COMBO_PENALTY) {
 			return;
 		}
-		
-		if(time != 0 && System.currentTimeMillis() >= time) {
+
+		if (time != 0 && System.currentTimeMillis() >= time) {
 			stop();
 		}
-		
-		if(value == Short.MAX_VALUE) {
+
+		if (value == Short.MAX_VALUE) {
 			value = Short.MAX_VALUE;
 		} else {
 			value++;
 		}
-		
+
 		getGameObject().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.COMBO_BONUS_INCREASE_TO_S1).addNumber(value));
 		final int random = Rnd.get(20);
 		switch (random) {
 			case 0:
 				getGameObject().sendPacket(SystemMessageId.COMBO_CONTINUE_1);
 				break;
-				
+
 			case 10:
 				getGameObject().sendPacket(SystemMessageId.COMBO_CONTINUE_2);
 				break;
-				
+
 			case 20:
 				getGameObject().sendPacket(SystemMessageId.COMBO_CONTINUE_3);
 				break;
 		}
 		time = System.currentTimeMillis() + COMBO_TIME;
 	}
-	
+
 	public void stop() {
 		value = 0;
 		time = 0;
 	}
-	
+
 	public double calcExpAndSp() {
 		return value / 100. + 1;
 	}
@@ -76,7 +76,7 @@ public class ComboComponent extends AbstractComponent {
 	public boolean isActivated() {
 		return System.currentTimeMillis() < time;
 	}
-	
+
 	@Override
 	public Player getGameObject() {
 		return super.getGameObject().getPlayer();

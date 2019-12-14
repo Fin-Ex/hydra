@@ -2,10 +2,9 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class AuthLoginFail extends L2GameServerPacket
-{
-	public enum FailReason
-	{
+public class AuthLoginFail extends L2GameServerPacket {
+
+	public enum FailReason {
 		NO_TEXT,
 		SYSTEM_ERROR_LOGIN_LATER,
 		PASSWORD_DOES_NOT_MATCH_THIS_ACCOUNT,
@@ -18,17 +17,15 @@ public class AuthLoginFail extends L2GameServerPacket
 		ACCESS_FAILED_TRY_LATER4,
 		ACCESS_FAILED_TRY_LATER5
 	}
-	
+
 	private final FailReason _reason;
-	
-	public AuthLoginFail(FailReason reason)
-	{
+
+	public AuthLoginFail(FailReason reason) {
 		_reason = reason;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x14);
 		writeD(_reason.ordinal());
 	}

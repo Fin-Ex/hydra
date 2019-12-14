@@ -6,34 +6,29 @@ import net.sf.l2j.gameserver.model.actor.Summon;
 import net.sf.l2j.gameserver.model.actor.Pet;
 import net.sf.l2j.gameserver.model.actor.instance.Servitor;
 
-public class PetStatusUpdate extends L2GameServerPacket
-{
+public class PetStatusUpdate extends L2GameServerPacket {
+
 	private final Summon _summon;
 	private final int _maxHp, _maxMp;
 	private int _maxFed, _curFed;
-	
-	public PetStatusUpdate(Summon summon)
-	{
+
+	public PetStatusUpdate(Summon summon) {
 		_summon = summon;
 		_maxHp = _summon.getMaxHp();
 		_maxMp = _summon.getMaxMp();
-		if (_summon instanceof Pet)
-		{
+		if (_summon instanceof Pet) {
 			Pet pet = (Pet) _summon;
 			_curFed = pet.getCurrentFed();
 			_maxFed = pet.getPetData().getMaxMeal();
-		}
-		else if (_summon instanceof Servitor)
-		{
+		} else if (_summon instanceof Servitor) {
 			Servitor sum = (Servitor) _summon;
 			_curFed = sum.getTimeRemaining();
 			_maxFed = sum.getTotalLifeTime();
 		}
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xb5);
 		writeD(_summon.getSummonType());
 		writeD(_summon.getObjectId());

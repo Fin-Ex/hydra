@@ -9,34 +9,34 @@ import net.sf.l2j.gameserver.model.group.Party;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
-public class ChannelLeave implements IUserCommandHandler
-{
-	private static final int[] COMMAND_IDS =
-	{
-		96
-	};
-	
+public class ChannelLeave implements IUserCommandHandler {
+
+	private static final int[] COMMAND_IDS
+			= {
+				96
+			};
+
 	@Override
-	public boolean useUserCommand(int id, Player player)
-	{
+	public boolean useUserCommand(int id, Player player) {
 		final Party party = player.getParty();
-		if (party == null || !party.isLeader(player))
+		if (party == null || !party.isLeader(player)) {
 			return false;
-		
+		}
+
 		final CommandChannel channel = party.getCommandChannel();
-		if (channel == null)
+		if (channel == null) {
 			return false;
-		
+		}
+
 		channel.removeParty(party);
-		
+
 		party.broadcastMessage(SystemMessageId.LEFT_COMMAND_CHANNEL);
 		channel.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_PARTY_LEFT_COMMAND_CHANNEL).addCharName(player));
 		return true;
 	}
-	
+
 	@Override
-	public int[] getUserCommandList()
-	{
+	public int[] getUserCommandList() {
 		return COMMAND_IDS;
 	}
 }

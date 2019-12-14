@@ -9,35 +9,33 @@ import net.sf.l2j.gameserver.skills.L2Effect;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
 @Effect("AbortCast")
-public class EffectAbortCast extends L2Effect
-{
-	public EffectAbortCast(Env env, EffectTemplate template)
-	{
+public class EffectAbortCast extends L2Effect {
+
+	public EffectAbortCast(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.ABORT_CAST;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() == null || getEffected() == getEffector())
+	public boolean onStart() {
+		if (getEffected() == null || getEffected() == getEffector()) {
 			return false;
-		
-		if (getEffected().isRaid())
+		}
+
+		if (getEffected().isRaid()) {
 			return false;
-		
+		}
+
 		getEffected().breakCast();
 		return true;
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 }

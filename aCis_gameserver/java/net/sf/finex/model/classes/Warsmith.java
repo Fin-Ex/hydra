@@ -5,7 +5,6 @@
  */
 package net.sf.finex.model.classes;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -34,7 +33,9 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 @Slf4j
 public final class Warsmith extends AbstractClassComponent {
 
-	@Getter @Setter private List<SpecializeData> specializes = new ArrayList<>();
+	@Getter
+	@Setter
+	private List<SpecializeData> specializes = new ArrayList<>();
 
 	public Warsmith(Player player) {
 		super(player);
@@ -251,7 +252,7 @@ public final class Warsmith extends AbstractClassComponent {
 	}
 
 	@Override
-	public void remove(Object...args) {
+	public void remove(Object... args) {
 		throw new UnsupportedOperationException("Operation not handle.");
 	}
 

@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q072_SagaOfTheSwordMuse extends SagasSuperClass
-{
-	public Q072_SagaOfTheSwordMuse()
-	{
+public class Q072_SagaOfTheSwordMuse extends SagasSuperClass {
+
+	public Q072_SagaOfTheSwordMuse() {
 		super(72, "Saga of the Sword Muse");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30853,
 			31624,
 			31583,
@@ -25,9 +23,8 @@ public class Q072_SagaOfTheSwordMuse extends SagasSuperClass
 			31659,
 			31281
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7536,
 			7081,
@@ -41,38 +38,34 @@ public class Q072_SagaOfTheSwordMuse extends SagasSuperClass
 			7095,
 			6482
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27288,
 			27221,
 			27280
 		};
-		
+
 		classid = 100;
 		prevclass = 0x15;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			161719,
 			124355,
 			124376
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-92823,
 			82155,
 			82127
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-1893,
 			-2803,
 			-2796
 		};
-		
+
 		registerNPCs();
 	}
 }

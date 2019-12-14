@@ -7,23 +7,23 @@ import java.util.Map;
 import net.sf.l2j.gameserver.model.itemcontainer.Inventory;
 
 /**
- * <font color="red">This packet still need more work. Main items have all been identified.</font><br>
+ * <font color="red">This packet still need more work. Main items have all been
+ * identified.</font><br>
  * <br>
  * Calls the wearlist ("try on" option), and sends items in good paperdoll slot.
+ *
  * @author Gnacik, Tk
  */
-public class ShopPreviewInfo extends L2GameServerPacket
-{
+public class ShopPreviewInfo extends L2GameServerPacket {
+
 	private final Map<Integer, Integer> _itemlist;
-	
-	public ShopPreviewInfo(Map<Integer, Integer> itemlist)
-	{
+
+	public ShopPreviewInfo(Map<Integer, Integer> itemlist) {
 		_itemlist = itemlist;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xf0);
 		writeD(Inventory.PAPERDOLL_TOTALSLOTS);
 		// Slots
@@ -45,9 +45,8 @@ public class ShopPreviewInfo extends L2GameServerPacket
 		writeD(getFromList(Inventory.PAPERDOLL_HAIRALL)); // unverified
 		writeD(getFromList(Inventory.PAPERDOLL_UNDER)); // unverified
 	}
-	
-	private int getFromList(int key)
-	{
+
+	private int getFromList(int key) {
 		return ((_itemlist.get(key) != null) ? _itemlist.get(key) : 0);
 	}
 }

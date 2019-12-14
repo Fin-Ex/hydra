@@ -8,33 +8,28 @@ import org.slf4j.Logger;
 
 import javax.crypto.Cipher;
 
-public class BlowFishKey extends GameServerBasePacket
-{
+public class BlowFishKey extends GameServerBasePacket {
+
 	private static Logger _log = LoggerFactory.getLogger(BlowFishKey.class.getName());
-	
-	public BlowFishKey(byte[] blowfishKey, RSAPublicKey publicKey)
-	{
+
+	public BlowFishKey(byte[] blowfishKey, RSAPublicKey publicKey) {
 		writeC(0x00);
 		byte[] encrypted = null;
-		try
-		{
+		try {
 			Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 			rsaCipher.init(Cipher.ENCRYPT_MODE, publicKey);
 			encrypted = rsaCipher.doFinal(blowfishKey);
-			
+
 			writeD(encrypted.length);
 			writeB(encrypted);
-		}
-		catch (GeneralSecurityException e)
-		{
+		} catch (GeneralSecurityException e) {
 			_log.error("Error While encrypting blowfish key for transmision (Crypt error)");
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
-	public byte[] getContent()
-	{
+	public byte[] getContent() {
 		return getBytes();
 	}
 }

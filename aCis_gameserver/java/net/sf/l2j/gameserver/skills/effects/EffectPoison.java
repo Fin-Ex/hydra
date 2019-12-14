@@ -43,7 +43,7 @@ public class EffectPoison extends EffectDamOverTime {
 	public boolean onActionTime() {
 		damage = getEffector().calcStat(Stats.Poison, damage, getEffected(), getSkill());
 		damage = getEffected().calcStat(Stats.PoisonDef, damage, getEffected(), getSkill());
-		if(targetIsUndead) {
+		if (targetIsUndead) {
 			getEffected().setCurrentHp(damage + getEffected().getCurrentHp());
 		} else {
 			getEffected().reduceCurrentHpByDOT(damage, getEffector(), getSkill());

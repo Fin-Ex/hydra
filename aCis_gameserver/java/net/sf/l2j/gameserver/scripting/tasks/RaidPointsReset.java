@@ -9,27 +9,21 @@ import net.sf.l2j.gameserver.instancemanager.RaidBossPointsManager;
 import net.sf.l2j.gameserver.model.pledge.Clan;
 import net.sf.l2j.gameserver.scripting.ScheduledQuest;
 
-public final class RaidPointsReset extends ScheduledQuest
-{
-	public RaidPointsReset()
-	{
+public final class RaidPointsReset extends ScheduledQuest {
+
+	public RaidPointsReset() {
 		super(-1, "tasks");
 	}
-	
+
 	@Override
-	public final void onStart()
-	{
+	public final void onStart() {
 		// reward clan reputation points
 		Map<Integer, Integer> rankList = RaidBossPointsManager.getInstance().getRankList();
-		for (Clan c : ClanTable.getInstance().getClans())
-		{
-			for (Map.Entry<Integer, Integer> entry : rankList.entrySet())
-			{
-				if (entry.getValue() <= 100 && c.isMember(entry.getKey()))
-				{
+		for (Clan c : ClanTable.getInstance().getClans()) {
+			for (Map.Entry<Integer, Integer> entry : rankList.entrySet()) {
+				if (entry.getValue() <= 100 && c.isMember(entry.getKey())) {
 					int reputation = 0;
-					switch (entry.getValue())
-					{
+					switch (entry.getValue()) {
 						case 1:
 							reputation = 1250;
 							break;
@@ -61,23 +55,23 @@ public final class RaidPointsReset extends ScheduledQuest
 							reputation = 100;
 							break;
 						default:
-							if (entry.getValue() <= 50)
+							if (entry.getValue() <= 50) {
 								reputation = 25;
-							else
+							} else {
 								reputation = 12;
+							}
 							break;
 					}
 					c.addReputationScore(reputation);
 				}
 			}
 		}
-		
+
 		RaidBossPointsManager.getInstance().cleanUp();
 		_log.info("RaidPointsReset: Raid boss points were added to clan reputation score.");
 	}
-	
+
 	@Override
-	public final void onEnd()
-	{
+	public final void onEnd() {
 	}
 }

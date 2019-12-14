@@ -14,5 +14,6 @@ import net.sf.l2j.gameserver.model.actor.Player;
  */
 @Data
 public class OnLogout {
+
 	private final Player player;
 }

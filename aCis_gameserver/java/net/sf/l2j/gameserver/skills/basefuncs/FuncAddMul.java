@@ -14,7 +14,6 @@
  */
 package net.sf.l2j.gameserver.skills.basefuncs;
 
-
 import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.Stats;
 
@@ -28,10 +27,10 @@ public class FuncAddMul extends Func {
 	public void calc(Env env) {
 		if (cond == null || cond.test(env)) {
 			double finalValue = 1 - (lambda.calc(env) / 100);
-			if(effectBonus > 0) {
+			if (effectBonus > 0) {
 				finalValue *= effectBonus;
 			}
-			if(skillBonus > 0) {
+			if (skillBonus > 0) {
 				finalValue *= skillBonus;
 			}
 			env.mulValue(finalValue);

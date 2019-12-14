@@ -5,7 +5,6 @@
  */
 package net.sf.finex.model.classes;
 
-
 import net.sf.finex.AbstractComponent;
 import net.sf.finex.enums.EUIEventType;
 import net.sf.finex.interfaces.IUserInterface;
@@ -42,7 +41,7 @@ public abstract class AbstractClassComponent extends AbstractComponent implement
 	}
 
 	@Override
-	public void remove(Object...args) {
+	public void remove(Object... args) {
 	}
 
 	@Override

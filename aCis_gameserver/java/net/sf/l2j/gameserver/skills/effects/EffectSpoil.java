@@ -16,53 +16,51 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
 /**
  * This is the Effect support for spoil, originally done by _drunk_
+ *
  * @author Ahmed
  */
 @Effect("Spoil")
-public class EffectSpoil extends L2Effect
-{
-	public EffectSpoil(Env env, EffectTemplate template)
-	{
+public class EffectSpoil extends L2Effect {
+
+	public EffectSpoil(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.SPOIL;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
-		if (!(getEffector() instanceof Player))
+	public boolean onStart() {
+		if (!(getEffector() instanceof Player)) {
 			return false;
-		
-		if (!(getEffected() instanceof Monster))
+		}
+
+		if (!(getEffected() instanceof Monster)) {
 			return false;
-		
+		}
+
 		final Monster target = (Monster) getEffected();
-		if (target.isDead())
+		if (target.isDead()) {
 			return false;
-		
-		if (target.getSpoilerId() != 0)
-		{
+		}
+
+		if (target.getSpoilerId() != 0) {
 			getEffector().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_SPOILED));
 			return false;
 		}
-		
-		if (Formulas.calcMagicSuccess(getEffector(), target, getSkill()))
-		{
+
+		if (Formulas.calcMagicSuccess(getEffector(), target, getSkill())) {
 			target.setSpoilerId(getEffector().getObjectId());
 			getEffector().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SPOIL_SUCCESS));
 		}
 		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
 		return true;
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 }

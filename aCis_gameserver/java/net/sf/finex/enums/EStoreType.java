@@ -21,8 +21,9 @@ public enum EStoreType {
 	BUY_MANAGE(4),
 	MANUFACTURE(5),
 	PACKAGE_SELL(8);
-	
-	@Getter private int id;
+
+	@Getter
+	private int id;
 
 	private EStoreType(int id) {
 		this.id = id;

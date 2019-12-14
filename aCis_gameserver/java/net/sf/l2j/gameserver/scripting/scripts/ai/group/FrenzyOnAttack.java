@@ -21,35 +21,31 @@ import net.sf.l2j.gameserver.skills.L2Skill;
  * <li>Alpine Cougar</li>
  * </ul>
  */
-public class FrenzyOnAttack extends L2AttackableAIScript
-{
+public class FrenzyOnAttack extends L2AttackableAIScript {
+
 	private static final L2Skill ULTIMATE_BUFF = SkillTable.getInstance().getInfo(4318, 1);
-	
-	private static final String[] ORCS_WORDS =
-	{
-		"Dear ultimate power!!!",
-		"The battle has just begun!",
-		"I never thought I'd use this against a novice!",
-		"You won't take me down easily."
-	};
-	
-	public FrenzyOnAttack()
-	{
+
+	private static final String[] ORCS_WORDS
+			= {
+				"Dear ultimate power!!!",
+				"The battle has just begun!",
+				"I never thought I'd use this against a novice!",
+				"You won't take me down easily."
+			};
+
+	public FrenzyOnAttack() {
 		super("ai/group");
 	}
-	
+
 	@Override
-	protected void registerNpcs()
-	{
+	protected void registerNpcs() {
 		addAttackId(20270, 20495, 20588, 20778, 21116);
 	}
-	
+
 	@Override
-	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet, L2Skill skill)
-	{
+	public String onAttack(Npc npc, Player attacker, int damage, boolean isPet, L2Skill skill) {
 		// The only requirements are HPs < 25% and not already under the buff. It's not 100% aswell.
-		if (npc.getCurrentHp() / npc.getMaxHp() < 0.25 && npc.getFirstEffect(ULTIMATE_BUFF) == null && Rnd.get(10) == 0)
-		{
+		if (npc.getCurrentHp() / npc.getMaxHp() < 0.25 && npc.getFirstEffect(ULTIMATE_BUFF) == null && Rnd.get(10) == 0) {
 			npc.broadcastNpcSay(Rnd.get(ORCS_WORDS));
 			npc.setTarget(npc);
 			npc.doCast(ULTIMATE_BUFF, false);

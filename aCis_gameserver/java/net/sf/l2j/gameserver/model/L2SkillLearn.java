@@ -2,17 +2,16 @@ package net.sf.l2j.gameserver.model;
 
 import org.slf4j.LoggerFactory;
 
-public final class L2SkillLearn
-{
+public final class L2SkillLearn {
+
 	private final int _id;
 	private final int _level;
 	private final int _spCost;
 	private final int _minLevel;
 	private final int _costid;
 	private final int _costcount;
-	
-	public L2SkillLearn(int id, int lvl, int minLvl, int cost, int costid, int costcount)
-	{
+
+	public L2SkillLearn(int id, int lvl, int minLvl, int cost, int costid, int costcount) {
 		_id = id;
 		_level = lvl;
 		_minLevel = minLvl;
@@ -20,34 +19,28 @@ public final class L2SkillLearn
 		_costid = costid;
 		_costcount = costcount;
 	}
-	
-	public int getId()
-	{
+
+	public int getId() {
 		return _id;
 	}
-	
-	public int getLevel()
-	{
+
+	public int getLevel() {
 		return _level;
 	}
-	
-	public int getMinLevel()
-	{
+
+	public int getMinLevel() {
 		return _minLevel;
 	}
-	
-	public int getSpCost()
-	{
+
+	public int getSpCost() {
 		return _spCost;
 	}
-	
-	public int getIdCost()
-	{
+
+	public int getIdCost() {
 		return _costid;
 	}
-	
-	public int getCostCount()
-	{
+
+	public int getCostCount() {
 		return _costcount;
 	}
 }

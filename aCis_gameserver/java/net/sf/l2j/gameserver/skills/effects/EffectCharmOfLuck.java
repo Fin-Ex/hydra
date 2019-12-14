@@ -13,42 +13,35 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 /**
  * @author kerberos_20
  */
-
 @Effect("CharmOfLuck")
-public class EffectCharmOfLuck extends L2Effect
-{
-	public EffectCharmOfLuck(Env env, EffectTemplate template)
-	{
+public class EffectCharmOfLuck extends L2Effect {
+
+	public EffectCharmOfLuck(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CHARM_OF_LUCK;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		return true;
 	}
-	
+
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		((Playable) getEffected()).stopCharmOfLuck(this);
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
-	
+
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return EEffectFlag.CHARM_OF_LUCK.getMask();
 	}
 }

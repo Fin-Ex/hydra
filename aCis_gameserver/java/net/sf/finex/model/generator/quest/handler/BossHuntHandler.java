@@ -21,29 +21,29 @@ public class BossHuntHandler extends RandomQuestHandler {
 	public BossHuntHandler() {
 		eventBus.subscribe().cast(OnKill.class).forEach(this::onKill);
 	}
-	
+
 	private void onKill(OnKill event) {
-		if(event.getKiller() == null || !event.getKiller().isPlayer()) {
+		if (event.getKiller() == null || !event.getKiller().isPlayer()) {
 			return;
 		}
-		
+
 		final Player player = event.getKiller().getPlayer();
 		final RandomQuestComponent component = player.getComponent(RandomQuestComponent.class);
-		if(!component.hasQuest()) {
+		if (!component.hasQuest()) {
 			return;
 		}
-		
+
 		final RandomQuestData quest = component.getQuest();
-		if(quest.isDone()) {
+		if (quest.isDone()) {
 			return;
 		}
-		
+
 		final NpcTemplate targetTemplate = (NpcTemplate) quest.getCondition().getTarget();
 		final RaidBoss boss = (RaidBoss) event.getVictim();
-		if(boss.getNpcId() == targetTemplate.getNpcId()) {
+		if (boss.getNpcId() == targetTemplate.getNpcId()) {
 			quest.setDone(true);
 		}
-		
+
 		player.sendMessage("Quest finished! Return to to Quest Board and talk with them!");
 	}
 }

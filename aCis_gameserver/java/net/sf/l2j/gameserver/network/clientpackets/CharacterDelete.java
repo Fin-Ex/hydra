@@ -10,31 +10,26 @@ import net.sf.l2j.gameserver.network.serverpackets.CharDeleteFail;
 import net.sf.l2j.gameserver.network.serverpackets.CharDeleteOk;
 import net.sf.l2j.gameserver.network.serverpackets.CharSelectInfo;
 
-public final class CharacterDelete extends L2GameClientPacket
-{
+public final class CharacterDelete extends L2GameClientPacket {
+
 	private int _charSlot;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_charSlot = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
-		if (!FloodProtectors.performAction(getClient(), Action.CHARACTER_SELECT))
-		{
+	protected void runImpl() {
+		if (!FloodProtectors.performAction(getClient(), Action.CHARACTER_SELECT)) {
 			sendPacket(new CharDeleteFail(CharDeleteFail.REASON_DELETION_FAILED));
 			return;
 		}
-		
-		try
-		{
+
+		try {
 			byte answer = getClient().markToDeleteChar(_charSlot);
-			
-			switch (answer)
-			{
+
+			switch (answer) {
 				default:
 				case -1: // Error
 					break;
@@ -48,12 +43,10 @@ public final class CharacterDelete extends L2GameClientPacket
 					sendPacket(new CharDeleteFail(CharDeleteFail.REASON_CLAN_LEADERS_MAY_NOT_BE_DELETED));
 					break;
 			}
+		} catch (Exception e) {
+			_log.error("Error:", e);
 		}
-		catch (Exception e)
-		{
-			_log.error( "Error:", e);
-		}
-		
+
 		CharSelectInfo cl = new CharSelectInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1, 0);
 		sendPacket(cl);
 		getClient().setCharSelection(cl.getCharInfo());

@@ -17,10 +17,10 @@ import net.sf.finex.handlers.skills.ReturnMagic;
 public enum ESkillHandlerType {
 	NONE(null),
 	RETURN_MAGIC(new ReturnMagic()),
-	REDIRECTION_SKILL(new RedirectionSkill()),
-	;
+	REDIRECTION_SKILL(new RedirectionSkill()),;
 
-	@Getter private final ISkillMechanic handler;
+	@Getter
+	private final ISkillMechanic handler;
 
 	private ESkillHandlerType(ISkillMechanic handler) {
 		this.handler = handler;

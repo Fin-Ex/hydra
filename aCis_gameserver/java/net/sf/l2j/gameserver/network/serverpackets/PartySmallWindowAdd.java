@@ -5,22 +5,20 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.group.Party;
 
-public final class PartySmallWindowAdd extends L2GameServerPacket
-{
+public final class PartySmallWindowAdd extends L2GameServerPacket {
+
 	private final Player _member;
 	private final int _leaderId;
 	private final int _distribution;
-	
-	public PartySmallWindowAdd(Player member, Party party)
-	{
+
+	public PartySmallWindowAdd(Player member, Party party) {
 		_member = member;
 		_leaderId = party.getLeaderObjectId();
 		_distribution = party.getLootRule().ordinal();
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x4f);
 		writeD(_leaderId);
 		writeD(_distribution);

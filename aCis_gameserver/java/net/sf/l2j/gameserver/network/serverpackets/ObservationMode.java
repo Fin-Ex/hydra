@@ -2,20 +2,18 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class ObservationMode extends L2GameServerPacket
-{
+public class ObservationMode extends L2GameServerPacket {
+
 	private final int _x, _y, _z;
-	
-	public ObservationMode(int x, int y, int z)
-	{
+
+	public ObservationMode(int x, int y, int z) {
 		_x = x;
 		_y = y;
 		_z = z;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xdf);
 		writeD(_x);
 		writeD(_y);

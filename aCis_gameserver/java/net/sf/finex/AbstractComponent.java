@@ -27,11 +27,11 @@ public abstract class AbstractComponent implements IPersistence {
 	public WorldObject getGameObject() {
 		return gameObject;
 	}
-	
+
 	public boolean isType(Class<?> type) {
 		return getClass().isInstance(type);
 	}
-	
+
 	public boolean isChildOf(Class<? extends AbstractComponent> type) {
 		return getClass().isAssignableFrom(type);
 	}

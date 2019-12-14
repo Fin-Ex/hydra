@@ -29,9 +29,12 @@ public enum ERandomQuestType {
 	Item_Deliver("We need ", new DeliverItemBuilder(), new DeliverItemHandler()),
 	Boss_Hunt("Great Hunt: ", new BossHuntBuilder(), new BossHuntHandler());
 
-	@Getter private final String questName;
-	@Getter private final RandomQuestBuilder builder;
-	@Getter private final RandomQuestHandler handler;
+	@Getter
+	private final String questName;
+	@Getter
+	private final RandomQuestBuilder builder;
+	@Getter
+	private final RandomQuestHandler handler;
 
 	private ERandomQuestType(String questName, RandomQuestBuilder builder, RandomQuestHandler handler) {
 		this.questName = questName;

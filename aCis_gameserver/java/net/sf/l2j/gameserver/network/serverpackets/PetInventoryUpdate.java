@@ -10,62 +10,60 @@ import net.sf.l2j.gameserver.model.item.kind.Item;
 /**
  * @author Yme, Advi
  */
-public class PetInventoryUpdate extends L2GameServerPacket
-{
+public class PetInventoryUpdate extends L2GameServerPacket {
+
 	private final List<ItemInfo> _items;
-	
-	public PetInventoryUpdate(List<ItemInfo> items)
-	{
+
+	public PetInventoryUpdate(List<ItemInfo> items) {
 		_items = items;
 	}
-	
-	public PetInventoryUpdate()
-	{
+
+	public PetInventoryUpdate() {
 		this(new ArrayList<ItemInfo>());
 	}
-	
-	public void addItem(ItemInstance item)
-	{
-		if (item != null)
+
+	public void addItem(ItemInstance item) {
+		if (item != null) {
 			_items.add(new ItemInfo(item));
+		}
 	}
-	
-	public void addNewItem(ItemInstance item)
-	{
-		if (item != null)
+
+	public void addNewItem(ItemInstance item) {
+		if (item != null) {
 			_items.add(new ItemInfo(item, ItemState.ADDED));
+		}
 	}
-	
-	public void addModifiedItem(ItemInstance item)
-	{
-		if (item != null)
+
+	public void addModifiedItem(ItemInstance item) {
+		if (item != null) {
 			_items.add(new ItemInfo(item, ItemState.MODIFIED));
+		}
 	}
-	
-	public void addRemovedItem(ItemInstance item)
-	{
-		if (item != null)
+
+	public void addRemovedItem(ItemInstance item) {
+		if (item != null) {
 			_items.add(new ItemInfo(item, ItemState.REMOVED));
+		}
 	}
-	
-	public void addItems(List<ItemInstance> items)
-	{
-		if (items != null)
-			for (ItemInstance item : items)
-				if (item != null)
+
+	public void addItems(List<ItemInstance> items) {
+		if (items != null) {
+			for (ItemInstance item : items) {
+				if (item != null) {
 					_items.add(new ItemInfo(item));
+				}
+			}
+		}
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xb3);
 		writeH(_items.size());
-		
-		for (ItemInfo temp : _items)
-		{
+
+		for (ItemInfo temp : _items) {
 			Item item = temp.getItem();
-			
+
 			writeH(temp.getChange().ordinal());
 			writeH(item.getType1());
 			writeD(temp.getObjectId());

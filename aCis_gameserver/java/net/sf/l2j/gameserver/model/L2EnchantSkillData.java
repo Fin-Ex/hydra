@@ -2,8 +2,8 @@ package net.sf.l2j.gameserver.model;
 
 import org.slf4j.LoggerFactory;
 
-public final class L2EnchantSkillData
-{
+public final class L2EnchantSkillData {
+
 	private final int _costExp;
 	private final int _costSp;
 	private final int _itemId;
@@ -11,9 +11,8 @@ public final class L2EnchantSkillData
 	private final int _rate76;
 	private final int _rate77;
 	private final int _rate78;
-	
-	public L2EnchantSkillData(int costExp, int costSp, int itemId, int itemCount, int rate76, int rate77, int rate78)
-	{
+
+	public L2EnchantSkillData(int costExp, int costSp, int itemId, int itemCount, int rate76, int rate77, int rate78) {
 		_costExp = costExp;
 		_costSp = costSp;
 		_itemId = itemId;
@@ -22,47 +21,41 @@ public final class L2EnchantSkillData
 		_rate77 = rate77;
 		_rate78 = rate78;
 	}
-	
+
 	/**
 	 * @return Returns the costExp.
 	 */
-	public int getCostExp()
-	{
+	public int getCostExp() {
 		return _costExp;
 	}
-	
+
 	/**
 	 * @return Returns the costSp.
 	 */
-	public int getCostSp()
-	{
+	public int getCostSp() {
 		return _costSp;
 	}
-	
+
 	/**
 	 * @return Returns the itemId.
 	 */
-	public int getItemId()
-	{
+	public int getItemId() {
 		return _itemId;
 	}
-	
+
 	/**
 	 * @return Returns the itemAmount.
 	 */
-	public int getItemCount()
-	{
+	public int getItemCount() {
 		return _itemCount;
 	}
-	
+
 	/**
 	 * @return Returns the rate according to level.
 	 * @param level : Level determines the rate.
 	 */
-	public int getRate(int level)
-	{
-		switch (level)
-		{
+	public int getRate(int level) {
+		switch (level) {
 			case 76:
 				return _rate76;
 			case 77:

@@ -12,132 +12,109 @@ import net.sf.l2j.gameserver.model.location.Location;
 import net.sf.l2j.gameserver.model.location.SpawnLocation;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
-public class DoorAI extends CreatureAI
-{
-	public DoorAI(Door door)
-	{
+public class DoorAI extends CreatureAI {
+
+	public DoorAI(Door door) {
 		super(door);
 	}
-	
+
 	@Override
-	protected void onIntentionIdle()
-	{
+	protected void onIntentionIdle() {
 	}
-	
+
 	@Override
-	protected void onIntentionActive()
-	{
+	protected void onIntentionActive() {
 	}
-	
+
 	@Override
-	protected void onIntentionRest()
-	{
+	protected void onIntentionRest() {
 	}
-	
+
 	@Override
-	protected void onIntentionAttack(Creature target)
-	{
+	protected void onIntentionAttack(Creature target) {
 	}
-	
+
 	@Override
-	protected void onIntentionCast(L2Skill skill, WorldObject target)
-	{
+	protected void onIntentionCast(L2Skill skill, WorldObject target) {
 	}
-	
+
 	@Override
-	protected void onIntentionMoveTo(Location loc)
-	{
+	protected void onIntentionMoveTo(Location loc) {
 	}
-	
+
 	@Override
-	protected void onIntentionFollow(Creature target)
-	{
+	protected void onIntentionFollow(Creature target) {
 	}
-	
+
 	@Override
-	protected void onIntentionPickUp(WorldObject item)
-	{
+	protected void onIntentionPickUp(WorldObject item) {
 	}
-	
+
 	@Override
-	protected void onIntentionInteract(WorldObject object)
-	{
+	protected void onIntentionInteract(WorldObject object) {
 	}
-	
+
 	@Override
-	protected void onEvtThink()
-	{
+	protected void onEvtThink() {
 	}
-	
+
 	@Override
-	protected void onEvtAttacked(Creature attacker)
-	{
+	protected void onEvtAttacked(Creature attacker) {
 		ThreadPool.execute(new onEventAttackedDoorTask((Door) _actor, attacker));
 	}
-	
+
 	@Override
-	protected void onEvtAggression(Creature target, int aggro)
-	{
+	protected void onEvtAggression(Creature target, int aggro) {
 	}
-	
+
 	@Override
-	protected void onEvtStunned(Creature attacker)
-	{
+	protected void onEvtStunned(Creature attacker) {
 	}
-	
+
 	@Override
-	protected void onEvtSleeping(Creature attacker)
-	{
+	protected void onEvtSleeping(Creature attacker) {
 	}
-	
+
 	@Override
-	protected void onEvtRooted(Creature attacker)
-	{
+	protected void onEvtRooted(Creature attacker) {
 	}
-	
+
 	@Override
-	protected void onEvtReadyToAct()
-	{
+	protected void onEvtReadyToAct() {
 	}
-	
+
 	@Override
-	protected void onEvtArrived()
-	{
+	protected void onEvtArrived() {
 	}
-	
+
 	@Override
-	protected void onEvtArrivedBlocked(SpawnLocation loc)
-	{
+	protected void onEvtArrivedBlocked(SpawnLocation loc) {
 	}
-	
+
 	@Override
-	protected void onEvtCancel()
-	{
+	protected void onEvtCancel() {
 	}
-	
+
 	@Override
-	protected void onEvtDead()
-	{
+	protected void onEvtDead() {
 	}
-	
-	private class onEventAttackedDoorTask implements Runnable
-	{
+
+	private class onEventAttackedDoorTask implements Runnable {
+
 		private final Door _door;
 		private final Creature _attacker;
-		
-		public onEventAttackedDoorTask(Door door, Creature attacker)
-		{
+
+		public onEventAttackedDoorTask(Door door, Creature attacker) {
 			_door = door;
 			_attacker = attacker;
 		}
-		
+
 		@Override
-		public void run()
-		{
-			for (SiegeGuard guard : _door.getKnownType(SiegeGuard.class))
-			{
-				if (_actor.isInsideRadius(guard, guard.getTemplate().getClanRange(), false, true) && Math.abs(_attacker.getZ() - guard.getZ()) < 200)
+		public void run() {
+			for (SiegeGuard guard : _door.getKnownType(SiegeGuard.class)) {
+				if (_actor.isInsideRadius(guard, guard.getTemplate().getClanRange(), false, true) && Math.abs(_attacker.getZ() - guard.getZ()) < 200) {
 					guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);
+				}
 			}
 		}
 	}

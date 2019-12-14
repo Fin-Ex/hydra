@@ -61,7 +61,7 @@ public class ReviveRequest implements IDialogRequest {
 				activeChar.sendPacket(new ConfirmDlg(SystemMessageId.RESSURECTION_REQUEST_BY_S1).addCharName(reanimator));
 			}
 		}
-		
+
 		return Boolean.TRUE;
 
 	}

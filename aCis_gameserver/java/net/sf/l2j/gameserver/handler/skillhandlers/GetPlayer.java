@@ -12,32 +12,31 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
 /**
  * Mobs can teleport players to them.
  */
-public class GetPlayer implements ISkillHandler
-{
-	private static final ESkillType[] SKILL_IDS =
-	{
-		ESkillType.GET_PLAYER
-	};
-	
+public class GetPlayer implements ISkillHandler {
+
+	private static final ESkillType[] SKILL_IDS
+			= {
+				ESkillType.GET_PLAYER
+			};
+
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets)
-	{
-		if (activeChar.isAlikeDead())
+	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+		if (activeChar.isAlikeDead()) {
 			return;
-		
-		for (WorldObject target : targets)
-		{
+		}
+
+		for (WorldObject target : targets) {
 			final Player victim = target.getPlayer();
-			if (victim == null || victim.isAlikeDead())
+			if (victim == null || victim.isAlikeDead()) {
 				continue;
-			
+			}
+
 			victim.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), 0);
 		}
 	}
-	
+
 	@Override
-	public ESkillType[] getSkillIds()
-	{
+	public ESkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
 }

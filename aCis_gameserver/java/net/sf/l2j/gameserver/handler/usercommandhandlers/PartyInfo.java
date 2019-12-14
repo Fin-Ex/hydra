@@ -8,20 +8,20 @@ import net.sf.l2j.gameserver.model.group.Party;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
-public class PartyInfo implements IUserCommandHandler
-{
-	private static final int[] COMMAND_IDS =
-	{
-		81
-	};
-	
+public class PartyInfo implements IUserCommandHandler {
+
+	private static final int[] COMMAND_IDS
+			= {
+				81
+			};
+
 	@Override
-	public boolean useUserCommand(int id, Player player)
-	{
+	public boolean useUserCommand(int id, Player player) {
 		final Party party = player.getParty();
-		if (party == null)
+		if (party == null) {
 			return false;
-		
+		}
+
 		player.sendPacket(SystemMessageId.PARTY_INFORMATION);
 		player.sendPacket(party.getLootRule().getMessageId());
 		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_LEADER_S1).addString(party.getLeader().getName()));
@@ -29,10 +29,9 @@ public class PartyInfo implements IUserCommandHandler
 		player.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
 		return true;
 	}
-	
+
 	@Override
-	public int[] getUserCommandList()
-	{
+	public int[] getUserCommandList() {
 		return COMMAND_IDS;
 	}
 }

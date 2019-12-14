@@ -1,9 +1,9 @@
 [
 	{
 		"id":1,
-		"classId":"GLADIATOR",
+		"classId":"Gladiator",
 		"talents": [
-			1,2,3,4,5,6,7,8
+			1,2,3,4,5,6,7,8,9,10
 		]
 	}
 ]

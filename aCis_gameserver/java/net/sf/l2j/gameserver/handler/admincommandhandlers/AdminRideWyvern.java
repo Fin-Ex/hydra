@@ -7,68 +7,60 @@ import java.util.StringTokenizer;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 
-public class AdminRideWyvern implements IAdminCommandHandler
-{
-	private static final String[] ADMIN_COMMANDS =
-	{
-		"admin_ride",
-		"admin_unride",
-	};
-	
+public class AdminRideWyvern implements IAdminCommandHandler {
+
+	private static final String[] ADMIN_COMMANDS
+			= {
+				"admin_ride",
+				"admin_unride",};
+
 	private int _petRideId;
-	
+
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
-	{
-		if (command.startsWith("admin_ride"))
-		{
+	public boolean useAdminCommand(String command, Player activeChar) {
+		if (command.startsWith("admin_ride")) {
 			// command disabled if CW is worn. Warn user.
-			if (activeChar.isCursedWeaponEquipped())
-			{
+			if (activeChar.isCursedWeaponEquipped()) {
 				activeChar.sendMessage("You can't use //ride owning a Cursed Weapon.");
 				return false;
 			}
-			
+
 			StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken(); // skip command
-			
-			if (st.hasMoreTokens())
-			{
+
+			if (st.hasMoreTokens()) {
 				String mount = st.nextToken();
-				
-				if (mount.equals("wyvern") || mount.equals("2"))
+
+				if (mount.equals("wyvern") || mount.equals("2")) {
 					_petRideId = 12621;
-				else if (mount.equals("strider") || mount.equals("1"))
+				} else if (mount.equals("strider") || mount.equals("1")) {
 					_petRideId = 12526;
-				else
-				{
+				} else {
 					activeChar.sendMessage("Parameter '" + mount + "' isn't recognized for that command.");
 					return false;
 				}
-			}
-			else
-			{
+			} else {
 				activeChar.sendMessage("You must enter a parameter for that command.");
 				return false;
 			}
-			
+
 			// If code reached that place, it means _petRideId has been filled.
-			if (activeChar.isMounted())
+			if (activeChar.isMounted()) {
 				activeChar.dismount();
-			else if (activeChar.getActiveSummon() != null)
+			} else if (activeChar.getActiveSummon() != null) {
 				activeChar.getActiveSummon().unSummon(activeChar);
-			
+			}
+
 			activeChar.mount(_petRideId, 0, false);
-		}
-		else if (command.equals("admin_unride"))
+		} else if (command.equals("admin_unride")) {
 			activeChar.dismount();
-		
+		}
+
 		return true;
 	}
-	
+
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
 }

@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q077_SagaOfTheDominator extends SagasSuperClass
-{
-	public Q077_SagaOfTheDominator()
-	{
+public class Q077_SagaOfTheDominator extends SagasSuperClass {
+
+	public Q077_SagaOfTheDominator() {
 		super(77, "Saga of the Dominator");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			31336,
 			31624,
 			31371,
@@ -25,9 +23,8 @@ public class Q077_SagaOfTheDominator extends SagasSuperClass
 			31656,
 			31290
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7539,
 			7081,
@@ -41,38 +38,34 @@ public class Q077_SagaOfTheDominator extends SagasSuperClass
 			7100,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27294,
 			27226,
 			27262
 		};
-		
+
 		classid = 115;
 		prevclass = 0x33;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			164650,
 			47429,
 			47391
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-74121,
 			-56923,
 			-56929
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-2871,
 			-2383,
 			-2370
 		};
-		
+
 		registerNPCs();
 	}
 }

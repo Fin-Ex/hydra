@@ -8,23 +8,20 @@ import net.sf.l2j.gameserver.model.zone.ZoneId;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
-public class SiegeSummon extends Servitor
-{
+public class SiegeSummon extends Servitor {
+
 	public static final int SIEGE_GOLEM_ID = 14737;
 	public static final int HOG_CANNON_ID = 14768;
 	public static final int SWOOP_CANNON_ID = 14839;
-	
-	public SiegeSummon(int objectId, NpcTemplate template, Player owner, L2Skill skill)
-	{
+
+	public SiegeSummon(int objectId, NpcTemplate template, Player owner, L2Skill skill) {
 		super(objectId, template, owner, skill);
 	}
-	
+
 	@Override
-	public void onSpawn()
-	{
+	public void onSpawn() {
 		super.onSpawn();
-		if (!isInsideZone(ZoneId.SIEGE))
-		{
+		if (!isInsideZone(ZoneId.SIEGE)) {
 			unSummon(getPlayer());
 			getPlayer().sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
 		}

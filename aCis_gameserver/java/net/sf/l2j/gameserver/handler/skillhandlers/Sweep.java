@@ -16,48 +16,49 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
 /**
  * @author _drunk_
  */
-public class Sweep implements ISkillHandler
-{
-	private static final ESkillType[] SKILL_IDS =
-	{
-		ESkillType.SWEEP
-	};
-	
+public class Sweep implements ISkillHandler {
+
+	private static final ESkillType[] SKILL_IDS
+			= {
+				ESkillType.SWEEP
+			};
+
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets)
-	{
-		if (!(activeChar instanceof Player))
+	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+		if (!(activeChar instanceof Player)) {
 			return;
-		
+		}
+
 		final Player player = (Player) activeChar;
-		
-		for (WorldObject target : targets)
-		{
-			if (!(target instanceof Attackable))
+
+		for (WorldObject target : targets) {
+			if (!(target instanceof Attackable)) {
 				continue;
-			
+			}
+
 			final Attackable monster = ((Attackable) target);
-			if (!monster.isSpoiled())
+			if (!monster.isSpoiled()) {
 				continue;
-			
+			}
+
 			final List<IntIntHolder> items = monster.getSweepItems();
-			if (items.isEmpty())
+			if (items.isEmpty()) {
 				continue;
-			
-			for (IntIntHolder item : items)
-			{
-				if (player.isInParty())
+			}
+
+			for (IntIntHolder item : items) {
+				if (player.isInParty()) {
 					player.getParty().distributeItem(player, item, true, monster);
-				else
+				} else {
 					player.addItem("Sweep", item.getId(), item.getValue(), player, true);
+				}
 			}
 			items.clear();
 		}
 	}
-	
+
 	@Override
-	public ESkillType[] getSkillIds()
-	{
+	public ESkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
 }

@@ -15,8 +15,9 @@ public enum ESkillOperateType {
 	OP_PASSIVE("Passive"),
 	OP_ACTIVE("Active"),
 	OP_TOGGLE("Toggle (On/Off)");
-	
-	@Getter private final String name;
+
+	@Getter
+	private final String name;
 
 	private ESkillOperateType(String name) {
 		this.name = name;

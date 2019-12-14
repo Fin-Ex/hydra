@@ -5,7 +5,6 @@
  */
 package net.sf.finex.model.creature.attack;
 
-
 import lombok.Getter;
 import net.sf.l2j.Config;
 import net.sf.l2j.commons.math.MathUtil;
@@ -33,17 +32,21 @@ import net.sf.l2j.gameserver.skills.Stats;
  */
 public abstract class AbstractHit {
 
-	@Getter protected final Creature attacker, target;
-	@Getter protected final Weapon weapon;
-	@Getter protected int hitTime;
-	@Getter protected Attack attack;
+	@Getter
+	protected final Creature attacker, target;
+	@Getter
+	protected final Weapon weapon;
+	@Getter
+	protected int hitTime;
+	@Getter
+	protected Attack attack;
 
 	public AbstractHit(Creature attacker, Creature target) {
 		this.attacker = attacker;
 		this.target = target;
 		this.weapon = attacker.getActiveWeaponItem();
 	}
-	
+
 	public boolean start() {
 		// Recharge any active auto soulshot tasks for current Creature instance.
 		attacker.rechargeShots(true, false);
@@ -53,7 +56,7 @@ public abstract class AbstractHit {
 		attacker.setHeading(MathUtil.calculateHeadingFrom(attacker, target));
 		return true;
 	}
-	
+
 	public final void hit(DamageInfo info, boolean soulshot) {
 		// Deny the whole process if actor is casting.
 		if (attacker.isCastingNow()) {
@@ -86,12 +89,12 @@ public abstract class AbstractHit {
 			if (target instanceof Player) {
 				target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.AVOIDED_S1_ATTACK).addCharName(attacker));
 			}
-		} 
-		
-		if(info.isParry && target.isPlayer()) {
+		}
+
+		if (info.isParry && target.isPlayer()) {
 			target.getPlayer().sendPacket(SystemMessageId.PARRY_ATTACK);
 		}
-		
+
 		// Send message about damage/crit or miss
 		attacker.sendDamageMessage(target, info.damage, false, info.isCrit, info.isMiss, info.isParry);
 
@@ -160,11 +163,11 @@ public abstract class AbstractHit {
 						}
 					}
 				}
-				
+
 				// Manage cast break of the target (calculating rate, sending message...)
 				Formulas.calcCastBreak(target, info.damage);
 			} else {
-				if(attacker.isPlayer()) {
+				if (attacker.isPlayer()) {
 					attacker.getPlayer().sendPacket(SystemMessageId.ATTACK_FAILED);
 				}
 			}
@@ -192,7 +195,7 @@ public abstract class AbstractHit {
 		if (activeWeapon != null) {
 			activeWeapon.getSkillEffects(attacker, target, info.isCrit);
 		}
-		
+
 		attacker.getEventBus().notify(new OnAttack(attacker, target, info));
 	}
 }

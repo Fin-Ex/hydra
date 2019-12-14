@@ -6,61 +6,52 @@ import net.sf.finex.data.ManufactureItemData;
 import java.util.ArrayList;
 import java.util.List;
 
-public class L2ManufactureList
-{
+public class L2ManufactureList {
+
 	private List<ManufactureItemData> _list;
 	private boolean _confirmed;
 	private String _manufactureStoreName;
-	
-	public L2ManufactureList()
-	{
+
+	public L2ManufactureList() {
 		_list = new ArrayList<>();
 		_confirmed = false;
 	}
-	
-	public int size()
-	{
+
+	public int size() {
 		return _list.size();
 	}
-	
-	public void setConfirmedTrade(boolean x)
-	{
+
+	public void setConfirmedTrade(boolean x) {
 		_confirmed = x;
 	}
-	
-	public boolean hasConfirmed()
-	{
+
+	public boolean hasConfirmed() {
 		return _confirmed;
 	}
-	
+
 	/**
 	 * @param manufactureStoreName The _manufactureStoreName to set.
 	 */
-	public void setStoreName(String manufactureStoreName)
-	{
+	public void setStoreName(String manufactureStoreName) {
 		_manufactureStoreName = manufactureStoreName;
 	}
-	
+
 	/**
 	 * @return Returns the _manufactureStoreName.
 	 */
-	public String getStoreName()
-	{
+	public String getStoreName() {
 		return _manufactureStoreName;
 	}
-	
-	public void add(ManufactureItemData item)
-	{
+
+	public void add(ManufactureItemData item) {
 		_list.add(item);
 	}
-	
-	public List<ManufactureItemData> getList()
-	{
+
+	public List<ManufactureItemData> getList() {
 		return _list;
 	}
-	
-	public void setList(List<ManufactureItemData> list)
-	{
+
+	public void setList(List<ManufactureItemData> list) {
 		_list = list;
 	}
 }

@@ -13,50 +13,44 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  * @author Kerberos
  */
 @Effect("Fusion")
-public class EffectFusion extends L2Effect
-{
+public class EffectFusion extends L2Effect {
+
 	public int _effect;
 	public int _maxEffect;
-	
-	public EffectFusion(Env env, EffectTemplate template)
-	{
+
+	public EffectFusion(Env env, EffectTemplate template) {
 		super(env, template);
 		_effect = getSkill().getLevel();
 		_maxEffect = SkillTable.getInstance().getMaxLevel(getSkill().getId());
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return true;
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.FUSION;
 	}
-	
-	public void increaseEffect()
-	{
-		if (_effect < _maxEffect)
-		{
+
+	public void increaseEffect() {
+		if (_effect < _maxEffect) {
 			_effect++;
 			updateBuff();
 		}
 	}
-	
-	public void decreaseForce()
-	{
+
+	public void decreaseForce() {
 		_effect--;
-		if (_effect < 1)
+		if (_effect < 1) {
 			exit();
-		else
+		} else {
 			updateBuff();
+		}
 	}
-	
-	private void updateBuff()
-	{
+
+	private void updateBuff() {
 		exit();
 		SkillTable.getInstance().getInfo(getSkill().getId(), _effect).getEffects(getEffector(), getEffected());
 	}

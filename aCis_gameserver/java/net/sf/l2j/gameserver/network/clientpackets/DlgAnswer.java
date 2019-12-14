@@ -10,7 +10,7 @@ import net.sf.l2j.gameserver.model.actor.Player;
  * @author Dezmond_snz Format: cddd
  */
 public final class DlgAnswer extends L2GameClientPacket {
-	
+
 	private int msgId;
 	private int answer;
 	private int requesterId;
@@ -30,7 +30,7 @@ public final class DlgAnswer extends L2GameClientPacket {
 		}
 
 		final IDialogAnswer dlgAnswer = DlgManager.getInstance().getAnswer(msgId);
-		if(dlgAnswer != null) {
+		if (dlgAnswer != null) {
 			dlgAnswer.handle(activeChar, answer, requesterId);
 		} else {
 			_log.warn("Handler for dialog ID = " + msgId + " not found!");

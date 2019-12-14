@@ -20,11 +20,11 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  */
 @Effect("Bleed")
 public class EffectBleed extends EffectDamOverTime {
-	
+
 	public EffectBleed(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
 	public L2EffectType getEffectType() {
 		return L2EffectType.BLEED;
@@ -35,7 +35,7 @@ public class EffectBleed extends EffectDamOverTime {
 		getEffected().startAbnormalEffect(AbnormalEffect.BLEEDING);
 		return true;
 	}
-	
+
 	@Override
 	public boolean onActionTime() {
 		damage = getEffector().calcStat(Stats.Bleed, damage, getEffected(), getSkill());

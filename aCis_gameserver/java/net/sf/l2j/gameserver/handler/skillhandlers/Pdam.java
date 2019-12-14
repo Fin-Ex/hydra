@@ -5,6 +5,9 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 import net.sf.finex.model.creature.attack.DamageInfo;
+import net.sf.finex.model.talents.handlers.CumulativeRage;
+import net.sf.finex.model.talents.handlers.TalentHandler;
+import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.handler.ISkillHandler;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
@@ -39,6 +42,13 @@ public class Pdam implements ISkillHandler {
 
 		final ItemInstance weapon = activeChar.getActiveWeaponInstance();
 
+		TalentHandler cumulativeRage = null;
+		if (activeChar.isPlayer()) {
+			if (CumulativeRage.validate(activeChar.getPlayer())) {
+				cumulativeRage = SkillTable.FrequentTalent.CUMULATIVE_RAGE.getHandler();
+			}
+		}
+
 		for (WorldObject obj : targets) {
 			if (!(obj instanceof Creature)) {
 				continue;
@@ -66,7 +76,7 @@ public class Pdam implements ISkillHandler {
 			}
 
 			final DamageInfo info = new DamageInfo();
-			
+
 			info.shieldResult = Formulas.calcShldUse(activeChar, target, null);
 			info.isParry = Formulas.calcParry(activeChar, target, skill);
 
@@ -79,6 +89,9 @@ public class Pdam implements ISkillHandler {
 				damage = 0;
 			} else {
 				damage = (int) Formulas.calcPhysDam(activeChar, target, skill, info, ss);
+				if (cumulativeRage != null) {
+					damage = cumulativeRage.invoke(activeChar.getPlayer(), damage);
+				}
 			}
 
 			if (info.isCrit) {

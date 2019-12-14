@@ -21,7 +21,9 @@ import net.sf.l2j.gameserver.model.actor.events.OnTalk;
  */
 @Slf4j
 public abstract class RandomQuestHandler {
-	@Getter protected final EventBus eventBus = new EventBus();
+
+	@Getter
+	protected final EventBus eventBus = new EventBus();
 
 	public RandomQuestHandler() {
 		eventBus.subscribe().cast(OnTalk.class).forEach(this::onTalk);
@@ -30,7 +32,7 @@ public abstract class RandomQuestHandler {
 	public boolean onGetQuest(RandomQuestData quest, Player player, Npc npc) {
 		return true;
 	}
-	
+
 	protected boolean onPassQuest(Player player, Npc npc) {
 		final RandomQuestComponent component = player.getComponent(RandomQuestComponent.class);
 		if (!component.hasQuest()) {
@@ -45,9 +47,9 @@ public abstract class RandomQuestHandler {
 
 		return quest.getBoardId() == npc.getNpcId();
 	}
-	
+
 	protected void onTalk(OnTalk event) {
-		if(onPassQuest(event.getTalker(), event.getTarget())) {
+		if (onPassQuest(event.getTalker(), event.getTarget())) {
 			RandomQuestManager.getInstance().completeQuest(event.getTalker(), event.getTarget());
 		}
 	}

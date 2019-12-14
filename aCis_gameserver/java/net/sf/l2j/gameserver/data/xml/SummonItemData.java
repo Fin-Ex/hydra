@@ -18,55 +18,50 @@ import org.w3c.dom.Node;
  * This class loads and stores summon items.<br>
  * TODO Delete it and move it back wherever it belongs.
  */
-public class SummonItemData extends XMLDocument
-{
+public class SummonItemData extends XMLDocument {
+
 	private final Map<Integer, IntIntHolder> _items = new HashMap<>();
-	
-	protected SummonItemData()
-	{
+
+	protected SummonItemData() {
 		load();
 	}
-	
+
 	@Override
-	protected void load()
-	{
+	protected void load() {
 		loadDocument("./data/xml/summonItems.xml");
 		LOG.info("Loaded " + _items.size() + " summon items.");
 	}
-	
+
 	@Override
-	protected void parseDocument(Document doc, File file)
-	{
+	protected void parseDocument(Document doc, File file) {
 		// First element is never read.
 		final Node n = doc.getFirstChild();
-		
-		for (Node o = n.getFirstChild(); o != null; o = o.getNextSibling())
-		{
-			if (!"item".equalsIgnoreCase(o.getNodeName()))
+
+		for (Node o = n.getFirstChild(); o != null; o = o.getNextSibling()) {
+			if (!"item".equalsIgnoreCase(o.getNodeName())) {
 				continue;
-			
+			}
+
 			final NamedNodeMap attrs = o.getAttributes();
-			
+
 			final int itemId = Integer.valueOf(attrs.getNamedItem("id").getNodeValue());
 			final int npcId = Integer.valueOf(attrs.getNamedItem("npcId").getNodeValue());
 			final int summonType = Integer.valueOf(attrs.getNamedItem("summonType").getNodeValue());
-			
+
 			_items.put(itemId, new IntIntHolder(npcId, summonType));
 		}
 	}
-	
-	public IntIntHolder getSummonItem(int itemId)
-	{
+
+	public IntIntHolder getSummonItem(int itemId) {
 		return _items.get(itemId);
 	}
-	
-	public static SummonItemData getInstance()
-	{
+
+	public static SummonItemData getInstance() {
 		return SingletonHolder.INSTANCE;
 	}
-	
-	private static class SingletonHolder
-	{
+
+	private static class SingletonHolder {
+
 		protected static final SummonItemData INSTANCE = new SummonItemData();
 	}
 }

@@ -14,5 +14,6 @@ import net.sf.l2j.gameserver.model.actor.Creature;
  */
 @Data
 public class OnKill {
+
 	private final Creature killer, victim;
 }

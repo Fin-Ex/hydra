@@ -10,8 +10,8 @@ package net.sf.l2j.gameserver.model.item.instance;
  * @author zcxv
  */
 public enum FlagPolicy {
-	
+
 	Equip,
 	Unequip
-	
+
 }

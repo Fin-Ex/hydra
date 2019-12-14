@@ -5,15 +5,14 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 
-public class SpawnItem extends L2GameServerPacket
-{
+public class SpawnItem extends L2GameServerPacket {
+
 	private final int _objectId;
 	private final int _itemId;
 	private final int _x, _y, _z;
 	private final int _stackable, _count;
-	
-	public SpawnItem(ItemInstance item)
-	{
+
+	public SpawnItem(ItemInstance item) {
 		_objectId = item.getObjectId();
 		_itemId = item.getItemId();
 		_x = item.getX();
@@ -22,9 +21,8 @@ public class SpawnItem extends L2GameServerPacket
 		_stackable = item.isStackable() ? 0x01 : 0x00;
 		_count = item.getCount();
 	}
-	
-	public SpawnItem(WorldObject object)
-	{
+
+	public SpawnItem(WorldObject object) {
 		_objectId = object.getObjectId();
 		_itemId = object.getPolyId();
 		_x = object.getX();
@@ -33,10 +31,9 @@ public class SpawnItem extends L2GameServerPacket
 		_stackable = 0x00;
 		_count = 1;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x0b);
 		writeD(_objectId);
 		writeD(_itemId);

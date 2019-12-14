@@ -1,14 +1,13 @@
 package net.sf.l2j.gameserver.skills;
 
-
 import java.util.NoSuchElementException;
 
 /**
  * Enum of basic stats.
+ *
  * @author mkizub
  */
-public enum Stats
-{
+public enum Stats {
 	// HP & MP
 	MaxHP,
 	MaxMP,
@@ -23,7 +22,6 @@ public enum Stats
 	HpRegenInterval,
 	MpRegenInterval,
 	CpRegenInterval,
-	
 	// Atk & Def
 	PDef,
 	MDef,
@@ -40,15 +38,12 @@ public enum Stats
 	SkillParry,
 	SpellParry,
 	ArrowReloadSpd,
-	
 	CriticalDamage,
 	CriticalDamageAdd,
-	
 	PvpPhysDmg,
 	PvpMagicalDmg,
 	PvpSkillDmg,
 	PvpSkillDef,
-	
 	// Atk & Def rates
 	Evasion,
 	SkillDodge,
@@ -58,17 +53,14 @@ public enum Stats
 	LethalRate,
 	MagicCriticalRate,
 	AttackCancel,
-	
 	// Accuracy and range
 	Accuracy,
 	PAtkRange,
 	PAtkAngle,
 	AtkCountMax,
 	PoleAtkPercent,
-	
 	// Run speed
 	Speed,
-	
 	// Main params
 	STR,
 	CON,
@@ -76,11 +68,9 @@ public enum Stats
 	INT,
 	WIT,
 	MEN,
-	
 	// stats of various abilities
 	Breath,
 	Fall,
-	
 	// Status attacks - increase status attacks success chance/time
 	Aggression,
 	Bleed,
@@ -95,10 +85,8 @@ public enum Stats
 	Confusion,
 	@Deprecated
 	Sleep,
-	
 	Valakas,
 	ValakasRes,
-	
 	// Elemental resistances/vulnerabilities
 	FireRes,
 	WaterRes,
@@ -106,7 +94,6 @@ public enum Stats
 	EarthRes,
 	HolyRes,
 	DarkRes,
-	
 	// Elemental power (used for skills such as Holy blade)
 	FirePower,
 	WaterPower,
@@ -114,7 +101,6 @@ public enum Stats
 	EarthPower,
 	HolyPower,
 	DarkPower,
-	
 	// Weapons vuln
 	SwordWpnVuln,
 	BluntWpnVuln,
@@ -125,7 +111,6 @@ public enum Stats
 	DualFistWpnVuln,
 	BigSwordWpnVuln,
 	BigBluntWpnVuln,
-	
 	ReflectDamPercent,
 	ReflectSpellEffect,
 	ReflectSkillEffect,
@@ -133,7 +118,6 @@ public enum Stats
 	VengeancePDam,
 	Vampirism,
 	TransferDam,
-	
 	PAtkPlants,
 	PAtkInsects,
 	PAtkAnimals,
@@ -146,7 +130,6 @@ public enum Stats
 	PAtkAngels,
 	PAtkSpirits,
 	PAtkFairies,
-	
 	PDefPlants,
 	PDefInsects,
 	PDefAnimals,
@@ -159,7 +142,6 @@ public enum Stats
 	PDefAngels,
 	PDefSpirits,
 	PDefFairies,
-	
 	// ExSkill :)
 	MaxLoad,
 	InventoryLimit,
@@ -169,15 +151,12 @@ public enum Stats
 	PrivateBuyLimit,
 	DwarfRecipeLimit,
 	CommonRecipeLimit,
-	
 	// C4 Stats
 	PhysicalMpConsumeRate,
 	MagicalMpConsumeRate,
 	DanceMpConsumeRate,
-	
 	// Skill mastery
 	SkillMastery,
-	
 	// Special Stats
 	AttackMpConsumeRate,
 	AttackHpConsumeRate,
@@ -189,7 +168,6 @@ public enum Stats
 	DamageAbsorbRate,
 	SkillAbsorbRate,
 	SpellAbsorb,
-	
 	// Vulnerability - decrease the success rate of apply
 	StunVuln,
 	ParalyzeVuln,
@@ -202,7 +180,6 @@ public enum Stats
 	SleepVuln,
 	BleedVuln,
 	PoisonVuln,
-	
 	// Defense - decrease effect time
 	StunDef,
 	ParalyzeDef,
@@ -215,26 +192,23 @@ public enum Stats
 	SleepDef,
 	BleedDef,
 	PoisonDef,
-	
 	// Vulnerabilities (old for Interlude)
 	CriticalVuln, // decrease takened damage from crit attacks
 	DamageZoneVuln, // decrease damage incoming from damage zones
 	CancelVuln, // ???
-	
-	Resilence,
-	;
-	
+
+	Resilence,;
+
 	public static final int NUM_STATS = values().length;
-	
-	public static Stats valueOfXml(String name)
-	{
+
+	public static Stats valueOfXml(String name) {
 		name = name.intern();
-		for (Stats stat : values())
-		{
-			if (stat.name().equalsIgnoreCase(name))
+		for (Stats stat : values()) {
+			if (stat.name().equalsIgnoreCase(name)) {
 				return stat;
+			}
 		}
-		
+
 		throw new NoSuchElementException("Unknown name '" + name + "' for enum BaseStats");
 	}
 }

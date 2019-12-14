@@ -7,26 +7,23 @@ import java.util.List;
 import net.sf.l2j.gameserver.instancemanager.CastleManorManager;
 import net.sf.l2j.gameserver.model.manor.Seed;
 
-public class ExShowManorDefaultInfo extends L2GameServerPacket
-{
+public class ExShowManorDefaultInfo extends L2GameServerPacket {
+
 	private final List<Seed> _crops;
 	private final boolean _hideButtons;
-	
-	public ExShowManorDefaultInfo(boolean hideButtons)
-	{
+
+	public ExShowManorDefaultInfo(boolean hideButtons) {
 		_crops = CastleManorManager.getInstance().getCrops();
 		_hideButtons = hideButtons;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xFE);
 		writeH(0x1E);
 		writeC(_hideButtons ? 0x01 : 0x00);
 		writeD(_crops.size());
-		for (Seed crop : _crops)
-		{
+		for (Seed crop : _crops) {
 			writeD(crop.getCropId()); // crop Id
 			writeD(crop.getLevel()); // level
 			writeD(crop.getSeedReferencePrice()); // seed price

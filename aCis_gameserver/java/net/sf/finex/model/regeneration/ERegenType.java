@@ -13,6 +13,6 @@ public enum ERegenType {
 	HP,
 	MP,
 	CP;
-	
+
 	public static final ERegenType[] VALUES = values();
 }

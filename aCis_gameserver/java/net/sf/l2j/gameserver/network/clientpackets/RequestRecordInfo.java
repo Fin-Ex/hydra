@@ -5,20 +5,19 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.serverpackets.UserInfo;
 
-public class RequestRecordInfo extends L2GameClientPacket
-{
+public class RequestRecordInfo extends L2GameClientPacket {
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
+		}
+
 		activeChar.sendPacket(new UserInfo(activeChar));
 		activeChar.refreshInfos();
 	}

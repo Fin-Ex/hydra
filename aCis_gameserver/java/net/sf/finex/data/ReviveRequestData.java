@@ -17,6 +17,7 @@ import net.sf.l2j.gameserver.model.actor.Player;
  */
 @Data
 public class ReviveRequestData {
+
 	private final Playable reanimator;
 	private final Player target;
 	private double revivePower;

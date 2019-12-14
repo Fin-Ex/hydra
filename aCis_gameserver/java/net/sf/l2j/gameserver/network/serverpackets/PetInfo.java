@@ -6,41 +6,36 @@ import net.sf.l2j.gameserver.model.actor.Summon;
 import net.sf.l2j.gameserver.model.actor.Pet;
 import net.sf.l2j.gameserver.model.actor.instance.Servitor;
 
-public class PetInfo extends L2GameServerPacket
-{
+public class PetInfo extends L2GameServerPacket {
+
 	private final Summon _summon;
 	private final int _val;
 	private int _maxFed;
 	private int _curFed;
-	
-	public PetInfo(Summon summon, int val)
-	{
+
+	public PetInfo(Summon summon, int val) {
 		_summon = summon;
 		_val = val;
-		
-		if (_summon instanceof Pet)
-		{
+
+		if (_summon instanceof Pet) {
 			Pet pet = (Pet) _summon;
 			_curFed = pet.getCurrentFed();
 			_maxFed = pet.getPetData().getMaxMeal();
-		}
-		else if (_summon instanceof Servitor)
-		{
+		} else if (_summon instanceof Servitor) {
 			Servitor sum = (Servitor) _summon;
 			_curFed = sum.getTimeRemaining();
 			_maxFed = sum.getTotalLifeTime();
 		}
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xb1);
 		writeD(_summon.getSummonType());
 		writeD(_summon.getObjectId());
 		writeD(_summon.getTemplate().getIdTemplate() + 1000000);
 		writeD(0); // 1=attackable
-		
+
 		writeD(_summon.getX());
 		writeD(_summon.getY());
 		writeD(_summon.getZ());
@@ -48,7 +43,7 @@ public class PetInfo extends L2GameServerPacket
 		writeD(0);
 		writeD(_summon.getMAtkSpd());
 		writeD(_summon.getPAtkSpd());
-		
+
 		int _runSpd = _summon.getStat().getBaseRunSpeed();
 		int _walkSpd = _summon.getStat().getBaseWalkSpeed();
 		writeD(_runSpd); // base run speed
@@ -59,7 +54,7 @@ public class PetInfo extends L2GameServerPacket
 		writeD(_walkSpd);
 		writeD(_runSpd); // fly run speed
 		writeD(_walkSpd); // fly walk speed
-		
+
 		writeF(_summon.getStat().getMovementSpeedMultiplier()); // movement multiplier
 		writeF(1); // attack speed multiplier
 		writeF(_summon.getCollisionRadius());
@@ -100,11 +95,11 @@ public class PetInfo extends L2GameServerPacket
 		writeD(_summon.getMoveSpeed()); // speed
 		writeD(_summon.getPAtkSpd()); // atkspeed
 		writeD(_summon.getMAtkSpd()); // casting speed
-		
+
 		writeD(_summon.getAbnormalEffect()); // abnormal visual effect
 		writeH(_summon.isMountable() ? 1 : 0); // ride button
 		writeC(0); // c2
-		
+
 		writeH(0); // ??
 		writeC(_summon.getPlayer() != null ? _summon.getPlayer().getTeam() : 0); // team aura (1 = blue, 2 = red)
 		writeD(_summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit

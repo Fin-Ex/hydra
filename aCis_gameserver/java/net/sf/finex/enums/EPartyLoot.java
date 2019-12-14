@@ -18,8 +18,9 @@ public enum EPartyLoot {
 	ITEM_RANDOM_SPOIL(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL),
 	ITEM_ORDER(SystemMessageId.LOOTING_BY_TURN),
 	ITEM_ORDER_SPOIL(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
-	
-	@Getter private final SystemMessageId messageId;
+
+	@Getter
+	private final SystemMessageId messageId;
 
 	private EPartyLoot(SystemMessageId messageId) {
 		this.messageId = messageId;

@@ -10,31 +10,27 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
 /**
  * format cd
  */
-public final class RequestHennaRemove extends L2GameClientPacket
-{
+public final class RequestHennaRemove extends L2GameClientPacket {
+
 	private int _symbolId;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_symbolId = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
+		}
+
 		final DyeComponent dyeComponent = activeChar.getComponent(DyeComponent.class);
-		for (int i = 0; i < 3; i++)
-		{
+		for (int i = 0; i < 3; i++) {
 			final DyeData dye = dyeComponent.getDye(i);
-			if (dye != null && dye.getSymbolId() == _symbolId)
-			{
-				if (activeChar.getAdena() >= (dye.getPrice() / 5))
-				{
+			if (dye != null && dye.getSymbolId() == _symbolId) {
+				if (activeChar.getAdena() >= (dye.getPrice() / 5)) {
 					dyeComponent.removeDye(i);
 					break;
 				}

@@ -4,10 +4,9 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.Config;
 
-public final class FloodProtectors
-{
-	public static enum Action
-	{
+public final class FloodProtectors {
+
+	public static enum Action {
 		ROLL_DICE(Config.ROLL_DICE_TIME),
 		HERO_VOICE(Config.HERO_VOICE_TIME),
 		SUBCLASS(Config.SUBCLASS_TIME),
@@ -21,41 +20,41 @@ public final class FloodProtectors
 		GLOBAL_CHAT(Config.GLOBAL_CHAT_TIME),
 		TRADE_CHAT(Config.TRADE_CHAT_TIME),
 		SOCIAL(Config.SOCIAL_TIME);
-		
+
 		private final int _reuseDelay;
-		
-		private Action(int reuseDelay)
-		{
+
+		private Action(int reuseDelay) {
 			_reuseDelay = reuseDelay;
 		}
-		
-		public int getReuseDelay()
-		{
+
+		public int getReuseDelay() {
 			return _reuseDelay;
 		}
-		
+
 		public static final int VALUES_LENGTH = Action.values().length;
 	}
-	
+
 	/**
-	 * Try to perform an action according to client FPs value. A 0 reuse delay means the action is always possible.
+	 * Try to perform an action according to client FPs value. A 0 reuse delay
+	 * means the action is always possible.
+	 *
 	 * @param client : The client to check protectors on.
 	 * @param action : The action to track.
 	 * @return True if the action is possible, False otherwise.
 	 */
-	public static boolean performAction(L2GameClient client, Action action)
-	{
+	public static boolean performAction(L2GameClient client, Action action) {
 		final int reuseDelay = action.getReuseDelay();
-		if (reuseDelay == 0)
+		if (reuseDelay == 0) {
 			return true;
-		
+		}
+
 		long[] value = client.getFloodProtectors();
-		
-		synchronized (value)
-		{
-			if (value[action.ordinal()] > System.currentTimeMillis())
+
+		synchronized (value) {
+			if (value[action.ordinal()] > System.currentTimeMillis()) {
 				return false;
-			
+			}
+
 			value[action.ordinal()] = System.currentTimeMillis() + reuseDelay;
 			return true;
 		}

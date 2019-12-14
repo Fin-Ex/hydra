@@ -5,18 +5,16 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Luca Baldi
  */
-public class ExShowQuestMark extends L2GameServerPacket
-{
+public class ExShowQuestMark extends L2GameServerPacket {
+
 	private final int _questId;
-	
-	public ExShowQuestMark(int questId)
-	{
+
+	public ExShowQuestMark(int questId) {
 		_questId = questId;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x1a);
 		writeD(_questId);

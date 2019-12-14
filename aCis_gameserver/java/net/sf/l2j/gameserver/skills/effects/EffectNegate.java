@@ -14,39 +14,34 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  * @author Gnat
  */
 @Effect("Negate")
-public class EffectNegate extends L2Effect
-{
-	public EffectNegate(Env env, EffectTemplate template)
-	{
+public class EffectNegate extends L2Effect {
+
+	public EffectNegate(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.NEGATE;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		L2Skill skill = getSkill();
-		
-		for (int negateSkillId : skill.getNegateId())
-		{
-			if (negateSkillId != 0)
+
+		for (int negateSkillId : skill.getNegateId()) {
+			if (negateSkillId != 0) {
 				getEffected().stopSkillEffects(negateSkillId);
+			}
 		}
-		for (ESkillType negateSkillType : skill.getNegateStats())
-		{
+		for (ESkillType negateSkillType : skill.getNegateStats()) {
 			getEffected().stopSkillEffects(negateSkillType, skill.getNegateLvl());
 		}
 		return true;
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 }

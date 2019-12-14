@@ -8,27 +8,28 @@ import net.sf.l2j.gameserver.network.serverpackets.ExMPCCShowPartyMemberInfo;
 
 /**
  * Format:(ch) d
+ *
  * @author chris_00
  */
-public final class RequestExMPCCShowPartyMembersInfo extends L2GameClientPacket
-{
+public final class RequestExMPCCShowPartyMembersInfo extends L2GameClientPacket {
+
 	private int _partyLeaderId;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_partyLeaderId = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
+		}
+
 		Player player = World.getInstance().getPlayer(_partyLeaderId);
-		if (player != null && player.isInParty())
+		if (player != null && player.isInParty()) {
 			activeChar.sendPacket(new ExMPCCShowPartyMemberInfo(player.getParty()));
+		}
 	}
 }

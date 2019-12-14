@@ -9,30 +9,31 @@ import net.sf.l2j.gameserver.network.FloodProtectors;
 import net.sf.l2j.gameserver.network.FloodProtectors.Action;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 
-public class ChatHeroVoice implements IChatHandler
-{
-	private static final int[] COMMAND_IDS =
-	{
-		17
-	};
-	
+public class ChatHeroVoice implements IChatHandler {
+
+	private static final int[] COMMAND_IDS
+			= {
+				17
+			};
+
 	@Override
-	public void handleChat(int type, Player activeChar, String target, String text)
-	{
-		if (!activeChar.isHero())
+	public void handleChat(int type, Player activeChar, String target, String text) {
+		if (!activeChar.isHero()) {
 			return;
-		
-		if (!FloodProtectors.performAction(activeChar.getClient(), Action.HERO_VOICE))
+		}
+
+		if (!FloodProtectors.performAction(activeChar.getClient(), Action.HERO_VOICE)) {
 			return;
-		
+		}
+
 		final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-		for (Player player : World.getInstance().getPlayers())
+		for (Player player : World.getInstance().getPlayers()) {
 			player.sendPacket(cs);
+		}
 	}
-	
+
 	@Override
-	public int[] getChatTypeList()
-	{
+	public int[] getChatTypeList() {
 		return COMMAND_IDS;
 	}
 }

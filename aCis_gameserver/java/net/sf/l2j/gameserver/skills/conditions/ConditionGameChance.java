@@ -9,18 +9,16 @@ import net.sf.l2j.gameserver.skills.Env;
 /**
  * @author Advi
  */
-public class ConditionGameChance extends Condition
-{
+public class ConditionGameChance extends Condition {
+
 	private final int _chance;
-	
-	public ConditionGameChance(int chance)
-	{
+
+	public ConditionGameChance(int chance) {
 		_chance = chance;
 	}
-	
+
 	@Override
-	public boolean testImpl(Env env)
-	{
+	public boolean testImpl(Env env) {
 		return Rnd.get(100) < _chance;
 	}
 }

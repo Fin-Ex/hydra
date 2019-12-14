@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q087_SagaOfEvasSaint extends SagasSuperClass
-{
-	public Q087_SagaOfEvasSaint()
-	{
+public class Q087_SagaOfEvasSaint extends SagasSuperClass {
+
+	public Q087_SagaOfEvasSaint() {
 		super(87, "Saga of Eva's Saint");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30191,
 			31626,
 			31588,
@@ -25,9 +23,8 @@ public class Q087_SagaOfEvasSaint extends SagasSuperClass
 			31657,
 			31280
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7524,
 			7081,
@@ -41,38 +38,34 @@ public class Q087_SagaOfEvasSaint extends SagasSuperClass
 			7088,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27266,
 			27236,
 			27276
 		};
-		
+
 		classid = 105;
 		prevclass = 0x1e;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			164650,
 			46087,
 			46066
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-74121,
 			-36372,
 			-36396
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-2871,
 			-1685,
 			-1685
 		};
-		
+
 		registerNPCs();
 	}
 }

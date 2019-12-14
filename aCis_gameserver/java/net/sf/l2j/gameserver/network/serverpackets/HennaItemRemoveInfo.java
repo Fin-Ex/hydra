@@ -5,20 +5,18 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.finex.data.DyeData;
 
-public class HennaItemRemoveInfo extends L2GameServerPacket
-{
+public class HennaItemRemoveInfo extends L2GameServerPacket {
+
 	private final Player _activeChar;
 	private final DyeData _henna;
-	
-	public HennaItemRemoveInfo(DyeData henna, Player player)
-	{
+
+	public HennaItemRemoveInfo(DyeData henna, Player player) {
 		_henna = henna;
 		_activeChar = player;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xe6);
 		writeD(_henna.getSymbolId()); // symbol Id
 		writeD(_henna.getDyeId()); // item id of dye
@@ -26,7 +24,7 @@ public class HennaItemRemoveInfo extends L2GameServerPacket
 		writeD(_henna.getPrice() / 5); // amount of required adenas
 		writeD(1); // able to remove or not 0 is false and 1 is true
 		writeD(_activeChar.getAdena());
-		
+
 		writeD(_activeChar.getINT()); // current INT
 		writeC(_activeChar.getINT() - _henna.getINT()); // equip INT
 		writeD(_activeChar.getSTR()); // current STR

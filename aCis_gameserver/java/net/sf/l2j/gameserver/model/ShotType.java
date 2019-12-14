@@ -5,22 +5,19 @@ import org.slf4j.LoggerFactory;
 /**
  * @author UnAfraid
  */
-public enum ShotType
-{
+public enum ShotType {
 	SOULSHOT,
 	SPIRITSHOT,
 	BLESSED_SPIRITSHOT,
 	FISH_SOULSHOT;
-	
+
 	private final int _mask;
-	
-	private ShotType()
-	{
+
+	private ShotType() {
 		_mask = (1 << ordinal());
 	}
-	
-	public int getMask()
-	{
+
+	public int getMask() {
 		return _mask;
 	}
 }

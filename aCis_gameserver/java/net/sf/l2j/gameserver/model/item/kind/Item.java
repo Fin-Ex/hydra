@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.model.item.kind;
 
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -44,7 +43,7 @@ public abstract class Item {
 
 	public static final int ADENA = 57;
 	public static final int SLAYER_COIN = 9215;
-	
+
 	public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
 	public static final int TYPE1_SHIELD_ARMOR = 1;
 	public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;
@@ -115,12 +114,15 @@ public abstract class Item {
 
 	protected List<Condition> _preConditions;
 
-	@Getter private List<IntIntHolder> staticSkills = Collections.emptyList();
-	@Getter private List<IntIntHolder> dynamicSkills = Collections.emptyList();
+	@Getter
+	private List<IntIntHolder> staticSkills = Collections.emptyList();
+	@Getter
+	private List<IntIntHolder> dynamicSkills = Collections.emptyList();
 
 	private List<Quest> _questEvents = Collections.emptyList();
-	
-	@Getter private final String icon;
+
+	@Getter
+	private final String icon;
 
 	/**
 	 * Constructor of the L2Item that fill class variables.
@@ -158,16 +160,16 @@ public abstract class Item {
 				for (String next : splitter) {
 					final String[] nextSplitter = next.split("-");
 					final int id = Integer.parseInt(nextSplitter[0]);
-					
-					if(nextSplitter.length > 1) {
+
+					if (nextSplitter.length > 1) {
 						final int level = Integer.parseInt(nextSplitter[1]);
-						if(staticSkills.isEmpty()) {
+						if (staticSkills.isEmpty()) {
 							staticSkills = new ArrayList<>();
 						}
-						
+
 						staticSkills.add(new IntIntHolder(id, level));
 					} else {
-						if(dynamicSkills.isEmpty()) {
+						if (dynamicSkills.isEmpty()) {
 							dynamicSkills = new ArrayList<>();
 						}
 						dynamicSkills.add(new IntIntHolder(id, 1));
@@ -177,7 +179,7 @@ public abstract class Item {
 				log.error("Error when parse item_skill on item: {}", this, e);
 			}
 		}
-		
+
 		icon = set.getString("icon", "Icon.skill0000");
 	}
 
@@ -526,19 +528,19 @@ public abstract class Item {
 	public List<Quest> getQuestEvents() {
 		return _questEvents;
 	}
-	
+
 	public boolean hasSkills() {
 		return !dynamicSkills.isEmpty() || !staticSkills.isEmpty();
 	}
-	
+
 	public boolean hasStaticSkills() {
 		return !staticSkills.isEmpty();
 	}
-	
+
 	public boolean hasDynamicSkills() {
 		return !dynamicSkills.isEmpty();
 	}
-	
+
 //	public boolean checkState(EItemStateType stateType) {
 //		int statemask = 0;
 //		for(int i = 0; i < states.length; i++) {

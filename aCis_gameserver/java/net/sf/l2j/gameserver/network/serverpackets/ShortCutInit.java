@@ -10,17 +10,16 @@ import net.sf.l2j.gameserver.model.holder.IntIntHolder;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
-public class ShortCutInit extends L2GameServerPacket
-{
+public class ShortCutInit extends L2GameServerPacket {
+
 	private final L2ShortCut[] _shortCuts;
 	private final Player _activeChar;
 	private final List<IntIntHolder> itemSkills = new ArrayList<>(1);
-	
-	public ShortCutInit(Player activeChar)
-	{
+
+	public ShortCutInit(Player activeChar) {
 		_activeChar = activeChar;
 		_shortCuts = activeChar.getAllShortCuts();
-		for(L2ShortCut shortCut : _shortCuts) {
+		for (L2ShortCut shortCut : _shortCuts) {
 			final ItemInstance instance = _activeChar.getInventory().getItemByObjectId(shortCut.getId());
 			if (instance != null && instance.isEtcItem()) {
 				if (instance.getItem().hasDynamicSkills()) {
@@ -29,37 +28,30 @@ public class ShortCutInit extends L2GameServerPacket
 				if (instance.getItem().hasStaticSkills()) {
 					itemSkills.addAll(instance.getItem().getStaticSkills());
 				}
-			} 
+			}
 		}
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x45);
 		writeD(_shortCuts.length);
-		
-		for (L2ShortCut sc : _shortCuts)
-		{
+
+		for (L2ShortCut sc : _shortCuts) {
 			writeD(sc.getType());
 			writeD(sc.getSlot() + sc.getPage() * 12);
-			
-			switch (sc.getType())
-			{
+
+			switch (sc.getType()) {
 				case L2ShortCut.TYPE_ITEM: // 1
 					writeD(sc.getId());
 					writeD(sc.getCharacterType());
 					writeD(sc.getSharedReuseGroup());
-					
-					if (sc.getSharedReuseGroup() < 0)
-					{
+
+					if (sc.getSharedReuseGroup() < 0) {
 						writeD(0x00); // Remaining time
 						writeD(0x00); // Cooldown time
-					}
-					else
-					{
-						if (itemSkills.isEmpty())
-						{
+					} else {
+						if (itemSkills.isEmpty()) {
 							writeD(0x00); // Remaining time
 							writeD(0x00); // Cooldown time
 						} else {
@@ -75,17 +67,17 @@ public class ShortCutInit extends L2GameServerPacket
 							}
 						}
 					}
-					
+
 					writeD(0x00); // Augmentation
 					break;
-				
+
 				case L2ShortCut.TYPE_SKILL: // 2
 					writeD(sc.getId());
 					writeD(sc.getLevel());
 					writeC(0x00); // C5
 					writeD(0x01); // C6
 					break;
-				
+
 				default:
 					writeD(sc.getId());
 					writeD(0x01); // C6

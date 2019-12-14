@@ -495,11 +495,11 @@ public abstract class Summon extends Playable {
 
 		// ************************************* Check Summon State *******************************************
 		// Check if skill is heal and used on Undeads must be used
-		switch(skill.getSkillType()) {
+		switch (skill.getSkillType()) {
 			case HEAL:
 			case HEAL_PERCENT:
 			case HEAL_STATIC:
-				if(target.isAttackableInstance() && !target.getAttackable().isUndead()) {
+				if (target.isAttackableInstance() && !target.getAttackable().isUndead()) {
 					return false;
 				}
 				break;
@@ -814,7 +814,7 @@ public abstract class Summon extends Playable {
 	public boolean isSummon() {
 		return true;
 	}
-	
+
 	@Override
 	public boolean isUndead() {
 		return getTemplate().getRace() == Race.UNDEAD;

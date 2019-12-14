@@ -17,120 +17,114 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 /**
  * @author UnAfraid
  */
-
 @Effect("CancelDebuff")
-public class EffectCancelDebuff extends L2Effect
-{
-	public EffectCancelDebuff(Env env, EffectTemplate template)
-	{
+public class EffectCancelDebuff extends L2Effect {
+
+	public EffectCancelDebuff(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CANCEL_DEBUFF;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		return cancel(getEffector(), getEffected(), getSkill(), getEffectTemplate().effectType);
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
-	
-	private static boolean cancel(Creature caster, Creature target, L2Skill skill, ESkillType effectType)
-	{
-		if (!(target instanceof Player) || target.isDead())
+
+	private static boolean cancel(Creature caster, Creature target, L2Skill skill, ESkillType effectType) {
+		if (!(target instanceof Player) || target.isDead()) {
 			return false;
-		
+		}
+
 		final int cancelLvl = skill.getMagicLevel();
 		int count = skill.getMaxNegatedEffects();
 		double baseRate = Formulas.calcSkillVulnerability(caster, target, skill, effectType);
-		
+
 		L2Effect effect;
 		int lastCanceledSkillId = 0;
 		final L2Effect[] effects = target.getAllEffects();
-		for (int i = effects.length; --i >= 0;)
-		{
+		for (int i = effects.length; --i >= 0;) {
 			effect = effects[i];
-			if (effect == null)
+			if (effect == null) {
 				continue;
-			
-			if (!effect.getSkill().isDebuff() || !effect.getSkill().canBeDispeled())
-			{
+			}
+
+			if (!effect.getSkill().isDebuff() || !effect.getSkill().canBeDispeled()) {
 				effects[i] = null;
 				continue;
 			}
-			
-			if (effect.getSkill().getId() == lastCanceledSkillId)
-			{
+
+			if (effect.getSkill().getId() == lastCanceledSkillId) {
 				effect.exit(); // this skill already canceled
 				continue;
 			}
-			
-			if (!calcCancelSuccess(effect, cancelLvl, (int) baseRate))
+
+			if (!calcCancelSuccess(effect, cancelLvl, (int) baseRate)) {
 				continue;
-			
+			}
+
 			lastCanceledSkillId = effect.getSkill().getId();
 			effect.exit();
 			count--;
-			
-			if (count == 0)
+
+			if (count == 0) {
 				break;
+			}
 		}
-		
-		if (count != 0)
-		{
+
+		if (count != 0) {
 			lastCanceledSkillId = 0;
-			for (int i = effects.length; --i >= 0;)
-			{
+			for (int i = effects.length; --i >= 0;) {
 				effect = effects[i];
-				if (effect == null)
+				if (effect == null) {
 					continue;
-				
-				if (!effect.getSkill().isDebuff() || !effect.getSkill().canBeDispeled())
-				{
+				}
+
+				if (!effect.getSkill().isDebuff() || !effect.getSkill().canBeDispeled()) {
 					effects[i] = null;
 					continue;
 				}
-				
-				if (effect.getSkill().getId() == lastCanceledSkillId)
-				{
+
+				if (effect.getSkill().getId() == lastCanceledSkillId) {
 					effect.exit(); // this skill already canceled
 					continue;
 				}
-				
-				if (!calcCancelSuccess(effect, cancelLvl, (int) baseRate))
+
+				if (!calcCancelSuccess(effect, cancelLvl, (int) baseRate)) {
 					continue;
-				
+				}
+
 				lastCanceledSkillId = effect.getSkill().getId();
 				effect.exit();
 				count--;
-				
-				if (count == 0)
+
+				if (count == 0) {
 					break;
+				}
 			}
 		}
 		return true;
 	}
-	
-	private static boolean calcCancelSuccess(L2Effect effect, int cancelLvl, int baseRate)
-	{
+
+	private static boolean calcCancelSuccess(L2Effect effect, int cancelLvl, int baseRate) {
 		int rate = 2 * (cancelLvl - effect.getSkill().getMagicLevel());
 		rate += (effect.getPeriod() - effect.getTime()) / 1200;
 		rate *= baseRate;
-		
-		if (rate < 25)
+
+		if (rate < 25) {
 			rate = 25;
-		else if (rate > 75)
+		} else if (rate > 75) {
 			rate = 75;
-		
+		}
+
 		return Rnd.get(100) < rate;
 	}
 }

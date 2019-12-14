@@ -39,8 +39,10 @@ public enum ETownType {
 
 	public static final ETownType[] VALUES = values();
 
-	@Getter private final EGradeType[] grades;
-	@Getter private final int[] mapRegion;
+	@Getter
+	private final EGradeType[] grades;
+	@Getter
+	private final int[] mapRegion;
 
 	private ETownType(EGradeType[] grades, int... mapRegion) {
 		this.grades = grades;

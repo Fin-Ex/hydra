@@ -56,9 +56,8 @@ public abstract class Craft {
 
 		return EXP[lvl];
 	}
-	
+
 	/* CLASS METHODS *************************************/
-	
 	protected final Warsmith warsmith;
 	protected final Player crafter, client;
 	protected final RecipeData recipe;
@@ -117,13 +116,13 @@ public abstract class Craft {
 
 		// validate level
 		final int skillLevel;
-		if(warsmith != null) {
+		if (warsmith != null) {
 			final SpecializeData specData = warsmith.getSpecialize(recipe.getSpec());
 			skillLevel = specData.getLvl();
 		} else {
 			skillLevel = L2Skill.SKILL_CREATE_COMMON;
 		}
-		
+
 		return recipe.getLevel() <= skillLevel;
 	}
 
@@ -158,7 +157,7 @@ public abstract class Craft {
 				client.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED).addItemName(material.getId()));
 			}
 		}
-		
+
 		return true;
 	}
 }

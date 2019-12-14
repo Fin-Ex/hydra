@@ -14,49 +14,52 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
 /**
  * @author _drunk_
  */
-public class DrainSoul implements ISkillHandler
-{
+public class DrainSoul implements ISkillHandler {
+
 	private static final String qn = "Q350_EnhanceYourWeapon";
-	
-	private static final ESkillType[] SKILL_IDS =
-	{
-		ESkillType.DRAIN_SOUL
-	};
-	
+
+	private static final ESkillType[] SKILL_IDS
+			= {
+				ESkillType.DRAIN_SOUL
+			};
+
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets)
-	{
+	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
 		// Check player.
-		if (activeChar == null || activeChar.isDead() || !(activeChar instanceof Player))
+		if (activeChar == null || activeChar.isDead() || !(activeChar instanceof Player)) {
 			return;
-		
+		}
+
 		// Check quest condition.
 		final Player player = (Player) activeChar;
 		QuestState st = player.getQuestState(qn);
-		if (st == null || !st.isStarted())
+		if (st == null || !st.isStarted()) {
 			return;
-		
+		}
+
 		// Get target.
 		WorldObject target = targets[0];
-		if (target == null || !(target instanceof Attackable))
+		if (target == null || !(target instanceof Attackable)) {
 			return;
-		
+		}
+
 		// Check monster.
 		final Attackable mob = (Attackable) target;
-		if (mob.isDead())
+		if (mob.isDead()) {
 			return;
-		
+		}
+
 		// Range condition, cannot be higher than skill's effectRange.
-		if (!player.isInsideRadius(mob, skill.getEffectRange(), true, true))
+		if (!player.isInsideRadius(mob, skill.getEffectRange(), true, true)) {
 			return;
-		
+		}
+
 		// Register.
 		mob.registerAbsorber(player);
 	}
-	
+
 	@Override
-	public ESkillType[] getSkillIds()
-	{
+	public ESkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
 }

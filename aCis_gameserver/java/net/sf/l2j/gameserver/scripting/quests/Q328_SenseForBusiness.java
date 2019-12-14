@@ -12,17 +12,18 @@ import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.scripting.Quest;
 import net.sf.l2j.gameserver.scripting.QuestState;
 
-public class Q328_SenseForBusiness extends Quest
-{
+public class Q328_SenseForBusiness extends Quest {
+
 	private static final String qn = "Q328_SenseForBusiness";
-	
+
 	// Items
 	private static final int MONSTER_EYE_LENS = 1366;
 	private static final int MONSTER_EYE_CARCASS = 1347;
 	private static final int BASILISK_GIZZARD = 1348;
-	
+
 	// Drop chances
 	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
+
 	{
 		CHANCES.put(20055, 48);
 		CHANCES.put(20059, 52);
@@ -31,67 +32,61 @@ public class Q328_SenseForBusiness extends Quest
 		CHANCES.put(20070, 500000);
 		CHANCES.put(20072, 510000);
 	}
-	
-	public Q328_SenseForBusiness()
-	{
+
+	public Q328_SenseForBusiness() {
 		super(328, "Sense for Business");
-		
+
 		setItemsIds(MONSTER_EYE_LENS, MONSTER_EYE_CARCASS, BASILISK_GIZZARD);
-		
+
 		addStartNpc(30436); // Sarien
 		addTalkId(30436);
-		
+
 		addKillId(20055, 20059, 20067, 20068, 20070, 20072);
 	}
-	
+
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		if (event.equalsIgnoreCase("30436-03.htm"))
-		{
+		}
+
+		if (event.equalsIgnoreCase("30436-03.htm")) {
 			st.setState(STATE_STARTED);
 			st.set("cond", "1");
 			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("30436-06.htm"))
-		{
+		} else if (event.equalsIgnoreCase("30436-06.htm")) {
 			st.playSound(QuestState.SOUND_FINISH);
 			st.exitQuest(true);
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
+	public String onTalk(Npc npc, Player player) {
 		QuestState st = player.getQuestState(qn);
 		String htmltext = getNoQuestMsg();
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		switch (st.getState())
-		{
+		}
+
+		switch (st.getState()) {
 			case STATE_CREATED:
 				htmltext = (player.getLevel() < 21) ? "30436-01.htm" : "30436-02.htm";
 				break;
-			
+
 			case STATE_STARTED:
 				final int carcasses = st.getQuestItemsCount(MONSTER_EYE_CARCASS);
 				final int lenses = st.getQuestItemsCount(MONSTER_EYE_LENS);
 				final int gizzards = st.getQuestItemsCount(BASILISK_GIZZARD);
-				
+
 				final int all = carcasses + lenses + gizzards;
-				
-				if (all == 0)
+
+				if (all == 0) {
 					htmltext = "30436-04.htm";
-				else
-				{
+				} else {
 					htmltext = "30436-05.htm";
 					st.takeItems(MONSTER_EYE_CARCASS, -1);
 					st.takeItems(MONSTER_EYE_LENS, -1);
@@ -100,29 +95,29 @@ public class Q328_SenseForBusiness extends Quest
 				}
 				break;
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onKill(Npc npc, Player player, boolean isPet)
-	{
+	public String onKill(Npc npc, Player player, boolean isPet) {
 		QuestState st = checkPlayerState(player, npc, STATE_STARTED);
-		if (st == null)
+		if (st == null) {
 			return null;
-		
+		}
+
 		final int npcId = npc.getNpcId();
 		final int chance = CHANCES.get(npcId);
-		
-		if (npcId < 20069)
-		{
+
+		if (npcId < 20069) {
 			final int rnd = Rnd.get(100);
-			if (rnd < (chance + 1))
+			if (rnd < (chance + 1)) {
 				st.dropItemsAlways((rnd < chance) ? MONSTER_EYE_CARCASS : MONSTER_EYE_LENS, 1, 0);
-		}
-		else
+			}
+		} else {
 			st.dropItems(BASILISK_GIZZARD, 1, 0, chance);
-		
+		}
+
 		return null;
 	}
 }

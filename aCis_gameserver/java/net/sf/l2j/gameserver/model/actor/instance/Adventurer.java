@@ -47,12 +47,13 @@ public class Adventurer extends Folk {
 	public void showChatWindow(Player player, int val) {
 		final int npcId = getNpcId();
 		String filename;
-		
-		if (npcId >= 31865 && npcId <= 31918)
+
+		if (npcId >= 31865 && npcId <= 31918) {
 			filename = SevenSigns.SEVEN_SIGNS_HTML_PATH + "rift/GuardianOfBorder.htm";
-		else
+		} else {
 			filename = getHtmlPath(npcId, val);
-		
+		}
+
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		html.replace("%objectId%", getObjectId());
@@ -65,7 +66,7 @@ public class Adventurer extends Folk {
 		// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
-	
+
 	@Override
 	public void showChatWindow(Player player, String filename) {
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -82,10 +83,10 @@ public class Adventurer extends Folk {
 			final StringBuilder sb = new StringBuilder();
 			sb.append("<table width=180>");
 			int counter = 1;
-			for(ETownType town : ETownType.VALUES) {
+			for (ETownType town : ETownType.VALUES) {
 				sb.append("<tr>");
 				sb.append("<td>").append(counter++).append(". ").append(town).append("</td>");
-				for(EGradeType grade : town.getGrades()) {
+				for (EGradeType grade : town.getGrades()) {
 					sb.append("<td width=10 align=center>");
 					sb.append("<img src=\"Symbol.grade_").append(grade.name()).append("\" width=12 height=11>");
 					sb.append("</td>");

@@ -15,11 +15,11 @@ import net.sf.l2j.gameserver.model.actor.Player;
  */
 @Slf4j
 public class Swordsinger extends AbstractClassComponent {
-	
+
 	public Swordsinger(Player player) {
 		super(player);
 	}
-	
+
 	@Override
 	public void onAdd() {
 		// add swordsinger skill specialization
@@ -41,6 +41,5 @@ public class Swordsinger extends AbstractClassComponent {
 	public Player getGameObject() {
 		return super.getGameObject().getPlayer();
 	}
-	
-	
+
 }

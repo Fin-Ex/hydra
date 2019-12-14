@@ -4,6 +4,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+import net.sf.l2j.gameserver.handler.usercommandhandlers.Challenge;
 import net.sf.l2j.gameserver.handler.usercommandhandlers.ChannelDelete;
 import net.sf.l2j.gameserver.handler.usercommandhandlers.ChannelLeave;
 import net.sf.l2j.gameserver.handler.usercommandhandlers.ChannelListUpdate;
@@ -19,17 +20,15 @@ import net.sf.l2j.gameserver.handler.usercommandhandlers.SiegeStatus;
 import net.sf.l2j.gameserver.handler.usercommandhandlers.Time;
 import net.sf.l2j.gameserver.handler.usercommandhandlers.WarsmithInfo;
 
-public class UserCommandHandler
-{
+public class UserCommandHandler {
+
 	private final Map<Integer, IUserCommandHandler> _datatable = new HashMap<>();
-	
-	public static UserCommandHandler getInstance()
-	{
+
+	public static UserCommandHandler getInstance() {
 		return SingletonHolder._instance;
 	}
-	
-	protected UserCommandHandler()
-	{
+
+	protected UserCommandHandler() {
 		registerUserCommandHandler(new ChannelDelete());
 		registerUserCommandHandler(new ChannelLeave());
 		registerUserCommandHandler(new ChannelListUpdate());
@@ -44,26 +43,25 @@ public class UserCommandHandler
 		registerUserCommandHandler(new SiegeStatus());
 		registerUserCommandHandler(new Time());
 		registerUserCommandHandler(new WarsmithInfo());
+		registerUserCommandHandler(new Challenge());
 	}
-	
-	public void registerUserCommandHandler(IUserCommandHandler handler)
-	{
-		for (int id : handler.getUserCommandList())
+
+	public void registerUserCommandHandler(IUserCommandHandler handler) {
+		for (int id : handler.getUserCommandList()) {
 			_datatable.put(id, handler);
+		}
 	}
-	
-	public IUserCommandHandler getUserCommandHandler(int userCommand)
-	{
+
+	public IUserCommandHandler getUserCommandHandler(int userCommand) {
 		return _datatable.get(userCommand);
 	}
-	
-	public int size()
-	{
+
+	public int size() {
 		return _datatable.size();
 	}
-	
-	private static class SingletonHolder
-	{
+
+	private static class SingletonHolder {
+
 		protected static final UserCommandHandler _instance = new UserCommandHandler();
 	}
 }

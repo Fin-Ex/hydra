@@ -13,39 +13,33 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  * @author earendil
  */
 @Effect("NoblesseBless")
-public class EffectNoblesseBless extends L2Effect
-{
-	public EffectNoblesseBless(Env env, EffectTemplate template)
-	{
+public class EffectNoblesseBless extends L2Effect {
+
+	public EffectNoblesseBless(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.NOBLESSE_BLESSING;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		return true;
 	}
-	
+
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
-	
+
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return EEffectFlag.NOBLESS_BLESSING.getMask();
 	}
 }

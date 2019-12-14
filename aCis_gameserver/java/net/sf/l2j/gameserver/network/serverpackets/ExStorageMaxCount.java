@@ -4,8 +4,8 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.actor.Player;
 
-public class ExStorageMaxCount extends L2GameServerPacket
-{
+public class ExStorageMaxCount extends L2GameServerPacket {
+
 	private final int _inventoryLimit;
 	private final int _warehouseLimit;
 	private final int _freightLimit;
@@ -13,9 +13,8 @@ public class ExStorageMaxCount extends L2GameServerPacket
 	private final int _privateBuyLimit;
 	private final int _dwarfRecipeLimit;
 	private final int _commonRecipeLimit;
-	
-	public ExStorageMaxCount(Player player)
-	{
+
+	public ExStorageMaxCount(Player player) {
 		_inventoryLimit = player.getInventoryLimit();
 		_warehouseLimit = player.getWareHouseLimit();
 		_freightLimit = player.getFreightLimit();
@@ -24,10 +23,9 @@ public class ExStorageMaxCount extends L2GameServerPacket
 		_dwarfRecipeLimit = player.getDwarfRecipeLimit();
 		_commonRecipeLimit = player.getCommonRecipeLimit();
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x2e);
 		writeD(_inventoryLimit);

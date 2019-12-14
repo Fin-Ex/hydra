@@ -18,17 +18,15 @@ import net.sf.l2j.gameserver.handler.chathandlers.ChatShout;
 import net.sf.l2j.gameserver.handler.chathandlers.ChatTell;
 import net.sf.l2j.gameserver.handler.chathandlers.ChatTrade;
 
-public class ChatHandler
-{
+public class ChatHandler {
+
 	private final Map<Integer, IChatHandler> _datatable = new HashMap<>();
-	
-	public static ChatHandler getInstance()
-	{
+
+	public static ChatHandler getInstance() {
 		return SingletonHolder._instance;
 	}
-	
-	protected ChatHandler()
-	{
+
+	protected ChatHandler() {
 		registerChatHandler(new ChatAll());
 		registerChatHandler(new ChatAlliance());
 		registerChatHandler(new ChatClan());
@@ -42,25 +40,23 @@ public class ChatHandler
 		registerChatHandler(new ChatTell());
 		registerChatHandler(new ChatTrade());
 	}
-	
-	public void registerChatHandler(IChatHandler handler)
-	{
-		for (int id : handler.getChatTypeList())
+
+	public void registerChatHandler(IChatHandler handler) {
+		for (int id : handler.getChatTypeList()) {
 			_datatable.put(id, handler);
+		}
 	}
-	
-	public IChatHandler getChatHandler(int chatType)
-	{
+
+	public IChatHandler getChatHandler(int chatType) {
 		return _datatable.get(chatType);
 	}
-	
-	public int size()
-	{
+
+	public int size() {
 		return _datatable.size();
 	}
-	
-	private static class SingletonHolder
-	{
+
+	private static class SingletonHolder {
+
 		protected static final ChatHandler _instance = new ChatHandler();
 	}
 }

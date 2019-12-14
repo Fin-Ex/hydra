@@ -7,28 +7,28 @@ import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.finex.enums.EStoreType;
 import net.sf.l2j.gameserver.network.serverpackets.RecipeShopItemInfo;
 
-public final class RequestRecipeShopMakeInfo extends L2GameClientPacket
-{
+public final class RequestRecipeShopMakeInfo extends L2GameClientPacket {
+
 	private int _playerObjectId, _recipeId;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_playerObjectId = readD();
 		_recipeId = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
-		
+		}
+
 		final Player shop = World.getInstance().getPlayer(_playerObjectId);
-		if (shop == null || shop.getStoreType() != EStoreType.MANUFACTURE)
+		if (shop == null || shop.getStoreType() != EStoreType.MANUFACTURE) {
 			return;
-		
+		}
+
 		player.sendPacket(new RecipeShopItemInfo(shop, _recipeId));
 	}
 }

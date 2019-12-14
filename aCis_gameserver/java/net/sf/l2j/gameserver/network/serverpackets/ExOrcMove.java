@@ -4,19 +4,18 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Format: (ch)
+ *
  * @author -Wooden-
  */
-public class ExOrcMove extends L2GameServerPacket
-{
+public class ExOrcMove extends L2GameServerPacket {
+
 	public static final ExOrcMove STATIC_PACKET = new ExOrcMove();
-	
-	private ExOrcMove()
-	{
+
+	private ExOrcMove() {
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x44);
 	}

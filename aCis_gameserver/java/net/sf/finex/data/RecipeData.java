@@ -77,15 +77,15 @@ public class RecipeData {
 	public int getSuccessRate() {
 		return successRate;
 	}
-	
+
 	public ECraftSpec getSpec() {
 		final Item item = ItemTable.getInstance().getTemplate(product.getId());
-		for(ECraftSpec next : ECraftSpec.values()) {
-			if(next.checkItem(item.getClass())) {
+		for (ECraftSpec next : ECraftSpec.values()) {
+			if (next.checkItem(item.getClass())) {
 				return next;
 			}
 		}
-		
+
 		return null;
-	} 
+	}
 }

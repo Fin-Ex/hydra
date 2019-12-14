@@ -5,27 +5,24 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 
-public class EquipUpdate extends L2GameServerPacket
-{
+public class EquipUpdate extends L2GameServerPacket {
+
 	private final ItemInstance _item;
 	private final int _change;
-	
-	public EquipUpdate(ItemInstance item, int change)
-	{
+
+	public EquipUpdate(ItemInstance item, int change) {
 		_item = item;
 		_change = change;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x4b);
 		writeD(_change);
 		writeD(_item.getObjectId());
-		
+
 		int bodypart = 0;
-		switch (_item.getItem().getBodyPart())
-		{
+		switch (_item.getItem().getBodyPart()) {
 			case Item.SLOT_L_EAR:
 				bodypart = 0x01;
 				break;
@@ -72,7 +69,7 @@ public class EquipUpdate extends L2GameServerPacket
 				bodypart = 0x0f;
 				break;
 		}
-		
+
 		writeD(bodypart);
 	}
 }

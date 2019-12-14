@@ -2,10 +2,9 @@ package net.sf.l2j.gameserver.network.gameserverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class AuthRequest extends GameServerBasePacket
-{
-	public AuthRequest(int id, boolean acceptAlternate, byte[] hexid, String host, int port, boolean reserveHost, int maxplayer)
-	{
+public class AuthRequest extends GameServerBasePacket {
+
+	public AuthRequest(int id, boolean acceptAlternate, byte[] hexid, String host, int port, boolean reserveHost, int maxplayer) {
 		writeC(0x01);
 		writeC(id);
 		writeC(acceptAlternate ? 0x01 : 0x00);
@@ -16,10 +15,9 @@ public class AuthRequest extends GameServerBasePacket
 		writeD(hexid.length);
 		writeB(hexid);
 	}
-	
+
 	@Override
-	public byte[] getContent()
-	{
+	public byte[] getContent() {
 		return getBytes();
 	}
 }

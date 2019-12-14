@@ -11,47 +11,41 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  * @author -Nemesiss-
  */
 @Effect("PhysicalMute")
-public class EffectPhysicalMute extends L2Effect
-{
-	public EffectPhysicalMute(Env env, EffectTemplate template)
-	{
+public class EffectPhysicalMute extends L2Effect {
+
+	public EffectPhysicalMute(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.SILENCE;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startMuted();
-		if(getEffected().isPlayer()) {
+		if (getEffected().isPlayer()) {
 			getEffected().getPlayer().sendSkillList();
 		}
 		return true;
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
-	
+
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopMuted(false);
-		if(getEffected().isPlayer()) {
+		if (getEffected().isPlayer()) {
 			getEffected().getPlayer().sendSkillList();
 		}
 	}
-	
+
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return EEffectFlag.PHYSICAL_MUTED.getMask();
 	}
 }

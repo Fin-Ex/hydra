@@ -10,63 +10,55 @@ import net.sf.l2j.gameserver.model.zone.ZoneId;
 import net.sf.l2j.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
 import net.sf.l2j.gameserver.network.serverpackets.ServerObjectInfo;
 
-public class L2WaterZone extends L2ZoneType
-{
-	public L2WaterZone(int id)
-	{
+public class L2WaterZone extends L2ZoneType {
+
+	public L2WaterZone(int id) {
 		super(id);
 	}
-	
+
 	@Override
-	protected void onEnter(Creature character)
-	{
+	protected void onEnter(Creature character) {
 		character.setInsideZone(ZoneId.WATER, true);
-		
-		if (character instanceof Player)
+
+		if (character instanceof Player) {
 			((Player) character).broadcastUserInfo();
-		else if (character instanceof Npc)
-		{
-			for (Player player : character.getKnownType(Player.class))
-			{
-				if (character.getMoveSpeed() == 0)
+		} else if (character instanceof Npc) {
+			for (Player player : character.getKnownType(Player.class)) {
+				if (character.getMoveSpeed() == 0) {
 					player.sendPacket(new ServerObjectInfo((Npc) character, player));
-				else
+				} else {
 					player.sendPacket(new NpcInfo((Npc) character, player));
+				}
 			}
 		}
 	}
-	
+
 	@Override
-	protected void onExit(Creature character)
-	{
+	protected void onExit(Creature character) {
 		character.setInsideZone(ZoneId.WATER, false);
-		
-		if (character instanceof Player)
+
+		if (character instanceof Player) {
 			((Player) character).broadcastUserInfo();
-		else if (character instanceof Npc)
-		{
-			for (Player player : character.getKnownType(Player.class))
-			{
-				if (character.getMoveSpeed() == 0)
+		} else if (character instanceof Npc) {
+			for (Player player : character.getKnownType(Player.class)) {
+				if (character.getMoveSpeed() == 0) {
 					player.sendPacket(new ServerObjectInfo((Npc) character, player));
-				else
+				} else {
 					player.sendPacket(new NpcInfo((Npc) character, player));
+				}
 			}
 		}
 	}
-	
+
 	@Override
-	public void onDieInside(Creature character)
-	{
+	public void onDieInside(Creature character) {
 	}
-	
+
 	@Override
-	public void onReviveInside(Creature character)
-	{
+	public void onReviveInside(Creature character) {
 	}
-	
-	public int getWaterZ()
-	{
+
+	public int getWaterZ() {
 		return getZone().getHighZ();
 	}
 }

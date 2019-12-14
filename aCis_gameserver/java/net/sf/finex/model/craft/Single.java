@@ -44,7 +44,7 @@ public class Single extends Craft {
 			final boolean hasWsmComponent = warsmith != null;
 			if (success) {
 				reward();
-				if(hasWsmComponent) {
+				if (hasWsmComponent) {
 					warsmith.addExp(recipe);
 				}
 			}

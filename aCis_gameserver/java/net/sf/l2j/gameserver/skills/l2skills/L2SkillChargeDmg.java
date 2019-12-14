@@ -1,8 +1,8 @@
 package net.sf.l2j.gameserver.skills.l2skills;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.finex.model.creature.attack.DamageInfo;
+import net.sf.finex.model.talents.handlers.Challenger;
+import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
@@ -16,38 +16,48 @@ import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.StatsSet;
 
 public class L2SkillChargeDmg extends L2Skill {
+
 	public L2SkillChargeDmg(StatsSet set) {
 		super(set);
 	}
 
 	@Override
 	public void useSkill(Creature caster, WorldObject[] targets) {
-		if (caster.isAlikeDead())
+		if (caster.isAlikeDead()) {
 			return;
+		}
 
 		double modifier = 0;
-
-		if (caster instanceof Player)
-			modifier = 0.7 + 0.3 * (((Player) caster).getCharges() + getNumCharges());
+		double challengerMod = 1.0;
+		if (caster.isPlayer()) {
+			modifier = 0.7 + 0.3 * caster.getPlayer().getCharges();
+			if (Challenger.validate(caster.getPlayer())) {
+				challengerMod = ((Challenger) SkillTable.FrequentTalent.CHALLENGER.getHandler()).invoke();
+			}
+		}
 
 		final boolean ss = caster.isChargedShot(ShotType.SOULSHOT);
 
 		for (WorldObject obj : targets) {
-			if (!(obj instanceof Creature))
+			if (!(obj instanceof Creature)) {
 				continue;
+			}
 
 			final Creature target = ((Creature) obj);
-			if (target.isAlikeDead())
+			if (target.isAlikeDead()) {
 				continue;
+			}
 
 			// Calculate skill evasion
 			boolean skillIsEvaded = Formulas.calcPhysicalSkillEvasion(target, this);
 			if (skillIsEvaded) {
-				if (caster instanceof Player)
+				if (caster.isPlayer()) {
 					((Player) caster).sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_DODGES_ATTACK).addCharName(target));
+				}
 
-				if (target instanceof Player)
+				if (target.isPlayer()) {
 					((Player) target).sendPacket(SystemMessage.getSystemMessage(SystemMessageId.AVOIDED_S1_ATTACK).addCharName(caster));
+				}
 
 				// no futher calculations needed.
 				continue;
@@ -55,16 +65,17 @@ public class L2SkillChargeDmg extends L2Skill {
 
 			final DamageInfo info = new DamageInfo();
 			info.shieldResult = Formulas.calcShldUse(caster, target, this);
-			
+
 			if (getBaseCritRate() > 0) {
-				info.isCrit = Formulas.calcCrit(getBaseCritRate() * 10 * Formulas.STR_BONUS[caster.getSTR()]);
+				info.isCrit = Formulas.calcCrit(getBaseCritRate() * 10 * Formulas.STR_BONUS[caster.getSTR()] * challengerMod);
 			}
 
 			info.isParry = Formulas.calcParry(caster, target, this);
 			// damage calculation, crit is static 2x
 			double damage = Formulas.calcPhysDam(caster, target, this, info, ss);
-			if (info.isCrit)
+			if (info.isCrit) {
 				damage *= 2;
+			}
 
 			if (damage > 0) {
 				byte reflect = Formulas.calcSkillReflect(target, this);
@@ -79,8 +90,9 @@ public class L2SkillChargeDmg extends L2Skill {
 						if (Formulas.calcSkillSuccess(caster, target, this, info.shieldResult, true)) {
 							getEffects(caster, target, new Env(info.shieldResult, false, false, false));
 							target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(this));
-						} else
+						} else {
 							caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_RESISTED_YOUR_S2).addCharName(target).addSkillName(this));
+						}
 					}
 				}
 
@@ -88,18 +100,21 @@ public class L2SkillChargeDmg extends L2Skill {
 				target.reduceCurrentHp(finalDamage, caster, this);
 
 				// vengeance reflected damage
-				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
+				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0) {
 					caster.reduceCurrentHp(damage, target, this);
+				}
 
 				caster.sendDamageMessage(target, (int) finalDamage, false, info.isCrit, false, info.isParry);
-			} else
+			} else {
 				caster.sendDamageMessage(target, 0, false, false, true, info.isParry);
+			}
 		}
 
 		if (hasSelfEffects()) {
 			final L2Effect effect = caster.getFirstEffect(getId());
-			if (effect != null && effect.isSelfEffect())
+			if (effect != null && effect.isSelfEffect()) {
 				effect.exit();
+			}
 
 			getEffectsSelf(caster);
 		}

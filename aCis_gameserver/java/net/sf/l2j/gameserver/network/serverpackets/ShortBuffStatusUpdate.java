@@ -2,22 +2,20 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class ShortBuffStatusUpdate extends L2GameServerPacket
-{
+public class ShortBuffStatusUpdate extends L2GameServerPacket {
+
 	private final int _skillId;
 	private final int _skillLvl;
 	private final int _duration;
-	
-	public ShortBuffStatusUpdate(int skillId, int skillLvl, int duration)
-	{
+
+	public ShortBuffStatusUpdate(int skillId, int skillLvl, int duration) {
 		_skillId = skillId;
 		_skillLvl = skillLvl;
 		_duration = duration;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xF4);
 		writeD(_skillId);
 		writeD(_skillLvl);

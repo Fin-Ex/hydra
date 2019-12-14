@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q088_SagaOfTheArchmage extends SagasSuperClass
-{
-	public Q088_SagaOfTheArchmage()
-	{
+public class Q088_SagaOfTheArchmage extends SagasSuperClass {
+
+	public Q088_SagaOfTheArchmage() {
 		super(88, "Saga of the Archmage");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30176,
 			31627,
 			31282,
@@ -25,9 +23,8 @@ public class Q088_SagaOfTheArchmage extends SagasSuperClass
 			31657,
 			31282
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7529,
 			7081,
@@ -41,38 +38,34 @@ public class Q088_SagaOfTheArchmage extends SagasSuperClass
 			7082,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27250,
 			27237,
 			27254
 		};
-		
+
 		classid = 94;
 		prevclass = 0x0c;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			191046,
 			46066,
 			46087
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-40640,
 			-36396,
 			-36372
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-3042,
 			-1685,
 			-1685
 		};
-		
+
 		registerNPCs();
 	}
 }

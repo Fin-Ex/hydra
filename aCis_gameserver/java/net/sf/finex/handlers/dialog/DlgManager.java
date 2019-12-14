@@ -27,8 +27,10 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  * @author FinFan
  */
 public class DlgManager {
-	@Getter private static final DlgManager instance = new DlgManager();
-	
+
+	@Getter
+	private static final DlgManager instance = new DlgManager();
+
 	private final Map<Integer, IDialogAnswer> answers = new HashMap<>();
 	private final Map<Class<?>, IDialogRequest> requests = new HashMap<>();
 
@@ -44,18 +46,18 @@ public class DlgManager {
 		answers.put(SystemMessageId.DO_YOU_REALY_WANT_TO_LEARN_S1_TALENT.getId(), new TalentLearnAnswer());
 		answers.put(SystemMessageId.DO_YOU_WANT_TO_RESET_ALL_YOUR_MASTERIES_FOR_S1_S2.getId(), new TalentResetAnswer()); // reset with pay
 		answers.put(SystemMessageId.DO_YOU_WANT_TO_RESET_ALL_YOUR_MASTERIES.getId(), new TalentResetAnswer()); // free reset
-		
+
 		// requests
 		requests.put(TeleportRequest.class, new TeleportRequest());
 		requests.put(ReviveRequest.class, new ReviveRequest());
 		requests.put(TalentLearnRequest.class, new TalentLearnRequest());
 		requests.put(TalentResetRequest.class, new TalentResetRequest());
 	}
-	
+
 	public IDialogAnswer getAnswer(int msgId) {
 		return answers.get(msgId);
 	}
-	
+
 	public <T> T getRequest(Class<T> type) {
 		return (T) requests.get(type);
 	}

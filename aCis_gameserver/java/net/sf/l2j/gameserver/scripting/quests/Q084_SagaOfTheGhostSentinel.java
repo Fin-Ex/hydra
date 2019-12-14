@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q084_SagaOfTheGhostSentinel extends SagasSuperClass
-{
-	public Q084_SagaOfTheGhostSentinel()
-	{
+public class Q084_SagaOfTheGhostSentinel extends SagasSuperClass {
+
+	public Q084_SagaOfTheGhostSentinel() {
 		super(84, "Saga of the Ghost Sentinel");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30702,
 			31587,
 			31604,
@@ -25,9 +23,8 @@ public class Q084_SagaOfTheGhostSentinel extends SagasSuperClass
 			31659,
 			31641
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7521,
 			7081,
@@ -41,38 +38,34 @@ public class Q084_SagaOfTheGhostSentinel extends SagasSuperClass
 			7107,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27298,
 			27233,
 			27307
 		};
-		
+
 		classid = 109;
 		prevclass = 0x25;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			161719,
 			124376,
 			124376
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-92823,
 			82127,
 			82127
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-1893,
 			-2796,
 			-2796
 		};
-		
+
 		registerNPCs();
 	}
 }

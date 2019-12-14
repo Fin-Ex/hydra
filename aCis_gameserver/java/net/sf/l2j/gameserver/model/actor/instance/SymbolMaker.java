@@ -31,7 +31,7 @@ public class SymbolMaker extends Folk {
 						hasHennas = true;
 					}
 				}
-				
+
 				if (hasHennas) {
 					player.sendPacket(new HennaRemoveList(player));
 				} else {

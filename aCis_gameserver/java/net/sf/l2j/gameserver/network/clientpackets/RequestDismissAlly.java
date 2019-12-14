@@ -5,22 +5,20 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 
-public final class RequestDismissAlly extends L2GameClientPacket
-{
+public final class RequestDismissAlly extends L2GameClientPacket {
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
-		if (!activeChar.isClanLeader())
-		{
+		}
+
+		if (!activeChar.isClanLeader()) {
 			activeChar.sendPacket(SystemMessageId.FEATURE_ONLY_FOR_ALLIANCE_LEADER);
 			return;
 		}

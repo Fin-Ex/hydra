@@ -28,7 +28,7 @@ public final class Guard extends Attackable {
 	public Guard(int objectId, NpcTemplate template) {
 		super(objectId, template);
 	}
-	
+
 	@Override
 	public boolean isAutoAttackable(Creature attacker) {
 		return attacker instanceof Monster;

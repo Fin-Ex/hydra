@@ -4,16 +4,14 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.actor.instance.Door;
 
-public class DoorStatus extends CreatureStatus
-{
-	public DoorStatus(Door activeChar)
-	{
+public class DoorStatus extends CreatureStatus {
+
+	public DoorStatus(Door activeChar) {
 		super(activeChar);
 	}
-	
+
 	@Override
-	public Door getActiveChar()
-	{
+	public Door getActiveChar() {
 		return (Door) super.getActiveChar();
 	}
 }

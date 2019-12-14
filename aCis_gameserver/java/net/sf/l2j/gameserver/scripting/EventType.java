@@ -5,8 +5,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Hasha
  */
-public enum EventType
-{
+public enum EventType {
 	ON_FIRST_TALK(false), // control the first dialog shown by NPCs when they are clicked (some quests must override the default npc action)
 	QUEST_START(true), // onTalk action from start npcs
 	ON_TALK(true), // onTalk action from npcs participating in a quest
@@ -21,18 +20,16 @@ public enum EventType
 	ON_SPELL_FINISHED(true), // on spell finished action when npc finish casting skill
 	ON_ENTER_ZONE(true), // on zone enter
 	ON_EXIT_ZONE(true); // on zone exit
-	
+
 	// control whether this event type is allowed for the same npc template in multiple quests
 	// or if the npc must be registered in at most one quest for the specified event
 	private boolean _allowMultipleRegistration;
-	
-	EventType(boolean allowMultipleRegistration)
-	{
+
+	EventType(boolean allowMultipleRegistration) {
 		_allowMultipleRegistration = allowMultipleRegistration;
 	}
-	
-	public boolean isMultipleRegistrationAllowed()
-	{
+
+	public boolean isMultipleRegistrationAllowed() {
 		return _allowMultipleRegistration;
 	}
 }

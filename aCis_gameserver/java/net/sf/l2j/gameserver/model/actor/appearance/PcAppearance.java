@@ -4,8 +4,8 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.base.Sex;
 
-public final class PcAppearance
-{
+public final class PcAppearance {
+
 	private byte _face;
 	private byte _hairColor;
 	private byte _hairStyle;
@@ -13,97 +13,79 @@ public final class PcAppearance
 	private boolean _invisible = false;
 	private int _nameColor = 0xFFFFFF;
 	private int _titleColor = 0xFFFF77;
-	
-	public PcAppearance(byte face, byte hColor, byte hStyle, Sex sex)
-	{
+
+	public PcAppearance(byte face, byte hColor, byte hStyle, Sex sex) {
 		_face = face;
 		_hairColor = hColor;
 		_hairStyle = hStyle;
 		_sex = sex;
 	}
-	
-	public byte getFace()
-	{
+
+	public byte getFace() {
 		return _face;
 	}
-	
-	public void setFace(int value)
-	{
+
+	public void setFace(int value) {
 		_face = (byte) value;
 	}
-	
-	public byte getHairColor()
-	{
+
+	public byte getHairColor() {
 		return _hairColor;
 	}
-	
-	public void setHairColor(int value)
-	{
+
+	public void setHairColor(int value) {
 		_hairColor = (byte) value;
 	}
-	
-	public byte getHairStyle()
-	{
+
+	public byte getHairStyle() {
 		return _hairStyle;
 	}
-	
-	public void setHairStyle(int value)
-	{
+
+	public void setHairStyle(int value) {
 		_hairStyle = (byte) value;
 	}
-	
-	public Sex getSex()
-	{
+
+	public Sex getSex() {
 		return _sex;
 	}
-	
-	public void setSex(Sex sex)
-	{
+
+	public void setSex(Sex sex) {
 		_sex = sex;
 	}
-	
-	public boolean getInvisible()
-	{
+
+	public boolean getInvisible() {
 		return _invisible;
 	}
-	
-	public void setInvisible()
-	{
+
+	public void setInvisible() {
 		_invisible = true;
 	}
-	
-	public void setVisible()
-	{
+
+	public void setVisible() {
 		_invisible = false;
 	}
-	
-	public int getNameColor()
-	{
+
+	public int getNameColor() {
 		return _nameColor;
 	}
-	
-	public void setNameColor(int nameColor)
-	{
+
+	public void setNameColor(int nameColor) {
 		_nameColor = nameColor;
 	}
-	
-	public void setNameColor(int red, int green, int blue)
-	{
+
+	public void setNameColor(int red, int green, int blue) {
 		_nameColor = (red & 0xFF) + ((green & 0xFF) << 8) + ((blue & 0xFF) << 16);
 	}
-	
-	public int getTitleColor()
-	{
+
+	public int getTitleColor() {
 		return _titleColor;
 	}
-	
-	public void setTitleColor(int titleColor)
-	{
+
+	public void setTitleColor(int titleColor) {
 		_titleColor = titleColor;
 	}
-	
-	public void setTitleColor(int red, int green, int blue)
-	{
+
+	public void setTitleColor(int red, int green, int blue) {
 		_titleColor = (red & 0xFF) + ((green & 0xFF) << 8) + ((blue & 0xFF) << 16);
 	}
 }

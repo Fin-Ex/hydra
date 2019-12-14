@@ -12,16 +12,22 @@ import net.sf.finex.data.RandomQuestData;
  * @author FinFan
  */
 public abstract class RandomQuestBuilder {
+
 	protected RandomQuestData quest;
-	
+
 	public final RandomQuestData create() {
 		return this.quest = new RandomQuestData();
 	}
 
 	public abstract void buildCondition();
+
 	public abstract void buildRewards();
+
 	public abstract void buildDescription();
+
 	public abstract void buildName();
+
 	public abstract void buildExpAndSp();
+
 	public abstract void buildQuestItems();
 }

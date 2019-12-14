@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q095_SagaOfTheHellKnight extends SagasSuperClass
-{
-	public Q095_SagaOfTheHellKnight()
-	{
+public class Q095_SagaOfTheHellKnight extends SagasSuperClass {
+
+	public Q095_SagaOfTheHellKnight() {
 		super(95, "Saga of the Hell Knight");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			31582,
 			31623,
 			31297,
@@ -25,9 +23,8 @@ public class Q095_SagaOfTheHellKnight extends SagasSuperClass
 			31656,
 			31297
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7532,
 			7081,
@@ -41,38 +38,34 @@ public class Q095_SagaOfTheHellKnight extends SagasSuperClass
 			7086,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27258,
 			27244,
 			27263
 		};
-		
+
 		classid = 91;
 		prevclass = 0x06;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			164650,
 			47391,
 			47429
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-74121,
 			-56929,
 			-56923
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-2871,
 			-2370,
 			-2383
 		};
-		
+
 		registerNPCs();
 	}
 }

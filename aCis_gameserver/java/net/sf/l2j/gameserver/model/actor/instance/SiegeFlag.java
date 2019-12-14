@@ -15,91 +15,83 @@ import net.sf.l2j.gameserver.network.serverpackets.MoveToPawn;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
-public class SiegeFlag extends Npc
-{
+public class SiegeFlag extends Npc {
+
 	private final Clan _clan;
-	
-	public SiegeFlag(Player player, int objectId, NpcTemplate template)
-	{
+
+	public SiegeFlag(Player player, int objectId, NpcTemplate template) {
 		super(objectId, template);
-		
+
 		_clan = player.getClan();
-		
+
 		// Player clan became null during flag initialization ; don't bother setting clan flag.
-		if (_clan != null)
+		if (_clan != null) {
 			_clan.setFlag(this);
-		
+		}
+
 		setIsInvul(false);
 	}
-	
+
 	@Override
-	public boolean isAttackable()
-	{
+	public boolean isAttackable() {
 		return !isInvul();
 	}
-	
+
 	@Override
-	public boolean isAutoAttackable(Creature attacker)
-	{
+	public boolean isAutoAttackable(Creature attacker) {
 		return !isInvul();
 	}
-	
+
 	@Override
-	public boolean doDie(Creature killer)
-	{
-		if (!super.doDie(killer))
+	public boolean doDie(Creature killer) {
+		if (!super.doDie(killer)) {
 			return false;
-		
+		}
+
 		// Reset clan flag to null.
-		if (_clan != null)
+		if (_clan != null) {
 			_clan.setFlag(null);
-		
+		}
+
 		return true;
 	}
-	
+
 	@Override
-	public void onForcedAttack(Player player)
-	{
+	public void onForcedAttack(Player player) {
 		onAction(player);
 	}
-	
+
 	@Override
-	public void onAction(Player player)
-	{
+	public void onAction(Player player) {
 		// Set the target of the player
-		if (player.getTarget() != this)
+		if (player.getTarget() != this) {
 			player.setTarget(this);
-		else
-		{
-			if (isAutoAttackable(player) && Math.abs(player.getZ() - getZ()) < 100)
+		} else {
+			if (isAutoAttackable(player) && Math.abs(player.getZ() - getZ()) < 100) {
 				player.getAI().setIntention(CtrlIntention.ATTACK, this);
-			else
-			{
+			} else {
 				// Rotate the player to face the instance
 				player.sendPacket(new MoveToPawn(player, this, Npc.INTERACTION_DISTANCE));
-				
+
 				// Send ActionFailed to the player in order to avoid he stucks
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 			}
 		}
 	}
-	
+
 	@Override
-	public void reduceCurrentHp(double damage, Creature attacker, L2Skill skill)
-	{
+	public void reduceCurrentHp(double damage, Creature attacker, L2Skill skill) {
 		// Send warning to owners of headquarters that theirs base is under attack.
-		if (_clan != null && isScriptValue(0))
-		{
+		if (_clan != null && isScriptValue(0)) {
 			_clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.BASE_UNDER_ATTACK));
-			
+
 			setScriptValue(1);
 			ThreadPool.schedule(() -> setScriptValue(0), 20000);
 		}
 		super.reduceCurrentHp(damage, attacker, skill);
 	}
-	
+
 	@Override
-	public void addFuncsToNewCharacter()
-	{
+	public void addFuncsToNewCharacter() {
 	}
 }

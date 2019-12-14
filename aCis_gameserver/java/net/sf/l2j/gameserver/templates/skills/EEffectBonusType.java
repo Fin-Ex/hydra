@@ -18,8 +18,9 @@ public enum EEffectBonusType {
 	NONE,
 	RHYTHM(new BonusRhythm()),
 	SING_SWORD(new BonusSingingWeapon());
-	
-	@Getter private final IBonusHandler handler;
+
+	@Getter
+	private final IBonusHandler handler;
 
 	private EEffectBonusType(IBonusHandler handler) {
 		this.handler = handler;

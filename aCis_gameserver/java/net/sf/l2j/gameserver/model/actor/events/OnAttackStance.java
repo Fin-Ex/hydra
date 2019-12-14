@@ -14,6 +14,7 @@ import net.sf.l2j.gameserver.model.actor.Creature;
  */
 @Data
 public class OnAttackStance {
+
 	private final Creature attacker;
 	private final boolean isEnded;
 }

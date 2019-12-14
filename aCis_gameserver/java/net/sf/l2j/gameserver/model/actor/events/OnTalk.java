@@ -15,6 +15,7 @@ import net.sf.l2j.gameserver.model.actor.Player;
  */
 @Data
 public class OnTalk {
+
 	private final Player talker;
 	private final Npc target;
 }

@@ -26,12 +26,12 @@ public enum ESkillAlignmentType {
 	 */
 	POTION(EEffectFlag.POTION_MUTED),
 	/**
-	 * Can't be silenced
-	 * Race skills
+	 * Can't be silenced Race skills
 	 */
 	RACE(EEffectFlag.RACE_MUTED),
 	/**
-	 * Profession (Mining, Skinning, Tailoring and etc..) skills 
+	 * Profession (Mining, Skinning, Tailoring and etc..) skills
+	 *
 	 * @Deprecated
 	 */
 	PROFESSION(EEffectFlag.PROFESSION_MUTED),
@@ -45,12 +45,13 @@ public enum ESkillAlignmentType {
 	ABILITY(EEffectFlag.ABILITY_MUTED);
 
 	public static final ESkillAlignmentType[] VALUES = values();
-	@Getter private final EEffectFlag effectFlag;
+	@Getter
+	private final EEffectFlag effectFlag;
 
 	private ESkillAlignmentType(EEffectFlag effectFlag) {
 		this.effectFlag = effectFlag;
 	}
-	
+
 	public String getName() {
 		return name().substring(0, 1) + name().substring(1).toLowerCase();
 	}

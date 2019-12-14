@@ -14,9 +14,9 @@ import net.sf.l2j.gameserver.model.actor.Creature;
  */
 @Data
 public class OnSimpleHit {
-	
+
 	private final Creature attacker;
 	private final Creature target;
 	private final DamageInfo damageInfo;
-	
+
 }

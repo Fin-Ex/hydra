@@ -221,7 +221,7 @@ public class ItemTable {
 					statement.execute();
 					statement.close();
 				} catch (Exception e) {
-					_log.warn( "could not delete pet objectid:", e);
+					_log.warn("could not delete pet objectid:", e);
 				}
 			}
 		}
@@ -239,7 +239,7 @@ public class ItemTable {
 	public Item[] getTemplates() {
 		return _allTemplates;
 	}
-	
+
 	private static class SingletonHolder {
 
 		protected static final ItemTable _instance = new ItemTable();

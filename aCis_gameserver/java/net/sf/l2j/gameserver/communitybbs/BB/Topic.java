@@ -10,13 +10,13 @@ import org.slf4j.Logger;
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.gameserver.communitybbs.Manager.TopicBBSManager;
 
-public class Topic
-{
+public class Topic {
+
 	private static final Logger _log = LoggerFactory.getLogger(Topic.class.getName());
-	
+
 	public static final int MORMAL = 0;
 	public static final int MEMO = 1;
-	
+
 	private final int _id;
 	private final int _forumId;
 	private final String _topicName;
@@ -25,9 +25,8 @@ public class Topic
 	private final int _ownerId;
 	private final int _type;
 	private final int _cReply;
-	
-	public Topic(ConstructorType ct, int id, int fid, String name, long date, String oname, int oid, int type, int Creply)
-	{
+
+	public Topic(ConstructorType ct, int id, int fid, String name, long date, String oname, int oid, int type, int Creply) {
 		_id = id;
 		_forumId = fid;
 		_topicName = name;
@@ -37,15 +36,14 @@ public class Topic
 		_type = type;
 		_cReply = Creply;
 		TopicBBSManager.getInstance().addTopic(this);
-		
-		if (ct == ConstructorType.CREATE)
+
+		if (ct == ConstructorType.CREATE) {
 			insertIntoDb();
+		}
 	}
-	
-	private void insertIntoDb()
-	{
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
-		{
+
+	private void insertIntoDb() {
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
 			PreparedStatement statement = con.prepareStatement("INSERT INTO topic (topic_id,topic_forum_id,topic_name,topic_date,topic_ownername,topic_ownerid,topic_type,topic_reply) values (?,?,?,?,?,?,?,?)");
 			statement.setInt(1, _id);
 			statement.setInt(2, _forumId);
@@ -57,60 +55,48 @@ public class Topic
 			statement.setInt(8, _cReply);
 			statement.execute();
 			statement.close();
-		}
-		catch (Exception e)
-		{
-			_log.warn( "Error while saving new Topic to db " + e.getMessage(), e);
+		} catch (Exception e) {
+			_log.warn("Error while saving new Topic to db " + e.getMessage(), e);
 		}
 	}
-	
-	public enum ConstructorType
-	{
+
+	public enum ConstructorType {
 		RESTORE,
 		CREATE
 	}
-	
-	public int getID()
-	{
+
+	public int getID() {
 		return _id;
 	}
-	
-	public int getForumID()
-	{
+
+	public int getForumID() {
 		return _forumId;
 	}
-	
-	public String getName()
-	{
+
+	public String getName() {
 		return _topicName;
 	}
-	
-	public String getOwnerName()
-	{
+
+	public String getOwnerName() {
 		return _ownerName;
 	}
-	
-	public long getDate()
-	{
+
+	public long getDate() {
 		return _date;
 	}
-	
-	public void deleteMe(Forum f)
-	{
+
+	public void deleteMe(Forum f) {
 		TopicBBSManager.getInstance().delTopic(this);
 		f.rmTopicByID(getID());
-		
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection())
-		{
+
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
 			PreparedStatement statement = con.prepareStatement("DELETE FROM topic WHERE topic_id=? AND topic_forum_id=?");
 			statement.setInt(1, getID());
 			statement.setInt(2, f.getID());
 			statement.execute();
 			statement.close();
-		}
-		catch (Exception e)
-		{
-			_log.warn( "Error while deleting topic: " + e.getMessage(), e);
+		} catch (Exception e) {
+			_log.warn("Error while deleting topic: " + e.getMessage(), e);
 		}
 	}
 }

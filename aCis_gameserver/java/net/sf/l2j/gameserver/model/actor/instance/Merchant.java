@@ -19,68 +19,62 @@ import net.sf.l2j.gameserver.network.serverpackets.ShopPreviewList;
  * Merchant type, it got buy/sell methods && bypasses.<br>
  * It is used as extends for classes such as Fisherman, CastleChamberlain, etc.
  */
-public class Merchant extends Folk
-{
-	public Merchant(int objectId, NpcTemplate template)
-	{
+public class Merchant extends Folk {
+
+	public Merchant(int objectId, NpcTemplate template) {
 		super(objectId, template);
 	}
-	
+
 	@Override
-	public String getHtmlPath(int npcId, int val)
-	{
+	public String getHtmlPath(int npcId, int val) {
 		String filename = "";
-		
-		if (val == 0)
+
+		if (val == 0) {
 			filename = "" + npcId;
-		else
+		} else {
 			filename = npcId + "-" + val;
-		
+		}
+
 		return "data/html/merchant/" + filename + ".htm";
 	}
-	
-	private final void showWearWindow(Player player, int val)
-	{
+
+	private final void showWearWindow(Player player, int val) {
 		final NpcBuyList buyList = BuyListManager.getInstance().getBuyList(val);
-		if (buyList == null || !buyList.isNpcAllowed(getNpcId()))
+		if (buyList == null || !buyList.isNpcAllowed(getNpcId())) {
 			return;
-		
+		}
+
 		player.tempInventoryDisable();
 		player.sendPacket(new ShopPreviewList(buyList, player.getAdena(), player.getExpertiseIndex()));
 	}
-	
-	protected final void showBuyWindow(Player player, int val)
-	{
+
+	protected final void showBuyWindow(Player player, int val) {
 		final NpcBuyList buyList = BuyListManager.getInstance().getBuyList(val);
-		if (buyList == null || !buyList.isNpcAllowed(getNpcId()))
+		if (buyList == null || !buyList.isNpcAllowed(getNpcId())) {
 			return;
-		
+		}
+
 		player.tempInventoryDisable();
 		player.sendPacket(new BuyList(buyList, player.getAdena(), (getCastle() != null) ? getCastle().getTaxRate() : 0));
 	}
-	
+
 	@Override
-	public void onBypassFeedback(Player player, String command)
-	{
+	public void onBypassFeedback(Player player, String command) {
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken(); // Get actual command
-		
-		if (actualCommand.equalsIgnoreCase("Buy"))
-		{
-			if (st.countTokens() < 1)
+
+		if (actualCommand.equalsIgnoreCase("Buy")) {
+			if (st.countTokens() < 1) {
 				return;
-			
+			}
+
 			showBuyWindow(player, Integer.parseInt(st.nextToken()));
-		}
-		else if (actualCommand.equalsIgnoreCase("Sell"))
-		{
+		} else if (actualCommand.equalsIgnoreCase("Sell")) {
 			// Retrieve sellable items.
 			final List<ItemInstance> items = player.getInventory().getSellableItems();
-			if (items.isEmpty())
-			{
+			if (items.isEmpty()) {
 				final String content = HtmCache.getInstance().getHtm("data/html/" + ((this instanceof Fisherman) ? "fisherman" : "merchant") + "/" + getNpcId() + "-empty.htm");
-				if (content != null)
-				{
+				if (content != null) {
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setHtml(content);
 					html.replace("%objectId%", getObjectId());
@@ -88,57 +82,53 @@ public class Merchant extends Folk
 					return;
 				}
 			}
-			
+
 			player.sendPacket(new SellList(player.getAdena(), items));
-		}
-		else if (actualCommand.equalsIgnoreCase("Wear") && Config.ALLOW_WEAR)
-		{
-			if (st.countTokens() < 1)
+		} else if (actualCommand.equalsIgnoreCase("Wear") && Config.ALLOW_WEAR) {
+			if (st.countTokens() < 1) {
 				return;
-			
+			}
+
 			showWearWindow(player, Integer.parseInt(st.nextToken()));
-		}
-		else if (actualCommand.equalsIgnoreCase("Multisell"))
-		{
-			if (st.countTokens() < 1)
+		} else if (actualCommand.equalsIgnoreCase("Multisell")) {
+			if (st.countTokens() < 1) {
 				return;
-			
+			}
+
 			MultisellData.getInstance().separateAndSend(st.nextToken(), player, this, false);
-		}
-		else if (actualCommand.equalsIgnoreCase("Multisell_Shadow"))
-		{
+		} else if (actualCommand.equalsIgnoreCase("Multisell_Shadow")) {
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			
-			if (player.getLevel() < 40)
+
+			if (player.getLevel() < 40) {
 				html.setFile("data/html/common/shadow_item-lowlevel.htm");
-			else if (player.getLevel() < 46)
+			} else if (player.getLevel() < 46) {
 				html.setFile("data/html/common/shadow_item_mi_c.htm");
-			else if (player.getLevel() < 52)
+			} else if (player.getLevel() < 52) {
 				html.setFile("data/html/common/shadow_item_hi_c.htm");
-			else
+			} else {
 				html.setFile("data/html/common/shadow_item_b.htm");
-			
+			}
+
 			html.replace("%objectId%", getObjectId());
 			player.sendPacket(html);
-		}
-		else if (actualCommand.equalsIgnoreCase("Exc_Multisell"))
-		{
-			if (st.countTokens() < 1)
+		} else if (actualCommand.equalsIgnoreCase("Exc_Multisell")) {
+			if (st.countTokens() < 1) {
 				return;
-			
+			}
+
 			MultisellData.getInstance().separateAndSend(st.nextToken(), player, this, true);
-		}
-		else if (actualCommand.equalsIgnoreCase("Newbie_Exc_Multisell"))
-		{
-			if (st.countTokens() < 1)
+		} else if (actualCommand.equalsIgnoreCase("Newbie_Exc_Multisell")) {
+			if (st.countTokens() < 1) {
 				return;
-			
-			if (player.isNewbie())
+			}
+
+			if (player.isNewbie()) {
 				MultisellData.getInstance().separateAndSend(st.nextToken(), player, this, true);
-			else
+			} else {
 				showChatWindow(player, "data/html/exchangelvlimit.htm");
-		}
-		else
+			}
+		} else {
 			super.onBypassFeedback(player, command);
+		}
 	}
 }

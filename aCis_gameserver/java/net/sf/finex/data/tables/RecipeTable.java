@@ -5,7 +5,6 @@
  */
 package net.sf.finex.data.tables;
 
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.File;
@@ -35,7 +34,8 @@ import net.sf.finex.enums.EGradeType;
 @Slf4j
 public final class RecipeTable extends StorageTable {
 
-	@Getter private static final RecipeTable instance = new RecipeTable();
+	@Getter
+	private static final RecipeTable instance = new RecipeTable();
 
 	public static int RECIPE_COUNT;
 
@@ -44,23 +44,23 @@ public final class RecipeTable extends StorageTable {
 	private final Map<EGradeType, List<RecipeData>> armors = new HashMap<>();
 	private final Map<EGradeType, List<RecipeData>> jewels = new HashMap<>();
 	private final List<RecipeData> others = new ArrayList<>();
-	
+
 	public RecipeTable() {
 		load();
 	}
 
 	public RecipeData get(int identifier, boolean byRecipeItemId) {
-		if(!byRecipeItemId) {
+		if (!byRecipeItemId) {
 			return get(identifier);
 		}
-		for(int i = 0; i < holder.size(); i++) {
+		for (int i = 0; i < holder.size(); i++) {
 			final RecipeData recipe = holder.get(i);
 			final int id = recipe.getRecipeItemId();
-			if(id == identifier) {
+			if (id == identifier) {
 				return recipe;
 			}
 		}
-		
+
 		return null;
 	}
 
@@ -69,37 +69,38 @@ public final class RecipeTable extends StorageTable {
 		final Gson gson = new Gson();
 		final File file = new File("data/json/craft/recipes.json");
 		try (Reader reader = new InputStreamReader(new FileInputStream(file))) {
-			holder.addAll(gson.fromJson(reader, new TypeToken<List<RecipeData>>() {}.getType()));
+			holder.addAll(gson.fromJson(reader, new TypeToken<List<RecipeData>>() {
+			}.getType()));
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
 		log.info("Loaded: {} recipe templates.", holder.size());
-		
-		for(RecipeData data : holder) {
+
+		for (RecipeData data : holder) {
 			final Item item = ItemTable.getInstance().getTemplate(data.getProduct().getId());
 			final EGradeType grade = item.getCrystalType();
-			switch(grade) {
+			switch (grade) {
 				case B:
 				case A:
 				case S:
-					if(data.getSuccessRate() == 100) {
+					if (data.getSuccessRate() == 100) {
 						continue;
 					}
 					break;
 			}
-			
-			if(item instanceof Weapon) {
-				if(!weapons.containsKey(grade)) {
+
+			if (item instanceof Weapon) {
+				if (!weapons.containsKey(grade)) {
 					weapons.put(grade, new ArrayList<>());
 				}
 				weapons.get(grade).add(data);
-			} else if(item instanceof Armor) {
-				if(!armors.containsKey(grade)) {
+			} else if (item instanceof Armor) {
+				if (!armors.containsKey(grade)) {
 					armors.put(grade, new ArrayList<>());
 				}
 				armors.get(grade).add(data);
-			} else if(item instanceof Jewel) {
-				if(!jewels.containsKey(grade)) {
+			} else if (item instanceof Jewel) {
+				if (!jewels.containsKey(grade)) {
 					jewels.put(grade, new ArrayList<>());
 				}
 				jewels.get(grade).add(data);
@@ -107,7 +108,7 @@ public final class RecipeTable extends StorageTable {
 				others.add(data);
 			}
 		}
-		
+
 		RECIPE_COUNT = holder.get(holder.size() - 1).getCraftId();
 	}
 
@@ -136,13 +137,13 @@ public final class RecipeTable extends StorageTable {
 
 	@Override
 	public RecipeData get(int identifier) {
-		for(int i = 0; i < holder.size(); i++) {
+		for (int i = 0; i < holder.size(); i++) {
 			final RecipeData recipe = holder.get(i);
-			if(recipe.getCraftId() == identifier) {
+			if (recipe.getCraftId() == identifier) {
 				return recipe;
 			}
 		}
-		
+
 		return null;
 	}
 

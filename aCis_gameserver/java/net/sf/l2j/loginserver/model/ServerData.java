@@ -2,11 +2,11 @@ package net.sf.l2j.loginserver.model;
 
 import org.slf4j.LoggerFactory;
 
-public class ServerData
-{
+public class ServerData {
+
 	private final int _status;
 	private final String _hostName;
-	
+
 	private final int _serverId;
 	private final int _port;
 	private final int _currentPlayers;
@@ -16,12 +16,11 @@ public class ServerData
 	private final boolean _isTestServer;
 	private final boolean _isShowingBrackets;
 	private final boolean _isShowingClock;
-	
-	public ServerData(int status, String hostName, GameServerInfo gsi)
-	{
+
+	public ServerData(int status, String hostName, GameServerInfo gsi) {
 		_status = status;
 		_hostName = hostName;
-		
+
 		_serverId = gsi.getId();
 		_port = gsi.getPort();
 		_currentPlayers = gsi.getCurrentPlayerCount();
@@ -32,59 +31,48 @@ public class ServerData
 		_isShowingBrackets = gsi.isShowingBrackets();
 		_isShowingClock = gsi.isShowingClock();
 	}
-	
-	public int getStatus()
-	{
+
+	public int getStatus() {
 		return _status;
 	}
-	
-	public String getHostName()
-	{
+
+	public String getHostName() {
 		return _hostName;
 	}
-	
-	public int getServerId()
-	{
+
+	public int getServerId() {
 		return _serverId;
 	}
-	
-	public int getPort()
-	{
+
+	public int getPort() {
 		return _port;
 	}
-	
-	public int getCurrentPlayers()
-	{
+
+	public int getCurrentPlayers() {
 		return _currentPlayers;
 	}
-	
-	public int getMaxPlayers()
-	{
+
+	public int getMaxPlayers() {
 		return _maxPlayers;
 	}
-	
-	public int getAgeLimit()
-	{
+
+	public int getAgeLimit() {
 		return _ageLimit;
 	}
-	
-	public boolean isPvp()
-	{
+
+	public boolean isPvp() {
 		return _isPvp;
 	}
-	
-	public boolean isTestServer()
-	{
+
+	public boolean isTestServer() {
 		return _isTestServer;
 	}
-	
-	public boolean isShowingBrackets()
-	{
+
+	public boolean isShowingBrackets() {
 		return _isShowingBrackets;
 	}
-	
-	public boolean isShowingClock()
-	{
+
+	public boolean isShowingClock() {
 		return _isShowingClock;
 	}
 }

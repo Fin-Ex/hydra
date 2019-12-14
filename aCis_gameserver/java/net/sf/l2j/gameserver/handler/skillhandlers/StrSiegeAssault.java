@@ -17,61 +17,62 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
 /**
  * @author _tomciaaa_
  */
-public class StrSiegeAssault implements ISkillHandler
-{
-	private static final ESkillType[] SKILL_IDS =
-	{
-		ESkillType.STRSIEGEASSAULT
-	};
-	
+public class StrSiegeAssault implements ISkillHandler {
+
+	private static final ESkillType[] SKILL_IDS
+			= {
+				ESkillType.STRSIEGEASSAULT
+			};
+
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets)
-	{
-		if (!(activeChar instanceof Player))
+	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+		if (!(activeChar instanceof Player)) {
 			return;
-		
+		}
+
 		final Player player = (Player) activeChar;
-		
-		if (!player.checkIfOkToUseStriderSiegeAssault(skill))
+
+		if (!player.checkIfOkToUseStriderSiegeAssault(skill)) {
 			return;
-		
+		}
+
 		int damage = 0;
-		
+
 		final boolean ss = activeChar.isChargedShot(ShotType.SOULSHOT);
-		
-		for (WorldObject obj : targets)
-		{
-			if (!(obj instanceof Creature))
+
+		for (WorldObject obj : targets) {
+			if (!(obj instanceof Creature)) {
 				continue;
-			
+			}
+
 			final Creature target = ((Creature) obj);
-			if (target.isAlikeDead())
+			if (target.isAlikeDead()) {
 				continue;
-			
+			}
+
 			final DamageInfo info = new DamageInfo();
-			
+
 			info.shieldResult = Formulas.calcShldUse(activeChar, target, null);
 			info.isCrit = Formulas.calcCrit(activeChar.getCriticalHit(target, skill));
-			
-			if (!info.isCrit && (skill.getCondition() & L2Skill.COND_CRIT) != 0)
+
+			if (!info.isCrit && (skill.getCondition() & L2Skill.COND_CRIT) != 0) {
 				damage = 0;
-			else
+			} else {
 				damage = (int) Formulas.calcPhysDam(activeChar, target, skill, info, ss);
-			
-			if (damage > 0)
-			{
+			}
+
+			if (damage > 0) {
 				activeChar.sendDamageMessage(target, damage, false, false, false, false);
 				target.reduceCurrentHp(damage, activeChar, skill);
-			}
-			else
+			} else {
 				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ATTACK_FAILED));
+			}
 		}
 		activeChar.setChargedShot(ShotType.SOULSHOT, skill.isStaticReuse());
 	}
-	
+
 	@Override
-	public ESkillType[] getSkillIds()
-	{
+	public ESkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
 }

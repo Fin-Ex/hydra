@@ -6,48 +6,52 @@ import net.sf.l2j.gameserver.skills.Env;
 
 /**
  * The Class ConditionLogicNot.
+ *
  * @author mkizub
  */
-public class ConditionLogicNot extends Condition
-{
-	
+public class ConditionLogicNot extends Condition {
+
 	private final Condition _condition;
-	
+
 	/**
 	 * Instantiates a new condition logic not.
+	 *
 	 * @param condition the condition
 	 */
-	public ConditionLogicNot(Condition condition)
-	{
+	public ConditionLogicNot(Condition condition) {
 		_condition = condition;
-		if (getListener() != null)
+		if (getListener() != null) {
 			_condition.setListener(this);
+		}
 	}
-	
+
 	/**
 	 * Sets the listener.
+	 *
 	 * @param listener the new listener
-	 * @see net.sf.l2j.gameserver.skills.conditions.Condition#setListener(net.sf.l2j.gameserver.skills.conditions.ConditionListener)
+	 * @see
+	 * net.sf.l2j.gameserver.skills.conditions.Condition#setListener(net.sf.l2j.gameserver.skills.conditions.ConditionListener)
 	 */
 	@Override
-	void setListener(ConditionListener listener)
-	{
-		if (listener != null)
+	void setListener(ConditionListener listener) {
+		if (listener != null) {
 			_condition.setListener(this);
-		else
+		} else {
 			_condition.setListener(null);
+		}
 		super.setListener(listener);
 	}
-	
+
 	/**
 	 * Test impl.
+	 *
 	 * @param env the env
 	 * @return true, if successful
-	 * @see net.sf.l2j.gameserver.skills.conditions.Condition#testImpl(net.sf.l2j.gameserver.skills.Env)
+	 * @see
+	 * net.sf.l2j.gameserver.skills.conditions.Condition#testImpl(net.sf.l2j.gameserver.skills.Env)
 	 */
 	@Override
-	public boolean testImpl(Env env)
-	{
+	public boolean testImpl(Env env) {
 		return !_condition.test(env);
 	}
 }

@@ -17,8 +17,10 @@ import java.lang.annotation.Target;
  * @date 19.05.2019
  */
 public @interface Effect {
-	
-	/** Effect name */
+
+	/**
+	 * Effect name
+	 */
 	String value();
-	
+
 }

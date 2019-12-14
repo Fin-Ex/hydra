@@ -4,10 +4,10 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Zone Ids.
+ *
  * @author Zoey76
  */
-public enum ZoneId
-{
+public enum ZoneId {
 	PVP(0),
 	PEACE(1),
 	SIEGE(2),
@@ -27,21 +27,18 @@ public enum ZoneId
 	CAST_ON_ARTIFACT(16),
 	NO_RESTART(17),
 	SCRIPT(18);
-	
+
 	private final int _id;
-	
-	private ZoneId(int id)
-	{
+
+	private ZoneId(int id) {
 		_id = id;
 	}
-	
-	public int getId()
-	{
+
+	public int getId() {
 		return _id;
 	}
-	
-	public static int getZoneCount()
-	{
+
+	public static int getZoneCount() {
 		return values().length;
 	}
 }

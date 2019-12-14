@@ -12,102 +12,94 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * A mother-trees zone
+ *
  * @author durgus
  */
-public class L2MotherTreeZone extends L2ZoneType
-{
+public class L2MotherTreeZone extends L2ZoneType {
+
 	private int _enterMsg;
 	private int _leaveMsg;
 	private int _mpRegen;
 	private int _hpRegen;
 	private int[] _race;
-	
-	public L2MotherTreeZone(int id)
-	{
+
+	public L2MotherTreeZone(int id) {
 		super(id);
 	}
-	
+
 	@Override
-	public void setParameter(String name, String value)
-	{
-		if (name.equals("enterMsgId"))
+	public void setParameter(String name, String value) {
+		if (name.equals("enterMsgId")) {
 			_enterMsg = Integer.valueOf(value);
-		else if (name.equals("leaveMsgId"))
+		} else if (name.equals("leaveMsgId")) {
 			_leaveMsg = Integer.valueOf(value);
-		else if (name.equals("MpRegenBonus"))
+		} else if (name.equals("MpRegenBonus")) {
 			_mpRegen = Integer.valueOf(value);
-		else if (name.equals("HpRegenBonus"))
+		} else if (name.equals("HpRegenBonus")) {
 			_hpRegen = Integer.valueOf(value);
-		else if (name.equals("affectedRace"))
-		{
+		} else if (name.equals("affectedRace")) {
 			final String[] races = value.split(",");
-			
+
 			_race = new int[races.length];
-			
+
 			int i = 0;
-			for (String race : races)
+			for (String race : races) {
 				_race[i++] = Integer.parseInt(race);
-		}
-		else
+			}
+		} else {
 			super.setParameter(name, value);
+		}
 	}
-	
+
 	@Override
-	protected boolean isAffected(Creature character)
-	{
-		if (character instanceof Player && _race != null)
-		{
-			if (!ArraysUtil.contains(_race, ((Player) character).getRace().ordinal()))
+	protected boolean isAffected(Creature character) {
+		if (character instanceof Player && _race != null) {
+			if (!ArraysUtil.contains(_race, ((Player) character).getRace().ordinal())) {
 				return false;
+			}
 		}
 		return true;
 	}
-	
+
 	@Override
-	protected void onEnter(Creature character)
-	{
-		if (character instanceof Player)
-		{
+	protected void onEnter(Creature character) {
+		if (character instanceof Player) {
 			Player player = (Player) character;
-			
+
 			player.setInsideZone(ZoneId.MOTHER_TREE, true);
-			
-			if (_enterMsg != 0)
+
+			if (_enterMsg != 0) {
 				player.sendPacket(SystemMessage.getSystemMessage(_enterMsg));
+			}
 		}
 	}
-	
+
 	@Override
-	protected void onExit(Creature character)
-	{
-		if (character instanceof Player)
-		{
+	protected void onExit(Creature character) {
+		if (character instanceof Player) {
 			Player player = (Player) character;
-			
+
 			player.setInsideZone(ZoneId.MOTHER_TREE, false);
-			
-			if (_leaveMsg != 0)
+
+			if (_leaveMsg != 0) {
 				player.sendPacket(SystemMessage.getSystemMessage(_leaveMsg));
+			}
 		}
 	}
-	
+
 	@Override
-	public void onDieInside(Creature character)
-	{
+	public void onDieInside(Creature character) {
 	}
-	
+
 	@Override
-	public void onReviveInside(Creature character)
-	{
+	public void onReviveInside(Creature character) {
 	}
-	
-	public int getMpRegenBonus()
-	{
+
+	public int getMpRegenBonus() {
 		return _mpRegen;
 	}
-	
-	public int getHpRegenBonus()
-	{
+
+	public int getHpRegenBonus() {
 		return _hpRegen;
 	}
 }

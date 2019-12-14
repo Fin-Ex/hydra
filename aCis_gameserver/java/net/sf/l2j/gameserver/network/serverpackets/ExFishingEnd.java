@@ -2,20 +2,18 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class ExFishingEnd extends L2GameServerPacket
-{
+public class ExFishingEnd extends L2GameServerPacket {
+
 	private final boolean _win;
 	private final int _playerId;
-	
-	public ExFishingEnd(boolean win, int playerId)
-	{
+
+	public ExFishingEnd(boolean win, int playerId) {
 		_win = win;
 		_playerId = playerId;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x14);
 		writeD(_playerId);

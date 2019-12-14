@@ -30,7 +30,7 @@ public class Multiple extends Craft {
 
 	public Multiple(Player crafter, Player client, RecipeData recipe) {
 		super(crafter, client, recipe);
-		
+
 		// get the item craetion price
 		for (ManufactureItemData temp : crafter.getCreateList().getList()) {
 			if (temp.getCraftId() == recipe.getCraftId()) {
@@ -55,14 +55,14 @@ public class Multiple extends Craft {
 			if (price > 0) {
 				client.transferItem("PayManufacture", client.getInventory().getAdenaInstance().getObjectId(), price, crafter.getInventory(), crafter);
 			}
-			
+
 			crafter.reduceCurrentMp(recipe.getMpConsume());
-			
+
 			success = calculateResult();
 			final boolean hasWsmComponent = warsmith != null;
 			if (success) {
 				reward();
-				if(hasWsmComponent) {
+				if (hasWsmComponent) {
 					warsmith.addExp(recipe);
 				}
 			}

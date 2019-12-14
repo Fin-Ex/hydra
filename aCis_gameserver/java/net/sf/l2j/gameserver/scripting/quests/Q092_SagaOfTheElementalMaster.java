@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q092_SagaOfTheElementalMaster extends SagasSuperClass
-{
-	public Q092_SagaOfTheElementalMaster()
-	{
+public class Q092_SagaOfTheElementalMaster extends SagasSuperClass {
+
+	public Q092_SagaOfTheElementalMaster() {
 		super(92, "Saga of the Elemental Master");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30174,
 			31281,
 			31614,
@@ -25,9 +23,8 @@ public class Q092_SagaOfTheElementalMaster extends SagasSuperClass
 			31659,
 			31614
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7605,
 			7081,
@@ -41,38 +38,34 @@ public class Q092_SagaOfTheElementalMaster extends SagasSuperClass
 			7111,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27314,
 			27241,
 			27311
 		};
-		
+
 		classid = 104;
 		prevclass = 0x1c;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			161719,
 			124376,
 			124355
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-92823,
 			82127,
 			82155
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-1893,
 			-2796,
 			-2803
 		};
-		
+
 		registerNPCs();
 	}
 }

@@ -18,92 +18,85 @@ import org.w3c.dom.Node;
 /**
  * This class loads and stores following Soul Crystal infos :
  * <ul>
- * <li>{@link SoulCrystal} infos related to items (such as level, initial / broken / succeeded itemId) ;</li>
- * <li>{@link LevelingInfo} infos related to NPCs (such as absorb type, chances of fail/success, if the item cast needs to be done and the list of allowed crystal levels).</li>
+ * <li>{@link SoulCrystal} infos related to items (such as level, initial /
+ * broken / succeeded itemId) ;</li>
+ * <li>{@link LevelingInfo} infos related to NPCs (such as absorb type, chances
+ * of fail/success, if the item cast needs to be done and the list of allowed
+ * crystal levels).</li>
  * </ul>
  */
-public class SoulCrystalData extends XMLDocument
-{
+public class SoulCrystalData extends XMLDocument {
+
 	private final Map<Integer, SoulCrystal> _soulCrystals = new HashMap<>();
 	private final Map<Integer, LevelingInfo> _levelingInfos = new HashMap<>();
-	
-	protected SoulCrystalData()
-	{
+
+	protected SoulCrystalData() {
 		load();
 	}
-	
+
 	@Override
-	protected void load()
-	{
+	protected void load() {
 		loadDocument("./data/xml/soulCrystals.xml");
 		LOG.info("Loaded " + _soulCrystals.size() + " Soul Crystals data and " + _levelingInfos.size() + " NPCs data.");
 	}
-	
+
 	@Override
-	protected void parseDocument(Document doc, File file)
-	{
+	protected void parseDocument(Document doc, File file) {
 		// StatsSet used to feed informations. Cleaned on every entry.
 		final StatsSet set = new StatsSet();
-		
+
 		// First element is never read.
 		final Node n = doc.getFirstChild();
-		
-		for (Node o = n.getFirstChild(); o != null; o = o.getNextSibling())
-		{
-			if ("crystals".equalsIgnoreCase(o.getNodeName()))
-			{
-				for (Node d = o.getFirstChild(); d != null; d = d.getNextSibling())
-				{
-					if (!"crystal".equalsIgnoreCase(d.getNodeName()))
+
+		for (Node o = n.getFirstChild(); o != null; o = o.getNextSibling()) {
+			if ("crystals".equalsIgnoreCase(o.getNodeName())) {
+				for (Node d = o.getFirstChild(); d != null; d = d.getNextSibling()) {
+					if (!"crystal".equalsIgnoreCase(d.getNodeName())) {
 						continue;
-					
+					}
+
 					// Parse and feed content.
 					parseAndFeed(d.getAttributes(), set);
-					
+
 					// Feed the map with new data.
 					_soulCrystals.put(set.getInteger("initial"), new SoulCrystal(set));
-					
+
 					// Clear the StatsSet.
 					set.clear();
 				}
-			}
-			else if ("npcs".equalsIgnoreCase(o.getNodeName()))
-			{
-				for (Node d = o.getFirstChild(); d != null; d = d.getNextSibling())
-				{
-					if (!"npc".equalsIgnoreCase(d.getNodeName()))
+			} else if ("npcs".equalsIgnoreCase(o.getNodeName())) {
+				for (Node d = o.getFirstChild(); d != null; d = d.getNextSibling()) {
+					if (!"npc".equalsIgnoreCase(d.getNodeName())) {
 						continue;
-					
+					}
+
 					// Parse and feed content.
 					parseAndFeed(d.getAttributes(), set);
-					
+
 					// Feed the map with new data.
 					_levelingInfos.put(set.getInteger("id"), new LevelingInfo(set));
-					
+
 					// Clear the StatsSet.
 					set.clear();
 				}
 			}
 		}
 	}
-	
-	public final Map<Integer, SoulCrystal> getSoulCrystals()
-	{
+
+	public final Map<Integer, SoulCrystal> getSoulCrystals() {
 		return _soulCrystals;
 	}
-	
-	public final Map<Integer, LevelingInfo> getLevelingInfos()
-	{
+
+	public final Map<Integer, LevelingInfo> getLevelingInfos() {
 		return _levelingInfos;
 	}
-	
-	public static SoulCrystalData getInstance()
-	{
+
+	public static SoulCrystalData getInstance() {
 		return SingletonHolder.INSTANCE;
 	}
-	
-	private static class SingletonHolder
-	{
+
+	private static class SingletonHolder {
+
 		protected static final SoulCrystalData INSTANCE = new SoulCrystalData();
 	}
 }

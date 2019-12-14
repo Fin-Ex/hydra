@@ -10,7 +10,9 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
-/** Task for potion and herb queue */
+/**
+ * Task for potion and herb queue
+ */
 public class UsePotionTask implements Runnable {
 
 	private final Creature caster;

@@ -2,17 +2,15 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class CharCreateOk extends L2GameServerPacket
-{
+public class CharCreateOk extends L2GameServerPacket {
+
 	public static final CharCreateOk STATIC_PACKET = new CharCreateOk();
-	
-	private CharCreateOk()
-	{
+
+	private CharCreateOk() {
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x19);
 		writeD(0x01);
 	}

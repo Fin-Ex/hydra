@@ -6,18 +6,16 @@ import net.sf.l2j.gameserver.data.CharTemplateTable;
 import net.sf.l2j.gameserver.model.base.ClassId;
 import net.sf.l2j.gameserver.network.serverpackets.CharTemplates;
 
-public final class NewCharacter extends L2GameClientPacket
-{
+public final class NewCharacter extends L2GameClientPacket {
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		CharTemplates ct = new CharTemplates();
-		
+
 		ct.addChar(CharTemplateTable.getInstance().getTemplate(0));
 		ct.addChar(CharTemplateTable.getInstance().getTemplate(ClassId.HumanFighter));
 		ct.addChar(CharTemplateTable.getInstance().getTemplate(ClassId.HymanMystic));
@@ -28,7 +26,7 @@ public final class NewCharacter extends L2GameClientPacket
 		ct.addChar(CharTemplateTable.getInstance().getTemplate(ClassId.OrcFighter));
 		ct.addChar(CharTemplateTable.getInstance().getTemplate(ClassId.OrcMystic));
 		ct.addChar(CharTemplateTable.getInstance().getTemplate(ClassId.DwarvenFighter));
-		
+
 		sendPacket(ct);
 	}
 }

@@ -10,7 +10,7 @@ import net.sf.l2j.gameserver.skills.Env;
 public class EffectRiposteStance extends EffectManaDamOverTime {
 
 	private final Player caster;
-	
+
 	public EffectRiposteStance(Env env, EffectTemplate template) {
 		super(env, template);
 		caster = env.getPlayer();

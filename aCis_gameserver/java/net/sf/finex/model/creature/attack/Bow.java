@@ -5,7 +5,6 @@
  */
 package net.sf.finex.model.creature.attack;
 
-
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.events.OnBowHit;
@@ -31,7 +30,7 @@ public class Bow extends AbstractHit {
 
 		DamageInfo info = new DamageInfo();
 		info.isMiss = Formulas.calcHitMiss(attacker, target);
-		
+
 		// Consume arrows
 		attacker.reduceArrowCount();
 

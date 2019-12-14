@@ -11,45 +11,39 @@ import net.sf.l2j.gameserver.templates.skills.EEffectFlag;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
 @Effect("Petrification")
-public class EffectPetrification extends L2Effect
-{
-	public EffectPetrification(Env env, EffectTemplate template)
-	{
+public class EffectPetrification extends L2Effect {
+
+	public EffectPetrification(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.PETRIFICATION;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_2);
 		getEffected().startParalyze();
 		getEffected().setIsInvul(true);
 		return true;
 	}
-	
+
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopAbnormalEffect(AbnormalEffect.HOLD_2);
 		getEffected().stopParalyze(false);
 		getEffected().setIsInvul(false);
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
-	
+
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return EEffectFlag.PARALYZED.getMask();
 	}
 }

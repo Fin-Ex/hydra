@@ -2,18 +2,16 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class PledgeShowMemberListDelete extends L2GameServerPacket
-{
+public class PledgeShowMemberListDelete extends L2GameServerPacket {
+
 	private final String _player;
-	
-	public PledgeShowMemberListDelete(String playerName)
-	{
+
+	public PledgeShowMemberListDelete(String playerName) {
 		_player = playerName;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x56);
 		writeS(_player);
 	}

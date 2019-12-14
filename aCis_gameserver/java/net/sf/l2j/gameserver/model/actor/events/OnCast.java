@@ -15,6 +15,7 @@ import net.sf.l2j.gameserver.skills.L2Skill;
  */
 @Data
 public class OnCast {
+
 	private final Creature caster, target;
 	private final L2Skill skill;
 }

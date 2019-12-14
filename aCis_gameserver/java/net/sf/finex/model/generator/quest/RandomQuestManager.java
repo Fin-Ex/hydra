@@ -27,8 +27,6 @@ import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.random.Rnd;
 import net.sf.l2j.gameserver.data.ItemTable;
 import net.sf.l2j.gameserver.data.NpcTable;
-import net.sf.l2j.gameserver.data.SpawnTable;
-import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.actor.Npc;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.events.OnLogout;
@@ -56,7 +54,6 @@ import net.sf.l2j.gameserver.model.actor.template.NpcTemplate;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
-import static net.sf.l2j.gameserver.network.SystemMessageId.QUEST_S1_WAS_COMPLETED;
 import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
@@ -70,14 +67,20 @@ import net.sf.l2j.gameserver.util.Broadcast;
 @Slf4j
 public class RandomQuestManager implements Runnable {
 
-	@Getter private static final RandomQuestManager instance = new RandomQuestManager();
-	@Getter private final Map<ETownType, Map<EGradeType, List<RandomQuestData>>> holder = new HashMap<>();
-	@Getter private final EventBus eventBus = new EventBus();
+	@Getter
+	private static final RandomQuestManager instance = new RandomQuestManager();
+	@Getter
+	private final Map<ETownType, Map<EGradeType, List<RandomQuestData>>> holder = new HashMap<>();
+	@Getter
+	private final EventBus eventBus = new EventBus();
 
 	// Monster holders
-	@Getter private final Map<Integer, List<NpcTemplate>> bosses = new HashMap<>();
-	@Getter private final Map<Integer, List<NpcTemplate>> monsters = new HashMap<>();
-	@Getter private final List<NpcTemplate> npcs = new ArrayList<>();
+	@Getter
+	private final Map<Integer, List<NpcTemplate>> bosses = new HashMap<>();
+	@Getter
+	private final Map<Integer, List<NpcTemplate>> monsters = new HashMap<>();
+	@Getter
+	private final List<NpcTemplate> npcs = new ArrayList<>();
 
 	private final ReentrantLock locker = new ReentrantLock();
 	private LocalDateTime nextGeneration;
@@ -185,7 +188,7 @@ public class RandomQuestManager implements Runnable {
 			player.sendPacket(SystemMessageId.YOU_HAVE_A_PENALTY_FOR_TAKE_A_QUEST);
 			return;
 		}
-		
+
 		if (quest.getType() == ERandomQuestType.Item_Deliver) {
 			int weightQuestItems = quest.getCondition().getValue() * ItemTable.getInstance().getTemplate(DeliverItemBuilder.DELIVER_ITEM_ID).getWeight();
 			if (!player.getInventory().validateWeight(weightQuestItems)) {

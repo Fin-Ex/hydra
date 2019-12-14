@@ -19,60 +19,60 @@ import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 
 /**
- * @author Didldak Some parts taken from EffectWarp, which cannot be used for this case.
+ * @author Didldak Some parts taken from EffectWarp, which cannot be used for
+ * this case.
  */
-public class InstantJump implements ISkillHandler
-{
-	private static final ESkillType[] SKILL_IDS =
-	{
-		ESkillType.INSTANT_JUMP
-	};
-	
+public class InstantJump implements ISkillHandler {
+
+	private static final ESkillType[] SKILL_IDS
+			= {
+				ESkillType.INSTANT_JUMP
+			};
+
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets)
-	{
+	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
 		Creature target = (Creature) targets[0];
-		
-		if (Formulas.calcPhysicalSkillEvasion(target, skill))
-		{
-			if (activeChar instanceof Player)
+
+		if (Formulas.calcPhysicalSkillEvasion(target, skill)) {
+			if (activeChar instanceof Player) {
 				((Player) activeChar).sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_DODGES_ATTACK).addCharName(target));
-			
+			}
+
 			return;
 		}
-		
+
 		int x = 0, y = 0, z = 0;
-		
+
 		int px = target.getX();
 		int py = target.getY();
 		double ph = MathUtil.convertHeadingToDegree(target.getHeading());
-		
+
 		ph += 180;
-		
-		if (ph > 360)
+
+		if (ph > 360) {
 			ph -= 360;
-		
+		}
+
 		ph = (Math.PI * ph) / 180;
-		
+
 		x = (int) (px + (25 * Math.cos(ph)));
 		y = (int) (py + (25 * Math.sin(ph)));
 		z = target.getZ();
-		
+
 		activeChar.getAI().setIntention(CtrlIntention.IDLE);
 		activeChar.broadcastPacket(new FlyToLocation(activeChar, x, y, z, FlyType.DUMMY));
 		activeChar.abortAttack();
 		activeChar.abortCast();
-		
+
 		activeChar.setXYZ(x, y, z);
 		activeChar.broadcastPacket(new ValidateLocation(activeChar));
 	}
-	
+
 	/**
 	 * @see net.sf.l2j.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
 	@Override
-	public ESkillType[] getSkillIds()
-	{
+	public ESkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
 }

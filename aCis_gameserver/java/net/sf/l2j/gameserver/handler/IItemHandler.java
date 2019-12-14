@@ -10,12 +10,13 @@ import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 /**
  * Mother class of all itemHandlers.
  */
-public interface IItemHandler
-{
+public interface IItemHandler {
+
 	public static Logger _log = LoggerFactory.getLogger(IItemHandler.class.getName());
-	
+
 	/**
 	 * Launch task associated to the item.
+	 *
 	 * @param playable L2Playable designating the player
 	 * @param item ItemInstance designating the item to use
 	 * @param forceUse ctrl hold on item use

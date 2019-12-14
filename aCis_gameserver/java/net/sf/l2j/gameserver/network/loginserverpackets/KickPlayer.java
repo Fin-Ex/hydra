@@ -2,19 +2,17 @@ package net.sf.l2j.gameserver.network.loginserverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class KickPlayer extends LoginServerBasePacket
-{
+public class KickPlayer extends LoginServerBasePacket {
+
 	private final String _account;
-	
-	public KickPlayer(byte[] decrypt)
-	{
+
+	public KickPlayer(byte[] decrypt) {
 		super(decrypt);
-		
+
 		_account = readS();
 	}
-	
-	public String getAccount()
-	{
+
+	public String getAccount() {
 		return _account;
 	}
 }

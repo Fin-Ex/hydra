@@ -5,49 +5,46 @@ import org.slf4j.LoggerFactory;
 import net.sf.l2j.gameserver.model.actor.Playable;
 
 /**
- * This class is used to retain damage infos made on a L2Attackable. It is used for reward purposes.
+ * This class is used to retain damage infos made on a L2Attackable. It is used
+ * for reward purposes.
  */
-public final class RewardInfo
-{
+public final class RewardInfo {
+
 	private final Playable _attacker;
-	
+
 	private int _damage;
-	
-	public RewardInfo(Playable attacker)
-	{
+
+	public RewardInfo(Playable attacker) {
 		_attacker = attacker;
 	}
-	
-	public Playable getAttacker()
-	{
+
+	public Playable getAttacker() {
 		return _attacker;
 	}
-	
-	public void addDamage(int damage)
-	{
+
+	public void addDamage(int damage) {
 		_damage += damage;
 	}
-	
-	public int getDamage()
-	{
+
+	public int getDamage() {
 		return _damage;
 	}
-	
+
 	@Override
-	public final boolean equals(Object obj)
-	{
-		if (this == obj)
+	public final boolean equals(Object obj) {
+		if (this == obj) {
 			return true;
-		
-		if (obj instanceof RewardInfo)
+		}
+
+		if (obj instanceof RewardInfo) {
 			return (((RewardInfo) obj)._attacker == _attacker);
-		
+		}
+
 		return false;
 	}
-	
+
 	@Override
-	public final int hashCode()
-	{
+	public final int hashCode() {
 		return _attacker.getObjectId();
 	}
 }

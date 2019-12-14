@@ -17,47 +17,45 @@ import net.sf.l2j.gameserver.templates.StatsSet;
 /**
  * @author Nemesiss
  */
-public class L2SkillCreateItem extends L2Skill
-{
+public class L2SkillCreateItem extends L2Skill {
+
 	private final int[] _createItemId;
 	private final int _createItemCount;
 	private final int _randomCount;
-	
-	public L2SkillCreateItem(StatsSet set)
-	{
+
+	public L2SkillCreateItem(StatsSet set) {
 		super(set);
 		_createItemId = set.getIntegerArray("create_item_id");
 		_createItemCount = set.getInteger("create_item_count", 0);
 		_randomCount = set.getInteger("random_count", 1);
 	}
-	
+
 	/**
-	 * @see net.sf.l2j.gameserver.skills.L2Skill#useSkill(net.sf.l2j.gameserver.model.actor.Creature, net.sf.l2j.gameserver.model.WorldObject[])
+	 * @see
+	 * net.sf.l2j.gameserver.skills.L2Skill#useSkill(net.sf.l2j.gameserver.model.actor.Creature,
+	 * net.sf.l2j.gameserver.model.WorldObject[])
 	 */
 	@Override
-	public void useSkill(Creature activeChar, WorldObject[] targets)
-	{
+	public void useSkill(Creature activeChar, WorldObject[] targets) {
 		Player player = activeChar.getPlayer();
-		if (activeChar.isAlikeDead())
+		if (activeChar.isAlikeDead()) {
 			return;
-		
-		if (activeChar instanceof Playable)
-		{
-			if (_createItemId == null || _createItemCount == 0)
-			{
+		}
+
+		if (activeChar instanceof Playable) {
+			if (_createItemId == null || _createItemCount == 0) {
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
 				sm.addSkillName(this);
 				activeChar.sendPacket(sm);
 				return;
 			}
-			
+
 			int count = _createItemCount + Rnd.get(_randomCount);
 			int rndid = Rnd.get(_createItemId.length);
-			
-			if (activeChar instanceof Player)
+
+			if (activeChar instanceof Player) {
 				player.addItem("Skill", _createItemId[rndid], count, activeChar, true);
-			else if (activeChar instanceof Pet)
-			{
+			} else if (activeChar instanceof Pet) {
 				activeChar.getInventory().addItem("Skill", _createItemId[rndid], count, player, activeChar);
 				player.sendPacket(new PetItemList((Pet) activeChar));
 			}

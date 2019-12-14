@@ -165,7 +165,7 @@ abstract class DocumentBase {
 		Stats stat = Stats.valueOfXml(attrs.getNamedItem("stat").getNodeValue());
 		String order = attrs.getNamedItem("order").getNodeValue();
 		Lambda lambda = getLambda(n, template);
-		if(attrs.getNamedItem("bonus") != null) {
+		if (attrs.getNamedItem("bonus") != null) {
 			lambda.setBonus(EEffectBonusType.valueOf(attrs.getNamedItem("bonus").getNodeValue()));
 		}
 		int ord = Integer.decode(getValue(order, template));
@@ -197,7 +197,7 @@ abstract class DocumentBase {
 
 		StatsSet set = new StatsSet();
 		set.set("effectName", effectName);
-		
+
 		// Keep this values as default ones, DP needs it
 		if (attrs.getNamedItem("count") != null) {
 			set.set("count", Integer.decode(getValue(attrs.getNamedItem("count").getNodeValue(), template)));
@@ -277,24 +277,24 @@ abstract class DocumentBase {
 			throw new NoSuchElementException("Invalid chance condition: " + chanceCond + " " + actchance);
 		}
 
-		if(attrs.getNamedItem("dependType") != null) {
+		if (attrs.getNamedItem("dependType") != null) {
 			set.set("dependType", EDependType.valueOf(getValue(attrs.getNamedItem("dependType").getNodeValue(), template)));
 		}
-		
-		if(attrs.getNamedItem("bonus") != null) {
+
+		if (attrs.getNamedItem("bonus") != null) {
 			set.set("bonus", EEffectBonusType.valueOf(getValue(attrs.getNamedItem("bonus").getNodeValue(), template)));
 		} else {
 			set.set("bonus", EEffectBonusType.NONE);
 		}
-		
-		for(Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-			if("param".equalsIgnoreCase(d.getNodeName())) {
+
+		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+			if ("param".equalsIgnoreCase(d.getNodeName())) {
 				final NamedNodeMap paramAttrs = d.getAttributes();
 				final String name = paramAttrs.getNamedItem("name").getNodeValue();
 				set.set(name, getValue(paramAttrs.getNamedItem("val").getNodeValue(), template));
 			}
 		}
-		
+
 		final EffectTemplate effectTemplate = new EffectTemplate(effectName, set);
 		parseTemplate(n, effectTemplate);
 		if (template instanceof L2Skill) {
@@ -688,12 +688,12 @@ abstract class DocumentBase {
 					// table by level
 					return new LambdaConst(Double.parseDouble(getTableValue(val)));
 				case '$':
-					for(LambdaStats.StatsType t : LambdaStats.StatsType.values()) {
-						if(val.equalsIgnoreCase(t.toString())) {
+					for (LambdaStats.StatsType t : LambdaStats.StatsType.values()) {
+						if (val.equalsIgnoreCase(t.toString())) {
 							return new LambdaStats(t);
 						}
 					}
-					
+
 					// try to find value out of item fields
 					StatsSet set = getStatsSet();
 					String field = set.getString(val.substring(1));

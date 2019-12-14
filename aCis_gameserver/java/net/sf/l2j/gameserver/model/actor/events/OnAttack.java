@@ -15,6 +15,7 @@ import net.sf.l2j.gameserver.model.actor.Creature;
  */
 @Data
 public class OnAttack {
+
 	private final Creature attacker, target;
 	private final DamageInfo info;
 }

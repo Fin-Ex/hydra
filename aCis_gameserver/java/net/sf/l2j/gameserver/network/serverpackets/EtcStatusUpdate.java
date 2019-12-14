@@ -9,18 +9,16 @@ import net.sf.l2j.gameserver.templates.skills.EEffectFlag;
 /**
  * @author Luca Baldi
  */
-public class EtcStatusUpdate extends L2GameServerPacket
-{
+public class EtcStatusUpdate extends L2GameServerPacket {
+
 	private final Player _activeChar;
-	
-	public EtcStatusUpdate(Player activeChar)
-	{
+
+	public EtcStatusUpdate(Player activeChar) {
 		_activeChar = activeChar;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xF3);
 		writeD(_activeChar.getCharges());
 		writeD(_activeChar.getWeightPenalty());

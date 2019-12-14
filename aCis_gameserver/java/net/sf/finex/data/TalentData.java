@@ -14,11 +14,13 @@ import net.sf.l2j.gameserver.data.SkillTable;
  */
 @Data
 public class TalentData {
+
 	private final int id;
 	private final int requiredLevel;
 	private final int requiredTalent;
 	private final int skillId;
 	private final String name, descr;
+
 	public final String getIcon() {
 		return "v1c01.talent_" + SkillTable.getInstance().getInfo(skillId, 1).getName().replace(" ", "_");
 	}

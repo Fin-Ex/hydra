@@ -330,13 +330,13 @@ public class VillageMaster extends Folk {
 						if (!player.addSubClass(paramOne, player.getSubClasses().size() + 1)) {
 							return;
 						}
-						
+
 						// remove old class component
 						player.removeClassComponent();
 						player.setActiveClass(player.getSubClasses().size());
 						player.createClassComponent();
 						LineagePointsManager.getInstance().prepareForNewSubclass(player);
-						
+
 						html.setFile("data/html/villagemaster/SubClass_AddOk.htm");
 						player.sendPacket(SystemMessageId.ADD_NEW_SUBCLASS); // Subclass added.
 					} else {

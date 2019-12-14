@@ -30,9 +30,12 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 @Slf4j
 public class RandomQuestHtmlManager {
 
-	@Getter private static final RandomQuestHtmlManager instance = new RandomQuestHtmlManager();
-	@Getter private final Map<ETownType, Map<EGradeType, StringBuilder>> questListTable = new HashMap<>();
-	@Getter private final Map<Integer, String> questDescription = new HashMap<>();
+	@Getter
+	private static final RandomQuestHtmlManager instance = new RandomQuestHtmlManager();
+	@Getter
+	private final Map<ETownType, Map<EGradeType, StringBuilder>> questListTable = new HashMap<>();
+	@Getter
+	private final Map<Integer, String> questDescription = new HashMap<>();
 
 	public void build() {
 		buildQuestList();
@@ -53,7 +56,7 @@ public class RandomQuestHtmlManager {
 					if (questData.isDone()) {
 						continue;
 					}
-					
+
 					sb.append("<tr><td>");
 					sb.append("<a action=\"bypass -h npc_%objectId%_rndquest ")
 							.append(questData.getId()).append("\">")

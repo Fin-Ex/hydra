@@ -23,8 +23,10 @@ public enum ECraftSpec {
 	JEWEL("Jewel Specialize", "Jewel"),
 	PRODUCTION("Production Specialize", "Production");
 
-	@Getter private final String name;
-	@Getter private final String simpleName;
+	@Getter
+	private final String name;
+	@Getter
+	private final String simpleName;
 
 	private ECraftSpec(String name, String simpleName) {
 		this.name = name;

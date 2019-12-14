@@ -14,5 +14,6 @@ import net.sf.l2j.gameserver.model.actor.Player;
  * @author FinFan
  */
 public interface IDialogAnswer {
+
 	public void handle(Player activeChar, int answer, int requesterId);
 }

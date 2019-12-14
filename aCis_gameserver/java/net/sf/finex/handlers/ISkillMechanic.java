@@ -12,5 +12,6 @@ import org.slf4j.LoggerFactory;
  * @author FinFan
  */
 public interface ISkillMechanic {
-	public void invoke(Object...args);
+
+	public void invoke(Object... args);
 }

@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q090_SagaOfTheStormScreamer extends SagasSuperClass
-{
-	public Q090_SagaOfTheStormScreamer()
-	{
+public class Q090_SagaOfTheStormScreamer extends SagasSuperClass {
+
+	public Q090_SagaOfTheStormScreamer() {
 		super(90, "Saga of the Storm Screamer");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			30175,
 			31627,
 			31287,
@@ -25,9 +23,8 @@ public class Q090_SagaOfTheStormScreamer extends SagasSuperClass
 			31659,
 			31287
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7531,
 			7081,
@@ -41,38 +38,34 @@ public class Q090_SagaOfTheStormScreamer extends SagasSuperClass
 			7084,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27252,
 			27239,
 			27256
 		};
-		
+
 		classid = 110;
 		prevclass = 0x28;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			161719,
 			124376,
 			124355
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-92823,
 			82127,
 			82155
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-1893,
 			-2796,
 			-2803
 		};
-		
+
 		registerNPCs();
 	}
 }

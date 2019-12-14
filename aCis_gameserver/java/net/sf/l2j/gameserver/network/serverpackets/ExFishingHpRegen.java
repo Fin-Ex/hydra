@@ -6,15 +6,15 @@ import net.sf.l2j.gameserver.model.actor.Creature;
 
 /**
  * Format (ch)dddcccd
+ *
  * @author -Wooden-
  */
-public class ExFishingHpRegen extends L2GameServerPacket
-{
+public class ExFishingHpRegen extends L2GameServerPacket {
+
 	private final Creature _activeChar;
 	private final int _time, _fishHP, _hpMode, _anim, _goodUse, _penalty, _hpBarColor;
-	
-	public ExFishingHpRegen(Creature character, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor)
-	{
+
+	public ExFishingHpRegen(Creature character, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor) {
 		_activeChar = character;
 		_time = time;
 		_fishHP = fishHP;
@@ -24,13 +24,12 @@ public class ExFishingHpRegen extends L2GameServerPacket
 		_penalty = penalty;
 		_hpBarColor = hpBarColor;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x16);
-		
+
 		writeD(_activeChar.getObjectId());
 		writeD(_time);
 		writeD(_fishHP);

@@ -11,57 +11,47 @@ import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.MoveToPawn;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
-public final class HolyThing extends Folk
-{
-	public HolyThing(int objectId, NpcTemplate template)
-	{
+public final class HolyThing extends Folk {
+
+	public HolyThing(int objectId, NpcTemplate template) {
 		super(objectId, template);
 	}
-	
+
 	@Override
-	public void onAction(Player player)
-	{
+	public void onAction(Player player) {
 		// Set the target of the player
-		if (player.getTarget() != this)
+		if (player.getTarget() != this) {
 			player.setTarget(this);
-		else
-		{
+		} else {
 			// Calculate the distance between the Player and the L2Npc
-			if (!canInteract(player))
-			{
+			if (!canInteract(player)) {
 				// Notify the Player AI with INTERACT
 				player.getAI().setIntention(CtrlIntention.INTERACT, this);
-			}
-			else
-			{
+			} else {
 				// Rotate the player to face the instance
 				player.sendPacket(new MoveToPawn(player, this, Npc.INTERACTION_DISTANCE));
-				
+
 				// Send ActionFailed to the player in order to avoid he stucks
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 			}
 		}
 	}
-	
+
 	@Override
-	public boolean isAttackable()
-	{
+	public boolean isAttackable() {
 		return false;
 	}
-	
+
 	@Override
-	public void onForcedAttack(Player player)
-	{
+	public void onForcedAttack(Player player) {
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
-	
+
 	@Override
-	public void reduceCurrentHp(double damage, Creature attacker, L2Skill skill)
-	{
+	public void reduceCurrentHp(double damage, Creature attacker, L2Skill skill) {
 	}
-	
+
 	@Override
-	public void reduceCurrentHp(double damage, Creature attacker, boolean awake, boolean isDOT, L2Skill skill)
-	{
+	public void reduceCurrentHp(double damage, Creature attacker, boolean awake, boolean isDOT, L2Skill skill) {
 	}
 }

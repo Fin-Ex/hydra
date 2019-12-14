@@ -14,36 +14,38 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
 /**
  * @author _drunk_
  */
-public class TakeCastle implements ISkillHandler
-{
-	private static final ESkillType[] SKILL_IDS =
-	{
-		ESkillType.TAKECASTLE
-	};
-	
+public class TakeCastle implements ISkillHandler {
+
+	private static final ESkillType[] SKILL_IDS
+			= {
+				ESkillType.TAKECASTLE
+			};
+
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets)
-	{
-		if (activeChar == null || !(activeChar instanceof Player))
+	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+		if (activeChar == null || !(activeChar instanceof Player)) {
 			return;
-		
-		if (targets.length == 0)
+		}
+
+		if (targets.length == 0) {
 			return;
-		
+		}
+
 		final Player player = (Player) activeChar;
-		if (!player.isClanLeader())
+		if (!player.isClanLeader()) {
 			return;
-		
+		}
+
 		final Castle castle = CastleManager.getInstance().getCastle(player);
-		if (castle == null || !player.checkIfOkToCastSealOfRule(castle, true, skill, targets[0]))
+		if (castle == null || !player.checkIfOkToCastSealOfRule(castle, true, skill, targets[0])) {
 			return;
-		
+		}
+
 		castle.engrave(player.getClan(), targets[0]);
 	}
-	
+
 	@Override
-	public ESkillType[] getSkillIds()
-	{
+	public ESkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
 }

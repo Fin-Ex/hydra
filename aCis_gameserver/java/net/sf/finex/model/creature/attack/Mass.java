@@ -67,10 +67,10 @@ public class Mass extends Simple {
 				}
 			}
 
-			if(!MathUtil.checkIfInShortRadius(maxRadius, attacker, potentialTarget, false)) {
+			if (!MathUtil.checkIfInShortRadius(maxRadius, attacker, potentialTarget, false)) {
 				continue;
 			}
-			
+
 			// otherwise hit too high/low. 650 because mob z coord sometimes wrong on hills
 			if (Math.abs(potentialTarget.getZ() - attacker.getZ()) > 650) {
 				continue;

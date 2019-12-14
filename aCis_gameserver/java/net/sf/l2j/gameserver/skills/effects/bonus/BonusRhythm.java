@@ -16,15 +16,15 @@ public class BonusRhythm implements IBonusHandler {
 
 	@Override
 	public double calc(Creature creature) {
-		if(!creature.isPlayer()) {
+		if (!creature.isPlayer()) {
 			return 1;
 		}
-		
+
 		final Bladedancer bd = creature.getPlayer().getComponent(Bladedancer.class);
-		if(bd != null) {
+		if (bd != null) {
 			return bd.calcRhythm();
 		}
 		return 1;
 	}
-	
+
 }

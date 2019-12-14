@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q099_SagaOfTheFortuneSeeker extends SagasSuperClass
-{
-	public Q099_SagaOfTheFortuneSeeker()
-	{
+public class Q099_SagaOfTheFortuneSeeker extends SagasSuperClass {
+
+	public Q099_SagaOfTheFortuneSeeker() {
 		super(99, "Saga of the Fortune Seeker");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			31594,
 			31623,
 			31600,
@@ -25,9 +23,8 @@ public class Q099_SagaOfTheFortuneSeeker extends SagasSuperClass
 			31657,
 			31600
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7608,
 			7081,
@@ -41,38 +38,34 @@ public class Q099_SagaOfTheFortuneSeeker extends SagasSuperClass
 			7109,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27259,
 			27248,
 			27309
 		};
-		
+
 		classid = 117;
 		prevclass = 0x37;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			191046,
 			46066,
 			46087
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-40640,
 			-36396,
 			-36372
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-3042,
 			-1685,
 			-1685
 		};
-		
+
 		registerNPCs();
 	}
 }

@@ -7,23 +7,20 @@ import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.skills.Stats;
 import net.sf.l2j.gameserver.skills.basefuncs.Func;
 
-public class FuncMAtkSpeed extends Func
-{
+public class FuncMAtkSpeed extends Func {
+
 	static final FuncMAtkSpeed _fas_instance = new FuncMAtkSpeed();
-	
-	public static Func getInstance()
-	{
+
+	public static Func getInstance() {
 		return _fas_instance;
 	}
-	
-	private FuncMAtkSpeed()
-	{
+
+	private FuncMAtkSpeed() {
 		super(Stats.MAtkSpd, 0x20, null, null);
 	}
-	
+
 	@Override
-	public void calc(Env env)
-	{
+	public void calc(Env env) {
 		env.mulValue(Formulas.WIT_BONUS[env.getCharacter().getWIT()]);
 	}
 }

@@ -5,10 +5,9 @@ import org.slf4j.LoggerFactory;
 /**
  * @author glory to Setekh for IL opcode ;p
  */
-public class ExShowScreenMessage extends L2GameServerPacket
-{
-	public static enum SMPOS
-	{
+public class ExShowScreenMessage extends L2GameServerPacket {
+
+	public static enum SMPOS {
 		DUMMY,
 		TOP_LEFT,
 		TOP_CENTER,
@@ -19,7 +18,7 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		BOTTOM_CENTER,
 		BOTTOM_RIGHT,
 	}
-	
+
 	private final int _type;
 	private final int _sysMessageId;
 	private final boolean _hide;
@@ -31,9 +30,8 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	private final boolean _effect;
 	private final String _text;
 	private final int _time;
-	
-	public ExShowScreenMessage(String text, int time)
-	{
+
+	public ExShowScreenMessage(String text, int time) {
 		_type = 1;
 		_sysMessageId = -1;
 		_hide = false;
@@ -46,14 +44,12 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_size = 0;
 		_effect = false;
 	}
-	
-	public ExShowScreenMessage(String text, int time, SMPOS pos, boolean effect)
-	{
+
+	public ExShowScreenMessage(String text, int time, SMPOS pos, boolean effect) {
 		this(text, time, pos.ordinal(), effect);
 	}
-	
-	public ExShowScreenMessage(String text, int time, int pos, boolean effect)
-	{
+
+	public ExShowScreenMessage(String text, int time, int pos, boolean effect) {
 		_type = 1;
 		_sysMessageId = -1;
 		_hide = false;
@@ -66,9 +62,8 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_size = 0;
 		_effect = effect;
 	}
-	
-	public ExShowScreenMessage(int type, int messageId, int position, boolean hide, int size, int unk2, int unk3, boolean showEffect, int time, boolean fade, String text)
-	{
+
+	public ExShowScreenMessage(int type, int messageId, int position, boolean hide, int size, int unk2, int unk3, boolean showEffect, int time, boolean fade, String text) {
 		_type = type;
 		_sysMessageId = messageId;
 		_hide = hide;
@@ -81,10 +76,9 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_size = size;
 		_effect = showEffect;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x38);
 		writeD(_type); // 0 - system messages, 1 - your defined text

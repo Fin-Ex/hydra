@@ -17,8 +17,11 @@ import net.sf.l2j.gameserver.model.actor.Player;
  */
 public class RandomQuestComponent extends AbstractComponent {
 
-	@Getter @Setter private RandomQuestData quest;
-	@Setter private long timeStamp;
+	@Getter
+	@Setter
+	private RandomQuestData quest;
+	@Setter
+	private long timeStamp;
 
 	public RandomQuestComponent(Player player) {
 		super(player);

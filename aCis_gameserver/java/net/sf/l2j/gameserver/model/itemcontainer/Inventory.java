@@ -401,7 +401,7 @@ public abstract class Inventory extends ItemContainer {
 
 					listener.onUnequip(slot, old, (Playable) getOwner());
 				}
-				
+
 				if (getOwner().isPlayer()) {
 					getOwner().getEventBus().notify(new OnUnequipItem(getOwner().getPlayer(), old));
 				}
@@ -657,8 +657,7 @@ public abstract class Inventory extends ItemContainer {
 			default:
 				_log.info("Unhandled slot type: " + slot);
 		}
-		if (pdollSlot >= 0)
-		{
+		if (pdollSlot >= 0) {
 			final ItemInstance old = setPaperdollItem(pdollSlot, null);
 			if (old != null) {
 				if (getOwner().isPlayer()) {

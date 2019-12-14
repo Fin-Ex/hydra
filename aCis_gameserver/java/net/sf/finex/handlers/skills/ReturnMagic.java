@@ -30,31 +30,32 @@ public class ReturnMagic implements ISkillMechanic {
 	 * <li>[2] (L2Skill) skill</li>
 	 * <li>[3] (double) damage</li>
 	 * </ul>
-	 * @param args 
+	 *
+	 * @param args
 	 */
 	@Override
 	public void invoke(Object... args) {
 		final Creature target = (Creature) args[0];
 		final Player reflector = (Player) args[1];
-		if(reflector.isCastingNow() || reflector.isOutOfControl() 
+		if (reflector.isCastingNow() || reflector.isOutOfControl()
 				|| reflector.getParams().getBool(ESkillHandlerType.REDIRECTION_SKILL.name())) {
 			return;
 		}
-		
+
 		final L2Skill skill = (L2Skill) args[2];
-		if(skill.isAoE()) {
+		if (skill.isAoE()) {
 			return;
 		}
-		
+
 		final int damage = (int) args[3];
-		
+
 		reflector.abortAttack();
 		reflector.stopMove(null);
 		reflector.setOutOfControl(true);
 		final int flyTime = Formulas.calcSkillFlyTime(reflector, target);
 		reflector.broadcastPacket(new MagicSkillUse(reflector, target, skill.getId() + 10000, 1, 750, 0));
 		reflector.getParams().set(ESkillHandlerType.RETURN_MAGIC.name(), true);
-		
+
 		final int taskTime = flyTime + 400;
 		ThreadPool.schedule(() -> {
 			target.reduceCurrentHp(damage, reflector, skill);

@@ -8,26 +8,24 @@ import net.sf.l2j.gameserver.skills.basefuncs.Func;
 
 /**
  * Increase speed of realoding arrows (Bow attack).
+ *
  * @author FinFan
  */
 @Slf4j
-public class FuncArrowReloadSpd extends Func
-{
+public class FuncArrowReloadSpd extends Func {
+
 	static final FuncArrowReloadSpd _faa_instance = new FuncArrowReloadSpd();
-	
-	public static Func getInstance()
-	{
+
+	public static Func getInstance() {
 		return _faa_instance;
 	}
-	
-	private FuncArrowReloadSpd()
-	{
+
+	private FuncArrowReloadSpd() {
 		super(Stats.ArrowReloadSpd, 0x20, null, null);
 	}
-	
+
 	@Override
-	public void calc(Env env)
-	{
+	public void calc(Env env) {
 		final double arrowSpdMod = Formulas.DEX_BONUS[env.getCharacter().getDEX()];
 		log.info("Arrow reload mod: {}", arrowSpdMod);
 		env.divValue(arrowSpdMod);

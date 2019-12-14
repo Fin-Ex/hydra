@@ -29,44 +29,40 @@ import net.sf.l2j.gameserver.skills.l2skills.L2SkillSignetCasttime;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
 @Effect("SignetMDam")
-public class EffectSignetMDam extends L2Effect
-{
+public class EffectSignetMDam extends L2Effect {
+
 	private EffectPoint _actor;
-	
-	public EffectSignetMDam(Env env, EffectTemplate template)
-	{
+
+	public EffectSignetMDam(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.SIGNET_GROUND;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		NpcTemplate template;
-		if (getSkill() instanceof L2SkillSignetCasttime)
+		if (getSkill() instanceof L2SkillSignetCasttime) {
 			template = NpcTable.getInstance().getTemplate(((L2SkillSignetCasttime) getSkill())._effectNpcId);
-		else
+		} else {
 			return false;
-		
+		}
+
 		EffectPoint effectPoint = new EffectPoint(IdFactory.getInstance().getNextId(), template, getEffector());
 		effectPoint.setCurrentHp(effectPoint.getMaxHp());
 		effectPoint.setCurrentMp(effectPoint.getMaxMp());
-		
+
 		int x = getEffector().getX();
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
-		
-		if (getEffector() instanceof Player && getSkill().getTargetType() == ESkillTargetType.TARGET_GROUND)
-		{
+
+		if (getEffector() instanceof Player && getSkill().getTargetType() == ESkillTargetType.TARGET_GROUND) {
 			Location wordPosition = ((Player) getEffector()).getCurrentSkillWorldPosition();
-			
-			if (wordPosition != null)
-			{
+
+			if (wordPosition != null) {
 				x = wordPosition.getX();
 				y = wordPosition.getY();
 				z = wordPosition.getZ();
@@ -74,77 +70,71 @@ public class EffectSignetMDam extends L2Effect
 		}
 		effectPoint.setIsInvul(true);
 		effectPoint.spawnMe(x, y, z);
-		
+
 		_actor = effectPoint;
 		return true;
-		
+
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
-		if (getCount() >= getTotalCount() - 2)
+	public boolean onActionTime() {
+		if (getCount() >= getTotalCount() - 2) {
 			return true; // do nothing first 2 times
-			
+		}
 		final Player caster = (Player) getEffector();
-		
+
 		final int mpConsume = getSkill().getMpConsume();
-		
+
 		final boolean sps = caster.isChargedShot(ShotType.SPIRITSHOT);
 		final boolean bsps = caster.isChargedShot(ShotType.BLESSED_SPIRITSHOT);
-		
+
 		List<Creature> targets = new ArrayList<>();
-		
-		for (Creature cha : _actor.getKnownTypeInRadius(Creature.class, getSkill().getSkillRadius()))
-		{
-			if (cha == caster)
+
+		for (Creature cha : _actor.getKnownTypeInRadius(Creature.class, getSkill().getSkillRadius())) {
+			if (cha == caster) {
 				continue;
-			
-			if (cha instanceof Attackable || cha instanceof Playable)
-			{
-				if (cha.isAlikeDead())
+			}
+
+			if (cha instanceof Attackable || cha instanceof Playable) {
+				if (cha.isAlikeDead()) {
 					continue;
-				
-				if (mpConsume > caster.getCurrentMp())
-				{
+				}
+
+				if (mpConsume > caster.getCurrentMp()) {
 					caster.sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 					return false;
 				}
-				
+
 				caster.reduceCurrentMp(mpConsume);
-				
-				if (cha instanceof Playable)
-				{
-					if (caster.canAttackCharacter(cha))
-					{
+
+				if (cha instanceof Playable) {
+					if (caster.canAttackCharacter(cha)) {
 						targets.add(cha);
 						caster.updatePvPStatus(cha);
 					}
-				}
-				else
+				} else {
 					targets.add(cha);
+				}
 			}
 		}
-		
-		if (!targets.isEmpty())
-		{
+
+		if (!targets.isEmpty()) {
 			caster.broadcastPacket(new MagicSkillLaunched(caster, getSkill().getId(), getSkill().getLevel(), targets.toArray(new Creature[targets.size()])));
-			for (Creature target : targets)
-			{
+			for (Creature target : targets) {
 				boolean mcrit = Formulas.calcMCrit(caster.getMCriticalHit(target, getSkill()));
 				boolean parry = Formulas.calcParry(caster, target, getSkill());
 				byte shld = Formulas.calcShldUse(caster, target, getSkill());
-				
+
 				int mdam = (int) Formulas.calcMagicDam(caster, target, getSkill(), shld, parry, sps, bsps, mcrit);
-				
-				if (target instanceof Summon)
+
+				if (target instanceof Summon) {
 					target.broadcastStatusUpdate();
-				
-				if (mdam > 0)
-				{
+				}
+
+				if (mdam > 0) {
 					// Manage cast break of the target (calculating rate, sending message...)
 					Formulas.calcCastBreak(target, mdam);
-					
+
 					caster.sendDamageMessage(target, mdam, mcrit, false, false, parry);
 					target.reduceCurrentHp(mdam, caster, getSkill());
 				}
@@ -153,11 +143,11 @@ public class EffectSignetMDam extends L2Effect
 		}
 		return true;
 	}
-	
+
 	@Override
-	public void onExit()
-	{
-		if (_actor != null)
+	public void onExit() {
+		if (_actor != null) {
 			_actor.deleteMe();
+		}
 	}
 }

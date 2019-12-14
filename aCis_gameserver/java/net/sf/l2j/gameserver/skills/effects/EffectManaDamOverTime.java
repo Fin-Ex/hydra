@@ -25,7 +25,7 @@ public class EffectManaDamOverTime extends L2Effect {
 		if (getEffected().isDead()) {
 			return false;
 		}
-		
+
 		double manaDam = calc();
 
 		if (manaDam > getEffected().getCurrentMp()) {

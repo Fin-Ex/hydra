@@ -5,10 +5,9 @@ import org.slf4j.LoggerFactory;
 /**
  * Fromat: d d: the failure reason
  */
-public final class LoginFail extends L2LoginServerPacket
-{
-	public static enum LoginFailReason
-	{
+public final class LoginFail extends L2LoginServerPacket {
+
+	public static enum LoginFailReason {
 		REASON_SYSTEM_ERROR(0x01),
 		REASON_PASS_WRONG(0x02),
 		REASON_USER_OR_PASS_WRONG(0x03),
@@ -18,30 +17,26 @@ public final class LoginFail extends L2LoginServerPacket
 		REASON_SERVER_MAINTENANCE(0x10),
 		REASON_TEMP_PASS_EXPIRED(0x11),
 		REASON_DUAL_BOX(0x23);
-		
+
 		private final int _code;
-		
-		LoginFailReason(int code)
-		{
+
+		LoginFailReason(int code) {
 			_code = code;
 		}
-		
-		public final int getCode()
-		{
+
+		public final int getCode() {
 			return _code;
 		}
 	}
-	
+
 	private final LoginFailReason _reason;
-	
-	public LoginFail(LoginFailReason reason)
-	{
+
+	public LoginFail(LoginFailReason reason) {
 		_reason = reason;
 	}
-	
+
 	@Override
-	protected void write()
-	{
+	protected void write() {
 		writeC(0x01);
 		writeD(_reason.getCode());
 	}

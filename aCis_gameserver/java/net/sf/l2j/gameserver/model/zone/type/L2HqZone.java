@@ -9,36 +9,34 @@ import net.sf.l2j.gameserver.model.zone.ZoneId;
 
 /**
  * The only zone where 'Build Headquarters' is allowed.
+ *
  * @author Tryskell, reverted version of Gnat's NoHqZone
  */
-public class L2HqZone extends L2ZoneType
-{
-	public L2HqZone(final int id)
-	{
+public class L2HqZone extends L2ZoneType {
+
+	public L2HqZone(final int id) {
 		super(id);
 	}
-	
+
 	@Override
-	protected void onEnter(final Creature character)
-	{
-		if (character instanceof Player)
+	protected void onEnter(final Creature character) {
+		if (character instanceof Player) {
 			character.setInsideZone(ZoneId.HQ, true);
+		}
 	}
-	
+
 	@Override
-	protected void onExit(final Creature character)
-	{
-		if (character instanceof Player)
+	protected void onExit(final Creature character) {
+		if (character instanceof Player) {
 			character.setInsideZone(ZoneId.HQ, false);
+		}
 	}
-	
+
 	@Override
-	public void onDieInside(final Creature character)
-	{
+	public void onDieInside(final Creature character) {
 	}
-	
+
 	@Override
-	public void onReviveInside(final Creature character)
-	{
+	public void onReviveInside(final Creature character) {
 	}
 }

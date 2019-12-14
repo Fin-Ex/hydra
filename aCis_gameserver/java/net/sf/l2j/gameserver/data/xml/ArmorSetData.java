@@ -16,66 +16,61 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 /**
- * This class loads and stores {@link ArmorSet}s, the key being the chest item id.
+ * This class loads and stores {@link ArmorSet}s, the key being the chest item
+ * id.
  */
-public class ArmorSetData extends XMLDocument
-{
+public class ArmorSetData extends XMLDocument {
+
 	private final Map<Integer, ArmorSet> _armorSets = new HashMap<>();
-	
-	protected ArmorSetData()
-	{
+
+	protected ArmorSetData() {
 		load();
 	}
-	
+
 	@Override
-	protected void load()
-	{
+	protected void load() {
 		loadDocument("./data/xml/armorSets.xml");
 		LOG.info("Loaded " + _armorSets.size() + " armor sets.");
 	}
-	
+
 	@Override
-	protected void parseDocument(Document doc, File file)
-	{
+	protected void parseDocument(Document doc, File file) {
 		// StatsSet used to feed informations. Cleaned on every entry.
 		final StatsSet set = new StatsSet();
-		
+
 		// First element is never read.
 		final Node n = doc.getFirstChild();
-		
-		for (Node o = n.getFirstChild(); o != null; o = o.getNextSibling())
-		{
-			if (!"armorset".equalsIgnoreCase(o.getNodeName()))
+
+		for (Node o = n.getFirstChild(); o != null; o = o.getNextSibling()) {
+			if (!"armorset".equalsIgnoreCase(o.getNodeName())) {
 				continue;
-			
+			}
+
 			// Parse and feed content.
 			parseAndFeed(o.getAttributes(), set);
-			
+
 			// Feed the map with new data.
 			_armorSets.put(set.getInteger("chest"), new ArmorSet(set));
-			
+
 			// Clear the StatsSet.
 			set.clear();
 		}
 	}
-	
-	public ArmorSet getSet(int chestId)
-	{
+
+	public ArmorSet getSet(int chestId) {
 		return _armorSets.get(chestId);
 	}
-	
-	public Collection<ArmorSet> getSets()
-	{
+
+	public Collection<ArmorSet> getSets() {
 		return _armorSets.values();
 	}
-	
-	public static ArmorSetData getInstance()
-	{
+
+	public static ArmorSetData getInstance() {
 		return SingletonHolder.INSTANCE;
 	}
-	
-	private static class SingletonHolder
-	{
+
+	private static class SingletonHolder {
+
 		protected static final ArmorSetData INSTANCE = new ArmorSetData();
 	}
 }

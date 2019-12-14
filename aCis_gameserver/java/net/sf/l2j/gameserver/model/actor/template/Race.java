@@ -37,10 +37,11 @@ public enum Race {
 	SIEGEWEAPON,
 	DEFENDINGARMY,
 	MERCENARIE;
-	
+
 	public static final Race[] VALUES = values();
-	
-	@Getter private final Stats PAtkStat, PDefStat;
+
+	@Getter
+	private final Stats PAtkStat, PDefStat;
 
 	private Race(Stats PAtkStat, Stats PDefStat) {
 		this.PAtkStat = PAtkStat;

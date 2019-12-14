@@ -9,22 +9,19 @@ import net.sf.l2j.gameserver.skills.L2Effect;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
 @Effect("Debuff")
-public class EffectDebuff extends L2Effect
-{
-	public EffectDebuff(Env env, EffectTemplate template)
-	{
+public class EffectDebuff extends L2Effect {
+
+	public EffectDebuff(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.DEBUFF;
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 }

@@ -11,11 +11,12 @@ import net.sf.l2j.gameserver.model.location.Location;
 import net.sf.l2j.gameserver.scripting.Quest;
 import net.sf.l2j.gameserver.scripting.QuestState;
 
-public class RaceTrack extends Quest
-{
+public class RaceTrack extends Quest {
+
 	private static final int RACE_MANAGER = 30995;
-	
+
 	private static final Map<Integer, Location> RETURN_LOCATIONS = new HashMap<>();
+
 	{
 		RETURN_LOCATIONS.put(30320, new Location(-80826, 149775, -3043)); // RICHLIN
 		RETURN_LOCATIONS.put(30256, new Location(-12672, 122776, -3116)); // BELLA
@@ -30,32 +31,27 @@ public class RaceTrack extends Quest
 		RETURN_LOCATIONS.put(31964, new Location(87386, -143246, -1293)); // BILIA
 		RETURN_LOCATIONS.put(31210, new Location(12882, 181053, -3560)); // RACE TRACK GK
 	}
-	
-	public RaceTrack()
-	{
+
+	public RaceTrack() {
 		super(-1, "teleports");
-		
+
 		addStartNpc(30320, 30256, 30059, 30080, 30899, 30177, 30848, 30233, 31320, 31275, 31964, 31210);
 		addTalkId(RACE_MANAGER, 30320, 30256, 30059, 30080, 30899, 30177, 30848, 30233, 31320, 31275, 31964, 31210);
 	}
-	
+
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
+	public String onTalk(Npc npc, Player player) {
 		QuestState st = player.getQuestState(getName());
-		
-		if (RETURN_LOCATIONS.containsKey(npc.getNpcId()))
-		{
+
+		if (RETURN_LOCATIONS.containsKey(npc.getNpcId())) {
 			player.teleToLocation(12661, 181687, -3560, 0);
 			st.setState(STATE_STARTED);
 			st.set("id", Integer.toString(npc.getNpcId()));
-		}
-		else if (st.isStarted() && npc.getNpcId() == RACE_MANAGER)
-		{
+		} else if (st.isStarted() && npc.getNpcId() == RACE_MANAGER) {
 			player.teleToLocation(RETURN_LOCATIONS.get(st.getInt("id")), 0);
 			st.exitQuest(true);
 		}
-		
+
 		return null;
 	}
 }

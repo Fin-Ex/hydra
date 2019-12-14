@@ -2,20 +2,18 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class ExAutoSoulShot extends L2GameServerPacket
-{
+public class ExAutoSoulShot extends L2GameServerPacket {
+
 	private final int _itemId;
 	private final int _type;
-	
-	public ExAutoSoulShot(int itemId, int type)
-	{
+
+	public ExAutoSoulShot(int itemId, int type) {
 		_itemId = itemId;
 		_type = type;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xFE);
 		writeH(0x12);
 		writeD(_itemId);

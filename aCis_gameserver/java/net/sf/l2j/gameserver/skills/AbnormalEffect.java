@@ -7,8 +7,7 @@ import java.util.NoSuchElementException;
 /**
  * @author DrHouse
  */
-public enum AbnormalEffect
-{
+public enum AbnormalEffect {
 	NULL("null", 0x0),
 	BLEEDING("bleeding", 0x000001),
 	POISON("poison", 0x000002),
@@ -34,32 +33,28 @@ public enum AbnormalEffect
 	IMPRISIONING_1("imprison1", 0x200000),
 	IMPRISIONING_2("imprison2", 0x400000),
 	MAGIC_CIRCLE("magiccircle", 0x800000);
-	
+
 	private final int _mask;
 	private final String _name;
-	
-	private AbnormalEffect(String name, int mask)
-	{
+
+	private AbnormalEffect(String name, int mask) {
 		_name = name;
 		_mask = mask;
 	}
-	
-	public final int getMask()
-	{
+
+	public final int getMask() {
 		return _mask;
 	}
-	
-	public final String getName()
-	{
+
+	public final String getName() {
 		return _name;
 	}
-	
-	public static AbnormalEffect getByName(String name)
-	{
-		for (AbnormalEffect eff : AbnormalEffect.values())
-		{
-			if (eff.getName().equals(name))
+
+	public static AbnormalEffect getByName(String name) {
+		for (AbnormalEffect eff : AbnormalEffect.values()) {
+			if (eff.getName().equals(name)) {
 				return eff;
+			}
 		}
 		throw new NoSuchElementException("AbnormalEffect not found for name: '" + name + "'.\n Please check " + AbnormalEffect.class.getCanonicalName());
 	}

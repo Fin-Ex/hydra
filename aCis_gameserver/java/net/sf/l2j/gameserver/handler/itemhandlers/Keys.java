@@ -43,7 +43,7 @@ public class Keys implements IItemHandler {
 			return;
 		}
 
-		if(item.getItem().hasStaticSkills()) {
+		if (item.getItem().hasStaticSkills()) {
 			final L2Skill itemSkill = item.getItem().getStaticSkills().get(0).getSkill();
 			if (itemSkill == null) {
 				return;

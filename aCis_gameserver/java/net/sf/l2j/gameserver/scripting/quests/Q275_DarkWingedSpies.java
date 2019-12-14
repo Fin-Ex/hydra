@@ -10,72 +10,69 @@ import net.sf.l2j.gameserver.model.base.ClassRace;
 import net.sf.l2j.gameserver.scripting.Quest;
 import net.sf.l2j.gameserver.scripting.QuestState;
 
-public class Q275_DarkWingedSpies extends Quest
-{
+public class Q275_DarkWingedSpies extends Quest {
+
 	private static final String qn = "Q275_DarkWingedSpies";
-	
+
 	// Monsters
 	private static final int DARKWING_BAT = 20316;
 	private static final int VARANGKA_TRACKER = 27043;
-	
+
 	// Items
 	private static final int DARKWING_BAT_FANG = 1478;
 	private static final int VARANGKA_PARASITE = 1479;
-	
-	public Q275_DarkWingedSpies()
-	{
+
+	public Q275_DarkWingedSpies() {
 		super(275, "Dark Winged Spies");
-		
+
 		setItemsIds(DARKWING_BAT_FANG, VARANGKA_PARASITE);
-		
+
 		addStartNpc(30567); // Tantus
 		addTalkId(30567);
-		
+
 		addKillId(DARKWING_BAT, VARANGKA_TRACKER);
 	}
-	
+
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		if (event.equalsIgnoreCase("30567-03.htm"))
-		{
+		}
+
+		if (event.equalsIgnoreCase("30567-03.htm")) {
 			st.setState(STATE_STARTED);
 			st.set("cond", "1");
 			st.playSound(QuestState.SOUND_ACCEPT);
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
+	public String onTalk(Npc npc, Player player) {
 		QuestState st = player.getQuestState(qn);
 		String htmltext = getNoQuestMsg();
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		switch (st.getState())
-		{
+		}
+
+		switch (st.getState()) {
 			case STATE_CREATED:
-				if (player.getRace() != ClassRace.ORC)
+				if (player.getRace() != ClassRace.ORC) {
 					htmltext = "30567-00.htm";
-				else if (player.getLevel() < 11)
+				} else if (player.getLevel() < 11) {
 					htmltext = "30567-01.htm";
-				else
+				} else {
 					htmltext = "30567-02.htm";
+				}
 				break;
-			
+
 			case STATE_STARTED:
-				if (st.getInt("cond") == 1)
+				if (st.getInt("cond") == 1) {
 					htmltext = "30567-04.htm";
-				else
-				{
+				} else {
 					htmltext = "30567-05.htm";
 					st.takeItems(DARKWING_BAT_FANG, -1);
 					st.takeItems(VARANGKA_PARASITE, -1);
@@ -85,42 +82,40 @@ public class Q275_DarkWingedSpies extends Quest
 				}
 				break;
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onKill(Npc npc, Player player, boolean isPet)
-	{
+	public String onKill(Npc npc, Player player, boolean isPet) {
 		QuestState st = checkPlayerCondition(player, npc, "cond", "1");
-		if (st == null)
+		if (st == null) {
 			return null;
-		
-		switch (npc.getNpcId())
-		{
+		}
+
+		switch (npc.getNpcId()) {
 			case DARKWING_BAT:
-				if (st.dropItemsAlways(DARKWING_BAT_FANG, 1, 70))
+				if (st.dropItemsAlways(DARKWING_BAT_FANG, 1, 70)) {
 					st.set("cond", "2");
-				else if (Rnd.get(100) < 10 && st.getQuestItemsCount(DARKWING_BAT_FANG) > 10 && st.getQuestItemsCount(DARKWING_BAT_FANG) < 66)
-				{
+				} else if (Rnd.get(100) < 10 && st.getQuestItemsCount(DARKWING_BAT_FANG) > 10 && st.getQuestItemsCount(DARKWING_BAT_FANG) < 66) {
 					// Spawn of Varangka Tracker on the npc position.
 					addSpawn(VARANGKA_TRACKER, npc, true, 0, true);
-					
+
 					st.giveItems(VARANGKA_PARASITE, 1);
 				}
 				break;
-			
+
 			case VARANGKA_TRACKER:
-				if (st.hasQuestItems(VARANGKA_PARASITE))
-				{
+				if (st.hasQuestItems(VARANGKA_PARASITE)) {
 					st.takeItems(VARANGKA_PARASITE, -1);
-					
-					if (st.dropItemsAlways(DARKWING_BAT_FANG, 5, 70))
+
+					if (st.dropItemsAlways(DARKWING_BAT_FANG, 5, 70)) {
 						st.set("cond", "2");
+					}
 				}
 				break;
 		}
-		
+
 		return null;
 	}
 }

@@ -5,7 +5,6 @@
  */
 package net.sf.finex.data.tables;
 
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.File;
@@ -27,14 +26,15 @@ import net.sf.finex.data.DyeData;
 @Slf4j
 public final class DyeTable extends StorageTable {
 
-	@Getter private static final DyeTable instance = new DyeTable();
-	
+	@Getter
+	private static final DyeTable instance = new DyeTable();
+
 	private final List<DyeData> holder = new ArrayList<>();
 
 	public DyeTable() {
 		load();
 	}
-	
+
 	@Override
 	public void reload() {
 		holder.clear();
@@ -47,22 +47,23 @@ public final class DyeTable extends StorageTable {
 		final Gson gson = new Gson();
 		final File file = new File("data/json/dyes.json");
 		try (Reader reader = new InputStreamReader(new FileInputStream(file))) {
-			holder.addAll(gson.fromJson(reader, new TypeToken<List<DyeData>>() {}.getType()));
+			holder.addAll(gson.fromJson(reader, new TypeToken<List<DyeData>>() {
+			}.getType()));
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		
+
 		log.info("Loaded: {} tatoos templates.", holder.size());
 	}
 
 	@Override
 	public DyeData get(int identifier) {
-		for(DyeData symbol : holder) {
-			if(symbol.getSymbolId() == identifier) {
+		for (DyeData symbol : holder) {
+			if (symbol.getSymbolId() == identifier) {
 				return symbol;
 			}
 		}
-		
+
 		return null;
 	}
 

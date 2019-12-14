@@ -9,10 +9,10 @@ import net.sf.l2j.gameserver.network.serverpackets.SocialAction;
 import net.sf.l2j.gameserver.scripting.Quest;
 import net.sf.l2j.gameserver.scripting.QuestState;
 
-public class Q409_PathToAnElvenOracle extends Quest
-{
+public class Q409_PathToAnElvenOracle extends Quest {
+
 	private static final String qn = "Q409_PathToAnElvenOracle";
-	
+
 	// Items
 	private static final int CRYSTAL_MEDALLION = 1231;
 	private static final int SWINDLER_MONEY = 1232;
@@ -21,88 +21,82 @@ public class Q409_PathToAnElvenOracle extends Quest
 	private static final int LEAF_OF_ORACLE = 1235;
 	private static final int HALF_OF_DIARY = 1236;
 	private static final int TAMIL_NECKLACE = 1275;
-	
+
 	// NPCs
 	private static final int MANUEL = 30293;
 	private static final int ALLANA = 30424;
 	private static final int PERRIN = 30428;
-	
-	public Q409_PathToAnElvenOracle()
-	{
+
+	public Q409_PathToAnElvenOracle() {
 		super(409, "Path to an Elven Oracle");
-		
+
 		setItemsIds(CRYSTAL_MEDALLION, SWINDLER_MONEY, ALLANA_DIARY, LIZARD_CAPTAIN_ORDER, HALF_OF_DIARY, TAMIL_NECKLACE);
-		
+
 		addStartNpc(MANUEL);
 		addTalkId(MANUEL, ALLANA, PERRIN);
-		
+
 		addKillId(27032, 27033, 27034, 27035);
 	}
-	
+
 	@Override
-	public String onAdvEvent(String event, Npc npc, Player player)
-	{
+	public String onAdvEvent(String event, Npc npc, Player player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		if (event.equalsIgnoreCase("30293-05.htm"))
-		{
+		}
+
+		if (event.equalsIgnoreCase("30293-05.htm")) {
 			st.setState(STATE_STARTED);
 			st.set("cond", "1");
 			st.playSound(QuestState.SOUND_ACCEPT);
 			st.giveItems(CRYSTAL_MEDALLION, 1);
-		}
-		else if (event.equalsIgnoreCase("spawn_lizards"))
-		{
+		} else if (event.equalsIgnoreCase("spawn_lizards")) {
 			st.set("cond", "2");
 			st.playSound(QuestState.SOUND_MIDDLE);
 			addSpawn(27032, -92319, 154235, -3284, 2000, false, 0, false);
 			addSpawn(27033, -92361, 154190, -3284, 2000, false, 0, false);
 			addSpawn(27034, -92375, 154278, -3278, 2000, false, 0, false);
 			return null;
-		}
-		else if (event.equalsIgnoreCase("30428-06.htm"))
+		} else if (event.equalsIgnoreCase("30428-06.htm")) {
 			addSpawn(27035, -93194, 147587, -2672, 2000, false, 0, true);
-		
+		}
+
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onTalk(Npc npc, Player player)
-	{
+	public String onTalk(Npc npc, Player player) {
 		String htmltext = getNoQuestMsg();
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		switch (st.getState())
-		{
+		}
+
+		switch (st.getState()) {
 			case STATE_CREATED:
-				if (player.getClassId() != ClassId.ElvenMystic)
+				if (player.getClassId() != ClassId.ElvenMystic) {
 					htmltext = (player.getClassId() == ClassId.ElvenOracle) ? "30293-02a.htm" : "30293-02.htm";
-				else if (player.getLevel() < 19)
+				} else if (player.getLevel() < 19) {
 					htmltext = "30293-03.htm";
-				else if (st.hasQuestItems(LEAF_OF_ORACLE))
+				} else if (st.hasQuestItems(LEAF_OF_ORACLE)) {
 					htmltext = "30293-04.htm";
-				else
+				} else {
 					htmltext = "30293-01.htm";
+				}
 				break;
-			
+
 			case STATE_STARTED:
 				final int cond = st.getInt("cond");
-				switch (npc.getNpcId())
-				{
+				switch (npc.getNpcId()) {
 					case MANUEL:
-						if (cond == 1)
+						if (cond == 1) {
 							htmltext = "30293-06.htm";
-						else if (cond == 2 || cond == 3)
+						} else if (cond == 2 || cond == 3) {
 							htmltext = "30293-09.htm";
-						else if (cond > 3 && cond < 7)
+						} else if (cond > 3 && cond < 7) {
 							htmltext = "30293-07.htm";
-						else if (cond == 7)
-						{
+						} else if (cond == 7) {
 							htmltext = "30293-08.htm";
 							st.takeItems(ALLANA_DIARY, 1);
 							st.takeItems(CRYSTAL_MEDALLION, 1);
@@ -115,77 +109,69 @@ public class Q409_PathToAnElvenOracle extends Quest
 							st.exitQuest(true);
 						}
 						break;
-					
+
 					case ALLANA:
-						if (cond == 1)
+						if (cond == 1) {
 							htmltext = "30424-01.htm";
-						else if (cond == 3)
-						{
+						} else if (cond == 3) {
 							htmltext = "30424-02.htm";
 							st.set("cond", "4");
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.giveItems(HALF_OF_DIARY, 1);
-						}
-						else if (cond == 4)
+						} else if (cond == 4) {
 							htmltext = "30424-03.htm";
-						else if (cond == 5)
+						} else if (cond == 5) {
 							htmltext = "30424-06.htm";
-						else if (cond == 6)
-						{
+						} else if (cond == 6) {
 							htmltext = "30424-04.htm";
 							st.set("cond", "7");
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(HALF_OF_DIARY, -1);
 							st.giveItems(ALLANA_DIARY, 1);
-						}
-						else if (cond == 7)
+						} else if (cond == 7) {
 							htmltext = "30424-05.htm";
+						}
 						break;
-					
+
 					case PERRIN:
-						if (cond == 4)
+						if (cond == 4) {
 							htmltext = "30428-01.htm";
-						else if (cond == 5)
-						{
+						} else if (cond == 5) {
 							htmltext = "30428-04.htm";
 							st.set("cond", "6");
 							st.playSound(QuestState.SOUND_MIDDLE);
 							st.takeItems(TAMIL_NECKLACE, -1);
 							st.giveItems(SWINDLER_MONEY, 1);
-						}
-						else if (cond > 5)
+						} else if (cond > 5) {
 							htmltext = "30428-05.htm";
+						}
 						break;
 				}
 				break;
 		}
-		
+
 		return htmltext;
 	}
-	
+
 	@Override
-	public String onKill(Npc npc, Player player, boolean isPet)
-	{
+	public String onKill(Npc npc, Player player, boolean isPet) {
 		QuestState st = checkPlayerState(player, npc, STATE_STARTED);
-		if (st == null)
+		if (st == null) {
 			return null;
-		
-		if (npc.getNpcId() == 27035)
-		{
-			if (st.getInt("cond") == 4)
-			{
+		}
+
+		if (npc.getNpcId() == 27035) {
+			if (st.getInt("cond") == 4) {
 				st.set("cond", "5");
 				st.playSound(QuestState.SOUND_MIDDLE);
 				st.giveItems(TAMIL_NECKLACE, 1);
 			}
-		}
-		else if (st.getInt("cond") == 2)
-		{
+		} else if (st.getInt("cond") == 2) {
 			st.set("cond", "3");
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(LIZARD_CAPTAIN_ORDER, 1);
 		}
-		
+
 		return null;
 	}
 }

@@ -11,25 +11,23 @@ import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
-public class BeastSpice implements IItemHandler
-{
+public class BeastSpice implements IItemHandler {
+
 	@Override
-	public void useItem(Playable playable, ItemInstance item, boolean forceUse)
-	{
-		if (!(playable instanceof Player))
+	public void useItem(Playable playable, ItemInstance item, boolean forceUse) {
+		if (!(playable instanceof Player)) {
 			return;
-		
+		}
+
 		Player activeChar = (Player) playable;
-		
-		if (!(activeChar.getTarget() instanceof FeedableBeast))
-		{
+
+		if (!(activeChar.getTarget() instanceof FeedableBeast)) {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
-		
+
 		int skillId = 0;
-		switch (item.getItemId())
-		{
+		switch (item.getItemId()) {
 			case 6643:
 				skillId = 2188;
 				break;
@@ -37,9 +35,10 @@ public class BeastSpice implements IItemHandler
 				skillId = 2189;
 				break;
 		}
-		
+
 		L2Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
-		if (skill != null)
+		if (skill != null) {
 			activeChar.useMagic(skill, false, false);
+		}
 	}
 }

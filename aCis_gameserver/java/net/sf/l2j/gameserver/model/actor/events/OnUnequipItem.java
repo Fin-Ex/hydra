@@ -15,6 +15,7 @@ import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
  */
 @Data
 public class OnUnequipItem {
+
 	private final Player player;
 	private final ItemInstance item;
 }

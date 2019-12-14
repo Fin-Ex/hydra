@@ -14,65 +14,67 @@ import net.sf.l2j.gameserver.network.serverpackets.GMViewQuestList;
 import net.sf.l2j.gameserver.network.serverpackets.GMViewSkillInfo;
 import net.sf.l2j.gameserver.network.serverpackets.GMViewWarehouseWithdrawList;
 
-public final class RequestGMCommand extends L2GameClientPacket
-{
+public final class RequestGMCommand extends L2GameClientPacket {
+
 	private String _targetName;
 	private int _command;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_targetName = readS();
 		_command = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
+		}
+
 		// prevent non gm or low level GMs from viewing player stuff
-		if (!activeChar.isGM() || !activeChar.getAccessLevel().allowAltG())
+		if (!activeChar.isGM() || !activeChar.getAccessLevel().allowAltG()) {
 			return;
-		
+		}
+
 		final Player target = World.getInstance().getPlayer(_targetName);
 		final Clan clan = ClanTable.getInstance().getClanByName(_targetName);
-		
-		if (target == null && (clan == null || _command != 6))
+
+		if (target == null && (clan == null || _command != 6)) {
 			return;
-		
-		switch (_command)
-		{
+		}
+
+		switch (_command) {
 			case 1: // target status
 				sendPacket(new GMViewCharacterInfo(target));
 				sendPacket(new GMViewHennaInfo(target));
 				break;
-			
+
 			case 2: // target clan
-				if (target != null && target.getClan() != null)
+				if (target != null && target.getClan() != null) {
 					sendPacket(new GMViewPledgeInfo(target.getClan(), target));
+				}
 				break;
-			
+
 			case 3: // target skills
 				sendPacket(new GMViewSkillInfo(target));
 				break;
-			
+
 			case 4: // target quests
 				sendPacket(new GMViewQuestList(target));
 				break;
-			
+
 			case 5: // target inventory
 				sendPacket(new GMViewItemList(target));
 				sendPacket(new GMViewHennaInfo(target));
 				break;
-			
+
 			case 6: // player or clan warehouse
-				if (target != null)
+				if (target != null) {
 					sendPacket(new GMViewWarehouseWithdrawList(target));
-				else
+				} else {
 					sendPacket(new GMViewWarehouseWithdrawList(clan));
+				}
 				break;
 		}
 	}

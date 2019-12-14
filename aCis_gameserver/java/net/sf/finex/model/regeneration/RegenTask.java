@@ -24,20 +24,20 @@ public class RegenTask implements Runnable {
 
 	@Override
 	public void run() {
-		switch(type) {
+		switch (type) {
 			case HP:
 				owner.setCurrentHp(owner.getCurrentHp() + Formulas.calcHpRegen(owner));
 				break;
-				
+
 			case CP:
 				owner.setCurrentCp(owner.getCurrentCp() + Formulas.calcCpRegen(owner.getPlayer()));
 				break;
-				
+
 			case MP:
 				owner.setCurrentMp(owner.getCurrentMp() + Formulas.calcMpRegen(owner));
 				break;
 		}
-		
+
 		owner.broadcastStatusUpdate();
 	}
 }

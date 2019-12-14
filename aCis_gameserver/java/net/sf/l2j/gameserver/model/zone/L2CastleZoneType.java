@@ -8,54 +8,50 @@ import net.sf.l2j.gameserver.model.entity.Castle;
 
 /**
  * Advanced zone type for castle types zones (L2SwampZone, L2DamageZone).
+ *
  * @author Tryskell
  */
-public abstract class L2CastleZoneType extends L2ZoneType
-{
+public abstract class L2CastleZoneType extends L2ZoneType {
+
 	private int _castleId;
 	private Castle _castle;
-	
+
 	private boolean _enabled;
-	
-	protected L2CastleZoneType(int id)
-	{
+
+	protected L2CastleZoneType(int id) {
 		super(id);
 	}
-	
+
 	@Override
-	public void setParameter(String name, String value)
-	{
-		if (name.equals("castleId"))
+	public void setParameter(String name, String value) {
+		if (name.equals("castleId")) {
 			_castleId = Integer.parseInt(value);
-		else
+		} else {
 			super.setParameter(name, value);
+		}
 	}
-	
+
 	@Override
-	public void onDieInside(Creature character)
-	{
+	public void onDieInside(Creature character) {
 	}
-	
+
 	@Override
-	public void onReviveInside(Creature character)
-	{
+	public void onReviveInside(Creature character) {
 	}
-	
-	public Castle getCastle()
-	{
-		if (_castleId > 0 && _castle == null)
+
+	public Castle getCastle() {
+		if (_castleId > 0 && _castle == null) {
 			_castle = CastleManager.getInstance().getCastleById(_castleId);
-		
+		}
+
 		return _castle;
 	}
-	
-	public boolean isEnabled()
-	{
+
+	public boolean isEnabled() {
 		return _enabled;
 	}
-	
-	public void setEnabled(boolean val)
-	{
+
+	public void setEnabled(boolean val) {
 		_enabled = val;
 	}
 }

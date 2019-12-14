@@ -219,37 +219,43 @@ public class MapRegionTable {
 		}
 
 		if (teleportType != TeleportType.TOWN && player.getClan() != null) {
-			if (null != teleportType) switch (teleportType) {
-				case CLAN_HALL:
-					final ClanHall ch = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
-					if (ch != null) {
-						final L2ClanHallZone zone = ch.getZone();
-						if (zone != null) {
-							return zone.getSpawnLoc();
+			if (null != teleportType) {
+				switch (teleportType) {
+					case CLAN_HALL:
+						final ClanHall ch = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
+						if (ch != null) {
+							final L2ClanHallZone zone = ch.getZone();
+							if (zone != null) {
+								return zone.getSpawnLoc();
+							}
 						}
-					}	break;
-				case CASTLE:
-					// Check if the player is part of a castle owning clan.
-					Castle castle = CastleManager.getInstance().getCastleByOwner(player.getClan());
-					if (castle == null) {
-						// If not, check if he is in defending side.
-						castle = CastleManager.getInstance().getCastle(player);
-						if (!(castle != null && castle.getSiege().isInProgress() && castle.getSiege().checkSides(player.getClan(), SiegeSide.DEFENDER, SiegeSide.OWNER))) {
-							castle = null;
+						break;
+					case CASTLE:
+						// Check if the player is part of a castle owning clan.
+						Castle castle = CastleManager.getInstance().getCastleByOwner(player.getClan());
+						if (castle == null) {
+							// If not, check if he is in defending side.
+							castle = CastleManager.getInstance().getCastle(player);
+							if (!(castle != null && castle.getSiege().isInProgress() && castle.getSiege().checkSides(player.getClan(), SiegeSide.DEFENDER, SiegeSide.OWNER))) {
+								castle = null;
+							}
 						}
-					}	if (castle != null && castle.getCastleId() > 0) {
-						return castle.getCastleZone().getSpawnLoc();
-					}	break;
-				case SIEGE_FLAG:
-					final Siege siege = CastleManager.getInstance().getSiege(player);
-					if (siege != null) {
-						final Npc flag = siege.getFlag(player.getClan());
-						if (flag != null) {
-							return flag.getPosition();
+						if (castle != null && castle.getCastleId() > 0) {
+							return castle.getCastleZone().getSpawnLoc();
 						}
-					}	break;
-				default:
-					break;
+						break;
+					case SIEGE_FLAG:
+						final Siege siege = CastleManager.getInstance().getSiege(player);
+						if (siege != null) {
+							final Npc flag = siege.getFlag(player.getClan());
+							if (flag != null) {
+								return flag.getPosition();
+							}
+						}
+						break;
+					default:
+						break;
+				}
 			}
 		}
 
@@ -352,7 +358,6 @@ public class MapRegionTable {
 //		}
 //		return getTown(16); // Default to floran
 //	}
-
 	/**
 	 * @param x : The current character's X location.
 	 * @param y : The current character's Y location.

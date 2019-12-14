@@ -63,7 +63,6 @@ public final class RequestHennaEquip extends L2GameClientPacket {
 //			activeChar.sendPacket(SystemMessageId.CANT_DRAW_SYMBOL);
 //			return;
 //		}
-		
 		// reduceAdena sends a message.
 		if (!activeChar.reduceAdena("Henna", dye.getPrice(), activeChar.getCurrentFolkNPC(), true)) {
 			return;

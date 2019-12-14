@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author mkizub
  */
-public interface ConditionListener
-{
+public interface ConditionListener {
+
 	public void notifyChanged();
 }

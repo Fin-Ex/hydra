@@ -24,7 +24,7 @@ import net.sf.l2j.gameserver.model.item.kind.Item;
  * @author FinFan
  */
 public class BossHuntBuilder extends RandomQuestBuilder {
-	
+
 	@Override
 	public void buildCondition() {
 		final int minLvl = quest.getGrade().getMinLevel();
@@ -55,13 +55,13 @@ public class BossHuntBuilder extends RandomQuestBuilder {
 	public void buildDescription() {
 		final StringBuilder descr = new StringBuilder();
 		final NpcTemplate template = (NpcTemplate) quest.getCondition().getTarget();
-		
+
 		String closestTownName = null;
 		final RaidBoss boss = (RaidBoss) World.getInstance().getNpcTemplates().get(template);
-		if(boss != null) {
+		if (boss != null) {
 			closestTownName = MapRegionTable.getInstance().getClosestTownName(boss.getX(), boss.getY());
 		}
-		
+
 		descr.append("<center>Description</center><br>");
 		descr.append("Critical task! On the outskirts of the <font color=LEVEL>").append(closestTownName).append("</font>, you must find and destroy the <font color=LEVEL>")
 				.append(template.getName()).append("</font>.<br1>For this task, it is better to select a group, because alone - the chances of success are very small.");

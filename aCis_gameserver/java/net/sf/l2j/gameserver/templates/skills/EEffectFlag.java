@@ -3,8 +3,7 @@ package net.sf.l2j.gameserver.templates.skills;
 /**
  * @author UnAfraid
  */
-public enum EEffectFlag
-{
+public enum EEffectFlag {
 	NONE,
 	CHARM_OF_COURAGE,
 	CHARM_OF_LUCK,
@@ -28,9 +27,8 @@ public enum EEffectFlag
 	BETRAYED,
 	MEDITATING,
 	PARALYZED;
-	
-	public int getMask()
-	{
+
+	public int getMask() {
 		return 1 << ordinal();
 	}
 }

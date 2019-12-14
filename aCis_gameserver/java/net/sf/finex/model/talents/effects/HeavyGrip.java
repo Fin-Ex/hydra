@@ -26,11 +26,14 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  */
 @Effect("HeavyGrip")
 public class HeavyGrip extends L2Effect {
-	
-	@Getter private AbstractEventSubscription<OnUnequipItem> onUnequip;
-	@Getter private int weaponObjectId;
-	@Getter private int weaponItemId;
-	
+
+	@Getter
+	private AbstractEventSubscription<OnUnequipItem> onUnequip;
+	@Getter
+	private int weaponObjectId;
+	@Getter
+	private int weaponItemId;
+
 	public HeavyGrip(Env env, EffectTemplate template) {
 		super(env, template);
 	}
@@ -43,34 +46,34 @@ public class HeavyGrip extends L2Effect {
 	@Override
 	public boolean onStart() {
 		final Player player = getEffector().getPlayer();
-		if(player == null) {
+		if (player == null) {
 			return false;
 		}
-		
-		switch(player.getAttackType()) {
+
+		switch (player.getAttackType()) {
 			case DUAL:
 				final Weapon weapon = player.getActiveWeaponItem();
-				switch(weapon.getCrystalType()) {
+				switch (weapon.getCrystalType()) {
 					case D:
 						// to Two-Hand Sword
 						weaponItemId = 9209;
 						break;
-						
+
 					case C:
 						// to Flambergs
 						weaponItemId = 9210;
 						break;
-						
+
 					case B:
 						// to Great swords
 						weaponItemId = 9211;
 						break;
-						
+
 					case A:
 						// to Dragon Slayers
 						weaponItemId = 9212;
 						break;
-						
+
 					case S:
 						// to Heavens dividers
 						weaponItemId = 9213;
@@ -79,15 +82,15 @@ public class HeavyGrip extends L2Effect {
 				changeStats(player, weapon.getCrystalType());
 				weaponObjectId = 0x01;
 				break;
-				
+
 			default:
 				return false;
 		}
-		
+
 		onUnequip = getEffector().getEventBus().subscribe()
 				.cast(OnUnequipItem.class)
 				.forEach(this::onUnequip);
-		
+
 		player.broadcastUserInfo();
 		return true;
 	}
@@ -95,7 +98,7 @@ public class HeavyGrip extends L2Effect {
 	private void onUnequip(OnUnequipItem e) {
 		exit();
 	}
-	
+
 	@Override
 	public boolean onActionTime() {
 		return true;
@@ -103,16 +106,17 @@ public class HeavyGrip extends L2Effect {
 
 	@Override
 	public void onExit() {
-		if(getEffector().getActiveWeaponItem() != null) {
+		if (getEffector().getActiveWeaponItem() != null) {
 			weaponItemId = getEffector().getActiveWeaponItem().getItemId();
 		}
 		getEffector().getPlayer().broadcastUserInfo();
 		getEffector().getEventBus().unsubscribe(onUnequip);
 		super.onExit();
 	}
-	
+
 	private void changeStats(Player player, EGradeType grade) {
-		switch(grade) {
+		// increase attack of current dual sword by value which approaching to the TwoHanded dual swords
+		switch (grade) {
 			case D:
 				player.addStatFunc(new FuncSet(Stats.PAtk, 0x08, this, new LambdaConst(156)));
 				break;

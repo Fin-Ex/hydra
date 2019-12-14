@@ -3,47 +3,42 @@ package net.sf.l2j.gameserver.model;
 import org.slf4j.LoggerFactory;
 
 /**
- * A datatype used as teleportation point reminder. Used by GM admincommand //bk.
+ * A datatype used as teleportation point reminder. Used by GM admincommand
+ * //bk.
  */
-public class Bookmark
-{
+public class Bookmark {
+
 	private final String _name;
 	private final int _objId;
 	private final int _x;
 	private final int _y;
 	private final int _z;
-	
-	public Bookmark(String name, int objId, int x, int y, int z)
-	{
+
+	public Bookmark(String name, int objId, int x, int y, int z) {
 		_name = name;
 		_objId = objId;
 		_x = x;
 		_y = y;
 		_z = z;
 	}
-	
-	public String getName()
-	{
+
+	public String getName() {
 		return _name;
 	}
-	
-	public int getId()
-	{
+
+	public int getId() {
 		return _objId;
 	}
-	
-	public int getX()
-	{
+
+	public int getX() {
 		return _x;
 	}
-	
-	public int getY()
-	{
+
+	public int getY() {
 		return _y;
 	}
-	
-	public int getZ()
-	{
+
+	public int getZ() {
 		return _z;
 	}
 }

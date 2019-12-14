@@ -28,7 +28,7 @@ public class Simple extends AbstractHit {
 
 		final DamageInfo info = new DamageInfo();
 		info.isMiss = Formulas.calcHitMiss(attacker, target);
-		if(!info.isMiss) {
+		if (!info.isMiss) {
 			info.shieldResult = Formulas.calcShldUse(attacker, target, null);
 			info.isParry = Formulas.calcParry(attacker, target, null);
 			info.isCrit = Formulas.calcCrit(attacker.getStat().getCriticalHit(target, null));

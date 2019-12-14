@@ -2,25 +2,45 @@ package net.sf.l2j.gameserver.model.actor.ai;
 
 import org.slf4j.LoggerFactory;
 
-/** Enumeration of generic intentions of an NPC/PC */
-public enum CtrlIntention
-{
-	/** Do nothing, disconnect AI of NPC if no players around. */
+/**
+ * Enumeration of generic intentions of an NPC/PC
+ */
+public enum CtrlIntention {
+	/**
+	 * Do nothing, disconnect AI of NPC if no players around.
+	 */
 	IDLE,
-	/** Alerted state without goal : scan attackable targets, random walk, etc. */
+	/**
+	 * Alerted state without goal : scan attackable targets, random walk, etc.
+	 */
 	ACTIVE,
-	/** Rest (sit until attacked). */
+	/**
+	 * Rest (sit until attacked).
+	 */
 	REST,
-	/** Attack target (cast combat magic, go to target, combat) - may be ignored (another target, invalid zoning, etc). */
+	/**
+	 * Attack target (cast combat magic, go to target, combat) - may be ignored
+	 * (another target, invalid zoning, etc).
+	 */
 	ATTACK,
-	/** Cast a spell, depending on the spell - may start or stop attacking. */
+	/**
+	 * Cast a spell, depending on the spell - may start or stop attacking.
+	 */
 	CAST,
-	/** Just move to another location. */
+	/**
+	 * Just move to another location.
+	 */
 	MOVE_TO,
-	/** Like move, but check target's movement and follow it. */
+	/**
+	 * Like move, but check target's movement and follow it.
+	 */
 	FOLLOW,
-	/** Pick up item (go to item, pick up it, become idle). */
+	/**
+	 * Pick up item (go to item, pick up it, become idle).
+	 */
 	PICK_UP,
-	/** Move to target, then interact. */
+	/**
+	 * Move to target, then interact.
+	 */
 	INTERACT
 }

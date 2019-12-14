@@ -18,7 +18,8 @@ import net.sf.l2j.gameserver.templates.StatsSet;
  */
 public class Jewel extends Item {
 
-	@Getter private final JewelType type;
+	@Getter
+	private final JewelType type;
 
 	public Jewel(StatsSet set) {
 		super(set);

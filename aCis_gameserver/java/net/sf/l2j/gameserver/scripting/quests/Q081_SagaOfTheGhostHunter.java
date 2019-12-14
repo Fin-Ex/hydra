@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q081_SagaOfTheGhostHunter extends SagasSuperClass
-{
-	public Q081_SagaOfTheGhostHunter()
-	{
+public class Q081_SagaOfTheGhostHunter extends SagasSuperClass {
+
+	public Q081_SagaOfTheGhostHunter() {
 		super(81, "Saga of the Ghost Hunter");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			31603,
 			31624,
 			31286,
@@ -25,9 +23,8 @@ public class Q081_SagaOfTheGhostHunter extends SagasSuperClass
 			31656,
 			31616
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7518,
 			7081,
@@ -41,38 +38,34 @@ public class Q081_SagaOfTheGhostHunter extends SagasSuperClass
 			7104,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27301,
 			27230,
 			27304
 		};
-		
+
 		classid = 108;
 		prevclass = 0x24;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			164650,
 			47391,
 			47429
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-74121,
 			-56929,
 			-56923
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-2871,
 			-2370,
 			-2383
 		};
-		
+
 		registerNPCs();
 	}
 }

@@ -639,7 +639,7 @@ public class CharEffectList {
 			if (_buffs == null) {
 				_buffs = new CopyOnWriteArrayList<>();
 			}
-			
+
 			for (L2Effect buff : _buffs) {
 				if (buff.getId() == newEffect.getId()
 						&& buff.getEffectType() == newEffect.getEffectType()

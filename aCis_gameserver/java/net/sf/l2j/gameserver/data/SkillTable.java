@@ -4,6 +4,10 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.Getter;
+import net.sf.finex.model.talents.handlers.Challenger;
+import net.sf.finex.model.talents.handlers.CumulativeRage;
+import net.sf.finex.model.talents.handlers.SonicAssault;
+import net.sf.finex.model.talents.handlers.TalentHandler;
 import net.sf.l2j.gameserver.model.base.Experience;
 import net.sf.l2j.gameserver.skills.DocumentSkill;
 import net.sf.l2j.gameserver.skills.L2Skill;
@@ -200,8 +204,7 @@ public class SkillTable {
 		BLESSING_OF_PROTECTION(5182, 1),
 		FIREWORK(5965, 1),
 		SINGING_SWORD_MASTERY(5303, 1),
-		MELODY_ARMOR_MASTERY(5304, 1),
-		;
+		MELODY_ARMOR_MASTERY(5304, 1),;
 
 		protected final int _id;
 		protected final int _level;
@@ -216,16 +219,27 @@ public class SkillTable {
 			return _skill;
 		}
 	}
-	
+
 	public static enum FrequentTalent {
 		DUAL_SWORD_MASTERY(8),
-		;
-		@Getter private final int id;
+		CUMULATIVE_RAGE(9, new CumulativeRage()),
+		SONIC_ASSAULT(10, new SonicAssault()),
+		CHALLENGER(11, new Challenger()),;
+		@Getter
+		private final int id;
+		@Getter
+		private final TalentHandler handler;
 
 		private FrequentTalent(int id) {
 			this.id = id;
+			this.handler = null;
 		}
-		
+
+		private FrequentTalent(int id, TalentHandler handler) {
+			this.id = id;
+			this.handler = handler;
+		}
+
 	}
 
 	private static class SingletonHolder {

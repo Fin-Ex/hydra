@@ -6,10 +6,10 @@ import org.slf4j.Logger;
 
 import net.sf.l2j.loginserver.network.clientpackets.ClientBasePacket;
 
-public class GameServerAuth extends ClientBasePacket
-{
+public class GameServerAuth extends ClientBasePacket {
+
 	protected static Logger _log = LoggerFactory.getLogger(GameServerAuth.class.getName());
-	
+
 	private final byte[] _hexId;
 	private final int _desiredId;
 	private final boolean _hostReserved;
@@ -17,11 +17,10 @@ public class GameServerAuth extends ClientBasePacket
 	private final int _maxPlayers;
 	private final int _port;
 	private final String _hostName;
-	
-	public GameServerAuth(byte[] decrypt)
-	{
+
+	public GameServerAuth(byte[] decrypt) {
 		super(decrypt);
-		
+
 		_desiredId = readC();
 		_acceptAlternativeId = (readC() == 0 ? false : true);
 		_hostReserved = (readC() == 0 ? false : true);
@@ -31,39 +30,32 @@ public class GameServerAuth extends ClientBasePacket
 		int size = readD();
 		_hexId = readB(size);
 	}
-	
-	public byte[] getHexID()
-	{
+
+	public byte[] getHexID() {
 		return _hexId;
 	}
-	
-	public boolean getHostReserved()
-	{
+
+	public boolean getHostReserved() {
 		return _hostReserved;
 	}
-	
-	public int getDesiredID()
-	{
+
+	public int getDesiredID() {
 		return _desiredId;
 	}
-	
-	public boolean acceptAlternateID()
-	{
+
+	public boolean acceptAlternateID() {
 		return _acceptAlternativeId;
 	}
-	
-	public int getMaxPlayers()
-	{
+
+	public int getMaxPlayers() {
 		return _maxPlayers;
 	}
-	
-	public String getHostName()
-	{
+
+	public String getHostName() {
 		return _hostName;
 	}
-	
-	public int getPort()
-	{
+
+	public int getPort() {
 		return _port;
 	}
 }

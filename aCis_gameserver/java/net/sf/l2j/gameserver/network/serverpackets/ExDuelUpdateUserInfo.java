@@ -6,20 +6,19 @@ import net.sf.l2j.gameserver.model.actor.Player;
 
 /**
  * Format: ch Sddddddddd
+ *
  * @author KenM
  */
-public class ExDuelUpdateUserInfo extends L2GameServerPacket
-{
+public class ExDuelUpdateUserInfo extends L2GameServerPacket {
+
 	private final Player _activeChar;
-	
-	public ExDuelUpdateUserInfo(Player cha)
-	{
+
+	public ExDuelUpdateUserInfo(Player cha) {
 		_activeChar = cha;
 	}
-	
+
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x4f);
 		writeS(_activeChar.getName());

@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q079_SagaOfTheAdventurer extends SagasSuperClass
-{
-	public Q079_SagaOfTheAdventurer()
-	{
+public class Q079_SagaOfTheAdventurer extends SagasSuperClass {
+
+	public Q079_SagaOfTheAdventurer() {
 		super(79, "Saga of the Adventurer");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			31603,
 			31584,
 			31579,
@@ -25,9 +23,8 @@ public class Q079_SagaOfTheAdventurer extends SagasSuperClass
 			31658,
 			31616
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7516,
 			7081,
@@ -41,38 +38,34 @@ public class Q079_SagaOfTheAdventurer extends SagasSuperClass
 			7102,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27299,
 			27228,
 			27302
 		};
-		
+
 		classid = 93;
 		prevclass = 0x08;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			119518,
 			181205,
 			181215
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-28658,
 			36676,
 			36676
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-3811,
 			-4816,
 			-4812
 		};
-		
+
 		registerNPCs();
 	}
 }

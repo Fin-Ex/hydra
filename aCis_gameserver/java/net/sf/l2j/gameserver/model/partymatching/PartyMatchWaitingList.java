@@ -10,39 +10,36 @@ import net.sf.l2j.gameserver.model.actor.Player;
 /**
  * @author Gnacik
  */
-public class PartyMatchWaitingList
-{
+public class PartyMatchWaitingList {
+
 	private final List<Player> _members;
-	
-	protected PartyMatchWaitingList()
-	{
+
+	protected PartyMatchWaitingList() {
 		_members = new ArrayList<>();
 	}
-	
-	public void addPlayer(Player player)
-	{
-		if (!_members.contains(player))
+
+	public void addPlayer(Player player) {
+		if (!_members.contains(player)) {
 			_members.add(player);
+		}
 	}
-	
-	public void removePlayer(Player player)
-	{
-		if (_members.contains(player))
+
+	public void removePlayer(Player player) {
+		if (_members.contains(player)) {
 			_members.remove(player);
+		}
 	}
-	
-	public List<Player> getPlayers()
-	{
+
+	public List<Player> getPlayers() {
 		return _members;
 	}
-	
-	public static PartyMatchWaitingList getInstance()
-	{
+
+	public static PartyMatchWaitingList getInstance() {
 		return SingletonHolder._instance;
 	}
-	
-	private static class SingletonHolder
-	{
+
+	private static class SingletonHolder {
+
 		protected static final PartyMatchWaitingList _instance = new PartyMatchWaitingList();
 	}
 }

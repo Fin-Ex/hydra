@@ -61,7 +61,7 @@ public class Disarm extends L2Effect {
 		getEffected().setAttackingDisabled(false);
 		super.onExit();
 	}
-	
+
 	private void disarmRightHand() {
 		final Player target = getEffected().getPlayer();
 		if (target.isCursedWeaponEquipped()) {
@@ -94,7 +94,7 @@ public class Disarm extends L2Effect {
 				}
 
 				target.sendPacket(sm);
-	
+
 				if (getEffector().getFirstEffect(L2EffectType.PARRY) != null) {
 					// block equip right hand
 					SkillTable.getInstance().getInfo(5300, 1).getEffects(getEffector(), getEffector());
@@ -103,6 +103,9 @@ public class Disarm extends L2Effect {
 		}
 	}
 
+	/**
+	 * Hidden function.
+	 */
 	private void disarmLeftHand() {
 		final Player target = getEffected().getPlayer();
 		if (target.isCursedWeaponEquipped()) {

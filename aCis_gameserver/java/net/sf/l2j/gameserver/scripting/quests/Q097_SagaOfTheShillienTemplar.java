@@ -4,14 +4,12 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.scripting.quests.SagasScripts.SagasSuperClass;
 
-public class Q097_SagaOfTheShillienTemplar extends SagasSuperClass
-{
-	public Q097_SagaOfTheShillienTemplar()
-	{
+public class Q097_SagaOfTheShillienTemplar extends SagasSuperClass {
+
+	public Q097_SagaOfTheShillienTemplar() {
 		super(97, "Saga of the Shillien Templar");
-		
-		NPC = new int[]
-		{
+
+		NPC = new int[]{
 			31580,
 			31623,
 			31285,
@@ -25,9 +23,8 @@ public class Q097_SagaOfTheShillienTemplar extends SagasSuperClass
 			31659,
 			31285
 		};
-		
-		Items = new int[]
-		{
+
+		Items = new int[]{
 			7080,
 			7526,
 			7081,
@@ -41,38 +38,34 @@ public class Q097_SagaOfTheShillienTemplar extends SagasSuperClass
 			7091,
 			0
 		};
-		
-		Mob = new int[]
-		{
+
+		Mob = new int[]{
 			27271,
 			27246,
 			27273
 		};
-		
+
 		classid = 106;
 		prevclass = 0x21;
-		
-		X = new int[]
-		{
+
+		X = new int[]{
 			161719,
 			124355,
 			124376
 		};
-		
-		Y = new int[]
-		{
+
+		Y = new int[]{
 			-92823,
 			82155,
 			82127
 		};
-		
-		Z = new int[]
-		{
+
+		Z = new int[]{
 			-1893,
 			-2803,
 			-2796
 		};
-		
+
 		registerNPCs();
 	}
 }

@@ -7,25 +7,23 @@ import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.Stats;
 import net.sf.l2j.gameserver.skills.basefuncs.Func;
 
-public class FuncHennaWIT extends Func
-{
+public class FuncHennaWIT extends Func {
+
 	static final FuncHennaWIT _fh_instance = new FuncHennaWIT();
-	
-	public static Func getInstance()
-	{
+
+	public static Func getInstance() {
 		return _fh_instance;
 	}
-	
-	private FuncHennaWIT()
-	{
+
+	private FuncHennaWIT() {
 		super(Stats.WIT, 0x10, null, null);
 	}
-	
+
 	@Override
-	public void calc(Env env)
-	{
+	public void calc(Env env) {
 		final DyeComponent dye = env.getPlayer().getComponent(DyeComponent.class);
-		if (dye != null)
+		if (dye != null) {
 			env.addValue(dye.getDyeWIT());
+		}
 	}
 }

@@ -9,28 +9,24 @@ import net.sf.l2j.gameserver.skills.L2Effect;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
 @Effect("BlockBuff")
-public class EffectBlockBuff extends L2Effect
-{
-	public EffectBlockBuff(Env env, EffectTemplate template)
-	{
+public class EffectBlockBuff extends L2Effect {
+
+	public EffectBlockBuff(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-	
+
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BLOCK_BUFF;
 	}
-	
+
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		return true;
 	}
-	
+
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 }

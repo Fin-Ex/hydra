@@ -19,8 +19,9 @@ public enum EPunishLevel {
 	JAIL("jailed"),
 	CHAR("banned"),
 	ACC("banned");
-	
-	@Getter private final String punishString;
+
+	@Getter
+	private final String punishString;
 
 	private EPunishLevel(String string) {
 		punishString = string;

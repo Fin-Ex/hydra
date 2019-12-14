@@ -2,20 +2,18 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-public class AskJoinAlly extends L2GameServerPacket
-{
+public class AskJoinAlly extends L2GameServerPacket {
+
 	private final String _requestorName;
 	private final int _requestorObjId;
-	
-	public AskJoinAlly(int requestorObjId, String requestorName)
-	{
+
+	public AskJoinAlly(int requestorObjId, String requestorName) {
 		_requestorName = requestorName;
 		_requestorObjId = requestorObjId;
 	}
-	
+
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xa8);
 		writeD(_requestorObjId);
 		writeS(_requestorName);

@@ -23,10 +23,10 @@ public class HennaRemoveList extends L2GameServerPacket {
 
 		if (dyeComponent.getDyes() != null) {
 			for (DyeData dye : dyeComponent.getDyes()) {
-				if(dye == null) {
+				if (dye == null) {
 					continue;
 				}
-				
+
 				writeD(dye.getSymbolId());
 				writeD(dye.getDyeId());
 				writeD(DyeData.getRequiredDyeAmount() / 2);

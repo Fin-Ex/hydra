@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.network.serverpackets;
 
-
 import java.util.HashMap;
 import java.util.Map;
 import net.sf.l2j.gameserver.model.group.Party;

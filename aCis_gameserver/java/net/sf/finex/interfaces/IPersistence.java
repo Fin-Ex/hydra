@@ -12,8 +12,12 @@ import org.slf4j.LoggerFactory;
  * @author FinFan
  */
 public interface IPersistence {
+
 	public void store();
+
 	public void restore();
+
 	public void delete();
+
 	public void remove(Object... args);
 }

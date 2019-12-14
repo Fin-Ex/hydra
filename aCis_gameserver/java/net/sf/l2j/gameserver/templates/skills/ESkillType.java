@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.templates.skills;
 
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
@@ -136,8 +135,7 @@ public enum ESkillType {
 	// unimplemented
 	NOTDONE,
 	// finex type
-	DISARM,
-	;
+	DISARM,;
 
 	private final Class<? extends L2Skill> _class;
 

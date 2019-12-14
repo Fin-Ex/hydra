@@ -8,106 +8,90 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ExAutoSoulShot;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestAutoSoulShot extends L2GameClientPacket
-{
+public final class RequestAutoSoulShot extends L2GameClientPacket {
+
 	private int _itemId;
 	private int _type; // 1 = on : 0 = off;
-	
+
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_itemId = readD();
 		_type = readD();
 	}
-	
+
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
-		
-		if (!activeChar.isInStoreMode() && activeChar.getActiveRequester() == null && !activeChar.isDead())
-		{
+		}
+
+		if (!activeChar.isInStoreMode() && activeChar.getActiveRequester() == null && !activeChar.isDead()) {
 			ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
-			if (item == null)
+			if (item == null) {
 				return;
-			
-			if (_type == 1)
-			{
+			}
+
+			if (_type == 1) {
 				// Fishingshots are not automatic on retail
-				if (_itemId < 6535 || _itemId > 6540)
-				{
+				if (_itemId < 6535 || _itemId > 6540) {
 					// Attempt to charge first shot on activation
-					if (_itemId == 6645 || _itemId == 6646 || _itemId == 6647)
-					{
-						if (activeChar.getActiveSummon() != null)
-						{
+					if (_itemId == 6645 || _itemId == 6646 || _itemId == 6647) {
+						if (activeChar.getActiveSummon() != null) {
 							// Cannot activate bss automation during Olympiad.
-							if (_itemId == 6647 && activeChar.isInOlympiadMode())
-							{
+							if (_itemId == 6647 && activeChar.isInOlympiadMode()) {
 								activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 								return;
 							}
-							
-							if (_itemId == 6645)
-							{
-								if (activeChar.getActiveSummon().getSoulShotsPerHit() > item.getCount())
-								{
+
+							if (_itemId == 6645) {
+								if (activeChar.getActiveSummon().getSoulShotsPerHit() > item.getCount()) {
 									activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET);
 									return;
 								}
-							}
-							else
-							{
-								if (activeChar.getActiveSummon().getSpiritShotsPerHit() > item.getCount())
-								{
+							} else {
+								if (activeChar.getActiveSummon().getSpiritShotsPerHit() > item.getCount()) {
 									activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS_FOR_PET);
 									return;
 								}
 							}
-							
+
 							// start the auto soulshot use
 							activeChar.addAutoSoulShot(_itemId);
 							activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
 							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.USE_OF_S1_WILL_BE_AUTO).addItemName(_itemId));
 							activeChar.rechargeShots(true, true);
 							activeChar.getActiveSummon().rechargeShots(true, true);
-						}
-						else
+						} else {
 							activeChar.sendPacket(SystemMessageId.NO_SERVITOR_CANNOT_AUTOMATE_USE);
-					}
-					else
-					{
+						}
+					} else {
 						// Cannot activate bss automation during Olympiad.
-						if (_itemId >= 3947 && _itemId <= 3952 && activeChar.isInOlympiadMode())
-						{
+						if (_itemId >= 3947 && _itemId <= 3952 && activeChar.isInOlympiadMode()) {
 							activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 							return;
 						}
-						
+
 						// Activate the visual effect
 						activeChar.addAutoSoulShot(_itemId);
 						activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
-						
+
 						// start the auto soulshot use
-						if (activeChar.getActiveWeaponItem() != activeChar.getFistsWeaponItem() && item.getItem().getCrystalType() == activeChar.getActiveWeaponItem().getCrystalType())
+						if (activeChar.getActiveWeaponItem() != activeChar.getFistsWeaponItem() && item.getItem().getCrystalType() == activeChar.getActiveWeaponItem().getCrystalType()) {
 							activeChar.rechargeShots(true, true);
-						else
-						{
-							if ((_itemId >= 2509 && _itemId <= 2514) || (_itemId >= 3947 && _itemId <= 3952) || _itemId == 5790)
+						} else {
+							if ((_itemId >= 2509 && _itemId <= 2514) || (_itemId >= 3947 && _itemId <= 3952) || _itemId == 5790) {
 								activeChar.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
-							else
+							} else {
 								activeChar.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
+							}
 						}
-						
+
 						// In both cases (match/mismatch), that message is displayed.
 						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.USE_OF_S1_WILL_BE_AUTO).addItemName(_itemId));
 					}
 				}
-			}
-			else if (_type == 0)
-			{
+			} else if (_type == 0) {
 				// cancel the auto soulshot use
 				activeChar.removeAutoSoulShot(_itemId);
 				activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
