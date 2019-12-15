@@ -58,11 +58,6 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket {
 				return;
 			}
 
-			final Gladiator glad = requestor.getComponent(Gladiator.class);
-			if (glad != null && !glad.checkDuel()) {
-				return;
-			}
-
 			if (_partyDuel == 1) {
 				// Player must be a party leader, the target can't be of the same party.
 				final Party requestorParty = requestor.getParty();

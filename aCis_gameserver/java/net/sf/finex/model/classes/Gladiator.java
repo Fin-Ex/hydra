@@ -22,9 +22,7 @@ public class Gladiator extends AbstractClassComponent {
 
 	private static final int PAYMENT = 15000;
 
-	@Getter
-	@Setter
-	private boolean inDuelMode;
+	@Getter @Setter private boolean inDuelMode;
 
 	private final AbstractEventSubscription<OnDuelStart> onDuelStart;
 	private final AbstractEventSubscription<OnDuelEnd> onDuelEnd;
@@ -38,36 +36,32 @@ public class Gladiator extends AbstractClassComponent {
 		}
 	}
 
-	public boolean checkDuel() {
-		if (inDuelMode && !getGameObject().reduceAdena("DuelPayment", PAYMENT, getGameObject(), true)) {
-			getGameObject().sendMessage("Not enought adena for duel by Challenge.");
-			return false;
-		}
-
-		return true;
-	}
-
 	private void onDuelStart(OnDuelStart event) {
 		getGameObject().sendMessage("Duel started.");
 	}
 
 	private void onDuelEnd(OnDuelEnd event) {
-		if (event.getState() == Duel.DuelState.WINNER) {
+		if (!inDuelMode) {
+			return;
+		}
+		
+		if (event.getState() == Duel.DuelState.WINNER && event.getChallenger().getAdena() > PAYMENT) {
 			////////////////////////////////// Win
-			GladiatorRankTable.getInstance().increment(getGameObject(), 3);
-			// return adena for this dueling
-			getGameObject().getInventory().addAdena("DuelPayment", PAYMENT, getGameObject(), null);
+			GladiatorRankTable.getInstance().increment(event.getChallenger(), 3);
 		} else {
 			////////////////////////////////// Loss
-			GladiatorRankTable.getInstance().decrement(getGameObject(), 3);
+			GladiatorRankTable.getInstance().decrement(event.getChallenger(), 3);
+			// reduce adena from challenger
+			event.getChallenger().reduceAdena("DuelPayment", PAYMENT, event.getChallenger(), true);
 			// give adena to a opponent
-			event.getOpponent().getInventory().addAdena("DuelPayment", PAYMENT, event.getOpponent(), getGameObject());
+			event.getOpponent().getInventory().addAdena("DuelPayment", PAYMENT, event.getOpponent(), event.getChallenger());
+			event.getOpponent().sendMessage("You earn 15,000 adena for winning in a Challenge Duel.");
 		}
 
 		inDuelMode = false;
-		getGameObject().sendMessage("Duel mode deactivated.");
-		getGameObject().getEventBus().unsubscribe(onDuelStart);
-		getGameObject().getEventBus().unsubscribe(onDuelEnd);
+		event.getChallenger().sendMessage("Duel mode deactivated.");
+		event.getChallenger().getEventBus().unsubscribe(onDuelStart);
+		event.getChallenger().getEventBus().unsubscribe(onDuelEnd);
 	}
 
 	@Override

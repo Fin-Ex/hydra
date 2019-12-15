@@ -88,7 +88,7 @@
             </effect>
         </for>
     </skill>
-    <skill id="6007" levels="1" name="Dual Sword Master">
+    <skill id="6007" levels="1" name="Dual Master">
         <!-- Done in skill Riposte Stance like a conditions for stats -->
         <set name="target" val="TARGET_SELF" />
         <set name="skillType" val="BUFF" />
@@ -105,6 +105,21 @@
         <set name="operateType" val="OP_PASSIVE" />
     </skill>
     <skill id="6010" levels="1" name="Challenger">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6011" levels="1" name="Professional Anger">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6012" levels="1" name="Recoiled Blast">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6013" levels="1" name="Mana Control">
         <set name="target" val="TARGET_SELF" />
         <set name="skillType" val="BUFF" />
         <set name="operateType" val="OP_PASSIVE" />

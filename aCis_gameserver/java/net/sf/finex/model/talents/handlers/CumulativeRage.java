@@ -18,7 +18,7 @@ public class CumulativeRage implements TalentHandler {
 	public Integer invoke(Object... args) {
 		final Player caster = (Player) args[0];
 		final int damage = (int) args[1];
-		final double modifier = 0.7 + 0.3 * caster.getCharges();
+		final double modifier = caster.getCharges() / 10. + 1;
 		return (int) (damage * modifier);
 	}
 

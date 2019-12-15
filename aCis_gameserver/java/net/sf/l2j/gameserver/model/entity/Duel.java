@@ -852,8 +852,8 @@ public class Duel {
 				_playerA.setDuelState(DuelState.WINNER);
 			}
 
-			_playerA.getEventBus().notify(new OnDuelEnd(_playerB, _playerA.getDuelState()));
-			_playerB.getEventBus().notify(new OnDuelEnd(_playerA, _playerB.getDuelState()));
+			_playerA.getEventBus().notify(new OnDuelEnd(_playerA, _playerB, _playerA.getDuelState()));
+			//_playerB.getEventBus().notify(new OnDuelEnd(_playerB, _playerA, _playerB.getDuelState()));
 		}
 	}
 

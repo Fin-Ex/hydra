@@ -15,7 +15,6 @@ import net.sf.l2j.gameserver.model.entity.Duel;
  */
 @Data
 public class OnDuelEnd {
-
-	private final Player opponent;
+	private final Player challenger, opponent;
 	private final Duel.DuelState state;
 }

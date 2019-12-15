@@ -27,6 +27,14 @@ public class Challenge implements IUserCommandHandler {
 		}
 
 		final Gladiator glad = activeChar.getComponent(Gladiator.class);
+		if (glad == null) {
+			return false;
+		}
+		
+		if (activeChar.isInDuel()) {
+			return false;
+		}
+		
 		glad.setInDuelMode(!glad.isInDuelMode());
 		if (!glad.isInDuelMode()) {
 			activeChar.sendMessage("Duel mode deactivated.");

@@ -82,23 +82,27 @@ public final class GladiatorRankTable {
 		final RankerData data = get(player);
 		if (data != null) {
 			data.setPoints(data.getPoints() + value);
+			player.sendMessage("Received " + value + " rank points.");
 		}
 		sort(this, true);
 		if (isOneOfTen(player)) {
 			player.sendMessage("You are the one of ten.");
 		}
+		player.sendMessage("Gladiator ranking: " + get(player).getPoints());
 	}
 
 	public void decrement(Player player, int value) {
 		final RankerData data = get(player);
 		if (data != null) {
 			data.setPoints(data.getPoints() - value);
+			player.sendMessage("Losted " + value + " rank points.");
 		}
 		final boolean oldStatus = isOneOfTen(player);
 		sort(this, true);
 		if (oldStatus && !isOneOfTen(player)) {
 			player.sendMessage("You are not one of ten.");
 		}
+		player.sendMessage("Gladiator ranking: " + get(player).getPoints());
 	}
 
 	public void recalculate() {

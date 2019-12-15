@@ -2,6 +2,7 @@ package net.sf.l2j.gameserver.skills;
 
 import net.sf.finex.enums.ESkillAlignmentType;
 import net.sf.finex.model.creature.attack.DamageInfo;
+import net.sf.finex.model.talents.handlers.ProfessionalAnger;
 import net.sf.l2j.Config;
 import net.sf.l2j.commons.math.MathUtil;
 import net.sf.l2j.commons.random.Rnd;
@@ -1608,43 +1609,50 @@ public final class Formulas {
 		modifiedTime = Math.max(modifiedTime, 1);
 
 		// swordsinger songs with weapon type
-		if (caster.isPlayer() && caster.getPlayer().getClassId().equalsOrChildOf(ClassId.Swordsinger)) {
-			switch (skill.getId()) {
-				case 364:
-				case 264:
-				case 306:
-				case 269:
-				case 270:
-				case 265:
-				case 363:
-				case 349:
-				case 308:
-				case 305:
-				case 304:
-				case 267:
-				case 266:
-				case 268: {
-					final WeaponType weaponType = caster.getAttackType();
-					switch (weaponType) {
-						case BIGSWORD:
-							modifiedTime = baseTime * 0.5; // -50% time with 2h sword
-							break;
+		if (caster.isPlayer()) {
+			final Player pc = caster.getPlayer();
+			if (pc.getClassId().equalsOrChildOf(ClassId.Swordsinger)) {
+				switch (skill.getId()) {
+					case 364:
+					case 264:
+					case 306:
+					case 269:
+					case 270:
+					case 265:
+					case 363:
+					case 349:
+					case 308:
+					case 305:
+					case 304:
+					case 267:
+					case 266:
+					case 268: {
+						final WeaponType weaponType = caster.getAttackType();
+						switch (weaponType) {
+							case BIGSWORD:
+								modifiedTime = baseTime * 0.5; // -50% time with 2h sword
+								break;
 
-						case DUAL:
-							modifiedTime = baseTime * 2; // +100% time with dual swords
-							break;
+							case DUAL:
+								modifiedTime = baseTime * 2; // +100% time with dual swords
+								break;
+						}
+						break;
 					}
-					break;
+
+					case 437: // song of silence increase their time with duals by 100%
+						if (caster.getAttackType() == WeaponType.DUAL) {
+							modifiedTime = baseTime * 2;
+						}
+						break;
 				}
-
-				case 437: // song of silence increase their time with duals by 100%
-					if (caster.getAttackType() == WeaponType.DUAL) {
-						modifiedTime = baseTime * 2;
-					}
-					break;
+			}
+			
+			if(ProfessionalAnger.validate(pc, skill)) {
+				modifiedTime *= (int) SkillTable.FrequentTalent.PROFESSIONAL_ANGER.getHandler().invoke();
 			}
 		}
-
+		
 		return (int) modifiedTime;
 	}
 
