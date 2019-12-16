@@ -401,7 +401,7 @@ public class CreatureStat {
 	 * @param skill
 	 * @return the mpConsume.
 	 */
-	public final int getMpConsume(L2Skill skill) {
+	public int getMpConsume(L2Skill skill) {
 		if (skill == null) {
 			return 1;
 		}
@@ -420,7 +420,7 @@ public class CreatureStat {
 		if (skill.isMagic()) {
 			return (int) calcStat(Stats.MagicalMpConsumeRate, mpConsume, null, null);
 		}
-
+		
 		return (int) calcStat(Stats.PhysicalMpConsumeRate, mpConsume, null, null);
 	}
 

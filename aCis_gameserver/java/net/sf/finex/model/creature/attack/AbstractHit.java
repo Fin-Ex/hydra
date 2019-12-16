@@ -32,14 +32,10 @@ import net.sf.l2j.gameserver.skills.Stats;
  */
 public abstract class AbstractHit {
 
-	@Getter
-	protected final Creature attacker, target;
-	@Getter
-	protected final Weapon weapon;
-	@Getter
-	protected int hitTime;
-	@Getter
-	protected Attack attack;
+	@Getter protected final Creature attacker, target;
+	@Getter protected final Weapon weapon;
+	@Getter protected int hitTime;
+	@Getter protected Attack attack;
 
 	public AbstractHit(Creature attacker, Creature target) {
 		this.attacker = attacker;
@@ -48,6 +44,10 @@ public abstract class AbstractHit {
 	}
 
 	public boolean start() {
+		if (target.isDead()) {
+			return false;
+		}
+		
 		// Recharge any active auto soulshot tasks for current Creature instance.
 		attacker.rechargeShots(true, false);
 		hitTime = attacker.getAttackType() == WeaponType.BOW ? 1500 * 345 / attacker.getPAtkSpd() : Formulas.calcPAtkSpd(attacker, target, attacker.getPAtkSpd());

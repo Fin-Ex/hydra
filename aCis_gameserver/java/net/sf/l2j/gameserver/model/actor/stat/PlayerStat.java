@@ -502,4 +502,25 @@ public class PlayerStat extends PlayableStat {
 	public int getCpRegenInterval() {
 		return (int) calcStat(Stats.CpRegenInterval, 3000, null, null);
 	}
+
+	@Override
+	public int getMpConsume(L2Skill skill) {
+		int mpConsume = super.getMpConsume(skill);
+		
+		if (getActiveChar().hasTalent(14)) {
+			switch (skill.getId()) {
+				// reduce mana consume for all sonic skills which consumes charges
+				case 6:
+				case 5:
+				case 261:
+				case 7:
+				case 9:
+					final double hpBonus = (getActiveChar().getMaxHp() - getActiveChar().getCurrentHp()) / 117;
+					mpConsume = (int) (1 - hpBonus * 1.5 / 100.0);
+					break;
+			}
+		}
+		
+		return mpConsume;
+	}
 }

@@ -11,9 +11,12 @@ import java.util.concurrent.Future;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+import net.sf.finex.model.talents.handlers.RecoiledBlast;
 import net.sf.finex.model.talents.handlers.SonicAssault;
+import net.sf.finex.model.talents.handlers.TalentHandler;
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.math.MathUtil;
+import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.geoengine.GeoEngine;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
@@ -595,6 +598,12 @@ public final class Cast {
 
 			caster.callSkill(skill, targets);
 			caster.getEventBus().notify(new OnCast(caster, target, skill));
+		}
+		
+		if (caster.isPlayer()) {
+			if (RecoiledBlast.validate(caster.getPlayer(), skill)) {
+				SkillTable.FrequentTalent.RECOILED_BLAST.getHandler().invoke(caster, target, skill);
+			}
 		}
 	}
 }

@@ -85,6 +85,6 @@
 		"id":14,
 		"skillId":6013,
 		"name":"Mana Control",
-		"descr":"The less health, the less mana consumed. Mana consumption on an abilities: [<font color=BDB76B>Triple Sonic Slash, Double Sonic Slash, Sonic Buster, Sonic Storm</font>] is decreases by <font color=BDB76B>1.5%</font> for every <font color=BDB76B>117 units</font> of lost HP. The maximum reduction limit cannot exceed <font color=BDB76B>50%</font> of the actual MP capacity consumption."
+		"descr":"The less health, the less mana consumed. Mana consumption on an abilities: [<font color=BDB76B>Triple Sonic Slash, Double Sonic Slash, Sonic Buster, Sonic Storm, Sonic Blaster</font>] is decreases by <font color=BDB76B>1.5%</font> for every <font color=BDB76B>117 units</font> of lost HP. The maximum reduction limit cannot exceed <font color=BDB76B>50%</font> of the actual MP capacity consumption."
 	}
 ]

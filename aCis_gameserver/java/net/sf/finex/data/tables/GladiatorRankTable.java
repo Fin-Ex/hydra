@@ -108,10 +108,14 @@ public final class GladiatorRankTable {
 	public void recalculate() {
 		log.info("Start recalculating of first ten of gladiators...");
 		sort(ClassId.class, true);
-		for (int i = 0; i < 10; i++) {
-			final RankerData data = rankers.remove(i);
-			remove(data.getObjectId());
-			log.info("Removed: {}", data);
+		try {
+			for (int i = 0; i < 10; i++) {
+				final RankerData data = rankers.remove(i);
+				remove(data.getObjectId());
+				log.info("Removed: {}", data);
+			}
+		} catch (IndexOutOfBoundsException e) {
+			log.info("first ten was cleared. New first ten setted.");
 		}
 	}
 

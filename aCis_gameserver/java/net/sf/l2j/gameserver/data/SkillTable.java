@@ -7,6 +7,7 @@ import lombok.Getter;
 import net.sf.finex.model.talents.handlers.Challenger;
 import net.sf.finex.model.talents.handlers.CumulativeRage;
 import net.sf.finex.model.talents.handlers.ProfessionalAnger;
+import net.sf.finex.model.talents.handlers.RecoiledBlast;
 import net.sf.finex.model.talents.handlers.SonicAssault;
 import net.sf.finex.model.talents.handlers.TalentHandler;
 import net.sf.l2j.gameserver.model.base.Experience;
@@ -226,7 +227,8 @@ public class SkillTable {
 		CUMULATIVE_RAGE(9, new CumulativeRage()),
 		SONIC_ASSAULT(10, new SonicAssault()),
 		CHALLENGER(11, new Challenger()),
-		PROFESSIONAL_ANGER(12, new ProfessionalAnger());
+		PROFESSIONAL_ANGER(12, new ProfessionalAnger()),
+		RECOILED_BLAST(13, new RecoiledBlast());
 		@Getter
 		private final int id;
 		@Getter

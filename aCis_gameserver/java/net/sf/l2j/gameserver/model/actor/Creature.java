@@ -532,12 +532,6 @@ public abstract class Creature extends WorldObject {
 			return;
 		}
 
-		if (target.isDead()) {
-			removeTarget();
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-
 		if (!isAlikeDead()) {
 			if (isNpc() && target.isAlikeDead() || !getKnownType(Creature.class).contains(target)) {
 				getAI().setIntention(CtrlIntention.ACTIVE);

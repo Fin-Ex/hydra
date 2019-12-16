@@ -2,6 +2,8 @@ package net.sf.l2j.gameserver.skills.l2skills;
 
 import net.sf.finex.model.creature.attack.DamageInfo;
 import net.sf.finex.model.talents.handlers.Challenger;
+import net.sf.finex.model.talents.handlers.RecoiledBlast;
+import net.sf.finex.model.talents.handlers.TalentHandler;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
@@ -98,7 +100,7 @@ public class L2SkillChargeDmg extends L2Skill {
 
 				double finalDamage = damage * modifier;
 				target.reduceCurrentHp(finalDamage, caster, this);
-
+				
 				// vengeance reflected damage
 				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0) {
 					caster.reduceCurrentHp(damage, target, this);

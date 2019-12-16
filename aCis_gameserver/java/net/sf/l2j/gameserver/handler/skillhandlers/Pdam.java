@@ -6,6 +6,7 @@ import java.util.List;
 
 import net.sf.finex.model.creature.attack.DamageInfo;
 import net.sf.finex.model.talents.handlers.CumulativeRage;
+import net.sf.finex.model.talents.handlers.RecoiledBlast;
 import net.sf.finex.model.talents.handlers.TalentHandler;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.handler.ISkillHandler;
@@ -44,11 +45,12 @@ public class Pdam implements ISkillHandler {
 
 		TalentHandler cumulativeRage = null;
 		if (activeChar.isPlayer()) {
-			if (CumulativeRage.validate(activeChar.getPlayer())) {
+			final Player player = activeChar.getPlayer();
+			if (CumulativeRage.validate(player)) {
 				cumulativeRage = SkillTable.FrequentTalent.CUMULATIVE_RAGE.getHandler();
 			}
 		}
-
+		
 		for (WorldObject obj : targets) {
 			if (!(obj instanceof Creature)) {
 				continue;
