@@ -30,6 +30,21 @@ public class TalentLearnAnswer implements IDialogAnswer {
 			}
 
 			final TalentData talent = TalentTable.getInstance().get(talentId);
+			if (talent.getRequiredSkill() > 0 && activeChar.getSkill(talent.getRequiredSkill()) == null) {
+				activeChar.sendMessage("you need learn skill " + talent.getRequiredSkill());
+				return;
+			}
+			
+			if (talent.getRequiredLevel() > 0 && activeChar.getLevel() < talent.getRequiredLevel()) {
+				activeChar.sendMessage("you need level " + talent.getRequiredLevel());
+				return;
+			}
+
+			if (talent.getRequiredTalent() > 0 && activeChar.hasTalent(talent.getRequiredTalent())) {
+				activeChar.sendMessage("you need talent " + talent.getRequiredTalent());
+				return;
+			}
+
 			activeChar.addSkill(SkillTable.getInstance().getInfo(talent.getSkillId(), 1), true);
 			activeChar.sendSkillList();
 			activeChar.setLineagePoints(activeChar.getLineagePoints() - 1);

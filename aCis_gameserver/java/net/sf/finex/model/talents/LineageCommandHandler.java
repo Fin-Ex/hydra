@@ -75,6 +75,9 @@ public class LineageCommandHandler {
 		final int reqTalent = talent.getRequiredTalent();
 		html.replace("%reqtalent%", reqTalent > 0 ? TalentTable.getInstance().get(reqTalent).getName() : "None");
 
+		final int reqSkill = talent.getRequiredSkill();
+		html.replace("%reqskill%", reqSkill > 0 ? SkillTable.getInstance().getInfo(reqSkill, 1).getName() : "None");
+		
 		html.replace("%status%", player.hasTalent(talentId) ? "<font color=00ff00>Learned</font>" : "<font color=ff0000>Not learned</font>");
 
 		html.replace("%learn%", "<a action=\"bypass -h talentLearn " + talentId + "\">Learn</a>");

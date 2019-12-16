@@ -18,6 +18,7 @@ public class TalentData {
 	private final int id;
 	private final int requiredLevel;
 	private final int requiredTalent;
+	private final int requiredSkill;
 	private final int skillId;
 	private final String name, descr;
 

@@ -1040,6 +1040,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillType" val="STUN" />
         <set name="isDebuff" val="true" />
+		<set name="skillRadius" val="150"/>
         <enchant1 name="power" val="#ench1power"/>
         <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
         <for>

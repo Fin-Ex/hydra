@@ -22,8 +22,7 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 @Slf4j
 public class LineagePointsManager {
 
-	@Getter
-	private static final LineagePointsManager instance = new LineagePointsManager();
+	@Getter private static final LineagePointsManager instance = new LineagePointsManager();
 
 	public void giveLineagePoints(Player player) {
 		if (player.getLevel() < player.getLineageReachLevel()) {

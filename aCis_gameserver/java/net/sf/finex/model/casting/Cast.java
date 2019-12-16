@@ -529,7 +529,13 @@ public final class Cast {
 		final WorldObject tgt = targets.length > 0 ? targets[0] : null;
 
 		// Attack target after skill use
-		if (skill.nextActionIsAttack() && caster.getTarget().isCreature() && caster.getTarget() != caster && caster.getTarget() == tgt && caster.getTarget().isAttackable()) {
+		final WorldObject castersTarget = caster.getTarget();
+		if (skill.nextActionIsAttack()
+				&& castersTarget != null
+				&& castersTarget.isCreature()
+				&& castersTarget != caster
+				&& castersTarget == tgt
+				&& castersTarget.isAttackable()) {
 			if (caster.getAI() == null || caster.getAI().getNextIntention() == null || caster.getAI().getNextIntention().getIntention() != CtrlIntention.MOVE_TO) {
 				caster.getAI().setIntention(CtrlIntention.ATTACK, tgt);
 			}
