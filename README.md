@@ -4,6 +4,7 @@
 2. [UPD 2.0](https://github.com/finfan222/L2JFinExGithub#upd-20)
 3. [UPD 3.0](https://github.com/finfan222/L2JFinExGithub#upd-30)
 4. [UPD 4.0](https://github.com/finfan222/L2JFinExGithub#upd-40)
+4. [UPD 5.0](https://github.com/finfan222/L2JFinExGithub#upd-50)
 
 # UPD 1.0
 
@@ -389,3 +390,6 @@ HP/MP/CP имеют базовое время регена равно 3 сек.
 ![](https://img-host.ru/dq6q.png)
 ![](https://img-host.ru/d7QN.png)
 ![](https://img-host.ru/gG80.png)
+
+# UPD 5.0
+Test
