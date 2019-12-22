@@ -28,6 +28,14 @@ public class StatsSet extends HashMap<String, Object> {
 		super(set);
 	}
 
+	/**
+	 * Set null for a given key
+	 * @param key 
+	 */
+	public void set(String key) {
+		put(key, null);
+	}
+	
 	public void set(final String key, final Object value) {
 		put(key, value);
 	}

@@ -17,6 +17,15 @@ public class ConditionPlayerHp extends Condition {
 
 	@Override
 	public boolean testImpl(Env env) {
-		return env.getCharacter().getCurrentHp() * 100 / env.getCharacter().getMaxHp() <= _hp;
+		final double currentHP = env.getCharacter().getCurrentHp() * 100 / env.getCharacter().getMaxHp();
+		if (env.getSkill() != null) {
+			switch (env.getSkill().getId()) {
+				case 181:
+					if (env.getPlayer().hasTalent(18)) {
+						return currentHP <= 15.0;
+					}
+			}
+		}
+		return currentHP <= _hp;
 	}
 }

@@ -4,12 +4,16 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.Getter;
+import net.sf.finex.model.talents.handlers.Aftershock;
 import net.sf.finex.model.talents.handlers.Challenger;
 import net.sf.finex.model.talents.handlers.CumulativeRage;
+import net.sf.finex.model.talents.handlers.Disaster;
 import net.sf.finex.model.talents.handlers.ProfessionalAnger;
+import net.sf.finex.model.talents.handlers.ThreatIncrease;
 import net.sf.finex.model.talents.handlers.RecoiledBlast;
 import net.sf.finex.model.talents.handlers.SonicAssault;
 import net.sf.finex.model.talents.handlers.TalentHandler;
+import net.sf.finex.model.talents.handlers.WildHurricane;
 import net.sf.l2j.gameserver.model.base.Experience;
 import net.sf.l2j.gameserver.skills.DocumentSkill;
 import net.sf.l2j.gameserver.skills.L2Skill;
@@ -228,11 +232,14 @@ public class SkillTable {
 		SONIC_ASSAULT(10, new SonicAssault()),
 		CHALLENGER(11, new Challenger()),
 		PROFESSIONAL_ANGER(12, new ProfessionalAnger()),
-		RECOILED_BLAST(13, new RecoiledBlast());
-		@Getter
-		private final int id;
-		@Getter
-		private final TalentHandler handler;
+		RECOILED_BLAST(13, new RecoiledBlast()),
+		WILD_HURRICANE(15, new WildHurricane()),
+		AFTERSHOCK(16, new Aftershock()),
+		THREAT_INCREASE(19, new ThreatIncrease()),
+		DISASTER(20, new Disaster());
+		
+		@Getter private final int id;
+		@Getter private final TalentHandler handler;
 
 		private FrequentTalent(int id) {
 			this.id = id;

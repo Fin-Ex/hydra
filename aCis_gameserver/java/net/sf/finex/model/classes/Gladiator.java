@@ -5,6 +5,7 @@
  */
 package net.sf.finex.model.classes;
 
+import java.util.concurrent.ScheduledFuture;
 import lombok.Getter;
 import lombok.Setter;
 import net.sf.finex.data.tables.GladiatorRankTable;
@@ -26,7 +27,7 @@ public class Gladiator extends AbstractClassComponent {
 
 	private final AbstractEventSubscription<OnDuelStart> onDuelStart;
 	private final AbstractEventSubscription<OnDuelEnd> onDuelEnd;
-
+	
 	public Gladiator(Player player) {
 		super(player);
 		onDuelStart = getGameObject().getEventBus().subscribe().cast(OnDuelStart.class).forEach(this::onDuelStart);

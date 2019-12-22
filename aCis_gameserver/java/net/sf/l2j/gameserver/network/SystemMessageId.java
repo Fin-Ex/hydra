@@ -12438,6 +12438,12 @@ public final class SystemMessageId {
 	public static final SystemMessageId QUEST_S1_WAS_COMPLETED;
 
 	/**
+	 * ID: 2187<br>
+	 * Message: $s1 absorb your charges!
+	 */
+	public static final SystemMessageId S1_ABSORBS_YOUR_CHARGES;
+
+	/**
 	 * Array containing all SystemMessageIds<br>
 	 * Important: Always initialize with a length of the highest SystemMessageId
 	 * + 1!!!
@@ -14432,6 +14438,7 @@ public final class SystemMessageId {
 		YOU_DO_NOT_HAVE_A_QUEST = new SystemMessageId(2184);
 		S1_HUNT_S2_S3 = new SystemMessageId(2185);
 		QUEST_S1_WAS_COMPLETED = new SystemMessageId(2186);
+		S1_ABSORBS_YOUR_CHARGES = new SystemMessageId(2187);
 
 		buildFastLookupTable();
 	}

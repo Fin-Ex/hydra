@@ -1422,6 +1422,7 @@ public final class Formulas {
 			case UNDEAD_DEFENSE:
 			case AGGDEBUFF:
 			case CONT:
+			case ABSORB:
 				return SKILL_REFLECT_FAILED;
 
 			case PDAM:

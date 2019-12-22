@@ -19,8 +19,8 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
 @Slf4j
 public final class EffectTemplate {
 
-	private final Class<?> effectClass;
-	private final Constructor<?> effectConstructor;
+	public Class<?> effectClass;
+	public Constructor<?> effectConstructor;
 	public final Condition attachCond;
 	public final Condition applayCond;
 	public final Lambda lambda;

@@ -103,13 +103,13 @@
 		"id":17,
 		"skillId":6016,
 		"name":"Heat of Battle",
-		"descr":"Ability <font color=BDB76B>`Thrill Fight`</font> no more reduce the move speed. Effect is <font color=BDB76B>increases for 100%</font> from base. Each your attack will consumes 1<font color=BDB76B>7 HP</font>."
+		"descr":"Ability <font color=BDB76B>`Thrill Fight`</font> no more reduce the move speed. Effect is <font color=BDB76B>increases for 100%</font> from base. Each your attack will consumes <font color=BDB76B>11 HP</font>. Has effect only with polearm weapon."
 	},
 	{
 		"id":18,
 		"skillId":6017,
 		"name":"Autumn Leaf's",
-		"descr":"Ability <font color=BDB76B>`Revival`</font> can be used on <font color=BDB76B>any</font> condition of HP."
+		"descr":"Ability <font color=BDB76B>`Revival`</font> can be used on <font color=BDB76B>15% HP</font> instead of <font color=BDB76B>5%</font>."
 	},
 	{
 		"id":19,
@@ -120,51 +120,17 @@
 	{
 		"id":20,
 		"skillId":6019,
-		"name":"Anger",
-		"descr":"After using ability <font color=BDB76B>`Wrath`</font> you feel great anger and became <font color=BDB76B>invulerable</font> against any disable attacks. Your attack speed increases for <font color=BDB76B>100%</font>, movement speed increases for <font color=BDB76B>40</font> for the next <font color=BDB76B>3 sec.</font>"
+		"requiredLevel":78,
+		"requiredSkill":347,
+		"name":"Disaster!",
+		"descr":"Ability <font color=BDB76B>`Earthquake`</font> reduces the movement speed of all enemies affected by the earthquake by <font color=BDB76B>70% for 5 seconds</font>."
 	},
 	{
 		"id":21,
 		"skillId":6020,
-		"name":"Battle Spirit",
-		"descr":"After killing an enemy, the <font color=BDB76B>`Battle Roar`</font> healing effect is activated with a <font color=BDB76B>30%</font> chance. If a enemy player dies near you, the effect is activated with a probability of <font color=BDB76B>100%</font>."
-	},
-	{
-		"id":22,
-		"skillId":6021,
-		"name":"Second Wind",
-		"descr":"When you are resting, <font color=BDB76B>interval</font> of HP regeneration set's to <font color=BDB76B>0.25 sec</font>. instead of normal 3 sec. Effect can be activated only if you are <font color=BDB76B>not</font> in a battle."
-	},
-	{
-		"id":23,
-		"skillId":6022,
-		"name":"Call of the Battle",
-		"descr":"A battle cry that makes all your comrades <font color=BDB76B>immune to negative attacks</font> that can take control over the next <font color=BDB76B>10 sec</font>."
-	},
-	{
-		"id":24,
-		"skillId":6023,
-		"name":"Disaster: Slow",
-		"descr":"Abilities [<font color=BDB76B>`Whirlwind`, `Earthquake`, `Wrath`</font>] will captivate your enemies by reducing their movement speed by 30% for 5 seconds.."
-	},
-	{
-		"id":25,
-		"skillId":6024,
-		"requiredTalent":24,
-		"name":"Disaster: Bleed",
-		"descr":"Abilities [<font color=BDB76B>`Whirlwind`, `Earthquake`, `Thunder Storm`, `Wrath`</font>] will captivate your enemies by applying a bleeding effect with a power of 1% of the damage done. Action time 6 seconds."
-	},
-	{
-		"id":26,
-		"skillId":6025,
-		"name":"Polearmeister",
-		"descr":"Your attacks from Pole weapon, doesnt have penalties on damage anymore. In addition, all attacks against secondary targets begin to inflict additional damage, depending on who was in the queue for getting pussies. Power: +5% for next target."
-	},
-	{
-		"id":27,
-		"skillId":6026,
-		"requiredLevel":77,
-		"name":"Stance Master",
-		"descr":"Ability `Parry Stance` doesnt have a penalties anymore. If you using a pole weapon type and wearing heavy armor, MP consume reduced for 50%."
+		"requiredLevel":40,
+		"requiredSkill":8,
+		"name":"Sonic Absorb",
+		"descr":"Absorb all sonic focueses which affects on you. For each absorbed focus you will restore 148 CP."
 	}
 ]

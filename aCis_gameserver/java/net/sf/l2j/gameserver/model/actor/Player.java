@@ -26,6 +26,7 @@ import net.sf.finex.dao.PlayerLineageDao;
 import net.sf.finex.data.RecipeData;
 import net.sf.finex.data.ReviveRequestData;
 import net.sf.finex.data.TalentData;
+import net.sf.finex.data.TimeStamp;
 import net.sf.finex.data.tables.RecipeTable;
 import net.sf.finex.enums.EPartyLoot;
 import net.sf.finex.enums.EPartyMessageType;
@@ -41,6 +42,7 @@ import net.sf.finex.model.creature.player.ComboComponent;
 import net.sf.finex.model.dye.DyeComponent;
 import net.sf.finex.model.generator.quest.RandomQuestComponent;
 import net.sf.finex.model.regeneration.ERegenType;
+import net.sf.finex.model.talents.handlers.WildHurricane;
 import net.sf.l2j.Config;
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.commons.concurrent.ThreadPool;
@@ -99,6 +101,7 @@ import net.sf.l2j.gameserver.model.actor.ai.type.CreatureAI;
 import net.sf.l2j.gameserver.model.actor.ai.type.PlayerAI;
 import net.sf.l2j.gameserver.model.actor.ai.type.SummonAI;
 import net.sf.l2j.gameserver.model.actor.appearance.PcAppearance;
+import net.sf.l2j.gameserver.model.actor.events.OnCast;
 import net.sf.l2j.gameserver.model.actor.instance.Cubic;
 import net.sf.l2j.gameserver.model.actor.instance.Door;
 import net.sf.l2j.gameserver.model.actor.instance.FestivalMonster;
@@ -622,7 +625,7 @@ public final class Player extends Playable {
 		getWarehouse();
 		getFreight();
 	}
-
+	
 	private Player(int objectId) {
 		super(objectId, null);
 		initCharStatusUpdateValues();
@@ -8966,59 +8969,6 @@ public final class Player extends Playable {
 	}
 
 	/**
-	 * Simple class containing all neccessary information to maintain valid
-	 * timestamps and reuse for skills upon relog. Filter this carefully as it
-	 * becomes redundant to store reuse for small delays.
-	 *
-	 * @author Yesod
-	 */
-	public static class TimeStamp {
-
-		private final int _skillId;
-		private final int _skillLvl;
-		private final long _reuse;
-		private final long _stamp;
-
-		public TimeStamp(L2Skill skill, long reuse) {
-			_skillId = skill.getId();
-			_skillLvl = skill.getLevel();
-			_reuse = reuse;
-			_stamp = System.currentTimeMillis() + reuse;
-		}
-
-		public TimeStamp(L2Skill skill, long reuse, long systime) {
-			_skillId = skill.getId();
-			_skillLvl = skill.getLevel();
-			_reuse = reuse;
-			_stamp = systime;
-		}
-
-		public long getStamp() {
-			return _stamp;
-		}
-
-		public int getSkillId() {
-			return _skillId;
-		}
-
-		public int getSkillLvl() {
-			return _skillLvl;
-		}
-
-		public long getReuse() {
-			return _reuse;
-		}
-
-		public long getRemaining() {
-			return Math.max(_stamp - System.currentTimeMillis(), 0);
-		}
-
-		public boolean hasNotPassed() {
-			return System.currentTimeMillis() < _stamp;
-		}
-	}
-
-	/**
 	 * Index according to skill id the current timestamp of use.
 	 *
 	 * @param skill
@@ -9026,7 +8976,11 @@ public final class Player extends Playable {
 	 */
 	@Override
 	public void addTimeStamp(L2Skill skill, long reuse) {
-		_reuseTimeStamps.put(skill.getReuseHashCode(), new TimeStamp(skill, reuse));
+		final TimeStamp ts = new TimeStamp();
+		ts.setReuse(reuse);
+		ts.setSkillId(skill.getId());
+		ts.setSkillLvl(skill.getLevel());
+		_reuseTimeStamps.put(skill.getReuseHashCode(), ts);
 	}
 
 	/**
@@ -9038,7 +8992,12 @@ public final class Player extends Playable {
 	 * @param systime
 	 */
 	public void addTimeStamp(L2Skill skill, long reuse, long systime) {
-		_reuseTimeStamps.put(skill.getReuseHashCode(), new TimeStamp(skill, reuse, systime));
+		final TimeStamp ts = new TimeStamp();
+		ts.setReuse(reuse);
+		ts.setSkillId(skill.getId());
+		ts.setSkillLvl(skill.getLevel());
+		ts.setStamp(systime);
+		_reuseTimeStamps.put(skill.getReuseHashCode(), ts);
 	}
 
 	@Override

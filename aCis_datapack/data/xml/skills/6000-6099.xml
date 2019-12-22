@@ -124,4 +124,49 @@
         <set name="skillType" val="BUFF" />
         <set name="operateType" val="OP_PASSIVE" />
     </skill>
+    <skill id="6014" levels="1" name="Wild Hurricane">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6015" levels="1" name="Aftershock">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6016" levels="1" name="Heat of Battle">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6017" levels="1" name="Autumn Leaf's">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6018" levels="1" name="Threat Increase">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6019" levels="1" name="Disaster">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6020" levels="1" name="Sonic Absorb">
+        <set name="weaponsAllowed" val="DUAL"/>
+        <set name="mpConsume" val="58"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="reuseDelay" val="32000"/>
+        <set name="hitTime" val="1000"/>
+		<set name="staticHitTime" val="true"/>
+        <set name="skillType" val="ABSORB"/>
+		<set name="absorbType" val="FOCUSATION"/>
+		<set name="power" val="178.0"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="alignment" val="ABILITY"/>
+		<set name="castRange" val="300"/>
+		<set name="effectRange" val="500"/>
+    </skill>
 </list>

@@ -10,6 +10,10 @@ import net.sf.finex.data.tables.TalentTable;
 import net.sf.finex.enums.ESkillAlignmentType;
 import net.sf.finex.enums.ESkillOperateType;
 import net.sf.finex.enums.ESkillTargetType;
+import net.sf.finex.model.talents.handlers.Aftershock;
+import net.sf.finex.model.talents.handlers.Disaster;
+import net.sf.finex.model.talents.handlers.ThreatIncrease;
+import net.sf.finex.model.talents.handlers.WildHurricane;
 import net.sf.l2j.commons.math.MathUtil;
 import net.sf.l2j.commons.util.ArraysUtil;
 import net.sf.l2j.gameserver.data.ItemTable;
@@ -776,6 +780,15 @@ public abstract class L2Skill implements IChanceSkillTrigger {
 	 * @return Returns the reuseDelay.
 	 */
 	public final int getReuseDelay() {
+		return getReuseDelay(null, 0);
+	}
+
+	public final int getReuseDelay(Creature caster, int modifier) {
+		if (caster != null) {
+			if (WildHurricane.validate(caster, this)) {
+				return SkillTable.FrequentTalent.WILD_HURRICANE.getHandler().invoke(_reuseDelay, modifier);
+			}
+		}
 		return _reuseDelay;
 	}
 
@@ -1135,6 +1148,7 @@ public abstract class L2Skill implements IChanceSkillTrigger {
 					case COMBATPOINTHEAL:
 					case SEED:
 					case BALANCE_LIFE:
+					case ABSORB:
 						canTargetSelf = true;
 						break;
 				}
@@ -1998,7 +2012,10 @@ public abstract class L2Skill implements IChanceSkillTrigger {
 	 * @return an array with the effects that have been added to effector
 	 */
 	public final List<L2Effect> getEffects(Creature effector, Creature effected, Env env) {
-		if (!hasEffects() || isPassive()) {
+		
+		final boolean threatIncrease = ThreatIncrease.validate(effector, this);
+		
+		if (!threatIncrease && (!hasEffects() || isPassive())) {
 			return Collections.emptyList();
 		}
 
@@ -2009,19 +2026,19 @@ public abstract class L2Skill implements IChanceSkillTrigger {
 
 		if (effector != effected) {
 			if (isOffensive() || isDebuff()) {
-				if (effected.isInvul()) {
+				if (effected != null && effected.isInvul()) {
 					return Collections.emptyList();
 				}
 
-				if (effector instanceof Player && ((Player) effector).isGM()) {
-					if (!((Player) effector).getAccessLevel().canGiveDamage()) {
+				if (effector.isPlayer() && effector.getPlayer().isGM()) {
+					if (!effector.getPlayer().getAccessLevel().canGiveDamage()) {
 						return Collections.emptyList();
 					}
 				}
 			}
 		}
 
-		final List<L2Effect> effects = new ArrayList<>(_effectTemplates.size());
+		final List<L2Effect> effects = new ArrayList<>();
 
 		if (env == null) {
 			env = new Env();
@@ -2032,7 +2049,19 @@ public abstract class L2Skill implements IChanceSkillTrigger {
 		env.setTarget(effected);
 		env.setSkill(this);
 
-		for (EffectTemplate et : _effectTemplates) {
+		List<EffectTemplate> tempTemplates = _effectTemplates;
+		if (tempTemplates == null) {
+			tempTemplates = new ArrayList<>();
+		}
+		
+		if(Aftershock.validate(effector, this)) {
+			tempTemplates.clear();
+			tempTemplates.add(SkillTable.FrequentTalent.AFTERSHOCK.getHandler().invoke());
+		} else if(threatIncrease) {
+			tempTemplates.add(SkillTable.FrequentTalent.THREAT_INCREASE.getHandler().invoke());
+		}
+		
+		for (EffectTemplate et : tempTemplates) {
 			boolean success = true;
 
 			if (et.effectPower > -1) {
@@ -2042,12 +2071,17 @@ public abstract class L2Skill implements IChanceSkillTrigger {
 			if (success) {
 				final L2Effect e = et.getEffect(env);
 				if (e != null) {
+					if (Disaster.validate(effector, this)) {
+						final L2Effect disaster = ((EffectTemplate) SkillTable.FrequentTalent.DISASTER.getHandler().invoke(e)).getEffect(env);
+						disaster.scheduleEffect();
+						effects.add(disaster);
+					}
 					e.scheduleEffect();
 					effects.add(e);
 				}
 			} // display fail message only for effects with icons
 			else if (et.showIcon && effector instanceof Player) {
-				((Player) effector).sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_RESISTED_YOUR_S2).addCharName(effected).addSkillName(this));
+				effector.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_RESISTED_YOUR_S2).addCharName(effected).addSkillName(this));
 			}
 		}
 		return effects;

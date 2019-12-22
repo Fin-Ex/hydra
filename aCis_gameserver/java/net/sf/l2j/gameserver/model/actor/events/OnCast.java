@@ -6,6 +6,7 @@
 package net.sf.l2j.gameserver.model.actor.events;
 
 import lombok.Data;
+import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
@@ -16,6 +17,13 @@ import net.sf.l2j.gameserver.skills.L2Skill;
 @Data
 public class OnCast {
 
+	public enum CastType {
+		START,
+		AFTER_CALL_SKILL,
+		FINISH
+	}
 	private final Creature caster, target;
 	private final L2Skill skill;
+	private final CastType type;
+	private final WorldObject[] targets;
 }

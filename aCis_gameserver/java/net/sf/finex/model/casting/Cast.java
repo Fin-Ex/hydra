@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import net.sf.finex.model.talents.handlers.RecoiledBlast;
 import net.sf.finex.model.talents.handlers.SonicAssault;
 import net.sf.finex.model.talents.handlers.TalentHandler;
+import net.sf.finex.model.talents.handlers.WildHurricane;
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.math.MathUtil;
 import net.sf.l2j.gameserver.data.SkillTable;
@@ -45,29 +46,20 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  * @author FinFan
  */
 @Slf4j
+@Getter
+@Setter
 public final class Cast {
 
-	@Getter
 	private final Creature caster;
-	@Getter
 	private final L2Skill skill;
-	@Getter
 	private final boolean simultaneously;
-	@Getter
 	private final boolean effectWhileCasting;
 
-	@Getter
 	private Creature target;
-	@Getter
 	private WorldObject[] targets;
-	@Getter
 	private int hitTime;
-	@Getter
 	private int coolTime;
-	@Getter
 	private int reuseDelay;
-	@Getter
-	@Setter
 	private long interruptTime;
 
 	public Cast(Creature caster, L2Skill skill, boolean simultaneously) {
@@ -75,7 +67,6 @@ public final class Cast {
 		this.skill = skill;
 		this.hitTime = skill.getHitTime();
 		this.coolTime = skill.getCoolTime();
-		this.reuseDelay = skill.getReuseDelay();
 		this.simultaneously = skill.isSimultaneousCast() && !simultaneously ? true : simultaneously;
 		this.effectWhileCasting = skill.isChanneling();
 
@@ -174,6 +165,7 @@ public final class Cast {
 				caster.setLastSkillCast(skill);
 			}
 
+			reuseDelay = skill.getReuseDelay(caster, targets == null ? 0 : targets.length);
 			if (!skill.isStaticReuse()) {
 				reuseDelay *= caster.calcStat(skill.isMagic() ? Stats.SpellReuse : Stats.SkillReuse, 1, null, null);
 				reuseDelay /= (skill.isMagic() ? caster.getMAtkSpd() : caster.getPAtkSpd()) / 333.0;
@@ -302,6 +294,8 @@ public final class Cast {
 				hitTime = 0;
 				launch(mut);
 			}
+
+			caster.getEventBus().notify(new OnCast(caster, target, skill, OnCast.CastType.START, targets));
 		} catch (Exception e) {
 			log.error("Error in start() skill({}) cast", skill.getId(), e);
 		}
@@ -548,6 +542,7 @@ public final class Cast {
 		// Notify the AI of the Creature with EVT_FINISH_CASTING
 		caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
 		caster.notifyQuestEventSkillFinished(skill, tgt);
+		caster.getEventBus().notify(new OnCast(caster, target, skill, OnCast.CastType.FINISH, targets));
 
 		// If the current character is a summon, refresh _currentPetSkill, otherwise if it's a player, refresh _currentSkill and _queuedSkill.
 		if (caster.isPlayable()) {
@@ -594,7 +589,6 @@ public final class Cast {
 				}
 
 				caster.callSkill(skill, targets);
-				caster.getEventBus().notify(new OnCast(caster, target, skill));
 			}, Formulas.calcSkillFlyTime(caster, targets[0]));
 		} else {
 			if (absorb && caster.isPlayer()) {
@@ -603,9 +597,9 @@ public final class Cast {
 			}
 
 			caster.callSkill(skill, targets);
-			caster.getEventBus().notify(new OnCast(caster, target, skill));
 		}
-		
+
+		caster.getEventBus().notify(new OnCast(caster, target, skill, OnCast.CastType.AFTER_CALL_SKILL, targets));
 		if (caster.isPlayer()) {
 			if (RecoiledBlast.validate(caster.getPlayer(), skill)) {
 				SkillTable.FrequentTalent.RECOILED_BLAST.getHandler().invoke(caster, target, skill);

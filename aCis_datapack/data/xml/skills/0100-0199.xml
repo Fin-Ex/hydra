@@ -590,6 +590,7 @@
     </skill>
     <skill id="130" levels="2" name="Thrill Fight" enchantLevels1="30" >
         <table name="#pAtkSpd"> 1.05 1.1 </table>
+        <table name="#talentPAtkSpd"> 1.05 1.1 </table>
         <table name="#mpConsume"> 21 25 </table>
         <table name="#ench1speed"> 0.81 0.82 0.82 0.83 0.84 0.84 0.85 0.86 0.86 0.87 0.88 0.88 0.89 0.90 0.90 0.91 0.92 0.92 0.93 0.94 0.94 0.95 0.96 0.96 0.97 0.98 0.98 0.99 1.00 1.00 </table>
         <table name="#stackOrder"> 1 2 </table>
@@ -603,14 +604,20 @@
         <set name="aggroPoints" val="#aggro"/>
         <for>
             <effect name="Buff" time="300" val="0" stackOrder="#stackOrder" stackType="thrill_fight">
-                <mul order="0x30" stat="speed" val="0.8"/>
+				<mul order="0x30" stat="speed" val="0.8"/>
                 <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+                <mul order="0x30" stat="pAtkSpd" val="#talentPAtkSpd">
+					<player active_skill_id="6016"/>
+				</mul>
             </effect>
         </for>
         <enchant1for>
             <effect name="Buff" time="300" val="0" stackOrder="3" stackType="thrill_fight">
                 <mul order="0x30" stat="speed" val="#ench1speed"/>
                 <mul order="0x30" stat="pAtkSpd" val="1.1"/>
+                <mul order="0x30" stat="pAtkSpd" val="1.1">
+					<player active_skill_id="6016"/>
+				</mul>
             </effect>
         </enchant1for>
     </skill>

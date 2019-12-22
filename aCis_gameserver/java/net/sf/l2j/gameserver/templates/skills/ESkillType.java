@@ -4,6 +4,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 import net.sf.l2j.gameserver.skills.L2Skill;
+import net.sf.l2j.gameserver.skills.l2skills.L2SkillAbsorb;
 import net.sf.l2j.gameserver.skills.l2skills.L2SkillAppearance;
 import net.sf.l2j.gameserver.skills.l2skills.L2SkillChargeDmg;
 import net.sf.l2j.gameserver.skills.l2skills.L2SkillCreateItem;
@@ -108,6 +109,7 @@ public enum ESkillType {
 	NEGATE,
 	CANCEL_DEBUFF,
 	BUFF,
+	ABSORB(L2SkillAbsorb.class),
 	DEBUFF,
 	PASSIVE,
 	CONT,

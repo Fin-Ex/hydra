@@ -23,21 +23,13 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 @Slf4j
 public final class Bladedancer extends AbstractClassComponent {
 
-	@Getter
-	@Setter
-	private float rhythmPoints;
+	@Getter @Setter private float rhythmPoints;
 
 	public Bladedancer(Player player) {
 		super(player);
-		getGameObject().getEventBus().subscribe()
-				.cast(OnAttack.class)
-				.forEach(this::onAttack);
-		getGameObject().getEventBus().subscribe()
-				.cast(OnCast.class)
-				.forEach(this::onCast);
-		getGameObject().getEventBus().subscribe()
-				.cast(OnAttackStance.class)
-				.forEach(this::onRemoveAttackStance);
+		getGameObject().getEventBus().subscribe().cast(OnAttack.class).forEach(this::onAttack);
+		getGameObject().getEventBus().subscribe().cast(OnCast.class).forEach(this::onCast);
+		getGameObject().getEventBus().subscribe().cast(OnAttackStance.class).forEach(this::onRemoveAttackStance);
 	}
 
 	private void onRemoveAttackStance(OnAttackStance e) {
@@ -55,8 +47,8 @@ public final class Bladedancer extends AbstractClassComponent {
 		}
 	}
 
-	private void onCast(OnCast e) {
-		switch (e.getSkill().getId()) {
+	private void onCast(OnCast event) {
+		switch (event.getSkill().getId()) {
 			case 223: //sting
 				rhythmPoints += 1;
 				getGameObject().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RHYTHM_FEEL_IS_S1).addNumber((int) rhythmPoints));
@@ -69,9 +61,9 @@ public final class Bladedancer extends AbstractClassComponent {
 				break;
 
 			default:
-				if (e.getSkill().isDance()) {
+				if (event.getSkill().isDance()) {
 					getGameObject().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_REINFORCEMENT_BY_S2)
-							.addSkillName(e.getSkill())
+							.addSkillName(event.getSkill())
 							.addNumber((int) ((calcRhythm() - 1) * 100)));
 					// remove points after dance
 					if (!Config.OFF_RHYTHM_FEEL_MESSAGE && rhythmPoints > 0) {

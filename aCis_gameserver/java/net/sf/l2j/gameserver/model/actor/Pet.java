@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
+import net.sf.finex.data.TimeStamp;
 import net.sf.finex.enums.EPartyLoot;
 import net.sf.finex.model.regeneration.ERegenType;
 import net.sf.l2j.Config;
@@ -22,7 +23,6 @@ import net.sf.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import net.sf.l2j.gameserver.model.PetDataEntry;
 import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.WorldObject;
-import net.sf.l2j.gameserver.model.actor.Player.TimeStamp;
 import net.sf.l2j.gameserver.model.actor.ai.CtrlIntention;
 import net.sf.l2j.gameserver.model.actor.instance.BabyPet;
 import net.sf.l2j.gameserver.model.actor.stat.PetStat;
@@ -948,7 +948,10 @@ public class Pet extends Summon {
 	 */
 	@Override
 	public void addTimeStamp(L2Skill skill, long reuse) {
-		_reuseTimeStamps.put(skill.getReuseHashCode(), new TimeStamp(skill, reuse));
+		final TimeStamp ts = new TimeStamp();
+		ts.setSkillId(skill.getId());
+		ts.setSkillLvl(skill.getLevel());
+		_reuseTimeStamps.put(skill.getReuseHashCode(), ts);
 	}
 
 	private static boolean isMountable(int npcId) {
