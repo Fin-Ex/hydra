@@ -392,4 +392,18 @@ HP/MP/CP имеют базовое время регена равно 3 сек.
 ![](https://img-host.ru/gG80.png)
 
 # UPD 5.0
-Test
+* заливаем dist о которйо я забыл xD
+* Challenger [недоделан, необходимо включить class_rank.sql и поправить баг с возвратом Адены в инвентарь]
+* Cumulative Rage
+* Sonic Assault
+- Форматирование код (частичное)
+- Fix бага с талантами у глада в ветке
+- Установка базы данных теперь производится из папки sql. Просто клацаем на installer (предварительно отредактировав данные внутри installer.bat). Установка файлов идёт автоматом, поэтому не надо добавлять .sql файлы вручную
+- Таланты гладиатора добавлены
+* Cumulative Rage
+* Sonic Assault
+* Challenger
+* Professional Anger
+- Fix бага с skillRadius у shockstomp
+- Разработка талантов Warlord
+- Добавлен дополнительный require для таланта (requiredSkill)
