@@ -392,6 +392,11 @@ HP/MP/CP имеют базовое время регена равно 3 сек.
 ![](https://img-host.ru/gG80.png)
 
 # UPD 5.0
+
+## Client
+[Patch](https://drive.google.com/file/d/1r0rG3bdZxdg8Np14XrYZmSFCoWJt6Hfm/view?usp=sharing)
+
+## Server
 - Заливаем dist о которй я забыл xD
 - Форматирование код (частичное)
 - Fix бага с талантами у глада в ветке
