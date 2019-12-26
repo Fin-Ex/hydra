@@ -12444,6 +12444,30 @@ public final class SystemMessageId {
 	public static final SystemMessageId S1_ABSORBS_YOUR_CHARGES;
 
 	/**
+	 * ID: 2188<br>
+	 * Message: The Grand Lethal Tournament registration is opened!
+	 */
+	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_IS_OPENED;
+
+	/**
+	 * ID: 2189<br>
+	 * Message: The Grand Lethal Tournament was started! Prepare for battle hunters!
+	 */
+	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_IS_STARTED;
+
+	/**
+	 * ID: 2190<br>
+	 * Message: The Grand Lethal Tournament was ended! Congradulations to all winners!
+	 */
+	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_IS_ENDED;
+
+	/**
+	 * ID: 2191<br>
+	 * Message: The Grand Lethal Tournament not started cause too few participants
+	 */
+	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_RESET;
+
+	/**
 	 * Array containing all SystemMessageIds<br>
 	 * Important: Always initialize with a length of the highest SystemMessageId
 	 * + 1!!!
@@ -14439,6 +14463,10 @@ public final class SystemMessageId {
 		S1_HUNT_S2_S3 = new SystemMessageId(2185);
 		QUEST_S1_WAS_COMPLETED = new SystemMessageId(2186);
 		S1_ABSORBS_YOUR_CHARGES = new SystemMessageId(2187);
+		THE_GRAND_LETHAL_TOURNAMENT_IS_OPENED = new SystemMessageId(2188);
+		THE_GRAND_LETHAL_TOURNAMENT_IS_STARTED = new SystemMessageId(2189);
+		THE_GRAND_LETHAL_TOURNAMENT_IS_ENDED = new SystemMessageId(2190);
+		THE_GRAND_LETHAL_TOURNAMENT_RESET = new SystemMessageId(2191);
 
 		buildFastLookupTable();
 	}

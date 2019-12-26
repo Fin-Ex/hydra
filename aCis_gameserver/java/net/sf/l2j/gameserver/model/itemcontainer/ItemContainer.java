@@ -21,6 +21,7 @@ import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
+import net.sf.l2j.gameserver.model.actor.events.OnAddItem;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemState;
@@ -258,6 +259,7 @@ public abstract class ItemContainer {
 			}
 		}
 
+		getOwner().getEventBus().notify(new OnAddItem(process, actor, item));
 		refreshWeight();
 		return item;
 	}
