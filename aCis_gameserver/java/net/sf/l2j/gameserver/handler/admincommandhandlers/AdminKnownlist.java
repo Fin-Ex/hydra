@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.StringTokenizer;
@@ -22,10 +21,10 @@ public class AdminKnownlist implements IAdminCommandHandler {
 
 	private static final int PAGE_LIMIT = 15;
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_knownlist",
-				"admin_knownlist_page",};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_knownlist",
+		"admin_knownlist_page"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

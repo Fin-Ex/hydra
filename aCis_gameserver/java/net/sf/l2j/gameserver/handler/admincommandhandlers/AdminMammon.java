@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.instancemanager.AutoSpawnManager;
@@ -16,10 +15,10 @@ import net.sf.l2j.gameserver.model.actor.Player;
  */
 public class AdminMammon implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_mammon_find",
-				"admin_mammon_respawn",};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_mammon_find",
+		"admin_mammon_respawn"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

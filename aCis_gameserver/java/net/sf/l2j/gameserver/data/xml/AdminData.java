@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.data.xml;
 
-import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.util.ArrayList;

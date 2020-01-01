@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -19,13 +18,12 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
  */
 public class AdminPForge implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_forge",
-				"admin_forge2",
-				"admin_forge3",
-				"admin_msg"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_forge",
+		"admin_forge2",
+		"admin_forge3",
+		"admin_msg"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

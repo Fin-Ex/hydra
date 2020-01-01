@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.World;
@@ -8,11 +7,10 @@ import net.sf.l2j.gameserver.model.actor.Player;
 
 public class AdminMenu implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_char_manage",
-				"admin_teleport_character_to_menu"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_char_manage",
+		"admin_teleport_character_to_menu"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

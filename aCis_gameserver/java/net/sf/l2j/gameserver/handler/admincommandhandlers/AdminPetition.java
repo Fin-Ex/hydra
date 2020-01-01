@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.instancemanager.PetitionManager;
@@ -15,14 +14,13 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
  */
 public class AdminPetition implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_view_petitions",
-				"admin_view_petition",
-				"admin_accept_petition",
-				"admin_reject_petition",
-				"admin_reset_petitions"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_view_petitions",
+		"admin_view_petition",
+		"admin_accept_petition",
+		"admin_reject_petition",
+		"admin_reset_petitions"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

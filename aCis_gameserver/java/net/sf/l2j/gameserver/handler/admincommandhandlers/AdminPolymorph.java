@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -15,13 +14,12 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  */
 public class AdminPolymorph implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_polymorph",
-				"admin_unpolymorph",
-				"admin_polymorph_menu",
-				"admin_unpolymorph_menu"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_polymorph",
+		"admin_unpolymorph",
+		"admin_polymorph_menu",
+		"admin_unpolymorph_menu"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

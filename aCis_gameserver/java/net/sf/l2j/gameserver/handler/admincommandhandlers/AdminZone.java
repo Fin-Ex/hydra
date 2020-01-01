@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -17,11 +16,10 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class AdminZone implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_zone_check",
-				"admin_zone_visual"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_zone_check",
+		"admin_zone_visual"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

@@ -25,19 +25,17 @@ public enum ZoneId {
 	CAST_ON_ARTIFACT(16),
 	NO_RESTART(17),
 	SCRIPT(18),
-	GRAND_LETHAL(19);
+	GLT(19);
 
-	private final int _id;
+	public static final ZoneId[] VALUES = values();
+	
+	private final int id;
 
 	private ZoneId(int id) {
-		_id = id;
+		this.id = id;
 	}
 
 	public int getId() {
-		return _id;
-	}
-
-	public static int getZoneCount() {
-		return values().length;
+		return id;
 	}
 }

@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -38,24 +37,23 @@ import net.sf.l2j.gameserver.util.Broadcast;
  */
 public class AdminSpawn implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_list_spawns",
-				"admin_show_spawns",
-				"admin_spawn",
-				"admin_spawn_index",
-				"admin_unspawnall",
-				"admin_respawnall",
-				"admin_spawn_reload",
-				"admin_npc_index",
-				"admin_spawn_once",
-				"admin_show_npcs",
-				"admin_spawnnight",
-				"admin_spawnday",
-				"admin_spawnfence",
-				"admin_deletefence",
-				"admin_listfence"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_list_spawns",
+		"admin_show_spawns",
+		"admin_spawn",
+		"admin_spawn_index",
+		"admin_unspawnall",
+		"admin_respawnall",
+		"admin_spawn_reload",
+		"admin_npc_index",
+		"admin_spawn_once",
+		"admin_show_npcs",
+		"admin_spawnnight",
+		"admin_spawnday",
+		"admin_spawnfence",
+		"admin_deletefence",
+		"admin_listfence"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

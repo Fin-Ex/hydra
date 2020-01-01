@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -29,10 +28,9 @@ import net.sf.l2j.gameserver.network.serverpackets.GMViewPledgeInfo;
  */
 public class AdminPledge implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_pledge"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_pledge"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

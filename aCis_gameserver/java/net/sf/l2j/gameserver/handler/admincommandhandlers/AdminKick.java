@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -11,12 +10,11 @@ import net.sf.l2j.gameserver.model.actor.Player;
 
 public class AdminKick implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_character_disconnect",
-				"admin_kick",
-				"admin_kick_non_gm"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_character_disconnect",
+		"admin_kick",
+		"admin_kick_non_gm"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

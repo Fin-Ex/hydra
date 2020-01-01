@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -31,14 +30,13 @@ public class AdminEditNpc implements IAdminCommandHandler {
 
 	private static final int PAGE_LIMIT = 20;
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_show_droplist",
-				"admin_show_scripts",
-				"admin_show_shop",
-				"admin_show_shoplist",
-				"admin_show_skilllist"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_show_droplist",
+		"admin_show_scripts",
+		"admin_show_shop",
+		"admin_show_shoplist",
+		"admin_show_skilllist"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

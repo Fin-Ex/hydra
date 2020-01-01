@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.instancemanager.MovieMakerManager;
@@ -11,20 +10,19 @@ import net.sf.l2j.gameserver.model.actor.Player;
  */
 public class AdminMovieMaker implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_addseq",
-				"admin_playseqq",
-				"admin_delsequence",
-				"admin_editsequence",
-				"admin_addsequence",
-				"admin_playsequence",
-				"admin_movie",
-				"admin_updatesequence",
-				"admin_broadcast",
-				"admin_playmovie",
-				"admin_broadmovie"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_addseq",
+		"admin_playseqq",
+		"admin_delsequence",
+		"admin_editsequence",
+		"admin_addsequence",
+		"admin_playsequence",
+		"admin_movie",
+		"admin_updatesequence",
+		"admin_broadcast",
+		"admin_playmovie",
+		"admin_broadmovie"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

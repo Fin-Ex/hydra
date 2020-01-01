@@ -1,9 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
-
-import org.slf4j.Logger;
-
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.World;
@@ -12,6 +8,8 @@ import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.taskmanager.DecayTaskManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class handles following admin commands:<br>
@@ -21,11 +19,10 @@ import net.sf.l2j.gameserver.taskmanager.DecayTaskManager;
 public class AdminRes implements IAdminCommandHandler {
 
 	private static Logger _log = LoggerFactory.getLogger(AdminRes.class.getName());
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_res",
-				"admin_res_monster"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_res",
+		"admin_res_monster"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

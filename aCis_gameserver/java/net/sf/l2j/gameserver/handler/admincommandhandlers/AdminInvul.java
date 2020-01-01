@@ -1,13 +1,11 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
-
-import org.slf4j.Logger;
-
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Player;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class handles following admin commands: - invul = turns invulnerability
@@ -16,11 +14,10 @@ import net.sf.l2j.gameserver.model.actor.Player;
 public class AdminInvul implements IAdminCommandHandler {
 
 	private static Logger _log = LoggerFactory.getLogger(AdminInvul.class.getName());
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_invul",
-				"admin_setinvul"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_invul",
+		"admin_setinvul"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

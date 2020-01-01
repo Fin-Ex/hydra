@@ -1,9 +1,6 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
-
 import java.util.List;
-
 import net.sf.l2j.gameserver.geoengine.GeoEngine;
 import net.sf.l2j.gameserver.geoengine.geodata.ABlock;
 import net.sf.l2j.gameserver.geoengine.geodata.GeoStructure;
@@ -23,14 +20,14 @@ public class AdminGeoEngine implements IAdminCommandHandler {
 	private final String Y = "x ";
 	private final String N = "   ";
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_geo_bug",
-				"admin_geo_pos",
-				"admin_geo_see",
-				"admin_geo_move",
-				"admin_path_find",
-				"admin_path_info",};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_geo_bug",
+		"admin_geo_pos",
+		"admin_geo_see",
+		"admin_geo_move",
+		"admin_path_find",
+		"admin_path_info"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

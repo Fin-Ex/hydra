@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -46,32 +45,31 @@ import net.sf.l2j.gameserver.util.Broadcast;
  */
 public class AdminEffects implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_hide",
-				"admin_earthquake",
-				"admin_earthquake_menu",
-				"admin_gmspeed",
-				"admin_gmspeed_menu",
-				"admin_unpara_all",
-				"admin_para_all",
-				"admin_unpara",
-				"admin_para",
-				"admin_unpara_all_menu",
-				"admin_para_all_menu",
-				"admin_unpara_menu",
-				"admin_para_menu",
-				"admin_social",
-				"admin_social_menu",
-				"admin_effect",
-				"admin_effect_menu",
-				"admin_abnormal",
-				"admin_abnormal_menu",
-				"admin_jukebox",
-				"admin_play_sound",
-				"admin_atmosphere",
-				"admin_atmosphere_menu"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_hide",
+		"admin_earthquake",
+		"admin_earthquake_menu",
+		"admin_gmspeed",
+		"admin_gmspeed_menu",
+		"admin_unpara_all",
+		"admin_para_all",
+		"admin_unpara",
+		"admin_para",
+		"admin_unpara_all_menu",
+		"admin_para_all_menu",
+		"admin_unpara_menu",
+		"admin_para_menu",
+		"admin_social",
+		"admin_social_menu",
+		"admin_effect",
+		"admin_effect_menu",
+		"admin_abnormal",
+		"admin_abnormal_menu",
+		"admin_jukebox",
+		"admin_play_sound",
+		"admin_atmosphere",
+		"admin_atmosphere_menu"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

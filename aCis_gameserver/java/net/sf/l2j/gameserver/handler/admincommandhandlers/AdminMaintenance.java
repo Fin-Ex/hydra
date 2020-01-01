@@ -1,10 +1,7 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
-
-import net.sf.l2j.commons.util.SysUtil;
-
 import net.sf.l2j.Config;
+import net.sf.l2j.commons.util.SysUtil;
 import net.sf.l2j.gameserver.LoginServerThread;
 import net.sf.l2j.gameserver.Shutdown;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
@@ -16,15 +13,15 @@ import net.sf.l2j.loginserver.network.gameserverpackets.ServerStatus;
 
 public class AdminMaintenance implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_server",
-				"admin_server_shutdown",
-				"admin_server_restart",
-				"admin_server_abort",
-				"admin_server_gm_only",
-				"admin_server_all",
-				"admin_server_max_player",};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_server",
+		"admin_server_shutdown",
+		"admin_server_restart",
+		"admin_server_abort",
+		"admin_server_gm_only",
+		"admin_server_all",
+		"admin_server_max_player"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

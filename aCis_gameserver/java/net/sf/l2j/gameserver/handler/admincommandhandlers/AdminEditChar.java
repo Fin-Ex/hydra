@@ -38,36 +38,35 @@ public class AdminEditChar implements IAdminCommandHandler {
 
 	private static final int PAGE_LIMIT = 20;
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_changelvl", // edit player access level
-				"admin_edit_character",
-				"admin_current_player",
-				"admin_setkarma", // sets karma of target char to any amount. //setkarma <karma>
-				"admin_character_info", // given a player name, displays an information window
-				"admin_show_characters", // list of characters
-				"admin_find_character", // find a player by his name or a part of it (case-insensitive)
-				"admin_find_ip", // find all the player connections from a given IPv4 number
-				"admin_find_account", // list all the characters from an account (useful for GMs w/o DB access)
-				"admin_find_dualbox", // list all IPs with more than 1 char logged in (dualbox)
-				"admin_rec", // gives recommendation points
-				"admin_settitle", // changes char's title
-				"admin_setname", // changes char's name
-				"admin_setsex", // changes char's sex
-				"admin_setcolor", // change char name's color
-				"admin_settcolor", // change char title's color
-				"admin_setclass", // changes char's classId
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_changelvl", // edit player access level
+		"admin_edit_character",
+		"admin_current_player",
+		"admin_setkarma", // sets karma of target char to any amount. //setkarma <karma>
+		"admin_character_info", // given a player name, displays an information window
+		"admin_show_characters", // list of characters
+		"admin_find_character", // find a player by his name or a part of it (case-insensitive)
+		"admin_find_ip", // find all the player connections from a given IPv4 number
+		"admin_find_account", // list all the characters from an account (useful for GMs w/o DB access)
+		"admin_find_dualbox", // list all IPs with more than 1 char logged in (dualbox)
+		"admin_rec", // gives recommendation points
+		"admin_settitle", // changes char's title
+		"admin_setname", // changes char's name
+		"admin_setsex", // changes char's sex
+		"admin_setcolor", // change char name's color
+		"admin_settcolor", // change char title's color
+		"admin_setclass", // changes char's classId
 
-				"admin_summon_info", // displays an information window about target summon
-				"admin_unsummon", // unsummon target's pet/summon
-				"admin_summon_setlvl", // set the pet's level
-				"admin_show_pet_inv", // show pet's inventory
-				"admin_fullfood", // fulfills a pet's food bar
+		"admin_summon_info", // displays an information window about target summon
+		"admin_unsummon", // unsummon target's pet/summon
+		"admin_summon_setlvl", // set the pet's level
+		"admin_show_pet_inv", // show pet's inventory
+		"admin_fullfood", // fulfills a pet's food bar
 
-				"admin_party_info", // find party infos of targeted character, if any
-				"admin_clan_info", // find clan infos of the character, if any
-				"admin_remove_clan_penalty" // removes clan penalties
-			};
+		"admin_party_info", // find party infos of targeted character, if any
+		"admin_clan_info", // find clan infos of the character, if any
+		"admin_remove_clan_penalty" // removes clan penalties
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

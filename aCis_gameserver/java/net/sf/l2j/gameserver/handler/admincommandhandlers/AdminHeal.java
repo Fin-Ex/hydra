@@ -1,9 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
-
-import org.slf4j.Logger;
-
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.World;
@@ -11,6 +7,8 @@ import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class handles following admin commands: - heal = restores HP/MP/CP on
@@ -19,10 +17,9 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
 public class AdminHeal implements IAdminCommandHandler {
 
 	private static Logger _log = LoggerFactory.getLogger(AdminHeal.class.getName());
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_heal"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_heal"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
@@ -20,20 +19,19 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  */
 public class AdminTeleport implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_runmod",
-				"admin_instant_move",
-				"admin_tele",
-				"admin_tele_areas",
-				"admin_goto",
-				"admin_teleportto", // deprecated
-				"admin_recall",
-				"admin_recall_party",
-				"admin_recall_clan",
-				"admin_move_to",
-				"admin_sendhome"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_runmod",
+		"admin_instant_move",
+		"admin_tele",
+		"admin_tele_areas",
+		"admin_goto",
+		"admin_teleportto", // deprecated
+		"admin_recall",
+		"admin_recall_party",
+		"admin_recall_clan",
+		"admin_move_to",
+		"admin_sendhome"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

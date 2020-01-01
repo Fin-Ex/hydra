@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -20,12 +19,11 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class AdminExpSp implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_add_exp_sp_to_character",
-				"admin_add_exp_sp",
-				"admin_remove_exp_sp"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_add_exp_sp_to_character",
+		"admin_add_exp_sp",
+		"admin_remove_exp_sp"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

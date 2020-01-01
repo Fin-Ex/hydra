@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.commons.lang.StringUtil;
 
@@ -13,10 +12,9 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class AdminManor implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_manor"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_manor"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

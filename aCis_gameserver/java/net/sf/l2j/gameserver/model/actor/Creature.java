@@ -153,20 +153,16 @@ public abstract class Creature extends WorldObject {
 	/**
 	 * Zone system
 	 */
-	private final byte[] _zones = new byte[ZoneId.getZoneCount()];
+	private final byte[] _zones = new byte[ZoneId.VALUES.length];
 	protected byte _zoneValidateCounter = 4;
 
 	private boolean _isRaid;
 
-	@Setter
-	private boolean isOutOfControl;
-	@Setter
-	private boolean isAttackingDisabled;
+	@Setter private boolean isOutOfControl;
+	@Setter private boolean isAttackingDisabled;
 
-	@Getter
-	private final EventBus eventBus = new EventBus();
-	@Getter
-	private final StatsSet params = new StatsSet();
+	@Getter private final EventBus eventBus = new EventBus();
+	@Getter private final StatsSet params = new StatsSet();
 
 	/**
 	 * Constructor of Creature.<BR>

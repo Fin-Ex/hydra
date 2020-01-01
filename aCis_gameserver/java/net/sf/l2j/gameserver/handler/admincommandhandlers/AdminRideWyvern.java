@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -9,10 +8,10 @@ import net.sf.l2j.gameserver.model.actor.Player;
 
 public class AdminRideWyvern implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_ride",
-				"admin_unride",};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_ride",
+		"admin_unride"
+	};
 
 	private int _petRideId;
 

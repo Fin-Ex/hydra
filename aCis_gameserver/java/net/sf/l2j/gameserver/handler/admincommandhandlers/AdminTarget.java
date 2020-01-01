@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.World;
@@ -13,10 +12,9 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  */
 public class AdminTarget implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_target"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_target"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.instancemanager;
 
-import org.slf4j.LoggerFactory;
-
 import java.io.File;
 import java.lang.reflect.Constructor;
 import java.sql.Connection;
@@ -13,9 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import org.slf4j.Logger;
-
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.WorldObject;
@@ -29,7 +24,9 @@ import net.sf.l2j.gameserver.model.zone.form.ZoneCylinder;
 import net.sf.l2j.gameserver.model.zone.form.ZoneNPoly;
 import net.sf.l2j.gameserver.model.zone.type.L2BossZone;
 import net.sf.l2j.gameserver.xmlfactory.XMLDocumentFactory;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -82,7 +79,7 @@ public class ZoneManager {
 		}
 	}
 
-	private final void load() {
+	private void load() {
 		// Get the world regions
 		WorldRegion[][] worldRegions = World.getInstance().getWorldRegions();
 
@@ -215,7 +212,7 @@ public class ZoneManager {
 								_log.warn("ZoneData: Unknown shape: " + zoneShape + " in file: " + f.getName());
 								continue;
 							}
-						} catch (Exception e) {
+						} catch (NumberFormatException | DOMException e) {
 							_log.warn("ZoneData: Failed to load zone " + zoneId + " coordinates: " + e.getMessage(), e);
 						}
 

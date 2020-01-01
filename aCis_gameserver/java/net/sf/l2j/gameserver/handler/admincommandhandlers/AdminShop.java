@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.data.manager.BuyListManager;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
@@ -17,11 +16,10 @@ import net.sf.l2j.gameserver.network.serverpackets.BuyList;
  */
 public class AdminShop implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_buy",
-				"admin_gmshop"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_buy",
+		"admin_gmshop"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.model.zone.form;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.zone.L2ZoneForm;
 
@@ -41,10 +40,7 @@ public class ZoneCuboid extends L2ZoneForm {
 
 	@Override
 	public boolean isInsideZone(int x, int y, int z) {
-		if (x < _x1 || x > _x2 || y < _y1 || y > _y2 || z < _z1 || z > _z2) {
-			return false;
-		}
-		return true;
+		return !(x < _x1 || x > _x2 || y < _y1 || y > _y2 || z < _z1 || z > _z2);
 	}
 
 	@Override
@@ -101,11 +97,7 @@ public class ZoneCuboid extends L2ZoneForm {
 		if (lineSegmentsIntersect(_x2, _y1, _x2, _y2, ax1, ay1, ax2, ay1)) {
 			return true;
 		}
-		if (lineSegmentsIntersect(_x2, _y1, _x2, _y2, ax1, ay2, ax2, ay2)) {
-			return true;
-		}
-
-		return false;
+		return lineSegmentsIntersect(_x2, _y1, _x2, _y2, ax1, ay2, ax2, ay2);
 	}
 
 	@Override
