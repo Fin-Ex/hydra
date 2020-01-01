@@ -10,8 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.random.Rnd;
 import net.sf.l2j.gameserver.data.NpcTable;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
-import net.sf.l2j.gameserver.handler.SkillHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
+import net.sf.l2j.gameserver.handler.skillhandlers.Pdam;
 import net.sf.l2j.gameserver.idfactory.IdFactory;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
@@ -88,9 +89,9 @@ public class RecoiledBlast implements TalentHandler {
 
 		@Override
 		public void run() {
-			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType(owner));
+			final IHandler handler = HandlerTable.getInstance().get(Pdam.class);
 			if (handler != null) {
-				handler.useSkill(owner, skill, targets);
+				handler.invoke(owner, skill, targets);
 			} else {
 				skill.useSkill(owner, targets);
 			}

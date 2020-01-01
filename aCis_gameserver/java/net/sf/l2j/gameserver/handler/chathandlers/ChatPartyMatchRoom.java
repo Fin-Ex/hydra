@@ -1,22 +1,24 @@
 package net.sf.l2j.gameserver.handler.chathandlers;
 
-import org.slf4j.LoggerFactory;
 
-import net.sf.l2j.gameserver.handler.IChatHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.partymatching.PartyMatchRoom;
 import net.sf.l2j.gameserver.model.partymatching.PartyMatchRoomList;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 
-public class ChatPartyMatchRoom implements IChatHandler {
+public class ChatPartyMatchRoom implements IHandler {
 
-	private static final int[] COMMAND_IDS
-			= {
-				14
-			};
+	private static final Integer[] COMMAND_IDS = {
+		14
+	};
 
 	@Override
-	public void handleChat(int type, Player activeChar, String target, String text) {
+	public void invoke(Object... args) {
+		final int type = (int) args[0];
+		final Player activeChar = (Player) args[1];
+		final String params = (String) args[2];
+		final String text = (String) args[3];
 		if (!activeChar.isInPartyMatchRoom()) {
 			return;
 		}
@@ -33,7 +35,7 @@ public class ChatPartyMatchRoom implements IChatHandler {
 	}
 
 	@Override
-	public int[] getChatTypeList() {
+	public Integer[] commands() {
 		return COMMAND_IDS;
 	}
 }

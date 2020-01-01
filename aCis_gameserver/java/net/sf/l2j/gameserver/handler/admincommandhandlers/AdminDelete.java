@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.data.SpawnTable;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
@@ -16,10 +15,9 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  */
 public class AdminDelete implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_delete"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_delete"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

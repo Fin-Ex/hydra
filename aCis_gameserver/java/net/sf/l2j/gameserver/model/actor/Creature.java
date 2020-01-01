@@ -27,8 +27,8 @@ import net.sf.l2j.gameserver.data.MapRegionTable;
 import net.sf.l2j.gameserver.data.MapRegionTable.TeleportType;
 import net.sf.l2j.gameserver.data.SkillTable.FrequentSkill;
 import net.sf.l2j.gameserver.geoengine.GeoEngine;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
-import net.sf.l2j.gameserver.handler.SkillHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.instancemanager.DimensionalRiftManager;
 import net.sf.l2j.gameserver.model.ChanceSkillList;
 import net.sf.l2j.gameserver.model.CharEffectList;
@@ -3563,9 +3563,9 @@ public abstract class Creature extends WorldObject {
 			}
 
 			// Launch the magic skill and calculate its effects
-			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType(this));
+			final IHandler handler = HandlerTable.getInstance().get(skill.getSkillType());
 			if (handler != null) {
-				handler.useSkill(this, skill, targets);
+				handler.invoke(this, skill, targets);
 			} else {
 				skill.useSkill(this, targets);
 			}
@@ -4017,6 +4017,10 @@ public abstract class Creature extends WorldObject {
 
 	public final void setCurrentMp(double newMp) {
 		getStatus().setCurrentMp(newMp);
+	}
+	
+	public void setFullHpMpCp() {
+		setCurrentHpMp(getMaxHp(), getMaxMp());
 	}
 
 	// =========================================================

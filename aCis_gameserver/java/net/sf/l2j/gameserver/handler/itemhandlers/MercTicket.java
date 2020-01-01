@@ -1,8 +1,7 @@
 package net.sf.l2j.gameserver.handler.itemhandlers;
 
-import org.slf4j.LoggerFactory;
+import net.sf.l2j.gameserver.handler.IHandler;
 
-import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.instancemanager.CastleManager;
 import net.sf.l2j.gameserver.instancemanager.SevenSigns;
 import net.sf.l2j.gameserver.instancemanager.SevenSigns.SealType;
@@ -29,10 +28,13 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
  * If allowed, spawn the item in the world and remove it from the player's
  * inventory.
  */
-public class MercTicket implements IItemHandler {
+public class MercTicket implements IHandler {
 
 	@Override
-	public void useItem(Playable playable, ItemInstance item, boolean forceUse) {
+	public void invoke(Object... args) {
+		final Playable playable = (Playable) args[0];
+		final ItemInstance item = (ItemInstance) args[1];
+		final boolean forceUse = (boolean) args[2];
 		final Player activeChar = (Player) playable;
 		if (activeChar == null) {
 			return;

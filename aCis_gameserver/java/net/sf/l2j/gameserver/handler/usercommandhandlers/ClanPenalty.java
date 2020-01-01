@@ -1,14 +1,11 @@
 package net.sf.l2j.gameserver.handler.usercommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.text.SimpleDateFormat;
 import java.util.Map;
-
 import net.sf.l2j.commons.lang.StringUtil;
-
 import net.sf.l2j.gameserver.data.sql.ClanTable;
-import net.sf.l2j.gameserver.handler.IUserCommandHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.pledge.Clan;
 import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -18,17 +15,18 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
  *
  * @author Tempy
  */
-public class ClanPenalty implements IUserCommandHandler {
+public class ClanPenalty implements IHandler {
 
 	private static final String NO_PENALTY = "<tr><td width=170>No penalty is imposed.</td><td width=100 align=center></td></tr>";
 
-	private static final int[] COMMAND_IDS
-			= {
-				100
-			};
+	private static final Integer[] COMMAND_IDS = {
+		100
+	};
 
 	@Override
-	public boolean useUserCommand(int id, Player activeChar) {
+	public void invoke(Object... args) {
+		final int id = (int) args[0];
+		final Player activeChar = (Player) args[1];
 		final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		final StringBuilder sb = new StringBuilder();
 
@@ -66,11 +64,10 @@ public class ClanPenalty implements IUserCommandHandler {
 		html.setFile("data/html/clan_penalty.htm");
 		html.replace("%content%", (sb.length() == 0) ? NO_PENALTY : sb.toString());
 		activeChar.sendPacket(html);
-		return true;
 	}
 
 	@Override
-	public int[] getUserCommandList() {
+	public Integer[] commands() {
 		return COMMAND_IDS;
 	}
 }

@@ -140,7 +140,7 @@ public enum ClassId {
 	Dominator(ClassRace.ORC, ClassType.MYSTIC, 3, "Dominator", Overlord),
 	Doomcryer(ClassRace.ORC, ClassType.MYSTIC, 3, "Doom Cryer", Warcryer),
 	FortuneSeeker(ClassRace.DWARF, ClassType.FIGHTER, 3, "Fortune Seeker", BountyHunter),
-	Maestro(ClassRace.DWARF, ClassType.FIGHTER, 3, "Maestro", Warsmith);
+	Maestro(ClassRace.DWARF, ClassType.FIGHTER, 3, "Maestro", Warsmith, Warsmith.class);
 
 	public static final ClassId[] VALUES = values();
 

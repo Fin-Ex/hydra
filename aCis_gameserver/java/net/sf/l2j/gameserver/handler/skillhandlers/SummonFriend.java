@@ -1,11 +1,10 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.finex.handlers.dialog.DlgManager;
 import net.sf.finex.handlers.dialog.requests.TeleportRequest;
 import net.sf.l2j.commons.math.MathUtil;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
@@ -18,14 +17,17 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
 /**
  * @authors BiTi, Sami
  */
-public class SummonFriend implements ISkillHandler {
+public class SummonFriend implements IHandler {
 
 	private static final ESkillType[] SKILL_IDS = {
 		ESkillType.SUMMON_FRIEND
 	};
 
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object...args) {
+		final Creature activeChar = (Creature) args[0];
+		final L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		if (!activeChar.isPlayer()) {
 			return;
 		}
@@ -82,7 +84,7 @@ public class SummonFriend implements ISkillHandler {
 	}
 
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }

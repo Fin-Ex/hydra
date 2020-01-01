@@ -1,22 +1,19 @@
 package net.sf.l2j.gameserver.model;
 
-import org.slf4j.LoggerFactory;
-
-import net.sf.finex.enums.ESkillTargetType;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import org.slf4j.Logger;
-
+import net.sf.finex.enums.ESkillTargetType;
 import net.sf.l2j.gameserver.data.SkillTable;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
-import net.sf.l2j.gameserver.handler.SkillHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.network.serverpackets.MagicSkillLaunched;
 import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.skills.effects.EffectChanceSkillTrigger;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * CT2.3: Added support for allowing effect as a chance skill trigger (DrHouse)
@@ -137,15 +134,14 @@ public class ChanceSkillList extends ConcurrentHashMap<IChanceSkillTrigger, Chan
 
 				Creature firstTarget = (Creature) targets[0];
 
-				ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-
 				_owner.broadcastPacket(new MagicSkillLaunched(_owner, skill.getId(), skill.getLevel(), targets));
 				_owner.broadcastPacket(new MagicSkillUse(_owner, firstTarget, skill.getId(), skill.getLevel(), 0, 0));
 
 				// Launch the magic skill and calculate its effects
 				// TODO: once core will support all possible effects, use effects (not handler)
+				final IHandler handler = HandlerTable.getInstance().get(skill.getSkillType());
 				if (handler != null) {
-					handler.useSkill(_owner, skill, targets);
+					handler.invoke(_owner, skill, targets);
 				} else {
 					skill.useSkill(_owner, targets);
 				}
@@ -183,17 +179,16 @@ public class ChanceSkillList extends ConcurrentHashMap<IChanceSkillTrigger, Chan
 
 			Creature firstTarget = (Creature) targets[0];
 
-			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(triggered.getSkillType());
-
 			_owner.broadcastPacket(new MagicSkillLaunched(_owner, triggered.getId(), triggered.getLevel(), targets));
 			_owner.broadcastPacket(new MagicSkillUse(_owner, firstTarget, triggered.getId(), triggered.getLevel(), 0, 0));
 
 			// Launch the magic skill and calculate its effects
 			// TODO: once core will support all possible effects, use effects (not handler)
+			final IHandler handler = HandlerTable.getInstance().get(triggered.getSkillType());
 			if (handler != null) {
-				handler.useSkill(caster, triggered, targets);
+				handler.invoke(_owner, triggered, targets);
 			} else {
-				triggered.useSkill(caster, targets);
+				triggered.useSkill(_owner, targets);
 			}
 		} catch (Exception e) {
 			_log.warn("", e);

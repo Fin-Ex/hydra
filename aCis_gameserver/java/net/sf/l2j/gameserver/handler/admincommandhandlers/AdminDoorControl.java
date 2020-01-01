@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.data.DoorTable;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
@@ -21,13 +20,12 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  */
 public class AdminDoorControl implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_open",
-				"admin_close",
-				"admin_openall",
-				"admin_closeall"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_open",
+		"admin_close",
+		"admin_openall",
+		"admin_closeall"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -20,14 +19,13 @@ public class AdminBuffs implements IAdminCommandHandler {
 
 	private static final int PAGE_LIMIT = 20;
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_getbuffs",
-				"admin_stopbuff",
-				"admin_stopallbuffs",
-				"admin_areacancel",
-				"admin_removereuse"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_getbuffs",
+		"admin_stopbuff",
+		"admin_stopallbuffs",
+		"admin_areacancel",
+		"admin_removereuse"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

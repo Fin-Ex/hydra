@@ -1,13 +1,11 @@
 package net.sf.l2j.gameserver.handler.usercommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import net.sf.l2j.L2DatabaseFactory;
-import net.sf.l2j.gameserver.handler.IUserCommandHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.pledge.Clan;
 import net.sf.l2j.gameserver.network.SystemMessageId;
@@ -18,35 +16,40 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
  *
  * @author Tempy
  */
-public class ClanWarsList implements IUserCommandHandler {
+public class ClanWarsList implements IHandler {
 
-	private static final int[] COMMAND_IDS
-			= {
-				88,
-				89,
-				90
-			};
+	private static final Integer[] COMMAND_IDS = {
+		88,
+		89,
+		90
+	};
 
 	@Override
-	public boolean useUserCommand(int id, Player activeChar) {
+	public void invoke(Object... args) {
+		final int id = (int) args[0];
+		final Player activeChar = (Player) args[1];
 		Clan clan = activeChar.getClan();
 		if (clan == null) {
 			activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-			return false;
+			return;
 		}
 
 		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
 			PreparedStatement statement;
 
 			// Attack List
-			if (id == 88) {
-				statement = con.prepareStatement("SELECT clan_name,clan_id,ally_id,ally_name FROM clan_data,clan_wars WHERE clan1=? AND clan_id=clan2 AND clan2 NOT IN (SELECT clan1 FROM clan_wars WHERE clan2=?)");
-			} // Under Attack List
-			else if (id == 89) {
-				statement = con.prepareStatement("SELECT clan_name,clan_id,ally_id,ally_name FROM clan_data,clan_wars WHERE clan2=? AND clan_id=clan1 AND clan1 NOT IN (SELECT clan2 FROM clan_wars WHERE clan1=?)");
-			} // War List
-			else {
-				statement = con.prepareStatement("SELECT clan_name,clan_id,ally_id,ally_name FROM clan_data,clan_wars WHERE clan1=? AND clan_id=clan2 AND clan2 IN (SELECT clan1 FROM clan_wars WHERE clan2=?)");
+			switch (id) {
+			// Under Attack List
+				case 88:
+					statement = con.prepareStatement("SELECT clan_name,clan_id,ally_id,ally_name FROM clan_data,clan_wars WHERE clan1=? AND clan_id=clan2 AND clan2 NOT IN (SELECT clan1 FROM clan_wars WHERE clan2=?)");
+					break;
+			// War List
+				case 89:
+					statement = con.prepareStatement("SELECT clan_name,clan_id,ally_id,ally_name FROM clan_data,clan_wars WHERE clan2=? AND clan_id=clan1 AND clan1 NOT IN (SELECT clan2 FROM clan_wars WHERE clan1=?)");
+					break;
+				default:
+					statement = con.prepareStatement("SELECT clan_name,clan_id,ally_id,ally_name FROM clan_data,clan_wars WHERE clan1=? AND clan_id=clan2 AND clan2 IN (SELECT clan1 FROM clan_wars WHERE clan2=?)");
+					break;
 			}
 
 			statement.setInt(1, clan.getClanId());
@@ -55,12 +58,16 @@ public class ClanWarsList implements IUserCommandHandler {
 			ResultSet rset = statement.executeQuery();
 
 			if (rset.first()) {
-				if (id == 88) {
-					activeChar.sendPacket(SystemMessageId.CLANS_YOU_DECLARED_WAR_ON);
-				} else if (id == 89) {
-					activeChar.sendPacket(SystemMessageId.CLANS_THAT_HAVE_DECLARED_WAR_ON_YOU);
-				} else {
-					activeChar.sendPacket(SystemMessageId.WAR_LIST);
+				switch (id) {
+					case 88:
+						activeChar.sendPacket(SystemMessageId.CLANS_YOU_DECLARED_WAR_ON);
+						break;
+					case 89:
+						activeChar.sendPacket(SystemMessageId.CLANS_THAT_HAVE_DECLARED_WAR_ON_YOU);
+						break;
+					default:
+						activeChar.sendPacket(SystemMessageId.WAR_LIST);
+						break;
 				}
 
 				SystemMessage sm;
@@ -78,12 +85,18 @@ public class ClanWarsList implements IUserCommandHandler {
 
 				activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
 			} else {
-				if (id == 88) {
-					activeChar.sendPacket(SystemMessageId.YOU_ARENT_IN_CLAN_WARS);
-				} else if (id == 89) {
-					activeChar.sendPacket(SystemMessageId.NO_CLAN_WARS_VS_YOU);
-				} else if (id == 90) {
-					activeChar.sendPacket(SystemMessageId.NOT_INVOLVED_IN_WAR);
+				switch (id) {
+					case 88:
+						activeChar.sendPacket(SystemMessageId.YOU_ARENT_IN_CLAN_WARS);
+						break;
+					case 89:
+						activeChar.sendPacket(SystemMessageId.NO_CLAN_WARS_VS_YOU);
+						break;
+					case 90:
+						activeChar.sendPacket(SystemMessageId.NOT_INVOLVED_IN_WAR);
+						break;
+					default:
+						break;
 				}
 			}
 
@@ -91,11 +104,10 @@ public class ClanWarsList implements IUserCommandHandler {
 			statement.close();
 		} catch (Exception e) {
 		}
-		return true;
 	}
 
 	@Override
-	public int[] getUserCommandList() {
+	public Integer[] commands() {
 		return COMMAND_IDS;
 	}
 }

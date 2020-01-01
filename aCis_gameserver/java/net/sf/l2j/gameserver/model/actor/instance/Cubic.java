@@ -1,17 +1,13 @@
 package net.sf.l2j.gameserver.model.actor.instance;
 
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
-import org.slf4j.Logger;
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.random.Rnd;
 import net.sf.l2j.gameserver.data.SkillTable;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
-import net.sf.l2j.gameserver.handler.SkillHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.instancemanager.DuelManager;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
@@ -30,6 +26,8 @@ import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.skills.l2skills.L2SkillDrain;
 import net.sf.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Cubic {
 
@@ -385,22 +383,36 @@ public class Cubic {
 							_owner.broadcastPacket(new MagicSkillUse(_owner, target, skill.getId(), skill.getLevel(), 0, 0));
 
 							final ESkillType type = skill.getSkillType();
-							final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-							final Creature[] targets
-									= {
-										target
-									};
+							final IHandler handler = HandlerTable.getInstance().get(skill.getSkillType());
+							final Creature[] targets = {
+								target
+							};
 
-							if (type == ESkillType.PARALYZE || type == ESkillType.STUN || type == ESkillType.ROOT || type == ESkillType.AGGDAMAGE) {
-								useCubicDisabler(type, Cubic.this, skill, targets);
-							} else if (type == ESkillType.MDAM) {
-								useCubicMdam(Cubic.this, skill, targets);
-							} else if (type == ESkillType.POISON || type == ESkillType.DEBUFF || type == ESkillType.DOT) {
-								useCubicContinuous(Cubic.this, skill, targets);
-							} else if (type == ESkillType.DRAIN) {
-								((L2SkillDrain) skill).useCubicSkill(Cubic.this, targets);
+							if (null == type) {
+								handler.invoke(_owner, skill, targets);
 							} else {
-								handler.useSkill(_owner, skill, targets);
+								switch (type) {
+									case PARALYZE:
+									case STUN:
+									case ROOT:
+									case AGGDAMAGE:
+										useCubicDisabler(type, Cubic.this, skill, targets);
+										break;
+									case MDAM:
+										useCubicMdam(Cubic.this, skill, targets);
+										break;
+									case POISON:
+									case DEBUFF:
+									case DOT:
+										useCubicContinuous(Cubic.this, skill, targets);
+										break;
+									case DRAIN:
+										((L2SkillDrain) skill).useCubicSkill(Cubic.this, targets);
+										break;
+									default:
+										handler.invoke(_owner, skill, targets);
+										break;
+								}
 							}
 						}
 					}
@@ -679,14 +691,13 @@ public class Cubic {
 					Creature target = _target;
 					if (target != null && !target.isDead()) {
 						if (target.getMaxHp() - target.getCurrentHp() > skill.getPower()) {
-							final Creature[] targets
-									= {
-										target
-									};
+							final Creature[] targets = {
+								target
+							};
 
-							final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
+							final IHandler handler = HandlerTable.getInstance().get(skill.getSkillType());
 							if (handler != null) {
-								handler.useSkill(_owner, skill, targets);
+								handler.invoke(_owner, skill, targets);
 							} else {
 								skill.useSkill(_owner, targets);
 							}

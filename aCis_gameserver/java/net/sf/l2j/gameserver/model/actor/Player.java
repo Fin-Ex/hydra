@@ -42,7 +42,6 @@ import net.sf.finex.model.creature.player.ComboComponent;
 import net.sf.finex.model.dye.DyeComponent;
 import net.sf.finex.model.generator.quest.RandomQuestComponent;
 import net.sf.finex.model.regeneration.ERegenType;
-import net.sf.finex.model.talents.handlers.WildHurricane;
 import net.sf.l2j.Config;
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.commons.concurrent.ThreadPool;
@@ -63,9 +62,13 @@ import net.sf.l2j.gameserver.data.sql.ClanTable;
 import net.sf.l2j.gameserver.data.xml.AdminData;
 import net.sf.l2j.gameserver.data.xml.FishData;
 import net.sf.l2j.gameserver.geoengine.GeoEngine;
-import net.sf.l2j.gameserver.handler.IItemHandler;
-import net.sf.l2j.gameserver.handler.ItemHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.handler.admincommandhandlers.AdminEditChar;
+import net.sf.l2j.gameserver.handler.itemhandlers.ItemSkills;
+import net.sf.l2j.gameserver.handler.itemhandlers.PetFood;
+import net.sf.l2j.gameserver.handler.itemhandlers.SoulShots;
+import net.sf.l2j.gameserver.handler.itemhandlers.SpiritShot;
 import net.sf.l2j.gameserver.instancemanager.CastleManager;
 import net.sf.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import net.sf.l2j.gameserver.instancemanager.DimensionalRiftManager;
@@ -101,7 +104,6 @@ import net.sf.l2j.gameserver.model.actor.ai.type.CreatureAI;
 import net.sf.l2j.gameserver.model.actor.ai.type.PlayerAI;
 import net.sf.l2j.gameserver.model.actor.ai.type.SummonAI;
 import net.sf.l2j.gameserver.model.actor.appearance.PcAppearance;
-import net.sf.l2j.gameserver.model.actor.events.OnCast;
 import net.sf.l2j.gameserver.model.actor.instance.Cubic;
 import net.sf.l2j.gameserver.model.actor.instance.Door;
 import net.sf.l2j.gameserver.model.actor.instance.FestivalMonster;
@@ -2485,9 +2487,9 @@ public final class Player extends Playable {
 			if (item.getItemType() == EtcItemType.HERB) {
 				final ItemInstance herb = new ItemInstance(0, itemId);
 
-				final IItemHandler handler = ItemHandler.getInstance().getItemHandler(herb.getEtcItem());
+				final IHandler handler = HandlerTable.getInstance().get(ItemSkills.class);
 				if (handler != null) {
-					handler.useItem(this, herb, false);
+					handler.invoke(this, herb, false);
 				}
 			} else {
 				// Add the item to inventory
@@ -3380,7 +3382,7 @@ public final class Player extends Playable {
 		sendPacket(new StopMove(this));
 
 		synchronized (item) {
-			if (!item.isVisible()) {
+			if (!item.isVisible() || !item.isPickupable()) {
 				return;
 			}
 
@@ -3428,9 +3430,9 @@ public final class Player extends Playable {
 
 		// Auto use herbs - pick up
 		if (item.getItemType() == EtcItemType.HERB) {
-			IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getEtcItem());
+			final IHandler handler = HandlerTable.getInstance().get(ItemSkills.class);
 			if (handler != null) {
-				handler.useItem(this, item, false);
+				handler.invoke(this, item, false);
 			}
 
 			ItemTable.getInstance().destroyItem("Consume", item, this, null);
@@ -4743,9 +4745,9 @@ public final class Player extends Playable {
 			}
 
 			if (food != null && checkFoodState(_petTemplate.getAutoFeedLimit())) {
-				IItemHandler handler = ItemHandler.getInstance().getItemHandler(food.getEtcItem());
+				final IHandler handler = HandlerTable.getInstance().get(PetFood.class);
 				if (handler != null) {
-					handler.useItem(Player.this, food, false);
+					handler.invoke(Player.this, food, false);
 					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PET_TOOK_S1_BECAUSE_HE_WAS_HUNGRY).addItemName(food));
 				}
 			}
@@ -6859,16 +6861,16 @@ public final class Player extends Playable {
 			ItemInstance item = getInventory().getItemByItemId(itemId);
 			if (item != null) {
 				if (magic && item.getItem().getDefaultAction() == ActionType.spiritshot) {
-					IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getEtcItem());
+					final IHandler handler = HandlerTable.getInstance().get(SpiritShot.class);
 					if (handler != null) {
-						handler.useItem(this, item, false);
+						handler.invoke(this, item, false);
 					}
 				}
 
 				if (physical && item.getItem().getDefaultAction() == ActionType.soulshot) {
-					IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getEtcItem());
+					final IHandler handler = HandlerTable.getInstance().get(SoulShots.class);
 					if (handler != null) {
-						handler.useItem(this, item, false);
+						handler.invoke(this, item, false);
 					}
 				}
 			} else {
@@ -9676,5 +9678,10 @@ public final class Player extends Playable {
 		} catch (ReflectiveOperationException e) {
 			_log.error("", e);
 		}
+	}
+	
+	public void setFullHpMpCp() {
+		setCurrentCp(getMaxCp());
+		super.setFullHpMpCp();
 	}
 }

@@ -1,28 +1,29 @@
 package net.sf.l2j.gameserver.handler.chathandlers;
 
-import org.slf4j.LoggerFactory;
-
-import net.sf.l2j.gameserver.handler.IChatHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.BlockList;
 import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 
-public class ChatTell implements IChatHandler {
+public class ChatTell implements IHandler {
 
-	private static final int[] COMMAND_IDS
-			= {
-				2
-			};
+	private static final Integer[] COMMAND_IDS = {
+		2
+	};
 
 	@Override
-	public void handleChat(int type, Player activeChar, String target, String text) {
-		if (target == null) {
+	public void invoke(Object... args) {
+		final int type = (int) args[0];
+		final Player activeChar = (Player) args[1];
+		final String targetName = (String) args[2];
+		final String text = (String) args[3];
+		if (targetName == null) {
 			return;
 		}
 
-		final Player receiver = World.getInstance().getPlayer(target);
+		final Player receiver = World.getInstance().getPlayer(targetName);
 		if (receiver == null || receiver.getClient().isDetached()) {
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 			return;
@@ -48,7 +49,7 @@ public class ChatTell implements IChatHandler {
 	}
 
 	@Override
-	public int[] getChatTypeList() {
+	public Integer[] commands() {
 		return COMMAND_IDS;
 	}
 }

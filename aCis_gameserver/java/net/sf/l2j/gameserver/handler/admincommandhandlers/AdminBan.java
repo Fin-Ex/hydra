@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -37,19 +36,18 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  */
 public class AdminBan implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_ban", // returns ban commands
-				"admin_ban_acc",
-				"admin_ban_char",
-				"admin_ban_chat",
-				"admin_unban", // returns unban commands
-				"admin_unban_acc",
-				"admin_unban_char",
-				"admin_unban_chat",
-				"admin_jail",
-				"admin_unjail"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_ban", // returns ban commands
+		"admin_ban_acc",
+		"admin_ban_char",
+		"admin_ban_chat",
+		"admin_unban", // returns unban commands
+		"admin_unban_acc",
+		"admin_unban_char",
+		"admin_unban_chat",
+		"admin_jail",
+		"admin_unjail"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

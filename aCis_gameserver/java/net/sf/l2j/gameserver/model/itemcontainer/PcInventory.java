@@ -448,18 +448,6 @@ public class PcInventory extends Inventory {
 		return item;
 	}
 
-	/**
-	 * Transfers item to another inventory and checks _adena and _ancientAdena
-	 *
-	 * @param process : String Identifier of process triggering this action
-	 * @param objectId : int Item Identifier of the item to be transfered
-	 * @param count : int Quantity of items to be transfered
-	 * @param actor : Player Player requesting the item transfer
-	 * @param reference : WorldObject Object referencing current action like NPC
-	 * selling item or previous item in transformation
-	 * @return ItemInstance corresponding to the new item or the updated item in
-	 * inventory
-	 */
 	@Override
 	public ItemInstance transferItem(String process, int objectId, int count, ItemContainer target, Player actor, WorldObject reference) {
 		ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);

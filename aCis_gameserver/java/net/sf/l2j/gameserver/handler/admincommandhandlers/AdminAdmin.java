@@ -42,19 +42,18 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  */
 public class AdminAdmin implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_admin",
-				"admin_admin1",
-				"admin_admin2",
-				"admin_admin3",
-				"admin_admin4",
-				"admin_gmlist",
-				"admin_kill",
-				"admin_silence",
-				"admin_tradeoff",
-				"admin_reload"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_admin",
+		"admin_admin1",
+		"admin_admin2",
+		"admin_admin3",
+		"admin_admin4",
+		"admin_gmlist",
+		"admin_kill",
+		"admin_silence",
+		"admin_tradeoff",
+		"admin_reload"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

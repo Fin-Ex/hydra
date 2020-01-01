@@ -1,8 +1,6 @@
 package net.sf.l2j.gameserver.handler.usercommandhandlers;
 
-import org.slf4j.LoggerFactory;
-
-import net.sf.l2j.gameserver.handler.IUserCommandHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 
 /**
@@ -10,20 +8,21 @@ import net.sf.l2j.gameserver.model.actor.Player;
  *
  * @author Tempy
  */
-public class Mount implements IUserCommandHandler {
+public class Mount implements IHandler {
 
-	private static final int[] COMMAND_IDS
-			= {
-				61
-			};
+	private static final Integer[] COMMAND_IDS = {
+		61
+	};
 
 	@Override
-	public boolean useUserCommand(int id, Player activeChar) {
-		return activeChar.mountPlayer(activeChar.getActiveSummon());
+	public void invoke(Object... args) {
+		final int id = (int) args[0];
+		final Player activeChar = (Player) args[1];
+		activeChar.mountPlayer(activeChar.getActiveSummon());
 	}
 
 	@Override
-	public int[] getUserCommandList() {
+	public Integer[] commands() {
 		return COMMAND_IDS;
 	}
 }

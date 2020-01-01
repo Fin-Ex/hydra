@@ -1,11 +1,9 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
 import net.sf.finex.model.talents.handlers.SonicAssault;
-import net.sf.finex.model.talents.handlers.TalentHandler;
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.data.SkillTable;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.instancemanager.DuelManager;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
@@ -25,7 +23,7 @@ import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 
-public class Continuous implements ISkillHandler {
+public class Continuous implements IHandler {
 
 	private static final ESkillType[] SKILL_IDS = {
 		ESkillType.BUFF,
@@ -47,7 +45,10 @@ public class Continuous implements ISkillHandler {
 	};
 
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object...args) {
+		final Creature activeChar = (Creature) args[0];
+		L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		final Player player = activeChar.getPlayer();
 
 		if (skill.getEffectId() != 0) {
@@ -61,7 +62,6 @@ public class Continuous implements ISkillHandler {
 		final boolean sps = activeChar.isChargedShot(ShotType.SPIRITSHOT);
 		final boolean bsps = activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOT);
 
-		TalentHandler sonicAssault = null;
 		if (activeChar.isPlayer()) {
 			if (SonicAssault.validate(skill.getId(), player)) {
 				SkillTable.FrequentTalent.SONIC_ASSAULT.getHandler().invoke(player);
@@ -171,7 +171,7 @@ public class Continuous implements ISkillHandler {
 	}
 
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }

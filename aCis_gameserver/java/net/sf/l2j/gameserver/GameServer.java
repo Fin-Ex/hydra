@@ -6,6 +6,7 @@ import java.io.UncheckedIOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.finex.FinexLoader;
 import net.sf.finex.data.tables.DyeTable;
 import net.sf.finex.data.tables.QuestDataTable;
@@ -50,10 +51,7 @@ import net.sf.l2j.gameserver.data.xml.TeleportLocationData;
 import net.sf.l2j.gameserver.data.xml.WalkerRouteData;
 import net.sf.l2j.gameserver.geoengine.GeoEngine;
 import net.sf.l2j.gameserver.handler.AdminCommandHandler;
-import net.sf.l2j.gameserver.handler.ChatHandler;
-import net.sf.l2j.gameserver.handler.ItemHandler;
-import net.sf.l2j.gameserver.handler.SkillHandler;
-import net.sf.l2j.gameserver.handler.UserCommandHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
 import net.sf.l2j.gameserver.idfactory.IdFactory;
 import net.sf.l2j.gameserver.instancemanager.*;
 import net.sf.l2j.gameserver.instancemanager.games.MonsterRace;
@@ -86,32 +84,19 @@ import net.sf.l2j.util.IPv4Filter;
 import org.reflections.Reflections;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+@Slf4j
 public class GameServer {
-
-	private static final Logger _log = LoggerFactory.getLogger(GameServer.class.getName());
 
 	private static GameServer instance;
 
 	/**
 	 * Global event bus
 	 */
-	@Getter
-	private static EventBus eventBus = new EventBus();
-	@Getter
-	private static Reflections reflections = new Reflections(new ConfigurationBuilder()
-			.setUrls(ClasspathHelper.forJavaClassPath()));
+	@Getter private static EventBus eventBus = new EventBus();
+	@Getter private static Reflections reflections = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forJavaClassPath()));
 	private SelectorThread<L2GameClient> selectorThread;
 
-	/*
-	Reflections reflections = new Reflections(
-    new ConfigurationBuilder()
-        .setUrls(ClasspathHelper.forJavaClassPath())
-);
-Set<Class<?>> types = reflections.getTypesAnnotatedWith(Scannable.class);
-	 */
 	public static void main(String[] args) throws Exception {
 		instance = new GameServer();
 
@@ -186,11 +171,10 @@ Set<Class<?>> types = reflections.getTypesAnnotatedWith(Scannable.class);
 		RaidBossPointsManager.getInstance();
 
 		StringUtil.printSection("Community server");
-		if (Config.ENABLE_COMMUNITY_BOARD) // Forums has to be loaded before clan data
-		{
-			ForumsBBSManager.getInstance().initRoot();
+		if (Config.ENABLE_COMMUNITY_BOARD) {
+			ForumsBBSManager.getInstance().initRoot(); // Forums has to be loaded before clan data
 		} else {
-			_log.info("Community server is disabled.");
+			log.info("Community server is disabled.");
 		}
 
 		StringUtil.printSection("Clans");
@@ -275,32 +259,29 @@ Set<Class<?>> types = reflections.getTypesAnnotatedWith(Scannable.class);
 		}
 
 		StringUtil.printSection("Handlers");
-		_log.info("AutoSpawnHandler: Loaded " + AutoSpawnManager.getInstance().size() + " handlers.");
-		_log.info("AdminCommandHandler: Loaded " + AdminCommandHandler.getInstance().size() + " handlers.");
-		_log.info("ChatHandler: Loaded " + ChatHandler.getInstance().size() + " handlers.");
-		_log.info("ItemHandler: Loaded " + ItemHandler.getInstance().size() + " handlers.");
-		_log.info("SkillHandler: Loaded " + SkillHandler.getInstance().size() + " handlers.");
-		_log.info("UserCommandHandler: Loaded " + UserCommandHandler.getInstance().size() + " handlers.");
+		log.info("Handlers: Loaded {} handlers.", HandlerTable.getInstance().getHolder().size());
+		log.info("AutoSpawnHandler: Loaded " + AutoSpawnManager.getInstance().size() + " handlers.");
+		log.info("AdminCommandHandler: Loaded " + AdminCommandHandler.getInstance().size() + " handlers.");
 
 		StringUtil.printSection("System");
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		ForumsBBSManager.getInstance();
-		_log.info("IdFactory: Free ObjectIDs remaining: " + IdFactory.getInstance().size());
+		log.info("IdFactory: Free ObjectIDs remaining: " + IdFactory.getInstance().size());
 
 		if (Config.DEADLOCK_DETECTOR) {
-			_log.info("Deadlock detector is enabled. Timer: " + Config.DEADLOCK_CHECK_INTERVAL + "s.");
+			log.info("Deadlock detector is enabled. Timer: " + Config.DEADLOCK_CHECK_INTERVAL + "s.");
 
 			final DeadLockDetector deadDetectThread = new DeadLockDetector();
 			deadDetectThread.setDaemon(true);
 			deadDetectThread.start();
 		} else {
-			_log.info("Deadlock detector is disabled.");
+			log.info("Deadlock detector is disabled.");
 		}
 
 		System.gc();
 
-		_log.info("Gameserver have started, used memory: " + SysUtil.getUsedMemory() + " / " + SysUtil.getMaxMemory() + " Mo.");
-		_log.info("Maximum allowed players: " + Config.MAXIMUM_ONLINE_USERS);
+		log.info("Gameserver have started, used memory: " + SysUtil.getUsedMemory() + " / " + SysUtil.getMaxMemory() + " Mo.");
+		log.info("Maximum allowed players: " + Config.MAXIMUM_ONLINE_USERS);
 
 		StringUtil.printSection("Login");
 		LoginServerThread.getInstance().start();
@@ -323,14 +304,14 @@ Set<Class<?>> types = reflections.getTypesAnnotatedWith(Scannable.class);
 			try {
 				bindAddress = InetAddress.getByName(Config.GAMESERVER_HOSTNAME);
 			} catch (UnknownHostException e1) {
-				_log.error("WARNING: The GameServer bind address is invalid, using all available IPs. Reason: " + e1.getMessage(), e1);
+				log.error("WARNING: The GameServer bind address is invalid, using all available IPs. Reason: " + e1.getMessage(), e1);
 			}
 		}
 
 		try {
 			selectorThread.openServerSocket(bindAddress, Config.PORT_GAME);
 		} catch (IOException e) {
-			_log.error("FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
+			log.error("FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		selectorThread.start();

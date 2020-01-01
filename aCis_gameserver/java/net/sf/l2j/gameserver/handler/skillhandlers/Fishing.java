@@ -1,12 +1,11 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.commons.math.MathUtil;
 import net.sf.l2j.commons.random.Rnd;
 
 import net.sf.l2j.gameserver.geoengine.GeoEngine;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.instancemanager.ZoneManager;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
@@ -25,15 +24,17 @@ import net.sf.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 
-public class Fishing implements ISkillHandler {
+public class Fishing implements IHandler {
 
-	private static final ESkillType[] SKILL_IDS
-			= {
-				ESkillType.FISHING
-			};
+	private static final ESkillType[] SKILL_IDS = {
+		ESkillType.FISHING
+	};
 
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object...args) {
+		final Creature activeChar = (Creature) args[0];
+		final L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		if (!(activeChar instanceof Player)) {
 			return;
 		}
@@ -158,7 +159,7 @@ public class Fishing implements ISkillHandler {
 	}
 
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }

@@ -7,8 +7,8 @@ import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.communitybbs.CommunityBoard;
 import net.sf.l2j.gameserver.data.xml.AdminData;
 import net.sf.l2j.gameserver.handler.AdminCommandHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.handler.UserCommandHandler;
 import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Npc;
@@ -160,7 +160,7 @@ public final class RequestBypassToServer extends L2GameClientPacket {
 				final StringTokenizer st = new StringTokenizer(_command, " ");
 				st.nextToken();
 				final int cmdId = Integer.parseInt(st.nextToken());
-				UserCommandHandler.getInstance().getUserCommandHandler(cmdId).useUserCommand(cmdId, activeChar);
+				HandlerTable.getInstance().get(cmdId).invoke(cmdId, activeChar);
 			} else if (_command.startsWith("talent")) {
 				final StringTokenizer st = new StringTokenizer(_command, " ");
 				String mainCmd = st.nextToken();

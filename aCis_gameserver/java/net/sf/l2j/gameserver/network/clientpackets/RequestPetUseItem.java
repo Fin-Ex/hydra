@@ -1,11 +1,9 @@
 package net.sf.l2j.gameserver.network.clientpackets;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.commons.util.ArraysUtil;
-
-import net.sf.l2j.gameserver.handler.IItemHandler;
-import net.sf.l2j.gameserver.handler.ItemHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Pet;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
@@ -15,15 +13,14 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestPetUseItem extends L2GameClientPacket {
 
-	private static final int[] PET_FOOD_IDS
-			= {
-				2515,
-				4038,
-				5168,
-				5169,
-				6316,
-				7582
-			};
+	private static final int[] PET_FOOD_IDS = {
+		2515,
+		4038,
+		5168,
+		5169,
+		6316,
+		7582
+	};
 
 	private int _objectId;
 
@@ -82,14 +79,12 @@ public final class RequestPetUseItem extends L2GameClientPacket {
 		}
 
 		// If pet food check is successful or if the item got an handler, use that item.
-		final IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getEtcItem());
+		final IHandler handler = HandlerTable.getInstance().get(item.getEtcItem().getHandlerName());
 		if (handler != null) {
-			handler.useItem(pet, item, false);
+			handler.invoke(pet, item, false);
 			pet.updateAndBroadcastStatus(1);
 		} else {
 			activeChar.sendPacket(SystemMessageId.PET_CANNOT_USE_ITEM);
 		}
-
-		return;
 	}
 }

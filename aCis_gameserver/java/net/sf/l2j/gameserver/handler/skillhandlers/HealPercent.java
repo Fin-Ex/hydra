@@ -1,13 +1,11 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
-import org.slf4j.LoggerFactory;
-
-import net.sf.l2j.gameserver.handler.ISkillHandler;
-import net.sf.l2j.gameserver.handler.SkillHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
-import net.sf.l2j.gameserver.model.actor.instance.Door;
 import net.sf.l2j.gameserver.model.actor.Player;
+import net.sf.l2j.gameserver.model.actor.instance.Door;
 import net.sf.l2j.gameserver.model.actor.instance.SiegeFlag;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.StatusUpdate;
@@ -15,20 +13,22 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 
-public class HealPercent implements ISkillHandler {
+public class HealPercent implements IHandler {
 
-	private static final ESkillType[] SKILL_IDS
-			= {
-				ESkillType.HEAL_PERCENT,
-				ESkillType.MANAHEAL_PERCENT
-			};
+	private static final ESkillType[] SKILL_IDS = {
+		ESkillType.HEAL_PERCENT,
+		ESkillType.MANAHEAL_PERCENT
+	};
 
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object... args) {
+		final Creature activeChar = (Creature) args[0];
+		final L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		// check for other effects
-		ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(ESkillType.BUFF);
+		final IHandler handler = HandlerTable.getInstance().get(Continuous.class);
 		if (handler != null) {
-			handler.useSkill(activeChar, skill, targets);
+			handler.invoke(activeChar, skill, targets);
 		}
 
 		boolean hp = false;
@@ -117,7 +117,7 @@ public class HealPercent implements ISkillHandler {
 	}
 
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }

@@ -1,9 +1,6 @@
 package net.sf.l2j.gameserver.handler.itemhandlers;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.l2j.gameserver.model.actor.Playable;
-import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -11,11 +8,14 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 public class Elixir extends ItemSkills {
 
 	@Override
-	public void useItem(Playable playable, ItemInstance item, boolean forceUse) {
-		if (!(playable instanceof Player)) {
+	public void invoke(Object... args) {
+		final Playable playable = (Playable) args[0];
+		final ItemInstance item = (ItemInstance) args[1];
+		final boolean forceUse = (boolean) args[2];
+		if (!playable.isPlayer()) {
 			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 			return;
 		}
-		super.useItem(playable, item, forceUse);
+		super.invoke(playable, item, forceUse);
 	}
 }

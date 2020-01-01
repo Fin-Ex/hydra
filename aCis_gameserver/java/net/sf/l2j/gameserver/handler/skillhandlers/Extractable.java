@@ -1,10 +1,10 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 import net.sf.l2j.commons.random.Rnd;
+import net.sf.l2j.gameserver.handler.IHandler;
 
-import net.sf.l2j.gameserver.handler.ISkillHandler;
 import net.sf.l2j.gameserver.model.L2ExtractableProductItem;
 import net.sf.l2j.gameserver.model.L2ExtractableSkill;
 import net.sf.l2j.gameserver.model.WorldObject;
@@ -15,23 +15,26 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 
-public class Extractable implements ISkillHandler {
+@Slf4j
+public class Extractable implements IHandler {
 
-	private static final ESkillType[] SKILL_IDS
-			= {
-				ESkillType.EXTRACTABLE,
-				ESkillType.EXTRACTABLE_FISH
-			};
+	private static final ESkillType[] SKILL_IDS = {
+		ESkillType.EXTRACTABLE,
+		ESkillType.EXTRACTABLE_FISH
+	};
 
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object...args) {
+		final Creature activeChar = (Creature) args[0];
+		final L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		if (!(activeChar instanceof Player)) {
 			return;
 		}
 
 		final L2ExtractableSkill exItem = skill.getExtractableSkill();
 		if (exItem == null || exItem.getProductItemsArray().isEmpty()) {
-			_log.warn("Missing informations for extractable skill id: " + skill.getId() + ".");
+			log.warn("Missing informations for extractable skill id: " + skill.getId() + ".");
 			return;
 		}
 
@@ -55,12 +58,11 @@ public class Extractable implements ISkillHandler {
 
 		if (!created) {
 			player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
-			return;
 		}
 	}
 
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }

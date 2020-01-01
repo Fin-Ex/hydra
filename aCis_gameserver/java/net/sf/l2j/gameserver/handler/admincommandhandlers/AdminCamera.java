@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.actor.Creature;
@@ -12,11 +11,10 @@ import net.sf.l2j.gameserver.network.serverpackets.SpecialCamera;
 
 public class AdminCamera implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_camera",
-				"admin_cameramode"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_camera",
+		"admin_cameramode"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

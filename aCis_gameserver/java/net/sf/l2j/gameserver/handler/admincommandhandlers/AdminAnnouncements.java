@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.data.xml.AnnouncementData;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
@@ -18,12 +17,11 @@ import net.sf.l2j.gameserver.model.actor.Player;
  */
 public class AdminAnnouncements implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_announce",
-				"admin_ann",
-				"admin_say"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_announce",
+		"admin_ann",
+		"admin_say"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

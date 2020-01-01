@@ -122,7 +122,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 			return false;
 		}
 
-		final Attackable me = getActiveChar();
+		final Attackable me = getActor();
 
 		if (target instanceof Playable) {
 			// Check if target is in the Aggro range
@@ -240,7 +240,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 	synchronized void changeIntention(CtrlIntention intention, Object arg0, Object arg1) {
 		if (intention == CtrlIntention.IDLE || intention == CtrlIntention.ACTIVE) {
 			// Check if actor is not dead
-			Attackable npc = getActiveChar();
+			Attackable npc = getActor();
 			if (!npc.isAlikeDead()) {
 				// If no players are around, set the Intention to ACTIVE
 				if (!npc.getKnownType(Player.class).isEmpty()) {
@@ -328,7 +328,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 	 * </ul>
 	 */
 	protected void thinkActive() {
-		final Attackable npc = getActiveChar();
+		final Attackable npc = getActor();
 
 		// Update every 1s the _globalAggro counter to come close to 0
 		if (_globalAggro != 0) {
@@ -461,7 +461,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 	 * </ul>
 	 */
 	protected void thinkAttack() {
-		final Attackable npc = getActiveChar();
+		final Attackable npc = getActor();
 		if (npc.isCastingNow()) {
 			return;
 		}
@@ -788,7 +788,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 			return false;
 		}
 
-		final Attackable caster = getActiveChar();
+		final Attackable caster = getActor();
 
 		if (caster.isCastingNow() && !sk.isSimultaneousCast()) {
 			return false;
@@ -1114,17 +1114,17 @@ public class AttackableAI extends CreatureAI implements Runnable {
 	 */
 	protected boolean checkSkillCastConditions(L2Skill skill) {
 		// Not enough MP.
-		if (skill.getMpConsume() >= getActiveChar().getCurrentMp()) {
+		if (skill.getMpConsume() >= getActor().getCurrentMp()) {
 			return false;
 		}
 
 		// Character is in "skill disabled" mode.
-		if (getActiveChar().isSkillDisabled(skill)) {
+		if (getActor().isSkillDisabled(skill)) {
 			return false;
 		}
 
 		// Is a magic skill and character is magically muted or is a physical skill and character is physically muted.
-		return !getActiveChar().isMuted(skill.getAlignment());
+		return !getActor().isMuted(skill.getAlignment());
 	}
 
 	/**
@@ -1133,13 +1133,13 @@ public class AttackableAI extends CreatureAI implements Runnable {
 	 * @return true if the actor will cast a spell, false otherwise.
 	 */
 	protected boolean willCastASpell() {
-		switch (getActiveChar().getTemplate().getAiType()) {
+		switch (getActor().getTemplate().getAiType()) {
 			case HEALER:
 			case MAGE:
-				return !getActiveChar().isMuted(ESkillAlignmentType.MAGIC);
+				return !getActor().isMuted(ESkillAlignmentType.MAGIC);
 
 			default:
-				if (getActiveChar().isMuted(ESkillAlignmentType.PHYSIC)) {
+				if (getActor().isMuted(ESkillAlignmentType.PHYSIC)) {
 					return false;
 				}
 		}
@@ -1162,7 +1162,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 	 * @return The new Creature victim.
 	 */
 	protected Creature targetReconsider(int range, boolean rangeCheck) {
-		final Attackable actor = getActiveChar();
+		final Attackable actor = getActor();
 
 		// Verify first if aggro list is empty, if not search a victim following his aggro position.
 		if (!actor.getAggroList().isEmpty()) {
@@ -1241,7 +1241,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 	 * @return old target if none could fits or the new target.
 	 */
 	protected Creature aggroReconsider(Creature oldTarget) {
-		final Attackable actor = getActiveChar();
+		final Attackable actor = getActor();
 
 		// Choose a new victim, and make checks to see if it fits.
 		for (Creature victim : actor.getHateList()) {
@@ -1302,7 +1302,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker) {
-		final Attackable me = getActiveChar();
+		final Attackable me = getActor();
 
 		// Calculate the attack timeout
 		_attackTimeout = System.currentTimeMillis() + MAX_ATTACK_TIMEOUT;
@@ -1396,7 +1396,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro) {
-		final Attackable me = getActiveChar();
+		final Attackable me = getActor();
 
 		// Add the target to the actor _aggroList or update hate if already present
 		me.addDamageHate(target, 0, aggro);
@@ -1478,8 +1478,9 @@ public class AttackableAI extends CreatureAI implements Runnable {
 		_globalAggro = value;
 	}
 
-	private Attackable getActiveChar() {
-		return (Attackable) _actor;
+	@Override
+	public Attackable getActor() {
+		return super.getActor().getAttackable();
 	}
 
 	private boolean checkBuffAndSetBackTarget(WorldObject target) {
@@ -1487,8 +1488,8 @@ public class AttackableAI extends CreatureAI implements Runnable {
 			return false;
 		}
 
-		for (L2Skill sk : getActiveChar().getTemplate().getSkills(SkillType.BUFF)) {
-			if (getActiveChar().getFirstEffect(sk) != null) {
+		for (L2Skill sk : getActor().getTemplate().getSkills(SkillType.BUFF)) {
+			if (getActor().getFirstEffect(sk) != null) {
 				continue;
 			}
 

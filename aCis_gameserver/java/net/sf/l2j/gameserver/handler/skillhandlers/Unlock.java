@@ -1,10 +1,9 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.commons.random.Rnd;
+import net.sf.l2j.gameserver.handler.IHandler;
 
-import net.sf.l2j.gameserver.handler.ISkillHandler;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.ai.CtrlIntention;
@@ -15,16 +14,18 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 
-public class Unlock implements ISkillHandler {
+public class Unlock implements IHandler {
 
-	private static final ESkillType[] SKILL_IDS
-			= {
-				ESkillType.UNLOCK,
-				ESkillType.UNLOCK_SPECIAL
-			};
+	private static final ESkillType[] SKILL_IDS = {
+		ESkillType.UNLOCK,
+		ESkillType.UNLOCK_SPECIAL
+	};
 
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object... args) {
+		final Creature activeChar = (Creature) args[0];
+		final L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		final WorldObject object = targets[0];
 
 		if (object instanceof Door) {
@@ -58,7 +59,7 @@ public class Unlock implements ISkillHandler {
 		}
 	}
 
-	private static final boolean doorUnlock(L2Skill skill) {
+	private static boolean doorUnlock(L2Skill skill) {
 		if (skill.getSkillType() == ESkillType.UNLOCK_SPECIAL) {
 			return Rnd.get(100) < skill.getPower();
 		}
@@ -77,7 +78,7 @@ public class Unlock implements ISkillHandler {
 		}
 	}
 
-	private static final boolean chestUnlock(L2Skill skill, Creature chest) {
+	private static boolean chestUnlock(L2Skill skill, Creature chest) {
 		int chance = 0;
 		if (chest.getLevel() > 60) {
 			if (skill.getLevel() < 10) {
@@ -114,7 +115,7 @@ public class Unlock implements ISkillHandler {
 	}
 
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }

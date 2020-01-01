@@ -5,35 +5,35 @@
  */
 package net.sf.l2j.gameserver.handler.usercommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.finex.enums.EUIEventType;
 import net.sf.finex.model.classes.Warsmith;
-import net.sf.l2j.gameserver.handler.IUserCommandHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 
 /**
  *
  * @author FinFan
  */
-public class WarsmithInfo implements IUserCommandHandler {
+public class WarsmithInfo implements IHandler {
 
-	private static final int[] COMMANDS = {
+	private static final Integer[] COMMANDS = {
 		114
 	};
 
 	@Override
-	public boolean useUserCommand(int id, Player activeChar) {
+	public void invoke(Object... args) {
+		final int id = (int) args[0];
+		final Player activeChar = (Player) args[1];
 		if (!activeChar.hasComponent(Warsmith.class)) {
-			return false;
+			return;
 		}
 
 		activeChar.getComponent(Warsmith.class).showHtml(EUIEventType.INFO);
-		return true;
 	}
 
 	@Override
-	public int[] getUserCommandList() {
+	public Integer[] commands() {
 		return COMMANDS;
 	}
 

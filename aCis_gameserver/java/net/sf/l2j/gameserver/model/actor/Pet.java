@@ -16,8 +16,10 @@ import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.random.Rnd;
 import net.sf.l2j.gameserver.data.ItemTable;
 import net.sf.l2j.gameserver.data.SkillTable;
-import net.sf.l2j.gameserver.handler.IItemHandler;
-import net.sf.l2j.gameserver.handler.ItemHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
+import net.sf.l2j.gameserver.handler.itemhandlers.ItemSkills;
+import net.sf.l2j.gameserver.handler.itemhandlers.PetFood;
 import net.sf.l2j.gameserver.idfactory.IdFactory;
 import net.sf.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import net.sf.l2j.gameserver.model.PetDataEntry;
@@ -111,10 +113,10 @@ public class Pet extends Summon {
 			}
 
 			if (food != null && checkAutoFeedState()) {
-				IItemHandler handler = ItemHandler.getInstance().getItemHandler(food.getEtcItem());
+				final IHandler handler = HandlerTable.getInstance().get(PetFood.class);
 				if (handler != null) {
 					getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PET_TOOK_S1_BECAUSE_HE_WAS_HUNGRY).addItemName(food));
-					handler.useItem(Pet.this, food, false);
+					handler.invoke(Pet.this, food, false);
 				}
 			} else if (getCurrentFed() == 0) {
 				getPlayer().sendPacket(SystemMessageId.YOUR_PET_IS_VERY_HUNGRY);
@@ -333,98 +335,98 @@ public class Pet extends Summon {
 		}
 
 		broadcastPacket(new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading()));
-		ItemInstance target = (ItemInstance) object;
+		ItemInstance usableItem = (ItemInstance) object;
 
 		// Cursed weapons
-		if (CursedWeaponsManager.getInstance().isCursed(target.getItemId())) {
-			getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1).addItemName(target.getItemId()));
+		if (CursedWeaponsManager.getInstance().isCursed(usableItem.getItemId())) {
+			getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1).addItemName(usableItem.getItemId()));
 			return;
 		}
 
 		// Can't pickup shots and arrows.
-		if (target.getItem().getItemType() == EtcItemType.ARROW || target.getItem().getItemType() == EtcItemType.SHOT) {
+		if (usableItem.getItem().getItemType() == EtcItemType.ARROW || usableItem.getItem().getItemType() == EtcItemType.SHOT) {
 			getPlayer().sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return;
 		}
 
-		synchronized (target) {
-			if (!target.isVisible()) {
+		synchronized (usableItem) {
+			if (!usableItem.isVisible()) {
 				return;
 			}
 
-			if (!_inventory.validateCapacity(target)) {
+			if (!_inventory.validateCapacity(usableItem)) {
 				getPlayer().sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS);
 				return;
 			}
 
-			if (!_inventory.validateWeight(target, target.getCount())) {
+			if (!_inventory.validateWeight(usableItem, usableItem.getCount())) {
 				getPlayer().sendPacket(SystemMessageId.UNABLE_TO_PLACE_ITEM_YOUR_PET_IS_TOO_ENCUMBERED);
 				return;
 			}
 
-			if (target.getOwnerId() != 0 && !getPlayer().isLooterOrInLooterParty(target.getOwnerId())) {
-				if (target.getItemId() == 57) {
-					getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1_ADENA).addNumber(target.getCount()));
-				} else if (target.getCount() > 1) {
-					getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_PICKUP_S2_S1_S).addItemName(target.getItemId()).addNumber(target.getCount()));
+			if (usableItem.getOwnerId() != 0 && !getPlayer().isLooterOrInLooterParty(usableItem.getOwnerId())) {
+				if (usableItem.getItemId() == 57) {
+					getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1_ADENA).addNumber(usableItem.getCount()));
+				} else if (usableItem.getCount() > 1) {
+					getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_PICKUP_S2_S1_S).addItemName(usableItem.getItemId()).addNumber(usableItem.getCount()));
 				} else {
-					getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1).addItemName(target.getItemId()));
+					getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_PICKUP_S1).addItemName(usableItem.getItemId()));
 				}
 
 				return;
 			}
 
-			if (target.hasDropProtection()) {
-				target.removeDropProtection();
+			if (usableItem.hasDropProtection()) {
+				usableItem.removeDropProtection();
 			}
 
 			// If owner is in party and it isnt finders keepers, distribute the item instead of stealing it -.-
 			final Party party = getPlayer().getParty();
 			if (party != null && party.getLootRule() != EPartyLoot.ITEM_LOOTER) {
-				party.distributeItem(getPlayer(), target);
+				party.distributeItem(getPlayer(), usableItem);
 			} else {
-				target.pickupMe(this);
+				usableItem.pickupMe(this);
 			}
 
 			// Item must be removed from ItemsOnGroundManager if it is active.
-			ItemsOnGroundTaskManager.getInstance().remove(target);
+			ItemsOnGroundTaskManager.getInstance().remove(usableItem);
 		}
 
 		// Auto use herbs - pick up
-		if (target.getItemType() == EtcItemType.HERB) {
-			IItemHandler handler = ItemHandler.getInstance().getItemHandler(target.getEtcItem());
+		if (usableItem.getItemType() == EtcItemType.HERB) {
+				final IHandler handler = HandlerTable.getInstance().get(ItemSkills.class);
 			if (handler != null) {
-				handler.useItem(this, target, false);
+				handler.invoke(this, usableItem, false);
 			}
 
-			ItemTable.getInstance().destroyItem("Consume", target, getPlayer(), null);
+			ItemTable.getInstance().destroyItem("Consume", usableItem, getPlayer(), null);
 			broadcastStatusUpdate();
 		} else {
 			// if item is instance of L2ArmorType or WeaponType broadcast an "Attention" system message
-			if (target.getItemType() instanceof ArmorType || target.getItemType() instanceof WeaponType) {
+			if (usableItem.getItemType() instanceof ArmorType || usableItem.getItemType() instanceof WeaponType) {
 				SystemMessage msg;
-				if (target.getEnchantLevel() > 0) {
-					msg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_S1_PET_PICKED_UP_S2_S3).addCharName(getPlayer()).addNumber(target.getEnchantLevel()).addItemName(target.getItemId());
+				if (usableItem.getEnchantLevel() > 0) {
+					msg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_S1_PET_PICKED_UP_S2_S3).addCharName(getPlayer()).addNumber(usableItem.getEnchantLevel()).addItemName(usableItem.getItemId());
 				} else {
-					msg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_S1_PET_PICKED_UP_S2).addCharName(getPlayer()).addItemName(target.getItemId());
+					msg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_S1_PET_PICKED_UP_S2).addCharName(getPlayer()).addItemName(usableItem.getItemId());
 				}
 
 				getPlayer().broadcastPacket(msg, 1400);
 			}
 
 			SystemMessage sm2;
-			if (target.getItemId() == 57) {
-				sm2 = SystemMessage.getSystemMessage(SystemMessageId.PET_PICKED_S1_ADENA).addItemNumber(target.getCount());
-			} else if (target.getEnchantLevel() > 0) {
-				sm2 = SystemMessage.getSystemMessage(SystemMessageId.PET_PICKED_S1_S2).addNumber(target.getEnchantLevel()).addItemName(target.getItemId());
-			} else if (target.getCount() > 1) {
-				sm2 = SystemMessage.getSystemMessage(SystemMessageId.PET_PICKED_S2_S1_S).addItemName(target.getItemId()).addItemNumber(target.getCount());
+			if (usableItem.getItemId() == 57) {
+				sm2 = SystemMessage.getSystemMessage(SystemMessageId.PET_PICKED_S1_ADENA).addItemNumber(usableItem.getCount());
+			} else if (usableItem.getEnchantLevel() > 0) {
+				sm2 = SystemMessage.getSystemMessage(SystemMessageId.PET_PICKED_S1_S2).addNumber(usableItem.getEnchantLevel()).addItemName(usableItem.getItemId());
+			} else if (usableItem.getCount() > 1) {
+				sm2 = SystemMessage.getSystemMessage(SystemMessageId.PET_PICKED_S2_S1_S).addItemName(usableItem.getItemId()).addItemNumber(usableItem.getCount());
 			} else {
-				sm2 = SystemMessage.getSystemMessage(SystemMessageId.PET_PICKED_S1).addItemName(target.getItemId());
+				sm2 = SystemMessage.getSystemMessage(SystemMessageId.PET_PICKED_S1).addItemName(usableItem.getItemId());
 			}
 
 			getPlayer().sendPacket(sm2);
-			getInventory().addItem("Pickup", target, getPlayer(), this);
+			getInventory().addItem("Pickup", usableItem, getPlayer(), this);
 			getPlayer().sendPacket(new PetItemList(this));
 		}
 

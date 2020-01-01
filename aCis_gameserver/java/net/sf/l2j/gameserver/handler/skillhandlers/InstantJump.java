@@ -1,10 +1,9 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.commons.math.MathUtil;
+import net.sf.l2j.gameserver.handler.IHandler;
 
-import net.sf.l2j.gameserver.handler.ISkillHandler;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.ai.CtrlIntention;
@@ -22,15 +21,17 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
  * @author Didldak Some parts taken from EffectWarp, which cannot be used for
  * this case.
  */
-public class InstantJump implements ISkillHandler {
+public class InstantJump implements IHandler {
 
-	private static final ESkillType[] SKILL_IDS
-			= {
-				ESkillType.INSTANT_JUMP
-			};
+	private static final ESkillType[] SKILL_IDS = {
+		ESkillType.INSTANT_JUMP
+	};
 
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object...args) {
+		final Creature activeChar = (Creature) args[0];
+		final L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		Creature target = (Creature) targets[0];
 
 		if (Formulas.calcPhysicalSkillEvasion(target, skill)) {
@@ -72,7 +73,7 @@ public class InstantJump implements ISkillHandler {
 	 * @see net.sf.l2j.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }

@@ -1,22 +1,21 @@
 package net.sf.l2j.gameserver.handler.usercommandhandlers;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.l2j.gameserver.data.MapRegionTable;
-import net.sf.l2j.gameserver.handler.IUserCommandHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
-public class Loc implements IUserCommandHandler {
+public class Loc implements IHandler {
 
-	private static final int[] COMMAND_IDS
-			= {
-				0
-			};
+	private static final Integer[] COMMAND_IDS = {
+		0
+	};
 
 	@Override
-	public boolean useUserCommand(int id, Player activeChar) {
+	public void invoke(Object... args) {
+		final int id = (int) args[0];
+		final Player activeChar = (Player) args[1];
 		SystemMessageId msg;
 
 		switch (MapRegionTable.getInstance().getMapRegion(activeChar.getX(), activeChar.getY())) {
@@ -100,11 +99,10 @@ public class Loc implements IUserCommandHandler {
 		}
 
 		activeChar.sendPacket(SystemMessage.getSystemMessage(msg).addNumber(activeChar.getX()).addNumber(activeChar.getY()).addNumber(activeChar.getZ()));
-		return true;
 	}
 
 	@Override
-	public int[] getUserCommandList() {
+	public Integer[] commands() {
 		return COMMAND_IDS;
 	}
 }

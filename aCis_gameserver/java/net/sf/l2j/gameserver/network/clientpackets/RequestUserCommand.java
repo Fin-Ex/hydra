@@ -1,9 +1,7 @@
 package net.sf.l2j.gameserver.network.clientpackets;
 
-import org.slf4j.LoggerFactory;
-
-import net.sf.l2j.gameserver.handler.IUserCommandHandler;
-import net.sf.l2j.gameserver.handler.UserCommandHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 
 public class RequestUserCommand extends L2GameClientPacket {
@@ -22,9 +20,9 @@ public class RequestUserCommand extends L2GameClientPacket {
 			return;
 		}
 
-		final IUserCommandHandler handler = UserCommandHandler.getInstance().getUserCommandHandler(_command);
+		final IHandler handler = HandlerTable.getInstance().get(_command);
 		if (handler != null) {
-			handler.useUserCommand(_command, getClient().getActiveChar());
+			handler.invoke(_command, getClient().getActiveChar());
 		}
 	}
 }

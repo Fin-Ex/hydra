@@ -1,10 +1,9 @@
 package net.sf.l2j.gameserver.handler.itemhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.data.MapRegionTable;
-import net.sf.l2j.gameserver.handler.IItemHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.instancemanager.CastleManorManager;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Attackable;
@@ -15,10 +14,13 @@ import net.sf.l2j.gameserver.model.manor.Seed;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
-public class SeedHandler implements IItemHandler {
+public class SeedHandler implements IHandler {
 
 	@Override
-	public void useItem(Playable playable, ItemInstance item, boolean forceUse) {
+	public void invoke(Object... args) {
+		final Playable playable = (Playable) args[0];
+		final ItemInstance item = (ItemInstance) args[1];
+		final boolean forceUse = (boolean) args[2];
 		if (!Config.ALLOW_MANOR || !(playable instanceof Player)) {
 			return;
 		}

@@ -5,8 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.l2j.Config;
 import net.sf.l2j.L2DatabaseFactory;
@@ -120,6 +123,9 @@ public final class ItemInstance extends WorldObject implements Runnable, Compara
 	private ScheduledFuture<?> _dropProtection;
 
 	private int _shotsMask = 0;
+	@Getter @Setter private boolean isPickupable = true;
+	@Getter @Setter private boolean isAutodestroyable = true;
+	@Getter @Setter private Future<?> specialTask = null; // can be used for any task
 
 	/**
 	 * Constructor of the ItemInstance from the objectId and the itemId.
@@ -913,7 +919,9 @@ public final class ItemInstance extends WorldObject implements Runnable, Compara
 			_itm.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
 			_itm.spawnMe(_x, _y, _z);
 
-			ItemsOnGroundTaskManager.getInstance().add(_itm, _dropper);
+			if (_itm.isAutodestroyable) {
+				ItemsOnGroundTaskManager.getInstance().add(_itm, _dropper);
+			}
 
 			_itm.setDropperObjectId(0); // Set the dropper Id back to 0 so it no longer shows the drop packet
 		}

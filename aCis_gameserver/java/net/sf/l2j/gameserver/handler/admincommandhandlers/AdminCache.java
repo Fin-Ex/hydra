@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.cache.HtmCache;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
@@ -11,10 +10,9 @@ import net.sf.l2j.gameserver.model.actor.Player;
  */
 public class AdminCache implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_reload_cache_path",
-				"admin_reload_cache_file",};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_reload_cache_path",
+		"admin_reload_cache_file",};
 
 	@Override
 	public String[] getAdminCommandList() {

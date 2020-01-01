@@ -1,8 +1,6 @@
 package net.sf.l2j.gameserver.handler.usercommandhandlers;
 
-import org.slf4j.LoggerFactory;
-
-import net.sf.l2j.gameserver.handler.IUserCommandHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 
 /**
@@ -10,24 +8,23 @@ import net.sf.l2j.gameserver.model.actor.Player;
  *
  * @author Micht
  */
-public class DisMount implements IUserCommandHandler {
+public class DisMount implements IHandler {
 
-	private static final int[] COMMAND_IDS
-			= {
-				62
-			};
+	private static final Integer[] COMMAND_IDS = {
+		62
+	};
 
 	@Override
-	public boolean useUserCommand(int id, Player activeChar) {
+	public void invoke(Object... args) {
+		final int id = (int) args[0];
+		final Player activeChar = (Player) args[1];
 		if (activeChar.isMounted()) {
 			activeChar.dismount();
 		}
-
-		return true;
 	}
 
 	@Override
-	public int[] getUserCommandList() {
+	public Integer[] commands() {
 		return COMMAND_IDS;
 	}
 }

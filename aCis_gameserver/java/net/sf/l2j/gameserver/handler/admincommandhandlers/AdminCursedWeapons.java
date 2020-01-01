@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
@@ -29,14 +28,13 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class AdminCursedWeapons implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_cw_info",
-				"admin_cw_remove",
-				"admin_cw_goto",
-				"admin_cw_add",
-				"admin_cw_info_menu"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_cw_info",
+		"admin_cw_remove",
+		"admin_cw_goto",
+		"admin_cw_add",
+		"admin_cw_info_menu"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

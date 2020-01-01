@@ -1,37 +1,35 @@
 package net.sf.l2j.gameserver.handler.usercommandhandlers;
 
-import org.slf4j.LoggerFactory;
-
-import net.sf.l2j.gameserver.handler.IUserCommandHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.group.CommandChannel;
 import net.sf.l2j.gameserver.model.group.Party;
 
-public class ChannelDelete implements IUserCommandHandler {
+public class ChannelDelete implements IHandler {
 
-	private static final int[] COMMAND_IDS
-			= {
-				93
-			};
+	private static final Integer[] COMMAND_IDS = {
+		93
+	};
 
 	@Override
-	public boolean useUserCommand(int id, Player player) {
+	public void invoke(Object... args) {
+		final int id = (int) args[0];
+		final Player player = (Player) args[1];
 		final Party party = player.getParty();
 		if (party == null || !party.isLeader(player)) {
-			return false;
+			return;
 		}
 
 		final CommandChannel channel = party.getCommandChannel();
 		if (channel == null || !channel.isLeader(player)) {
-			return false;
+			return;
 		}
 
 		channel.disband();
-		return true;
 	}
 
 	@Override
-	public int[] getUserCommandList() {
+	public Integer[] commands() {
 		return COMMAND_IDS;
 	}
 }

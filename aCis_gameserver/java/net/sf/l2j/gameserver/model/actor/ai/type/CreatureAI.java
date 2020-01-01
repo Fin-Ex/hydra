@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.model.actor.ai.type;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.l2j.commons.util.ArraysUtil;
 
 import net.sf.l2j.gameserver.geoengine.GeoEngine;

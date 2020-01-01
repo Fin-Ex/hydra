@@ -1,7 +1,7 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
 import net.sf.finex.enums.ESkillHandlerType;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
@@ -14,7 +14,7 @@ import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
-public class Mdam implements ISkillHandler {
+public class Mdam implements IHandler {
 
 	private static final ESkillType[] SKILL_IDS = {
 		ESkillType.MDAM,
@@ -22,7 +22,10 @@ public class Mdam implements ISkillHandler {
 	};
 
 	@Override
-	public void useSkill(Creature caster, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object... args) {
+		final Creature caster = (Creature) args[0];
+		final L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		if (caster.isAlikeDead()) {
 			return;
 		}
@@ -99,7 +102,7 @@ public class Mdam implements ISkillHandler {
 	}
 
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }

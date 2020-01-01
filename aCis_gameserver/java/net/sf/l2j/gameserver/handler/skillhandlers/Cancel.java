@@ -1,11 +1,12 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.commons.random.Rnd;
 
 import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
+import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
@@ -15,19 +16,23 @@ import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 
 /**
- * @author DS
+ * 
+ * @author finfan
  */
-public class Cancel implements ISkillHandler {
+@Slf4j
+public class Cancel implements IHandler {
 
-	private static final ESkillType[] SKILL_IDS
-			= {
-				ESkillType.CANCEL,
-				ESkillType.MAGE_BANE,
-				ESkillType.WARRIOR_BANE
-			};
+	private static final ESkillType[] SKILL_IDS = {
+		ESkillType.CANCEL,
+		ESkillType.MAGE_BANE,
+		ESkillType.WARRIOR_BANE
+	};
 
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object...args) {
+		final Creature activeChar = (Creature) args[0];
+		final L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		// Delimit min/max % success.
 		final int minRate = (skill.getSkillType() == ESkillType.CANCEL) ? 25 : 40;
 		final int maxRate = (skill.getSkillType() == ESkillType.CANCEL) ? 75 : 95;
@@ -125,7 +130,7 @@ public class Cancel implements ISkillHandler {
 		double rate = (2 * diffLevel + baseRate + effectPeriod / 120) * vuln;
 
 		if (Config.DEVELOPER) {
-			_log.info("calcCancelSuccess(): diffLevel:" + diffLevel + ", baseRate:" + baseRate + ", vuln:" + vuln + ", total:" + rate);
+			log.info("calcCancelSuccess(): diffLevel:" + diffLevel + ", baseRate:" + baseRate + ", vuln:" + vuln + ", total:" + rate);
 		}
 
 		if (rate < minRate) {
@@ -138,7 +143,7 @@ public class Cancel implements ISkillHandler {
 	}
 
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }

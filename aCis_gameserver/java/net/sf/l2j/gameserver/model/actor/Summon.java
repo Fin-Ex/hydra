@@ -6,8 +6,10 @@ import net.sf.finex.model.regeneration.ERegenType;
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.data.ItemTable;
 import net.sf.l2j.gameserver.geoengine.GeoEngine;
-import net.sf.l2j.gameserver.handler.IItemHandler;
-import net.sf.l2j.gameserver.handler.ItemHandler;
+import net.sf.l2j.gameserver.handler.HandlerTable;
+import net.sf.l2j.gameserver.handler.IHandler;
+import net.sf.l2j.gameserver.handler.itemhandlers.BeastSoulShot;
+import net.sf.l2j.gameserver.handler.itemhandlers.BeastSpiritShot;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.ai.CtrlIntention;
@@ -758,16 +760,16 @@ public abstract class Summon extends Playable {
 			ItemInstance item = getPlayer().getInventory().getItemByItemId(itemId);
 			if (item != null) {
 				if (magic && item.getItem().getDefaultAction() == ActionType.summon_spiritshot) {
-					IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getEtcItem());
+					final IHandler handler = HandlerTable.getInstance().get(BeastSpiritShot.class);
 					if (handler != null) {
-						handler.useItem(getPlayer(), item, false);
+						handler.invoke(getPlayer(), item, false);
 					}
 				}
 
 				if (physical && item.getItem().getDefaultAction() == ActionType.summon_soulshot) {
-					IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getEtcItem());
+					final IHandler handler = HandlerTable.getInstance().get(BeastSoulShot.class);
 					if (handler != null) {
-						handler.useItem(getPlayer(), item, false);
+						handler.invoke(getPlayer(), item, false);
 					}
 				}
 			} else {

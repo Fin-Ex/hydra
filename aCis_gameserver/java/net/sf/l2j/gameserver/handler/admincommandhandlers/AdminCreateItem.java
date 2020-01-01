@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 import java.util.List;
@@ -29,14 +28,13 @@ import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class AdminCreateItem implements IAdminCommandHandler {
 
-	private static final String[] ADMIN_COMMANDS
-			= {
-				"admin_itemcreate",
-				"admin_create_item",
-				"admin_create_set",
-				"admin_create_coin",
-				"admin_reward_all"
-			};
+	private static final String[] ADMIN_COMMANDS = {
+		"admin_itemcreate",
+		"admin_create_item",
+		"admin_create_set",
+		"admin_create_coin",
+		"admin_reward_all"
+	};
 
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar) {

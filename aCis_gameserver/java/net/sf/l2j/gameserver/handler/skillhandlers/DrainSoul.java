@@ -1,8 +1,7 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
-import org.slf4j.LoggerFactory;
+import net.sf.l2j.gameserver.handler.IHandler;
 
-import net.sf.l2j.gameserver.handler.ISkillHandler;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Attackable;
 import net.sf.l2j.gameserver.model.actor.Creature;
@@ -14,17 +13,19 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
 /**
  * @author _drunk_
  */
-public class DrainSoul implements ISkillHandler {
+public class DrainSoul implements IHandler {
 
 	private static final String qn = "Q350_EnhanceYourWeapon";
 
-	private static final ESkillType[] SKILL_IDS
-			= {
-				ESkillType.DRAIN_SOUL
-			};
+	private static final ESkillType[] SKILL_IDS = {
+		ESkillType.DRAIN_SOUL
+	};
 
 	@Override
-	public void useSkill(Creature activeChar, L2Skill skill, WorldObject[] targets) {
+	public void invoke(Object...args) {
+		final Creature activeChar = (Creature) args[0];
+		final L2Skill skill = (L2Skill) args[1];
+		final WorldObject[] targets = (WorldObject[]) args[2];
 		// Check player.
 		if (activeChar == null || activeChar.isDead() || !(activeChar instanceof Player)) {
 			return;
@@ -59,7 +60,7 @@ public class DrainSoul implements ISkillHandler {
 	}
 
 	@Override
-	public ESkillType[] getSkillIds() {
+	public ESkillType[] commands() {
 		return SKILL_IDS;
 	}
 }
