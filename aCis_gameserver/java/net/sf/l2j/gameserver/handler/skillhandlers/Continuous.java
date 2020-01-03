@@ -1,6 +1,6 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
-import net.sf.finex.model.talents.handlers.SonicAssault;
+import net.sf.finex.handlers.talents.SonicAssault;
 
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.handler.IHandler;

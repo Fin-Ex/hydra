@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package net.sf.finex.model.talents.handlers;
+package net.sf.finex.handlers.talents;
 
+import net.sf.finex.model.talents.TalentHandler;
 import java.util.List;
 import net.sf.l2j.commons.random.Rnd;
 import net.sf.l2j.gameserver.data.SkillTable;

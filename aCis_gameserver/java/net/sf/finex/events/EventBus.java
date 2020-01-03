@@ -1,7 +1,5 @@
 package net.sf.finex.events;
 
-import org.slf4j.LoggerFactory;
-
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 

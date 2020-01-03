@@ -148,4 +148,28 @@ public class ZoneCuboid extends L2ZoneForm {
 			dropDebugItem(id, _x2, y, z);
 		}
 	}
+
+	public int getX1() {
+		return _x1;
+	}
+
+	public int getX2() {
+		return _x2;
+	}
+
+	public int getY1() {
+		return _y1;
+	}
+
+	public int getY2() {
+		return _y2;
+	}
+
+	public int getZ1() {
+		return _z1;
+	}
+
+	public int getZ2() {
+		return _z2;
+	}
 }

@@ -11,6 +11,10 @@ import net.sf.l2j.gameserver.model.actor.Pet;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.template.NpcTemplate;
 import net.sf.l2j.gameserver.model.location.Location;
+import net.sf.l2j.gameserver.network.SystemMessageId;
+import net.sf.l2j.gameserver.network.serverpackets.L2GameServerPacket;
+import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
+import net.sf.l2j.gameserver.scripting.QuestState;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -183,6 +187,23 @@ public final class World {
 			}
 		}
 		_log.info("All visibles NPCs are now deleted.");
+	}
+
+	public void broadcastSystemMessagePacket(SystemMessageId packet) {
+		_players.values().stream().filter(next -> next.isOnline()).forEachOrdered(next -> next.sendPacket(packet));
+	}
+
+	public void broadcastPacket(L2GameServerPacket packet) {
+		_players.values().stream().filter(next -> next.isOnline()).forEachOrdered(next -> next.sendPacket(packet));
+	}
+
+	public void broadcastMessage(String text, boolean withSound) {
+		_players.values().stream().filter(next -> next.isOnline()).forEachOrdered(next -> {
+			next.sendMessage(text);
+			if (withSound) {
+				next.sendPacket(new PlaySound(QuestState.SOUND_MIDDLE));
+			}
+		});
 	}
 
 	public static World getInstance() {

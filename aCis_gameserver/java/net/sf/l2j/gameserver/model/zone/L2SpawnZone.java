@@ -1,12 +1,9 @@
 package net.sf.l2j.gameserver.model.zone;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import net.sf.l2j.commons.random.Rnd;
-
 import net.sf.l2j.gameserver.model.location.Location;
 
 /**

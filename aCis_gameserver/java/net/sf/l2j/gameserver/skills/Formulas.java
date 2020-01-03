@@ -2,7 +2,7 @@ package net.sf.l2j.gameserver.skills;
 
 import net.sf.finex.enums.ESkillAlignmentType;
 import net.sf.finex.model.creature.attack.DamageInfo;
-import net.sf.finex.model.talents.handlers.ProfessionalAnger;
+import net.sf.finex.handlers.talents.ProfessionalAnger;
 import net.sf.l2j.Config;
 import net.sf.l2j.commons.math.MathUtil;
 import net.sf.l2j.commons.random.Rnd;

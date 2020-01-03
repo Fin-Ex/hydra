@@ -1,9 +1,9 @@
 package net.sf.l2j.gameserver.skills.l2skills;
 
 import net.sf.finex.model.creature.attack.DamageInfo;
-import net.sf.finex.model.talents.handlers.Challenger;
-import net.sf.finex.model.talents.handlers.RecoiledBlast;
-import net.sf.finex.model.talents.handlers.TalentHandler;
+import net.sf.finex.handlers.talents.Challenger;
+import net.sf.finex.handlers.talents.RecoiledBlast;
+import net.sf.finex.model.talents.TalentHandler;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;

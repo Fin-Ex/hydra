@@ -3,22 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package net.sf.finex.model.talents.handlers;
+package net.sf.finex.handlers.talents;
 
-import java.lang.reflect.Constructor;
-import lombok.extern.slf4j.Slf4j;
+import net.sf.finex.model.talents.TalentHandler;
 import net.sf.l2j.gameserver.data.SkillTable;
-import net.sf.l2j.gameserver.model.ChanceCondition;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.skills.AbnormalEffect;
-import net.sf.l2j.gameserver.skills.EffectClassHolder;
 import net.sf.l2j.gameserver.skills.EffectTemplate;
 import net.sf.l2j.gameserver.skills.Env;
+import net.sf.l2j.gameserver.skills.L2Effect;
 import net.sf.l2j.gameserver.skills.L2Skill;
-import net.sf.l2j.gameserver.skills.basefuncs.Lambda;
+import net.sf.l2j.gameserver.skills.Stats;
+import net.sf.l2j.gameserver.skills.basefuncs.FuncMul;
+import net.sf.l2j.gameserver.skills.basefuncs.FuncTemplate;
 import net.sf.l2j.gameserver.skills.basefuncs.LambdaConst;
-import net.sf.l2j.gameserver.skills.conditions.Condition;
-import net.sf.l2j.gameserver.skills.effects.EffectParalyze;
 import net.sf.l2j.gameserver.templates.StatsSet;
 import net.sf.l2j.gameserver.templates.skills.EEffectBonusType;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
@@ -27,8 +25,7 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
  *
  * @author finfan
  */
-@Slf4j
-public class Aftershock implements TalentHandler {
+public class Disaster implements TalentHandler {
 
 	@Override
 	public EffectTemplate invoke(Object... args) {
@@ -37,18 +34,20 @@ public class Aftershock implements TalentHandler {
 		set.set("applayCond");
 		set.set("lambda", new LambdaConst(0));
 		set.set("count", 1);
-		set.set("time", 4);
-		set.set("abnormal", AbnormalEffect.HOLD_1);
-		set.set("stackType", "paralyze");
+		set.set("time", 5);
+		set.set("abnormal", AbnormalEffect.STUN);
+		set.set("stackType", "earthquake");
 		set.set("stackOrder", 4f);
 		set.set("showIcon", true);
 		set.set("effectPower", -1);
-		set.set("effectType", ESkillType.PARALYZE);
+		set.set("effectType", ESkillType.DEBUFF);
 		set.set("triggeredId", -1);
 		set.set("triggeredLevel", -1);
 		set.set("chanceType");
 		set.set("bonus", EEffectBonusType.NONE);
-		return new EffectTemplate("Paralyze", set);
+		final EffectTemplate et = new EffectTemplate("Debuff", set);
+		et.attach(new FuncTemplate(null, null, "Mul", Stats.Speed, 0x30, new LambdaConst(0.3)));
+		return et;
 	}
 
 	public static final boolean validate(Creature creature, L2Skill skill) {
@@ -56,6 +55,6 @@ public class Aftershock implements TalentHandler {
 			return false;
 		}
 
-		return skill.getId() == 48 && creature.getPlayer().hasTalent(SkillTable.FrequentTalent.AFTERSHOCK);
+		return skill.getId() == 347 && creature.getPlayer().hasTalent(SkillTable.FrequentTalent.DISASTER);
 	}
 }

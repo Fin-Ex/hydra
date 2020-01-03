@@ -4,8 +4,8 @@ package net.sf.l2j.gameserver.handler.skillhandlers;
 import java.util.List;
 
 import net.sf.finex.model.creature.attack.DamageInfo;
-import net.sf.finex.model.talents.handlers.CumulativeRage;
-import net.sf.finex.model.talents.handlers.TalentHandler;
+import net.sf.finex.handlers.talents.CumulativeRage;
+import net.sf.finex.model.talents.TalentHandler;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.ShotType;

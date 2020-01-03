@@ -19,7 +19,6 @@ public class AdminCommandHandler {
 		try {
 			for (Class<?> clazz : GameServer.getReflections().getSubTypesOf(IAdminCommandHandler.class)) {
 				registerAdminCommandHandler((IAdminCommandHandler) clazz.getConstructor().newInstance());
-				log.info("Handler {} loaded...", clazz.getSimpleName());
 			}
 		} catch (IllegalAccessException | IllegalArgumentException | InstantiationException | NoSuchMethodException | SecurityException | InvocationTargetException e) {
 			log.info("Error in IItemHandler loading.", e);

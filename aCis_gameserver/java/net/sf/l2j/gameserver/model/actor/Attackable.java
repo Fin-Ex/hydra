@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import net.sf.finex.model.creature.player.ComboComponent;
-import net.sf.finex.model.talents.handlers.Challenger;
+import net.sf.finex.handlers.talents.Challenger;
 import net.sf.l2j.Config;
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.math.MathUtil;

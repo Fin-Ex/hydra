@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.model.zone;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.l2j.gameserver.idfactory.IdFactory;
 import net.sf.l2j.gameserver.instancemanager.ZoneManager;
 import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
