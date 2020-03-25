@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.l2j.gameserver.skills.Env;
 
 /**
@@ -11,7 +9,7 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionPlayerInvSize extends Condition {
 
-	private final int _size;
+	private int size;
 
 	/**
 	 * Instantiates a new condition player inv size.
@@ -19,13 +17,13 @@ public class ConditionPlayerInvSize extends Condition {
 	 * @param size the size
 	 */
 	public ConditionPlayerInvSize(int size) {
-		_size = size;
+		this.size = size;
 	}
 
 	@Override
 	public boolean testImpl(Env env) {
 		if (env.getPlayer() != null) {
-			return env.getPlayer().getInventory().getSize() <= (env.getPlayer().getInventoryLimit() - _size);
+			return env.getPlayer().getInventory().getSize() <= (env.getPlayer().getInventoryLimit() - size);
 		}
 
 		return true;

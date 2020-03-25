@@ -200,7 +200,7 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket {
 
 		@Override
 		protected void writeImpl() {
-			if (_owner != null && _owner.getAppearance().getInvisible()) {
+			if (_owner != null && _owner.getAppearance().isInvisible()) {
 				return;
 			}
 

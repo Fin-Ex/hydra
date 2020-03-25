@@ -6,8 +6,8 @@ import net.sf.l2j.commons.random.Rnd;
 
 import net.sf.l2j.gameserver.model.actor.Pet;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
 import net.sf.l2j.gameserver.model.item.type.EtcItemType;
 
 public class PetInventory extends Inventory {
@@ -67,13 +67,13 @@ public class PetInventory extends Inventory {
 	}
 
 	@Override
-	protected ItemLocation getBaseLocation() {
-		return ItemLocation.PET;
+	protected EItemLocation getBaseLocation() {
+		return EItemLocation.PET;
 	}
 
 	@Override
-	protected ItemLocation getEquipLocation() {
-		return ItemLocation.PET_EQUIP;
+	protected EItemLocation getEquipLocation() {
+		return EItemLocation.PET_EQUIP;
 	}
 
 	@Override

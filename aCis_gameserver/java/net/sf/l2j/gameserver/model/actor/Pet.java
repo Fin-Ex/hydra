@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
+import net.sf.finex.dao.ItemDao;
 import net.sf.finex.data.TimeStamp;
 import net.sf.finex.enums.EPartyLoot;
 import net.sf.finex.model.regeneration.ERegenType;
@@ -31,7 +32,7 @@ import net.sf.l2j.gameserver.model.actor.stat.PetStat;
 import net.sf.l2j.gameserver.model.actor.template.NpcTemplate;
 import net.sf.l2j.gameserver.model.actor.template.PetTemplate;
 import net.sf.l2j.gameserver.model.group.Party;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
 import net.sf.l2j.gameserver.model.item.type.ArmorType;
@@ -694,7 +695,7 @@ public class Pet extends Summon {
 		ItemInstance itemInst = getControlItem();
 		if (itemInst != null && itemInst.getEnchantLevel() != getStat().getLevel()) {
 			itemInst.setEnchantLevel(getStat().getLevel());
-			itemInst.updateDatabase();
+			ItemDao.updateDatabase(itemInst);
 		}
 	}
 
@@ -933,7 +934,7 @@ public class Pet extends Summon {
 		if (controlItem.getCustomType2() == (name == null ? 1 : 0)) {
 			// Name isn't setted yet.
 			controlItem.setCustomType2(name != null ? 1 : 0);
-			controlItem.updateDatabase();
+			ItemDao.updateDatabase(controlItem);
 
 			InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(controlItem);

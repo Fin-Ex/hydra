@@ -291,6 +291,6 @@ public class PlayerStatus extends PlayableStatus {
 
 	@Override
 	public Player getActiveChar() {
-		return (Player) super.getActiveChar();
+		return super.getActiveChar().getPlayer();
 	}
 }

@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
@@ -22,12 +21,12 @@ public class ConditionPlayerState extends Condition {
 		OLYMPIAD
 	}
 
-	private final PlayerState _check;
-	private final boolean _required;
+	private PlayerState check;
+	private boolean required;
 
 	public ConditionPlayerState(PlayerState check, boolean required) {
-		_check = check;
-		_required = required;
+		this.check = check;
+		this.required = required;
 	}
 
 	@Override
@@ -35,31 +34,31 @@ public class ConditionPlayerState extends Condition {
 		final Creature character = env.getCharacter();
 		final Player player = env.getPlayer();
 
-		switch (_check) {
+		switch (check) {
 			case RESTING:
-				return (player == null) ? !_required : player.isSitting() == _required;
+				return (player == null) ? !required : player.isSitting() == required;
 
 			case MOVING:
-				return character.isMoving() == _required;
+				return character.isMoving() == required;
 
 			case RUNNING:
-				return character.isMoving() == _required && character.isRunning() == _required;
+				return character.isMoving() == required && character.isRunning() == required;
 
 			case RIDING:
-				return character.isRiding() == _required;
+				return character.isRiding() == required;
 
 			case FLYING:
-				return character.isFlying() == _required;
+				return character.isFlying() == required;
 
 			case BEHIND:
-				return character.isBehindTarget() == _required;
+				return character.isBehindTarget() == required;
 
 			case FRONT:
-				return character.isInFrontOfTarget() == _required;
+				return character.isInFrontOfTarget() == required;
 
 			case OLYMPIAD:
-				return (player == null) ? !_required : player.isInOlympiadMode() == _required;
+				return (player == null) ? !required : player.isInOlympiadMode() == required;
 		}
-		return !_required;
+		return !required;
 	}
 }

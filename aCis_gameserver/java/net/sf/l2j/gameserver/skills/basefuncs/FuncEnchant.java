@@ -2,7 +2,7 @@ package net.sf.l2j.gameserver.skills.basefuncs;
 
 import org.slf4j.LoggerFactory;
 
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.type.WeaponType;
 import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.Stats;

@@ -2,10 +2,10 @@ package net.sf.l2j.gameserver.templates.skills;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.skills.l2skills.L2SkillAbsorb;
 import net.sf.l2j.gameserver.skills.l2skills.L2SkillAppearance;
+import net.sf.l2j.gameserver.skills.l2skills.L2SkillBlow;
 import net.sf.l2j.gameserver.skills.l2skills.L2SkillChargeDmg;
 import net.sf.l2j.gameserver.skills.l2skills.L2SkillCreateItem;
 import net.sf.l2j.gameserver.skills.l2skills.L2SkillDefault;
@@ -34,7 +34,7 @@ public enum ESkillType {
 	DRAIN_SOUL,
 	DRAIN(L2SkillDrain.class),
 	DEATHLINK,
-	BLOW,
+	BLOW(L2SkillBlow.class),
 	SIGNET(L2SkillSignet.class),
 	SIGNET_CASTTIME(L2SkillSignetCasttime.class),
 	SEED(L2SkillSeed.class),
@@ -137,7 +137,8 @@ public enum ESkillType {
 	// unimplemented
 	NOTDONE,
 	// finex type
-	DISARM,;
+	DISARM,
+	INVISIBLE;
 
 	private final Class<? extends L2Skill> _class;
 

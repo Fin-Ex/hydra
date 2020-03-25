@@ -3,7 +3,7 @@ package net.sf.l2j.gameserver.model.itemcontainer;
 import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
 
 public class PcWarehouse extends ItemContainer {
 
@@ -24,8 +24,8 @@ public class PcWarehouse extends ItemContainer {
 	}
 
 	@Override
-	public ItemLocation getBaseLocation() {
-		return ItemLocation.WAREHOUSE;
+	public EItemLocation getBaseLocation() {
+		return EItemLocation.WAREHOUSE;
 	}
 
 	@Override

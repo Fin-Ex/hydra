@@ -7,7 +7,7 @@ package net.sf.l2j.gameserver.handler.itemhandlers;
 
 import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.actor.Playable;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 
 /**
  *

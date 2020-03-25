@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.l2j.gameserver.model.base.ClassRace;
 import net.sf.l2j.gameserver.skills.Env;
 
@@ -10,10 +8,10 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionPlayerRace extends Condition {
 
-	private final ClassRace _race;
+	private ClassRace race;
 
 	public ConditionPlayerRace(ClassRace race) {
-		_race = race;
+		this.race = race;
 	}
 
 	@Override
@@ -22,6 +20,6 @@ public class ConditionPlayerRace extends Condition {
 			return false;
 		}
 
-		return env.getPlayer().getRace() == _race;
+		return env.getPlayer().getRace() == race;
 	}
 }

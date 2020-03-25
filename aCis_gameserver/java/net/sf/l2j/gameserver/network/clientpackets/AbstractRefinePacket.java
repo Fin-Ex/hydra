@@ -6,9 +6,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
 import net.sf.finex.enums.EGradeType;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 
 public abstract class AbstractRefinePacket extends L2GameClientPacket {
@@ -125,7 +126,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket {
 			return false;
 		}
 		// .. and located in inventory
-		if (gemStones.getLocation() != ItemInstance.ItemLocation.INVENTORY) {
+		if (gemStones.getLocation() != EItemLocation.INVENTORY) {
 			return false;
 		}
 
@@ -162,7 +163,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket {
 		}
 
 		// Lifestone must be located in inventory
-		if (refinerItem.getLocation() != ItemInstance.ItemLocation.INVENTORY) {
+		if (refinerItem.getLocation() != EItemLocation.INVENTORY) {
 			return false;
 		}
 

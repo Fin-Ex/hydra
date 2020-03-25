@@ -44,13 +44,14 @@ import net.sf.l2j.gameserver.model.actor.ai.NotifyAITask;
 import net.sf.l2j.gameserver.model.actor.ai.type.AttackableAI;
 import net.sf.l2j.gameserver.model.actor.ai.type.CreatureAI;
 import net.sf.l2j.gameserver.model.actor.events.OnKill;
+import net.sf.l2j.gameserver.model.actor.events.OnReduceHp;
 import net.sf.l2j.gameserver.model.actor.instance.RiftInvader;
 import net.sf.l2j.gameserver.model.actor.instance.Walker;
 import net.sf.l2j.gameserver.model.actor.stat.CreatureStat;
 import net.sf.l2j.gameserver.model.actor.status.CreatureStatus;
 import net.sf.l2j.gameserver.model.actor.template.CreatureTemplate;
 import net.sf.l2j.gameserver.model.group.Party;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
 import net.sf.l2j.gameserver.model.item.type.WeaponType;
@@ -163,7 +164,8 @@ public abstract class Creature extends WorldObject {
 
 	@Getter private final EventBus eventBus = new EventBus();
 	@Getter private final StatsSet params = new StatsSet();
-
+	@Getter @Setter private boolean isOnMovie = false;
+	
 	/**
 	 * Constructor of Creature.<BR>
 	 * <BR>
@@ -434,8 +436,9 @@ public abstract class Creature extends WorldObject {
 	 * @param y
 	 * @param z
 	 * @param randomOffset
+	 * @return new location where teleport
 	 */
-	public void teleToLocation(int x, int y, int z, int randomOffset) {
+	public Location teleToLocation(int x, int y, int z, int randomOffset) {
 		// Stop movement
 		stopMove(null);
 		abortAttack();
@@ -467,9 +470,10 @@ public abstract class Creature extends WorldObject {
 		}
 
 		revalidateZone(true);
+		return new Location(x,y,z);
 	}
 
-	public void teleToLocation(Location loc, int randomOffset) {
+	public Location teleToLocation(Location loc, int randomOffset) {
 		int x = loc.getX();
 		int y = loc.getY();
 		int z = loc.getZ();
@@ -486,11 +490,11 @@ public abstract class Creature extends WorldObject {
 			y = newCoords[1];
 			z = newCoords[2];
 		}
-		teleToLocation(x, y, z, randomOffset);
+		return teleToLocation(x, y, z, randomOffset);
 	}
 
-	public void teleToLocation(TeleportType teleportWhere) {
-		teleToLocation(MapRegionTable.getInstance().getLocationToTeleport(this, teleportWhere), 20);
+	public Location teleToLocation(TeleportType teleportWhere) {
+		return teleToLocation(MapRegionTable.getInstance().getLocationToTeleport(this, teleportWhere), 20);
 	}
 
 	// =========================================================
@@ -545,6 +549,10 @@ public abstract class Creature extends WorldObject {
 		final Player player = getPlayer();
 
 		if (player != null && player.isInObserverMode()) {
+			if(target.getPlayer().getAppearance().isInvisible()) {
+				removeTarget();
+				getAI().setIntention(CtrlIntention.IDLE);
+			}
 			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE));
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -882,6 +890,7 @@ public abstract class Creature extends WorldObject {
 		}
 
 		eventBus.notify(new OnKill(killer, this));
+		
 		if (killer.isPlayer()) {
 			final RandomQuestComponent component = killer.getComponent(RandomQuestComponent.class);
 			if (component.hasQuest()) {
@@ -1116,7 +1125,7 @@ public abstract class Creature extends WorldObject {
 	 * @return True if the Creature is in a state where he can't be controlled.
 	 */
 	public boolean isOutOfControl() {
-		return isOutOfControl || isConfused() || isAfraid() || isParalyzed() || isStunned() || isSleeping();
+		return isOutOfControl || isConfused() || isAfraid() || isParalyzed() || isStunned() || isSleeping() || isOnMovie;
 	}
 
 	public final boolean isOverloaded() {
@@ -1195,7 +1204,7 @@ public abstract class Creature extends WorldObject {
 	}
 
 	public boolean isInvul() {
-		return _isInvul || _isTeleporting;
+		return _isInvul || _isTeleporting || isOnMovie;
 	}
 
 	public void setIsMortal(boolean b) {
@@ -2773,7 +2782,6 @@ public abstract class Creature extends WorldObject {
 
 		// send MoveToLocation packet to known objects
 		broadcastPacket(new MoveToLocation(this));
-
 		return true;
 	}
 
@@ -3970,12 +3978,13 @@ public abstract class Creature extends WorldObject {
 		reduceCurrentHp(i, attacker, !skill.isToggle(), true, skill);
 	}
 
-	public void reduceCurrentHp(double i, Creature attacker, boolean awake, boolean isDOT, L2Skill skill) {
+	public void reduceCurrentHp(double damage, Creature attacker, boolean awake, boolean isDOT, L2Skill skill) {
 		if (isChampion() && Config.CHAMPION_HP != 0) {
-			getStatus().reduceHp(i / Config.CHAMPION_HP, attacker, awake, isDOT, false);
+			getStatus().reduceHp(damage / Config.CHAMPION_HP, attacker, awake, isDOT, false);
 		} else {
-			getStatus().reduceHp(i, attacker, awake, isDOT, false);
+			getStatus().reduceHp(damage, attacker, awake, isDOT, false);
 		}
+		eventBus.notify(new OnReduceHp(this, attacker, skill, damage, getCurrentHp()));
 	}
 
 	public void reduceCurrentMp(double i) {
@@ -4168,8 +4177,9 @@ public abstract class Creature extends WorldObject {
 	}
 
 	public void removeTarget() {
-		setTarget(null);
 		abortAttack();
 		abortCast();
+		setTarget(null);
+		getAI().setIntention(CtrlIntention.IDLE);
 	}
 }

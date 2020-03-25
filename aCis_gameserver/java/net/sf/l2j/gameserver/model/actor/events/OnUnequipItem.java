@@ -7,7 +7,7 @@ package net.sf.l2j.gameserver.model.actor.events;
 
 import lombok.Data;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 
 /**
  *

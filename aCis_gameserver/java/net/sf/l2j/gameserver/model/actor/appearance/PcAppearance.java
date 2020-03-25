@@ -53,7 +53,7 @@ public final class PcAppearance {
 		_sex = sex;
 	}
 
-	public boolean getInvisible() {
+	public boolean isInvisible() {
 		return _invisible;
 	}
 

@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.network.serverpackets;
 
-import org.slf4j.LoggerFactory;
-
 public class Ride extends L2GameServerPacket {
 
 	public static final int ACTION_MOUNT = 1;

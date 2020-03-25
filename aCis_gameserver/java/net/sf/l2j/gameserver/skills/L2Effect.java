@@ -34,8 +34,8 @@ public abstract class L2Effect {
 		FINISHING
 	}
 
-	private final Creature _effector;
-	private final Creature _effected;
+	protected final Creature _effector;
+	protected final Creature _effected;
 
 	private final L2Skill _skill; // the skill that was used.
 

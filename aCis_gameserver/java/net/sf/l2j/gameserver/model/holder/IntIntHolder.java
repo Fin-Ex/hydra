@@ -1,13 +1,13 @@
 package net.sf.l2j.gameserver.model.holder;
 
-import org.slf4j.LoggerFactory;
-
+import lombok.Data;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
 /**
  * A generic int/int container.
  */
+@Data
 public class IntIntHolder {
 
 	private int id;
@@ -18,25 +18,6 @@ public class IntIntHolder {
 		this.value = value;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public int getValue() {
-		return value;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public void setValue(int value) {
-		this.value = value;
-	}
-
-	/**
-	 * @return the L2Skill associated to the id/value.
-	 */
 	public final L2Skill getSkill() {
 		return SkillTable.getInstance().getInfo(id, value);
 	}

@@ -3,7 +3,6 @@ package net.sf.l2j.gameserver.skills.l2skills;
 import net.sf.finex.model.creature.attack.DamageInfo;
 import net.sf.finex.handlers.talents.Challenger;
 import net.sf.finex.handlers.talents.RecoiledBlast;
-import net.sf.finex.model.talents.TalentHandler;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
@@ -16,6 +15,7 @@ import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.skills.L2Effect;
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.StatsSet;
+import net.sf.finex.model.talents.ITalentHandler;
 
 public class L2SkillChargeDmg extends L2Skill {
 

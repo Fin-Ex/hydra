@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.l2j.gameserver.skills.Env;
 
 /**
@@ -9,14 +7,14 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionPlayerLevel extends Condition {
 
-	private final int _level;
+	private int level;
 
 	public ConditionPlayerLevel(int level) {
-		_level = level;
+		this.level = level;
 	}
 
 	@Override
 	public boolean testImpl(Env env) {
-		return env.getCharacter().getLevel() >= _level;
+		return env.getCharacter().getLevel() >= level;
 	}
 }

@@ -2,10 +2,10 @@ package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
 
 import java.util.StringTokenizer;
-
-import net.sf.l2j.commons.lang.StringUtil;
-
+import lombok.extern.slf4j.Slf4j;
 import net.sf.l2j.Config;
+import net.sf.l2j.commons.lang.StringUtil;
+import net.sf.l2j.commons.math.MathUtil;
 import net.sf.l2j.gameserver.cache.CrestCache;
 import net.sf.l2j.gameserver.cache.HtmCache;
 import net.sf.l2j.gameserver.data.DoorTable;
@@ -25,6 +25,9 @@ import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
+import net.sf.l2j.gameserver.network.serverpackets.SocialAction;
+import net.sf.l2j.gameserver.network.serverpackets.StartRotation;
+import net.sf.l2j.gameserver.network.serverpackets.StopRotation;
 
 /**
  * This class handles following admin commands:
@@ -39,6 +42,7 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  * quest !</li>
  * </ul>
  */
+@Slf4j
 public class AdminAdmin implements IAdminCommandHandler {
 
 	private static final String[] ADMIN_COMMANDS = {
@@ -51,7 +55,8 @@ public class AdminAdmin implements IAdminCommandHandler {
 		"admin_kill",
 		"admin_silence",
 		"admin_tradeoff",
-		"admin_reload"
+		"admin_reload",
+		"admin_headto"
 	};
 
 	@Override
@@ -190,6 +195,37 @@ public class AdminAdmin implements IAdminCommandHandler {
 				activeChar.sendMessage("Usage : //reload <acar|announcement|config|crest|door>");
 				activeChar.sendMessage("Usage : //reload <htm|item|multisell|npc|npcwalker>");
 				activeChar.sendMessage("Usage : //reload <skill|teleport|zone>");
+			}
+		} else if (command.equalsIgnoreCase("admin_headto")) {
+			final WorldObject target = activeChar.getTarget();
+			if(target == null) {
+				activeChar.broadcastPacket(new StartRotation(activeChar.getObjectId(), Short.MAX_VALUE));
+				activeChar.broadcastPacket(new StopRotation(activeChar.getObjectId(), 0));
+				activeChar.setHeading(0);
+				activeChar.sendMessage("Can't use this command cause need real target (not self).");
+				return false;
+			}
+			final int newHead = MathUtil.calculateHeadingFrom(activeChar, target);
+			activeChar.broadcastPacket(new StartRotation(activeChar.getObjectId(), target.getCreature().getHeading()));
+			activeChar.broadcastPacket(new StopRotation(activeChar.getObjectId(), newHead));
+			activeChar.setHeading(newHead);
+		} else if (command.startsWith("admin_social")) {
+			final WorldObject target = activeChar.getTarget();
+			if(target == null) {
+				activeChar.sendMessage("Can't use this command cause need real target.");
+				return false;
+			}
+			
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			try {
+				st.nextToken();
+				if (target.isPlayer()) {
+					target.getPlayer().broadcastPacket(new SocialAction(target.getPlayer(), Integer.valueOf(st.nextToken())));
+				} else {
+					target.getNpc().broadcastPacket(new SocialAction(target.getCreature(), Integer.valueOf(st.nextToken())));
+				}
+			} catch (NumberFormatException e) {
+				log.error("Wrong command use. Use the command [social_id from 1 to 15]");
 			}
 		}
 		return true;

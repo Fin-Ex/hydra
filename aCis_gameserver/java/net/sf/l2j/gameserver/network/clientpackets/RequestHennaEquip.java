@@ -6,7 +6,7 @@ import net.sf.finex.model.dye.DyeComponent;
 import net.sf.finex.data.DyeData;
 import net.sf.finex.data.tables.DyeTable;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 
 public final class RequestHennaEquip extends L2GameClientPacket {

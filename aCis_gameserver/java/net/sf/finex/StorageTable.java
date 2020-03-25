@@ -5,8 +5,6 @@
  */
 package net.sf.finex;
 
-import org.slf4j.LoggerFactory;
-
 import org.w3c.dom.Node;
 
 /**

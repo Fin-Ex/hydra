@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.model.actor;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,7 @@ import net.sf.l2j.gameserver.model.actor.ai.type.CreatureAI;
 import net.sf.l2j.gameserver.model.actor.ai.type.VehicleAI;
 import net.sf.l2j.gameserver.model.actor.stat.VehicleStat;
 import net.sf.l2j.gameserver.model.actor.template.CreatureTemplate;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
 import net.sf.l2j.gameserver.model.location.Location;
 import net.sf.l2j.gameserver.model.location.SpawnLocation;
@@ -261,7 +260,7 @@ public class Vehicle extends Creature {
 	}
 
 	@Override
-	public void teleToLocation(int x, int y, int z, int randomOffset) {
+	public Location teleToLocation(int x, int y, int z, int randomOffset) {
 		if (isMoving()) {
 			stopMove(null);
 		}
@@ -281,6 +280,7 @@ public class Vehicle extends Creature {
 
 		onTeleported();
 		revalidateZone(true);
+		return new Location(x, y, z);
 	}
 
 	@Override

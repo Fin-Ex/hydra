@@ -1,13 +1,11 @@
 package net.sf.l2j.gameserver.network.serverpackets;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
-import java.util.logging.Level;
 
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.model.location.Location;
 import net.sf.l2j.gameserver.network.SystemMessageId;

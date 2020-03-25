@@ -27,7 +27,7 @@ public final class LambdaStats extends Lambda {
 		SA_RSK_EVASION,
 		TLNT_5_ATK,
 		TLNT_5_ASPD,
-		TLNT_5_ACC,;
+		TLNT_5_ACC;
 
 		@Override
 		public String toString() {

@@ -1,34 +1,32 @@
 package net.sf.l2j.gameserver.model.zone;
 
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import org.slf4j.Logger;
-
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.serverpackets.L2GameServerPacket;
 import net.sf.l2j.gameserver.scripting.EventType;
 import net.sf.l2j.gameserver.scripting.Quest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Abstract base class for any zone type.
  */
 public abstract class L2ZoneType {
 
-	protected static final Logger _log = LoggerFactory.getLogger(L2ZoneType.class.getName());
-
+	protected static final Logger log = LoggerFactory.getLogger(L2ZoneType.class);
+	
 	private final int _id;
 	protected final Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
 
 	private Map<EventType, List<Quest>> _questEvents;
-	private L2ZoneForm _zone;
+	private L2ZoneForm form;
 
 	protected L2ZoneType(int id) {
 		_id = id;
@@ -41,6 +39,10 @@ public abstract class L2ZoneType {
 	public abstract void onDieInside(Creature character);
 
 	public abstract void onReviveInside(Creature character);
+	
+	public void onDestroy() {
+		log.info("Destroying: {}", this);
+	}
 
 	@Override
 	public String toString() {
@@ -57,21 +59,21 @@ public abstract class L2ZoneType {
 	/**
 	 * @return this zone form.
 	 */
-	public L2ZoneForm getZone() {
-		return _zone;
+	public L2ZoneForm getForm() {
+		return form;
 	}
 
 	/**
 	 * Set the zone for this L2ZoneType Instance
 	 *
-	 * @param zone
+	 * @param form
 	 */
-	public void setZone(L2ZoneForm zone) {
-		if (_zone != null) {
+	public void setForm(L2ZoneForm form) {
+		if (this.form != null) {
 			throw new IllegalStateException("Zone already set");
 		}
 
-		_zone = zone;
+		this.form = form;
 	}
 
 	/**
@@ -80,7 +82,7 @@ public abstract class L2ZoneType {
 	 * @return true if the given coordinates are within zone's plane
 	 */
 	public boolean isInsideZone(int x, int y) {
-		return _zone.isInsideZone(x, y, _zone.getHighZ());
+		return form.isInsideZone(x, y, form.getHighZ());
 	}
 
 	/**
@@ -90,7 +92,7 @@ public abstract class L2ZoneType {
 	 * @return true if the given coordinates are within the zone
 	 */
 	public boolean isInsideZone(int x, int y, int z) {
-		return _zone.isInsideZone(x, y, z);
+		return form.isInsideZone(x, y, z);
 	}
 
 	/**
@@ -102,11 +104,11 @@ public abstract class L2ZoneType {
 	}
 
 	public double getDistanceToZone(int x, int y) {
-		return getZone().getDistanceToZone(x, y);
+		return form.getDistanceToZone(x, y);
 	}
 
 	public double getDistanceToZone(WorldObject object) {
-		return getZone().getDistanceToZone(object.getX(), object.getY());
+		return form.getDistanceToZone(object.getX(), object.getY());
 	}
 
 	public void revalidateInZone(Creature character) {
@@ -232,7 +234,7 @@ public abstract class L2ZoneType {
 	 * @param value new parameter value.
 	 */
 	public void setParameter(String name, String value) {
-		_log.info(getClass().getSimpleName() + ": Unknown parameter - " + name + " in zone: " + getId());
+		log.info("Unknown parameter - {} in zone: {}", name, getId());
 	}
 
 	/**
@@ -245,6 +247,6 @@ public abstract class L2ZoneType {
 	}
 
 	public void visualizeZone(int z) {
-		getZone().visualizeZone(_id, z);
+		getForm().visualizeZone(_id, z);
 	}
 }

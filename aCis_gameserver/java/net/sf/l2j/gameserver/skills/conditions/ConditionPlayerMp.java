@@ -1,19 +1,17 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.l2j.gameserver.skills.Env;
 
 public class ConditionPlayerMp extends Condition {
 
-	private final int _mp;
+	private int mp;
 
 	public ConditionPlayerMp(int mp) {
-		_mp = mp;
+		this.mp = mp;
 	}
 
 	@Override
 	public boolean testImpl(Env env) {
-		return env.getCharacter().getCurrentMp() * 100 / env.getCharacter().getMaxMp() <= _mp;
+		return env.getCharacter().getCurrentMp() * 100 / env.getCharacter().getMaxMp() <= mp;
 	}
 }

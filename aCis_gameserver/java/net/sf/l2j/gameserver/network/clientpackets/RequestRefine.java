@@ -1,11 +1,12 @@
 package net.sf.l2j.gameserver.network.clientpackets;
 
+import net.sf.finex.dao.ItemDao;
 import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.data.xml.AugmentationData;
 import net.sf.l2j.gameserver.model.L2Augmentation;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ExVariationResult;
 import net.sf.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -109,6 +110,7 @@ public final class RequestRefine extends AbstractRefinePacket {
 
 		final L2Augmentation aug = AugmentationData.getInstance().generateRandomAugmentation(lifeStoneLevel, lifeStoneGrade);
 		targetItem.setAugmentation(aug);
+		ItemDao.updateItemAttributes(targetItem, null);
 
 		final int stat12 = 0x0000FFFF & aug.getAugmentationId();
 		final int stat34 = aug.getAugmentationId() >> 16;

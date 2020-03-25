@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
 
 public class PcFreight extends ItemContainer {
 
@@ -33,8 +33,8 @@ public class PcFreight extends ItemContainer {
 	}
 
 	@Override
-	public ItemLocation getBaseLocation() {
-		return ItemLocation.FREIGHT;
+	public EItemLocation getBaseLocation() {
+		return EItemLocation.FREIGHT;
 	}
 
 	public void setActiveLocation(int locationId) {

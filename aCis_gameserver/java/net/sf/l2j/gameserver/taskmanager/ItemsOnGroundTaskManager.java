@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.taskmanager;
 
-import org.slf4j.LoggerFactory;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,19 +7,18 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import org.slf4j.Logger;
-
-import net.sf.l2j.commons.concurrent.ThreadPool;
-
 import net.sf.l2j.Config;
 import net.sf.l2j.L2DatabaseFactory;
+import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.gameserver.instancemanager.CastleManager;
 import net.sf.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Playable;
 import net.sf.l2j.gameserver.model.entity.Castle;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Destroys item on ground after specified time. When server is about to
@@ -163,9 +160,9 @@ public final class ItemsOnGroundTaskManager implements Runnable {
 				continue;
 			}
 
-			// Destroy item and remove from task.
 			final ItemInstance item = entry.getKey();
 			item.decayMe();
+			remove(item);
 		}
 	}
 
@@ -184,7 +181,7 @@ public final class ItemsOnGroundTaskManager implements Runnable {
 			for (Entry<ItemInstance, Long> entry : _items.entrySet()) {
 				// Get item and destroy time interval.
 				final ItemInstance item = entry.getKey();
-
+				
 				// Cursed Items not saved to ground, prevent double save.
 				if (CursedWeaponsManager.getInstance().isCursed(item.getItemId())) {
 					continue;

@@ -111,7 +111,7 @@ public final class DocumentItem extends DocumentBase {
 					Node addName = n.getAttributes().getNamedItem("addName");
 
 					if (addName != null && Integer.decode(getValue(msgId.getNodeValue(), null)) > 0) {
-						condition.addName();
+						condition.setAddName(true);
 					}
 				}
 				_currentItem.item.attach(condition);
@@ -128,7 +128,7 @@ public final class DocumentItem extends DocumentBase {
 		try {
 			Constructor<?> c = Class.forName("net.sf.l2j.gameserver.model.item.kind." + _currentItem.type).getConstructor(StatsSet.class);
 			_currentItem.item = (Item) c.newInstance(_currentItem.set);
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | IllegalAccessException | IllegalArgumentException | InstantiationException | NoSuchMethodException | SecurityException | InvocationTargetException e) {
 			throw new InvocationTargetException(e);
 		}
 	}

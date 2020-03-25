@@ -45,8 +45,7 @@ public final class World {
 	private final Map<Integer, WorldObject> _objects = new ConcurrentHashMap<>();
 	private final Map<Integer, Pet> _pets = new ConcurrentHashMap<>();
 	private final Map<Integer, Player> _players = new ConcurrentHashMap<>();
-	@Getter
-	private final Map<NpcTemplate, Npc> npcTemplates = new ConcurrentHashMap<>();
+	@Getter private final Map<NpcTemplate, Npc> npcTemplates = new ConcurrentHashMap<>();
 
 	private final WorldRegion[][] _worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 
@@ -82,8 +81,8 @@ public final class World {
 
 	public void removeObject(WorldObject object) {
 		_objects.remove(object.getObjectId());
-		if (object instanceof Npc) {
-			final Npc npc = (Npc) object;
+		if (object.isNpc()) {
+			final Npc npc = object.getNpc();
 			npcTemplates.remove(npc.getTemplate(), npc);
 		}
 	}

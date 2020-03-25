@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.model.item.type;
 
-import org.slf4j.LoggerFactory;
-
 public enum ArmorType implements ItemType {
 	NONE,
 	LIGHT,

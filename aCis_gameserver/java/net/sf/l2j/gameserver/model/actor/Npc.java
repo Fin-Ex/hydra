@@ -39,7 +39,7 @@ import net.sf.l2j.gameserver.model.actor.template.NpcTemplate.AIType;
 import net.sf.l2j.gameserver.model.actor.template.NpcTemplate.SkillType;
 import net.sf.l2j.gameserver.model.actor.template.Race;
 import net.sf.l2j.gameserver.model.entity.Castle;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
 import net.sf.l2j.gameserver.model.pledge.Clan;
@@ -96,6 +96,7 @@ public class Npc extends Creature {
 	private int _scriptValue = 0;
 
 	private Castle _castle;
+	private NpcTemplate fakeTemplate;
 
 	/**
 	 * Broadcast a SocialAction packet.
@@ -194,10 +195,15 @@ public class Npc extends Creature {
 
 	/**
 	 * Return the L2NpcTemplate of the L2Npc.
+	 * @return Npc template fake or true
 	 */
 	@Override
 	public final NpcTemplate getTemplate() {
-		return (NpcTemplate) super.getTemplate();
+		return fakeTemplate != null ? fakeTemplate : (NpcTemplate) super.getTemplate();
+	}
+
+	public void setFakeTemplate(NpcTemplate fakeTemplate) {
+		this.fakeTemplate = fakeTemplate;
 	}
 
 	/**

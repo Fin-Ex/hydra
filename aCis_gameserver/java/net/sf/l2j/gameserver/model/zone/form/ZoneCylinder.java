@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.model.zone.form;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.zone.L2ZoneForm;
 
@@ -22,12 +21,21 @@ public class ZoneCylinder extends L2ZoneForm {
 		_radS = rad * rad;
 	}
 
+	public int getRadius() {
+		return _rad;
+	}
+
+	public int getX() {
+		return _x;
+	}
+
+	public int getY() {
+		return _y;
+	}
+	
 	@Override
 	public boolean isInsideZone(int x, int y, int z) {
-		if ((Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) > _radS || z < _z1 || z > _z2) {
-			return false;
-		}
-		return true;
+		return !((Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) > _radS || z < _z1 || z > _z2);
 	}
 
 	@Override

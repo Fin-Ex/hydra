@@ -1,9 +1,8 @@
 package net.sf.l2j.gameserver.network.clientpackets;
 
-import org.slf4j.LoggerFactory;
-
+import net.sf.finex.dao.ItemDao;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ExVariationCancelResult;
 import net.sf.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -95,7 +94,7 @@ public final class RequestRefineCancel extends L2GameClientPacket {
 		}
 
 		// remove the augmentation
-		targetItem.removeAugmentation();
+		ItemDao.removeAugmentation(targetItem);
 
 		// send ExVariationCancelResult
 		activeChar.sendPacket(new ExVariationCancelResult(1));

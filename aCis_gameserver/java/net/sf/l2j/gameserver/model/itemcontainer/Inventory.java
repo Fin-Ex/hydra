@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
+import net.sf.finex.dao.ItemDao;
 import net.sf.l2j.Config;
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.gameserver.data.ItemTable;
@@ -16,9 +17,9 @@ import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.events.OnUnequipItem;
 import net.sf.l2j.gameserver.model.item.instance.FlagPolicy;
 import net.sf.l2j.gameserver.model.item.instance.InventoryFlags;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemState;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.EItemState;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.model.item.type.ArmorType;
 import net.sf.l2j.gameserver.model.item.type.EtcItemType;
@@ -122,7 +123,7 @@ public abstract class Inventory extends ItemContainer {
 		addPaperdollListener(StatsListener.getInstance());
 	}
 
-	protected abstract ItemLocation getEquipLocation();
+	protected abstract EItemLocation getEquipLocation();
 
 	/**
 	 * Returns the instance of new ChangeRecorder
@@ -156,10 +157,10 @@ public abstract class Inventory extends ItemContainer {
 
 			removeItem(item);
 			item.setOwnerId(process, 0, actor, reference);
-			item.setLocation(ItemLocation.VOID);
-			item.setLastChange(ItemState.REMOVED);
+			item.setLocation(EItemLocation.VOID);
+			item.setLastChange(EItemState.REMOVED);
 
-			item.updateDatabase();
+			ItemDao.updateDatabase(item);
 			refreshWeight();
 		}
 		return item;
@@ -193,11 +194,11 @@ public abstract class Inventory extends ItemContainer {
 			// Directly drop entire item
 			if (item.getCount() > count) {
 				item.changeCount(process, -count, actor, reference);
-				item.setLastChange(ItemState.MODIFIED);
-				item.updateDatabase();
+				item.setLastChange(EItemState.MODIFIED);
+				ItemDao.updateDatabase(item);
 
 				item = ItemTable.getInstance().createItem(process, item.getItemId(), count, actor, reference);
-				item.updateDatabase();
+				ItemDao.updateDatabase(item);
 				refreshWeight();
 				return item;
 			}
@@ -388,7 +389,7 @@ public abstract class Inventory extends ItemContainer {
 				_paperdoll[slot] = null;
 				// Put old item from paperdoll slot to base location
 				old.setLocation(getBaseLocation());
-				old.setLastChange(ItemState.MODIFIED);
+				old.setLastChange(EItemState.MODIFIED);
 
 				// delete armor mask flag (in case of two-piece armor it does not matter, we need to deactivate mask too)
 				_wornMask &= ~old.getItem().getItemMask();
@@ -405,13 +406,13 @@ public abstract class Inventory extends ItemContainer {
 				if (getOwner().isPlayer()) {
 					getOwner().getEventBus().notify(new OnUnequipItem(getOwner().getPlayer(), old));
 				}
-				old.updateDatabase();
+				ItemDao.updateDatabase(old);
 			}
 			// Add new item in slot of paperdoll
 			if (item != null) {
 				_paperdoll[slot] = item;
 				item.setLocation(getEquipLocation(), slot);
-				item.setLastChange(ItemState.MODIFIED);
+				item.setLastChange(EItemState.MODIFIED);
 
 				// activate mask (check 2nd armor part for two-piece armors)
 				Item armor = item.getItem();
@@ -445,7 +446,7 @@ public abstract class Inventory extends ItemContainer {
 				if (getOwner().isPlayer()) {
 					getOwner().getEventBus().notify(new OnUnequipItem(getOwner().getPlayer(), old));
 				}
-				item.updateDatabase();
+				ItemDao.updateDatabase(item);
 			}
 		}
 		return old;
@@ -959,40 +960,37 @@ public abstract class Inventory extends ItemContainer {
 	 */
 	@Override
 	public void restore() {
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
-			PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data");
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection(); PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data")) {
 			statement.setInt(1, getOwnerId());
 			statement.setString(2, getBaseLocation().name());
 			statement.setString(3, getEquipLocation().name());
-			ResultSet inv = statement.executeQuery();
-
-			while (inv.next()) {
-				ItemInstance item = ItemInstance.restoreFromDb(getOwnerId(), inv);
-				if (item == null) {
-					continue;
-				}
-
-				if (getOwner() instanceof Player) {
-					if (!((Player) getOwner()).isHero() && item.isHeroItem()) {
-						item.setLocation(ItemLocation.INVENTORY);
+			try (ResultSet inv = statement.executeQuery()) {
+				while (inv.next()) {
+					ItemInstance item = ItemDao.restoreFromDb(getOwnerId(), inv);
+					if (item == null) {
+						continue;
+					}
+					
+					if (getOwner() instanceof Player) {
+						if (!((Player) getOwner()).isHero() && item.isHeroItem()) {
+							item.setLocation(EItemLocation.INVENTORY);
+						}
+					}
+					
+					World.getInstance().addObject(item);
+					
+					// If stackable item is found in inventory just add to current quantity
+					if (item.isStackable() && getItemByItemId(item.getItemId()) != null) {
+						addItem("Restore", item, getOwner().getPlayer(), null);
+					} else {
+						addItem(item);
 					}
 				}
-
-				World.getInstance().addObject(item);
-
-				// If stackable item is found in inventory just add to current quantity
-				if (item.isStackable() && getItemByItemId(item.getItemId()) != null) {
-					addItem("Restore", item, getOwner().getPlayer(), null);
-				} else {
-					addItem(item);
-				}
 			}
-			inv.close();
-			statement.close();
-			refreshWeight();
 		} catch (Exception e) {
 			_log.warn("Could not restore inventory: " + e.getMessage(), e);
 		}
+		refreshWeight();
 	}
 
 	/**

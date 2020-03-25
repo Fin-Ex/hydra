@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.network.serverpackets;
 
-import org.slf4j.LoggerFactory;
-
 public class RestartResponse extends L2GameServerPacket {
 
 	private static final RestartResponse STATIC_PACKET_TRUE = new RestartResponse(true);

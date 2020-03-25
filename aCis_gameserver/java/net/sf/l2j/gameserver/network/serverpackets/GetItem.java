@@ -1,30 +1,41 @@
 package net.sf.l2j.gameserver.network.serverpackets;
 
-import org.slf4j.LoggerFactory;
-
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.actor.Playable;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 
 /**
  * format ddddd
  */
 public class GetItem extends L2GameServerPacket {
 
-	private final ItemInstance _item;
-	private final int _playerId;
+	private final ItemInstance item;
+	private final Playable playable;
 
-	public GetItem(ItemInstance item, int playerId) {
-		_item = item;
-		_playerId = playerId;
+	public GetItem(ItemInstance item, Playable playable) {
+		this.item = item;
+		this.playable = playable;
+	}
+
+	public GetItem(Playable playable) {
+		this.item = null;
+		this.playable = playable;
 	}
 
 	@Override
 	protected final void writeImpl() {
 		writeC(0x0d);
-		writeD(_playerId);
-		writeD(_item.getObjectId());
-
-		writeD(_item.getX());
-		writeD(_item.getY());
-		writeD(_item.getZ());
+		writeD(playable.getObjectId());
+		if (item != null) {
+			writeD(item.getObjectId());
+			writeD(item.getX());
+			writeD(item.getY());
+			writeD(item.getZ());
+		} else {
+			// fake pick up just for animation
+			writeD(0);
+			writeD(playable.getX());
+			writeD(playable.getY());
+			writeD(playable.getZ());
+		}
 	}
 }

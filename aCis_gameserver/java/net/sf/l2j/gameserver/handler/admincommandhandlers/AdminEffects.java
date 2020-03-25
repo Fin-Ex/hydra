@@ -2,16 +2,15 @@ package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
 
 import java.util.StringTokenizer;
-
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Npc;
+import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.Summon;
 import net.sf.l2j.gameserver.model.actor.instance.Chest;
-import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.Earthquake;
 import net.sf.l2j.gameserver.network.serverpackets.ExRedSky;
@@ -77,7 +76,7 @@ public class AdminEffects implements IAdminCommandHandler {
 		st.nextToken();
 
 		if (command.startsWith("admin_hide")) {
-			if (!activeChar.getAppearance().getInvisible()) {
+			if (!activeChar.getAppearance().isInvisible()) {
 				activeChar.getAppearance().setInvisible();
 				activeChar.decayMe();
 				activeChar.broadcastUserInfo();
@@ -89,7 +88,7 @@ public class AdminEffects implements IAdminCommandHandler {
 		} else if (command.startsWith("admin_earthquake")) {
 			try {
 				activeChar.broadcastPacket(new Earthquake(activeChar.getX(), activeChar.getY(), activeChar.getZ(), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
-			} catch (Exception e) {
+			} catch (NumberFormatException e) {
 				activeChar.sendMessage("Use: //earthquake <intensity> <duration>");
 			}
 		} else if (command.startsWith("admin_atmosphere")) {

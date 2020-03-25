@@ -9,8 +9,7 @@ import net.sf.l2j.gameserver.templates.skills.EEffectBonusType;
  */
 public abstract class Lambda {
 
-	@Setter
-	protected EEffectBonusType bonus;
+	@Setter protected EEffectBonusType bonus;
 
 	public abstract double calc(Env env);
 }

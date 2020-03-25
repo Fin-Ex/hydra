@@ -30,4 +30,8 @@ public class EventBus {
 		subscriptions.remove(subscription);
 	}
 
+	public <T> void unsubscribeAll() {
+		subscriptions.clear();
+	}
+
 }

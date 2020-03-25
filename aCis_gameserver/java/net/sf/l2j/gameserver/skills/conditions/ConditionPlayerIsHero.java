@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.skills.Env;
 
@@ -9,15 +8,15 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionPlayerIsHero extends Condition {
 
-	private final boolean _val;
+	private boolean value;
 
 	/**
 	 * Instantiates a new condition player is hero.
 	 *
-	 * @param val the val
+	 * @param value the val
 	 */
-	public ConditionPlayerIsHero(boolean val) {
-		_val = val;
+	public ConditionPlayerIsHero(boolean value) {
+		this.value = value;
 	}
 
 	@Override
@@ -26,6 +25,6 @@ public class ConditionPlayerIsHero extends Condition {
 			return false;
 		}
 
-		return (env.getPlayer().isHero() == _val);
+		return (env.getPlayer().isHero() == value);
 	}
 }

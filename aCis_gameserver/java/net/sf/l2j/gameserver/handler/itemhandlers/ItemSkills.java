@@ -8,7 +8,7 @@ import net.sf.l2j.gameserver.model.actor.Playable;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.ai.CtrlIntention;
 import net.sf.l2j.gameserver.model.actor.instance.Servitor;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.type.EtcItemType;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
@@ -114,7 +114,7 @@ public class ItemSkills implements IHandler {
 
 		// Reuse.
 		int reuseDelay = itemSkill.getReuseDelay();
-		if (item.isEtcItem()) {
+		if (item.isEtc()) {
 			if (item.getEtcItem().getReuseDelay() > reuseDelay) {
 				reuseDelay = item.getEtcItem().getReuseDelay();
 			}

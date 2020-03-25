@@ -1,12 +1,10 @@
 package net.sf.l2j.gameserver.network.clientpackets;
 
-import org.slf4j.LoggerFactory;
-
 import java.nio.BufferUnderflowException;
-
 import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.model.actor.ai.CtrlIntention;
 import net.sf.l2j.gameserver.model.actor.Player;
+import net.sf.l2j.gameserver.model.actor.ai.CtrlIntention;
+import net.sf.l2j.gameserver.model.actor.events.OnMoveBackwardToLocation;
 import net.sf.l2j.gameserver.model.location.Location;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -90,6 +88,9 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		activeChar.getAI().setIntention(CtrlIntention.MOVE_TO, new Location(_targetX, _targetY, _targetZ));
+		
+		final Location destination = new Location(_targetX, _targetY, _targetZ);
+		activeChar.getAI().setIntention(CtrlIntention.MOVE_TO, destination);
+		activeChar.getEventBus().notify(new OnMoveBackwardToLocation(activeChar, destination));
 	}
 }

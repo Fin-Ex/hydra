@@ -9,6 +9,7 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.finex.enums.EDependType;
+import net.sf.l2j.gameserver.data.SkillTable.FrequentTalent;
 import net.sf.l2j.gameserver.model.ChanceCondition;
 import net.sf.l2j.gameserver.model.base.ClassRace;
 import net.sf.l2j.gameserver.model.item.kind.Item;
@@ -31,6 +32,8 @@ import net.sf.l2j.gameserver.skills.conditions.ConditionPlayerActiveSkillId;
 import net.sf.l2j.gameserver.skills.conditions.ConditionPlayerCharges;
 import net.sf.l2j.gameserver.skills.conditions.ConditionPlayerHasCastle;
 import net.sf.l2j.gameserver.skills.conditions.ConditionPlayerHasClanHall;
+import net.sf.l2j.gameserver.skills.conditions.ConditionPlayerHasTalent;
+import net.sf.l2j.gameserver.skills.conditions.ConditionPlayerHasTalentId;
 import net.sf.l2j.gameserver.skills.conditions.ConditionPlayerHp;
 import net.sf.l2j.gameserver.skills.conditions.ConditionPlayerHpPercentage;
 import net.sf.l2j.gameserver.skills.conditions.ConditionPlayerInvSize;
@@ -125,7 +128,7 @@ abstract class DocumentBase {
 				condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
 				Node addName = n.getAttributes().getNamedItem("addName");
 				if (addName != null && Integer.decode(getValue(msgId.getNodeValue(), null)) > 0) {
-					condition.addName();
+					condition.setAddName(true);
 				}
 			}
 			n = n.getNextSibling();
@@ -358,7 +361,7 @@ abstract class DocumentBase {
 			}
 		}
 
-		if (cond.conditions == null || cond.conditions.length == 0) {
+		if (cond.getConditions() == null || cond.getConditions().length == 0) {
 			log.error("Empty <and> condition in " + _file);
 		}
 
@@ -373,7 +376,7 @@ abstract class DocumentBase {
 			}
 		}
 
-		if (cond.conditions == null || cond.conditions.length == 0) {
+		if (cond.getConditions() == null || cond.getConditions().length == 0) {
 			log.error("Empty <or> condition in " + _file);
 		}
 
@@ -383,7 +386,9 @@ abstract class DocumentBase {
 	protected Condition parseLogicNot(Node n, Object template) {
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling()) {
 			if (n.getNodeType() == Node.ELEMENT_NODE) {
-				return new ConditionLogicNot(parseCondition(n, template));
+				final ConditionLogicNot condNot = new ConditionLogicNot();
+				condNot.add(parseCondition(n, template));
+				return condNot; 
 			}
 		}
 
@@ -486,10 +491,10 @@ abstract class DocumentBase {
 				cond = joinAnd(cond, new ConditionPlayerPledgeClass(pledgeClass));
 			} else if ("clanHall".equalsIgnoreCase(a.getNodeName())) {
 				StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-				ArrayList<Integer> array = new ArrayList<>(st.countTokens());
-				while (st.hasMoreTokens()) {
+				int[] array = new int[st.countTokens()];
+				for(int j = 0; j < st.countTokens(); j++) {
 					String item = st.nextToken().trim();
-					array.add(Integer.decode(getValue(item, null)));
+					array[j] = Integer.decode(getValue(item, null));
 				}
 				cond = joinAnd(cond, new ConditionPlayerHasClanHall(array));
 			} else if ("castle".equalsIgnoreCase(a.getNodeName())) {
@@ -514,6 +519,12 @@ abstract class DocumentBase {
 				int skill_id = Integer.decode(getValue(val.split(",")[0], template));
 				int skill_lvl = Integer.decode(getValue(val.split(",")[1], template));
 				cond = joinAnd(cond, new ConditionPlayerActiveSkillId(skill_id, skill_lvl));
+			} else if ("has_talent".equalsIgnoreCase(a.getNodeName())) {
+				final FrequentTalent talent = FrequentTalent.valueOf(getValue(a.getNodeValue(), template));
+				cond = joinAnd(cond, new ConditionPlayerHasTalent(talent));
+			} else if ("has_talent_id".equalsIgnoreCase(a.getNodeName())) {
+				final int talentId = Integer.valueOf(getValue(a.getNodeValue(), template));
+				cond = joinAnd(cond, new ConditionPlayerHasTalentId(talentId));
 			} else if ("seed_fire".equalsIgnoreCase(a.getNodeName())) {
 				ElementSeeds[0] = Integer.decode(getValue(a.getNodeValue(), null));
 			} else if ("seed_water".equalsIgnoreCase(a.getNodeName())) {
@@ -560,19 +571,19 @@ abstract class DocumentBase {
 				int skill_id = Integer.decode(getValue(a.getNodeValue(), template));
 				cond = joinAnd(cond, new ConditionTargetActiveSkillId(skill_id));
 			} else if ("race_id".equalsIgnoreCase(a.getNodeName())) {
-				List<Integer> array = new ArrayList<>();
 				StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-				while (st.hasMoreTokens()) {
+				int[] array = new int[st.countTokens()];
+				for(int j = 0; j < st.countTokens(); j++) {
 					String item = st.nextToken().trim();
-					array.add(Integer.decode(getValue(item, null)));
+					array[j] = Integer.decode(getValue(item, null));
 				}
 				cond = joinAnd(cond, new ConditionTargetRaceId(array));
 			} else if ("npcId".equalsIgnoreCase(a.getNodeName())) {
 				StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-				ArrayList<Integer> array = new ArrayList<>(st.countTokens());
-				while (st.hasMoreTokens()) {
+				int[] array = new int[st.countTokens()];
+				for (int j = 0; j < st.countTokens(); j++) {
 					String item = st.nextToken().trim();
-					array.add(Integer.decode(getValue(item, null)));
+					array[j] = Integer.decode(getValue(item, null));
 				}
 				cond = joinAnd(cond, new ConditionTargetNpcId(array));
 			}

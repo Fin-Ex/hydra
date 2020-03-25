@@ -195,7 +195,7 @@ public class L2AttackableAIScript extends Quest {
 				continue;
 			}
 
-			if (player.isGM() && player.getAppearance().getInvisible()) {
+			if (player.isGM() && player.getAppearance().isInvisible()) {
 				continue;
 			}
 
@@ -221,7 +221,7 @@ public class L2AttackableAIScript extends Quest {
 				continue;
 			}
 
-			if (!invisible && player.getAppearance().getInvisible()) {
+			if (!invisible && player.getAppearance().isInvisible()) {
 				continue;
 			}
 
@@ -250,7 +250,7 @@ public class L2AttackableAIScript extends Quest {
 				continue;
 			}
 
-			if (!invisible && player.getAppearance().getInvisible()) {
+			if (!invisible && player.getAppearance().isInvisible()) {
 				continue;
 			}
 

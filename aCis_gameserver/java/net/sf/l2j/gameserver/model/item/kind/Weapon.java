@@ -206,10 +206,18 @@ public final class Weapon extends Item {
 		return (int) owner.getStat().calcStat(Stats.AttackMpConsumeRate, _mpConsume, owner, null);
 	}
 
+	public int getMpConsume() {
+		return _mpConsume;
+	}
+	
 	public int getHpConsume(Creature owner) {
 		return (int) owner.getStat().calcStat(Stats.AttackHpConsumeRate, _hpConsume, owner, null);
 	}
 
+	public int getHpConsume() {
+		return _hpConsume;
+	}
+	
 	/**
 	 * @return The skill player obtains when he equiped weapon +4 or more (for
 	 * duals SA)
@@ -220,6 +228,14 @@ public final class Weapon extends Item {
 		}
 
 		return _enchant4Skill.getSkill();
+	}
+
+	public IntIntHolder getEnchant4Holder() {
+		if (_enchant4Skill == null) {
+			return null;
+		}
+
+		return _enchant4Skill;
 	}
 
 	/**

@@ -1,7 +1,8 @@
 package net.sf.l2j.gameserver.model.item.instance;
 
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import lombok.Getter;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemState;
+import net.sf.l2j.gameserver.model.item.instance.EItemState;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 
 /**
@@ -38,7 +39,7 @@ public class ItemInfo {
 	 * The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE)
 	 */
 	@Getter
-	private ItemState change;
+	private EItemState change;
 	@Getter
 	private int durability;
 
@@ -66,7 +67,7 @@ public class ItemInfo {
 		durability = item.getMana();
 	}
 
-	public ItemInfo(ItemInstance item, ItemState change) {
+	public ItemInfo(ItemInstance item, EItemState change) {
 		if (item == null) {
 			return;
 		}

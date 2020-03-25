@@ -24,7 +24,7 @@ import net.sf.l2j.gameserver.model.actor.template.DoorTemplate.DoorType;
 import net.sf.l2j.gameserver.model.actor.template.DoorTemplate.OpenType;
 import net.sf.l2j.gameserver.model.entity.Castle;
 import net.sf.l2j.gameserver.model.entity.ClanHall;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
 import net.sf.l2j.gameserver.model.location.SpawnLocation;
 import net.sf.l2j.gameserver.model.pledge.Clan;

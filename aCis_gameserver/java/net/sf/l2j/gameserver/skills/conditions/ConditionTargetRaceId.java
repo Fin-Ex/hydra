@@ -1,8 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
-
-import java.util.List;
 
 import net.sf.l2j.gameserver.model.actor.Npc;
 import net.sf.l2j.gameserver.skills.Env;
@@ -12,10 +9,10 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionTargetRaceId extends Condition {
 
-	private final List<Integer> _raceIds;
+	private int[] raceIDs;
 
-	public ConditionTargetRaceId(List<Integer> raceId) {
-		_raceIds = raceId;
+	public ConditionTargetRaceId(int[] raceId) {
+		raceIDs = raceId;
 	}
 
 	@Override
@@ -24,6 +21,13 @@ public class ConditionTargetRaceId extends Condition {
 			return false;
 		}
 
-		return _raceIds.contains(((Npc) env.getTarget()).getTemplate().getRace().ordinal());
+		final int raceOrdinal = ((Npc) env.getTarget()).getTemplate().getRace().ordinal();
+		for (int i = 0; i < raceIDs.length; i++) {
+			if(raceIDs[i] == raceOrdinal) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 }

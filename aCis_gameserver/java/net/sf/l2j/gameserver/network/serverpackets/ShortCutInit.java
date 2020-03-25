@@ -7,7 +7,7 @@ import java.util.List;
 import net.sf.l2j.gameserver.model.L2ShortCut;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.skills.L2Skill;
 
 public class ShortCutInit extends L2GameServerPacket {
@@ -21,7 +21,7 @@ public class ShortCutInit extends L2GameServerPacket {
 		_shortCuts = activeChar.getAllShortCuts();
 		for (L2ShortCut shortCut : _shortCuts) {
 			final ItemInstance instance = _activeChar.getInventory().getItemByObjectId(shortCut.getId());
-			if (instance != null && instance.isEtcItem()) {
+			if (instance != null && instance.isEtc()) {
 				if (instance.getItem().hasDynamicSkills()) {
 					itemSkills.addAll(instance.getItem().getDynamicSkills());
 				}

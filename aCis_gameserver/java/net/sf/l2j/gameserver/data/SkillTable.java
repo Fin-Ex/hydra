@@ -5,15 +5,18 @@ import java.util.HashMap;
 import java.util.Map;
 import lombok.Getter;
 import net.sf.finex.handlers.talents.Aftershock;
+import net.sf.finex.handlers.talents.AutumnLeafs;
 import net.sf.finex.handlers.talents.Challenger;
 import net.sf.finex.handlers.talents.CumulativeRage;
 import net.sf.finex.handlers.talents.Disaster;
+import net.sf.finex.handlers.talents.PowerAbsorption;
 import net.sf.finex.handlers.talents.ProfessionalAnger;
-import net.sf.finex.handlers.talents.ThreatIncrease;
 import net.sf.finex.handlers.talents.RecoiledBlast;
+import net.sf.finex.handlers.talents.SecondWind;
 import net.sf.finex.handlers.talents.SonicAssault;
-import net.sf.finex.model.talents.TalentHandler;
+import net.sf.finex.handlers.talents.ThreatIncrease;
 import net.sf.finex.handlers.talents.WildHurricane;
+import net.sf.finex.model.talents.ITalentHandler;
 import net.sf.l2j.gameserver.model.base.Experience;
 import net.sf.l2j.gameserver.skills.DocumentSkill;
 import net.sf.l2j.gameserver.skills.L2Skill;
@@ -132,10 +135,14 @@ public class SkillTable {
 		return (maxLevel != null) ? maxLevel : 0;
 	}
 
-	public L2Skill getLevelFrom(int skillId, int chaLvl) {
+	public L2Skill getLevelFrom(int skillId, int casterLevel) {
 		final int maxLvl = getMaxLevel(skillId);
+		if(maxLvl == 1) {
+			return getInfo(skillId, 1);
+		}
+
 		final int skillLevel = (Experience.MAX_LEVEL - 1) / maxLvl;
-		return getInfo(skillId, Math.min(Math.max(chaLvl / skillLevel, 1), maxLvl));
+		return getInfo(skillId, Math.min(Math.max(casterLevel / skillLevel, 1), maxLvl));
 	}
 
 	/**
@@ -173,7 +180,7 @@ public class SkillTable {
 	public static L2Skill[] getNobleSkills() {
 		return _nobleSkills;
 	}
-
+	
 	/**
 	 * Enum to hold some important references to frequently used (hardcoded)
 	 * skills in core
@@ -236,17 +243,21 @@ public class SkillTable {
 		WILD_HURRICANE(15, new WildHurricane()),
 		AFTERSHOCK(16, new Aftershock()),
 		THREAT_INCREASE(19, new ThreatIncrease()),
-		DISASTER(20, new Disaster());
+		DISASTER(20, new Disaster()),
+		AUTUMN_LEAFS(18, new AutumnLeafs()),
+		POWER_ABSOPTION(22, new PowerAbsorption()),
+		SECOND_WIND(23, new SecondWind()),
+		ENTIRE_HATE(24);
 		
 		@Getter private final int id;
-		@Getter private final TalentHandler handler;
+		@Getter private final ITalentHandler handler;
 
 		private FrequentTalent(int id) {
 			this.id = id;
 			this.handler = null;
 		}
 
-		private FrequentTalent(int id, TalentHandler handler) {
+		private FrequentTalent(int id, ITalentHandler handler) {
 			this.id = id;
 			this.handler = handler;
 		}

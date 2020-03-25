@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.network.serverpackets;
 
-import org.slf4j.LoggerFactory;
-
 public class StartRotation extends L2GameServerPacket {
 
 	private final int _charObjId, _degree, _side, _speed;
@@ -11,6 +9,18 @@ public class StartRotation extends L2GameServerPacket {
 		_degree = degree;
 		_side = side;
 		_speed = speed;
+	}
+
+	/**
+	 * Specified constructor with: <b>Side</b> = 1 and <b>Speed</b> is {@link Short.MAX_VALUE}
+	 * @param objId
+	 * @param degree 
+	 */
+	public StartRotation(int objId, int degree) {
+		_charObjId = objId;
+		_degree = degree;
+		_side = 1;
+		_speed = Short.MAX_VALUE;
 	}
 
 	@Override

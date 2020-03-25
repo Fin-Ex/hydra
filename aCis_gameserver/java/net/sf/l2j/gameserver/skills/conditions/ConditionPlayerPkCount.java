@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.skills.Env;
 
@@ -9,7 +8,7 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionPlayerPkCount extends Condition {
 
-	public final int _pk;
+	private int pk;
 
 	/**
 	 * Instantiates a new condition player pk count.
@@ -17,7 +16,7 @@ public class ConditionPlayerPkCount extends Condition {
 	 * @param pk the pk
 	 */
 	public ConditionPlayerPkCount(int pk) {
-		_pk = pk;
+		this.pk = pk;
 	}
 
 	@Override
@@ -26,6 +25,6 @@ public class ConditionPlayerPkCount extends Condition {
 			return false;
 		}
 
-		return env.getPlayer().getPkKills() <= _pk;
+		return env.getPlayer().getPkKills() <= pk;
 	}
 }

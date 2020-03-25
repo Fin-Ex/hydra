@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.skills.Env;
 
@@ -11,11 +10,11 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionTargetHpMinMax extends Condition {
 
-	private final int _minHp, _maxHp;
+	private int minHP, maxHP;
 
 	public ConditionTargetHpMinMax(int minHp, int maxHp) {
-		_minHp = minHp;
-		_maxHp = maxHp;
+		this.minHP = minHp;
+		this.maxHP = maxHp;
 	}
 
 	@Override
@@ -24,7 +23,7 @@ public class ConditionTargetHpMinMax extends Condition {
 			return false;
 		}
 
-		int _currentHp = (int) env.getTarget().getCurrentHp() * 100 / env.getTarget().getMaxHp();
-		return _currentHp >= _minHp && _currentHp <= _maxHp;
+		int curHP = (int) env.getTarget().getCurrentHp() * 100 / env.getTarget().getMaxHp();
+		return curHP >= minHP && curHP <= maxHP;
 	}
 }

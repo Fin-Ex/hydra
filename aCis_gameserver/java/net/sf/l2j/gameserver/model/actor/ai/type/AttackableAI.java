@@ -139,7 +139,7 @@ public class AttackableAI extends CreatureAI implements Runnable {
 			Player targetPlayer = target.getPlayer();
 			if (targetPlayer != null) {
 				// GM checks ; check if the target is invisible or got access level
-				if (targetPlayer.isGM() && (targetPlayer.getAppearance().getInvisible() || !targetPlayer.getAccessLevel().canTakeAggro())) {
+				if (targetPlayer.isGM() && (targetPlayer.getAppearance().isInvisible() || !targetPlayer.getAccessLevel().canTakeAggro())) {
 					return false;
 				}
 

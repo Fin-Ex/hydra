@@ -1,6 +1,5 @@
 package net.sf.l2j.commons.geometry;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.commons.random.Rnd;
 

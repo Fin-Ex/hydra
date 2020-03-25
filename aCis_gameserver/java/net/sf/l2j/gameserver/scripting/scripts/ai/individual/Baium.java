@@ -342,7 +342,7 @@ public class Baium extends L2AttackableAIScript {
 					continue;
 				}
 
-				if (((Player) obj).isGM() && ((Player) obj).getAppearance().getInvisible()) {
+				if (((Player) obj).isGM() && ((Player) obj).getAppearance().isInvisible()) {
 					continue;
 				}
 

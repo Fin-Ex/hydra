@@ -198,7 +198,7 @@ public final class DocumentSkill extends DocumentBase {
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
 						Node addName = n.getAttributes().getNamedItem("addName");
 						if (addName != null && Integer.decode(getValue(msgId.getNodeValue(), null)) > 0) {
-							condition.addName();
+							condition.setAddName(true);
 						}
 					}
 					_currentSkill.currentSkills.get(i).attach(condition, false);

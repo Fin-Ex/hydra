@@ -1,7 +1,6 @@
 package net.sf.l2j.gameserver.model.item.kind;
 
-import org.slf4j.LoggerFactory;
-
+import lombok.Getter;
 import net.sf.l2j.gameserver.model.item.type.EtcItemType;
 import net.sf.l2j.gameserver.model.itemcontainer.PcInventory;
 import net.sf.l2j.gameserver.templates.StatsSet;
@@ -9,12 +8,13 @@ import net.sf.l2j.gameserver.templates.StatsSet;
 /**
  * This class is dedicated to the management of EtcItem.
  */
-public final class EtcItem extends Item {
+public class EtcItem extends Item {
 
 	private final String _handler;
 	private final int _sharedReuseGroup;
 	private EtcItemType _type;
 	private final int _reuseDelay;
+	@Getter private final boolean isConsumable;
 
 	/**
 	 * Constructor for EtcItem.
@@ -50,6 +50,7 @@ public final class EtcItem extends Item {
 		_handler = set.getString("handler", null); // ! null !
 		_sharedReuseGroup = set.getInteger("shared_reuse_group", -1);
 		_reuseDelay = set.getInteger("reuse_delay", 0);
+		isConsumable = set.getBool("is_consumable", ((getItemType() == EtcItemType.SHOT) || (getItemType() == EtcItemType.POTION)));
 	}
 
 	/**
@@ -60,16 +61,6 @@ public final class EtcItem extends Item {
 	@Override
 	public EtcItemType getItemType() {
 		return _type;
-	}
-
-	/**
-	 * Returns if the item is consumable
-	 *
-	 * @return boolean
-	 */
-	@Override
-	public final boolean isConsumable() {
-		return ((getItemType() == EtcItemType.SHOT) || (getItemType() == EtcItemType.POTION));
 	}
 
 	/**

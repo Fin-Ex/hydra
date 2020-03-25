@@ -4,12 +4,13 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import net.sf.finex.dao.ItemDao;
 
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.model.L2Augmentation;
 import net.sf.l2j.gameserver.model.actor.Npc;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.itemcontainer.PcInventory;
 import net.sf.l2j.gameserver.model.multisell.Entry;
 import net.sf.l2j.gameserver.model.multisell.Ingredient;
@@ -260,10 +261,11 @@ public class MultiSellChoose extends L2GameClientPacket {
 								if (product != null && list.getMaintainEnchantment()) {
 									if (i < augmentation.size()) {
 										product.setAugmentation(new L2Augmentation(augmentation.get(i).getAugmentationId(), augmentation.get(i).getSkill()));
+										ItemDao.updateItemAttributes(product, null);
 									}
 
 									product.setEnchantLevel(e.getEnchantLevel());
-									product.updateDatabase();
+									ItemDao.updateDatabase(product);
 								}
 							}
 						}

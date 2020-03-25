@@ -5,16 +5,16 @@
  */
 package net.sf.finex.handlers.talents;
 
-import net.sf.finex.model.talents.TalentHandler;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.skills.L2Skill;
+import net.sf.finex.model.talents.ITalentHandler;
 
 /**
  *
  * @author finfan
  */
-public class WildHurricane implements TalentHandler {
+public class WildHurricane implements ITalentHandler {
 
 	private static final int WHIRLWIND = 36;
 	

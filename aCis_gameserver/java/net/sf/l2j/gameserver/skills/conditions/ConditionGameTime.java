@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.taskmanager.GameTimeTaskManager;
@@ -10,14 +9,14 @@ import net.sf.l2j.gameserver.taskmanager.GameTimeTaskManager;
  */
 public class ConditionGameTime extends Condition {
 
-	private final boolean _night;
+	private boolean night;
 
 	public ConditionGameTime(boolean night) {
-		_night = night;
+		this.night = night;
 	}
 
 	@Override
 	public boolean testImpl(Env env) {
-		return GameTimeTaskManager.getInstance().isNight() == _night;
+		return GameTimeTaskManager.getInstance().isNight() == night;
 	}
 }

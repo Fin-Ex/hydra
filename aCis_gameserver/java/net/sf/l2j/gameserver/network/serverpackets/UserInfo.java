@@ -203,7 +203,7 @@ public class UserInfo extends L2GameServerPacket {
 
 		writeC(_activeChar.isInPartyMatchRoom() ? 1 : 0);
 
-		if (_activeChar.getAppearance().getInvisible() && _activeChar.isGM()) {
+		if (_activeChar.getAppearance().isInvisible() && _activeChar.isGM()) {
 			writeD(_activeChar.getAbnormalEffect() | AbnormalEffect.STEALTH.getMask());
 		} else {
 			writeD(_activeChar.getAbnormalEffect());

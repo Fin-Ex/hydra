@@ -13,7 +13,6 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.finex.handlers.talents.RecoiledBlast;
 import net.sf.finex.handlers.talents.SonicAssault;
-import net.sf.finex.model.talents.TalentHandler;
 import net.sf.finex.handlers.talents.WildHurricane;
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.math.MathUtil;
@@ -40,6 +39,7 @@ import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.skills.Stats;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
+import net.sf.finex.model.talents.ITalentHandler;
 
 /**
  *

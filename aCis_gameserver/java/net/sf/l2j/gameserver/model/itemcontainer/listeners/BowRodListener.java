@@ -3,7 +3,7 @@ package net.sf.l2j.gameserver.model.itemcontainer.listeners;
 import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.actor.Playable;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.type.WeaponType;
 import net.sf.l2j.gameserver.model.itemcontainer.Inventory;
 

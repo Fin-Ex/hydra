@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.skills.Env;
 
@@ -11,7 +10,7 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public final class ConditionPlayerPledgeClass extends Condition {
 
-	private final int _pledgeClass;
+	private int pledgeClass;
 
 	/**
 	 * Instantiates a new condition player pledge class.
@@ -19,7 +18,7 @@ public final class ConditionPlayerPledgeClass extends Condition {
 	 * @param pledgeClass the pledge class
 	 */
 	public ConditionPlayerPledgeClass(int pledgeClass) {
-		_pledgeClass = pledgeClass;
+		this.pledgeClass = pledgeClass;
 	}
 
 	/**
@@ -38,10 +37,10 @@ public final class ConditionPlayerPledgeClass extends Condition {
 			return false;
 		}
 
-		if (_pledgeClass == -1) {
+		if (pledgeClass == -1) {
 			return env.getPlayer().isClanLeader();
 		}
 
-		return env.getPlayer().getPledgeClass() >= _pledgeClass;
+		return env.getPlayer().getPledgeClass() >= pledgeClass;
 	}
 }

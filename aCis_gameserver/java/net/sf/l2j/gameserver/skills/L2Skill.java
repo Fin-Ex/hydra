@@ -2009,9 +2009,10 @@ public abstract class L2Skill implements IChanceSkillTrigger {
 	 * @param effector
 	 * @param effected
 	 * @param env parameters for secondary effects (shield and ss/bss/bsss)
+	 * @param affecteds : collect the targets whose affected by that effect (success apply)
 	 * @return an array with the effects that have been added to effector
 	 */
-	public final List<L2Effect> getEffects(Creature effector, Creature effected, Env env) {
+	public final List<L2Effect> getEffects(Creature effector, Creature effected, Env env, List<WorldObject> affecteds) {
 		
 		final boolean threatIncrease = ThreatIncrease.validate(effector, this);
 		
@@ -2078,13 +2079,22 @@ public abstract class L2Skill implements IChanceSkillTrigger {
 					}
 					e.scheduleEffect();
 					effects.add(e);
+					
+					// collect affect targets
+					if(affecteds != null) {
+						affecteds.add(effected);
+					}
 				}
 			} // display fail message only for effects with icons
-			else if (et.showIcon && effector instanceof Player) {
+			else if (et.showIcon && effector.isPlayer()) {
 				effector.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_RESISTED_YOUR_S2).addCharName(effected).addSkillName(this));
 			}
 		}
 		return effects;
+	}
+
+	public final List<L2Effect> getEffects(Creature effector, Creature effected, Env env) {
+		return getEffects(effector, effected, env, null);
 	}
 
 	/**

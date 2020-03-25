@@ -61,4 +61,5 @@ public enum L2EffectType {
 	HEAVY_GRIP,
 	REDIRECT_SKILL,
 	EFFECT_PER_TIME,
+	INVISIBLE
 }

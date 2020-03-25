@@ -16,7 +16,7 @@ import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.WorldRegion;
 import net.sf.l2j.gameserver.model.actor.Creature;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.zone.L2SpawnZone;
 import net.sf.l2j.gameserver.model.zone.L2ZoneType;
 import net.sf.l2j.gameserver.model.zone.form.ZoneCuboid;
@@ -179,7 +179,7 @@ public class ZoneManager {
 							// Other polygons need at least 3 (one per vertex)
 							if (zoneShape.equalsIgnoreCase("Cuboid")) {
 								if (coords.length == 2) {
-									temp.setZone(new ZoneCuboid(coords[0][0], coords[1][0], coords[0][1], coords[1][1], minZ, maxZ));
+									temp.setForm(new ZoneCuboid(coords[0][0], coords[1][0], coords[0][1], coords[1][1], minZ, maxZ));
 								} else {
 									_log.warn("ZoneData: Missing cuboid vertex in sql data for zone: " + zoneId + " in file: " + f.getName());
 									continue;
@@ -193,7 +193,7 @@ public class ZoneManager {
 										aX[i] = coords[i][0];
 										aY[i] = coords[i][1];
 									}
-									temp.setZone(new ZoneNPoly(aX, aY, minZ, maxZ));
+									temp.setForm(new ZoneNPoly(aX, aY, minZ, maxZ));
 								} else {
 									_log.warn("ZoneData: Bad data for zone: " + zoneId + " in file: " + f.getName());
 									continue;
@@ -203,7 +203,7 @@ public class ZoneManager {
 								attrs = d.getAttributes();
 								final int zoneRad = Integer.parseInt(attrs.getNamedItem("rad").getNodeValue());
 								if (coords.length == 1 && zoneRad > 0) {
-									temp.setZone(new ZoneCylinder(coords[0][0], coords[0][1], minZ, maxZ, zoneRad));
+									temp.setForm(new ZoneCylinder(coords[0][0], coords[0][1], minZ, maxZ, zoneRad));
 								} else {
 									_log.warn("ZoneData: Bad data for zone: " + zoneId + " in file: " + f.getName());
 									continue;
@@ -244,7 +244,7 @@ public class ZoneManager {
 						// Register the zone into any world region it intersects with...
 						for (int x = 0; x < worldRegions.length; x++) {
 							for (int y = 0; y < worldRegions[x].length; y++) {
-								if (temp.getZone().intersectsRectangle(World.getRegionX(x), World.getRegionX(x + 1), World.getRegionY(y), World.getRegionY(y + 1))) {
+								if (temp.getForm().intersectsRectangle(World.getRegionX(x), World.getRegionX(x + 1), World.getRegionY(y), World.getRegionY(y + 1))) {
 									worldRegions[x][y].addZone(temp);
 								}
 							}

@@ -1,13 +1,14 @@
 package net.sf.l2j.gameserver.handler.admincommandhandlers;
 
 
+import net.sf.finex.dao.ItemDao;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.data.xml.ArmorSetData;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.item.ArmorSet;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Armor;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
@@ -111,7 +112,7 @@ public class AdminEnchant implements IAdminCommandHandler {
 			final int oldEnchant = item.getEnchantLevel();
 
 			item.setEnchantLevel(ench);
-			item.updateDatabase();
+			ItemDao.updateDatabase(item);
 
 			// If item is equipped, verify the skill obtention/drop (+4 duals, +6 armorset).
 			if (item.isEquipped()) {

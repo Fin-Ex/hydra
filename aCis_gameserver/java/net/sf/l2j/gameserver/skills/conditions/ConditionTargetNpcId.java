@@ -1,8 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
-
-import java.util.List;
 
 import net.sf.l2j.gameserver.model.actor.Npc;
 import net.sf.l2j.gameserver.model.actor.instance.Door;
@@ -13,25 +10,37 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionTargetNpcId extends Condition {
 
-	private final List<Integer> _npcIds;
+	private int[] npcIDs;
 
 	/**
 	 * Instantiates a new condition target npc id.
 	 *
 	 * @param npcIds the npc ids
 	 */
-	public ConditionTargetNpcId(List<Integer> npcIds) {
-		_npcIds = npcIds;
+	public ConditionTargetNpcId(int[] npcIds) {
+		npcIDs = npcIds;
 	}
 
 	@Override
 	public boolean testImpl(Env env) {
 		if (env.getTarget() instanceof Npc) {
-			return _npcIds.contains(((Npc) env.getTarget()).getNpcId());
+			int npcId = ((Npc) env.getTarget()).getNpcId();
+			for(int i = 0; i < npcIDs.length; i++) {
+				if(npcIDs[i] == npcId) {
+					return true;
+				}
+			}
+			return false;
 		}
 
 		if (env.getTarget() instanceof Door) {
-			return _npcIds.contains(((Door) env.getTarget()).getDoorId());
+			int npcId = ((Door) env.getTarget()).getDoorId();
+			for(int i = 0; i < npcIDs.length; i++) {
+				if(npcIDs[i] == npcId) {
+					return true;
+				}
+			}
+			return false;
 		}
 
 		return false;

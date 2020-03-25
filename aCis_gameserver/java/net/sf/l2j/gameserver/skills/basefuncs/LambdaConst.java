@@ -8,8 +8,7 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public final class LambdaConst extends Lambda {
 
-	@Getter
-	private final double value;
+	@Getter private final double value;
 
 	public LambdaConst(double value) {
 		this.value = value;

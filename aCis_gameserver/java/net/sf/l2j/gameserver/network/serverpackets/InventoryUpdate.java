@@ -3,8 +3,8 @@ package net.sf.l2j.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 import net.sf.l2j.gameserver.model.item.instance.ItemInfo;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemState;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.EItemState;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 
 /**
@@ -30,19 +30,19 @@ public class InventoryUpdate extends L2GameServerPacket {
 
 	public void addNewItem(ItemInstance item) {
 		if (item != null) {
-			_items.add(new ItemInfo(item, ItemState.ADDED));
+			_items.add(new ItemInfo(item, EItemState.ADDED));
 		}
 	}
 
 	public void addModifiedItem(ItemInstance item) {
 		if (item != null) {
-			_items.add(new ItemInfo(item, ItemState.MODIFIED));
+			_items.add(new ItemInfo(item, EItemState.MODIFIED));
 		}
 	}
 
 	public void addRemovedItem(ItemInstance item) {
 		if (item != null) {
-			_items.add(new ItemInfo(item, ItemState.REMOVED));
+			_items.add(new ItemInfo(item, EItemState.REMOVED));
 		}
 	}
 

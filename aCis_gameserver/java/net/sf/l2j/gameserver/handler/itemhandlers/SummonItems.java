@@ -17,7 +17,8 @@ import net.sf.l2j.gameserver.model.actor.Pet;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.template.NpcTemplate;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.MagicSkillLaunched;
 import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
@@ -137,7 +138,7 @@ public class SummonItems implements IHandler {
 				_activeChar.setIsCastingNow(false);
 
 				// check for summon item validity
-				if (_item == null || _item.getOwnerId() != _activeChar.getObjectId() || _item.getLocation() != ItemInstance.ItemLocation.INVENTORY) {
+				if (_item == null || _item.getOwnerId() != _activeChar.getObjectId() || _item.getLocation() != EItemLocation.INVENTORY) {
 					return;
 				}
 

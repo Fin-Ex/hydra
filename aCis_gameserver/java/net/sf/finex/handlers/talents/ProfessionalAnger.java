@@ -5,15 +5,15 @@
  */
 package net.sf.finex.handlers.talents;
 
-import net.sf.finex.model.talents.TalentHandler;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.skills.L2Skill;
+import net.sf.finex.model.talents.ITalentHandler;
 
 /**
  *
  * @author finfan
  */
-public class ProfessionalAnger implements TalentHandler {
+public class ProfessionalAnger implements ITalentHandler {
 
 	private static final short WAR_CRY = 78;
 	

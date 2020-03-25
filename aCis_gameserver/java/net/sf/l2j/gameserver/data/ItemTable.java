@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.HashMap;
 import java.util.Map;
+import net.sf.finex.Classes;
 import net.sf.l2j.Config;
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.gameserver.idfactory.IdFactory;
@@ -12,9 +13,9 @@ import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Attackable;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemState;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.EItemState;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Armor;
 import net.sf.l2j.gameserver.model.item.kind.EtcItem;
 import net.sf.l2j.gameserver.model.item.kind.Item;
@@ -86,6 +87,7 @@ public class ItemTable {
 					highest = item.getItemId();
 				}
 
+				item.setLoadName(file.getName().replace(".xml", ""));
 				if (item instanceof EtcItem) {
 					ETCS.put(item.getItemId(), (EtcItem) item);
 				} else if (item instanceof Armor) {
@@ -173,7 +175,37 @@ public class ItemTable {
 
 		return item;
 	}
+	
+	public <T extends ItemInstance> T createItem(Class<? extends ItemInstance> t, String process, int itemId, int count, Player actor, WorldObject reference) {
+		// Create and Init the ItemInstance corresponding to the Item Identifier
+		T item = (T) Classes.createInstance(t, IdFactory.getInstance().getNextId(), itemId);
 
+		if (process.equalsIgnoreCase("loot")) {
+			if (reference instanceof Attackable && ((Attackable) reference).isRaid()) {
+				final Attackable raid = (Attackable) reference;
+				if (raid.getFirstCommandChannelAttacked() != null && !Config.AUTO_LOOT_RAID) {
+					item.setDropProtection(raid.getFirstCommandChannelAttacked().getLeaderObjectId(), true);
+				}
+			} else if (!Config.AUTO_LOOT) {
+				item.setDropProtection(actor.getObjectId(), false);
+			}
+		}
+
+		// Add the ItemInstance object to _objects of World.
+		World.getInstance().addObject(item);
+
+		// Set Item parameters
+		if (item.isStackable() && count > 1) {
+			item.setCount(count);
+		}
+
+		if (Config.LOG_ITEMS) {
+			ITEM_LOG.info("CREATE: '{}'; Actor: {}, Item: {}, Reference: {}.", process, actor, item, reference);
+		}
+
+		return item;
+	}
+	
 	/**
 	 * Dummy item is created by setting the ID of the object in the world at
 	 * null value
@@ -203,8 +235,8 @@ public class ItemTable {
 		synchronized (item) {
 			item.setCount(0);
 			item.setOwnerId(0);
-			item.setLocation(ItemLocation.VOID);
-			item.setLastChange(ItemState.REMOVED);
+			item.setLocation(EItemLocation.VOID);
+			item.setLastChange(EItemState.REMOVED);
 
 			World.getInstance().removeObject(item);
 			IdFactory.getInstance().releaseId(item.getObjectId());
@@ -215,11 +247,9 @@ public class ItemTable {
 
 			// if it's a pet control item, delete the pet as well
 			if (item.getItemType() == EtcItemType.PET_COLLAR) {
-				try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
-					PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?");
+				try (Connection con = L2DatabaseFactory.getInstance().getConnection(); PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?")) {
 					statement.setInt(1, item.getObjectId());
 					statement.execute();
-					statement.close();
 				} catch (Exception e) {
 					_log.warn("could not delete pet objectid:", e);
 				}

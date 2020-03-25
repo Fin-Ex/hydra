@@ -1,9 +1,11 @@
 package net.sf.l2j.gameserver.model;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import net.sf.l2j.Config;
 import net.sf.l2j.commons.concurrent.ThreadPool;
 import net.sf.l2j.commons.random.Rnd;
+import net.sf.l2j.gameserver.data.NpcTable;
 import net.sf.l2j.gameserver.geoengine.GeoEngine;
 import net.sf.l2j.gameserver.idfactory.IdFactory;
 import net.sf.l2j.gameserver.model.actor.Attackable;
@@ -313,42 +315,34 @@ public final class L2Spawn implements Runnable {
 	 * @return the newly created instance.
 	 */
 	public Npc doSpawn(boolean isSummonSpawn) {
+		return doSpawn(isSummonSpawn, false);
+	}
+	
+	public Npc doSpawn() {
+		return doSpawn(false, false);
+	}
+
+	public Npc doSpawn(boolean isSummonSpawn, boolean invisibleXYZ) {
 		try {
-			// Check if the L2Spawn is not a Pet.
 			if (_template.isType("Pet")) {
 				return null;
 			}
 
-			// Get L2Npc Init parameters and its generate an Identifier
-			Object[] parameters
-					= {
-						IdFactory.getInstance().getNextId(),
-						_template
-					};
-
-			// Call the constructor of the L2Npc (can be a L2ArtefactInstance, L2FriendlyMobInstance, L2GuardInstance, L2MonsterInstance, L2SiegeGuardInstance, L2BoxInstance, L2FeedableBeastInstance, L2TamedBeastInstance, L2NpcInstance)
-			Object tmp = _constructor.newInstance(parameters);
+			Object tmp = _constructor.newInstance(IdFactory.getInstance().getNextId(), _template);
 
 			if (isSummonSpawn && tmp instanceof Creature) {
 				((Creature) tmp).setShowSummonAnimation(isSummonSpawn);
 			}
 
-			// Check if the Instance is a L2Npc
 			if (!(tmp instanceof Npc)) {
 				return null;
 			}
 
-			// create final instance of L2Npc
 			_npc = (Npc) tmp;
-
-			// assign L2Spawn to L2Npc
 			_npc.setSpawn(this);
-
-			// initialize L2Npc and spawn it
-			initializeAndSpawn();
-
+			initializeAndSpawn(invisibleXYZ);
 			return _npc;
-		} catch (Exception e) {
+		} catch (IllegalAccessException | IllegalArgumentException | InstantiationException | InvocationTargetException e) {
 			_log.warn("L2Spawn: Error during spawn, NPC id=" + _template.getNpcId());
 			return null;
 		}
@@ -377,7 +371,7 @@ public final class L2Spawn implements Runnable {
 		if (_respawnEnabled) {
 			_npc.refreshID();
 
-			initializeAndSpawn();
+			initializeAndSpawn(false);
 		}
 	}
 
@@ -385,7 +379,7 @@ public final class L2Spawn implements Runnable {
 	 * Initializes the {@link Npc} based on data in this L2Spawn and spawn
 	 * {@link Npc} into the world.
 	 */
-	private void initializeAndSpawn() {
+	private void initializeAndSpawn(boolean invisibleXYZ ) {
 		// If location does not exist, there's a problem.
 		if (_loc == null) {
 			_log.warn("L2Spawn : the following npcID: " + _template.getNpcId() + " misses location informations.");
@@ -426,10 +420,39 @@ public final class L2Spawn implements Runnable {
 		// set heading (random heading if not defined)
 		_npc.setHeading(_loc.getHeading() < 0 ? Rnd.get(65536) : _loc.getHeading());
 
+		if(invisibleXYZ) {
+			_npc.setXYZInvisible(locx, locy, locz);
+		}
+		
 		// spawn NPC on new coordinates
 		_npc.spawnMe(locx, locy, locz);
+		
 	}
 
+	public static final Npc create(int idTemplate, int x, int y, int z, int heading) {
+		return create(idTemplate, x, y, z, heading, 0, true, true);
+	}
+	
+	public static final Npc create(int idTemplate, int x, int y, int z, int heading, int despawnSeconds, boolean invul, boolean fullRestore) {
+		try {
+			final NpcTemplate template = NpcTable.getInstance().getTemplate(idTemplate);
+			final L2Spawn spawn = new L2Spawn(template);
+			spawn.setLoc(x, y, z, heading);
+			spawn.setRespawnState(false);
+			final Npc npc = spawn.doSpawn(false, false);
+			if(fullRestore){
+				npc.setFullHpMpCp();
+			}
+			npc.setIsInvul(invul);
+			if(despawnSeconds > 0) {
+				npc.scheduleDespawn(despawnSeconds * 1000);
+			}
+			return npc;
+		} catch (ClassNotFoundException | NoSuchMethodException | SecurityException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 	@Override
 	public String toString() {
 		return "L2Spawn [id=" + _template.getNpcId() + ", loc=" + _loc.toString() + "]";

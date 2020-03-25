@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Set;
 
 import net.sf.l2j.gameserver.model.actor.Pet;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 
 public class PetItemList extends L2GameServerPacket {

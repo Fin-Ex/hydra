@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
 import net.sf.l2j.gameserver.model.pledge.Clan;
 
 public final class ClanWarehouse extends ItemContainer {
@@ -31,8 +31,8 @@ public final class ClanWarehouse extends ItemContainer {
 	}
 
 	@Override
-	public ItemLocation getBaseLocation() {
-		return ItemLocation.CLANWH;
+	public EItemLocation getBaseLocation() {
+		return EItemLocation.CLANWH;
 	}
 
 	@Override

@@ -3,7 +3,7 @@ package net.sf.l2j.gameserver.skills;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.instance.Cubic;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 
 /**
  * An Env object is a class to pass parameters to a calculator such as Player,

@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.network.serverpackets;
 
-import org.slf4j.LoggerFactory;
-
 public class StopRotation extends L2GameServerPacket {
 
 	private final int _charObjId;
@@ -12,6 +10,12 @@ public class StopRotation extends L2GameServerPacket {
 		_charObjId = objid;
 		_degree = degree;
 		_speed = speed;
+	}
+
+	public StopRotation(int objid, int degree) {
+		_charObjId = objid;
+		_degree = degree;
+		_speed = Short.MAX_VALUE;
 	}
 
 	@Override

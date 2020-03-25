@@ -76,6 +76,10 @@ public final class Gatekeeper extends Folk {
 					}
 				}
 
+				if (player.getInventory().getHunterCardInstance() != null) {
+					price = player.getInventory().getHunterCardInstance().getTeleportPrice(price);
+				}
+				
 				if (player.destroyItemByItemId("Teleport ", (list.isNoble()) ? 6651 : 57, price, this, true)) {
 					player.teleToLocation(list, 20);
 				}
@@ -87,8 +91,7 @@ public final class Gatekeeper extends Folk {
 			int val = 0;
 			try {
 				val = Integer.parseInt(command.substring(5));
-			} catch (IndexOutOfBoundsException ioobe) {
-			} catch (NumberFormatException nfe) {
+			} catch (IndexOutOfBoundsException | NumberFormatException ioobe) {
 			}
 
 			if (val == 1 && cal.get(Calendar.HOUR_OF_DAY) >= 20 && cal.get(Calendar.HOUR_OF_DAY) <= 23 && (cal.get(Calendar.DAY_OF_WEEK) == 1 || cal.get(Calendar.DAY_OF_WEEK) == 7)) {

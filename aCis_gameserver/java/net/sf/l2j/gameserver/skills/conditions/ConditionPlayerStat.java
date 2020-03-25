@@ -9,9 +9,9 @@ import net.sf.l2j.gameserver.skills.Stats;
  */
 public class ConditionPlayerStat extends Condition {
 
-	private final Stats stat;
-	private final int value;
-	private final boolean isLower;
+	private Stats stat;
+	private int value;
+	private boolean isLower;
 
 	public ConditionPlayerStat(Stats stat, int value, boolean isLower) {
 		this.stat = stat;

@@ -4,15 +4,24 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import lombok.Getter;
+import lombok.Setter;
+import net.sf.finex.dao.ItemDao;
+import net.sf.finex.model.GLT.GLTArbitrator;
 import net.sf.finex.model.talents.effects.HeavyGrip;
 import net.sf.l2j.L2DatabaseFactory;
+import net.sf.l2j.gameserver.idfactory.IdFactory;
+import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.type.HunterCardInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.type.EtcItemType;
+import net.sf.l2j.gameserver.model.item.type.ItemType;
 import net.sf.l2j.gameserver.model.itemcontainer.listeners.ArmorSetListener;
 import net.sf.l2j.gameserver.model.itemcontainer.listeners.BowRodListener;
 import net.sf.l2j.gameserver.model.itemcontainer.listeners.ItemPassiveSkillsListener;
@@ -29,13 +38,13 @@ public class PcInventory extends Inventory {
 	public static final int ANCIENT_ADENA_ID = 5575;
 
 	private final Player _owner;
-	private ItemInstance _adena;
-	private ItemInstance _ancientAdena;
+	@Getter @Setter private ItemInstance adenaInstance;
+	@Getter @Setter private ItemInstance ancientAdenaInstance;
+	@Getter @Setter private HunterCardInstance hunterCardInstance;
 
 	public PcInventory(Player owner) {
 		super();
 		_owner = owner;
-
 		addPaperdollListener(ArmorSetListener.getInstance());
 		addPaperdollListener(BowRodListener.getInstance());
 		addPaperdollListener(ItemPassiveSkillsListener.getInstance());
@@ -48,30 +57,22 @@ public class PcInventory extends Inventory {
 	}
 
 	@Override
-	protected ItemLocation getBaseLocation() {
-		return ItemLocation.INVENTORY;
+	protected EItemLocation getBaseLocation() {
+		return EItemLocation.INVENTORY;
 	}
 
 	@Override
-	protected ItemLocation getEquipLocation() {
-		return ItemLocation.PAPERDOLL;
-	}
-
-	public ItemInstance getAdenaInstance() {
-		return _adena;
+	protected EItemLocation getEquipLocation() {
+		return EItemLocation.PAPERDOLL;
 	}
 
 	@Override
 	public int getAdena() {
-		return _adena != null ? _adena.getCount() : 0;
-	}
-
-	public ItemInstance getAncientAdenaInstance() {
-		return _ancientAdena;
+		return adenaInstance != null ? adenaInstance.getCount() : 0;
 	}
 
 	public int getAncientAdena() {
-		return (_ancientAdena != null) ? _ancientAdena.getCount() : 0;
+		return (ancientAdenaInstance != null) ? ancientAdenaInstance.getCount() : 0;
 	}
 
 	public ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena) {
@@ -399,10 +400,13 @@ public class PcInventory extends Inventory {
 			return null;
 		}
 
-		if (item.getItemId() == ADENA_ID && !item.equals(_adena)) {
-			_adena = item;
-		} else if (item.getItemId() == ANCIENT_ADENA_ID && !item.equals(_ancientAdena)) {
-			_ancientAdena = item;
+		if (item.getItemId() == ADENA_ID && !item.equals(adenaInstance)) {
+			adenaInstance = item;
+		} else if (item.getItemId() == ANCIENT_ADENA_ID && !item.equals(ancientAdenaInstance)) {
+			ancientAdenaInstance = item;
+		} else if(item.getItemId() == GLTArbitrator.HUNTER_CARD_ID) {
+			hunterCardInstance = (HunterCardInstance) item;
+			hunterCardInstance.refresh(actor);
 		}
 
 		return item;
@@ -427,10 +431,10 @@ public class PcInventory extends Inventory {
 			return null;
 		}
 
-		if (item.getItemId() == ADENA_ID && !item.equals(_adena)) {
-			_adena = item;
-		} else if (item.getItemId() == ANCIENT_ADENA_ID && !item.equals(_ancientAdena)) {
-			_ancientAdena = item;
+		if (item.getItemId() == ADENA_ID && !item.equals(adenaInstance)) {
+			adenaInstance = item;
+		} else if (item.getItemId() == ANCIENT_ADENA_ID && !item.equals(ancientAdenaInstance)) {
+			ancientAdenaInstance = item;
 		}
 
 		if (actor != null) {
@@ -452,12 +456,12 @@ public class PcInventory extends Inventory {
 	public ItemInstance transferItem(String process, int objectId, int count, ItemContainer target, Player actor, WorldObject reference) {
 		ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);
 
-		if (_adena != null && (_adena.getCount() <= 0 || _adena.getOwnerId() != getOwnerId())) {
-			_adena = null;
+		if (adenaInstance != null && (adenaInstance.getCount() <= 0 || adenaInstance.getOwnerId() != getOwnerId())) {
+			adenaInstance = null;
 		}
 
-		if (_ancientAdena != null && (_ancientAdena.getCount() <= 0 || _ancientAdena.getOwnerId() != getOwnerId())) {
-			_ancientAdena = null;
+		if (ancientAdenaInstance != null && (ancientAdenaInstance.getCount() <= 0 || ancientAdenaInstance.getOwnerId() != getOwnerId())) {
+			ancientAdenaInstance = null;
 		}
 
 		return item;
@@ -494,12 +498,12 @@ public class PcInventory extends Inventory {
 	public ItemInstance destroyItem(String process, ItemInstance item, int count, Player actor, WorldObject reference) {
 		item = super.destroyItem(process, item, count, actor, reference);
 
-		if (_adena != null && _adena.getCount() <= 0) {
-			_adena = null;
+		if (adenaInstance != null && adenaInstance.getCount() <= 0) {
+			adenaInstance = null;
 		}
 
-		if (_ancientAdena != null && _ancientAdena.getCount() <= 0) {
-			_ancientAdena = null;
+		if (ancientAdenaInstance != null && ancientAdenaInstance.getCount() <= 0) {
+			ancientAdenaInstance = null;
 		}
 
 		return item;
@@ -566,12 +570,12 @@ public class PcInventory extends Inventory {
 	public ItemInstance dropItem(String process, ItemInstance item, Player actor, WorldObject reference) {
 		item = super.dropItem(process, item, actor, reference);
 
-		if (_adena != null && (_adena.getCount() <= 0 || _adena.getOwnerId() != getOwnerId())) {
-			_adena = null;
+		if (adenaInstance != null && (adenaInstance.getCount() <= 0 || adenaInstance.getOwnerId() != getOwnerId())) {
+			adenaInstance = null;
 		}
 
-		if (_ancientAdena != null && (_ancientAdena.getCount() <= 0 || _ancientAdena.getOwnerId() != getOwnerId())) {
-			_ancientAdena = null;
+		if (ancientAdenaInstance != null && (ancientAdenaInstance.getCount() <= 0 || ancientAdenaInstance.getOwnerId() != getOwnerId())) {
+			ancientAdenaInstance = null;
 		}
 
 		return item;
@@ -594,12 +598,12 @@ public class PcInventory extends Inventory {
 	public ItemInstance dropItem(String process, int objectId, int count, Player actor, WorldObject reference) {
 		ItemInstance item = super.dropItem(process, objectId, count, actor, reference);
 
-		if (_adena != null && (_adena.getCount() <= 0 || _adena.getOwnerId() != getOwnerId())) {
-			_adena = null;
+		if (adenaInstance != null && (adenaInstance.getCount() <= 0 || adenaInstance.getOwnerId() != getOwnerId())) {
+			adenaInstance = null;
 		}
 
-		if (_ancientAdena != null && (_ancientAdena.getCount() <= 0 || _ancientAdena.getOwnerId() != getOwnerId())) {
-			_ancientAdena = null;
+		if (ancientAdenaInstance != null && (ancientAdenaInstance.getCount() <= 0 || ancientAdenaInstance.getOwnerId() != getOwnerId())) {
+			ancientAdenaInstance = null;
 		}
 
 		return item;
@@ -622,9 +626,9 @@ public class PcInventory extends Inventory {
 		}
 
 		if (item.getItemId() == ADENA_ID) {
-			_adena = null;
+			adenaInstance = null;
 		} else if (item.getItemId() == ANCIENT_ADENA_ID) {
-			_ancientAdena = null;
+			ancientAdenaInstance = null;
 		}
 
 		return super.removeItem(item);
@@ -645,8 +649,8 @@ public class PcInventory extends Inventory {
 	@Override
 	public void restore() {
 		super.restore();
-		_adena = getItemByItemId(ADENA_ID);
-		_ancientAdena = getItemByItemId(ANCIENT_ADENA_ID);
+		adenaInstance = getItemByItemId(ADENA_ID);
+		ancientAdenaInstance = getItemByItemId(ANCIENT_ADENA_ID);
 	}
 
 	public static int[][] restoreVisibleInventory(int objectId) {
@@ -730,4 +734,44 @@ public class PcInventory extends Inventory {
 		}
 		return super.getPaperdollObjectId(slot);
 	}
+	
+	public void destroyAllItemsByType(ItemType type, String process, WorldObject reference) {
+		final Collection<ItemInstance> items = cache.get(type);
+		if(items == null || items.isEmpty()) {
+			return;
+		}
+		
+		final InventoryUpdate invenotryUpdate = new InventoryUpdate();
+		for (ItemInstance item : items) {
+			synchronized (item) {
+				removeItem(item);
+				World.getInstance().removeObject(item);
+				IdFactory.getInstance().releaseId(item.getObjectId());
+
+				// if it's a pet control item, delete the pet as well
+				if (type == EtcItemType.PET_COLLAR) {
+					try (Connection con = L2DatabaseFactory.getInstance().getConnection(); PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?")) {
+						statement.setInt(1, item.getObjectId());
+						statement.execute();
+					} catch (Exception e) {
+						_log.warn("could not delete pet objectid:", e);
+					}
+				}				
+				
+				ItemDao.updateDatabase(item);
+				invenotryUpdate.addItem(item);
+			}
+		}
+
+		refreshWeight();
+		
+		// Send inventory update packet
+		getOwner().sendPacket(invenotryUpdate);
+		
+		// Update current load as well
+		final StatusUpdate su = new StatusUpdate(getOwner());
+		su.addAttribute(StatusUpdate.CUR_LOAD, getOwner().getCurrentLoad());
+		getOwner().sendPacket(su);
+	}
+
 }

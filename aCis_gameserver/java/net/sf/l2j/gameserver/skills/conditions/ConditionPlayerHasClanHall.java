@@ -1,8 +1,6 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
-import java.util.List;
 
 import net.sf.l2j.gameserver.model.pledge.Clan;
 import net.sf.l2j.gameserver.skills.Env;
@@ -12,17 +10,17 @@ import net.sf.l2j.gameserver.skills.Env;
  *
  * @author MrPoke
  */
-public final class ConditionPlayerHasClanHall extends Condition {
+public class ConditionPlayerHasClanHall extends Condition {
 
-	private final List<Integer> _clanHall;
+	private int[] clanHall;
 
 	/**
 	 * Instantiates a new condition player has clan hall.
 	 *
 	 * @param clanHall the clan hall
 	 */
-	public ConditionPlayerHasClanHall(List<Integer> clanHall) {
-		_clanHall = clanHall;
+	public ConditionPlayerHasClanHall(int[] clanHall) {
+		this.clanHall = clanHall;
 	}
 
 	/**
@@ -39,14 +37,20 @@ public final class ConditionPlayerHasClanHall extends Condition {
 
 		final Clan clan = env.getPlayer().getClan();
 		if (clan == null) {
-			return (_clanHall.size() == 1 && _clanHall.get(0) == 0);
+			return (clanHall.length == 1 && clanHall[0] == 0);
 		}
 
 		// All Clan Hall
-		if (_clanHall.size() == 1 && _clanHall.get(0) == -1) {
+		if (clanHall.length == 1 && clanHall[0] == -1) {
 			return clan.hasHideout();
 		}
 
-		return _clanHall.contains(clan.getHideoutId());
+		for(int i = 0; i < clanHall.length; i++) {
+			if(clan.getHideoutId() == clanHall[i]) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 }

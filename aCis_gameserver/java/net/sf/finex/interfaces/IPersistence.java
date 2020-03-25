@@ -5,8 +5,6 @@
  */
 package net.sf.finex.interfaces;
 
-import org.slf4j.LoggerFactory;
-
 /**
  *
  * @author FinFan

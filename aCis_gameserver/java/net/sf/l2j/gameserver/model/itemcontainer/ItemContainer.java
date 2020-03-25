@@ -1,44 +1,46 @@
 package net.sf.l2j.gameserver.model.itemcontainer;
 
-import org.slf4j.LoggerFactory;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
-import java.util.logging.Level;
-import org.slf4j.Logger;
-
-import net.sf.l2j.commons.random.Rnd;
-
+import lombok.Getter;
+import net.sf.finex.dao.ItemDao;
 import net.sf.l2j.Config;
 import net.sf.l2j.L2DatabaseFactory;
+import net.sf.l2j.commons.random.Rnd;
 import net.sf.l2j.gameserver.data.ItemTable;
 import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.events.OnAddItem;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemState;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.EItemState;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
+import net.sf.l2j.gameserver.model.item.type.ItemType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class ItemContainer {
 
 	protected static final Logger _log = LoggerFactory.getLogger(ItemContainer.class.getName());
 
 	protected final Set<ItemInstance> _items = new ConcurrentSkipListSet<>();
+	@Getter protected final Map<ItemType, Set<ItemInstance>> cache = new ConcurrentHashMap<>();
 
 	protected ItemContainer() {
 	}
 
 	protected abstract Creature getOwner();
 
-	protected abstract ItemLocation getBaseLocation();
+	protected abstract EItemLocation getBaseLocation();
 
 	public String getName() {
 		return "ItemContainer";
@@ -171,33 +173,33 @@ public abstract class ItemContainer {
 		if (olditem != null && olditem.isStackable()) {
 			int count = item.getCount();
 			olditem.changeCount(process, count, actor, reference);
-			olditem.setLastChange(ItemState.MODIFIED);
+			olditem.setLastChange(EItemState.MODIFIED);
 
 			// And destroys the item
 			ItemTable.getInstance().destroyItem(process, item, actor, reference);
-			item.updateDatabase();
+			ItemDao.updateDatabase(item);
 			item = olditem;
 
 			// Updates database
 			if (item.getItemId() == 57 && count < 10000 * Config.RATE_DROP_ADENA) {
 				// Small adena changes won't be saved to database all the time
 				if (Rnd.get(10) < 2) {
-					item.updateDatabase();
+					ItemDao.updateDatabase(item);
 				}
 			} else {
-				item.updateDatabase();
+				ItemDao.updateDatabase(item);
 			}
 		} // If item hasn't be found in inventory, create new one
 		else {
 			item.setOwnerId(process, getOwnerId(), actor, reference);
 			item.setLocation(getBaseLocation());
-			item.setLastChange(ItemState.ADDED);
+			item.setLastChange(EItemState.ADDED);
 
 			// Add item in inventory
 			addItem(item);
 
 			// Updates database
-			item.updateDatabase();
+			ItemDao.updateDatabase(item);
 		}
 
 		refreshWeight();
@@ -221,16 +223,16 @@ public abstract class ItemContainer {
 		// If stackable item is found in inventory just add to current quantity
 		if (item != null && item.isStackable()) {
 			item.changeCount(process, count, actor, reference);
-			item.setLastChange(ItemState.MODIFIED);
+			item.setLastChange(EItemState.MODIFIED);
 
 			// Updates database
 			if (itemId == 57 && count < 10000 * Config.RATE_DROP_ADENA) {
 				// Small adena changes won't be saved to database all the time
 				if (Rnd.get(10) < 2) {
-					item.updateDatabase();
+					ItemDao.updateDatabase(item);
 				}
 			} else {
-				item.updateDatabase();
+				ItemDao.updateDatabase(item);
 			}
 		} // If item hasn't be found in inventory, create new one
 		else {
@@ -244,13 +246,13 @@ public abstract class ItemContainer {
 				item = ItemTable.getInstance().createItem(process, itemId, template.isStackable() ? count : 1, actor, reference);
 				item.setOwnerId(getOwnerId());
 				item.setLocation(getBaseLocation());
-				item.setLastChange(ItemState.ADDED);
+				item.setLastChange(EItemState.ADDED);
 
 				// Add item in inventory
 				addItem(item);
 
 				// Updates database
-				item.updateDatabase();
+				ItemDao.updateDatabase(item);
 
 				// If stackable, end loop as entire count is included in 1 instance of item
 				if (template.isStackable() || !Config.MULTIPLE_ITEM_DROP) {
@@ -325,10 +327,10 @@ public abstract class ItemContainer {
 			}
 
 			// Updates database
-			sourceitem.updateDatabase();
+			ItemDao.updateDatabase(sourceitem);
 
 			if (targetitem != sourceitem && targetitem != null) {
-				targetitem.updateDatabase();
+				ItemDao.updateDatabase(targetitem);
 			}
 
 			if (sourceitem.isAugmented()) {
@@ -373,15 +375,14 @@ public abstract class ItemContainer {
 			// Adjust item quantity
 			if (item.getCount() > count) {
 				item.changeCount(process, -count, actor, reference);
-				item.setLastChange(ItemState.MODIFIED);
+				item.setLastChange(EItemState.MODIFIED);
 
 				// don't update often for untraced items
 				if (process != null || Rnd.get(10) == 0) {
-					item.updateDatabase();
+					ItemDao.updateDatabase(item);
 				}
 
 				refreshWeight();
-
 				return item;
 			}
 
@@ -395,8 +396,7 @@ public abstract class ItemContainer {
 			}
 
 			ItemTable.getInstance().destroyItem(process, item, actor, reference);
-
-			item.updateDatabase();
+			ItemDao.updateDatabase(item);
 			refreshWeight();
 		}
 		return item;
@@ -480,8 +480,14 @@ public abstract class ItemContainer {
 	 */
 	protected void addItem(ItemInstance item) {
 		item.actualizeTime();
-
 		_items.add(item);
+		
+		// add to cahche
+		final ItemType type = item.getItemType();
+		if(!cache.containsKey(type)) {
+			cache.put(item.getItemType(), new ConcurrentSkipListSet<>());
+		}
+		cache.get(type).add(item);
 	}
 
 	/**
@@ -491,6 +497,11 @@ public abstract class ItemContainer {
 	 * @return
 	 */
 	protected boolean removeItem(ItemInstance item) {
+		// add to cahche
+		final ItemType type = item.getItemType();
+		if(!cache.get(type).remove(item)) {
+			_log.warn("Carefully! removable item is not in cahche! So the link will be storaed in cache!");
+		}
 		return _items.remove(item);
 	}
 
@@ -506,7 +517,7 @@ public abstract class ItemContainer {
 	public void deleteMe() {
 		if (getOwner() != null) {
 			for (ItemInstance item : _items) {
-				item.updateDatabase();
+				ItemDao.updateDatabase(item);
 				World.getInstance().removeObject(item);
 			}
 		}
@@ -518,9 +529,7 @@ public abstract class ItemContainer {
 	 */
 	public void updateDatabase() {
 		if (getOwner() != null) {
-			for (ItemInstance item : _items) {
-				item.updateDatabase();
-			}
+			_items.forEach(item -> ItemDao.updateDatabase(item));
 		}
 	}
 
@@ -528,35 +537,32 @@ public abstract class ItemContainer {
 	 * Get back items in container from database
 	 */
 	public void restore() {
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
-			PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND (loc=?)");
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection(); PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND (loc=?)")) {
 			statement.setInt(1, getOwnerId());
 			statement.setString(2, getBaseLocation().name());
-			ResultSet inv = statement.executeQuery();
-
-			while (inv.next()) {
-				ItemInstance item = ItemInstance.restoreFromDb(getOwnerId(), inv);
-				if (item == null) {
-					continue;
-				}
-
-				World.getInstance().addObject(item);
-
-				Player owner = (getOwner() == null) ? null : getOwner().getPlayer();
-
-				// If stackable item is found in inventory just add to current quantity
-				if (item.isStackable() && getItemByItemId(item.getItemId()) != null) {
-					addItem("Restore", item, owner, null);
-				} else {
-					addItem(item);
+			try (ResultSet inv = statement.executeQuery()) {
+				while (inv.next()) {
+					ItemInstance item = ItemDao.restoreFromDb(getOwnerId(), inv);
+					if (item == null) {
+						continue;
+					}
+					
+					World.getInstance().addObject(item);
+					
+					Player owner = (getOwner() == null) ? null : getOwner().getPlayer();
+					
+					// If stackable item is found in inventory just add to current quantity
+					if (item.isStackable() && getItemByItemId(item.getItemId()) != null) {
+						addItem("Restore", item, owner, null);
+					} else {
+						addItem(item);
+					}
 				}
 			}
-			inv.close();
-			statement.close();
-			refreshWeight();
 		} catch (Exception e) {
 			_log.warn("could not restore container:", e);
 		}
+		refreshWeight();
 	}
 
 	public boolean validateCapacity(int slots) {

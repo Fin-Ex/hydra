@@ -52,7 +52,7 @@ import net.sf.l2j.gameserver.model.actor.instance.VillageMasterPriest;
 import net.sf.l2j.gameserver.model.actor.instance.WarehouseKeeper;
 import net.sf.l2j.gameserver.model.actor.template.NpcTemplate;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -67,20 +67,14 @@ import net.sf.l2j.gameserver.util.Broadcast;
 @Slf4j
 public class RandomQuestManager implements Runnable {
 
-	@Getter
-	private static final RandomQuestManager instance = new RandomQuestManager();
-	@Getter
-	private final Map<ETownType, Map<EGradeType, List<RandomQuestData>>> holder = new HashMap<>();
-	@Getter
-	private final EventBus eventBus = new EventBus();
+	@Getter private static final RandomQuestManager instance = new RandomQuestManager();
+	@Getter private final Map<ETownType, Map<EGradeType, List<RandomQuestData>>> holder = new HashMap<>();
+	@Getter private final EventBus eventBus = new EventBus();
 
 	// Monster holders
-	@Getter
-	private final Map<Integer, List<NpcTemplate>> bosses = new HashMap<>();
-	@Getter
-	private final Map<Integer, List<NpcTemplate>> monsters = new HashMap<>();
-	@Getter
-	private final List<NpcTemplate> npcs = new ArrayList<>();
+	@Getter private final Map<Integer, List<NpcTemplate>> bosses = new HashMap<>();
+	@Getter private final Map<Integer, List<NpcTemplate>> monsters = new HashMap<>();
+	@Getter private final List<NpcTemplate> npcs = new ArrayList<>();
 
 	private final ReentrantLock locker = new ReentrantLock();
 	private LocalDateTime nextGeneration;

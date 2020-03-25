@@ -7,6 +7,8 @@ package net.sf.finex;
 
 import net.sf.finex.interfaces.IPersistence;
 import net.sf.l2j.gameserver.model.WorldObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -14,6 +16,7 @@ import net.sf.l2j.gameserver.model.WorldObject;
  */
 public abstract class AbstractComponent implements IPersistence {
 
+	protected static final Logger log = LoggerFactory.getLogger(AbstractComponent.class);
 	private final WorldObject gameObject;
 
 	public AbstractComponent(WorldObject worldObject) {

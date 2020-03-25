@@ -9,7 +9,6 @@ import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
-import static net.sf.l2j.gameserver.network.SystemMessageId.S1_ABSORBS_YOUR_CHARGES;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.StatsSet;
@@ -63,6 +62,9 @@ public class L2SkillAbsorb extends L2Skill {
 				}
 
 				break;
+				
+			default:
+				throw new UnsupportedOperationException("Nothing scare, just warning about unhandled absorb type: " + absorbType);
 		}
 	}
 

@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 
 public class SellList extends L2GameServerPacket {
 

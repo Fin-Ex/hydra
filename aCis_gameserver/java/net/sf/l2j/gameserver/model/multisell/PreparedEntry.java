@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 
 /**
  * A dynamic layer of {@link Entry}, which holds the tax amount and can retain

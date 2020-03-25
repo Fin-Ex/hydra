@@ -18,6 +18,7 @@ public abstract class AbstractClassComponent extends AbstractComponent implement
 
 	public AbstractClassComponent(WorldObject worldObject) {
 		super(worldObject);
+		log.info("{} component created!", getClass().getSimpleName());
 	}
 
 	@Override

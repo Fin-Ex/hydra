@@ -35,7 +35,7 @@ import net.sf.l2j.gameserver.model.group.Party;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
 import net.sf.l2j.gameserver.model.item.DropCategory;
 import net.sf.l2j.gameserver.model.item.DropData;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.manor.Seed;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -694,7 +694,7 @@ public class Attackable extends Npc {
 			return 0;
 		}
 
-		if (ai.getAttacker() instanceof Player && ((Player) ai.getAttacker()).getAppearance().getInvisible()) {
+		if (ai.getAttacker() instanceof Player && ((Player) ai.getAttacker()).getAppearance().isInvisible()) {
 			// Remove Object Should Use This Method and Can be Blocked While Interating
 			_aggroList.remove(target);
 			return 0;

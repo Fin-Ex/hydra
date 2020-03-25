@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.model.location;
 
-import org.slf4j.LoggerFactory;
-
 /**
  * A datatype used to retain a 3D (x/y/z) point. It got the capability to be set
  * and cleaned.
@@ -62,6 +60,13 @@ public class Location {
 		this.x = x;
 		this.y = y;
 		this.z = z;
+	}
+
+	public Location add(int x, int y, int z) {
+		this.x += x;
+		this.y += y;
+		this.z += z;
+		return this;
 	}
 
 	public void set(Location loc) {

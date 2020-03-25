@@ -55,7 +55,7 @@ public class SiegeGuardAI extends AttackableAI {
 		}
 
 		// Check if the target isn't GM on hide mode.
-		if (player.isGM() && player.getAppearance().getInvisible()) {
+		if (player.isGM() && player.getAppearance().isInvisible()) {
 			return false;
 		}
 

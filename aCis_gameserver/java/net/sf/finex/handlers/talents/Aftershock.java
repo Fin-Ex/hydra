@@ -5,31 +5,24 @@
  */
 package net.sf.finex.handlers.talents;
 
-import net.sf.finex.model.talents.TalentHandler;
-import java.lang.reflect.Constructor;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.l2j.gameserver.data.SkillTable;
-import net.sf.l2j.gameserver.model.ChanceCondition;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.skills.AbnormalEffect;
-import net.sf.l2j.gameserver.skills.EffectClassHolder;
 import net.sf.l2j.gameserver.skills.EffectTemplate;
-import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.L2Skill;
-import net.sf.l2j.gameserver.skills.basefuncs.Lambda;
 import net.sf.l2j.gameserver.skills.basefuncs.LambdaConst;
-import net.sf.l2j.gameserver.skills.conditions.Condition;
-import net.sf.l2j.gameserver.skills.effects.EffectParalyze;
 import net.sf.l2j.gameserver.templates.StatsSet;
 import net.sf.l2j.gameserver.templates.skills.EEffectBonusType;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
+import net.sf.finex.model.talents.ITalentHandler;
 
 /**
  *
  * @author finfan
  */
 @Slf4j
-public class Aftershock implements TalentHandler {
+public class Aftershock implements ITalentHandler {
 
 	@Override
 	public EffectTemplate invoke(Object... args) {

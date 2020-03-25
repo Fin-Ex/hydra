@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.model.zone.type;
 
-import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,15 +8,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Level;
-
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.gameserver.data.MapRegionTable.TeleportType;
 import net.sf.l2j.gameserver.model.actor.Attackable;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Playable;
-import net.sf.l2j.gameserver.model.actor.Summon;
 import net.sf.l2j.gameserver.model.actor.Player;
+import net.sf.l2j.gameserver.model.actor.Summon;
 import net.sf.l2j.gameserver.model.zone.L2ZoneType;
 import net.sf.l2j.gameserver.model.zone.ZoneId;
 
@@ -41,36 +38,39 @@ public class L2BossZone extends L2ZoneType {
 	public L2BossZone(int id) {
 		super(id);
 
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
-			PreparedStatement statement = con.prepareStatement(SELECT_GRAND_BOSS_LIST);
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection(); PreparedStatement statement = con.prepareStatement(SELECT_GRAND_BOSS_LIST)) {
 			statement.setInt(1, id);
-			ResultSet rset = statement.executeQuery();
-
-			while (rset.next()) {
-				allowPlayerEntry(rset.getInt("player_id"));
+			try (ResultSet rset = statement.executeQuery()) {
+				while (rset.next()) {
+					allowPlayerEntry(rset.getInt("player_id"));
+				}
 			}
-
-			rset.close();
-			statement.close();
 		} catch (Exception e) {
-			_log.warn("L2BossZone: Could not load grandboss zone id=" + id + ": " + e.getMessage(), e);
+			log.warn("L2BossZone: Could not load grandboss zone id=" + id + ": " + e.getMessage(), e);
 		}
 	}
 
 	@Override
 	public void setParameter(String name, String value) {
-		if (name.equals("InvadeTime")) {
-			_timeInvade = Integer.parseInt(value);
-		} else if (name.equals("EnabledByDefault")) {
-			_enabled = Boolean.parseBoolean(value);
-		} else if (name.equals("oustX")) {
-			_oustLoc[0] = Integer.parseInt(value);
-		} else if (name.equals("oustY")) {
-			_oustLoc[1] = Integer.parseInt(value);
-		} else if (name.equals("oustZ")) {
-			_oustLoc[2] = Integer.parseInt(value);
-		} else {
-			super.setParameter(name, value);
+		switch (name) {
+			case "InvadeTime":
+				_timeInvade = Integer.parseInt(value);
+				break;
+			case "EnabledByDefault":
+				_enabled = Boolean.parseBoolean(value);
+				break;
+			case "oustX":
+				_oustLoc[0] = Integer.parseInt(value);
+				break;
+			case "oustY":
+				_oustLoc[1] = Integer.parseInt(value);
+				break;
+			case "oustZ":
+				_oustLoc[2] = Integer.parseInt(value);
+				break;
+			default:
+				super.setParameter(name, value);
+				break;
 		}
 	}
 

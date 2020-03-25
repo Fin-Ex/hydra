@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.L2Skill;
@@ -12,8 +11,8 @@ import net.sf.l2j.gameserver.skills.L2Skill;
  */
 public class ConditionPlayerActiveSkillId extends Condition {
 
-	private final int _skillId;
-	private final int _skillLevel;
+	private int skillId;
+	private int skillLevel;
 
 	/**
 	 * Instantiates a new condition player active skill id.
@@ -21,8 +20,8 @@ public class ConditionPlayerActiveSkillId extends Condition {
 	 * @param skillId the skill id
 	 */
 	public ConditionPlayerActiveSkillId(int skillId) {
-		_skillId = skillId;
-		_skillLevel = -1;
+		this.skillId = skillId;
+		this.skillLevel = -1;
 	}
 
 	/**
@@ -32,13 +31,13 @@ public class ConditionPlayerActiveSkillId extends Condition {
 	 * @param skillLevel the skill level
 	 */
 	public ConditionPlayerActiveSkillId(int skillId, int skillLevel) {
-		_skillId = skillId;
-		_skillLevel = skillLevel;
+		this.skillId = skillId;
+		this.skillLevel = skillLevel;
 	}
 
 	@Override
 	public boolean testImpl(Env env) {
-		final L2Skill skill = env.getCharacter().getSkill(_skillId);
-		return skill != null && _skillLevel <= skill.getLevel();
+		final L2Skill skill = env.getCharacter().getSkill(skillId);
+		return skill != null && skillLevel <= skill.getLevel();
 	}
 }

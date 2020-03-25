@@ -5,16 +5,13 @@
  */
 package net.sf.finex.handlers.talents;
 
-import net.sf.finex.model.talents.TalentHandler;
+import net.sf.finex.model.talents.ITalentHandler;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.skills.AbnormalEffect;
 import net.sf.l2j.gameserver.skills.EffectTemplate;
-import net.sf.l2j.gameserver.skills.Env;
-import net.sf.l2j.gameserver.skills.L2Effect;
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.skills.Stats;
-import net.sf.l2j.gameserver.skills.basefuncs.FuncMul;
 import net.sf.l2j.gameserver.skills.basefuncs.FuncTemplate;
 import net.sf.l2j.gameserver.skills.basefuncs.LambdaConst;
 import net.sf.l2j.gameserver.templates.StatsSet;
@@ -25,7 +22,7 @@ import net.sf.l2j.gameserver.templates.skills.ESkillType;
  *
  * @author finfan
  */
-public class Disaster implements TalentHandler {
+public class Disaster implements ITalentHandler {
 
 	@Override
 	public EffectTemplate invoke(Object... args) {

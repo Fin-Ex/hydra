@@ -2,7 +2,7 @@ package net.sf.l2j.gameserver.network.serverpackets;
 
 import org.slf4j.LoggerFactory;
 
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 
 public class EquipUpdate extends L2GameServerPacket {

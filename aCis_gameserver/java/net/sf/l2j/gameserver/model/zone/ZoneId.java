@@ -25,7 +25,8 @@ public enum ZoneId {
 	CAST_ON_ARTIFACT(16),
 	NO_RESTART(17),
 	SCRIPT(18),
-	GLT(19);
+	GLT(19),
+	GLT_BUSH(20);
 
 	public static final ZoneId[] VALUES = values();
 	

@@ -3,6 +3,7 @@ package net.sf.l2j.gameserver.model.actor;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -22,6 +23,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import lombok.Getter;
 import lombok.Setter;
 import net.sf.finex.AbstractComponent;
+import net.sf.finex.dao.ItemDao;
 import net.sf.finex.dao.PlayerLineageDao;
 import net.sf.finex.data.RecipeData;
 import net.sf.finex.data.ReviveRequestData;
@@ -33,8 +35,10 @@ import net.sf.finex.enums.EPartyMessageType;
 import net.sf.finex.enums.EPunishLevel;
 import net.sf.finex.enums.ESkillTargetType;
 import net.sf.finex.enums.EStoreType;
+import net.sf.finex.events.EventBus;
 import net.sf.finex.handlers.dialog.DlgManager;
 import net.sf.finex.handlers.dialog.requests.ReviveRequest;
+import net.sf.finex.model.GLT.GLTController;
 import net.sf.finex.model.classes.AbstractClassComponent;
 import net.sf.finex.model.classes.Warsmith;
 import net.sf.finex.model.craft.Craft;
@@ -104,6 +108,9 @@ import net.sf.l2j.gameserver.model.actor.ai.type.CreatureAI;
 import net.sf.l2j.gameserver.model.actor.ai.type.PlayerAI;
 import net.sf.l2j.gameserver.model.actor.ai.type.SummonAI;
 import net.sf.l2j.gameserver.model.actor.appearance.PcAppearance;
+import net.sf.l2j.gameserver.model.actor.events.OnKill;
+import net.sf.l2j.gameserver.model.actor.events.OnReduceHp;
+import net.sf.l2j.gameserver.model.actor.events.OnZoneSet;
 import net.sf.l2j.gameserver.model.actor.instance.Cubic;
 import net.sf.l2j.gameserver.model.actor.instance.Door;
 import net.sf.l2j.gameserver.model.actor.instance.FestivalMonster;
@@ -132,9 +139,9 @@ import net.sf.l2j.gameserver.model.group.CommandChannel;
 import net.sf.l2j.gameserver.model.group.Party;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
 import net.sf.l2j.gameserver.model.holder.SkillUseHolder;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemLocation;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance.ItemState;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
+import net.sf.l2j.gameserver.model.item.instance.EItemState;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
 import net.sf.l2j.gameserver.model.item.type.ActionType;
@@ -170,6 +177,7 @@ import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.ChairSit;
 import net.sf.l2j.gameserver.network.serverpackets.ChangeWaitType;
 import net.sf.l2j.gameserver.network.serverpackets.CharInfo;
+import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 import net.sf.l2j.gameserver.network.serverpackets.DeleteObject;
 import net.sf.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import net.sf.l2j.gameserver.network.serverpackets.ExAutoSoulShot;
@@ -298,27 +306,25 @@ public final class Player extends Playable {
 
 	public static final int REQUEST_TIMEOUT = 15;
 
-	private static final int[] EXPERTISE_LEVELS
-			= {
-				0, // NONE
-				20, // D
-				40, // C
-				52, // B
-				61, // A
-				76, // S
-			};
+	private static final int[] EXPERTISE_LEVELS = {
+		0, // NONE
+		20, // D
+		40, // C
+		52, // B
+		61, // A
+		76, // S
+	};
 
-	private static final int[] COMMON_CRAFT_LEVELS
-			= {
-				5,
-				20,
-				28,
-				36,
-				43,
-				49,
-				55,
-				62
-			};
+	private static final int[] COMMON_CRAFT_LEVELS = {
+		5,
+		20,
+		28,
+		36,
+		43,
+		49,
+		55,
+		62
+	};
 
 	private L2GameClient _client;
 	private final Map<Integer, String> _chars = new HashMap<>();
@@ -388,9 +394,7 @@ public final class Player extends Playable {
 
 	private int _teleMode;
 	private boolean _isCrystallizing;
-	@Getter
-	@Setter
-	private Craft craft;
+	@Getter @Setter private Craft craft;
 
 	private final Map<Integer, RecipeData> _dwarvenRecipeBook = new HashMap<>();
 	private final Map<Integer, RecipeData> _commonRecipeBook = new HashMap<>();
@@ -557,41 +561,22 @@ public final class Player extends Playable {
 	private final List<Integer> _selectedBlocksList = new ArrayList<>(); // Related to CB.
 
 	// Request Engage
-	@Getter
-	@Setter
-	private int coupleId;
-	@Getter
-	@Setter
-	private boolean isUnderMarryRequest;
-	@Getter
-	@Setter
-	private int requesterId;
+	@Getter @Setter private int coupleId;
+	@Getter @Setter private boolean isUnderMarryRequest;
+	@Getter @Setter private int requesterId;
 
 	// Request Summon Friend (Teleport)
-	@Getter
-	@Setter
-	private Player summonTargetRequest;
-	@Getter
-	@Setter
-	private L2Skill summonSkillRequest;
+	@Getter @Setter private Player summonTargetRequest;
+	@Getter @Setter private L2Skill summonSkillRequest;
 
 	// Request Gates open/close
-	@Getter
-	@Setter
-	private Door requestedGate;
+	@Getter @Setter private Door requestedGate;
 
 	/* Lineage points for mastery/talents learn */
-	@Getter
-	@Setter
-	private int lineagePoints;
-	@Getter
-	@Setter
-	private int lineageReachLevel;
-	@Getter
-	@Setter
-	private int lineageResetPrice;
-	@Getter
-	private final List<TalentData> talentList = new ArrayList<>();
+	@Getter @Setter private int lineagePoints;
+	@Getter @Setter private int lineageReachLevel;
+	@Getter @Setter private int lineageResetPrice;
+	@Getter private final List<TalentData> talentList = new ArrayList<>();
 
 	/**
 	 * Constructor of Player (use Creature constructor).
@@ -627,7 +612,7 @@ public final class Player extends Playable {
 		getWarehouse();
 		getFreight();
 	}
-	
+
 	private Player(int objectId) {
 		super(objectId, null);
 		initCharStatusUpdateValues();
@@ -670,8 +655,7 @@ public final class Player extends Playable {
 		player.setBaseClass(player.getClassId());
 
 		// Add the player in the characters table of the database
-		try (Connection con = L2DatabaseFactory.getInstance().getConnection()) {
-			PreparedStatement statement = con.prepareStatement(INSERT_CHARACTER);
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection(); PreparedStatement statement = con.prepareStatement(INSERT_CHARACTER)) {
 			statement.setString(1, accountName);
 			statement.setInt(2, player.getObjectId());
 			statement.setString(3, player.getName());
@@ -707,7 +691,6 @@ public final class Player extends Playable {
 			statement.setLong(33, 0);
 			statement.setLong(34, System.currentTimeMillis());
 			statement.executeUpdate();
-			statement.close();
 		} catch (Exception e) {
 			_log.error("Could not insert char data: " + e);
 			return null;
@@ -780,6 +763,8 @@ public final class Player extends Playable {
 
 	/**
 	 * Return the L2PcTemplate link to the Player.
+	 *
+	 * @return
 	 */
 	@Override
 	public final PlayerTemplate getTemplate() {
@@ -3807,6 +3792,12 @@ public final class Player extends Playable {
 		// Icons update in order to get retained buffs list
 		updateEffectIcons();
 
+		if(GLTController.getInstance().isParticipate(this)) {
+			final EventBus GLTListener = GLTController.getInstance().getStage().getHandler().getListener();
+			if(GLTListener != null) {
+				GLTListener.notify(new OnKill(killer, this));
+			}
+		}
 		return true;
 	}
 
@@ -4114,7 +4105,7 @@ public final class Player extends Playable {
 	}
 
 	/**
-	 * Return the L2Summon of the Player or null.
+	 * @return the L2Summon of the Player or null.
 	 */
 	@Override
 	public Summon getActiveSummon() {
@@ -4445,13 +4436,13 @@ public final class Player extends Playable {
 		if (arrows.getCount() > 1) {
 			synchronized (arrows) {
 				arrows.changeCount(null, -1, this, null);
-				arrows.setLastChange(ItemState.MODIFIED);
+				arrows.setLastChange(EItemState.MODIFIED);
 
 				iu.addModifiedItem(arrows);
 
 				// could do also without saving, but let's save approx 1 of 10
 				if (Rnd.get(10) < 1) {
-					arrows.updateDatabase();
+					ItemDao.updateDatabase(arrows);
 				}
 
 				_inventory.refreshWeight();
@@ -4478,7 +4469,7 @@ public final class Player extends Playable {
 		}
 
 		// Arrows are already equiped, don't bother.
-		if (arrows.getLocation() == ItemLocation.PAPERDOLL) {
+		if (arrows.getLocation() == EItemLocation.PAPERDOLL) {
 			return true;
 		}
 
@@ -5592,7 +5583,7 @@ public final class Player extends Playable {
 
 				ps.executeBatch(); // Execute SQLs
 			}
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			_log.warn("Could not store char effect data: ", e);
 		}
 	}
@@ -7775,7 +7766,7 @@ public final class Player extends Playable {
 			if (isInvul()) {
 				sendMessage("Entering world in Invulnerable mode.");
 			}
-			if (getAppearance().getInvisible()) {
+			if (getAppearance().isInvisible()) {
 				sendMessage("Entering world in Invisible mode.");
 			}
 			if (isInRefusalMode()) {
@@ -7962,6 +7953,7 @@ public final class Player extends Playable {
 		if (getTrainedBeast() != null) {
 			getTrainedBeast().onOwnerGotAttacked(attacker);
 		}
+		getEventBus().notify(new OnReduceHp(this, attacker, skill, value, getCurrentHp()));
 	}
 
 	public synchronized void addBypass(String bypass) {
@@ -9596,7 +9588,7 @@ public final class Player extends Playable {
 		}
 	}
 
-	private final void sendInfoFrom(WorldObject object) {
+	private void sendInfoFrom(WorldObject object) {
 		if (object.getPolyType() == PolyType.ITEM) {
 			sendPacket(new SpawnItem(object));
 		} else {
@@ -9679,9 +9671,26 @@ public final class Player extends Playable {
 			_log.error("", e);
 		}
 	}
-	
+
+	@Override
 	public void setFullHpMpCp() {
 		setCurrentCp(getMaxCp());
 		super.setFullHpMpCp();
 	}
+
+	public void broadcastSay(int say2, String text) {
+		broadcastPacket(new CreatureSay(getObjectId(), say2, getName(), text));
+	}
+
+	@Override
+	public void setInsideZone(ZoneId zone, boolean state) {
+		super.setInsideZone(zone, state);
+		if (GLTController.getInstance().getStage() != null) {
+			final EventBus listener = GLTController.getInstance().getStage().getHandler().getListener();
+			if(listener != null) {
+				listener.notify(new OnZoneSet(this, zone, state));
+			}
+		}
+	}
+	
 }

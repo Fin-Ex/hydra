@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.pledge.Clan;
 import net.sf.l2j.gameserver.skills.Env;
@@ -12,7 +11,7 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public final class ConditionPlayerHasCastle extends Condition {
 
-	private final int _castle;
+	private int castle;
 
 	/**
 	 * Instantiates a new condition player has castle.
@@ -20,7 +19,7 @@ public final class ConditionPlayerHasCastle extends Condition {
 	 * @param castle the castle
 	 */
 	public ConditionPlayerHasCastle(int castle) {
-		_castle = castle;
+		this.castle = castle;
 	}
 
 	/**
@@ -37,14 +36,14 @@ public final class ConditionPlayerHasCastle extends Condition {
 
 		Clan clan = env.getPlayer().getClan();
 		if (clan == null) {
-			return _castle == 0;
+			return castle == 0;
 		}
 
 		// Any castle
-		if (_castle == -1) {
+		if (castle == -1) {
 			return clan.hasCastle();
 		}
 
-		return clan.getCastleId() == _castle;
+		return clan.getCastleId() == castle;
 	}
 }

@@ -1,5 +1,6 @@
 package net.sf.l2j.gameserver.network.clientpackets;
 
+import net.sf.finex.dao.ItemDao;
 import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.commons.random.Rnd;
@@ -9,7 +10,7 @@ import net.sf.l2j.gameserver.data.xml.ArmorSetData;
 import net.sf.l2j.gameserver.model.World;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.item.ArmorSet;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Armor;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
@@ -117,7 +118,7 @@ public final class RequestEnchantItem extends AbstractEnchantPacket {
 				}
 
 				item.setEnchantLevel(item.getEnchantLevel() + 1);
-				item.updateDatabase();
+				ItemDao.updateDatabase(item);
 
 				// If item is equipped, verify the skill obtention (+4 duals, +6 armorset).
 				if (item.isEquipped()) {
@@ -189,7 +190,7 @@ public final class RequestEnchantItem extends AbstractEnchantPacket {
 					activeChar.sendPacket(SystemMessageId.BLESSED_ENCHANT_FAILED);
 
 					item.setEnchantLevel(0);
-					item.updateDatabase();
+					ItemDao.updateDatabase(item);
 					activeChar.sendPacket(EnchantResult.UNSUCCESS);
 				} else {
 					// enchant failed, destroy item

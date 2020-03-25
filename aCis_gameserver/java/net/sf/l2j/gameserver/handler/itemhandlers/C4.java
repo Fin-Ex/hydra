@@ -16,7 +16,7 @@ import net.sf.l2j.gameserver.idfactory.IdFactory;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Playable;
 import net.sf.l2j.gameserver.model.actor.instance.EffectPoint;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
 
@@ -36,6 +36,7 @@ public class C4 implements IHandler {
 		final boolean forceUse = (boolean) args[2];
 		item.setPickupable(false);
 		item.setAutodestroyable(false);
+		item.setIsVisible(false);
 		item.dropMe(playable, playable.getX(), playable.getY(), playable.getZ());
 		item.setSpecialTask(ThreadPool.scheduleAtFixedRate(new Task(item), 15000, 1000));
 	}

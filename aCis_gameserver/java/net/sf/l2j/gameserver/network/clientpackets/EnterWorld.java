@@ -1,13 +1,9 @@
 package net.sf.l2j.gameserver.network.clientpackets;
 
-import org.slf4j.LoggerFactory;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Map.Entry;
-import java.util.logging.Level;
-
 import net.sf.l2j.Config;
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.gameserver.communitybbs.Manager.MailBBSManager;
@@ -31,6 +27,7 @@ import net.sf.l2j.gameserver.model.entity.ClanHall;
 import net.sf.l2j.gameserver.model.entity.Siege;
 import net.sf.l2j.gameserver.model.entity.Siege.SiegeSide;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
+import net.sf.l2j.gameserver.model.item.type.EtcItemType;
 import net.sf.l2j.gameserver.model.olympiad.Olympiad;
 import net.sf.l2j.gameserver.model.pledge.Clan;
 import net.sf.l2j.gameserver.model.pledge.Clan.SubPledge;
@@ -316,6 +313,8 @@ public class EnterWorld extends L2GameClientPacket {
 			activeChar.teleToLocation(TeleportType.TOWN);
 		}
 
+		activeChar.getInventory().destroyAllItemsByType(EtcItemType.GLT_ITEM, "GLTDestroy_items_on_enterWorld", null);
+		
 		activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 

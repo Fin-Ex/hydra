@@ -1,7 +1,9 @@
 package net.sf.l2j.gameserver.handler.skillhandlers;
 
+import java.util.ArrayList;
+import java.util.List;
+import net.sf.finex.handlers.talents.PowerAbsorption;
 import net.sf.finex.handlers.talents.SonicAssault;
-
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.instancemanager.DuelManager;
@@ -10,18 +12,21 @@ import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Attackable;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Playable;
+import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.ai.CtrlEvent;
 import net.sf.l2j.gameserver.model.actor.ai.CtrlIntention;
 import net.sf.l2j.gameserver.model.actor.instance.ClanHallManagerNpc;
-import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.network.SystemMessageId;
+import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import net.sf.l2j.gameserver.skills.EffectTemplate;
 import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.skills.L2Effect;
 import net.sf.l2j.gameserver.skills.L2Skill;
-import net.sf.l2j.gameserver.templates.skills.L2EffectType;
+import net.sf.l2j.gameserver.skills.effects.EffectBuff;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
+import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
 public class Continuous implements IHandler {
 
@@ -45,7 +50,7 @@ public class Continuous implements IHandler {
 	};
 
 	@Override
-	public void invoke(Object...args) {
+	public void invoke(Object... args) {
 		final Creature activeChar = (Creature) args[0];
 		L2Skill skill = (L2Skill) args[1];
 		final WorldObject[] targets = (WorldObject[]) args[2];
@@ -68,6 +73,7 @@ public class Continuous implements IHandler {
 			}
 		}
 
+		List<WorldObject> affectedTargets = new ArrayList<>();
 		for (WorldObject obj : targets) {
 			if (!obj.isCreature()) {
 				continue;
@@ -134,7 +140,7 @@ public class Continuous implements IHandler {
 						}
 					}
 				} else {
-					skill.getEffects(activeChar, target, new Env(shld, ss, sps, bsps));
+					skill.getEffects(activeChar, target, new Env(shld, ss, sps, bsps), affectedTargets);
 				}
 
 				if (skill.getSkillType() == ESkillType.AGGDEBUFF) {
@@ -156,6 +162,22 @@ public class Continuous implements IHandler {
 			Formulas.calcLethalHit(activeChar, target, skill);
 		}
 
+		// Check Howl talent (Power Absorption)
+		// create effect template and 
+		if (PowerAbsorption.validate(activeChar, skill)) {
+			final EffectTemplate et = SkillTable.FrequentTalent.POWER_ABSOPTION.getHandler().invoke(affectedTargets, skill);
+			if (et != null) {
+				final Env env = new Env();
+				env.setCharacter(activeChar);
+				env.setTarget(activeChar);
+				env.setSkill(skill);
+				final L2Effect effect = new EffectBuff(env, et);
+				effect.scheduleEffect();
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addString("Power Absoption"));
+				activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, 4346, 1, 0, 0));
+			}
+		}
+		
 		if (skill.hasSelfEffects()) {
 			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
 			if (effect != null && effect.isSelfEffect()) {

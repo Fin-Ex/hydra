@@ -5,14 +5,13 @@ import java.util.List;
 
 import net.sf.finex.model.creature.attack.DamageInfo;
 import net.sf.finex.handlers.talents.CumulativeRage;
-import net.sf.finex.model.talents.TalentHandler;
 import net.sf.l2j.gameserver.data.SkillTable;
 import net.sf.l2j.gameserver.handler.IHandler;
 import net.sf.l2j.gameserver.model.ShotType;
 import net.sf.l2j.gameserver.model.WorldObject;
 import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.type.WeaponType;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -21,6 +20,7 @@ import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.skills.L2Effect;
 import net.sf.l2j.gameserver.skills.L2Skill;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
+import net.sf.finex.model.talents.ITalentHandler;
 
 public class Pdam implements IHandler {
 
@@ -44,7 +44,7 @@ public class Pdam implements IHandler {
 
 		final ItemInstance weapon = activeChar.getActiveWeaponInstance();
 
-		TalentHandler cumulativeRage = null;
+		ITalentHandler cumulativeRage = null;
 		if (activeChar.isPlayer()) {
 			final Player player = activeChar.getPlayer();
 			if (CumulativeRage.validate(player)) {

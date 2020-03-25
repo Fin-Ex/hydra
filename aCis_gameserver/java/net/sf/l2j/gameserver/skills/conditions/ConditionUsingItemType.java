@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.skills.Env;
@@ -10,10 +9,10 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public final class ConditionUsingItemType extends Condition {
 
-	private final int _mask;
+	private int mask;
 
 	public ConditionUsingItemType(int mask) {
-		_mask = mask;
+		this.mask = mask;
 	}
 
 	@Override
@@ -22,6 +21,6 @@ public final class ConditionUsingItemType extends Condition {
 			return false;
 		}
 
-		return (_mask & env.getPlayer().getInventory().getWornMask()) != 0;
+		return (mask & env.getPlayer().getInventory().getWornMask()) != 0;
 	}
 }

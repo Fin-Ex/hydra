@@ -7,6 +7,7 @@ import net.sf.finex.model.classes.AbstractClassComponent;
 import net.sf.finex.model.classes.Bladedancer;
 import net.sf.finex.model.classes.Gladiator;
 import net.sf.finex.model.classes.Swordsinger;
+import net.sf.finex.model.classes.Warlord;
 import net.sf.finex.model.classes.Warsmith;
 import net.sf.l2j.gameserver.model.actor.Player;
 
@@ -25,7 +26,7 @@ public enum ClassId {
 	HumanFighter(ClassRace.HUMAN, ClassType.FIGHTER, 0, "Human Fighter", null),
 	Warrior(ClassRace.HUMAN, ClassType.FIGHTER, 1, "Warrior", HumanFighter),
 	Gladiator(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Gladiator", Warrior, Gladiator.class),
-	Warlord(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Warlord", Warrior),
+	Warlord(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Warlord", Warrior, Warlord.class),
 	Knight(ClassRace.HUMAN, ClassType.FIGHTER, 1, "Human Knight", HumanFighter),
 	Paladin(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Paladin", Knight),
 	DarkAvenger(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Dark Avenger", Knight),
@@ -111,7 +112,7 @@ public enum ClassId {
 	DUMMY_29(null, null, -1, "dummy 29", null),
 	DUMMY_30(null, null, -1, "dummy 30", null),
 	Duelist(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Duelist", Gladiator, Gladiator.class),
-	Dreadnought(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Dreadnought", Warlord),
+	Dreadnought(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Dreadnought", Warlord, Warlord.class),
 	PhoenixKnight(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Phoenix Knight", Paladin),
 	HellKnight(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Hell Knight", DarkAvenger),
 	Saggitarius(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Sagittarius", Hawkeye),

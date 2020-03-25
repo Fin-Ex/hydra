@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.finex.enums.EGradeType;
 import net.sf.l2j.Config;
@@ -13,7 +14,7 @@ import net.sf.l2j.gameserver.model.actor.Creature;
 import net.sf.l2j.gameserver.model.actor.Player;
 import net.sf.l2j.gameserver.model.actor.Summon;
 import net.sf.l2j.gameserver.model.holder.IntIntHolder;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.type.ActionType;
 import net.sf.l2j.gameserver.model.item.type.ArmorType;
 import net.sf.l2j.gameserver.model.item.type.EtcItemType;
@@ -114,15 +115,13 @@ public abstract class Item {
 
 	protected List<Condition> _preConditions;
 
-	@Getter
-	private List<IntIntHolder> staticSkills = Collections.emptyList();
-	@Getter
-	private List<IntIntHolder> dynamicSkills = Collections.emptyList();
+	@Getter private List<IntIntHolder> staticSkills = Collections.emptyList();
+	@Getter private List<IntIntHolder> dynamicSkills = Collections.emptyList();
 
 	private List<Quest> _questEvents = Collections.emptyList();
 
-	@Getter
-	private final String icon;
+	@Getter private final String icon;
+	@Getter @Setter private String loadName;
 
 	/**
 	 * Constructor of the L2Item that fill class variables.
@@ -417,6 +416,10 @@ public abstract class Item {
 
 		_funcTemplates.add(f);
 	}
+	
+	public List<FuncTemplate> getFuncs() {
+		return _funcTemplates;
+	}
 
 	public final void attach(Condition c) {
 		if (_preConditions == null) {
@@ -540,7 +543,6 @@ public abstract class Item {
 	public boolean hasDynamicSkills() {
 		return !dynamicSkills.isEmpty();
 	}
-
 //	public boolean checkState(EItemStateType stateType) {
 //		int statemask = 0;
 //		for(int i = 0; i < states.length; i++) {

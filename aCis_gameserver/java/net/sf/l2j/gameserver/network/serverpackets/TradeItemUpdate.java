@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.tradelist.TradeItem;
 import net.sf.l2j.gameserver.model.tradelist.TradeList;
 

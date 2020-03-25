@@ -1,7 +1,12 @@
 package net.sf.l2j.gameserver.skills.basefuncs;
 
+import com.google.gson.annotations.JsonAdapter;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import net.sf.finex.serializers.ConditionSerializer;
+import net.sf.finex.serializers.LambdaSerializer;
+import net.sf.finex.serializers.OrderSerializer;
+import net.sf.finex.serializers.StatsSerializer;
 import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.Stats;
 import net.sf.l2j.gameserver.skills.conditions.Condition;
@@ -11,17 +16,18 @@ import org.slf4j.LoggerFactory;
 /**
  * @author mkizub
  */
+//@JsonAdapter(FuncTemplateSerializer.class)
 public final class FuncTemplate {
 
 	protected static final Logger _log = LoggerFactory.getLogger(FuncTemplate.class.getName());
 
-	public Condition attachCond;
-	public Condition applayCond;
-	public final Class<?> func;
-	public final Constructor<?> constructor;
-	public final Stats stat;
-	public final int order;
-	public final Lambda lambda;
+	@JsonAdapter(ConditionSerializer.class) public Condition attachCond;
+	@JsonAdapter(ConditionSerializer.class) public Condition applayCond;
+	public final String funcName;
+	public final transient Constructor<?> constructor;
+	@JsonAdapter(StatsSerializer.class) public final Stats stat;
+	@JsonAdapter(OrderSerializer.class) public final int order;
+	@JsonAdapter(LambdaSerializer.class) public final Lambda lambda;
 
 	public FuncTemplate(Condition pAttachCond, Condition pApplayCond, String pFunc, Stats pStat, int pOrder, Lambda pLambda) {
 		attachCond = pAttachCond;
@@ -29,20 +35,21 @@ public final class FuncTemplate {
 		stat = pStat;
 		order = pOrder;
 		lambda = pLambda;
-
+		funcName = pFunc;
+		
+		Class<?> func = null;
 		try {
-			func = Class.forName("net.sf.l2j.gameserver.skills.basefuncs.Func" + pFunc);
+			func = Class.forName("net.sf.l2j.gameserver.skills.basefuncs.Func" + funcName);
 		} catch (ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}
 
 		try {
 			constructor = func.getConstructor(new Class[]{
-				Stats.class, // stats to update
-				Integer.TYPE, // order of execution
-				Object.class, // owner
+				Stats.class,
+				Integer.TYPE,
+				Object.class,
 				Lambda.class
-			// value for function
 			});
 		} catch (NoSuchMethodException e) {
 			throw new RuntimeException(e);

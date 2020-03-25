@@ -1,8 +1,5 @@
 package net.sf.l2j.gameserver.skills.l2skills;
 
-import org.slf4j.LoggerFactory;
-
-import java.util.logging.Level;
 
 import net.sf.l2j.commons.random.Rnd;
 
@@ -64,7 +61,7 @@ public class L2SkillSpawn extends L2Skill {
 			if (_despawnDelay > 0) {
 				npc.scheduleDespawn(_despawnDelay);
 			}
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | NoSuchMethodException | SecurityException e) {
 			_log.warn("Exception while spawning NPC ID: " + _npcId + ", skill ID: " + getId() + ", exception: " + e.getMessage(), e);
 		}
 	}

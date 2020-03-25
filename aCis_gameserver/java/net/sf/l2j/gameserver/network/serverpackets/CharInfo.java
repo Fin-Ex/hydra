@@ -24,7 +24,7 @@ public class CharInfo extends L2GameServerPacket {
 	protected final void writeImpl() {
 		boolean gmSeeInvis = false;
 
-		if (_activeChar.getAppearance().getInvisible()) {
+		if (_activeChar.getAppearance().isInvisible()) {
 			Player tmp = getClient().getActiveChar();
 			if (tmp != null && tmp.isGM()) {
 				gmSeeInvis = true;
@@ -140,7 +140,7 @@ public class CharInfo extends L2GameServerPacket {
 		if (gmSeeInvis) {
 			writeC(0);
 		} else {
-			writeC(_activeChar.getAppearance().getInvisible() ? 1 : 0); // invisible = 1 visible =0
+			writeC(_activeChar.getAppearance().isInvisible() ? 1 : 0); // invisible = 1 visible =0
 		}
 		writeC(_activeChar.getMountType()); // 1 on strider 2 on wyvern 0 no mount
 		writeC(_activeChar.getStoreType().getId()); // 1 - sellshop

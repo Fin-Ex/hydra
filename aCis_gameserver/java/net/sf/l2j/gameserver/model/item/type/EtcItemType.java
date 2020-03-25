@@ -1,7 +1,5 @@
 package net.sf.l2j.gameserver.model.item.type;
 
-import org.slf4j.LoggerFactory;
-
 public enum EtcItemType implements ItemType {
 	NONE,
 	ARROW,
@@ -30,7 +28,8 @@ public enum EtcItemType implements ItemType {
 	// L2J CUSTOM, BACKWARD COMPATIBILITY
 	SHOT,
 	HERB,
-	QUEST;
+	QUEST,
+	GLT_ITEM;
 
 	/**
 	 * Returns the ID of the item after applying the mask.

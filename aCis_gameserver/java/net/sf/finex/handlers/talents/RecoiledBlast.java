@@ -5,7 +5,6 @@
  */
 package net.sf.finex.handlers.talents;
 
-import net.sf.finex.model.talents.TalentHandler;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.l2j.commons.concurrent.ThreadPool;
@@ -21,13 +20,14 @@ import net.sf.l2j.gameserver.model.actor.instance.EffectPoint;
 import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.skills.L2Skill;
+import net.sf.finex.model.talents.ITalentHandler;
 
 /**
  *
  * @author finfan
  */
 @Slf4j
-public class RecoiledBlast implements TalentHandler {
+public class RecoiledBlast implements ITalentHandler {
 
 	private static final short SONIC_BLASTER = 6;
 

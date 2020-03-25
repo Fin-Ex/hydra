@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.skills.Env;
 
@@ -9,7 +8,7 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionPlayerCharges extends Condition {
 
-	private final int _charges;
+	private int charges;
 
 	/**
 	 * Instantiates a new condition player charges.
@@ -17,11 +16,11 @@ public class ConditionPlayerCharges extends Condition {
 	 * @param charges the charges
 	 */
 	public ConditionPlayerCharges(int charges) {
-		_charges = charges;
+		this.charges = charges;
 	}
 
 	@Override
 	public boolean testImpl(Env env) {
-		return env.getPlayer() != null && env.getPlayer().getCharges() >= _charges;
+		return env.getPlayer() != null && env.getPlayer().getCharges() >= charges;
 	}
 }

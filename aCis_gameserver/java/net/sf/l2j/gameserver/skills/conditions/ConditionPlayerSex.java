@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
 
 import net.sf.l2j.gameserver.skills.Env;
 
@@ -9,7 +8,7 @@ import net.sf.l2j.gameserver.skills.Env;
  */
 public class ConditionPlayerSex extends Condition {
 
-	private final int _sex;
+	private int sex;
 
 	/**
 	 * Instantiates a new condition player sex.
@@ -17,7 +16,7 @@ public class ConditionPlayerSex extends Condition {
 	 * @param sex the sex
 	 */
 	public ConditionPlayerSex(int sex) {
-		_sex = sex;
+		this.sex = sex;
 	}
 
 	@Override
@@ -26,6 +25,6 @@ public class ConditionPlayerSex extends Condition {
 			return false;
 		}
 
-		return env.getPlayer().getAppearance().getSex().ordinal() == _sex;
+		return env.getPlayer().getAppearance().getSex().ordinal() == sex;
 	}
 }

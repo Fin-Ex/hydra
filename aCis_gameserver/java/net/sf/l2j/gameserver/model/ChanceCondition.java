@@ -1,13 +1,9 @@
 package net.sf.l2j.gameserver.model;
 
-import org.slf4j.LoggerFactory;
-
-import java.util.logging.Level;
-import org.slf4j.Logger;
-
 import net.sf.l2j.commons.random.Rnd;
-
 import net.sf.l2j.gameserver.templates.StatsSet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author kombat
@@ -35,39 +31,39 @@ public final class ChanceCondition {
 
 	public static enum TriggerType {
 		// You hit an enemy
-		ON_HIT(1),
+		ON_HIT(EVT_HIT),
 		// You hit an enemy - was crit
-		ON_CRIT(2),
+		ON_CRIT(EVT_CRIT),
 		// You cast a skill
-		ON_CAST(4),
+		ON_CAST(EVT_CAST),
 		// You cast a skill - it was a physical one
-		ON_PHYSICAL(8),
+		ON_PHYSICAL(EVT_PHYSICAL),
 		// You cast a skill - it was a magic one
-		ON_MAGIC(16),
+		ON_MAGIC(EVT_MAGIC),
 		// You cast a skill - it was a magic one - good magic
-		ON_MAGIC_GOOD(32),
+		ON_MAGIC_GOOD(EVT_MAGIC_GOOD),
 		// You cast a skill - it was a magic one - offensive magic
-		ON_MAGIC_OFFENSIVE(64),
+		ON_MAGIC_OFFENSIVE(EVT_MAGIC_OFFENSIVE),
 		// You are attacked by enemy
-		ON_ATTACKED(128),
+		ON_ATTACKED(EVT_ATTACKED),
 		// You are attacked by enemy - by hit
-		ON_ATTACKED_HIT(256),
+		ON_ATTACKED_HIT(EVT_ATTACKED_HIT),
 		// You are attacked by enemy - by hit - was crit
-		ON_ATTACKED_CRIT(512),
+		ON_ATTACKED_CRIT(EVT_ATTACKED_CRIT),
 		// A skill was casted on you
-		ON_HIT_BY_SKILL(1024),
+		ON_HIT_BY_SKILL(EVT_HIT_BY_SKILL),
 		// An evil skill was casted on you
-		ON_HIT_BY_OFFENSIVE_SKILL(2048),
+		ON_HIT_BY_OFFENSIVE_SKILL(EVT_HIT_BY_OFFENSIVE_SKILL),
 		// A good skill was casted on you
-		ON_HIT_BY_GOOD_MAGIC(4096),
+		ON_HIT_BY_GOOD_MAGIC(EVT_HIT_BY_GOOD_MAGIC),
 		// Evading melee attack
-		ON_EVADED_HIT(8192),
+		ON_EVADED_HIT(EVT_EVADED_HIT),
 		// Effect only - on start
-		ON_START(16384),
+		ON_START(EVT_ON_START),
 		// Effect only - each second
-		ON_ACTION_TIME(32768),
+		ON_ACTION_TIME(EVT_ON_ACTION_TIME),
 		// Effect only - on exit
-		ON_EXIT(65536);
+		ON_EXIT(EVT_ON_EXIT);
 
 		private final int _mask;
 

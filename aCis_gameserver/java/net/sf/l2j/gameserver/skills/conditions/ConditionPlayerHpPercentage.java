@@ -1,19 +1,17 @@
 package net.sf.l2j.gameserver.skills.conditions;
 
-import org.slf4j.LoggerFactory;
-
 import net.sf.l2j.gameserver.skills.Env;
 
 public class ConditionPlayerHpPercentage extends Condition {
 
-	private final double _p;
+	private double percent;
 
-	public ConditionPlayerHpPercentage(double p) {
-		_p = p;
+	public ConditionPlayerHpPercentage(double percent) {
+		this.percent = percent;
 	}
 
 	@Override
 	public boolean testImpl(Env env) {
-		return env.getCharacter().getCurrentHp() <= env.getCharacter().getMaxHp() * _p;
+		return env.getCharacter().getCurrentHp() <= env.getCharacter().getMaxHp() * percent;
 	}
 }

@@ -12445,27 +12445,51 @@ public final class SystemMessageId {
 
 	/**
 	 * ID: 2188<br>
-	 * Message: The Grand Lethal Tournament registration is opened!
+	 * Message: The Grand Lethal Tournament registration are opened!
 	 */
-	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_IS_OPENED;
+	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_REGISTRATION_IS_OPENED;
 
 	/**
 	 * ID: 2189<br>
-	 * Message: The Grand Lethal Tournament was started! Prepare for battle hunters!
+	 * Message: The Grand Lethal Tournament registration are closed!
 	 */
-	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_IS_STARTED;
+	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_REGISTRATION_IS_CLOSED;
 
 	/**
 	 * ID: 2190<br>
-	 * Message: The Grand Lethal Tournament was ended! Congradulations to all winners!
+	 * Message: The Grand Lethal Tournament begins! Good luck to all Hunters!
 	 */
-	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_IS_ENDED;
+	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_BEGINS;
 
 	/**
 	 * ID: 2191<br>
-	 * Message: The Grand Lethal Tournament not started cause too few participants
+	 * Message: The Grand Lethal Tournament is over! Congradulations to all winners!
 	 */
-	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_RESET;
+	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_IS_OVER;
+
+	/**
+	 * ID: 2192<br>
+	 * Message: The Grand Lethal Tournament is canceled since not enough participants!
+	 */
+	public static final SystemMessageId THE_GRAND_LETHAL_TOURNAMENT_IS_RESETED;
+
+	/**
+	 * ID: 2193<br>
+	 * Message: $s1 killed $s2!
+	 */
+	public static final SystemMessageId S1_KILLED_S2;
+
+	/**
+	 * ID: 2194<br>
+	 * Message: Boxes with provisions and equipment fall again!!
+	 */
+	public static final SystemMessageId GLT_SUPPLY_BOX_DROP;
+
+	/**
+	 * ID: 2195<br>
+	 * Message: Merchants appeared on the island: Auriel and Marco! Hurry to them to collect the necessary supplies and equipment!
+	 */
+	public static final SystemMessageId GLT_TRADERS_CHANGE_LOCATION;
 
 	/**
 	 * Array containing all SystemMessageIds<br>
@@ -14463,15 +14487,19 @@ public final class SystemMessageId {
 		S1_HUNT_S2_S3 = new SystemMessageId(2185);
 		QUEST_S1_WAS_COMPLETED = new SystemMessageId(2186);
 		S1_ABSORBS_YOUR_CHARGES = new SystemMessageId(2187);
-		THE_GRAND_LETHAL_TOURNAMENT_IS_OPENED = new SystemMessageId(2188);
-		THE_GRAND_LETHAL_TOURNAMENT_IS_STARTED = new SystemMessageId(2189);
-		THE_GRAND_LETHAL_TOURNAMENT_IS_ENDED = new SystemMessageId(2190);
-		THE_GRAND_LETHAL_TOURNAMENT_RESET = new SystemMessageId(2191);
+		THE_GRAND_LETHAL_TOURNAMENT_REGISTRATION_IS_OPENED = new SystemMessageId(2188);
+		THE_GRAND_LETHAL_TOURNAMENT_REGISTRATION_IS_CLOSED = new SystemMessageId(2189);
+		THE_GRAND_LETHAL_TOURNAMENT_BEGINS = new SystemMessageId(2190);
+		THE_GRAND_LETHAL_TOURNAMENT_IS_OVER = new SystemMessageId(2191);
+		THE_GRAND_LETHAL_TOURNAMENT_IS_RESETED = new SystemMessageId(2192);
+		S1_KILLED_S2 = new SystemMessageId(2193);
+		GLT_SUPPLY_BOX_DROP = new SystemMessageId(2194);
+		GLT_TRADERS_CHANGE_LOCATION = new SystemMessageId(2195);
 
 		buildFastLookupTable();
 	}
 
-	private static final void buildFastLookupTable() {
+	private static void buildFastLookupTable() {
 		final Field[] fields = SystemMessageId.class.getDeclaredFields();
 		final ArrayList<SystemMessageId> smIds = new ArrayList<>(fields.length);
 
@@ -14499,7 +14527,7 @@ public final class SystemMessageId {
 		}
 	}
 
-	private static final int parseMessageParameters(final String name) {
+	private static int parseMessageParameters(final String name) {
 		int paramCount = 0;
 		char s1, c2;
 		for (int i = 0; i < name.length() - 1; i++) {
@@ -14520,7 +14548,7 @@ public final class SystemMessageId {
 		return smi == null ? new SystemMessageId(id) : smi;
 	}
 
-	private static final SystemMessageId getSystemMessageIdInternal(final int id) {
+	private static SystemMessageId getSystemMessageIdInternal(final int id) {
 		if (id < 0 || id >= VALUES.length) {
 			return null;
 		}
@@ -14531,7 +14559,7 @@ public final class SystemMessageId {
 	public static final SystemMessageId getSystemMessageId(final String name) {
 		try {
 			return (SystemMessageId) SystemMessageId.class.getField(name).get(null);
-		} catch (final Exception e) {
+		} catch (final IllegalAccessException | IllegalArgumentException | NoSuchFieldException | SecurityException e) {
 			return null;
 		}
 	}
@@ -14549,7 +14577,7 @@ public final class SystemMessageId {
 		return _id;
 	}
 
-	private final void setName(final String name) {
+	private void setName(final String name) {
 		_name = name;
 	}
 

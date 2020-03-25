@@ -6,10 +6,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.kind.Item;
 import net.sf.l2j.gameserver.model.item.kind.Weapon;
 import net.sf.finex.enums.EGradeType;
+import net.sf.l2j.gameserver.model.item.instance.EItemLocation;
 import net.sf.l2j.gameserver.model.item.type.WeaponType;
 
 public abstract class AbstractEnchantPacket extends L2GameClientPacket {
@@ -196,12 +197,12 @@ public abstract class AbstractEnchantPacket extends L2GameClientPacket {
 	 * @return true if item can be enchanted.
 	 */
 	protected static final boolean isEnchantable(ItemInstance item) {
-		if (item.isHeroItem() || item.isShadowItem() || item.isEtcItem() || item.getItem().getItemType() == WeaponType.FISHINGROD) {
+		if (item.isHeroItem() || item.isShadowItem() || item.isEtc() || item.getItem().getItemType() == WeaponType.FISHINGROD) {
 			return false;
 		}
 
 		// only equipped items or in inventory can be enchanted
-		if (item.getLocation() != ItemInstance.ItemLocation.INVENTORY && item.getLocation() != ItemInstance.ItemLocation.PAPERDOLL) {
+		if (item.getLocation() != EItemLocation.INVENTORY && item.getLocation() != EItemLocation.PAPERDOLL) {
 			return false;
 		}
 

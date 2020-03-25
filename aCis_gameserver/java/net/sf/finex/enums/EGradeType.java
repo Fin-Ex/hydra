@@ -1,6 +1,7 @@
 package net.sf.finex.enums;
 
 import lombok.Getter;
+import net.sf.finex.IEnum;
 import net.sf.l2j.gameserver.model.actor.Player;
 
 /**
@@ -8,7 +9,7 @@ import net.sf.l2j.gameserver.model.actor.Player;
  *
  * @author Adry_85
  */
-public enum EGradeType {
+public enum EGradeType implements IEnum {
 	NG(0, 0, 0, 0, 1, 19),
 	D(1, 1458, 11, 90, 20, 39),
 	C(2, 1459, 6, 45, 40, 51),
@@ -22,8 +23,7 @@ public enum EGradeType {
 	private final int _crystalId;
 	private final int _crystalEnchantBonusArmor;
 	private final int _crystalEnchantBonusWeapon;
-	@Getter
-	private final int minLevel, maxLevel;
+	@Getter private final int minLevel, maxLevel;
 
 	private EGradeType(int _id, int _crystalId, int _crystalEnchantBonusArmor, int _crystalEnchantBonusWeapon, int minLevel, int maxLevel) {
 		this._id = _id;
@@ -34,20 +34,11 @@ public enum EGradeType {
 		this.maxLevel = maxLevel;
 	}
 
-	/**
-	 * Gets the crystal type ID.
-	 *
-	 * @return the crystal type ID
-	 */
+	@Override
 	public int getId() {
 		return _id;
 	}
 
-	/**
-	 * Gets the item ID of the crystal.
-	 *
-	 * @return the item ID of the crystal
-	 */
 	public int getCrystalId() {
 		return _crystalId;
 	}
@@ -96,5 +87,20 @@ public enum EGradeType {
 			default:
 				return name();
 		}
+	}
+
+	@Override
+	public String getEnumName() {
+		return name();
+	}
+
+	@Override
+	public String getNormalName() {
+		return name() + " - grade";
+	}
+
+	@Override
+	public int getMask() {
+		return 1 << ordinal();
 	}
 }

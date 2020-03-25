@@ -1,8 +1,8 @@
 package net.sf.l2j.gameserver.skills;
 
 import net.sf.finex.enums.ESkillAlignmentType;
-import net.sf.finex.model.creature.attack.DamageInfo;
 import net.sf.finex.handlers.talents.ProfessionalAnger;
+import net.sf.finex.model.creature.attack.DamageInfo;
 import net.sf.l2j.Config;
 import net.sf.l2j.commons.math.MathUtil;
 import net.sf.l2j.commons.random.Rnd;
@@ -35,6 +35,7 @@ import net.sf.l2j.gameserver.model.zone.type.L2MotherTreeZone;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import net.sf.l2j.gameserver.skills.l2skills.L2SkillBlow;
 import net.sf.l2j.gameserver.taskmanager.GameTimeTaskManager;
 import net.sf.l2j.gameserver.templates.skills.ESkillType;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
@@ -434,6 +435,16 @@ public final class Formulas {
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 
 		double power = skill.getPower();
+		
+		if (skill.getSkillType() == ESkillType.BLOW) {
+			final L2SkillBlow blowSkill = (L2SkillBlow) skill;
+			switch (blowSkill.getModifier()) {
+				case CASTER_LEVEL:
+					power *= attacker.getLevel();
+					break;
+			}
+		}
+		
 		double damage = 0;
 		damage += calcValakasAttribute(attacker, target, skill);
 

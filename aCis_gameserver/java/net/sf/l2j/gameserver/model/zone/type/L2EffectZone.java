@@ -1,6 +1,5 @@
 package net.sf.l2j.gameserver.model.zone.type;
 
-import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -61,13 +60,13 @@ public class L2EffectZone extends L2ZoneType {
 			for (String skill : propertySplit) {
 				String[] skillSplit = skill.split("-");
 				if (skillSplit.length != 2) {
-					_log.warn(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skill + "\"");
+					log.warn(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skill + "\"");
 				} else {
 					try {
 						_skills.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
 					} catch (NumberFormatException nfe) {
 						if (!skill.isEmpty()) {
-							_log.warn(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skillSplit[0] + "\"" + skillSplit[1]);
+							log.warn(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skillSplit[0] + "\"" + skillSplit[1]);
 						}
 					}
 				}

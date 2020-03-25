@@ -12,7 +12,7 @@ import org.slf4j.Logger;
 
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.item.instance.ItemInstance;
+import net.sf.l2j.gameserver.model.item.instance.type.ItemInstance;
 import net.sf.l2j.gameserver.model.item.type.EtcItemType;
 import net.sf.l2j.gameserver.network.serverpackets.ExAutoSoulShot;
 import net.sf.l2j.gameserver.network.serverpackets.ShortCutInit;
@@ -54,7 +54,7 @@ public class ShortCuts {
 				return;
 			}
 
-			if (item.isEtcItem()) {
+			if (item.isEtc()) {
 				shortcut.setSharedReuseGroup(item.getEtcItem().getSharedReuseGroup());
 			}
 		}
@@ -169,7 +169,7 @@ public class ShortCuts {
 				final ItemInstance item = _owner.getInventory().getItemByObjectId(sc.getId());
 				if (item == null) {
 					deleteShortCut(sc.getSlot(), sc.getPage());
-				} else if (item.isEtcItem()) {
+				} else if (item.isEtc()) {
 					sc.setSharedReuseGroup(item.getEtcItem().getSharedReuseGroup());
 				}
 			}
