@@ -5,7 +5,7 @@
     <property name="build.game" location="${build}/gameserver" />
     <property name="build.login" location="${build}/login" />
     <property name="build.sql" location="${build}/sql" />
-    <property name="build.tools" location="${build}/tools" />
+    <!--<property name="build.tools" location="${build}/tools" />-->
 
     <target name="build" depends="init" description="Synchronizes build space contents with project.">
         <sync todir="${build.game}/data">
@@ -26,7 +26,7 @@
                 <include name="*.*" />
             </fileset>
         </sync>
-        <sync todir="${build.tools}">
+        <!--<sync todir="${build.tools}">
             <fileset dir="${basedir}/tools">
                 <include name="*.*" />
                 <exclude name="database_installer.rc" />
@@ -34,7 +34,7 @@
                 <exclude name="*.log" />
                 <exclude name="*backup.sql" />
             </fileset>
-        </sync>
+        </sync>-->
         <sync todir="${build.login}">
             <fileset dir="${build.game}/data">
                 <include name="servername.xml" />
