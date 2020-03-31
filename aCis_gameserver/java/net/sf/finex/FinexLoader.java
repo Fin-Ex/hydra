@@ -54,6 +54,7 @@ public class FinexLoader {
 			GLTController.getInstance().restart();
 		}
 
+		ITEMS_ToJson();
 		ItemHolder.getInstance();
 	}
 	
@@ -76,7 +77,7 @@ public class FinexLoader {
 			final String key = next.getKey();
 			final List<ItemData> list = next.getValue();
 			final Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
-			write("F:\\java\\L2JFinExGithub\\server\\gameserver\\data\\json\\items\\" + key + ".json", gson.toJson(list));
+			write("data/json/items/" + key + ".json", gson.toJson(list));
 		}
 	}
 	

@@ -34,7 +34,7 @@ public class ItemHolder {
 	@Getter private final List<ItemData> etc;
 
 	private ItemHolder() {
-		holder = DataParser.getInstance().parseAndGet("F:\\java\\L2JFinExGithub\\server\\gameserver\\data\\json\\items\\", ItemData[].class);
+		holder = DataParser.getInstance().parseAndGet("data/json/items/", ItemData[].class);
 
 		armor = new ArrayList<>();
 		weapon = new ArrayList<>();
