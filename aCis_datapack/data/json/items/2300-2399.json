@@ -1,0 +1,2702 @@
+[
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2300,
+    "name": "Recipe: Scythe",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2301,
+    "name": "Recipe: Battle Axe",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2302,
+    "name": "Recipe: Silver Axe",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2303,
+    "name": "Recipe: Skull Graver",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2304,
+    "name": "Recipe: Heavy Doom Hammer",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2305,
+    "name": "Recipe: Crystal Staff",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2306,
+    "name": "Recipe: Stick of Faith",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2307,
+    "name": "Recipe: Heavy Doom Axe",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2308,
+    "name": "Recipe: Cursed Dagger",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2309,
+    "name": "Recipe: Wolverine Needle",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2310,
+    "name": "Recipe: Dark Elven Dagger",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2311,
+    "name": "Recipe: Chakram",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2312,
+    "name": "Recipe: Crystallized Ice Bow",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2313,
+    "name": "Recipe: Orcish Glaive",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2314,
+    "name": "Recipe: Body Slasher",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2315,
+    "name": "Recipe: Shamshir",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2316,
+    "name": "Recipe: Katana",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2317,
+    "name": "Recipe: Bec de Corbin",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2318,
+    "name": "Recipe: Spirit Sword",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2319,
+    "name": "Recipe: Raid Sword",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2320,
+    "name": "Recipe: Cursed Staff",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2321,
+    "name": "Recipe: Stiletto",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2322,
+    "name": "Recipe: Soulfire Dirk",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2323,
+    "name": "Recipe: Elemental Bow",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2324,
+    "name": "Recipe: Elven Bow of Nobility",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2325,
+    "name": "Recipe: Tears of Fairy",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2326,
+    "name": "Recipe: Horn of Glory",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2327,
+    "name": "Recipe: Caliburs",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2328,
+    "name": "Recipe: Sword of Delusion",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2329,
+    "name": "Recipe: Tsurugi",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2330,
+    "name": "Recipe: Homunkulus's Sword",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2331,
+    "name": "Recipe: Poleaxe",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2332,
+    "name": "Recipe: Sword of Limit",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2333,
+    "name": "Recipe: Sword of Nightmare",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2334,
+    "name": "Recipe: Sword of Whispering Death",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2335,
+    "name": "Recipe: War Axe",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2336,
+    "name": "Recipe: Nirvana Axe",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2337,
+    "name": "Recipe: Stick of Eternity",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2338,
+    "name": "Recipe: Paradia Staff",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2339,
+    "name": "Recipe: Inferno Staff",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2340,
+    "name": "Recipe: Pa'agrian Hammer",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2341,
+    "name": "Recipe: Sage's Staff",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2342,
+    "name": "Recipe: Club of Nature",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2343,
+    "name": "Recipe: Mace of the Underworld",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2344,
+    "name": "Recipe: Grace Dagger",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2345,
+    "name": "Recipe: Dark Screamer",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2346,
+    "name": "Recipe: Fisted Blade",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2347,
+    "name": "Recipe: Akat Long Bow",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2348,
+    "name": "Recipe: Heathen's Book",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2349,
+    "name": "Recipe: Hex Doll",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2350,
+    "name": "Recipe: Pa'agrian Axe",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2351,
+    "name": "Recipe: Scorpion",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2352,
+    "name": "Recipe: Widow Maker",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2353,
+    "name": "Recipe: Samurai Longsword",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2354,
+    "name": "Recipe: Deadman's Staff",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2355,
+    "name": "Recipe: Ghoul's Staff",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2356,
+    "name": "Recipe: Demon's Staff",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2357,
+    "name": "Recipe: Crystal Dagger",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2358,
+    "name": "Recipe: Great Pata",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2359,
+    "name": "Recipe: Eminence Bow",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2360,
+    "name": "Recipe: Orcish Poleaxe",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2361,
+    "name": "Recipe: Candle of Wisdom",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2362,
+    "name": "Recipe: Blessed Branch",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2363,
+    "name": "Recipe: Phoenix Feather",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2364,
+    "name": "Recipe: Cerberus Eye",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2365,
+    "name": "Recipe: Scroll of Destruction",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2366,
+    "name": "Recipe: Claws of Black Dragon",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 2367,
+    "name": "Recipe: Three Eyed Crow's Feather",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 7.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 5.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      }
+    ],
+    "id": 2368,
+    "name": "Training Gloves",
+    "weight": 1580,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_training_gloves_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 6.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 5.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      }
+    ],
+    "id": 2369,
+    "name": "Squire's Sword",
+    "weight": 1600,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_squires_sword_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 6.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 5.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      }
+    ],
+    "id": 2370,
+    "name": "Guild Member's Club",
+    "weight": 1910,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_club_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 16.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 10.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      }
+    ],
+    "id": 2371,
+    "name": "Fist of Butcher",
+    "weight": 1400,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_iron_glove_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 11.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 10.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      }
+    ],
+    "id": 2372,
+    "name": "Dagger of Adept",
+    "weight": 1050,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_doomed_dagger_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGBLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": true,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 13.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 16.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      }
+    ],
+    "id": 2373,
+    "name": "Eldritch Staff",
+    "weight": 1050,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_apprentices_staff_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 11.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 10.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      }
+    ],
+    "id": 2374,
+    "name": "Red Sunset Dagger",
+    "weight": 1100,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_doomed_dagger_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "PET_COLLAR",
+    "action": "skill_maintain",
+    "handler": "SummonItems",
+    "skills": [
+      {
+        "id": 2046,
+        "value": 1
+      }
+    ],
+    "id": 2375,
+    "name": "Wolf Collar",
+    "weight": 10,
+    "material": "LEATHER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_prefect_belt_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "HEAVY"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 157.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2376,
+    "name": "Avadon Breastplate",
+    "weight": 7920,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 277,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t66_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "HEAVY"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 64.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2377,
+    "name": "Mithril Scale Gaiters",
+    "weight": 3870,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 340,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t40_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "HEAVY"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 64.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2378,
+    "name": "Brigandine Gaiters",
+    "weight": 3820,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 340,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t43_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "HEAVY"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 98.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2379,
+    "name": "Avadon Gaiters",
+    "weight": 3520,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 173,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t66_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "HEAVY"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 104.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2380,
+    "name": "Blue Wolf Gaiters",
+    "weight": 3370,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 268,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t68_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "HEAVY"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 270.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2381,
+    "name": "Doom Plate Armor",
+    "weight": 9980,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 628,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t71_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "HEAVY"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 278.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2382,
+    "name": "Tallum Plate Armor",
+    "weight": 9780,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 541,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t77_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "HEAVY"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 293.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2383,
+    "name": "Majestic Plate Armor",
+    "weight": 9200,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 824,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t83_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 117.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2384,
+    "name": "Zubei's Leather Shirt",
+    "weight": 4330,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 208,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t65_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 128.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2385,
+    "name": "Dark Crystal Leather Armor",
+    "weight": 4300,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 277,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t75_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 29.0
+      }
+    ],
+    "id": 2386,
+    "name": "Wooden Gaiters",
+    "weight": 1670,
+    "material": "LEATHER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t06_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 56.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2387,
+    "name": "Tempered Mithril Gaiters",
+    "weight": 1530,
+    "material": "LEATHER",
+    "grade": "C",
+    "crystalCount": 94,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t47_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 73.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2388,
+    "name": "Zubei's Leather Gaiters",
+    "weight": 1480,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 129,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t65_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 80.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2389,
+    "name": "Dark Crystal Leggings",
+    "weight": 1480,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 173,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t75_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 191.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2390,
+    "name": "Avadon Leather Armor",
+    "weight": 5600,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 304,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t67_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 202.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2391,
+    "name": "Blue Wolf Leather Armor",
+    "weight": 5500,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 470,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t69_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 202.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2392,
+    "name": "Leather Armor of Doom",
+    "weight": 5500,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 470,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t72_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 209.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2393,
+    "name": "Tallum Leather Armor",
+    "weight": 5400,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 406,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t78_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 220.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2394,
+    "name": "Nightmarish Leather Armor",
+    "weight": 5300,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 618,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t81_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 220.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2395,
+    "name": "Majestic Leather Armor",
+    "weight": 5350,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 618,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t84_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 54.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 169.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2396,
+    "name": "Elven Mithril Tunic",
+    "weight": 720,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 407,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_elven_tunic_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 78.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 345.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2397,
+    "name": "Tunic of Zubei",
+    "weight": 1960,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 208,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t56_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2398,
+    "name": "Blue Wolf Tunic",
+    "weight": 1920,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t70_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 2399,
+    "name": "Tunic of Doom",
+    "weight": 1900,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t73_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  }
+]

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+    <item id="10000" type="EtcItem" name="Hunter's Ticket">
+        <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+        <set name="material" val="PAPER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_dropable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="false" />
+        <set name="is_destroyable" val="false" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="GLTTicket" />
+    </item>
+    <item id="10001" type="EtcItem" name="Trap: Fake Ticket">
+        <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+        <set name="material" val="PAPER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="FakeTicket" />
+    </item>
+    <item id="10002" type="EtcItem" name="Trap: C4">
+        <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+        <set name="material" val="PAPER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="C4" />
+    </item>
+    <item id="10003" type="EtcItem" name="Trap: Time Loop">
+        <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+        <set name="material" val="PAPER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="TimeLoop" />
+    </item>
+    <item id="10004" type="EtcItem" name="Trap: Grandfather's Clock">
+        <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+        <set name="material" val="PAPER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="GrandfatherClock" />
+    </item>
+    <item id="10005" type="EtcItem" name="Trap: Nemesis">
+        <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+        <set name="material" val="PAPER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="Nemesis" />
+    </item>
+    <item id="10006" type="EtcItem" name="Trap: Flag">
+        <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+        <set name="material" val="PAPER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="Flag" />
+    </item>
+    <item id="10007" type="EtcItem" name="Lesser Healing Potion">
+        <set name="icon" val="icon.etc_lesser_potion_red_i00"/>
+        <set name="default_action" val="skill_reduce" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="material" val="LIQUID" />
+        <set name="weight" val="5" />
+        <set name="price" val="90" />
+        <set name="reuse_delay" val="10000" />
+        <set name="is_stackable" val="true" />
+        <set name="is_oly_restricted" val="true" />
+        <set name="handler" val="ItemSkills" />
+        <set name="item_skill" val="2031-1" />
+        <set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+        <set name="shared_reuse_group" val="8" />
+    </item>
+    <item id="10008" type="EtcItem" name="Healing Potion">
+        <set name="icon" val="icon.etc_potion_scarlet_i00"/>
+        <set name="default_action" val="skill_reduce" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="material" val="LIQUID" />
+        <set name="weight" val="5" />
+        <set name="price" val="330" />
+        <set name="reuse_delay" val="10000" />
+        <set name="is_stackable" val="true" />
+        <set name="is_oly_restricted" val="true" />
+        <set name="handler" val="ItemSkills" />
+        <set name="item_skill" val="2032-1" />
+        <set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+        <set name="shared_reuse_group" val="9" />
+    </item>
+    <item id="10009" type="EtcItem" name="Greater Healing Potion">
+        <set name="icon" val="icon.etc_reagent_white_i00"/>
+        <set name="default_action" val="skill_reduce" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="material" val="LIQUID" />
+        <set name="weight" val="5" />
+        <set name="price" val="1080" />
+        <set name="reuse_delay" val="10000" />
+        <set name="is_stackable" val="true" />
+        <set name="is_oly_restricted" val="true" />
+        <set name="handler" val="ItemSkills" />
+        <set name="item_skill" val="2037-1" />
+        <set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+        <set name="shared_reuse_group" val="10" />
+    </item>
+    <item id="10010" type="EtcItem" name="Haste Potion">
+        <set name="icon" val="icon.etc_potion_green_i00"/>
+        <set name="default_action" val="skill_reduce" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="material" val="LIQUID" />
+        <set name="weight" val="20" />
+        <set name="price" val="1200" />
+        <set name="reuse_delay" val="500" />
+        <set name="is_stackable" val="true" />
+        <set name="is_oly_restricted" val="true" />
+        <set name="handler" val="ItemSkills" />
+        <set name="item_skill" val="2011-1" />
+        <set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+    </item>
+    <item id="10011" type="EtcItem" name="Potion of Alacrity">
+        <set name="icon" val="icon.etc_reagent_green_i00"/>
+        <set name="default_action" val="skill_reduce" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="material" val="LIQUID" />
+        <set name="weight" val="20" />
+        <set name="price" val="2400" />
+        <set name="reuse_delay" val="500" />
+        <set name="is_stackable" val="true" />
+        <set name="is_oly_restricted" val="true" />
+        <set name="handler" val="ItemSkills" />
+        <set name="item_skill" val="2012-1" />
+        <set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+    </item>
+    <item id="10012" type="EtcItem" name="Magic Haste Potion">
+        <set name="icon" val="icon.etc_potion_of_acumen2_i00"/>
+        <set name="default_action" val="skill_reduce" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="material" val="LIQUID" />
+        <set name="weight" val="20" />
+        <set name="price" val="2400" />
+        <set name="reuse_delay" val="500" />
+        <set name="is_stackable" val="true" />
+        <set name="is_oly_restricted" val="true" />
+        <set name="handler" val="ItemSkills" />
+        <set name="item_skill" val="2169-1" />
+    </item>
+    <item id="10013" type="EtcItem" name="Quick Healing Potion">
+        <set name="icon" val="icon.etc_potion_gold_i00"/>
+        <set name="default_action" val="skill_reduce" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="material" val="LIQUID" />
+        <set name="weight" val="180" />
+        <set name="price" val="10000" />
+        <set name="reuse_delay" val="500" />
+        <set name="is_stackable" val="true" />
+        <set name="is_oly_restricted" val="true" />
+        <set name="handler" val="ItemSkills" />
+        <set name="item_skill" val="2038-1" />
+        <set name="use_condition" val="{{uc_transmode_exclude;{tt_flying}}}" />
+    </item>
+    <item id="10014" type="EtcItem" name="Knife">
+        <set name="icon" val="icon.weapon_throw_knife_i00"/>
+        <set name="material" val="STEEL" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+		<set name="is_consumable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="ThrowableWeapon" />
+    </item>
+    <item id="10015" type="EtcItem" name="Spear">
+        <set name="icon" val="icon.weapon_short_spear_i00"/>
+        <set name="material" val="STEEL" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+		<set name="is_consumable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="ThrowableWeapon" />
+    </item>
+    <item id="10016" type="EtcItem" name="Axe">
+        <set name="icon" val="icon.weapon_heavy_bone_club_i00"/>
+        <set name="material" val="STEEL" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+		<set name="is_consumable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="ThrowableWeapon" />
+    </item>
+    <item id="10017" type="EtcItem" name="Shuriken">
+        <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+        <set name="material" val="STEEL" />
+        <set name="is_tradable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="true" />
+		<set name="is_consumable" val="true" />
+        <set name="etcitem_type" val="glt_item" />
+        <set name="handler" val="ThrowableWeapon" />
+    </item>
+</list>

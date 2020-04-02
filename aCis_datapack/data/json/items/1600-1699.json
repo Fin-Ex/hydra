@@ -1,0 +1,2089 @@
+[
+  {
+    "type": "QUEST",
+    "id": 1600,
+    "name": "Kasha Bear Claw",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_claw_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1601,
+    "name": "Kasha Blade Spider Talon",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_horn_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1602,
+    "name": "Scarlet Salamander Scale",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1603,
+    "name": "Fiery Spirit Scroll",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1604,
+    "name": "Rosheek's Letter",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_paper_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1605,
+    "name": "Gantaki's Letter of Recommendation",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1606,
+    "name": "Fig",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_fruit_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1607,
+    "name": "4th Leather Pouch",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1608,
+    "name": "4th Leather Pouch (Full)",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1609,
+    "name": "Vuku Orc Tusk",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_molar_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1610,
+    "name": "Ratman Fang",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_claw_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1611,
+    "name": "Langk Lizardman Tooth",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_horn_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1612,
+    "name": "Felim Lizardman Tooth",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_horn_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1613,
+    "name": "Iron Will Scroll",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1614,
+    "name": "Toruku's Letter",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_paper_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1615,
+    "name": "Khavatari Totem",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_orcish_talisman_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1616,
+    "name": "Fire Charm",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1617,
+    "name": "Kasha Bear Pelt",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1618,
+    "name": "Kasha Blade Spider Husk",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1619,
+    "name": "1st Fiery Egg",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_ball_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1620,
+    "name": "Hestui Mask",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_orcish_talisman_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1621,
+    "name": "2nd Fiery Egg",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_ball_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1622,
+    "name": "Totem Spirit Claw",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_claw_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1623,
+    "name": "Tataru's Letter of Recommendation",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1624,
+    "name": "Flame Charm",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1625,
+    "name": "Grizzly Blood",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_reagent_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1626,
+    "name": "Blood Cauldron",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_oil_pot_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1627,
+    "name": "Spirit Net",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_cloth_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1628,
+    "name": "Bound Durka Spirit",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_ball_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1629,
+    "name": "Durka Parasite",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_totem_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1630,
+    "name": "Totem Spirit Blood",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_potion_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1631,
+    "name": "Mask of Medium",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1632,
+    "name": "Silvera's Ring",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessary_ring_of_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1633,
+    "name": "1st Pass Certificate",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1634,
+    "name": "2nd Pass Certificate",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1635,
+    "name": "Final Pass Certificate",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1636,
+    "name": "Boogle Ratman Tooth",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_claw_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1637,
+    "name": "Boogle Ratman Leader's Tooth",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_horn_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1638,
+    "name": "Kluto's Letter",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1639,
+    "name": "Footprint of Thief",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1640,
+    "name": "Stolen Secret Box",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1641,
+    "name": "Secret Box",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1642,
+    "name": "Ring of Raven",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessary_ring_of_raccoon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1643,
+    "name": "Pippi's Letter of Recommendation",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1644,
+    "name": "Raut's Teleport Scroll",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_of_return_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1645,
+    "name": "Succubus Undies",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_cloth_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1646,
+    "name": "Mion's Letter",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1647,
+    "name": "Bronk's Ingot",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_plate_glay_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1648,
+    "name": "Shari's Axe",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_tomahawk_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1649,
+    "name": "Zimenf's Potion",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_potion_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1650,
+    "name": "Bronk's Pay",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_coins_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1651,
+    "name": "Shari's Pay",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_coins_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1652,
+    "name": "Zimenf's Pay",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_coins_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1653,
+    "name": "Bear Picture",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1654,
+    "name": "Tarantula Picture",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1655,
+    "name": "Honey Jar",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_potion_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1656,
+    "name": "Bead",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_ball_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 1657,
+    "name": "Bead Parcel",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessary_mage_earing_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "id": 1658,
+    "name": "Gatekeeper Charm",
+    "weight": 10,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_totem_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1659,
+    "name": "Gatekeeper Token",
+    "weight": 10,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_coins_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 42.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 1660,
+    "name": "Cursed Maingauche",
+    "weight": 1070,
+    "material": "FINE_STEEL",
+    "grade": "D",
+    "crystalCount": 2545,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_maingauche_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 1661,
+    "name": "Thief Key",
+    "weight": 10,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_key_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1662,
+    "name": "Wood",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_squares_wood_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1663,
+    "name": "(Not used) Trunk",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_branch_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1664,
+    "name": "Steel Powder",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_powder_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "NONE",
+    "action": "none",
+    "handler": "Maps",
+    "skills": [],
+    "id": 1665,
+    "name": "World Map",
+    "weight": 0,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 1666,
+    "name": "Recipe: Wooden Arrow",
+    "weight": 30,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1667,
+    "name": "Spellbook: Summon Shadow",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 1668,
+    "name": "Spellbook: Summon Mew the Cat",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 1669,
+    "name": "Spellbook: Summon Boxer the Unicorn",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 1670,
+    "name": "Spellbook: Summon Mirage the Unicorn",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 1671,
+    "name": "Spellbook: Summon Silhouette",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 1672,
+    "name": "__",
+    "weight": 40,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_normal06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 1673,
+    "name": "__",
+    "weight": 40,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_normal06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 1674,
+    "name": "Twig of Treant",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_branch_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1675,
+    "name": "Beast Blood",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_reagent_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1676,
+    "name": "Beast Bone",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_bone_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1677,
+    "name": "Hot Oil",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_oil_pot_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1678,
+    "name": "(Not used) Thread",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skein_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1679,
+    "name": "Bronze",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_lump_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1680,
+    "name": "Fur",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1681,
+    "name": "Elf Stone",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_ball_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1682,
+    "name": "Tear of Holy Spirit",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_lesser_potion_clear_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1683,
+    "name": "Mithril",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_squares_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1684,
+    "name": "Durable Stem",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_herb_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1685,
+    "name": "Wooden Frame",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_squares_wood_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1686,
+    "name": "Bark of Treant",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_branch_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1687,
+    "name": "(Not used) Coarse Bone Powder",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_powder_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1688,
+    "name": "Refined Steel",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_plate_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1689,
+    "name": "(Not used) Leather",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1690,
+    "name": "Bowstring",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skein_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1691,
+    "name": "Steel Frame",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_mold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1692,
+    "name": "(Not used) Cord",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skein_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1693,
+    "name": "Refined Bronze",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_plate_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1694,
+    "name": "Treant Potion",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_potion_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1695,
+    "name": "Spell Paper",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_paper_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1696,
+    "name": "Flaming Oil",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_oil_pot_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1697,
+    "name": "Magic Powder",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_powder_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1698,
+    "name": "Refined Mithril",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_plate_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 1699,
+    "name": "Fortified Steel",
+    "weight": 2,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_squares_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  }
+]

@@ -17,7 +17,12 @@
             <set order="0x08" stat="pAtk" val="8" />
             <set order="0x08" stat="mAtk" val="6" />
             <set order="0x08" stat="criticalRate" val="8" />
-            <set order="0x08" stat="pAtkSpd" val="379" />
+            <set order="0x08" stat="pAtkSpd" val="379" >
+                <not>
+                    <player front="False"/>
+                    <player behind="False"/>
+                </not>
+			</set>
         </for>
     </item>
     <item id="2" type="Weapon" name="Long Sword">

@@ -11,6 +11,11 @@
     <aCar name="admin_silence" accessLevel="7"/>
     <aCar name="admin_tradeoff" accessLevel="7"/>
     <aCar name="admin_reload" accessLevel="7"/>
+    <aCar name="admin_glt_spawn1" accessLevel="7"/>
+    <aCar name="admin_glt_spawn2" accessLevel="7"/>
+    <aCar name="admin_headto" accessLevel="7"/>
+    <aCar name="admin_glt_bush" accessLevel="7"/>
+    <aCar name="admin_glt_coords" accessLevel="7"/>
 
     <!-- ANNOUNCEMENTS -->
     <aCar name="admin_announce" accessLevel="7"/>

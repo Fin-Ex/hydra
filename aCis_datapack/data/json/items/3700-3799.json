@@ -1,0 +1,2302 @@
+[
+  {
+    "type": "QUEST",
+    "id": 3700,
+    "name": "Blood Crystal: Purity 3",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3701,
+    "name": "Blood Crystal: Purity 4",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3702,
+    "name": "Blood Crystal: Purity 5",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3703,
+    "name": "Blood Crystal: Purity 6",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3704,
+    "name": "Blood Crystal: Purity 7",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3705,
+    "name": "Blood Crystal: Purity 8",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3706,
+    "name": "Blood Crystal: Purity 9",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3707,
+    "name": "Blood Crystal: Purity 10",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3708,
+    "name": "Blood Crystal: Broken",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3709,
+    "name": "Guardian Basilisk Scale",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scale_of_medusa_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3710,
+    "name": "Karut Weed",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_branch_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3711,
+    "name": "Haka's Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3712,
+    "name": "Jakas' Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3713,
+    "name": "Marka's Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3714,
+    "name": "Windsus Aleph Skin",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3715,
+    "name": "Indigo Runestone",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3716,
+    "name": "Sporesea Seed",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_seed_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3717,
+    "name": "Timak Orc Totem",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_totem_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3718,
+    "name": "Trisalim Silk",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobweb_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3719,
+    "name": "Ambrosius Fruit",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_fruit_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3720,
+    "name": "Balefire Crystal",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_ball_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3721,
+    "name": "Imperial Arrowhead",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_arrowhead_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3722,
+    "name": "Athu's Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3723,
+    "name": "Lanka's Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3724,
+    "name": "Triska's Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3725,
+    "name": "Motura's Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3726,
+    "name": "Kalath's Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3727,
+    "name": "1st Circle Request: 1C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3728,
+    "name": "1st Circle Request: 2C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3729,
+    "name": "1st Circle Request: 3C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3730,
+    "name": "1st Circle Request: 4C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3731,
+    "name": "1st Circle Request: 5C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3732,
+    "name": "1st Circle Request: 6C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3733,
+    "name": "1st Circle Request: 7C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3734,
+    "name": "1st Circle Request: 8C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3735,
+    "name": "1st Circle Request: 9C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3736,
+    "name": "1st Circle Request: 10C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3737,
+    "name": "1st Circle Request: 11C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3738,
+    "name": "1st Circle Request: 12C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3739,
+    "name": "1st Circle Request: 1B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3740,
+    "name": "1st Circle Request: 2B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3741,
+    "name": "1st Circle Request: 3B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3742,
+    "name": "1st Circle Request: 4B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3743,
+    "name": "1st Circle Request: 5B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3744,
+    "name": "1st Circle Request: 6B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3745,
+    "name": "1st Circle Request: 1A",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3746,
+    "name": "1st Circle Request: 2A",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3747,
+    "name": "1st Circle Request: 3A",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3748,
+    "name": "2nd Circle Request: 1C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3749,
+    "name": "2nd Circle Request 2C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3750,
+    "name": "2nd Circle Request 3C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3751,
+    "name": "2nd Circle Request: 4C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3752,
+    "name": "2nd Circle Request: 5C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3753,
+    "name": "2nd Circle Request: 6C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3754,
+    "name": "2nd Circle Request: 7C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3755,
+    "name": "2nd Circle Request: 8C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3756,
+    "name": "2nd Circle Request: 9C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3757,
+    "name": "2nd Circle Request: 10C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3758,
+    "name": "2nd Circle Request: 11C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3759,
+    "name": "2nd Circle Request: 12C",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3760,
+    "name": "2nd Circle Request: 1B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3761,
+    "name": "2nd Circle Request: 2B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3762,
+    "name": "2nd Circle Request: 3B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3763,
+    "name": "2nd Circle Request: 4B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3764,
+    "name": "2nd Circle Request: 5B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3765,
+    "name": "2nd Circle Request: 6B",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3766,
+    "name": "2nd Circle Request: 1A",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3767,
+    "name": "2nd Circle Request: 2A",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3768,
+    "name": "2nd Circle Request: 3A",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3769,
+    "name": "Charm of Kadesh",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_parasite_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3770,
+    "name": "Timak Jade Necklace",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_totem_necklace_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3771,
+    "name": "Enchanted Golem Shard",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3772,
+    "name": "Giant Monster Eye Meat",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_meat_of_monstereye_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3773,
+    "name": "Dire Wyrm Egg",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_dragon_egg_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3774,
+    "name": "Grd Basilisk Talon",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_claw_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3775,
+    "name": "Revenant's Chains",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_chain_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3776,
+    "name": "Windsus Tusk",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_horn_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3777,
+    "name": "Grandis Skull",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3778,
+    "name": "Taik Obsidian Amulet",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_totem_necklace_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3779,
+    "name": "Karul Bugbear Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3780,
+    "name": "Tamlin Ivory Charm",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_stick_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3781,
+    "name": "Fang of Narak",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3782,
+    "name": "Enchanted Gargoyle Horn",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_gargoyle_claw_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3783,
+    "name": "Coiled Serpent Totem",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_parasite_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3784,
+    "name": "Totem of Kadesh",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_parasite_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3785,
+    "name": "Kaiki's Head",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_skull_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3786,
+    "name": "Kronbe Venom Sac",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_poison_pouch_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3787,
+    "name": "Eva's Charm",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_statue_of_einhasad_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3788,
+    "name": "Titan's Tablet",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ancient_tablet_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3789,
+    "name": "Book of Shunaiman",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3790,
+    "name": "Rotting Tree Spores",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_seed_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3791,
+    "name": "Trisalim Venom Sac",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_poison_pouch_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3792,
+    "name": "Taik Orc Totem",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_totem_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3793,
+    "name": "Harit Barbed Necklace",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leash_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3794,
+    "name": "Coin of Old Empire",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_coins_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3795,
+    "name": "Skin of Farcran",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3796,
+    "name": "Tempest Shard",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_gem_clear_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3797,
+    "name": "Tsunami Shard",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_gem_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3798,
+    "name": "Satyr Mane",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_mane_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 3799,
+    "name": "Hamadryad Shard",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_gem_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  }
+]

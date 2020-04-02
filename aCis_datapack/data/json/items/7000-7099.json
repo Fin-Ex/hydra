@@ -1,0 +1,2438 @@
+[
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7000,
+    "name": "Recipe: Greater Dye of WIT (Wit+3 Int-3) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7001,
+    "name": "Recipe: Greater Dye of WIT (Wit+3 Men-3) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7002,
+    "name": "Recipe: Greater Dye of STR (Str+4 Con-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7003,
+    "name": "Recipe: Greater Dye of STR (Str+4 Dex-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7004,
+    "name": "Recipe: Greater Dye of CON (Con+4 Str-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7005,
+    "name": "Recipe: Greater Dye of CON (Con+4 Dex-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7006,
+    "name": "Recipe: Greater Dye of DEX (Dex+4 Str-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7007,
+    "name": "Recipe: Greater Dye of DEX (Dex+4 Con-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7008,
+    "name": "Recipe: Greater Dye of INT (Int+4 Men-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7009,
+    "name": "Recipe: Greater Dye of INT (Int+4 Wit-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7010,
+    "name": "Recipe: Greater Dye of MEN (Men+4 Int-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7011,
+    "name": "Recipe: Greater Dye of MEN (Men+4 Wit-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7012,
+    "name": "Recipe: Greater Dye of WIT (Wit+4 Int-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7013,
+    "name": "Recipe: Greater Dye of WIT (Wit+4 Men-4) (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      }
+    ],
+    "id": 7014,
+    "name": "Monster Only (Shield of Dark Dragon)",
+    "weight": 4800,
+    "material": "DAMASCUS",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 90.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 7015,
+    "name": "Shield of Castle Pledge",
+    "weight": 1380,
+    "material": "BONE",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_pledge_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7016,
+    "name": "Seed: Blue Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7017,
+    "name": "Seed: Blue Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7018,
+    "name": "Seed: Blue Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7019,
+    "name": "Seed: Chilly Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 1
+      }
+    ],
+    "id": 7020,
+    "name": "Seed: Chilly Coda",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_coda_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7021,
+    "name": "Seed: Chilly Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7022,
+    "name": "Seed: Chilly Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7023,
+    "name": "Seed: Desert Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7024,
+    "name": "Seed: Desert Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7025,
+    "name": "Seed: Golden Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 1
+      }
+    ],
+    "id": 7026,
+    "name": "Seed: Golden Coda",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_coda_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7027,
+    "name": "Seed: Great Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7028,
+    "name": "Seed: Great Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7029,
+    "name": "Seed: Great Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7030,
+    "name": "Seed: Alternative Blue Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7031,
+    "name": "Seed: Alternative Blue Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7032,
+    "name": "Seed: Alternative Blue Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7033,
+    "name": "Seed: Alternative Chilly Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 1
+      }
+    ],
+    "id": 7034,
+    "name": "Seed: Alternative Chilly Coda",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_coda_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7035,
+    "name": "Seed: Alternative Chilly Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7036,
+    "name": "Seed: Alternative Chilly Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7037,
+    "name": "Seed: Alternative Desert Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7038,
+    "name": "Seed: Alternative Desert Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7039,
+    "name": "Seed: Alternative Golden Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 1
+      }
+    ],
+    "id": 7040,
+    "name": "Seed: Alternative Golden Coda",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_coda_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7041,
+    "name": "Seed: Alternative Great Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7042,
+    "name": "Seed: Alternative Great Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7043,
+    "name": "Seed: Alternative Great Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7044,
+    "name": "Seed: Alternative Red Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7045,
+    "name": "Seed: Alternative Red Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7046,
+    "name": "Seed: Alternative Red Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7047,
+    "name": "Seed: Alternative Sea Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7048,
+    "name": "Seed: Alternative Sea Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7049,
+    "name": "Seed: Alternative Sea Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7050,
+    "name": "Seed: Alternative Twin Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 2
+      }
+    ],
+    "id": 7051,
+    "name": "Seed: Red Cobol",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cobol_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7052,
+    "name": "Seed: Red Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7053,
+    "name": "Seed: Red Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7054,
+    "name": "Seed: Sea Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7055,
+    "name": "Seed: Sea Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7056,
+    "name": "Seed: Sea Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 7057,
+    "name": "Seed: Twin Codran",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGBLUNT",
+      "randomDamage": 20,
+      "SSConsume": 0,
+      "SPSConsume": 0,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 1.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 1.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      }
+    ],
+    "id": 7058,
+    "name": "Chrono Darbuka",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_chrono_darbuka_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FACE",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 7059,
+    "name": "Golden Festival Mask",
+    "weight": 10,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_taiwan_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FACE",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 7060,
+    "name": "Tateossian Hairband",
+    "weight": 10,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_tateossian_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2073,
+        "value": 1
+      }
+    ],
+    "id": 7061,
+    "name": "Echo Crystal - Theme of Birthday",
+    "weight": 10,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_echo_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2230,
+        "value": 1
+      }
+    ],
+    "id": 7062,
+    "name": "Echo Crystal - Theme of Wedding",
+    "weight": 10,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_echo_crystal_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7063,
+    "name": "Map - Forest of the Dead",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_map_ivory_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7064,
+    "name": "Lidia's Diary",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7065,
+    "name": "Lidia's Letter",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7066,
+    "name": "Contract",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_permit_card_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7067,
+    "name": "Special Bait 1",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ultra_bomb_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7068,
+    "name": "Special Bait 2",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ultra_bomb_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7069,
+    "name": "Special Bait 3",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ultra_bomb_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7070,
+    "name": "Special Bait 4",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ultra_bomb_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7071,
+    "name": "Special Fish 1",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7072,
+    "name": "Special Fish 2",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7073,
+    "name": "Special Fish 3",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7074,
+    "name": "Special Fish 4",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7075,
+    "name": "Entrance Pass to the Sepulcher",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bead_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "QUEST",
+    "id": 7076,
+    "name": "Mysterious Cloth",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_cloth_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7077,
+    "name": "Jewel Box",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7078,
+    "name": "Sewing Kit",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "id": 7079,
+    "name": "Dimensional Fragment",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7080,
+    "name": "Ice Crystal",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7081,
+    "name": "Divine Stone of Wisdom",
+    "weight": 10,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_stone_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7082,
+    "name": "Guild Report",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_magic_book_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7083,
+    "name": "Guild Report",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_magic_book_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7084,
+    "name": "Guild Report",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_magic_book_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7085,
+    "name": "Guild Report",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_magic_book_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7086,
+    "name": "Guild Report",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_magic_book_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7087,
+    "name": "Tattered Book",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7088,
+    "name": "Tattered Book",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7089,
+    "name": "Tattered Book",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7090,
+    "name": "Tattered Book",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7091,
+    "name": "Guild Report",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7092,
+    "name": "Guild Report",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7093,
+    "name": "Sculpture of the Fallen Knight",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7094,
+    "name": "Record of Mother Tree Guardian",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7095,
+    "name": "Criticism of Biel's Song",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7096,
+    "name": "The Last Days of Swordsman Iron",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7097,
+    "name": "Contemplation of White Wing Army",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7098,
+    "name": "Record of Traitor Muhark",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "show_html",
+    "handler": "Book",
+    "skills": [],
+    "id": 7099,
+    "name": "Secret Book of Khavatari",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spellbook_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  }
+]

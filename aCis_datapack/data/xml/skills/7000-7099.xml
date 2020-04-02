@@ -212,4 +212,9 @@
         <set name="skillType" val="NOTDONE" />
         <set name="operateType" val="OP_PASSIVE" />
     </skill>
+    <skill id="7041" levels="1" name="Channeling DD Test: Long">
+        <set name="target" val="TARGET_NONE" />
+        <set name="skillType" val="NOTDONE" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
 </list>

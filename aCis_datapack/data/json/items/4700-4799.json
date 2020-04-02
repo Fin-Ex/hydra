@@ -1,0 +1,7146 @@
+[
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4700,
+    "name": "Sword of Delusion - Health",
+    "weight": 1400,
+    "material": "MITHRIL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_sword_of_delusion_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4701,
+    "name": "Sword of Delusion - Rsk. Haste",
+    "weight": 1400,
+    "material": "MITHRIL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_sword_of_delusion_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4702,
+    "name": "Tsurugi - Focus",
+    "weight": 1400,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_tsurugi_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4703,
+    "name": "Tsurugi - Critical Damage",
+    "weight": 1400,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_tsurugi_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4704,
+    "name": "Tsurugi - Haste",
+    "weight": 1400,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_tsurugi_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4705,
+    "name": "Sword of Nightmare - Health",
+    "weight": 1400,
+    "material": "BLOOD_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_sword_of_nightmare_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4706,
+    "name": "Sword of Nightmare - Focus",
+    "weight": 1400,
+    "material": "BLOOD_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_sword_of_nightmare_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4707,
+    "name": "Sword of Nightmare - Light",
+    "weight": 0,
+    "material": "BLOOD_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_sword_of_nightmare_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 156.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4708,
+    "name": "Samurai Longsword - Focus",
+    "weight": 1380,
+    "material": "ORIHARUKON",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_samurai_longsword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 156.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4709,
+    "name": "Samurai Longsword - Critical Damage",
+    "weight": 1380,
+    "material": "ORIHARUKON",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_samurai_longsword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 156.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4710,
+    "name": "Samurai Longsword - Haste",
+    "weight": 1380,
+    "material": "ORIHARUKON",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_samurai_longsword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGSWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 130.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4711,
+    "name": "Flamberge - Critical Damage",
+    "weight": 2010,
+    "material": "BRONZE",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_flamberge_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGSWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 130.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4712,
+    "name": "Flamberge - Focus",
+    "weight": 2010,
+    "material": "BRONZE",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_flamberge_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGSWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 130.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4713,
+    "name": "Flamberge - Light",
+    "weight": 0,
+    "material": "BRONZE",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_flamberge_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 175.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4714,
+    "name": "Keshanberk - Guidance",
+    "weight": 1370,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_kshanberk_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 175.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4715,
+    "name": "Keshanberk - Focus",
+    "weight": 1370,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_kshanberk_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 175.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4716,
+    "name": "Keshanberk - Back Blow",
+    "weight": 1370,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_kshanberk_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 194.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4717,
+    "name": "Sword of Damascus - Focus",
+    "weight": 1350,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_sword_of_damascus_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 194.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4718,
+    "name": "Sword of Damascus - Critical Damage",
+    "weight": 1350,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_sword_of_damascus_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 194.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4719,
+    "name": "Sword of Damascus - Haste",
+    "weight": 1350,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_sword_of_damascus_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4720,
+    "name": "Tallum Blade - Health",
+    "weight": 1330,
+    "material": "ADAMANTAITE",
+    "grade": "A",
+    "crystalCount": 1464,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_tallum_blade_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4721,
+    "name": "Tallum Blade - Rsk. Evasion",
+    "weight": 1330,
+    "material": "ADAMANTAITE",
+    "grade": "A",
+    "crystalCount": 1464,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_tallum_blade_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4722,
+    "name": "Tallum Blade - Rsk. Haste",
+    "weight": 1330,
+    "material": "ADAMANTAITE",
+    "grade": "A",
+    "crystalCount": 1464,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_tallum_blade_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGSWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4723,
+    "name": "Great Sword - Health",
+    "weight": 1930,
+    "material": "STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_great_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGSWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4724,
+    "name": "Great Sword - Critical Damage",
+    "weight": 1930,
+    "material": "STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_great_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGSWORD",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4725,
+    "name": "Great Sword - Focus",
+    "weight": 1930,
+    "material": "STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_great_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4726,
+    "name": "Big Hammer - Health",
+    "weight": 1710,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_big_hammer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4727,
+    "name": "Big Hammer - Rsk.Focus",
+    "weight": 1710,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_big_hammer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4728,
+    "name": "Big Hammer - Haste",
+    "weight": 1710,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_big_hammer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4729,
+    "name": "Battle Axe - Anger",
+    "weight": 1720,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_battle_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4730,
+    "name": "Battle Axe - Rsk.Focus",
+    "weight": 1720,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_battle_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4731,
+    "name": "Battle Axe - Haste",
+    "weight": 1720,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_battle_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4732,
+    "name": "Silver Axe - Anger",
+    "weight": 1690,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_war_pick_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4733,
+    "name": "Silver Axe - Rsk.Focus",
+    "weight": 1690,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_war_pick_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4734,
+    "name": "Silver Axe - Haste",
+    "weight": 1690,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_war_pick_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4735,
+    "name": "Skull Graver - Anger",
+    "weight": 1640,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_skull_graver_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4736,
+    "name": "Skull Graver - Health",
+    "weight": 1640,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_skull_graver_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4737,
+    "name": "Skull Graver - Rsk.Focus",
+    "weight": 1640,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_skull_graver_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4738,
+    "name": "Dwarven War Hammer - Anger",
+    "weight": 1670,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_dwarven_warhammer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4739,
+    "name": "Dwarven War Hammer - Health",
+    "weight": 1670,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_dwarven_warhammer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4740,
+    "name": "Dwarven War Hammer - Haste",
+    "weight": 1670,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_dwarven_warhammer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4741,
+    "name": "War Axe - Anger",
+    "weight": 1660,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_war_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4742,
+    "name": "War Axe - Health",
+    "weight": 1660,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_war_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4743,
+    "name": "War Axe - Haste",
+    "weight": 1660,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_war_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 156.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4744,
+    "name": "Yaksa Mace - Anger",
+    "weight": 1640,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_yaksa_mace_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 156.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4745,
+    "name": "Yaksa Mace - Health",
+    "weight": 1640,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_yaksa_mace_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 156.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4746,
+    "name": "Yaksa Mace - Rsk. Focus",
+    "weight": 1640,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_yaksa_mace_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 175.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4747,
+    "name": "Heavy War Axe - Anger",
+    "weight": 1620,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_heavy_war_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 175.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4748,
+    "name": "Heavy War Axe - Health",
+    "weight": 1620,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_heavy_war_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 175.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4749,
+    "name": "Heavy War Axe - Rsk. Focus",
+    "weight": 1620,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_heavy_war_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 194.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4750,
+    "name": "Deadman's Glory - Anger",
+    "weight": 1600,
+    "material": "BONE",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_deadmans_glory_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 194.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4751,
+    "name": "Deadman's Glory - Health",
+    "weight": 1600,
+    "material": "BONE",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_deadmans_glory_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 194.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4752,
+    "name": "Deadman's Glory - Haste",
+    "weight": 1600,
+    "material": "BONE",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_deadmans_glory_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 194.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4753,
+    "name": "Art of Battle Axe - Health",
+    "weight": 1570,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_art_of_battle_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 194.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4754,
+    "name": "Art of Battle Axe - Rsk. Focus",
+    "weight": 1570,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_art_of_battle_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 194.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4755,
+    "name": "Art of Battle Axe - Haste",
+    "weight": 1570,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_art_of_battle_axe_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4756,
+    "name": "Meteor Shower - Health",
+    "weight": 1600,
+    "material": "FINE_STEEL",
+    "grade": "A",
+    "crystalCount": 1464,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_meteor_shower_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4757,
+    "name": "Meteor Shower - Focus",
+    "weight": 1600,
+    "material": "FINE_STEEL",
+    "grade": "A",
+    "crystalCount": 1464,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_meteor_shower_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "BLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4758,
+    "name": "Meteor Shower - P.Focus",
+    "weight": 1600,
+    "material": "FINE_STEEL",
+    "grade": "A",
+    "crystalCount": 1464,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_meteor_shower_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 94.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4759,
+    "name": "Cursed Dagger - Critical Bleed",
+    "weight": 1040,
+    "material": "MITHRIL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_cursed_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 94.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4760,
+    "name": "Cursed Dagger - Critical Poison",
+    "weight": 1040,
+    "material": "MITHRIL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_cursed_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 94.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4761,
+    "name": "Cursed Dagger - Rsk. Haste",
+    "weight": 1040,
+    "material": "MITHRIL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_cursed_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 94.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4762,
+    "name": "Dark Elven Dagger - Focus",
+    "weight": 1050,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_darkelven_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 94.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4763,
+    "name": "Dark Elven Dagger - Back Blow",
+    "weight": 1050,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_darkelven_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 94.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4764,
+    "name": "Dark Elven Dagger - Mortal Strike",
+    "weight": 1050,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_darkelven_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4765,
+    "name": "Stiletto - Critical Bleed",
+    "weight": 1030,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_stiletto_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4766,
+    "name": "Stiletto - Critical Poison",
+    "weight": 1030,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_stiletto_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4767,
+    "name": "Stiletto - Mortal Strike",
+    "weight": 1030,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_stiletto_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4768,
+    "name": "Grace Dagger - Evasion",
+    "weight": 1020,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_grace_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4769,
+    "name": "Grace Dagger - Focus",
+    "weight": 1020,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_grace_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4770,
+    "name": "Grace Dagger - Back Blow",
+    "weight": 1020,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_grace_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4771,
+    "name": "Dark Screamer - Evasion",
+    "weight": 1010,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_dark_screamer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4772,
+    "name": "Dark Screamer - Focus",
+    "weight": 1010,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_dark_screamer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4773,
+    "name": "Dark Screamer - Critical Bleed",
+    "weight": 1010,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_dark_screamer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 136.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4774,
+    "name": "Crystal Dagger - Critical Bleed",
+    "weight": 1000,
+    "material": "CRYSTAL",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_crystal_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 136.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4775,
+    "name": "Crystal Dagger - Critical Poison",
+    "weight": 1000,
+    "material": "CRYSTAL",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_crystal_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 136.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4776,
+    "name": "Crystal Dagger - Mortal Strike",
+    "weight": 1000,
+    "material": "CRYSTAL",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_crystal_dagger_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 153.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4777,
+    "name": "Kris - Evasion",
+    "weight": 980,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_kris_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 153.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4778,
+    "name": "Kris - Focus",
+    "weight": 980,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_kris_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 153.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4779,
+    "name": "Kris - Back Blow",
+    "weight": 980,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_kris_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 170.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4780,
+    "name": "Demon Dagger - Critical Bleed",
+    "weight": 970,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_demons_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 170.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4781,
+    "name": "Demon Dagger - Critical Poison",
+    "weight": 970,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_demons_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 170.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4782,
+    "name": "Demon Dagger - Mortal Strike",
+    "weight": 970,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_demons_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 186.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4783,
+    "name": "Bloody Orchid - Evasion",
+    "weight": 960,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 1464,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_bloody_orchid_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 186.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4784,
+    "name": "Bloody Orchid - Focus",
+    "weight": 960,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 1464,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_bloody_orchid_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 186.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4785,
+    "name": "Bloody Orchid - Back Blow",
+    "weight": 960,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 1464,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_bloody_orchid_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": true,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4786,
+    "name": "Hell Knife - Focus",
+    "weight": 740,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_hell_knife_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": true,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4787,
+    "name": "Hell Knife - Back Blow",
+    "weight": 740,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_hell_knife_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": true,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4788,
+    "name": "Hell Knife - Mortal Strike",
+    "weight": 740,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_hell_knife_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 130.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4789,
+    "name": "Chakram - Critical Drain",
+    "weight": 1490,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_chakram_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 130.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4790,
+    "name": "Chakram - Critical Poison",
+    "weight": 1490,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_chakram_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 130.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4791,
+    "name": "Chakram - Rsk. Haste",
+    "weight": 1490,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_chakram_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 169.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4792,
+    "name": "Fisted Blade - Rsk. Evasion",
+    "weight": 1480,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_fist_blade_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 169.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4793,
+    "name": "Fisted Blade - Rsk. Haste",
+    "weight": 1480,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_fist_blade_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 169.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4794,
+    "name": "Fisted Blade - Haste",
+    "weight": 1480,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_fist_blade_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 190.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4795,
+    "name": "Great Pata - Critical Drain",
+    "weight": 1460,
+    "material": "CHRYSOLITE",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_great_pata_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 190.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4796,
+    "name": "Great Pata - Critical Poison",
+    "weight": 1460,
+    "material": "CHRYSOLITE",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_great_pata_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 190.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 83.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4797,
+    "name": "Great Pata - Rsk. Haste",
+    "weight": 1460,
+    "material": "CHRYSOLITE",
+    "grade": "C",
+    "crystalCount": 2452,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_great_pata_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 148.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4798,
+    "name": "Knuckle Duster - Rsk. Evasion",
+    "weight": 1490,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_knuckle_dust_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUALFIST",
+      "randomDamage": 5,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 148.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4799,
+    "name": "Knuckle Duster - Rsk. Haste",
+    "weight": 1490,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_knuckle_dust_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  }
+]

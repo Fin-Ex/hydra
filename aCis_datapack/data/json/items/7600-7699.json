@@ -1,0 +1,2017 @@
+[
+  {
+    "type": "QUEST",
+    "id": 7600,
+    "name": "Worn Tarot Card - Wealth",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_report_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7601,
+    "name": "Worn Tarot Card - Power",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_report_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7602,
+    "name": "Worn Tarot Card - Love",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_report_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7603,
+    "name": "Worn Tarot Card - Knowledge",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_report_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7604,
+    "name": "Summoner Keats' Letter",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_paper_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7605,
+    "name": "Miracle Potion of Transferred Life",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bless_of_eva_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7606,
+    "name": "Kamilen's Antidote",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_dragons_blood_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7607,
+    "name": "Coolant of the Repaired Wilma #3",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_mechanic_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7608,
+    "name": "Sealed Envelope",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "id": 7609,
+    "name": "Proof of Catching a Fish",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ticket_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7610,
+    "name": "Wind Fishing Lure",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7611,
+    "name": "Icy Air Fishing Lure",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7612,
+    "name": "Earth Fishing Lure",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7613,
+    "name": "Flaming Fishing Lure",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7614,
+    "name": "Chest Caught by Wind Fishing Lure",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7615,
+    "name": "Chest Caught by Icy Air Fishing Lure",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7616,
+    "name": "Chest Caught by Earth Fishing Lure",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7617,
+    "name": "Chest Caught by using a Flaming Fishing Lure",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2213,
+        "value": 20
+      }
+    ],
+    "id": 7618,
+    "name": "Scroll of Escape - Ketra Orc Village",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_of_return_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2213,
+        "value": 21
+      }
+    ],
+    "id": 7619,
+    "name": "Scroll of Escape - Varka Silenos Village",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_of_return_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7620,
+    "name": "Trash",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_dragons_blood_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7621,
+    "name": "Essence of Wind",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_echo_crystal_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7622,
+    "name": "Lost Bait Ingredient",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_codran_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7623,
+    "name": "Eye of Tarlk Basilisk",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_eyeball_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7624,
+    "name": "Crimson Drake Heart",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_inf_ore_high_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7625,
+    "name": "Strange Golem Blueprint",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ssq_scroll_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7626,
+    "name": "Kiki's Letter",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_permit_card_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7627,
+    "name": "Small Glass Box",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_silver_mold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7628,
+    "name": "Rukal's Musical Score",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ssq_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2217,
+        "value": 1
+      }
+    ],
+    "id": 7629,
+    "name": "Looted Goods - White Cargo box",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2217,
+        "value": 2
+      }
+    ],
+    "id": 7630,
+    "name": "Looted Goods - Blue Cargo box",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2217,
+        "value": 3
+      }
+    ],
+    "id": 7631,
+    "name": "Looted Goods - Yellow Cargo box",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2217,
+        "value": 4
+      }
+    ],
+    "id": 7632,
+    "name": "Looted Goods - Red Filing Cabinet",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_royal_seal_of_lord_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2217,
+        "value": 5
+      }
+    ],
+    "id": 7633,
+    "name": "Looted Goods - Purple Filing Cabinet",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_royal_seal_of_lord_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2219,
+        "value": 1
+      }
+    ],
+    "id": 7634,
+    "name": "Looted Goods - Brown Pouch",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2219,
+        "value": 2
+      }
+    ],
+    "id": 7635,
+    "name": "Looted Goods - Gray Pouch",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2218,
+        "value": 1
+      }
+    ],
+    "id": 7636,
+    "name": "Booty - Yellow Pouch",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_yellow_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2218,
+        "value": 2
+      }
+    ],
+    "id": 7637,
+    "name": "Booty - Brown Pouch",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "id": 7638,
+    "name": "Spellbook - Mass Summon Storm Cubic",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7639,
+    "name": "Spellbook - Mass Summon Aqua Cubic",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7640,
+    "name": "Spellbook - Mass Summon Phantom Cubic",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7641,
+    "name": "Spellbook - Summon Feline Queen",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7642,
+    "name": "Spellbook - Summon Unicorn Seraphim",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7643,
+    "name": "Spellbook - Summon Nightshade",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7644,
+    "name": "Spellbook - Summon Cursed Man",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7645,
+    "name": "Spellbook - Balance Life",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7646,
+    "name": "Spellbook - Curse of Doom",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7647,
+    "name": "Spellbook - Curse of Abyss",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7648,
+    "name": "Spellbook - Arcane Chaos",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_element_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7649,
+    "name": "Spellbook - Fire Vortex",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_element_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7650,
+    "name": "Spellbook - Ice Vortex",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_element_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7651,
+    "name": "Spellbook - Wind Vortex",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_element_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7652,
+    "name": "Spellbook - Light Vortex",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7653,
+    "name": "Spellbook - Dark Vortex",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7654,
+    "name": "Spellbook - Mass Warrior Bane",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_element_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7655,
+    "name": "Spellbook - Mass Mage Bane",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_element_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7656,
+    "name": "Spellbook - Warrior Servitor",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7657,
+    "name": "Spellbook - Wizard Servitor",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7658,
+    "name": "Spellbook - Assassin Servitor",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7659,
+    "name": "Spellbook - Final Servitor",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_summon_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7660,
+    "name": "Spellbook - Warrior Bane",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_element_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7661,
+    "name": "Spellbook - Mage Bane",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_element_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7662,
+    "name": "Spellbook - Elemental Protection",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7663,
+    "name": "Spellbook - Divine Protection",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7664,
+    "name": "Spellbook - Arcane Protection",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7665,
+    "name": "Spellbook - Prophecy of Water",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7666,
+    "name": "Spellbook - Prophecy of Fire",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7667,
+    "name": "Spellbook - Prophecy of Wind",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7668,
+    "name": "Spellbook - Block Shield",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7669,
+    "name": "Spellbook - Block Wind Walk",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7670,
+    "name": "Spellbook - Mass Block Shield",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7671,
+    "name": "Spellbook - Mass Block Wind Walk",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_assistance_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7672,
+    "name": "Amulet - Chant of Spirit",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_orcish_talisman_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7673,
+    "name": "Amulet - Chant of Victory",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_orcish_talisman_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7674,
+    "name": "Amulet - Pa'agrio's Eye",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_orcish_talisman_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7675,
+    "name": "Amulet - Pa'agrio's Soul",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_orcish_talisman_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7676,
+    "name": "Amulet - Seal of Despair",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_orcish_talisman_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7677,
+    "name": "Virgil's Letter",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_envelope_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7678,
+    "name": "Caradine's Letter",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_envelope_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 7679,
+    "name": "Caradine's Letter",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_envelope_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HAIR",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 7680,
+    "name": "Raccoon Ears",
+    "weight": 10,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_racoon_ear_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FACE",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 7681,
+    "name": "Outlaw's Eyepatch",
+    "weight": 10,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_outlaw_eyepatch_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HAIR",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 7682,
+    "name": "Maiden's Hairpin",
+    "weight": 10,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_maidens_hairpin_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HAIR",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 7683,
+    "name": "Rabbit Ears",
+    "weight": 10,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_rabbit_ear_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7684,
+    "name": "Raccoon Ears Fabric",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_cloth_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7685,
+    "name": "Outlaw's Eyepatch Strap",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_braided_hemp_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7686,
+    "name": "Maiden's Hairpin Piece",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7687,
+    "name": "Rabbit Ears Fabric",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_cloth_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7688,
+    "name": "Cat Ears Fabric",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_cloth_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7689,
+    "name": "Recipe - Raccoon Ears (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7690,
+    "name": "Recipe - Outlaw's Eyepatch (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7691,
+    "name": "Recipe - Maiden's Hairpin (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7692,
+    "name": "Recipe - Rabbit Ears (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7693,
+    "name": "Recipe - Cat Ears (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "slot": "SLOT_FACE",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 7694,
+    "name": "Noblesse Tiara",
+    "weight": 10,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_noblesse_tiara_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HAIR",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 7695,
+    "name": "Forget-me-not Hairpin",
+    "weight": 10,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_forget_me_not_hairpin_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HAIR",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 7696,
+    "name": "Daisy Hairpin",
+    "weight": 10,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_daisy_hairpin_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7697,
+    "name": "Piece of Forget-me-not Hairpin",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7698,
+    "name": "Piece of Daisy Hairpin",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "RECIPE",
+    "action": "recipe",
+    "handler": "Recipes",
+    "skills": [],
+    "id": 7699,
+    "name": "Recipe: Forget-me-not Hairpin (100%)",
+    "weight": 30,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_recipe_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  }
+]

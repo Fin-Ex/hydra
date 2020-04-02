@@ -1,0 +1,2779 @@
+[
+  {
+    "type": "NONE",
+    "action": "dice",
+    "handler": "RollingDice",
+    "skills": [],
+    "id": 4625,
+    "name": "Dice (Heart)",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_dice_a_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "dice",
+    "handler": "RollingDice",
+    "skills": [],
+    "id": 4626,
+    "name": "Dice (Spade)",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_dice_b_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "dice",
+    "handler": "RollingDice",
+    "skills": [],
+    "id": 4627,
+    "name": "Dice (Clover)",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_dice_c_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "dice",
+    "handler": "RollingDice",
+    "skills": [],
+    "id": 4628,
+    "name": "Dice (Diamond)",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_dice_d_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4629,
+    "name": "Red Soul Crystal",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4630,
+    "name": "Red Soul Crystal - Stage 1",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4631,
+    "name": "Red Soul Crystal - Stage 2",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4632,
+    "name": "Red Soul Crystal - Stage 3",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4633,
+    "name": "Red Soul Crystal - Stage 4",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4634,
+    "name": "Red Soul Crystal - Stage 5",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4635,
+    "name": "Red Soul Crystal - Stage 6",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4636,
+    "name": "Red Soul Crystal - Stage 7",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4637,
+    "name": "Red Soul Crystal - Stage 8",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4638,
+    "name": "Red Soul Crystal - Stage 9",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4639,
+    "name": "Red Soul Crystal - Stage 10",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4640,
+    "name": "Green Soul Crystal",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4641,
+    "name": "Green Soul Crystal - Stage 1",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4642,
+    "name": "Green Soul Crystal - Stage 2",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4643,
+    "name": "Green Soul Crystal - Stage 3",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4644,
+    "name": "Green Soul Crystal - Stage 4",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4645,
+    "name": "Green Soul Crystal - Stage 5",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4646,
+    "name": "Green Soul Crystal - Stage 6",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4647,
+    "name": "Green Soul Crystal - Stage 7",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4648,
+    "name": "Green Soul Crystal - Stage 8",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4649,
+    "name": "Green Soul Crystal - Stage 9",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4650,
+    "name": "Green Soul Crystal - Stage 10",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4651,
+    "name": "Blue Soul Crystal",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4652,
+    "name": "Blue Soul Crystal - Stage 1",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4653,
+    "name": "Blue Soul Crystal - Stage 2",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4654,
+    "name": "Blue Soul Crystal - Stage 3",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4655,
+    "name": "Blue Soul Crystal - Stage 4",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4656,
+    "name": "Blue Soul Crystal - Stage 5",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4657,
+    "name": "Blue Soul Crystal - Stage 6",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4658,
+    "name": "Blue Soul Crystal - Stage 7",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4659,
+    "name": "Blue Soul Crystal - Stage 8",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4660,
+    "name": "Blue Soul Crystal - Stage 9",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SCROLL",
+    "action": "skill_reduce",
+    "handler": "SoulCrystals",
+    "skills": [
+      {
+        "id": 2096,
+        "value": 1
+      }
+    ],
+    "id": 4661,
+    "name": "Blue Soul Crystal - Stage 10",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 4662,
+    "name": "Broken Red Soul Crystal",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 4663,
+    "name": "Broken Green Soul Crystal",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_green_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 4664,
+    "name": "Broken Blue Soul Crystal",
+    "weight": 20,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "DAGGER",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 10.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 9.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 433.0
+      }
+    ],
+    "id": 4665,
+    "name": "Pipette Knife",
+    "weight": 1140,
+    "material": "BRONZE",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_knife_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNDESTROYABLE",
+      "UNDEPOSITABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4666,
+    "name": "Reiria's Soul Orb",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bead_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4667,
+    "name": "Kernon's Infernium Scepter",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_imperial_scepter_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4668,
+    "name": "Golkonda's Infernium Scepter",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_imperial_scepter_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4669,
+    "name": "Hallate's Infernium Scepter",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_imperial_scepter_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4670,
+    "name": "Maestro Reorin's Hammer",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_iron_hammer_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4671,
+    "name": "Maestro Reorin's Mold",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_artisans_frame_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4672,
+    "name": "Infernium Varnish",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_powder_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4673,
+    "name": "Red Pipette Knife",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_knife_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4674,
+    "name": "Medal of Honor",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_magic_coin_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4675,
+    "name": "Medal of Friendship",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_magic_coin_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 4676,
+    "name": "Medal of Victory",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_magic_coin_blood_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "POTION",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2074,
+        "value": 1
+      }
+    ],
+    "id": 4677,
+    "name": "Potion of Critical Escape",
+    "weight": 120,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_potion_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "POTION",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2075,
+        "value": 1
+      }
+    ],
+    "id": 4678,
+    "name": "Decrease Haste Potion",
+    "weight": 180,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "POTION",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2076,
+        "value": 1
+      }
+    ],
+    "id": 4679,
+    "name": "Bless of Eva",
+    "weight": 180,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bless_of_eva_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "POTION",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2077,
+        "value": 1
+      }
+    ],
+    "id": 4680,
+    "name": "Potion of Revenge",
+    "weight": 180,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_potion_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4681,
+    "name": "Stormbringer - Critical Anger",
+    "weight": 1430,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_stormbringer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4682,
+    "name": "Stormbringer - Focus",
+    "weight": 1430,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_stormbringer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 107.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 61.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4683,
+    "name": "Stormbringer - Light",
+    "weight": 0,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 916,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_stormbringer_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4684,
+    "name": "Shamshir - Guidance",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_shamshir_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4685,
+    "name": "Shamshir - Back Blow",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_shamshir_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4686,
+    "name": "Shamshir - Rsk. Evasion",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_shamshir_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4687,
+    "name": "Katana - Focus",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_katana_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4688,
+    "name": "Katana - Critical Damage",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_katana_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4689,
+    "name": "Katana - Haste",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_katana_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4690,
+    "name": "Spirit Sword - Critical Damage",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_spirits_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4691,
+    "name": "Spirit Sword - Critical Poison",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_spirits_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4692,
+    "name": "Spirit Sword - Haste",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_spirits_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4693,
+    "name": "Raid Sword - Focus",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_raid_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4694,
+    "name": "Raid Sword - Critical Drain",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_raid_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 122.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4695,
+    "name": "Raid Sword - Critical Poison",
+    "weight": 1420,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 1148,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_raid_sword_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4696,
+    "name": "Caliburs - Guidance",
+    "weight": 1400,
+    "material": "ORIHARUKON",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_caliburs_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4697,
+    "name": "Caliburs - Focus",
+    "weight": 1400,
+    "material": "ORIHARUKON",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_caliburs_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4698,
+    "name": "Caliburs - Critical Damage",
+    "weight": 1400,
+    "material": "ORIHARUKON",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_caliburs_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 76.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 4699,
+    "name": "Sword of Delusion - Focus",
+    "weight": 1400,
+    "material": "MITHRIL",
+    "grade": "C",
+    "crystalCount": 1720,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_sword_of_delusion_i01"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  }
+]

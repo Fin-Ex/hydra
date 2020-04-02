@@ -1539,6 +1539,9 @@
         <set name="operateType" val="OP_PASSIVE"/>
         <for>
             <add order="0x40" stat="pAtk" val="#final">
+				<player has_talent="ENTIRE_HATE"/>
+            </add>
+            <add order="0x40" stat="pAtk" val="#final">
                 <player hp="30"/>
             </add>
         </for>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<!-- Briefing Zone -->
+	<zone id="110000" type="GLTZone" shape="Cylinder" rad="150" minZ="1700" maxZ="1850">
+		<node X="33505" Y="-48184" />
+	</zone>
+	<!-- Primival Island GLT zone -->
+	<zone id="110001" type="GLTZone" shape="Cuboid" minZ="-4757" maxZ="1000">
+		<node X="642" Y="-2779" />
+		<node X="32354" Y="-26797" />
+		<!-- Participants random location spawns -->
+		<spawn X="6008" Y="-2328" Z="-3008" />
+		<spawn X="3848" Y="-5880" Z="-3048" />
+		<spawn X="1875" Y="-13276" Z="-3274" />
+		<spawn X="3834" Y="-20434" Z="-3339" />
+		<spawn X="6743" Y="-23740" Z="-3702" />
+		<spawn X="11784" Y="-24568" Z="-3640" />
+		<spawn X="14104" Y="-19640" Z="-2912" />
+		<spawn X="18274" Y="-20350" Z="-3250" />
+		<spawn X="21839" Y="-20467" Z="-3035" />
+		<spawn X="22408" Y="-21128" Z="-2352" />
+		<spawn X="28990" Y="-17892" Z="-2372" />
+		<spawn X="28263" Y="-14998" Z="-2524" />
+		<spawn X="27752" Y="-11736" Z="-2264" />
+		<spawn X="28088" Y="-10664" Z="-2248" />
+		<spawn X="24280" Y="-9560" Z="-2456" />
+		<spawn X="22104" Y="-6184" Z="-1992" />
+		<spawn X="23186" Y="-8552" Z="-1389" />
+		<spawn X="23605" Y="-7563" Z="-1223" />
+		<spawn X="24232" Y="-8184" Z="-1064" />
+		<spawn X="20738" Y="-7760" Z="-2632" />
+		<spawn X="19026" Y="-8430" Z="-2604" />
+		<spawn X="16061" Y="-7161" Z="-3164" />
+		<spawn X="15876" Y="-6612" Z="-3088" />
+		<spawn X="16532" Y="-6147" Z="-2909" />
+		<spawn X="15083" Y="-7881" Z="-3179" />
+		<spawn X="13673" Y="-9198" Z="-3186" />
+		<spawn X="4680" Y="-5896" Z="-3192" />
+		<spawn X="7511" Y="-5542" Z="-3234" />
+		<spawn X="9178" Y="-14839" Z="-3566" />
+		<spawn X="3672" Y="-22264" Z="-3544" />
+		<spawn X="4600" Y="-23464" Z="-3752" />
+		<!-- Herbs/Traps random location spawns -->
+		<spawn X="5571" Y="-23515" Z="-3718" isChaotic="true" />
+		<spawn X="6639" Y="-23777" Z="-3706" isChaotic="true" />
+		<spawn X="7411" Y="-23210" Z="-3718" isChaotic="true" />
+		<spawn X="9942" Y="-23971" Z="-3709" isChaotic="true" />
+		<spawn X="12288" Y="-21250" Z="-3439" isChaotic="true" />
+		<spawn X="12363" Y="-20184" Z="-3375" isChaotic="true" />
+		<spawn X="13308" Y="-19560" Z="-3170" isChaotic="true" />
+		<spawn X="14801" Y="-18915" Z="-3166" isChaotic="true" />
+		<spawn X="14392" Y="-17957" Z="-3139" isChaotic="true" />
+		<spawn X="13926" Y="-17271" Z="-2991" isChaotic="true" />
+		<spawn X="15880" Y="-16657" Z="-3213" isChaotic="true" />
+		<spawn X="16724" Y="-17807" Z="-3202" isChaotic="true" />
+		<spawn X="18263" Y="-18393" Z="-3217" isChaotic="true" />
+		<spawn X="20149" Y="-20257" Z="-3260" isChaotic="true" />
+		<spawn X="20999" Y="-20038" Z="-3299" isChaotic="true" />
+		<spawn X="20798" Y="-18482" Z="-3226" isChaotic="true" />
+		<spawn X="20220" Y="-17989" Z="-3186" isChaotic="true" />
+		<spawn X="19851" Y="-14788" Z="-3032" isChaotic="true" />
+		<spawn X="22996" Y="-15246" Z="-3042" isChaotic="true" />
+		<spawn X="24067" Y="-14567" Z="-2968" isChaotic="true" />
+		<spawn X="22691" Y="-13403" Z="-3064" isChaotic="true" />
+		<spawn X="21504" Y="-14197" Z="-3112" isChaotic="true" />
+		<spawn X="20876" Y="-14623" Z="-3052" isChaotic="true" />
+		<spawn X="19109" Y="-14253" Z="-2984" isChaotic="true" />
+		<spawn X="17712" Y="-14764" Z="-3068" isChaotic="true" />
+		<spawn X="17265" Y="-14872" Z="-3137" isChaotic="true" />
+		<spawn X="16232" Y="-14266" Z="-3192" isChaotic="true" />
+		<spawn X="16471" Y="-13261" Z="-3179" isChaotic="true" />
+		<spawn X="16969" Y="-13026" Z="-3131" isChaotic="true" />
+		<spawn X="17198" Y="-12905" Z="-3128" isChaotic="true" />
+		<spawn X="17472" Y="-12679" Z="-3120" isChaotic="true" />
+		<spawn X="17654" Y="-12396" Z="-3111" isChaotic="true" />
+		<spawn X="17650" Y="-11833" Z="-3122" isChaotic="true" />
+		<spawn X="17124" Y="-11624" Z="-3168" isChaotic="true" />
+		<spawn X="16736" Y="-11658" Z="-3189" isChaotic="true" />
+		<spawn X="16364" Y="-11748" Z="-3186" isChaotic="true" />
+		<spawn X="15952" Y="-11876" Z="-3142" isChaotic="true" />
+		<spawn X="15615" Y="-11554" Z="-3172" isChaotic="true" />
+		<spawn X="15051" Y="-10886" Z="-3276" isChaotic="true" />
+		<spawn X="14733" Y="-10580" Z="-3296" isChaotic="true" />
+		<spawn X="14601" Y="-9911" Z="-3299" isChaotic="true" />
+		<spawn X="14849" Y="-9518" Z="-3282" isChaotic="true" />
+		<spawn X="15185" Y="-8986" Z="-3266" isChaotic="true" />
+		<spawn X="15434" Y="-8593" Z="-3260" isChaotic="true" />
+		<spawn X="15846" Y="-8334" Z="-3254" isChaotic="true" />
+		<spawn X="16274" Y="-8152" Z="-3239" isChaotic="true" />
+		<spawn X="16683" Y="-7837" Z="-3202" isChaotic="true" />
+		<spawn X="16777" Y="-7537" Z="-3174" isChaotic="true" />
+		<spawn X="16441" Y="-7138" Z="-3162" isChaotic="true" />
+		<spawn X="16308" Y="-6983" Z="-3144" isChaotic="true" />
+		<spawn X="16266" Y="-6602" Z="-3081" isChaotic="true" />
+		<spawn X="16473" Y="-6542" Z="-3073" isChaotic="true" />
+		<spawn X="17171" Y="-7758" Z="-3152" isChaotic="true" />
+		<spawn X="17267" Y="-7871" Z="-3149" isChaotic="true" />
+		<spawn X="17576" Y="-8561" Z="-3120" isChaotic="true" />
+		<spawn X="17301" Y="-9330" Z="-3152" isChaotic="true" />
+		<spawn X="17090" Y="-9891" Z="-3186" isChaotic="true" />
+		<spawn X="16558" Y="-10232" Z="-3245" isChaotic="true" />
+		<spawn X="15864" Y="-10045" Z="-3295" isChaotic="true" />
+		<spawn X="14337" Y="-11698" Z="-3016" isChaotic="true" />
+		<spawn X="13772" Y="-12579" Z="-3059" isChaotic="true" />
+		<spawn X="13634" Y="-12992" Z="-3132" isChaotic="true" />
+		<spawn X="13384" Y="-13763" Z="-3164" isChaotic="true" />
+		<spawn X="13285" Y="-14132" Z="-3173" isChaotic="true" />
+		<spawn X="13506" Y="-14821" Z="-3122" isChaotic="true" />
+		<spawn X="13404" Y="-15290" Z="-3033" isChaotic="true" />
+		<spawn X="13395" Y="-15756" Z="-2979" isChaotic="true" />
+		<spawn X="14212" Y="-15012" Z="-3098" isChaotic="true" />
+		<spawn X="14536" Y="-15016" Z="-3129" isChaotic="true" />
+		<spawn X="14894" Y="-15280" Z="-3152" isChaotic="true" />
+		<spawn X="15542" Y="-16394" Z="-3200" isChaotic="true" />
+		<spawn X="15303" Y="-17063" Z="-3200" isChaotic="true" />
+		<spawn X="14569" Y="-17278" Z="-3133" isChaotic="true" />
+		<spawn X="14005" Y="-17485" Z="-3036" isChaotic="true" />
+		<spawn X="13541" Y="-17844" Z="-2957" isChaotic="true" />
+		<spawn X="13229" Y="-18417" Z="-2937" isChaotic="true" />
+		<spawn X="13771" Y="-18562" Z="-3067" isChaotic="true" />
+		<spawn X="13484" Y="-19059" Z="-3071" isChaotic="true" />
+		<spawn X="13130" Y="-19767" Z="-3221" isChaotic="true" />
+		<spawn X="12733" Y="-20083" Z="-3320" isChaotic="true" />
+		<spawn X="12342" Y="-20491" Z="-3391" isChaotic="true" />
+		<spawn X="12186" Y="-20973" Z="-3414" isChaotic="true" />
+		<spawn X="11870" Y="-21836" Z="-3562" isChaotic="true" />
+		<spawn X="11373" Y="-22610" Z="-3585" isChaotic="true" />
+		<spawn X="9476" Y="-22190" Z="-3682" isChaotic="true" />
+		<spawn X="8922" Y="-21072" Z="-3496" isChaotic="true" />
+		<spawn X="8315" Y="-20324" Z="-3458" isChaotic="true" />
+		<spawn X="7762" Y="-19229" Z="-3592" isChaotic="true" />
+		<spawn X="7741" Y="-18108" Z="-3592" isChaotic="true" />
+		<spawn X="7758" Y="-17551" Z="-3616" isChaotic="true" />
+		<spawn X="7885" Y="-16915" Z="-3622" isChaotic="true" />
+		<spawn X="8019" Y="-16333" Z="-3644" isChaotic="true" />
+		<spawn X="8148" Y="-15669" Z="-3636" isChaotic="true" />
+		<spawn X="8500" Y="-15043" Z="-3677" isChaotic="true" />
+		<spawn X="9239" Y="-14999" Z="-3520" isChaotic="true" />
+		<spawn X="8721" Y="-13759" Z="-3835" isChaotic="true" />
+		<spawn X="8586" Y="-12889" Z="-3988" isChaotic="true" />
+		<spawn X="8351" Y="-12217" Z="-4036" isChaotic="true" />
+		<spawn X="8184" Y="-11549" Z="-4064" isChaotic="true" />
+		<spawn X="8497" Y="-10526" Z="-3894" isChaotic="true" />
+		<spawn X="6841" Y="-10465" Z="-3740" isChaotic="true" />
+		<spawn X="6280" Y="-9767" Z="-3766" isChaotic="true" />
+		<spawn X="6462" Y="-8898" Z="-3768" isChaotic="true" />
+		<spawn X="7445" Y="-8016" Z="-3640" isChaotic="true" />
+		<spawn X="8133" Y="-7755" Z="-3615" isChaotic="true" />
+		<spawn X="8501" Y="-7628" Z="-3581" isChaotic="true" />
+		<spawn X="8624" Y="-7418" Z="-3510" isChaotic="true" />
+		<spawn X="8384" Y="-7282" Z="-3503" isChaotic="true" />
+		<spawn X="7998" Y="-7208" Z="-3528" isChaotic="true" />
+		<spawn X="7916" Y="-7485" Z="-3592" isChaotic="true" />
+		<spawn X="8005" Y="-8761" Z="-3574" isChaotic="true" />
+		<spawn X="7517" Y="-8858" Z="-3622" isChaotic="true" />
+		<spawn X="6839" Y="-7661" Z="-3642" isChaotic="true" />
+		<spawn X="7118" Y="-6674" Z="-3496" isChaotic="true" />
+		<spawn X="7380" Y="-6227" Z="-3438" isChaotic="true" />
+		<spawn X="7535" Y="-5692" Z="-3272" isChaotic="true" />
+		<spawn X="7234" Y="-5658" Z="-3271" isChaotic="true" />
+		<spawn X="6623" Y="-5902" Z="-3312" isChaotic="true" />
+		<spawn X="6238" Y="-5891" Z="-3328" isChaotic="true" />
+		<spawn X="5407" Y="-5996" Z="-3332" isChaotic="true" />
+		<spawn X="4347" Y="-6170" Z="-3154" isChaotic="true" />
+		<spawn X="3679" Y="-5714" Z="-3037" isChaotic="true" />
+		<spawn X="3438" Y="-6294" Z="-3132" isChaotic="true" />
+		<spawn X="2550" Y="-7874" Z="-3327" isChaotic="true" />
+		<spawn X="3571" Y="-8139" Z="-3471" isChaotic="true" />
+		<spawn X="3925" Y="-8159" Z="-3512" isChaotic="true" />
+		<spawn X="4444" Y="-8187" Z="-3537" isChaotic="true" />
+		<spawn X="4839" Y="-8325" Z="-3553" isChaotic="true" />
+		<spawn X="5178" Y="-8516" Z="-3584" isChaotic="true" />
+		<spawn X="5409" Y="-8751" Z="-3602" isChaotic="true" />
+		<spawn X="5096" Y="-9033" Z="-3616" isChaotic="true" />
+		<spawn X="4743" Y="-9217" Z="-3624" isChaotic="true" />
+		<spawn X="4336" Y="-9380" Z="-3632" isChaotic="true" />
+		<spawn X="4006" Y="-9512" Z="-3632" isChaotic="true" />
+		<spawn X="3703" Y="-9735" Z="-3641" isChaotic="true" />
+		<spawn X="3663" Y="-10078" Z="-3688" isChaotic="true" />
+		<spawn X="4084" Y="-10122" Z="-3682" isChaotic="true" />
+		<spawn X="4382" Y="-10252" Z="-3680" isChaotic="true" />
+		<spawn X="4703" Y="-10407" Z="-3676" isChaotic="true" />
+		<spawn X="4987" Y="-10700" Z="-3663" isChaotic="true" />
+		<spawn X="5103" Y="-10992" Z="-3639" isChaotic="true" />
+		<spawn X="5183" Y="-11257" Z="-3636" isChaotic="true" />
+		<spawn X="5302" Y="-11633" Z="-3632" isChaotic="true" />
+		<spawn X="5415" Y="-12085" Z="-3632" isChaotic="true" />
+		<spawn X="5237" Y="-12352" Z="-3632" isChaotic="true" />
+		<spawn X="4821" Y="-12561" Z="-3632" isChaotic="true" />
+		<spawn X="4293" Y="-12872" Z="-3640" isChaotic="true" />
+		<spawn X="4259" Y="-12373" Z="-3588" isChaotic="true" />
+		<spawn X="4388" Y="-11905" Z="-3570" isChaotic="true" />
+		<spawn X="4484" Y="-11451" Z="-3633" isChaotic="true" />
+		<spawn X="4620" Y="-11045" Z="-3652" isChaotic="true" />
+		<spawn X="4852" Y="-10609" Z="-3666" isChaotic="true" />
+		<spawn X="4545" Y="-10230" Z="-3665" isChaotic="true" />
+		<spawn X="4219" Y="-10042" Z="-3685" isChaotic="true" />
+		<spawn X="3775" Y="-9905" Z="-3667" isChaotic="true" />
+		<spawn X="3399" Y="-9743" Z="-3659" isChaotic="true" />
+		<spawn X="2942" Y="-9523" Z="-3696" isChaotic="true" />
+		<spawn X="2439" Y="-9344" Z="-3609" isChaotic="true" />
+		<spawn X="2027" Y="-9459" Z="-3524" isChaotic="true" />
+		<spawn X="2039" Y="-9876" Z="-3512" isChaotic="true" />
+		<spawn X="2265" Y="-10159" Z="-3542" isChaotic="true" />
+		<spawn X="2633" Y="-10330" Z="-3643" isChaotic="true" />
+		<spawn X="2885" Y="-10687" Z="-3657" isChaotic="true" />
+		<spawn X="3063" Y="-10818" Z="-3645" isChaotic="true" />
+		<spawn X="3134" Y="-10859" Z="-3644" isChaotic="true" />
+		<spawn X="3192" Y="-10884" Z="-3642" isChaotic="true" />
+		<spawn X="3490" Y="-11050" Z="-3648" isChaotic="true" />
+		<spawn X="3867" Y="-11368" Z="-3682" isChaotic="true" />
+		<spawn X="4141" Y="-11633" Z="-3644" isChaotic="true" />
+		<spawn X="4430" Y="-11747" Z="-3616" isChaotic="true" />
+		<spawn X="4755" Y="-11915" Z="-3600" isChaotic="true" />
+		<spawn X="5203" Y="-12178" Z="-3611" isChaotic="true" />
+		<spawn X="5535" Y="-12430" Z="-3632" isChaotic="true" />
+		<spawn X="5787" Y="-12640" Z="-3644" isChaotic="true" />
+		<spawn X="6162" Y="-12893" Z="-3666" isChaotic="true" />
+		<spawn X="6539" Y="-13031" Z="-3695" isChaotic="true" />
+		<spawn X="7156" Y="-13011" Z="-3670" isChaotic="true" />
+		<spawn X="7352" Y="-12820" Z="-3669" isChaotic="true" />
+		<spawn X="7059" Y="-12281" Z="-3665" isChaotic="true" />
+		<spawn X="6913" Y="-11939" Z="-3652" isChaotic="true" />
+		<spawn X="6919" Y="-11645" Z="-3652" isChaotic="true" />
+		<spawn X="6779" Y="-11579" Z="-3644" isChaotic="true" />
+		<spawn X="6322" Y="-11662" Z="-3640" isChaotic="true" />
+		<spawn X="5563" Y="-12163" Z="-3632" isChaotic="true" />
+		<spawn X="1922" Y="-15425" Z="-3193" isChaotic="true" />
+		<spawn X="2209" Y="-16443" Z="-3291" isChaotic="true" />
+		<spawn X="2288" Y="-16928" Z="-3385" isChaotic="true" />
+		<spawn X="2444" Y="-17521" Z="-3432" isChaotic="true" />
+		<spawn X="2812" Y="-17782" Z="-3495" isChaotic="true" />
+		<spawn X="3333" Y="-17529" Z="-3641" isChaotic="true" />
+		<spawn X="3949" Y="-17250" Z="-3653" isChaotic="true" />
+		<spawn X="4290" Y="-17228" Z="-3688" isChaotic="true" />
+		<spawn X="4636" Y="-17213" Z="-3688" isChaotic="true" />
+		<spawn X="5096" Y="-17150" Z="-3688" isChaotic="true" />
+		<spawn X="5521" Y="-17050" Z="-3744" isChaotic="true" />
+		<spawn X="5978" Y="-16984" Z="-3704" isChaotic="true" />
+		<spawn X="6349" Y="-17087" Z="-3679" isChaotic="true" />
+		<spawn X="6605" Y="-17446" Z="-3670" isChaotic="true" />
+		<spawn X="6669" Y="-17878" Z="-3656" isChaotic="true" />
+		<spawn X="6509" Y="-18747" Z="-3656" isChaotic="true" />
+		<spawn X="6367" Y="-19061" Z="-3708" isChaotic="true" />
+		<spawn X="6181" Y="-19454" Z="-3645" isChaotic="true" />
+		<spawn X="6067" Y="-19892" Z="-3600" isChaotic="true" />
+		<spawn X="5834" Y="-20055" Z="-3581" isChaotic="true" />
+		<spawn X="5514" Y="-20095" Z="-3571" isChaotic="true" />
+		<spawn X="5562" Y="-19907" Z="-3602" isChaotic="true" />
+		<spawn X="5467" Y="-19700" Z="-3606" isChaotic="true" />
+		<spawn X="5567" Y="-19571" Z="-3608" isChaotic="true" />
+		<spawn X="4955" Y="-19433" Z="-3600" isChaotic="true" />
+		<spawn X="4448" Y="-19359" Z="-3589" isChaotic="true" />
+		<spawn X="4120" Y="-19419" Z="-3561" isChaotic="true" />
+		<spawn X="3860" Y="-19762" Z="-3455" isChaotic="true" />
+		<spawn X="3814" Y="-20151" Z="-3382" isChaotic="true" />
+		<spawn X="4020" Y="-20639" Z="-3351" isChaotic="true" />
+		<spawn X="4372" Y="-20748" Z="-3380" isChaotic="true" />
+		<spawn X="4867" Y="-20735" Z="-3487" isChaotic="true" />
+		<spawn X="5377" Y="-20714" Z="-3490" isChaotic="true" />
+		<spawn X="5764" Y="-20707" Z="-3480" isChaotic="true" />
+		<spawn X="6222" Y="-20615" Z="-3492" isChaotic="true" />
+		<spawn X="6610" Y="-20345" Z="-3548" isChaotic="true" />
+		<spawn X="6846" Y="-20166" Z="-3576" isChaotic="true" />
+		<spawn X="7514" Y="-19876" Z="-3588" isChaotic="true" />
+		<spawn X="7742" Y="-19517" Z="-3608" isChaotic="true" />
+		<spawn X="8099" Y="-19013" Z="-3586" isChaotic="true" />
+		<spawn X="8763" Y="-18859" Z="-3502" isChaotic="true" />
+		<spawn X="7723" Y="-18093" Z="-3575" isChaotic="true" />
+		<spawn X="7948" Y="-17814" Z="-3577" isChaotic="true" />
+		<spawn X="8421" Y="-17395" Z="-3595" isChaotic="true" />
+		<spawn X="8548" Y="-17321" Z="-3603" isChaotic="true" />
+		<spawn X="8651" Y="-17286" Z="-3621" isChaotic="true" />
+		<spawn X="8719" Y="-17270" Z="-3610" isChaotic="true" />
+		<spawn X="8830" Y="-17291" Z="-3604" isChaotic="true" />
+		<spawn X="8879" Y="-17307" Z="-3584" isChaotic="true" />
+		<spawn X="8312" Y="-17224" Z="-3624" isChaotic="true" />
+		<spawn X="8280" Y="-17064" Z="-3632" isChaotic="true" />
+		<spawn X="8349" Y="-16861" Z="-3654" isChaotic="true" />
+		<spawn X="8402" Y="-16657" Z="-3636" isChaotic="true" />
+		<spawn X="8194" Y="-16364" Z="-3624" isChaotic="true" />
+		<spawn X="7716" Y="-16261" Z="-3647" isChaotic="true" />
+		<spawn X="7443" Y="-16246" Z="-3662" isChaotic="true" />
+		<spawn X="7139" Y="-16243" Z="-3680" isChaotic="true" />
+		<spawn X="6773" Y="-16124" Z="-3688" isChaotic="true" />
+		<spawn X="6730" Y="-15877" Z="-3688" isChaotic="true" />
+		<spawn X="6813" Y="-15559" Z="-3696" isChaotic="true" />
+		<spawn X="6936" Y="-15304" Z="-3696" isChaotic="true" />
+		<spawn X="7115" Y="-15076" Z="-3704" isChaotic="true" />
+		<spawn X="7412" Y="-14845" Z="-3704" isChaotic="true" />
+		<spawn X="7505" Y="-14606" Z="-3704" isChaotic="true" />
+		<spawn X="7287" Y="-14609" Z="-3704" isChaotic="true" />
+		<spawn X="8005" Y="-14394" Z="-3697" isChaotic="true" />
+	</zone>
+</list>

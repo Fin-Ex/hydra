@@ -1,0 +1,2639 @@
+[
+  {
+    "type": "QUEST",
+    "id": 6400,
+    "name": "Badge of Hyena",
+    "weight": 0,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_paper_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 6401,
+    "name": "Badge of Fox",
+    "weight": 0,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_paper_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 6402,
+    "name": "Badge of Wolf",
+    "weight": 0,
+    "material": "CRYSTAL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_paper_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2023,
+        "value": 1
+      }
+    ],
+    "id": 6403,
+    "name": "Star Shard",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_fairy_fire_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6404,
+    "name": "Gunpowder",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_powder_black_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6405,
+    "name": "Magnesium",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_broken_crystal_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2024,
+        "value": 1
+      }
+    ],
+    "id": 6406,
+    "name": "Firework",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_small_ultra_bomb_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2025,
+        "value": 1
+      }
+    ],
+    "id": 6407,
+    "name": "Large Firework",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ultra_bomb_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "slot": "SLOT_ALLDRESS",
+    "armor": {
+      "type": "NONE"
+    },
+    "id": 6408,
+    "name": "Formal Wear",
+    "weight": 1000,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t2000_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 6409,
+    "name": "2006 Battle Tournament - CP Potion",
+    "weight": 500,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_cp_potion_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "id": 6410,
+    "name": "2006 Battle Tournament - Quick Healing Potion",
+    "weight": 180,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_potion_gold_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2190,
+        "value": 1
+      }
+    ],
+    "id": 6411,
+    "name": "Small Nimble Green Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2190,
+        "value": 2
+      }
+    ],
+    "id": 6412,
+    "name": "Small Ugly Green Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2190,
+        "value": 3
+      }
+    ],
+    "id": 6413,
+    "name": "Small Pudgy Green Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2190,
+        "value": 4
+      }
+    ],
+    "id": 6414,
+    "name": "Nimble Green Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2190,
+        "value": 5
+      }
+    ],
+    "id": 6415,
+    "name": "Ugly Green Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2190,
+        "value": 6
+      }
+    ],
+    "id": 6416,
+    "name": "Pudgy Green Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2190,
+        "value": 7
+      }
+    ],
+    "id": 6417,
+    "name": "Large Nimble Green Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2190,
+        "value": 8
+      }
+    ],
+    "id": 6418,
+    "name": "Large Ugly Green Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2190,
+        "value": 9
+      }
+    ],
+    "id": 6419,
+    "name": "Large Pudgy Green Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2191,
+        "value": 1
+      }
+    ],
+    "id": 6420,
+    "name": "Small Jade Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2191,
+        "value": 2
+      }
+    ],
+    "id": 6421,
+    "name": "Small Jade Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2191,
+        "value": 3
+      }
+    ],
+    "id": 6422,
+    "name": "Small Jade Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2191,
+        "value": 4
+      }
+    ],
+    "id": 6423,
+    "name": "Jade Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2191,
+        "value": 5
+      }
+    ],
+    "id": 6424,
+    "name": "Jade Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2191,
+        "value": 6
+      }
+    ],
+    "id": 6425,
+    "name": "Jade Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2191,
+        "value": 7
+      }
+    ],
+    "id": 6426,
+    "name": "Big Jade Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2191,
+        "value": 8
+      }
+    ],
+    "id": 6427,
+    "name": "Big Jade Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2191,
+        "value": 9
+      }
+    ],
+    "id": 6428,
+    "name": "Big Jade Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2192,
+        "value": 1
+      }
+    ],
+    "id": 6429,
+    "name": "Small Blue Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2192,
+        "value": 2
+      }
+    ],
+    "id": 6430,
+    "name": "Small Blue Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2192,
+        "value": 3
+      }
+    ],
+    "id": 6431,
+    "name": "Small Blue Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2192,
+        "value": 4
+      }
+    ],
+    "id": 6432,
+    "name": "Blue Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2192,
+        "value": 5
+      }
+    ],
+    "id": 6433,
+    "name": "Blue Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2192,
+        "value": 6
+      }
+    ],
+    "id": 6434,
+    "name": "Blue Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2192,
+        "value": 7
+      }
+    ],
+    "id": 6435,
+    "name": "Big Blue Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2192,
+        "value": 8
+      }
+    ],
+    "id": 6436,
+    "name": "Big Blue Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2192,
+        "value": 9
+      }
+    ],
+    "id": 6437,
+    "name": "Big Blue Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2193,
+        "value": 1
+      }
+    ],
+    "id": 6438,
+    "name": "Small Yellow Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2193,
+        "value": 2
+      }
+    ],
+    "id": 6439,
+    "name": "Small Yellow Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2193,
+        "value": 3
+      }
+    ],
+    "id": 6440,
+    "name": "Small Yellow Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2193,
+        "value": 4
+      }
+    ],
+    "id": 6441,
+    "name": "Yellow Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2193,
+        "value": 5
+      }
+    ],
+    "id": 6442,
+    "name": "Yellow Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2193,
+        "value": 6
+      }
+    ],
+    "id": 6443,
+    "name": "Yellow Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2193,
+        "value": 7
+      }
+    ],
+    "id": 6444,
+    "name": "Big Yellow Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2193,
+        "value": 8
+      }
+    ],
+    "id": 6445,
+    "name": "Big Yellow Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2193,
+        "value": 9
+      }
+    ],
+    "id": 6446,
+    "name": "Big Yellow Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i02"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2194,
+        "value": 1
+      }
+    ],
+    "id": 6447,
+    "name": "Small Orange Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i08"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2194,
+        "value": 2
+      }
+    ],
+    "id": 6448,
+    "name": "Small Orange Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i08"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2194,
+        "value": 3
+      }
+    ],
+    "id": 6449,
+    "name": "Small Orange Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i08"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2194,
+        "value": 4
+      }
+    ],
+    "id": 6450,
+    "name": "Orange Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i08"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2194,
+        "value": 5
+      }
+    ],
+    "id": 6451,
+    "name": "Orange Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i08"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2194,
+        "value": 6
+      }
+    ],
+    "id": 6452,
+    "name": "Orange Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i08"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2194,
+        "value": 7
+      }
+    ],
+    "id": 6453,
+    "name": "Big Orange Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i08"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2194,
+        "value": 8
+      }
+    ],
+    "id": 6454,
+    "name": "Big Orange Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i08"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2194,
+        "value": 9
+      }
+    ],
+    "id": 6455,
+    "name": "Big Orange Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i08"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2195,
+        "value": 1
+      }
+    ],
+    "id": 6456,
+    "name": "Small Purple Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2195,
+        "value": 2
+      }
+    ],
+    "id": 6457,
+    "name": "Small Purple Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2195,
+        "value": 3
+      }
+    ],
+    "id": 6458,
+    "name": "Small Purple Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2195,
+        "value": 4
+      }
+    ],
+    "id": 6459,
+    "name": "Purple Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2195,
+        "value": 5
+      }
+    ],
+    "id": 6460,
+    "name": "Purple Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2195,
+        "value": 6
+      }
+    ],
+    "id": 6461,
+    "name": "Purple Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2195,
+        "value": 7
+      }
+    ],
+    "id": 6462,
+    "name": "Big Purple Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2195,
+        "value": 8
+      }
+    ],
+    "id": 6463,
+    "name": "Big Purple Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2195,
+        "value": 9
+      }
+    ],
+    "id": 6464,
+    "name": "Big Purple Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i04"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2196,
+        "value": 1
+      }
+    ],
+    "id": 6465,
+    "name": "Small Red Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2196,
+        "value": 2
+      }
+    ],
+    "id": 6466,
+    "name": "Small Red Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2196,
+        "value": 3
+      }
+    ],
+    "id": 6467,
+    "name": "Small Red Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2196,
+        "value": 4
+      }
+    ],
+    "id": 6468,
+    "name": "Red Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2196,
+        "value": 5
+      }
+    ],
+    "id": 6469,
+    "name": "Red Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2196,
+        "value": 6
+      }
+    ],
+    "id": 6470,
+    "name": "Red Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2196,
+        "value": 7
+      }
+    ],
+    "id": 6471,
+    "name": "Big Red Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2196,
+        "value": 8
+      }
+    ],
+    "id": 6472,
+    "name": "Big Red Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2196,
+        "value": 9
+      }
+    ],
+    "id": 6473,
+    "name": "Big Red Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i03"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2197,
+        "value": 1
+      }
+    ],
+    "id": 6474,
+    "name": "Small White Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2197,
+        "value": 2
+      }
+    ],
+    "id": 6475,
+    "name": "Small White Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2197,
+        "value": 3
+      }
+    ],
+    "id": 6476,
+    "name": "Small White Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2197,
+        "value": 4
+      }
+    ],
+    "id": 6477,
+    "name": "White Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2197,
+        "value": 5
+      }
+    ],
+    "id": 6478,
+    "name": "White Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2197,
+        "value": 6
+      }
+    ],
+    "id": 6479,
+    "name": "White Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2197,
+        "value": 7
+      }
+    ],
+    "id": 6480,
+    "name": "Big White Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2197,
+        "value": 8
+      }
+    ],
+    "id": 6481,
+    "name": "Big White Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2197,
+        "value": 9
+      }
+    ],
+    "id": 6482,
+    "name": "Big White Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2198,
+        "value": 1
+      }
+    ],
+    "id": 6483,
+    "name": "Small Black Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2198,
+        "value": 2
+      }
+    ],
+    "id": 6484,
+    "name": "Small Black Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2198,
+        "value": 3
+      }
+    ],
+    "id": 6485,
+    "name": "Small Black Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2198,
+        "value": 4
+      }
+    ],
+    "id": 6486,
+    "name": "Black Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2198,
+        "value": 5
+      }
+    ],
+    "id": 6487,
+    "name": "Black Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2198,
+        "value": 6
+      }
+    ],
+    "id": 6488,
+    "name": "Black Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2198,
+        "value": 7
+      }
+    ],
+    "id": 6489,
+    "name": "Big Black Nimble Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_tuna_i05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2198,
+        "value": 8
+      }
+    ],
+    "id": 6490,
+    "name": "Big Black Ugly Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_angler_i05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2198,
+        "value": 9
+      }
+    ],
+    "id": 6491,
+    "name": "Big Black Fat Fish",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_bream_i05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2199,
+        "value": 1
+      }
+    ],
+    "id": 6492,
+    "name": "Small Green Treasure Chest",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2199,
+        "value": 2
+      }
+    ],
+    "id": 6493,
+    "name": "Green Treasure Chest",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2199,
+        "value": 3
+      }
+    ],
+    "id": 6494,
+    "name": "Big Green Treasure Chest",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2200,
+        "value": 1
+      }
+    ],
+    "id": 6495,
+    "name": "Small Jade Treasure Chest",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2200,
+        "value": 2
+      }
+    ],
+    "id": 6496,
+    "name": "Jade Treasure Chest",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2200,
+        "value": 3
+      }
+    ],
+    "id": 6497,
+    "name": "Big Jade Treasure Chest",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2201,
+        "value": 1
+      }
+    ],
+    "id": 6498,
+    "name": "Small Blue Treasure Chest",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "capsule",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2201,
+        "value": 2
+      }
+    ],
+    "id": 6499,
+    "name": "Blue Treasure Chest",
+    "weight": 100,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_treasure_box_i01"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  }
+]

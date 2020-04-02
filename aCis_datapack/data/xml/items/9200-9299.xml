@@ -121,10 +121,21 @@
         <set name="etcitem_type" val="quest" />
         <set name="weight" val="1000"/>
     </item>
-    <item id="9215" type="EtcItem" name="Slayer Coin">
+    <item id="9215" type="EtcItem" name="Coin of Slayer">
         <set name="icon" val="icon.etc_pig_adena_i00"/>
         <set name="material" val="GOLD" />
         <set name="price" val="1" />
         <set name="is_stackable" val="true" />
+    </item>
+    <item id="9216" type="EtcItem" name="Hunter's Card">
+        <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
+        <set name="material" val="PAPER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_dropable" val="false" />
+        <set name="is_sellable" val="false" />
+        <set name="is_depositable" val="false" />
+        <set name="is_stackable" val="false" />
+        <set name="etcitem_type" val="quest" />
+		<set name="handler" val="Book"/>
     </item>
 </list>

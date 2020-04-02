@@ -1,0 +1,3999 @@
+[
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 600,
+    "name": "Avadon Boots",
+    "weight": 1170,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t66_b_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 601,
+    "name": "Boots of Doom",
+    "weight": 1130,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t71_b_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 602,
+    "name": "Boots of Pledge",
+    "weight": 1130,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 154,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 39.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 603,
+    "name": "Divine Boots",
+    "weight": 1200,
+    "material": "ADAMANTAITE",
+    "grade": "C",
+    "crystalCount": 143,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t67_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 19.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 604,
+    "name": "Crafted Leather Gloves",
+    "weight": 650,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 38,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t09_g_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 22.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 605,
+    "name": "Leather Gauntlets",
+    "weight": 640,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 60,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t18_g_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 27.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 606,
+    "name": "Rip Gauntlets",
+    "weight": 630,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 135,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t40_g_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 29.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 607,
+    "name": "Ogre Power Gauntlets",
+    "weight": 620,
+    "material": "FINE_STEEL",
+    "grade": "D",
+    "crystalCount": 177,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t45_g_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 36.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 608,
+    "name": "Mithril Gauntlets",
+    "weight": 600,
+    "material": "MITHRIL",
+    "grade": "C",
+    "crystalCount": 98,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t61_g_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 39.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 609,
+    "name": "Gauntlets of Ghost",
+    "weight": 1920,
+    "material": "BLOOD_STEEL",
+    "grade": "C",
+    "crystalCount": 143,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_gauntlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 610,
+    "name": "Saint Knight's Gauntlets",
+    "weight": 6400,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_gauntlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 611,
+    "name": "Soul Leech Gauntlets",
+    "weight": 4800,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_gauntlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 612,
+    "name": "Zubei's Gauntlets",
+    "weight": 590,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t64_g_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_GLOVES",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 48.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 613,
+    "name": "Sand Dragon Gloves",
+    "weight": 3200,
+    "material": "DAMASCUS",
+    "grade": "A",
+    "crystalCount": 140,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_gauntlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 7.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 614,
+    "name": "Knight's Cloak",
+    "weight": 240,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 38,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back04"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 615,
+    "name": "Cobweb Cloak",
+    "weight": 240,
+    "material": "COBWEB",
+    "grade": "D",
+    "crystalCount": 60,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back05"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 11.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 616,
+    "name": "Cloak of Magic",
+    "weight": 240,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 135,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back06"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 11.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 617,
+    "name": "Mithril Cloak",
+    "weight": 240,
+    "material": "MITHRIL",
+    "grade": "D",
+    "crystalCount": 177,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back07"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 13.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 618,
+    "name": "Cloak of Self Protection",
+    "weight": 240,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 64,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back08"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 15.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 619,
+    "name": "Ancient Cloak",
+    "weight": 230,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 98,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back09"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 16.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 620,
+    "name": "Cloak of Protection",
+    "weight": 230,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 143,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back09"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 18.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 621,
+    "name": "Cloak of Hell",
+    "weight": 220,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back09"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 18.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 622,
+    "name": "Holy Spirit's Cloak",
+    "weight": 220,
+    "material": "CLOTH",
+    "grade": "A",
+    "crystalCount": 92,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back09"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 19.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 623,
+    "name": "Divine Cloak",
+    "weight": 220,
+    "material": "CLOTH",
+    "grade": "A",
+    "crystalCount": 140,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back09"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 2.0
+      }
+    ],
+    "id": 624,
+    "name": "Cloak of Invisibility",
+    "weight": 260,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_back09"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 90.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 625,
+    "name": "Bone Shield",
+    "weight": 1380,
+    "material": "BONE",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_bone_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 101.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 626,
+    "name": "Bronze Shield",
+    "weight": 1370,
+    "material": "BRONZE",
+    "grade": "D",
+    "crystalCount": 39,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_bronze_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 114.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 627,
+    "name": "Aspis",
+    "weight": 1350,
+    "material": "STEEL",
+    "grade": "D",
+    "crystalCount": 63,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_aspis_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 128.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 628,
+    "name": "Hoplon",
+    "weight": 1340,
+    "material": "FINE_STEEL",
+    "grade": "D",
+    "crystalCount": 96,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_hoplon_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 142.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 629,
+    "name": "Kite Shield",
+    "weight": 1320,
+    "material": "FINE_STEEL",
+    "grade": "D",
+    "crystalCount": 142,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_kite_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 154.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 630,
+    "name": "Square Shield",
+    "weight": 1310,
+    "material": "FINE_STEEL",
+    "grade": "D",
+    "crystalCount": 187,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_square_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 166.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 631,
+    "name": "Eldarake",
+    "weight": 1290,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 53,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_eldarake_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 178.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 632,
+    "name": "Knight's Shield",
+    "weight": 1260,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 67,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 633,
+    "name": "Zubei's Shield",
+    "weight": 1210,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shrnoens_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 269.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 634,
+    "name": "Dragon Shield",
+    "weight": 1170,
+    "material": "BONE",
+    "grade": "S",
+    "crystalCount": 125,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_nightmare_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 635,
+    "name": "Wolf Shield",
+    "weight": 640,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_small_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 636,
+    "name": "Shining Dragon Shield",
+    "weight": 720,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_doom_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 637,
+    "name": "Shield of Valor",
+    "weight": 720,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_small_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 638,
+    "name": "Glorious Shield",
+    "weight": 800,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_victory_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 639,
+    "name": "Red Flame Shield",
+    "weight": 960,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_tower_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 640,
+    "name": "Elven Crystal Shield",
+    "weight": 720,
+    "material": "CRYSTAL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_masterpiece_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 243.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 641,
+    "name": "Dark Crystal Shield",
+    "weight": 1190,
+    "material": "CRYSTAL",
+    "grade": "A",
+    "crystalCount": 97,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_dark_crystal_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 642,
+    "name": "Elven Vagian Shield",
+    "weight": 560,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_victory_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 643,
+    "name": "Dark Vagian Shield",
+    "weight": 560,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_victory_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 644,
+    "name": "Hell Shield",
+    "weight": 640,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_grace_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 645,
+    "name": "Art of Shield",
+    "weight": 560,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 646,
+    "name": "Shield of Silence",
+    "weight": 640,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_assistance_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 647,
+    "name": "Gust Shield",
+    "weight": 720,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_grace_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 648,
+    "name": "Prairie Shield",
+    "weight": 800,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 649,
+    "name": "Shield of The Underworld",
+    "weight": 880,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 650,
+    "name": "Shield of Concentration",
+    "weight": 960,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_grace_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 651,
+    "name": "Ace's Shield",
+    "weight": 1040,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_assistance_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 652,
+    "name": "Guardian's Shield",
+    "weight": 1120,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 653,
+    "name": "Marksman Shield",
+    "weight": 1200,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_doom_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 654,
+    "name": "Shield of Mana",
+    "weight": 480,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_pledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 655,
+    "name": "Sage's Shield",
+    "weight": 560,
+    "material": "STEEL",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_sages_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 656,
+    "name": "Paradia Shield",
+    "weight": 480,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 657,
+    "name": "Inferno Shield",
+    "weight": 560,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_victory_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 658,
+    "name": "Shield of Black Ore",
+    "weight": 560,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_composite_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 659,
+    "name": "Shield of Summoning",
+    "weight": 480,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_sola_eclipse_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 660,
+    "name": "Otherworldly Shield",
+    "weight": 560,
+    "material": "ADAMANTAITE",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_round_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 661,
+    "name": "Elemental Shield",
+    "weight": 480,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 662,
+    "name": "Shield of Phantom",
+    "weight": 560,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_assistance_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 663,
+    "name": "Shield of Grace",
+    "weight": 480,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_leather_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 664,
+    "name": "Shield of Holy Spirit",
+    "weight": 560,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_composite_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 665,
+    "name": "Phoenix Shield",
+    "weight": 480,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 666,
+    "name": "Cerberus Shield",
+    "weight": 560,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_doom_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 667,
+    "name": "Shield of Aid",
+    "weight": 480,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_assistance_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 668,
+    "name": "Shield of Blessing",
+    "weight": 560,
+    "material": "ADAMANTAITE",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_pledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 669,
+    "name": "Flame Shield",
+    "weight": 480,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_composite_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 670,
+    "name": "Shield of Bravery",
+    "weight": 560,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_shield_of_assistance_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 671,
+    "name": "Blood Shield",
+    "weight": 480,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 672,
+    "name": "Absolute Shield",
+    "weight": 560,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 216.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 673,
+    "name": "Avadon Shield",
+    "weight": 1210,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 72,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_avadon_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 230.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "ShieldDefense",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 674,
+    "name": "Divine Shield",
+    "weight": 560,
+    "material": "ADAMANTAITE",
+    "grade": "B",
+    "crystalCount": 112,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.shield_knight_shield_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 6.0
+      }
+    ],
+    "id": 675,
+    "name": "Silk Yarn Undergarment Set",
+    "weight": 170,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear01"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 9.0
+      }
+    ],
+    "id": 676,
+    "name": "Pure White Undergarment Set",
+    "weight": 160,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear01"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 10.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 677,
+    "name": "One-Piece Swimsuit",
+    "weight": 150,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 18,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear01"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 11.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 678,
+    "name": "Bikini Set",
+    "weight": 150,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 30,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 679,
+    "name": "Cursed Undergarment Set",
+    "weight": 150,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 46,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear01"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 16.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 680,
+    "name": "Mithril Undergarment Set",
+    "weight": 140,
+    "material": "MITHRIL",
+    "grade": "C",
+    "crystalCount": 25,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear01"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 17.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 681,
+    "name": "Fascination Undergarment Set",
+    "weight": 140,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 32,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear01"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 19.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 682,
+    "name": "Demon's Undergarment Set",
+    "weight": 140,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 71,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear01"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 22.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 683,
+    "name": "Holy Undergarment Set",
+    "weight": 140,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 53,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear01"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 24.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 684,
+    "name": "Underwear of Rule",
+    "weight": 140,
+    "material": "CLOTH",
+    "grade": "A",
+    "crystalCount": 70,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 26.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 685,
+    "name": "Crystal Swimsuit Set",
+    "weight": 130,
+    "material": "CRYSTAL",
+    "grade": "S",
+    "crystalCount": 65,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_underwear02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 686,
+    "name": "Chair",
+    "weight": 100,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_branch_blue_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 687,
+    "name": "Darin's Letter",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_scroll_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 688,
+    "name": "Roxxy's Kerchief",
+    "weight": 0,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_piece_of_cloth_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 689,
+    "name": "Poetry Book",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_spell_books_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 690,
+    "name": "Lyrics Book",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_normal06"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 691,
+    "name": "Romance Novel",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_normal07"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 692,
+    "name": "Arujien's Letter",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_canuse37"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 693,
+    "name": "Greenis's Letter",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_letter_white_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 694,
+    "name": "Ingredient List",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_normal37"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 695,
+    "name": "Omen Beast's Blood",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_canuse48"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 696,
+    "name": "Mana Seeker's Husk",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_normal30"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 697,
+    "name": "Gargoyle's Horn",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_normal24"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 698,
+    "name": "Gilbert's List",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_normal37"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  },
+  {
+    "type": "QUEST",
+    "id": 699,
+    "name": "Orc's Nose",
+    "weight": 0,
+    "material": "STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_canuse05"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "QUEST",
+    "restrictions": [
+      "UNDEPOSITABLE",
+      "UNDESTROYABLE",
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE"
+    ]
+  }
+]

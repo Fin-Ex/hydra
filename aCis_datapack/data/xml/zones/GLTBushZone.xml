@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<zone id="110002" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3180" maxZ="-2980">
+		<node X="21576" Y="-14840" />
+	</zone>
+	<zone id="110003" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3148" maxZ="-2948">
+		<node X="23032" Y="-15240" />
+	</zone>
+	<zone id="110004" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3108" maxZ="-2908">
+		<node X="23336" Y="-15816" />
+	</zone>
+	<zone id="110005" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3076" maxZ="-2876">
+		<node X="22136" Y="-17048" />
+	</zone>
+	<zone id="110006" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2994" maxZ="-2794">
+		<node X="21508" Y="-17894" />
+	</zone>
+	<zone id="110007" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3364" maxZ="-3164">
+		<node X="20664" Y="-19192" />
+	</zone>
+	<zone id="110008" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3404" maxZ="-3204">
+		<node X="19608" Y="-18904" />
+	</zone>
+	<zone id="110009" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3420" maxZ="-3220">
+		<node X="19704" Y="-19832" />
+	</zone>
+	<zone id="110010" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3410" maxZ="-3210">
+		<node X="18743" Y="-19318" />
+	</zone>
+	<zone id="110011" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3294" maxZ="-3094">
+		<node X="17688" Y="-18558" />
+	</zone>
+	<zone id="110012" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3287" maxZ="-3087">
+		<node X="17247" Y="-18201" />
+	</zone>
+	<zone id="110013" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3284" maxZ="-3084">
+		<node X="16480" Y="-18207" />
+	</zone>
+	<zone id="110014" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3308" maxZ="-3108">
+		<node X="15531" Y="-17833" />
+	</zone>
+	<zone id="110015" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3262" maxZ="-3062">
+		<node X="14406" Y="-18558" />
+	</zone>
+	<zone id="110016" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3220" maxZ="-3020">
+		<node X="14136" Y="-18024" />
+	</zone>
+	<zone id="110017" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3193" maxZ="-2993">
+		<node X="14394" Y="-16959" />
+	</zone>
+	<zone id="110018" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3284" maxZ="-3084">
+		<node X="15381" Y="-16205" />
+	</zone>
+	<zone id="110019" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3244" maxZ="-3044">
+		<node X="14497" Y="-15292" />
+	</zone>
+	<zone id="110020" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3260" maxZ="-3060">
+		<node X="13976" Y="-14535" />
+	</zone>
+	<zone id="110021" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3292" maxZ="-3092">
+		<node X="13112" Y="-13592" />
+	</zone>
+	<zone id="110022" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3260" maxZ="-3060">
+		<node X="14184" Y="-13128" />
+	</zone>
+	<zone id="110023" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3212" maxZ="-3012">
+		<node X="18072" Y="-12376" />
+	</zone>
+	<zone id="110024" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3268" maxZ="-3068">
+		<node X="17608" Y="-11240" />
+	</zone>
+	<zone id="110025" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3276" maxZ="-3076">
+		<node X="17192" Y="-10376" />
+	</zone>
+	<zone id="110026" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3260" maxZ="-3060">
+		<node X="17326" Y="-8900" />
+	</zone>
+	<zone id="110027" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3260" maxZ="-3060">
+		<node X="16360" Y="-7112" />
+	</zone>
+	<zone id="110028" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3364" maxZ="-3164">
+		<node X="14616" Y="-8744" />
+	</zone>
+	<zone id="110029" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3260" maxZ="-3060">
+		<node X="13816" Y="-8728" />
+	</zone>
+	<zone id="110030" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3248" maxZ="-3048">
+		<node X="13209" Y="-9841" />
+	</zone>
+	<zone id="110031" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3355" maxZ="-3155">
+		<node X="13870" Y="-9945" />
+	</zone>
+	<zone id="110032" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3356" maxZ="-3156">
+		<node X="14136" Y="-10984" />
+	</zone>
+	<zone id="110033" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3228" maxZ="-3028">
+		<node X="14376" Y="-12536" />
+	</zone>
+	<zone id="110034" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3212" maxZ="-3012">
+		<node X="13432" Y="-13144" />
+	</zone>
+	<zone id="110035" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2988" maxZ="-2788">
+		<node X="13880" Y="-11560" />
+	</zone>
+	<zone id="110036" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3252" maxZ="-3052">
+		<node X="15128" Y="-11656" />
+	</zone>
+	<zone id="110037" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3268" maxZ="-3068">
+		<node X="17096" Y="-11368" />
+	</zone>
+	<zone id="110038" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3220" maxZ="-3020">
+		<node X="17584" Y="-12862" />
+	</zone>
+	<zone id="110039" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3236" maxZ="-3036">
+		<node X="17252" Y="-13551" />
+	</zone>
+	<zone id="110040" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3268" maxZ="-3068">
+		<node X="16501" Y="-13903" />
+	</zone>
+	<zone id="110041" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3273" maxZ="-3073">
+		<node X="16520" Y="-14124" />
+	</zone>
+	<zone id="110042" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3244" maxZ="-3044">
+		<node X="15448" Y="-14632" />
+	</zone>
+	<zone id="110043" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3285" maxZ="-3085">
+		<node X="15535" Y="-16055" />
+	</zone>
+	<zone id="110044" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3300" maxZ="-3100">
+		<node X="15912" Y="-16312" />
+	</zone>
+	<zone id="110045" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3260" maxZ="-3060">
+		<node X="14920" Y="-16600" />
+	</zone>
+	<zone id="110046" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3300" maxZ="-3100">
+		<node X="15080" Y="-17288" />
+	</zone>
+	<zone id="110047" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3246" maxZ="-3046">
+		<node X="14508" Y="-17671" />
+	</zone>
+	<zone id="110048" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3332" maxZ="-3132">
+		<node X="18600" Y="-18568" />
+	</zone>
+	<zone id="110049" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3388" maxZ="-3188">
+		<node X="20776" Y="-19880" />
+	</zone>
+	<zone id="110050" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3044" maxZ="-2844">
+		<node X="20952" Y="-21544" />
+	</zone>
+	<zone id="110051" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3044" maxZ="-2844">
+		<node X="20680" Y="-21640" />
+	</zone>
+	<zone id="110052" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2964" maxZ="-2764">
+		<node X="21592" Y="-18088" />
+	</zone>
+	<zone id="110053" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3004" maxZ="-2804">
+		<node X="22632" Y="-18024" />
+	</zone>
+	<zone id="110054" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2780" maxZ="-2580">
+		<node X="23448" Y="-17944" />
+	</zone>
+	<zone id="110055" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2876" maxZ="-2676">
+		<node X="23976" Y="-18840" />
+	</zone>
+	<zone id="110056" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2754" maxZ="-2554">
+		<node X="25159" Y="-18814" />
+	</zone>
+	<zone id="110057" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2812" maxZ="-2612">
+		<node X="25848" Y="-17928" />
+	</zone>
+	<zone id="110058" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2768" maxZ="-2568">
+		<node X="26886" Y="-17841" />
+	</zone>
+	<zone id="110059" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2718" maxZ="-2518">
+		<node X="27075" Y="-18054" />
+	</zone>
+	<zone id="110060" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2776" maxZ="-2576">
+		<node X="27185" Y="-17618" />
+	</zone>
+	<zone id="110061" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2699" maxZ="-2499">
+		<node X="27761" Y="-17560" />
+	</zone>
+	<zone id="110062" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2742" maxZ="-2542">
+		<node X="28209" Y="-16366" />
+	</zone>
+	<zone id="110063" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2592" maxZ="-2392">
+		<node X="28546" Y="-15416" />
+	</zone>
+	<zone id="110064" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2668" maxZ="-2468">
+		<node X="27720" Y="-14248" />
+	</zone>
+	<zone id="110065" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2788" maxZ="-2588">
+		<node X="27208" Y="-14520" />
+	</zone>
+	<zone id="110066" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2740" maxZ="-2540">
+		<node X="27020" Y="-14252" />
+	</zone>
+	<zone id="110067" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2788" maxZ="-2588">
+		<node X="26185" Y="-14493" />
+	</zone>
+	<zone id="110068" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2788" maxZ="-2588">
+		<node X="25824" Y="-14531" />
+	</zone>
+	<zone id="110069" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2844" maxZ="-2644">
+		<node X="24872" Y="-14824" />
+	</zone>
+	<zone id="110070" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2604" maxZ="-2404">
+		<node X="24744" Y="-13064" />
+	</zone>
+	<zone id="110071" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2588" maxZ="-2388">
+		<node X="24536" Y="-13096" />
+	</zone>
+	<zone id="110072" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2558" maxZ="-2358">
+		<node X="24477" Y="-13382" />
+	</zone>
+	<zone id="110073" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2580" maxZ="-2380">
+		<node X="23928" Y="-13432" />
+	</zone>
+	<zone id="110074" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2585" maxZ="-2385">
+		<node X="24003" Y="-12921" />
+	</zone>
+	<zone id="110075" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2620" maxZ="-2420">
+		<node X="24296" Y="-12344" />
+	</zone>
+	<zone id="110076" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2628" maxZ="-2428">
+		<node X="23896" Y="-12008" />
+	</zone>
+	<zone id="110077" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2592" maxZ="-2392">
+		<node X="25761" Y="-11512" />
+	</zone>
+	<zone id="110078" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2572" maxZ="-2372">
+		<node X="26168" Y="-10856" />
+	</zone>
+	<zone id="110079" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2542" maxZ="-2342">
+		<node X="26256" Y="-10030" />
+	</zone>
+	<zone id="110080" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2532" maxZ="-2332">
+		<node X="25816" Y="-9896" />
+	</zone>
+	<zone id="110081" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2463" maxZ="-2263">
+		<node X="27174" Y="-10325" />
+	</zone>
+	<zone id="110082" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2348" maxZ="-2148">
+		<node X="27896" Y="-10360" />
+	</zone>
+	<zone id="110083" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2364" maxZ="-2164">
+		<node X="27929" Y="-11116" />
+	</zone>
+	<zone id="110084" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2372" maxZ="-2172">
+		<node X="27928" Y="-12056" />
+	</zone>
+	<zone id="110085" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2308" maxZ="-2108">
+		<node X="28152" Y="-12840" />
+	</zone>
+	<zone id="110086" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2324" maxZ="-2124">
+		<node X="27560" Y="-13384" />
+	</zone>
+	<zone id="110087" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2540" maxZ="-2340">
+		<node X="25240" Y="-9688" />
+	</zone>
+	<zone id="110088" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2548" maxZ="-2348">
+		<node X="24794" Y="-9667" />
+	</zone>
+	<zone id="110089" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2716" maxZ="-2516">
+		<node X="23624" Y="-10264" />
+	</zone>
+	<zone id="110090" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2714" maxZ="-2514">
+		<node X="23371" Y="-9727" />
+	</zone>
+	<zone id="110091" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2900" maxZ="-2700">
+		<node X="21768" Y="-9368" />
+	</zone>
+	<zone id="110092" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2828" maxZ="-2628">
+		<node X="21096" Y="-8296" />
+	</zone>
+	<zone id="110093" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2764" maxZ="-2564">
+		<node X="20904" Y="-7800" />
+	</zone>
+	<zone id="110094" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2724" maxZ="-2524">
+		<node X="20184" Y="-8200" />
+	</zone>
+	<zone id="110095" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2788" maxZ="-2588">
+		<node X="19304" Y="-8680" />
+	</zone>
+	<zone id="110096" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2868" maxZ="-2668">
+		<node X="18872" Y="-9592" />
+	</zone>
+	<zone id="110097" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2908" maxZ="-2708">
+		<node X="18536" Y="-10712" />
+	</zone>
+	<zone id="110098" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2940" maxZ="-2740">
+		<node X="20088" Y="-11048" />
+	</zone>
+	<zone id="110099" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2892" maxZ="-2692">
+		<node X="19498" Y="-11625" />
+	</zone>
+	<zone id="110100" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2860" maxZ="-2660">
+		<node X="18824" Y="-12120" />
+	</zone>
+	<zone id="110101" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2860" maxZ="-2660">
+		<node X="19272" Y="-12728" />
+	</zone>
+	<zone id="110102" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-2852" maxZ="-2652">
+		<node X="18312" Y="-8968" />
+	</zone>
+	<zone id="110103" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3116" maxZ="-2916">
+		<node X="17624" Y="-7432" />
+	</zone>
+	<zone id="110104" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3204" maxZ="-3004">
+		<node X="16696" Y="-6728" />
+	</zone>
+	<zone id="110105" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3292" maxZ="-3092">
+		<node X="15656" Y="-7752" />
+	</zone>
+	<zone id="110106" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3364" maxZ="-3164">
+		<node X="15352" Y="-8584" />
+	</zone>
+	<zone id="110107" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3372" maxZ="-3172">
+		<node X="15032" Y="-9400" />
+	</zone>
+	<zone id="110108" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3404" maxZ="-3204">
+		<node X="14856" Y="-10392" />
+	</zone>
+	<zone id="110109" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3380" maxZ="-3180">
+		<node X="15896" Y="-11080" />
+	</zone>
+	<zone id="110110" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3228" maxZ="-3028">
+		<node X="16104" Y="-12072" />
+	</zone>
+	<zone id="110111" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3188" maxZ="-2988">
+		<node X="15368" Y="-12216" />
+	</zone>
+	<zone id="110112" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3212" maxZ="-3012">
+		<node X="15064" Y="-12424" />
+	</zone>
+	<zone id="110113" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3260" maxZ="-3060">
+		<node X="15192" Y="-12936" />
+	</zone>
+	<zone id="110114" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3308" maxZ="-3108">
+		<node X="14552" Y="-13736" />
+	</zone>
+	<zone id="110115" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3068" maxZ="-2868">
+		<node X="13288" Y="-15560" />
+	</zone>
+	<zone id="110116" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3732" maxZ="-3532">
+		<node X="8872" Y="-14920" />
+	</zone>
+	<zone id="110117" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3732" maxZ="-3532">
+		<node X="6792" Y="-11432" />
+	</zone>
+	<zone id="110118" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3748" maxZ="-3548">
+		<node X="7937" Y="-10097" />
+	</zone>
+	<zone id="110119" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3652" maxZ="-3452">
+		<node X="8568" Y="-8392" />
+	</zone>
+	<zone id="110120" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3676" maxZ="-3476">
+		<node X="8584" Y="-7608" />
+	</zone>
+	<zone id="110121" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3652" maxZ="-3452">
+		<node X="6488" Y="-7048" />
+	</zone>
+	<zone id="110122" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3660" maxZ="-3460">
+		<node X="6584" Y="-7144" />
+	</zone>
+	<zone id="110123" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3644" maxZ="-3444">
+		<node X="6696" Y="-7032" />
+	</zone>
+	<zone id="110124" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3836" maxZ="-3636">
+		<node X="2856" Y="-10056" />
+	</zone>
+	<zone id="110125" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3581" maxZ="-3381">
+		<node X="2536" Y="-13221" />
+	</zone>
+	<zone id="110126" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3564" maxZ="-3364">
+		<node X="2904" Y="-15512" />
+	</zone>
+	<zone id="110127" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3572" maxZ="-3372">
+		<node X="4632" Y="-20776" />
+	</zone>
+	<zone id="110128" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3572" maxZ="-3372">
+		<node X="4824" Y="-20920" />
+	</zone>
+	<zone id="110129" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3541" maxZ="-3341">
+		<node X="6758" Y="-21319" />
+	</zone>
+	<zone id="110130" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3404" maxZ="-3204">
+		<node X="8152" Y="-21256" />
+	</zone>
+	<zone id="110131" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3620" maxZ="-3420">
+		<node X="8232" Y="-19608" />
+	</zone>
+	<zone id="110132" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3860" maxZ="-3660">
+		<node X="6264" Y="-18680" />
+	</zone>
+	<zone id="110133" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3788" maxZ="-3588">
+		<node X="5528" Y="-16760" />
+	</zone>
+	<zone id="110134" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3726" maxZ="-3526">
+		<node X="8367" Y="-17240" />
+	</zone>
+	<zone id="110135" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3732" maxZ="-3532">
+		<node X="8536" Y="-17096" />
+	</zone>
+	<zone id="110136" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3764" maxZ="-3564">
+		<node X="7224" Y="-12616" />
+	</zone>
+	<zone id="110137" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3780" maxZ="-3580">
+		<node X="6600" Y="-9624" />
+	</zone>
+	<zone id="110138" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3140" maxZ="-2940">
+		<node X="5752" Y="-1864" />
+	</zone>
+	<zone id="110139" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3316" maxZ="-3116">
+		<node X="4808" Y="-2136" />
+	</zone>
+	<zone id="110140" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3284" maxZ="-3084">
+		<node X="5144" Y="-2824" />
+	</zone>
+	<zone id="110141" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3060" maxZ="-2860">
+		<node X="6522" Y="-1798" />
+	</zone>
+	<zone id="110142" type="GLTBushZone" shape="Cylinder" rad="50" minZ="-3060" maxZ="-2860">
+		<node X="6744" Y="-2264" />
+	</zone>
+</list>

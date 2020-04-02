@@ -1,0 +1,2622 @@
+[
+  {
+    "id": 6700,
+    "name": "Sealed Tateossian Necklace Chain",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_jewel_box_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6701,
+    "name": "Sealed Imperial Crusader Breastplate Part",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_plate_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6702,
+    "name": "Sealed Imperial Crusader Gaiters Pattern",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6703,
+    "name": "Sealed Imperial Crusader Gauntlets Design",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6704,
+    "name": "Sealed Imperial Crusader Boots Design",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6705,
+    "name": "Sealed Imperial Crusader Shield Part",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_plate_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6706,
+    "name": "Sealed Imperial Crusader Helmet Pattern",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6707,
+    "name": "Sealed Draconic Leather Armor Part",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6708,
+    "name": "Sealed Draconic Leather Gloves Fabric",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6709,
+    "name": "Sealed Draconic Leather Boots Design",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6710,
+    "name": "Sealed Draconic Leather Helmet Pattern",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6711,
+    "name": "Sealed Major Arcana Robe Part",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_plate_silver_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6712,
+    "name": "Sealed Major Arcana Gloves fabric",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_leather_gray_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6713,
+    "name": "Sealed Major Arcana Boots Design",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 6714,
+    "name": "Sealed Major Arcana Circlet Pattern",
+    "weight": 60,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_pouch_brown_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BOW",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 1,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 1500
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 16.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 6.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 293.0
+      }
+    ],
+    "id": 6715,
+    "name": "Monster Only(Silenos Archer)",
+    "weight": 1950,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGBLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": true,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 11.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 15.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      }
+    ],
+    "id": 6716,
+    "name": "Monster Only(Silenos Shaman)",
+    "weight": 1080,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_R_HAND",
+    "weapon": {
+      "type": "SWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 24.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 17.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 379.0
+      }
+    ],
+    "id": 6717,
+    "name": "Monster Only(Einhasad Warrior)",
+    "weight": 1560,
+    "material": "FINE_STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGBLUNT",
+      "randomDamage": 20,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 24.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 17.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      }
+    ],
+    "id": 6718,
+    "name": "Monster Only(Einhasad Shaman)",
+    "weight": 1560,
+    "material": "ADAMANTAITE",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGBLUNT",
+      "randomDamage": 20,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": true,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 141.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 130.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 6719,
+    "name": "Monster Only(Ketra Orc Chieftain)",
+    "weight": 990,
+    "material": "BLOOD_STEEL",
+    "grade": "C",
+    "crystalCount": 1912,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BOW",
+      "randomDamage": 5,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 1,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 1500
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 16.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 6.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 12.0
+      },
+      {
+        "funcName": "Sub",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 3.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 293.0
+      }
+    ],
+    "id": 6720,
+    "name": "Monster Only(Shadow of Halisha)",
+    "weight": 1950,
+    "material": "WOOD",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_L_HAND",
+    "armor": {
+      "type": "SHIELD"
+    },
+    "funcs": [
+      {
+        "funcName": "Sub",
+        "stat": "Evasion",
+        "order": "0x010",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "BlockRate",
+        "order": "0x08",
+        "lambda": 20.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "ShieldDefense",
+        "order": "0x08",
+        "lambda": 47.0
+      }
+    ],
+    "id": 6721,
+    "name": "Monster Only(Shield of Imperial Warlord Zombie)",
+    "weight": 1430,
+    "material": "LEATHER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "DUAL",
+      "randomDamage": 10,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "enchantSkill": {
+        "id": 3036,
+        "value": 14
+      },
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 6722,
+    "name": "Monster Only(Ahrimanes)",
+    "weight": 2080,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGSWORD",
+      "randomDamage": 10,
+      "SSConsume": 3,
+      "SPSConsume": 3,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 112.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 54.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 6723,
+    "name": "Monster Only(Vampire Warrior)",
+    "weight": 2090,
+    "material": "FINE_STEEL",
+    "grade": "D",
+    "crystalCount": 3272,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_EAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "MDef",
+        "order": "0x010",
+        "lambda": 68.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 6724,
+    "name": "Sealed Tateossian Earring",
+    "weight": 150,
+    "material": "SILVER",
+    "grade": "S",
+    "crystalCount": 185,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_tateossian_earring_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_FINGER",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "MDef",
+        "order": "0x010",
+        "lambda": 46.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 6725,
+    "name": "Sealed Tateossian Ring",
+    "weight": 150,
+    "material": "GOLD",
+    "grade": "S",
+    "crystalCount": 123,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_tateossian_ring_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_NECK",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "MDef",
+        "order": "0x010",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 6726,
+    "name": "Sealed Tateossian Necklace",
+    "weight": 150,
+    "material": "SILVER",
+    "grade": "S",
+    "crystalCount": 247,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.accessory_tateossian_necklace_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6727,
+    "name": "Seed: Alternative Great Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_great_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6728,
+    "name": "Seed: Alternative Sea Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_sea_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6729,
+    "name": "Seed: Alternative Sea Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_sea_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6730,
+    "name": "Seed: Alternative Sea Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_sea_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6731,
+    "name": "Seed: Alternative Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6732,
+    "name": "Seed: Alternative Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6733,
+    "name": "Seed: Alternative Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6734,
+    "name": "Seed: Alternative Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6735,
+    "name": "Seed: Alternative Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6736,
+    "name": "Seed: Alternative Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6737,
+    "name": "Seed: Alternative Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6738,
+    "name": "Seed: Alternative Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6739,
+    "name": "Seed: Alternative Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6740,
+    "name": "Seed: Alternative Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6741,
+    "name": "Seed: Alternative Twin Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_twin_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6742,
+    "name": "Seed: Alternative Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6743,
+    "name": "Seed: Alternative Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6744,
+    "name": "Seed: Alternative Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6745,
+    "name": "Seed: Alternative Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6746,
+    "name": "Seed: Alternative Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6747,
+    "name": "Seed: Alternative Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6748,
+    "name": "Seed: Alternative Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6749,
+    "name": "Seed: Alternative Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6750,
+    "name": "Seed: Alternative Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6751,
+    "name": "Seed: Alternative Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED2",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6752,
+    "name": "Seed: Alternative Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6753,
+    "name": "Seed: Great Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_great_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6754,
+    "name": "Seed: Sea Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_sea_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6755,
+    "name": "Seed: Sea Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_sea_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6756,
+    "name": "Seed: Sea Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_sea_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6757,
+    "name": "Seed: Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6758,
+    "name": "Seed: Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6759,
+    "name": "Seed: Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6760,
+    "name": "Seed: Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6761,
+    "name": "Seed: Red Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_red_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6762,
+    "name": "Seed: Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6763,
+    "name": "Seed: Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6764,
+    "name": "Seed: Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6765,
+    "name": "Seed: Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6766,
+    "name": "Seed: Desert Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_desert_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6767,
+    "name": "Seed: Twin Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_twin_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6768,
+    "name": "Seed: Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6769,
+    "name": "Seed: Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6770,
+    "name": "Seed: Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6771,
+    "name": "Seed: Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6772,
+    "name": "Seed: Blue Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_blue_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6773,
+    "name": "Seed: Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6774,
+    "name": "Seed: Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6775,
+    "name": "Seed: Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6776,
+    "name": "Seed: Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6777,
+    "name": "Seed: Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "SEED",
+    "action": "seed",
+    "handler": "Seed",
+    "skills": [
+      {
+        "id": 2097,
+        "value": 3
+      }
+    ],
+    "id": 6778,
+    "name": "Seed: Golden Coba",
+    "weight": 1,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_golden_coba_seed_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6779,
+    "name": "Mercenary Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6780,
+    "name": "Mercenary Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6781,
+    "name": "Mercenary Posting Ticket (Bow/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6782,
+    "name": "Mercenary Posting Ticket (Cleric/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6783,
+    "name": "Mercenary Posting Ticket (Wizard/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6784,
+    "name": "Mercenary Posting Ticket (Sword/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6785,
+    "name": "Mercenary Posting Ticket (Spear/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6786,
+    "name": "Mercenary Posting Ticket (Bow/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6787,
+    "name": "Mercenary Posting Ticket (Cleric/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6788,
+    "name": "Mercenary Posting Ticket (Wizard/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6789,
+    "name": "Mercenary Posting Ticket (Teleporter1)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6790,
+    "name": "Mercenary Posting Ticket (Teleporter2)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6791,
+    "name": "Mercenary Posting Ticket (Teleporter3)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6792,
+    "name": "Greater Mercenary Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6793,
+    "name": "Greater Mercenary Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6794,
+    "name": "Greater Mercenary Posting Ticket (Bow/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6795,
+    "name": "Greater Mercenary Posting Ticket (Cleric/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6796,
+    "name": "Greater Mercenary Posting Ticket (Wizard/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6797,
+    "name": "Greater Mercenary Posting Ticket (Sword/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6798,
+    "name": "Greater Mercenary Posting Ticket (Spear/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 6799,
+    "name": "Greater Mercenary Posting Ticket (Bow/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  }
+]

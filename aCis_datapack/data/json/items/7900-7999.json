@@ -1,0 +1,2272 @@
+[
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGBLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 91.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 7900,
+    "name": "Ice Storm Hammer",
+    "weight": 1950,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 1157,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_ice_storm_hammer_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGBLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 99.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 7901,
+    "name": "Star Buster",
+    "weight": 1930,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 1746,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_star_buster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGBLUNT",
+      "randomDamage": 20,
+      "SSConsume": 1,
+      "SPSConsume": 1,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 282.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 114.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "Accuracy",
+        "order": "0x010",
+        "lambda": 4.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "MAtk",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 7902,
+    "name": "Doom Crusher",
+    "weight": 1900,
+    "material": "FINE_STEEL",
+    "grade": "A",
+    "crystalCount": 2160,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_doom_crusher_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LR_HAND",
+    "weapon": {
+      "type": "BIGSWORD",
+      "randomDamage": 10,
+      "SSConsume": 2,
+      "SPSConsume": 2,
+      "MPConsume": 0,
+      "HPConsume": 0,
+      "isMagical": false,
+      "reuseDelay": 0
+    },
+    "funcs": [
+      {
+        "funcName": "Set",
+        "stat": "PAtk",
+        "order": "0x08",
+        "lambda": 78.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "MAtk",
+        "order": "0x08",
+        "lambda": 39.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "CriticalRate",
+        "order": "0x08",
+        "lambda": 8.0
+      },
+      {
+        "funcName": "Set",
+        "stat": "PAtkSpd",
+        "order": "0x08",
+        "lambda": 325.0
+      }
+    ],
+    "id": 7903,
+    "name": "Frintezza's Sword",
+    "weight": 2180,
+    "material": "FINE_STEEL",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_monster_i00"
+    },
+    "type1": "WEAPON_RING_EARRING_NECKLACE",
+    "type2": "WEAPON",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "id": 7904,
+    "name": "Boat Ticket: Rune to Gludin",
+    "weight": 20,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ticket_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "id": 7905,
+    "name": "Boat Ticket: Gludin to Rune",
+    "weight": 20,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_ticket_red_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2248,
+        "value": 1
+      }
+    ],
+    "id": 7906,
+    "name": "Blessing of Fire",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_fire_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2249,
+        "value": 1
+      }
+    ],
+    "id": 7907,
+    "name": "Blessing of Water",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_water_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2250,
+        "value": 1
+      }
+    ],
+    "id": 7908,
+    "name": "Blessing of Wind",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_wind_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2251,
+        "value": 1
+      }
+    ],
+    "id": 7909,
+    "name": "Blessing of Earth",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_earth_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2252,
+        "value": 1
+      }
+    ],
+    "id": 7910,
+    "name": "Blessing of Darkness",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_unholy_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2253,
+        "value": 1
+      }
+    ],
+    "id": 7911,
+    "name": "Blessing of Sanctity",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_holy_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2254,
+        "value": 3
+      }
+    ],
+    "id": 7912,
+    "name": "Fire Crystal",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_fire_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2255,
+        "value": 3
+      }
+    ],
+    "id": 7913,
+    "name": "Water Crystal",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_water_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2256,
+        "value": 3
+      }
+    ],
+    "id": 7914,
+    "name": "Wind Crystal",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_wind_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2257,
+        "value": 3
+      }
+    ],
+    "id": 7915,
+    "name": "Earth Crystal",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_earth_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2258,
+        "value": 3
+      }
+    ],
+    "id": 7916,
+    "name": "Dark Crystal",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_unholy_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "NONE",
+    "action": "skill_reduce",
+    "handler": "ItemSkills",
+    "skills": [
+      {
+        "id": 2259,
+        "value": 3
+      }
+    ],
+    "id": 7917,
+    "name": "Sanctity Crystal",
+    "weight": 20,
+    "material": "LIQUID",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.etc_holy_crystal_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": [
+      "UNOLYMPABLE"
+    ]
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7918,
+    "name": "Mercenary Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7919,
+    "name": "Mercenary Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7920,
+    "name": "Mercenary Posting Ticket (Bow/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7921,
+    "name": "Mercenary Posting Ticket (Cleric/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7922,
+    "name": "Mercenary Posting Ticket (Wizard/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7923,
+    "name": "Mercenary Posting Ticket (Sword/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7924,
+    "name": "Mercenary Posting Ticket (Spear/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7925,
+    "name": "Mercenary Posting Ticket (Bow/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7926,
+    "name": "Mercenary Posting Ticket (Cleric/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7927,
+    "name": "Mercenary Posting Ticket (Wizard/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7928,
+    "name": "Mercenary Posting Ticket (Teleporter1)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7929,
+    "name": "Mercenary Posting Ticket (Teleporter2)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7930,
+    "name": "Mercenary Posting Ticket (Teleporter3)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7931,
+    "name": "Greater Mercenary Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7932,
+    "name": "Greater Mercenary Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7933,
+    "name": "Greater Mercenary Posting Ticket (Bow/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7934,
+    "name": "Greater Mercenary Posting Ticket (Cleric/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7935,
+    "name": "Greater Mercenary Posting Ticket (Wizard/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7936,
+    "name": "Greater Mercenary Posting Ticket (Sword/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7937,
+    "name": "Greater Mercenary Posting Ticket (Spear/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7938,
+    "name": "Greater Mercenary Posting Ticket (Bow/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7939,
+    "name": "Greater Mercenary Posting Ticket (Cleric/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7940,
+    "name": "Greater Mercenary Posting Ticket (Wizard/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7941,
+    "name": "Dawn Mercenary Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7942,
+    "name": "Dawn Mercenary Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7943,
+    "name": "Dawn Mercenary Posting Ticket (Bow/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7944,
+    "name": "Dawn Mercenary Posting Ticket (Cleric/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7945,
+    "name": "Dawn Mercenary Posting Ticket (Wizard/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7946,
+    "name": "Dawn Mercenary Posting Ticket (Sword/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7947,
+    "name": "Dawn Mercenary Posting Ticket (Spear/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7948,
+    "name": "Dawn Mercenary Posting Ticket (Bow/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7949,
+    "name": "Dawn Mercenary Posting Ticket (Cleric/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7950,
+    "name": "Dawn Mercenary Posting Ticket (Wizard/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7951,
+    "name": "Greater Recruit Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7952,
+    "name": "Greater Recruit Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7953,
+    "name": "Greater Recruit Posting Ticket (Bow/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7954,
+    "name": "Greater Recruit Posting Ticket (Cleric/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7955,
+    "name": "Greater Recruit Posting Ticket (Wizard/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7956,
+    "name": "Greater Recruit Posting Ticket (Sword/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7957,
+    "name": "Greater Recruit Posting Ticket (Spear/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7958,
+    "name": "Greater Recruit Posting Ticket (Bow/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7959,
+    "name": "Greater Recruit Posting Ticket (Cleric/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7960,
+    "name": "Greater Recruit Posting Ticket (Wizard/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7961,
+    "name": "Recruit Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7962,
+    "name": "Recruit Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7963,
+    "name": "Recruit Posting Ticket (Bow/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7964,
+    "name": "Recruit Posting Ticket (Cleric/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7965,
+    "name": "Recruit Posting Ticket (Wizard/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7966,
+    "name": "Recruit Posting Ticket (Sword/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7967,
+    "name": "Recruit Posting Ticket (Spear/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7968,
+    "name": "Recruit Posting Ticket (Bow/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7969,
+    "name": "Recruit Posting Ticket (Cleric/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7970,
+    "name": "Recruit Posting Ticket (Wizard/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7971,
+    "name": "Nephilim Warrior Posting Ticket",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7972,
+    "name": "Nephilim Shaman Posting Ticket",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7973,
+    "name": "Mercenary Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7974,
+    "name": "Mercenary Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7975,
+    "name": "Mercenary Posting Ticket (Bow/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7976,
+    "name": "Mercenary Posting Ticket (Cleric/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7977,
+    "name": "Mercenary Posting Ticket (Wizard/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7978,
+    "name": "Mercenary Posting Ticket (Sword/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7979,
+    "name": "Mercenary Posting Ticket (Spear/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7980,
+    "name": "Mercenary Posting Ticket (Bow/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7981,
+    "name": "Mercenary Posting Ticket (Cleric/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7982,
+    "name": "Mercenary Posting Ticket (Wizard/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7983,
+    "name": "Mercenary Posting Ticket (Teleporter1)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7984,
+    "name": "Mercenary Posting Ticket (Teleporter2)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7985,
+    "name": "Mercenary Posting Ticket (Teleporter3)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7986,
+    "name": "Mercenary Posting Ticket (Teleporter4)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7987,
+    "name": "Mercenary Posting Ticket (Teleporter5)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_teleporter_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7988,
+    "name": "Greater Mercenary Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7989,
+    "name": "Greater Mercenary Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7990,
+    "name": "Greater Mercenary Posting Ticket (Bow/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7991,
+    "name": "Greater Mercenary Posting Ticket (Cleric/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7992,
+    "name": "Greater Mercenary Posting Ticket (Wizard/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7993,
+    "name": "Greater Mercenary Posting Ticket (Sword/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7994,
+    "name": "Greater Mercenary Posting Ticket (Spear/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7995,
+    "name": "Greater Mercenary Posting Ticket (Bow/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_bow_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7996,
+    "name": "Greater Mercenary Posting Ticket (Cleric/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_cleric_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7997,
+    "name": "Greater Mercenary Posting Ticket (Wizard/Mobile)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_wizard_move_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7998,
+    "name": "Dawn Mercenary Posting Ticket (Sword/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_sword_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  },
+  {
+    "type": "CASTLE_GUARD",
+    "action": "none",
+    "handler": "MercTicket",
+    "skills": [],
+    "id": 7999,
+    "name": "Dawn Mercenary Posting Ticket (Spear/Stationary)",
+    "weight": 0,
+    "material": "PAPER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.mticket_pole_fix_i00"
+    },
+    "type1": "ITEM_QUESTITEM_ADENA",
+    "type2": "OTHER",
+    "restrictions": []
+  }
+]

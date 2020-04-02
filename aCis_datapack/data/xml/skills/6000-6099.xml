@@ -138,8 +138,16 @@
         <set name="target" val="TARGET_SELF" />
         <set name="skillType" val="BUFF" />
         <set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pAtkSpd" val="128">
+				<player active_effect_id="130"/>
+			</add>
+			<add order="0x40" stat="AttackHpConsumeRate" val="11">
+				<player active_effect_id="130"/>
+			</add>		
+		</for>
     </skill>
-    <skill id="6017" levels="1" name="Autumn Leaf's">
+    <skill id="6017" levels="1" name="Autumn Leafs">
         <set name="target" val="TARGET_SELF" />
         <set name="skillType" val="BUFF" />
         <set name="operateType" val="OP_PASSIVE" />
@@ -168,5 +176,37 @@
         <set name="alignment" val="ABILITY"/>
 		<set name="castRange" val="300"/>
 		<set name="effectRange" val="500"/>
+    </skill>
+    <skill id="6021" levels="1" name="Power Absorption">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="COREDONE" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6022" levels="1" name="Second Wind">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="COREDONE" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6023" levels="1" name="Entire Hate">
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="COREDONE" />
+        <set name="operateType" val="OP_PASSIVE" />
+    </skill>
+    <skill id="6024" levels="1" name="Tower Blow">
+        <set name="weaponsAllowed" val="POLE" />
+        <set name="mpConsume" val="89"/>
+        <set name="nextActionAttack" val="true" />
+        <set name="power" val="70"/>
+		<set name="modifier" val="CASTER_LEVEL"/>
+        <set name="target" val="TARGET_ONE"/>
+        <set name="condition" val="16"/>
+        <set name="reuseDelay" val="11000"/>
+        <set name="hitTime" val="1240"/>
+        <set name="coolTime" val="720" />
+        <set name="skillType" val="BLOW"/>
+        <set name="lethal1" val="5"/>		
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="castRange" val="120"/>
+        <set name="effectRange" val="400"/>
     </skill>
 </list>

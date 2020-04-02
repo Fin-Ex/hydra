@@ -18715,7 +18715,7 @@
         <set name="height" val="23"/>
         <set name="rHand" val="0"/>
         <set name="lHand" val="0"/>
-        <set name="type" val="Folk"/>
+        <set name="type" val="HunterGuildPresident"/>
         <set name="exp" val="0"/>
         <set name="sp" val="0"/>
         <set name="hp" val="2444.46819"/>

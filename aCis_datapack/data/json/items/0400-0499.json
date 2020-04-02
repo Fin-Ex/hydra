@@ -1,0 +1,3902 @@
+[
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 106.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 400,
+    "name": "Theca Leather Armor",
+    "weight": 4370,
+    "material": "LEATHER",
+    "grade": "C",
+    "crystalCount": 330,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t63_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 179.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 401,
+    "name": "Drake Leather Armor",
+    "weight": 5800,
+    "material": "LEATHER",
+    "grade": "C",
+    "crystalCount": 628,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t21_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 402,
+    "name": "Chain Mail of Silence",
+    "weight": 3200,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 470,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_composite_armor_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 225.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 403,
+    "name": "Gust Chain Mail",
+    "weight": 2720,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 677,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_composite_armor_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 131.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 404,
+    "name": "Prairie Leather Armor",
+    "weight": 8000,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_mithril_banded_mail_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 405,
+    "name": "Leather Armor of The Underworld",
+    "weight": 8000,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 462,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_mithril_banded_mail_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 213.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 406,
+    "name": "Leather Suit of Concentration",
+    "weight": 2400,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 470,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_composite_armor_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 225.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 407,
+    "name": "Ace's Leather Armor",
+    "weight": 2400,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 677,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_composite_armor_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 131.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 408,
+    "name": "Guardian's Leather Armor",
+    "weight": 8000,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_mithril_banded_mail_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 409,
+    "name": "Marksman's Leather Armor",
+    "weight": 4300,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 462,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_mithril_banded_mail_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 238.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 410,
+    "name": "Unicorn Leather Armor",
+    "weight": 1280,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 618,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_composite_armor_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 237.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 411,
+    "name": "Dragon Leather Armor",
+    "weight": 4950,
+    "material": "LEATHER",
+    "grade": "S",
+    "crystalCount": 525,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t45_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 32.0
+      }
+    ],
+    "id": 412,
+    "name": "Cotton Pants",
+    "weight": 1630,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t07_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 36.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 413,
+    "name": "Puma Skin Gaiters",
+    "weight": 1600,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 71,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t09_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 414,
+    "name": "Lion Skin Gaiters",
+    "weight": 1570,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 113,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t18_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 46.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 415,
+    "name": "Mithril Banded Gaiters",
+    "weight": 1580,
+    "material": "MITHRIL",
+    "grade": "D",
+    "crystalCount": 173,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t10_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 46.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 416,
+    "name": "Reinforced Leather Gaiters",
+    "weight": 1570,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 173,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t13_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 48.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 417,
+    "name": "Manticore Skin Gaiters",
+    "weight": 1550,
+    "material": "LEATHER",
+    "grade": "D",
+    "crystalCount": 254,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t42_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 59.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 418,
+    "name": "Plated Leather Gaiters",
+    "weight": 1560,
+    "material": "LEATHER",
+    "grade": "C",
+    "crystalCount": 111,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t47_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 60.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 419,
+    "name": "Rind Leather Gaiters",
+    "weight": 1550,
+    "material": "LEATHER",
+    "grade": "C",
+    "crystalCount": 120,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t49_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 420,
+    "name": "Theca Leather Gaiters",
+    "weight": 1530,
+    "material": "LEATHER",
+    "grade": "C",
+    "crystalCount": 206,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t63_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 82.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 421,
+    "name": "Prairie Leather Gaiters",
+    "weight": 4800,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_mithril_banded_gaiters_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 422,
+    "name": "Gaiters of The Underworld",
+    "weight": 4800,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 289,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_mithril_banded_gaiters_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 82.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 423,
+    "name": "Guardian's Leather Gaiters",
+    "weight": 4800,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_mithril_banded_gaiters_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "LIGHT"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 424,
+    "name": "Marksman's Leather Gaiters",
+    "weight": 1490,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 289,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_mithril_banded_gaiters_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 17.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 19.0
+      }
+    ],
+    "id": 425,
+    "name": "Apprentice's Tunic",
+    "weight": 2150,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t01_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 18.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 24.0
+      }
+    ],
+    "id": 426,
+    "name": "Tunic",
+    "weight": 2150,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t03_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 35.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 61.0
+      }
+    ],
+    "id": 427,
+    "name": "Cotton Robe",
+    "weight": 2750,
+    "material": "COTTON",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cotton_robe_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 21.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 38.0
+      }
+    ],
+    "id": 428,
+    "name": "Feriotic Tunic",
+    "weight": 2140,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t52_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 25.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 52.0
+      }
+    ],
+    "id": 429,
+    "name": "Leather Tunic",
+    "weight": 2110,
+    "material": "LEATHER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t05_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 49.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 109.0
+      }
+    ],
+    "id": 430,
+    "name": "Robe of Devotion",
+    "weight": 2650,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cotton_robe_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 56.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 140.0
+      }
+    ],
+    "id": 431,
+    "name": "Robe of Magic",
+    "weight": 2600,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cotton_robe_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 39.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 106.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 432,
+    "name": "Cursed Tunic",
+    "weight": 2090,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 113,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t14_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 43.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 126.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 433,
+    "name": "Elven Tunic",
+    "weight": 2080,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 181,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t11_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 43.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 126.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 434,
+    "name": "White Tunic",
+    "weight": 2040,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 181,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t16_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 43.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 126.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 435,
+    "name": "Mystic's Tunic",
+    "weight": 2030,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 181,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t17_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 49.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 147.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 436,
+    "name": "Tunic of Knowledge",
+    "weight": 2020,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 276,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t41_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 52.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 169.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 437,
+    "name": "Mithril Tunic",
+    "weight": 2010,
+    "material": "MITHRIL",
+    "grade": "D",
+    "crystalCount": 407,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t51_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 90.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 320.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 438,
+    "name": "Sage's Rag",
+    "weight": 2580,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 780,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t44_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 60.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 225.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 439,
+    "name": "Karmian Tunic",
+    "weight": 1980,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 151,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t53_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 105.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 413.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 440,
+    "name": "Robe of Seal",
+    "weight": 2500,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 282,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t44_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 69.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 284.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 441,
+    "name": "Demon's Tunic",
+    "weight": 1990,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 294,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t54_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 74.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 314.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 442,
+    "name": "Divine Tunic",
+    "weight": 1980,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 428,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t57_u_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 443,
+    "name": "Tunic of Mana",
+    "weight": 2000,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 150.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 665.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 444,
+    "name": "Sage's Robe",
+    "weight": 1600,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 677,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cotton_robe_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 445,
+    "name": "Paradia Tunic",
+    "weight": 1990,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 92.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 409.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 446,
+    "name": "Inferno Tunic",
+    "weight": 1880,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 462,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 447,
+    "name": "Tunic of Solar Eclipse",
+    "weight": 1960,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 150.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 665.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 448,
+    "name": "Robe of Black Ore",
+    "weight": 1600,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 677,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cotton_robe_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 449,
+    "name": "Tunic of Summoning",
+    "weight": 1950,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 150.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 665.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 450,
+    "name": "Otherworldly Robe",
+    "weight": 1600,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 677,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cotton_robe_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 451,
+    "name": "Elemental Tunic",
+    "weight": 1970,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 92.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 409.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 452,
+    "name": "Tunic of Phantom",
+    "weight": 1890,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 462,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 453,
+    "name": "Tunic of Grace",
+    "weight": 1930,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 150.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 665.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 454,
+    "name": "Robe of Holy Spirit",
+    "weight": 1600,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 677,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cotton_robe_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 455,
+    "name": "Phoenix Tunic",
+    "weight": 1950,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 92.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 409.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 456,
+    "name": "Cerberus Tunic",
+    "weight": 1870,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 462,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_CHEST",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 87.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 377.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 457,
+    "name": "Tunic of Aid",
+    "weight": 1910,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_tunic_of_knowledge_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 150.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 665.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 458,
+    "name": "Robe of Blessing",
+    "weight": 1600,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 677,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cotton_robe_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 158.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 718.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 459,
+    "name": "Dasparion's Robe",
+    "weight": 1200,
+    "material": "CLOTH",
+    "grade": "A",
+    "crystalCount": 618,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cotton_robe_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FULL_ARMOR",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 158.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 773.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 460,
+    "name": "The Robe",
+    "weight": 2300,
+    "material": "CLOTH",
+    "grade": "S",
+    "crystalCount": 525,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t44_ul_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 10.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 10.0
+      }
+    ],
+    "id": 461,
+    "name": "Apprentice's Stockings",
+    "weight": 1100,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t01_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 11.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 15.0
+      }
+    ],
+    "id": 462,
+    "name": "Stockings",
+    "weight": 1080,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t03_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 13.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 23.0
+      }
+    ],
+    "id": 463,
+    "name": "Feriotic Stockings",
+    "weight": 1070,
+    "material": "CLOTH",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t52_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 16.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 33.0
+      }
+    ],
+    "id": 464,
+    "name": "Leather Stockings",
+    "weight": 1020,
+    "material": "LEATHER",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t05_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 24.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 465,
+    "name": "Cursed Stockings",
+    "weight": 1020,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 71,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t14_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 27.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 79.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 466,
+    "name": "Elven Stockings",
+    "weight": 1010,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 113,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t11_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 27.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 79.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 467,
+    "name": "Dark Stockings",
+    "weight": 1000,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 113,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t16_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 27.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 79.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 468,
+    "name": "Mystic's Stockings",
+    "weight": 990,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 113,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t17_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 30.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 92.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 469,
+    "name": "Stockings of Knowledge",
+    "weight": 1000,
+    "material": "CLOTH",
+    "grade": "D",
+    "crystalCount": 173,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t41_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 32.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 105.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 470,
+    "name": "Mithril Stockings",
+    "weight": 980,
+    "material": "MITHRIL",
+    "grade": "D",
+    "crystalCount": 254,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t51_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 37.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 141.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 471,
+    "name": "Karmian Stockings",
+    "weight": 970,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 94,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t53_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 43.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 177.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 472,
+    "name": "Demon's Stockings",
+    "weight": 980,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 184,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t54_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 46.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 196.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 473,
+    "name": "Divine Stockings",
+    "weight": 960,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 268,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t57_l_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 55.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 474,
+    "name": "Stockings of Mana",
+    "weight": 2400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 55.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 475,
+    "name": "Paradia Stockings",
+    "weight": 1600,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 256.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 476,
+    "name": "Inferno Stockings",
+    "weight": 1600,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 289,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 55.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 477,
+    "name": "Stockings of Solar Eclipse",
+    "weight": 2400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 55.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 478,
+    "name": "Stockings of Summoning",
+    "weight": 2400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 55.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 479,
+    "name": "Elemental Stockings",
+    "weight": 1600,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 256.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 480,
+    "name": "Stockings of Phantom",
+    "weight": 1600,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 289,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 55.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 481,
+    "name": "Stockings of Grace",
+    "weight": 2400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 55.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 482,
+    "name": "Phoenix Stockings",
+    "weight": 2400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 256.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 483,
+    "name": "Cerberus Stockings",
+    "weight": 6400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 289,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_LEGS",
+    "armor": {
+      "type": "MAGIC"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 55.0
+      },
+      {
+        "funcName": "Add",
+        "stat": "MaxMP",
+        "order": "0x040",
+        "lambda": 236.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 484,
+    "name": "Stockings of Aid",
+    "weight": 2400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 201,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_hose_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 53.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 485,
+    "name": "Tattoo of Power",
+    "weight": 4200,
+    "material": "DYESTUFF",
+    "grade": "NG",
+    "crystalCount": 0,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 73.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 486,
+    "name": "Tattoo of Fire",
+    "weight": 4050,
+    "material": "DYESTUFF",
+    "grade": "D",
+    "crystalCount": 276,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 73.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 487,
+    "name": "Tattoo of Resolve",
+    "weight": 4000,
+    "material": "DYESTUFF",
+    "grade": "D",
+    "crystalCount": 276,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 139.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 488,
+    "name": "Tattoo of Flame",
+    "weight": 800,
+    "material": "DYESTUFF",
+    "grade": "B",
+    "crystalCount": 462,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 110.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 489,
+    "name": "Tattoo of Bravery",
+    "weight": 4100,
+    "material": "DYESTUFF",
+    "grade": "C",
+    "crystalCount": 428,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 132.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 490,
+    "name": "Tattoo of Blood",
+    "weight": 3800,
+    "material": "DYESTUFF",
+    "grade": "A",
+    "crystalCount": 277,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 146.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 491,
+    "name": "Tattoo of Absolute",
+    "weight": 800,
+    "material": "DYESTUFF",
+    "grade": "A",
+    "crystalCount": 422,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 65.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 492,
+    "name": "Tattoo of Soul",
+    "weight": 4150,
+    "material": "DYESTUFF",
+    "grade": "D",
+    "crystalCount": 181,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 117.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 493,
+    "name": "Tattoo of Avadon",
+    "weight": 4000,
+    "material": "DYESTUFF",
+    "grade": "B",
+    "crystalCount": 208,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 125.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 494,
+    "name": "Tattoo of Doom",
+    "weight": 4100,
+    "material": "DYESTUFF",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 124.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 495,
+    "name": "Tattoo of Pledge",
+    "weight": 4000,
+    "material": "DYESTUFF",
+    "grade": "B",
+    "crystalCount": 208,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.item_normal03"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_UNDERWEAR",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 131.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 496,
+    "name": "Tattoo of Divine",
+    "weight": 4100,
+    "material": "DYESTUFF",
+    "grade": "B",
+    "crystalCount": 321,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.weapon_voodoo_doll_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 497,
+    "name": "Chain Helmet",
+    "weight": 620,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 59,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 49.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 498,
+    "name": "Steel Plate Helmet",
+    "weight": 610,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 82,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 499,
+    "name": "Mithril Helmet",
+    "weight": 240,
+    "material": "MITHRIL",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_circlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  }
+]

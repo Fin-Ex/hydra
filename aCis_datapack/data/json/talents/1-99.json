@@ -90,6 +90,7 @@
 	{
 		"id":15,
 		"skillId":6014,
+		"requiredSkill":36,
 		"name":"Wild Hurricane",
 		"descr":"Each time a <font color=BDB76B>`Whirlwind`</font> is used, its cooldown is <font color=BDB76B>reduced by 3 sec</font>. for every target you hit."
 	},
@@ -97,25 +98,29 @@
 		"id":16,
 		"skillId":6015,
 		"name":"Aftershock",
+		"requiredSkill":48,
 		"descr":"Ability <font color=BDB76B>`Thunder Storm`</font> now paralyze (instead of Stunning) targets, but their duration is <font color=BDB76B>reduced by 50%</font>."
 	},
 	{
 		"id":17,
 		"skillId":6016,
 		"name":"Heat of Battle",
-		"descr":"Ability <font color=BDB76B>`Thrill Fight`</font> no more reduce the move speed. Effect is <font color=BDB76B>increases for 100%</font> from base. Each your attack will consumes <font color=BDB76B>11 HP</font>. Has effect only with polearm weapon."
+		"requiredSkill":130,
+		"descr":"Ability <font color=BDB76B>`Thrill Fight`</font> no more reduce the move speed. Effect is <font color=BDB76B>increases for 128 pt.</font> Each your attack will consumes <font color=BDB76B>11 HP</font>. Has effect only with polearm weapon."
 	},
 	{
 		"id":18,
 		"skillId":6017,
 		"name":"Autumn Leaf's",
-		"descr":"Ability <font color=BDB76B>`Revival`</font> can be used on <font color=BDB76B>15% HP</font> instead of <font color=BDB76B>5%</font>."
+		"requiredSkill":181,
+		"descr":"Ability <font color=BDB76B>`Revival`</font> now restores <font color=BDB76B>entire CP</font> additionally."
 	},
 	{
 		"id":19,
 		"skillId":6018,
 		"name":"Threat Increase",
-		"descr":"Ability <font color=BDB76B>`Provoke`</font> now agg all enemies for a static time <font color=BDB76B>3 sec.</font>"
+		"requiredSkill":286,
+		"descr":"Ability <font color=BDB76B>`Provoke`</font> now introduces into a static aggressive state all enemies for a static time <font color=BDB76B>3 sec.</font>"
 	},
 	{
 		"id":20,
@@ -132,5 +137,36 @@
 		"requiredSkill":8,
 		"name":"Sonic Absorb",
 		"descr":"Absorb all sonic focueses which affects on you. For each absorbed focus you will restore 148 CP."
+	},
+	{
+		"id":22,
+		"skillId":6021,
+		"requiredLevel":40,
+		"requiredSkill":116,
+		"name":"Power Absoption",
+		"descr":"The Howl effect now takes away the absorbed attack from each victim and transfers it to the lord of war. Effect Time: 15 seconds."
+	},
+	{
+		"id":23,
+		"skillId":6022,
+		"requiredLevel":40,
+		"requiredSkill":121,
+		"name":"Second Wind",
+		"descr":"When your health level drops to <font color=BDB76B>60% or lower</font>, the <font color=BDB76B>`Battle Roar` heal-effect</font> is applied on you (if it is not on recharge). The effect is triggered no more than once every <font color=BDB76B>150 seconds</font> (time of reapply depends from <font color=BDB76B>CON modifier</font>)."
+	},
+	{
+		"id":24,
+		"skillId":6023,
+		"requiredLevel":40,
+		"requiredSkill":290,
+		"name":"Entire Hate",
+		"descr":"<font color=BDB76B>`Final Frenzy`</font> is always active at <font color=BDB76B>any level of health</font>. <font color=BDB76B>When HP falls below 30%</font>, the strength of the effect <font color=BDB76B>doubles</font>."
+	},
+	{
+		"id":25,
+		"skillId":6024,
+		"requiredLevel":40,
+		"name":"Tower Blow",
+		"descr":"A blow attack with a spear that deals <font color=BDB76B>critical damage</font> to the target. Power: [<font color=BDB76B>27 * Caster Level</font>]. If used with a spear in which <font color=BDB76B>SA (Towering Blow/Wide Blow)</font>, then the distance of use is <font color=BDB76B>increased by 100%</font>."
 	}
 ]

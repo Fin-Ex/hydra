@@ -1,0 +1,3608 @@
+[
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 51.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 500,
+    "name": "Great Helmet",
+    "weight": 610,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 96,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 501,
+    "name": "Armet",
+    "weight": 580,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 4,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 64.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 502,
+    "name": "Close Helmet",
+    "weight": 570,
+    "material": "ORIHARUKON",
+    "grade": "A",
+    "crystalCount": 3,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 503,
+    "name": "Zubei's Helmet",
+    "weight": 590,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 77.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 504,
+    "name": "Dragon Helmet",
+    "weight": 550,
+    "material": "BONE",
+    "grade": "S",
+    "crystalCount": 179,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 505,
+    "name": "Wolf Helmet",
+    "weight": 580,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 161,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_circlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 67.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 506,
+    "name": "Shining Dragon Helmet",
+    "weight": 880,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 232,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 507,
+    "name": "Helmet of Victory",
+    "weight": 640,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 161,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 67.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 508,
+    "name": "Helmet of Valor",
+    "weight": 720,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 232,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 65.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 509,
+    "name": "Glorious Helmet",
+    "weight": 800,
+    "material": "FINE_STEEL",
+    "grade": "A",
+    "crystalCount": 3,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 71.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 510,
+    "name": "Red Flame Helmet",
+    "weight": 960,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 3,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 511,
+    "name": "Elven Crystal Helmet",
+    "weight": 580,
+    "material": "CRYSTAL",
+    "grade": "B",
+    "crystalCount": 161,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_circlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 69.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 512,
+    "name": "Dark Crystal Helmet",
+    "weight": 570,
+    "material": "CRYSTAL",
+    "grade": "A",
+    "crystalCount": 139,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 513,
+    "name": "Implosion Helmet",
+    "weight": 480,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 161,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 67.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 514,
+    "name": "Dark Dragon Helmet",
+    "weight": 400,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 232,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 65.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 515,
+    "name": "Elven Vagian Helm",
+    "weight": 560,
+    "material": "MITHRIL",
+    "grade": "A",
+    "crystalCount": 3,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_circlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 71.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 516,
+    "name": "Dark Vagian Helm",
+    "weight": 560,
+    "material": "MITHRIL",
+    "grade": "A",
+    "crystalCount": 3,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 54.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 517,
+    "name": "Composite Helmet",
+    "weight": 610,
+    "material": "FINE_STEEL",
+    "grade": "C",
+    "crystalCount": 147,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 71.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 518,
+    "name": "Hell Helm",
+    "weight": 320,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 3,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 519,
+    "name": "Art of Helmet",
+    "weight": 400,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 161,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 71.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 520,
+    "name": "Masterpiece Helm",
+    "weight": 400,
+    "material": "ORIHARUKON",
+    "grade": "A",
+    "crystalCount": 3,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 521,
+    "name": "Helmet of Silence",
+    "weight": 320,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 161,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 67.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 522,
+    "name": "Gust Helmet",
+    "weight": 570,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 232,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_circlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 523,
+    "name": "Prairie Helmet",
+    "weight": 480,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 161,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_leather_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 67.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 524,
+    "name": "Helm of The Underworld",
+    "weight": 320,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 232,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 525,
+    "name": "Helmet of Concentration",
+    "weight": 320,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 161,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_circlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 67.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 526,
+    "name": "Ace's Helmet",
+    "weight": 320,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 232,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_circlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 66.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 527,
+    "name": "Guardian's Helmet",
+    "weight": 240,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 161,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 67.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 528,
+    "name": "Marksman Helmet",
+    "weight": 240,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 232,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_circlet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 529,
+    "name": "Cap of Mana",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 530,
+    "name": "Sage's Cap",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 531,
+    "name": "Paradia Hood",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 532,
+    "name": "Inferno Hood",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 533,
+    "name": "Hood of Solar Eclipse",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 534,
+    "name": "Hood of Black Ore",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 535,
+    "name": "Hood of Summoning",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 536,
+    "name": "Otherworldly Hood",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 537,
+    "name": "Elemental Hood",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 538,
+    "name": "Hood of Phantom",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 539,
+    "name": "Hood of Grace",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 540,
+    "name": "Hood of Holy Spirit",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 541,
+    "name": "Phoenix Hood",
+    "weight": 590,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 542,
+    "name": "Cerberus Hood",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 543,
+    "name": "Hood of Aid",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 544,
+    "name": "Hood of Blessing",
+    "weight": 320,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_cloth_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 545,
+    "name": "Flame Helm",
+    "weight": 400,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 546,
+    "name": "Helm of Bravery",
+    "weight": 400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 69.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 547,
+    "name": "Tallum Helm",
+    "weight": 570,
+    "material": "CLOTH",
+    "grade": "A",
+    "crystalCount": 139,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 548,
+    "name": "Absolute Helm",
+    "weight": 400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 549,
+    "name": "Helm of Avadon",
+    "weight": 400,
+    "material": "CLOTH",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 550,
+    "name": "Helm of Doom",
+    "weight": 400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 58.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 551,
+    "name": "Helmet of Pledge",
+    "weight": 400,
+    "material": "CHRYSOLITE",
+    "grade": "C",
+    "crystalCount": 214,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_HEAD",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 62.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 552,
+    "name": "Divine Helm",
+    "weight": 400,
+    "material": "CLOTH",
+    "grade": "B",
+    "crystalCount": 103,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_helmet_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 24.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 553,
+    "name": "Iron Boots",
+    "weight": 1280,
+    "material": "FINE_STEEL",
+    "grade": "D",
+    "crystalCount": 92,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t10_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 554,
+    "name": "Zubei's Boots",
+    "weight": 1180,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t64_b_i02"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 48.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 555,
+    "name": "Dragon Boots",
+    "weight": 1110,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 140,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNDROPABLE",
+      "UNSELLABLE",
+      "UNTRADABLE",
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 556,
+    "name": "Wolf Boots",
+    "weight": 1180,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 557,
+    "name": "Shining Dragon Boots",
+    "weight": 1150,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 558,
+    "name": "Boots of Victory",
+    "weight": 1180,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 559,
+    "name": "Boots of Valor",
+    "weight": 1150,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 560,
+    "name": "Glorious Boots",
+    "weight": 1180,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 561,
+    "name": "Red Flame Boots",
+    "weight": 1120,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 92,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t14_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 562,
+    "name": "Elven Crystal Boots",
+    "weight": 1180,
+    "material": "CRYSTAL",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 563,
+    "name": "Dark Crystal Boots",
+    "weight": 1110,
+    "material": "CRYSTAL",
+    "grade": "A",
+    "crystalCount": 92,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t15_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 564,
+    "name": "Implosion Boots",
+    "weight": 1150,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t68_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 565,
+    "name": "Dark Dragon Boots",
+    "weight": 1130,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 566,
+    "name": "Elven Vagian Boots",
+    "weight": 1150,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 567,
+    "name": "Dark Vagian Boots",
+    "weight": 1130,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 568,
+    "name": "Composite Boots",
+    "weight": 200,
+    "material": "FINE_STEEL",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 569,
+    "name": "Hell Boots",
+    "weight": 1130,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 570,
+    "name": "Art of Boots",
+    "weight": 1150,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 571,
+    "name": "Masterpiece Boots",
+    "weight": 1130,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 572,
+    "name": "Boots of Silence",
+    "weight": 1190,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t65_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 573,
+    "name": "Gust Boots",
+    "weight": 1120,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 92,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t45_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 574,
+    "name": "Prairie Boots",
+    "weight": 1140,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 575,
+    "name": "Boots of The Underworld",
+    "weight": 1110,
+    "material": "LEATHER",
+    "grade": "A",
+    "crystalCount": 92,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t10_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 576,
+    "name": "Boots of Concentration",
+    "weight": 1170,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 577,
+    "name": "Ace's Boots",
+    "weight": 1150,
+    "material": "ORIHARUKON",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 578,
+    "name": "Guardian's Boots",
+    "weight": 1180,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t67_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 579,
+    "name": "Marksman Boots",
+    "weight": 1150,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 580,
+    "name": "Boots of Mana",
+    "weight": 1180,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 581,
+    "name": "Sage's Boots",
+    "weight": 1150,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 582,
+    "name": "Paradia Boots",
+    "weight": 1140,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t68_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 48.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 583,
+    "name": "Majestic Boots",
+    "weight": 1110,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 140,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t45_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 584,
+    "name": "Boots of Solar Eclipse",
+    "weight": 1180,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 585,
+    "name": "Boots of Black Ore",
+    "weight": 1200,
+    "material": "DAMASCUS",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 586,
+    "name": "Boots of Summoning",
+    "weight": 1170,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 587,
+    "name": "Otherworldly Boots",
+    "weight": 1200,
+    "material": "ADAMANTAITE",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 588,
+    "name": "Elemental Boots",
+    "weight": 1130,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t71_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 48.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 589,
+    "name": "Boots of Phantom",
+    "weight": 1120,
+    "material": "ORIHARUKON",
+    "grade": "A",
+    "crystalCount": 140,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t45_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 590,
+    "name": "Boots of Grace",
+    "weight": 1130,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t71_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 44.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 591,
+    "name": "Boots of Holy Spirit",
+    "weight": 1200,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 107,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 592,
+    "name": "Phoenix Boots",
+    "weight": 1120,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 92,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t44_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 48.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 593,
+    "name": "Cerberus Boots",
+    "weight": 1120,
+    "material": "DAMASCUS",
+    "grade": "A",
+    "crystalCount": 140,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t44_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 594,
+    "name": "Boots of Aid",
+    "weight": 1200,
+    "material": "LEATHER",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 41.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 595,
+    "name": "Boots of Blessing",
+    "weight": 1160,
+    "material": "ADAMANTAITE",
+    "grade": "B",
+    "crystalCount": 69,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t56_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 596,
+    "name": "Flame Boots",
+    "weight": 1020,
+    "material": "BLOOD_STEEL",
+    "grade": "B",
+    "crystalCount": 154,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 597,
+    "name": "Boots of Bravery",
+    "weight": 1050,
+    "material": "CHRYSOLITE",
+    "grade": "B",
+    "crystalCount": 154,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 598,
+    "name": "Blood Boots",
+    "weight": 1130,
+    "material": "BLOOD_STEEL",
+    "grade": "A",
+    "crystalCount": 92,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_t45_b_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  },
+  {
+    "slot": "SLOT_FEET",
+    "armor": {
+      "type": "NONE"
+    },
+    "funcs": [
+      {
+        "funcName": "Add",
+        "stat": "PDef",
+        "order": "0x010",
+        "lambda": 45.0
+      },
+      {
+        "funcName": "Enchant",
+        "stat": "PDef",
+        "order": "0x0c",
+        "lambda": 0.0
+      }
+    ],
+    "id": 599,
+    "name": "Absolute Boots",
+    "weight": 1130,
+    "material": "MITHRIL",
+    "grade": "B",
+    "crystalCount": 154,
+    "icon": {
+      "width": 32,
+      "height": 32,
+      "path": "icon.armor_iron_boots_i00"
+    },
+    "type1": "SHIELD_ARMOR",
+    "type2": "SHIELD",
+    "restrictions": [
+      "UNSTACKABLE"
+    ]
+  }
+]
