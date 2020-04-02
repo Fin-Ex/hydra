@@ -5,7 +5,6 @@
  */
 package net.sf.finex.model.GLT.effects;
 
-import net.sf.l2j.gameserver.model.location.Location;
 import net.sf.l2j.gameserver.skills.Effect;
 import net.sf.l2j.gameserver.skills.EffectTemplate;
 import net.sf.l2j.gameserver.skills.Env;
@@ -16,31 +15,20 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  *
  * @author finfan
  */
-@Effect("Timeloop")
-public class Timeloop extends L2Effect {
-	
-	private final Location startPosition;
-			
-	public Timeloop(Env env, EffectTemplate template, Location startPosition) {
+@Effect("TimeStop")
+public class TimeStop extends L2Effect {
+
+	public TimeStop(Env env, EffectTemplate template) {
 		super(env, template);
-		this.startPosition = _effected.getPosition();
 	}
 
 	@Override
 	public L2EffectType getEffectType() {
-		return L2EffectType.GLT_EFFECT;
+		return L2EffectType.ABORT_CAST;
 	}
 
 	@Override
 	public boolean onActionTime() {
 		return true;
-	}
-
-	@Override
-	public void onExit() {
-		if(startPosition != null) {
-			_effected.teleToLocation(startPosition, 0);
-		}
-		super.onExit();
 	}
 }

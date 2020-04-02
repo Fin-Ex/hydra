@@ -25,6 +25,7 @@ import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
  * @author finfan
  */
 @Slf4j
+@Deprecated
 public class C4 implements IHandler {
 
 	private final PlaySound sound = new PlaySound("GltSound.watch_out_now_explode");
@@ -85,6 +86,5 @@ public class C4 implements IHandler {
 				log.info("C4 {} targets found, start detonate!", creatures.size());
 			}
 		}
-
 	}
 }
