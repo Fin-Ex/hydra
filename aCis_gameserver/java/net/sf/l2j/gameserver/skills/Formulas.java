@@ -64,22 +64,27 @@ public final class Formulas {
 		1.036,
 		34.845
 	};
+	
 	private static final double[] INT_COMPUTE = new double[]{
 		1.020,
 		31.375
 	};
+	
 	private static final double[] DEX_COMPUTE = new double[]{
 		1.0167,
 		19.360
 	};
+	
 	private static final double[] WIT_COMPUTE = new double[]{
 		1.050,
 		20.000
 	};
+	
 	private static final double[] CON_COMPUTE = new double[]{
 		1.030,
 		27.632
 	};
+	
 	private static final double[] MEN_COMPUTE = new double[]{
 		1.016,
 		-0.060

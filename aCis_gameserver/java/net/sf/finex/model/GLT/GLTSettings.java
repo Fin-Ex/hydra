@@ -14,7 +14,7 @@ import net.sf.l2j.gameserver.model.base.ClassId;
  */
 public class GLTSettings {
 
-	public static final boolean ACTIVATED = true;
+	public static final boolean ACTIVATED = false;
 	public static final int ZONE_LEAVE_SAFETY_TIME = 90;
 	public static final int ADENA_CONTRIBUTION = 200_000; //200k default
 	public static final int MAX_PARTICIPANTS = 4; //doesnt have a limit

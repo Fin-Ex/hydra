@@ -339,6 +339,11 @@ public class RandomQuestManager implements Runnable {
 		}
 	}
 
+	/**
+	 * TODO: remove
+	 * @return 
+	 */
+	@Deprecated
 	public boolean isLocked() {
 		return locker.isLocked();
 	}
