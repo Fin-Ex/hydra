@@ -1,3 +1,18 @@
+# Полезно:
+`<html><body>
+<center>
+<table cellspacing=-452 cellpadding=-526>
+    <tr>
+        <td align=center>
+        <td align=left>
+        <td align=right>
+            <img src="Rolo_Frame.frame6" width=300 height=1070>
+        </td>
+    </tr>
+</table>
+</center>
+</body></html>`
+
 # Ссылки на описание обновлений
 
 1. [UPD 1.0](https://github.com/finfan222/L2JFinExGithub#upd-10)
