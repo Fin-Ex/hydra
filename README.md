@@ -42,90 +42,90 @@
 ### SA
 
 - Anger
-`Increase P.Atk by N and decrease Max HP by 15%.
-Increase P.Atk by 15% and decrease Max HP by 15%.`
+  Increase P.Atk by N and decrease Max HP by 15%.
+  Increase P.Atk by 15% and decrease Max HP by 15%.
 - Acumen
-`Increase casting SPD by 15%
-Increase casting speed by 15% for 1H blunts and for 7.5% for 2H blunts (if has it).`
+  Increase casting SPD by 15%
+  Increase casting speed by 15% for 1H blunts and for 7.5% for 2H blunts (if has it).
 - Back Blow
-`Increase critical rate for N while attacking from behind
-Increase critical rate for 172% while attacking from behind`
+  Increase critical rate for N while attacking from behind
+  Increase critical rate for 172% while attacking from behind
 - Cheap Shot
-`With N% chance can reduce MP consume to 1 wile attacking from Bow weapon.
-Every Bow attack consumes only 1 MP.`
+  With N% chance can reduce MP consume to 1 wile attacking from Bow weapon.
+  Every Bow attack consumes only 1 MP.
 - Crt. Anger
-`Adds to P.Atk N value when attack was critical. Absorbs N HP.
-Absorb [LVL / 12 ^ 2] HP and adds 223 + [LVL / 3 ^ 2] P.Atk when attack is critical.`
+  Adds to P.Atk N value when attack was critical. Absorbs N HP.
+  Absorb [LVL / 12 ^ 2] HP and adds 223 + [LVL / 3 ^ 2] P.Atk when attack is critical.
 - Crt. Bleed
-`With N% can apply bleed on enemy if attack was critical.
-With 70% (100% for blunts) applies bleed on target with power = 10% from P.Atk if attack was critical. Greetings to destroyers and archers! This bleed stacks with another bleed attacks.`
+  With N% can apply bleed on enemy if attack was critical.
+  With 70% (100% for blunts) applies bleed on target with power = 10% from P.Atk if attack was critical. Greetings to destroyers and archers! This bleed stacks with another bleed attacks.
 - Crt. Drain
-`Drain's N HP when attack was critical.
-Drains 40% from critical dealed damage and restores it to HP.`
+  Drain's N HP when attack was critical.
+  Drains 40% from critical dealed damage and restores it to HP.
 - Crt. Poison
-`With N% chance can apply poison on enemy.
-With 70% chance can apply poiosn on target if attack was critical. Power = 66 + 10% M.Atk. This poison stacks with another poisons.`
+  With N% chance can apply poison on enemy.
+  With 70% chance can apply poiosn on target if attack was critical. Power = 66 + 10% M.Atk. This poison stacks with another poisons.
 - Crt. Stun
-`With N% chance can apply Stun status on enmy if attack was critical.
-With N% chance can apply Stun status on enmy if attack was critical. Also applying Stun skill has a 100% chance of success.`
+  With N% chance can apply Stun status on enmy if attack was critical.
+  With N% chance can apply Stun status on enmy if attack was critical. Also applying Stun skill has a 100% chance of success.
 - Empower
-`With N% chance can increase Magic power by N.
-Increase M.Atk by [caster LVL * 2.25]`
+  With N% chance can increase Magic power by N.
+  Increase M.Atk by [caster LVL * 2.25]
 - Evasion
-`Increase Evasion by N.
-Increase Evasion by [LVL / 15 ^ 2]`
+  Increase Evasion by N.
+  Increase Evasion by [LVL / 15 ^ 2]
 - Focus
-`Increase critical rate by N
-Increase critical rate by [56 + (LVL / 8 ^ 2)]`
+  Increase critical rate by N
+  Increase critical rate by [56 + (LVL / 8 ^ 2)]
 - Guidance
-`Increase Accuracy by N
-Increase Accuracy by [LVL / 15 ^ 2]`
+  Increase Accuracy by N
+  Increase Accuracy by [LVL / 15 ^ 2]
 - Haste
-`Increase attack speed by 7%
-Increase attack speed by 15%`
+  Increase attack speed by 7%
+  Increase attack speed by 15%
 - Light
-`Decrease weight of weapon by half
-Decrease weight of weapon by full (weapon weight = 0)`
+  Decrease weight of weapon by half
+  Decrease weight of weapon by full (weapon weight = 0)
 - Towering Blow
-`Increase attack range by N
-Increase polearm attack range by 54 (and with hallberd stack full attack range will be 120)`
+  Increase attack range by N
+  Increase polearm attack range by 54 (and with hallberd stack full attack range will be 120)
 - Magic Damage
-`Give's 30% chance to deal additional magic damage +8 to M.Atk. (Used by Mother Tree Branch only DB info 146%)
-Increase all magical damage done by 12% (works only for directional spells which can deal dmg)`
+  Give's 30% chance to deal additional magic damage +8 to M.Atk. (Used by Mother Tree Branch only DB info 146%)
+  Increase all magical damage done by 12% (works only for directional spells which can deal dmg)
 - Magic debuffs
-  - Paralyze 
-`With N% chance when you casting a bad spell, target can be paralyzed.
-With 8% chance when you casting a bad spell, target can be paralyzed by Anchor spell which Magic Level is equals to your current level.`
-  - Chaos
-`With N% chance when you casting a bad spell, target can be debuffed by Curse Chaos.
-With 33% chance when you casting a bad spell, target can be debuffed by Curse Chaos spell which Magic Level is equals to your current level.`
-  -Weakness
-`With N% chance when you casting a bad spell, target can be debuffed by Curse Weakness.
-With 33% chance when you casting a bad spell, target can be debuffed by Curse Weakness by Anchor spell which Magic Level is equals to your current level.`
-  - Hold
-`With N% chance when you casting a bad spell, target can be debuffed by Dryad Root.
-With 13% chance when you casting a bad spell, target can be debuffed by Dryad Root spell which Magic Level is equals to your current level.`
-  - Poison
-`With N% chance when you casting a bad spell, target can be poisoned.
-With 20% chance when you casting a bad spell, target can be poisoned which Magic Level is equals to your current level.`
-  - Magic Power
-`Increase magic When using magic, increases MP Consumption by 15%, and M. Atk. by N.
-Increase magic power of usable spell by randomly [100-150]%, increases all spells MP Consumption by 50%.`
+  - `Paralyze`
+    With N% chance when you casting a bad spell, target can be paralyzed.
+    With 8% chance when you casting a bad spell, target can be paralyzed by Anchor spell which Magic Level is equals to your current level.
+  - `Chaos`
+    With N% chance when you casting a bad spell, target can be debuffed by Curse Chaos.
+    With 33% chance when you casting a bad spell, target can be debuffed by Curse Chaos spell which Magic Level is equals to your current level.
+  - `Weakness`
+    With N% chance when you casting a bad spell, target can be debuffed by Curse Weakness.
+    With 33% chance when you casting a bad spell, target can be debuffed by Curse Weakness by Anchor spell which Magic Level is equals to your current level.
+  - `Hold`
+    With N% chance when you casting a bad spell, target can be debuffed by Dryad Root.
+    With 13% chance when you casting a bad spell, target can be debuffed by Dryad Root spell which Magic Level is equals to your current level.
+  - `Poison`
+    With N% chance when you casting a bad spell, target can be poisoned.
+    With 20% chance when you casting a bad spell, target can be poisoned which Magic Level is equals to your current level.
+  - `Magic Power`
+    Increase magic When using magic, increases MP Consumption by 15%, and M. Atk. by N.
+    Increase magic power of usable spell by randomly [100-150]%, increases all spells MP Consumption by 50%.
 - Wide Blow
-`Increase angle of attack for polearm to 120*
-Gives ability with full angle attack 360*`
+  Increase angle of attack for polearm to 120*
+  Gives ability with full angle attack 360*
 - Rsk. Haste
-`Increase attack speed for N% when HP lower than 60%
-Increase attack speed by 1% each 1% of loosed HP when your HP is less than 60%.`
+  Increase attack speed for N% when HP lower than 60%
+  Increase attack speed by 1% each 1% of loosed HP when your HP is less than 60%.
 - Rsk. Evasion
-`Increase evasion by N when HP lower than 60%.
-Increase evasion by 1% for each 1% loosed HP when HP is lower than 60%.`
+  Increase evasion by N when HP lower than 60%.
+  Increase evasion by 1% for each 1% loosed HP when HP is lower than 60%.
 - Rsk. Focus
-`Increase critical rate by N when HP lower than 60%.
-Increase critical rate by 1% from max for each 1% loosed HP when HP lower than 60%.`
+  Increase critical rate by N when HP lower than 60%.
+  Increase critical rate by 1% from max for each 1% loosed HP when HP lower than 60%.
 - Miser
-`Decrease SS consume when attacking from bow with N% chance
-All shots from bow consumes only 1 SS.`
+  Decrease SS consume when attacking from bow with N% chance
+  All shots from bow consumes only 1 SS.
 * * *
 Пояснение по поводу Rsk. SA.:
 Например Evasion.
