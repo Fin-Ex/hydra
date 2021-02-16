@@ -54,8 +54,8 @@ public class FinexLoader {
 			GLTController.getInstance().restart();
 		}
 
-		ITEMS_ToJson();
-		ItemHolder.getInstance();
+		//ITEMS_ToJson();
+		//ItemHolder.getInstance();
 	}
 	
 	private void ITEMS_ToJson() {
