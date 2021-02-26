@@ -13,7 +13,12 @@
 <./center>
 <./body><./html>`
 
-# Ссылки на описание обновлений
+# Документация по коду / Source documentation:
+###### Эффекты / Effects
+Создавая класс эффектов в любом package, необходимо навесить на него аннотацию @Effect("EffectName") внутри которой, указывается имя эффекта (которое используется в .xml скилов).
+- Например: `<effect name="EffectName" ...>`
+
+# Update's links
 
 1. [UPD 1.0](https://github.com/finfan222/L2JFinExGithub#upd-10)
 2. [UPD 2.0](https://github.com/finfan222/L2JFinExGithub#upd-20)
@@ -435,6 +440,6 @@ Sonic Absorb - Absorbs charges at the target and restores [absorbed charges * 17
 
 ![](https://i.ibb.co/X38skQX/Screenshot-4.png)
 
-### WARLORD talents start devloping...
+### WARLORD talents start developing...
 * Fix: баги с предъидущими талантами гладиатора
 * Fix: баг с иконками (не хватаело 2-ух)
