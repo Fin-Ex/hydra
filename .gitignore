@@ -1,8 +1,5 @@
-/core/
-/datapack/
-/mmocore/
-/server/
-/target/
+target
+test
 .classpath
 .project
 .settings
@@ -10,3 +7,5 @@
 .idea
 .mf
 .impl
+_retail_login_/.log
+_retail_game_/.log
