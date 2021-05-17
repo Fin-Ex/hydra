@@ -33,6 +33,7 @@
 ###### Sublime Text Editor
 [Full Installation Manual](https://www.tutorialspoint.com/sublime_text/sublime_text_installation.htm)
 
+# Folder description
 When you will clone it or download or else, read next notice:
 1. \_retail_game_* - specified folder for your game server with all needed data
 2. \_retail_login_ - specified folder for your login server with all needed data
@@ -42,7 +43,7 @@ When you will clone it or download or else, read next notice:
 6. libs - folder with all needed compiled libraries (.jar)
 7. mmocore - folder with sources of mmo network
 
-###### Compile with maven: core/mmocore
+# Compile with maven: core/mmocore
 If you dont have installed [IntelliJ IDEA v2020.2.4](https://www.jetbrains.com/idea/), you can skip this step, cause documentation about compile on these two IDE's
 If you have installed on of them, so you need:
 1. Open IDEA
