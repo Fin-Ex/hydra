@@ -3,25 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package net.sf.finex.model.GLT;
+package sf.finex.model.GLT;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
-import net.sf.finex.model.creature.attack.DamageInfo;
-import net.sf.finex.model.movie.ActionData;
-import net.sf.finex.model.movie.MessageData;
-import net.sf.finex.model.movie.MovieManager;
-import net.sf.finex.model.movie.actions.ActAttack;
-import net.sf.finex.model.movie.actions.ActDeleteNPC;
-import net.sf.finex.model.movie.actions.ActMove;
-import net.sf.finex.model.movie.actions.ActRotate;
-import net.sf.finex.model.movie.actions.ActSpawn;
-import net.sf.l2j.commons.concurrent.ThreadPool;
-import net.sf.l2j.commons.random.Rnd;
-import net.sf.l2j.gameserver.model.actor.Player;
-import net.sf.l2j.gameserver.model.actor.instance.GLTNpc;
-import net.sf.l2j.gameserver.model.location.Location;
+import sf.finex.model.creature.attack.DamageInfo;
+import sf.finex.model.movie.ActionData;
+import sf.finex.model.movie.MessageData;
+import sf.finex.model.movie.MovieManager;
+import sf.finex.model.movie.actions.ActAttack;
+import sf.finex.model.movie.actions.ActDeleteNPC;
+import sf.finex.model.movie.actions.ActMove;
+import sf.finex.model.movie.actions.ActRotate;
+import sf.finex.model.movie.actions.ActSpawn;
+import sf.l2j.commons.concurrent.ThreadPool;
+import sf.l2j.commons.random.Rnd;
+import sf.l2j.gameserver.model.actor.Player;
+import sf.l2j.gameserver.model.actor.instance.GLTNpc;
+import sf.l2j.gameserver.model.location.Location;
 
 /**
  *
