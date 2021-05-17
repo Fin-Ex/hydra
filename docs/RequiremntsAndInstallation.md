@@ -20,6 +20,19 @@
 ###### Fin-ex Interlude Sources
 [Full Clone Manual On Desktop](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
 
+# Installing Unnecessary
+###### IntelliJ IDEA
+[Full Installation Manual](https://treehouse.github.io/installation-guides/windows/intellij-idea-win.html)
+
+###### Navicat Premium
+[Full Installation Manual](https://www.navicat.com/manual/online_manual_new/en/navicat/win_manual/#/installation)
+
+###### Notepad++
+[Full Installation Manual](https://npp-user-manual.org/docs/getting-started/)
+
+###### Sublime Text Editor
+[Full Installation Manual](https://www.tutorialspoint.com/sublime_text/sublime_text_installation.htm)
+
 When you will clone it or download or else, read next notice:
 1. \_retail_game_* - specified folder for your game server with all needed data
 2. \_retail_login_ - specified folder for your login server with all needed data
@@ -49,16 +62,3 @@ If you have installed on of them, so you need:
 9. Copy that .jar to a libs folder (if libs folder already has a .jar with old version - delete them)
 10. Do same with mmocore (you can compile it and place to libs folder only once, in next compilations it's not needed)
 11. Congratulations you already have installed a new core on your server
-
-# Installing Unnecessary
-###### IntelliJ IDEA
-[Full Installation Manual](https://treehouse.github.io/installation-guides/windows/intellij-idea-win.html)
-
-###### Navicat Premium
-[Full Installation Manual](https://www.navicat.com/manual/online_manual_new/en/navicat/win_manual/#/installation)
-
-###### Notepad++
-[Full Installation Manual](https://npp-user-manual.org/docs/getting-started/)
-
-###### Sublime Text Editor
-[Full Installation Manual](https://www.tutorialspoint.com/sublime_text/sublime_text_installation.htm)
