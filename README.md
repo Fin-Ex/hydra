@@ -11,7 +11,7 @@ Storage: 8 GB Hard drive space.
 
 ###### Recommended Requirements
 OS: Win Xp 32
-Processor: Intel Core 2 Duo E6300 1.86GHz / AMD Athlon 4050e Dual Core
+Processors: Intel Core 2 Duo E6300 1.86GHz / AMD Athlon 4050e Dual Core
 Graphics: AMD Radeon HD 2600 Pro or NVIDIA GeForce 7600 GS
 System Memory: 2 GB RAM
 Storage: 20 GB Hard drive space
