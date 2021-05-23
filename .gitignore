@@ -3,10 +3,11 @@ test
 .classpath
 .project
 .settings
-.log
 .idea
 .mf
-.impl
+core/core.iml
+mmocore/mmocore.iml
+server.iml
 _retail_login_/.log
 _retail_game_/.log
 .7z
