@@ -3,6 +3,8 @@ package sf.finex.utils;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,28 +15,27 @@ public class RegexpPatterns {
 	
 	@AllArgsConstructor
 	public enum PatternType {
-		BETWEEN_SIGN_BRACKET("(\\(.*\\))"),
-		BETWEEN_SIGN_PERCENT("(\\%.*\\%)"),
-		BETWEEN_SIGN_DOLLAR("(\\$.*\\$)"),
+		BETWEEN_SIGN_BRACKET1("[\\[(](.+?)[\\)]"),
+		BETWEEN_SIGN_BRACKET2("[\\[$](.+?)[\\$]"),
+		BETWEEN_SIGN_PERCENT("[\\[%](.+?)[\\%]"),
+		BETWEEN_SIGN_DOLLAR("[\\[$](.+?)[\\$]"),
 		;
 		
 		@Getter private final String patternExp;
 	}
 	
-	public static String[] compileAndGet(String expression, PatternType... types) {
+	public static List<String> compileAndGet(String expression, PatternType... types) {
 		StringBuilder fullPattern = new StringBuilder();
 		for (PatternType t : types) {
 			fullPattern = fullPattern.append(t.patternExp).append("|");
 		}
 		fullPattern.delete(fullPattern.length() - 1, fullPattern.length());
 		
-		Pattern pattern = Pattern.compile(fullPattern.toString());
-		Matcher match = pattern.matcher(expression);
-		String[] groups = new String[match.groupCount()];
-		int index = 0;
+		Matcher match = Pattern.compile(fullPattern.toString()).matcher(expression);
+		List<String> matches = new ArrayList<>();
 		while (match.find()) {
-			groups[index++] = match.group();
+			matches.add(match.group());
 		}
-		return groups;
+		return matches;
 	}
 }

@@ -4,40 +4,35 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author finfan
  */
 @Slf4j
 @Data
-public class Text implements IGameVariable {
-	private final StringBuilder stringBuilder = new StringBuilder();
+public class Text implements IText {
+	
 	private String string;
 	
 	public Text(String string) {
 		this.string = string;
 	}
 	
+	public Text() {
+		this.string = "";
+	}
+	
 	public Text append(String text) {
-		stringBuilder.append(text);
-		return this;
-	}
-	
-	public Text append(StringBuilder stringBuilder) {
-		stringBuilder.append(stringBuilder.toString());
-		return this;
-	}
-	
-	public Text concat(String text) {
-		this.string.concat(text);
+		this.string = this.string.concat(text);
 		return this;
 	}
 	
 	public Text replace(Object... values) {
-		String[] regexp = RegexpPatterns.compileAndGet(string, RegexpPatterns.PatternType.BETWEEN_SIGN_DOLLAR,
+		List<String> regexp = RegexpPatterns.compileAndGet(string, RegexpPatterns.PatternType.BETWEEN_SIGN_DOLLAR,
 			RegexpPatterns.PatternType.BETWEEN_SIGN_PERCENT);
-		for (int i = 0; i < regexp.length; i++) {
-			string = string.replace(regexp[i], values[i].toString());
+		for (int i = 0; i < regexp.size(); i++) {
+			string = string.replace(regexp.get(i), values[i].toString());
 		}
 		return this;
 	}

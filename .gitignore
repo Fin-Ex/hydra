@@ -6,6 +6,7 @@ test
 .idea
 .mf
 core/core.iml
+core/src/test
 mmocore/mmocore.iml
 server.iml
 _retail_login_/.log

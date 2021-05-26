@@ -13,7 +13,6 @@
 	<modules>
 		<module>core</module>
 		<module>mmocore</module>
-        <module>utils</module>
     </modules>
 
 	<properties>
