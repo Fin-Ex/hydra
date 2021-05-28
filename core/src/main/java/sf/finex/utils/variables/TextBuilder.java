@@ -1,7 +1,9 @@
-package sf.finex.utils;
+package sf.finex.utils.variables;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import sf.finex.utils.IText;
+import sf.finex.utils.RegexpPattern;
 
 import java.util.List;
 
@@ -37,8 +39,8 @@ public class TextBuilder implements IText {
 	}
 	
 	public TextBuilder replace(Object... values) {
-		List<String> regexp = RegexpPatterns.compileAndGet(text.toString(), RegexpPatterns.PatternType.BETWEEN_SIGN_DOLLAR,
-			RegexpPatterns.PatternType.BETWEEN_SIGN_PERCENT);
+		List<String> regexp = RegexpPattern.compileAndGet(text.toString(), RegexpPattern.PatternType.BETWEEN_SIGN_DOLLAR,
+			RegexpPattern.PatternType.BETWEEN_SIGN_PERCENT);
 		String replace = text.toString();
 		for (int i = 0; i < regexp.size(); i++) {
 			replace = replace.replace(regexp.get(i), values[i].toString());

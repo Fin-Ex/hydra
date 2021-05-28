@@ -1,7 +1,9 @@
-package sf.finex.utils;
+package sf.finex.utils.variables;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import sf.finex.utils.IText;
+import sf.finex.utils.RegexpPattern;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,36 +15,45 @@ import java.util.List;
 @Data
 public class Text implements IText {
 	
-	private String string;
+	private String text;
 	
-	public Text(String string) {
-		this.string = string;
+	public Text(String text) {
+		this.text = text;
 	}
 	
 	public Text() {
-		this.string = "";
+		this.text = "";
 	}
 	
 	public Text append(String text) {
-		this.string = this.string.concat(text);
+		this.text = this.text.concat(text);
 		return this;
 	}
 	
 	public Text replace(Object... values) {
-		List<String> regexp = RegexpPatterns.compileAndGet(string, RegexpPatterns.PatternType.BETWEEN_SIGN_DOLLAR,
-			RegexpPatterns.PatternType.BETWEEN_SIGN_PERCENT);
+		List<String> regexp = RegexpPattern.compileAndGet(text, RegexpPattern.PatternType.BETWEEN_SIGN_DOLLAR,
+			RegexpPattern.PatternType.BETWEEN_SIGN_PERCENT);
 		for (int i = 0; i < regexp.size(); i++) {
-			string = string.replace(regexp.get(i), values[i].toString());
+			text = text.replace(regexp.get(i), values[i].toString());
 		}
 		return this;
 	}
 	
-	public Num toNum(String value) {
+	public Num toNum() {
+		Number result = Double.valueOf(text);
+		return new Num(result, result);
+	}
+	
+	public Number toNumber() {
+		return Double.valueOf(text);
+	}
+
+	public static Num toNum(String value) {
 		Number result = Double.valueOf(value);
 		return new Num(result, result);
 	}
 	
-	public Number toNumber(String value) {
+	public static Number toNumber(String value) {
 		return Double.valueOf(value);
 	}
 	

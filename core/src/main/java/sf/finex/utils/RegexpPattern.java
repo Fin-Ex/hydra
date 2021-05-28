@@ -11,12 +11,12 @@ import java.util.regex.Pattern;
 /**
  * @author finfan
  */
-public class RegexpPatterns {
+public class RegexpPattern {
 	
 	@AllArgsConstructor
 	public enum PatternType {
-		BETWEEN_SIGN_BRACKET1("[\\[(](.+?)[\\)]"),
-		BETWEEN_SIGN_BRACKET2("[\\[$](.+?)[\\$]"),
+		BETWEEN_SIGN_BRACKET_CIRCLE("[\\(](.+?)[\\)]"),
+		BETWEEN_SIGN_BRACKET_SQUARE("[\\[](.+?)[\\]]"),
 		BETWEEN_SIGN_PERCENT("[\\[%](.+?)[\\%]"),
 		BETWEEN_SIGN_DOLLAR("[\\[$](.+?)[\\$]"),
 		;
@@ -30,7 +30,6 @@ public class RegexpPatterns {
 			fullPattern = fullPattern.append(t.patternExp).append("|");
 		}
 		fullPattern.delete(fullPattern.length() - 1, fullPattern.length());
-		
 		Matcher match = Pattern.compile(fullPattern.toString()).matcher(expression);
 		List<String> matches = new ArrayList<>();
 		while (match.find()) {

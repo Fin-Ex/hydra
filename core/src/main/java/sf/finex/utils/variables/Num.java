@@ -1,14 +1,15 @@
-package sf.finex.utils;
+package sf.finex.utils.variables;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import sf.finex.utils.IGameVariable;
+import sf.finex.utils.RegexpPattern;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @author finfan
@@ -110,17 +111,15 @@ public class Num extends Number implements IGameVariable {
 	 * @return result of calculating
 	 */
 	public Number calcAndGet(String formula, Number... values) {
-		Pattern pattern = Pattern.compile("([\\(\\)])");
-		Matcher matcher = pattern.matcher(formula);
-		CalcExpression[] expressions = new CalcExpression[matcher.groupCount()];
+		List<String> strings = RegexpPattern.compileAndGet(formula, RegexpPattern.PatternType.BETWEEN_SIGN_BRACKET_CIRCLE);
+		List<CalcExpression> expressions = new ArrayList<>();
 		int index = 0;
-		while (matcher.find()) {
-			String group = matcher.group();
-			String[] split = group.split(" ");
-			expressions[index++] = new CalcExpression(Double.valueOf(split[0]), Double.valueOf(split[1]),
-				CalcExpressionType.valueOf(split[2]));
+		for (String s : strings) {
+			String[] split = s.split(" ");
+			expressions.add(new CalcExpression(values[index++], Double.valueOf(split[index++]),
+				CalcExpressionType.valueOf(split[2])));
 		}
-		return Stream.of(expressions).map(CalcExpression::calc)
+		return expressions.stream().map(CalcExpression::calc)
 			.collect(Collectors.summingDouble(Double::doubleValue));
 	}
 	
