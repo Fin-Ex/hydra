@@ -5,10 +5,7 @@
  */
 package sf.finex.model.items;
 
-import java.util.ArrayList;
-import java.util.List;
 import lombok.Data;
-import sf.finex.ImgString;
 import sf.finex.enums.EGradeType;
 import sf.finex.model.items.enums.EItemRestriction;
 import sf.finex.model.items.enums.EItemSlot;
@@ -17,6 +14,7 @@ import sf.finex.model.items.enums.EItemType2;
 import sf.finex.model.items.parts.PartDataArmor;
 import sf.finex.model.items.parts.PartDataJewel;
 import sf.finex.model.items.parts.PartDataWeapon;
+import sf.finex.utils.ImgString;
 import sf.l2j.gameserver.model.item.kind.Armor;
 import sf.l2j.gameserver.model.item.kind.EtcItem;
 import sf.l2j.gameserver.model.item.kind.Item;
@@ -25,6 +23,9 @@ import sf.l2j.gameserver.model.item.kind.Weapon;
 import sf.l2j.gameserver.model.item.type.EtcItemType;
 import sf.l2j.gameserver.model.item.type.ItemType;
 import sf.l2j.gameserver.model.item.type.MaterialType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *

@@ -13,15 +13,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import java.lang.reflect.Type;
-import java.util.Map;
-import sf.finex.Classes;
+import sf.finex.utils.Classes;
 import sf.l2j.gameserver.skills.conditions.Condition;
 import sf.l2j.gameserver.skills.conditions.ConditionLogic;
 import sf.l2j.gameserver.skills.conditions.ConditionLogicAnd;
 import sf.l2j.gameserver.skills.conditions.ConditionLogicNot;
 import sf.l2j.gameserver.skills.conditions.ConditionLogicOr;
 import sf.l2j.gameserver.skills.conditions.EmptyCondition;
+
+import java.lang.reflect.Type;
+import java.util.Map;
 
 /**
  *

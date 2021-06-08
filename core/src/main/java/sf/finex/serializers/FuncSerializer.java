@@ -12,9 +12,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import java.lang.reflect.Type;
-import sf.finex.Classes;
+import sf.finex.utils.Classes;
 import sf.l2j.gameserver.skills.basefuncs.Func;
+
+import java.lang.reflect.Type;
 
 /**
  *

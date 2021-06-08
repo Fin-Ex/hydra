@@ -1,11 +1,8 @@
 package sf.l2j.gameserver.data;
 
-import java.io.File;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.HashMap;
-import java.util.Map;
-import sf.finex.Classes;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import sf.finex.utils.Classes;
 import sf.l2j.Config;
 import sf.l2j.L2DatabaseFactory;
 import sf.l2j.gameserver.idfactory.IdFactory;
@@ -23,8 +20,12 @@ import sf.l2j.gameserver.model.item.kind.Jewel;
 import sf.l2j.gameserver.model.item.kind.Weapon;
 import sf.l2j.gameserver.model.item.type.EtcItemType;
 import sf.l2j.gameserver.skills.DocumentItem;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ItemTable {
 

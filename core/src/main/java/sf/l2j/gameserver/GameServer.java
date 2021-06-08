@@ -1,16 +1,21 @@
 package sf.l2j.gameserver;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.UncheckedIOException;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import com.google.inject.Guice;
+import com.google.inject.Stage;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import org.reflections.Reflections;
+import org.reflections.util.ClasspathHelper;
+import org.reflections.util.ConfigurationBuilder;
 import sf.finex.FinexLoader;
+import sf.finex.GameServerContext;
+import sf.finex.GlobalContext;
 import sf.finex.data.tables.DyeTable;
 import sf.finex.data.tables.QuestDataTable;
 import sf.finex.events.EventBus;
+import sf.finex.inject.InjectedModule;
+import sf.finex.inject.LoaderModule;
+import sf.finex.utils.InjectorUtils;
 import sf.l2j.Config;
 import sf.l2j.L2DatabaseFactory;
 import sf.l2j.commons.concurrent.ThreadPool;
@@ -53,7 +58,26 @@ import sf.l2j.gameserver.geoengine.GeoEngine;
 import sf.l2j.gameserver.handler.AdminCommandHandler;
 import sf.l2j.gameserver.handler.HandlerTable;
 import sf.l2j.gameserver.idfactory.IdFactory;
-import sf.l2j.gameserver.instancemanager.*;
+import sf.l2j.gameserver.instancemanager.AuctionManager;
+import sf.l2j.gameserver.instancemanager.AutoSpawnManager;
+import sf.l2j.gameserver.instancemanager.BoatManager;
+import sf.l2j.gameserver.instancemanager.CastleManager;
+import sf.l2j.gameserver.instancemanager.CastleManorManager;
+import sf.l2j.gameserver.instancemanager.ClanHallManager;
+import sf.l2j.gameserver.instancemanager.CoupleManager;
+import sf.l2j.gameserver.instancemanager.CursedWeaponsManager;
+import sf.l2j.gameserver.instancemanager.DayNightSpawnManager;
+import sf.l2j.gameserver.instancemanager.DimensionalRiftManager;
+import sf.l2j.gameserver.instancemanager.FishingChampionshipManager;
+import sf.l2j.gameserver.instancemanager.FourSepulchersManager;
+import sf.l2j.gameserver.instancemanager.GrandBossManager;
+import sf.l2j.gameserver.instancemanager.MovieMakerManager;
+import sf.l2j.gameserver.instancemanager.PetitionManager;
+import sf.l2j.gameserver.instancemanager.RaidBossPointsManager;
+import sf.l2j.gameserver.instancemanager.RaidBossSpawnManager;
+import sf.l2j.gameserver.instancemanager.SevenSigns;
+import sf.l2j.gameserver.instancemanager.SevenSignsFestival;
+import sf.l2j.gameserver.instancemanager.ZoneManager;
 import sf.l2j.gameserver.instancemanager.games.MonsterRace;
 import sf.l2j.gameserver.model.World;
 import sf.l2j.gameserver.model.entity.Hero;
@@ -81,9 +105,14 @@ import sf.l2j.gameserver.taskmanager.WaterTaskManager;
 import sf.l2j.gameserver.xmlfactory.XMLDocumentFactory;
 import sf.l2j.util.DeadLockDetector;
 import sf.l2j.util.IPv4Filter;
-import org.reflections.Reflections;
-import org.reflections.util.ClasspathHelper;
-import org.reflections.util.ConfigurationBuilder;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.HashMap;
+import java.util.Map;
 
 @Slf4j
 public class GameServer {
@@ -98,12 +127,27 @@ public class GameServer {
 	private SelectorThread<L2GameClient> selectorThread;
 
 	public static void main(String[] args) throws Exception {
-		instance = new GameServer();
+		GlobalContext.reflections = reflections;
 
+		Map<String, String> arguments = new HashMap<>();
+		for (String arg : args) {
+			if (arg.contains("=")) {
+				String[] pair = arg.split("=", 1);
+				arguments.put(pair[0], pair[1]);
+			} else {
+				arguments.put(arg, arg);
+			}
+		}
+		GlobalContext.arguments = arguments;
+		GlobalContext.injector = Guice.createInjector(Stage.PRODUCTION, InjectorUtils.collectModules(LoaderModule.class));
+
+		instance = new GameServer();
 		instance.load();
 	}
 
 	public GameServer() {
+		GameServerContext context = GlobalContext.injector.getInstance(GameServerContext.class);
+		context.injector = InjectorUtils.createChildInjector(InjectedModule.class, GlobalContext.injector);
 	}
 
 	private void load() {

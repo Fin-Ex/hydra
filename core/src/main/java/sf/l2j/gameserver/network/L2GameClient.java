@@ -1,15 +1,11 @@
 package sf.l2j.gameserver.network;
 
-import java.net.InetAddress;
-import java.nio.ByteBuffer;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Future;
-import java.util.concurrent.RejectedExecutionException;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.locks.ReentrantLock;
+import lombok.Getter;
+import lombok.Setter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import sf.finex.model.GameObject;
+import sf.finex.model.component.player.NetworkComponent;
 import sf.l2j.Config;
 import sf.l2j.L2DatabaseFactory;
 import sf.l2j.commons.concurrent.ThreadPool;
@@ -26,8 +22,17 @@ import sf.l2j.gameserver.model.pledge.Clan;
 import sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import sf.l2j.gameserver.network.serverpackets.L2GameServerPacket;
 import sf.l2j.gameserver.network.serverpackets.ServerClose;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.net.InetAddress;
+import java.nio.ByteBuffer;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Future;
+import java.util.concurrent.RejectedExecutionException;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Represents a client connected on Game Server
@@ -71,6 +76,9 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 
 	private final ArrayBlockingQueue<ReceivablePacket<L2GameClient>> _packetQueue;
 	private final ReentrantLock _queueLock = new ReentrantLock();
+
+	@Getter @Setter
+	private GameObject gameObject;
 
 	public L2GameClient(MMOConnection<L2GameClient> con) {
 		super(con);
@@ -647,6 +655,12 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	 * @param packet The packet to execute.
 	 */
 	public void execute(ReceivablePacket<L2GameClient> packet) {
+		if (gameObject != null) {
+			NetworkComponent component = gameObject.getComponent(NetworkComponent.class);
+			component.addAction(packet);
+			return;
+		}
+
 		if (getStats().countFloods()) {
 			_log.error("Client " + toString() + " - Disconnected, too many floods:" + getStats().longFloods + " long and " + getStats().shortFloods + " short.");
 			closeNow();
