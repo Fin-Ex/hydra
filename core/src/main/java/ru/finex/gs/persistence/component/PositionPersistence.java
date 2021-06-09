@@ -3,9 +3,12 @@ package ru.finex.gs.persistence.component;
 import ru.finex.gs.model.entity.PositionEntity;
 import ru.finex.gs.service.persistence.PersistenceService;
 
+import javax.inject.Singleton;
+
 /**
  * @author m0nster.mind
  */
+@Singleton
 public class PositionPersistence implements PersistenceService<PositionEntity> {
     @Override
     public PositionEntity persist(PositionEntity entity) {

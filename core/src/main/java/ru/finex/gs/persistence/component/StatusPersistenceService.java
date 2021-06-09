@@ -3,9 +3,12 @@ package ru.finex.gs.persistence.component;
 import ru.finex.gs.model.entity.StatusEntity;
 import ru.finex.gs.service.persistence.PersistenceService;
 
+import javax.inject.Singleton;
+
 /**
  * @author m0nster.mind
  */
+@Singleton
 public class StatusPersistenceService implements PersistenceService<StatusEntity> {
     @Override
     public StatusEntity persist(StatusEntity entity) {

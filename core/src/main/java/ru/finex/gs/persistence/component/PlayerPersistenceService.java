@@ -7,9 +7,12 @@ import ru.finex.gs.model.Sex;
 import ru.finex.gs.model.entity.PlayerEntity;
 import ru.finex.gs.service.persistence.PersistenceService;
 
+import javax.inject.Singleton;
+
 /**
  * @author m0nster.mind
  */
+@Singleton
 public class PlayerPersistenceService implements PersistenceService<PlayerEntity> {
 
     @Override

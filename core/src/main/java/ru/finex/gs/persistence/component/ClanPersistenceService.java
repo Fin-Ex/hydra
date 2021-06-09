@@ -4,10 +4,12 @@ import ru.finex.gs.model.entity.ClanEntity;
 import ru.finex.gs.service.persistence.PersistenceService;
 
 import java.util.Collections;
+import javax.inject.Singleton;
 
 /**
  * @author m0nster.mind
  */
+@Singleton
 public class ClanPersistenceService implements PersistenceService<ClanEntity> {
 
     @Override
