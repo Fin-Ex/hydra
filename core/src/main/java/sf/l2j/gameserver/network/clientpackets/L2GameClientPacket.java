@@ -1,15 +1,7 @@
 package sf.l2j.gameserver.network.clientpackets;
 
-import org.slf4j.LoggerFactory;
-
-import java.nio.BufferUnderflowException;
-
-import org.slf4j.Logger;
-
+import lombok.extern.slf4j.Slf4j;
 import sf.l2j.commons.mmocore.ReceivablePacket;
-
-import sf.l2j.Config;
-import sf.l2j.gameserver.model.actor.Player;
 import sf.l2j.gameserver.network.L2GameClient;
 import sf.l2j.gameserver.network.serverpackets.L2GameServerPacket;
 
@@ -18,26 +10,16 @@ import sf.l2j.gameserver.network.serverpackets.L2GameServerPacket;
  *
  * @author KenM
  */
+@Slf4j
 public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> {
-
-	protected static final Logger _log = LoggerFactory.getLogger(L2GameClientPacket.class.getName());
 
 	@Override
 	protected boolean read() {
-		if (Config.PACKET_HANDLER_DEBUG) {
-			_log.info(getType());
-		}
-
 		try {
 			readImpl();
 			return true;
 		} catch (Exception e) {
-			_log.error("Client: " + getClient().toString() + " - Failed reading: " + getType() + " ; " + e, e);
-
-			if (e instanceof BufferUnderflowException) // only one allowed per client per minute
-			{
-				getClient().onBufferUnderflow();
-			}
+			log.error("Client: " + getClient().toString() + " - Failed reading: " + getType() + " ; " + e, e);
 		}
 		return false;
 	}
@@ -48,23 +30,8 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> 
 	public void run() {
 		try {
 			runImpl();
-
-			// Depending of the packet send, removes spawn protection
-			if (triggersOnActionRequest()) {
-				final Player actor = getClient().getActiveChar();
-				if (actor != null && actor.isSpawnProtected()) {
-					actor.onActionRequest();
-					if (Config.DEBUG) {
-						_log.info("Spawn protection for player " + actor.getName() + " removed by packet: " + getType());
-					}
-				}
-			}
 		} catch (Throwable t) {
-			_log.error("Client: " + getClient().toString() + " - Failed reading: " + getType() + " ; " + t, t);
-
-			if (this instanceof EnterWorld) {
-				getClient().closeNow();
-			}
+			log.error("Client: " + getClient().toString() + " - Failed reading: " + getType() + " ; " + t, t);
 		}
 	}
 
@@ -81,13 +48,4 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> 
 		return "[C] " + getClass().getSimpleName();
 	}
 
-	/**
-	 * Overriden with true value on some packets that should disable spawn
-	 * protection
-	 *
-	 * @return
-	 */
-	protected boolean triggersOnActionRequest() {
-		return true;
-	}
 }

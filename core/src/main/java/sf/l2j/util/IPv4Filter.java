@@ -1,18 +1,19 @@
 package sf.l2j.util;
 
+import sf.l2j.commons.mmocore.IAcceptFilter;
+
 import java.net.InetAddress;
 import java.nio.channels.SocketChannel;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
-import sf.l2j.commons.mmocore.IAcceptFilter;
-
 /**
  * Formatted Forsaiken's IPv4 filter [DrHouse]
  *
  * @author Forsaiken
  */
+@Deprecated
 public class IPv4Filter implements IAcceptFilter, Runnable {
 
 	private final HashMap<Integer, Flood> _ipFloodMap;

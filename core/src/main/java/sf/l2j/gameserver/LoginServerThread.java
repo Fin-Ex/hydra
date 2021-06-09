@@ -1,33 +1,13 @@
 package sf.l2j.gameserver;
 
-import org.slf4j.LoggerFactory;
-
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.math.BigInteger;
-import java.net.Socket;
-import java.net.UnknownHostException;
-import java.security.GeneralSecurityException;
-import java.security.KeyFactory;
-import java.security.interfaces.RSAPublicKey;
-import java.security.spec.RSAKeyGenParameterSpec;
-import java.security.spec.RSAPublicKeySpec;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import org.slf4j.Logger;
-
-import sf.l2j.commons.random.Rnd;
-
+import org.slf4j.LoggerFactory;
+import ru.finex.gs.model.AuthFailReason;
+import ru.finex.gs.service.OutcomePacketBuilderService;
 import sf.l2j.Config;
-import sf.l2j.gameserver.model.World;
-import sf.l2j.gameserver.model.actor.Player;
+import sf.l2j.commons.random.Rnd;
+import sf.l2j.gameserver.network.GameClientState;
 import sf.l2j.gameserver.network.L2GameClient;
-import sf.l2j.gameserver.network.L2GameClient.GameClientState;
 import sf.l2j.gameserver.network.gameserverpackets.AuthRequest;
 import sf.l2j.gameserver.network.gameserverpackets.BlowFishKey;
 import sf.l2j.gameserver.network.gameserverpackets.ChangeAccessLevel;
@@ -41,11 +21,27 @@ import sf.l2j.gameserver.network.loginserverpackets.InitLS;
 import sf.l2j.gameserver.network.loginserverpackets.KickPlayer;
 import sf.l2j.gameserver.network.loginserverpackets.LoginServerFail;
 import sf.l2j.gameserver.network.loginserverpackets.PlayerAuthResponse;
-import sf.l2j.gameserver.network.serverpackets.AuthLoginFail;
-import sf.l2j.gameserver.network.serverpackets.AuthLoginFail.FailReason;
-import sf.l2j.gameserver.network.serverpackets.CharSelectInfo;
 import sf.l2j.loginserver.crypt.NewCrypt;
 
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.math.BigInteger;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.security.GeneralSecurityException;
+import java.security.KeyFactory;
+import java.security.interfaces.RSAPublicKey;
+import java.security.spec.RSAKeyGenParameterSpec;
+import java.security.spec.RSAPublicKeySpec;
+import java.util.Collections;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+@Singleton
 public class LoginServerThread extends Thread {
 
 	protected static final Logger _log = LoggerFactory.getLogger(LoginServerThread.class.getName());
@@ -71,18 +67,15 @@ public class LoginServerThread extends Thread {
 	private int _maxPlayers;
 	private int _status;
 
-	protected LoginServerThread() {
+	@Inject
+	private OutcomePacketBuilderService packetBuilderService;
+
+	public LoginServerThread() {
 		super("LoginServerThread");
 
-		_hexId = Config.HEX_ID;
-		if (_hexId == null) {
-			_requestId = Config.REQUEST_ID;
-			_hexId = generateHex(16);
-		} else {
-			_requestId = Config.SERVER_ID;
-		}
-
-		_maxPlayers = Config.MAXIMUM_ONLINE_USERS;
+		_requestId = 1;
+		_hexId = generateHex(16);
+		_maxPlayers = 3000;
 	}
 
 	@Override
@@ -162,7 +155,7 @@ public class LoginServerThread extends Thread {
 							// now, only accept paket with the new encryption
 							_blowfish = new NewCrypt(_blowfishKey);
 
-							sendPacket(new AuthRequest(_requestId, Config.ACCEPT_ALTERNATE_ID, _hexId, Config.HOSTNAME, Config.PORT_GAME, Config.RESERVE_HOST_ON_LOGIN, _maxPlayers));
+							sendPacket(new AuthRequest(_requestId, true, _hexId, Config.HOSTNAME, 7777, Config.RESERVE_HOST_ON_LOGIN, _maxPlayers));
 							break;
 
 						case 0x01:
@@ -177,27 +170,17 @@ public class LoginServerThread extends Thread {
 							_serverId = aresp.getServerId();
 							_serverName = aresp.getServerName();
 
-							Config.saveHexid(_serverId, new BigInteger(_hexId).toString(16));
 							_log.info("Registered as server: [" + _serverId + "] " + _serverName);
 
 							final ServerStatus ss = new ServerStatus();
-							ss.addAttribute(ServerStatus.STATUS, (Config.SERVER_GMONLY) ? ServerStatus.STATUS_GM_ONLY : ServerStatus.STATUS_AUTO);
-							ss.addAttribute(ServerStatus.CLOCK, Config.SERVER_LIST_CLOCK);
-							ss.addAttribute(ServerStatus.BRACKETS, Config.SERVER_LIST_BRACKET);
-							ss.addAttribute(ServerStatus.AGE_LIMIT, Config.SERVER_LIST_AGE);
-							ss.addAttribute(ServerStatus.TEST_SERVER, Config.SERVER_LIST_TESTSERVER);
-							ss.addAttribute(ServerStatus.PVP_SERVER, Config.SERVER_LIST_PVPSERVER);
+							ss.addAttribute(ServerStatus.STATUS, /*(Config.SERVER_GMONLY) ? ServerStatus.STATUS_GM_ONLY :*/ ServerStatus.STATUS_AUTO);
+							ss.addAttribute(ServerStatus.CLOCK, false);
+							ss.addAttribute(ServerStatus.BRACKETS, false);
+							ss.addAttribute(ServerStatus.AGE_LIMIT, false);
+							ss.addAttribute(ServerStatus.TEST_SERVER, false);
+							ss.addAttribute(ServerStatus.PVP_SERVER, false);
 							sendPacket(ss);
-
-							final Collection<Player> players = World.getInstance().getPlayers();
-							if (!players.isEmpty()) {
-								final List<String> playerList = new ArrayList<>();
-								for (Player player : players) {
-									playerList.add(player.getAccountName());
-								}
-
-								sendPacket(new PlayerInGame(playerList));
-							}
+							sendPacket(new PlayerInGame(Collections.emptyList()));
 							break;
 
 						case 0x03:
@@ -209,9 +192,9 @@ public class LoginServerThread extends Thread {
 									sendPacket(new PlayerInGame(par.getAccount()));
 
 									client.setState(GameClientState.AUTHED);
-									client.sendPacket(new CharSelectInfo(par.getAccount(), client.getSessionId().playOkID1));
+									client.sendPacket(packetBuilderService.charSelectInfo(par.getAccount(), client.getSessionId().playOkID1));
 								} else {
-									client.sendPacket(new AuthLoginFail(FailReason.SYSTEM_ERROR_LOGIN_LATER));
+									client.sendPacket(packetBuilderService.authLoginFail(AuthFailReason.SYSTEM_ERROR_LOGIN_LATER));
 									client.closeNow();
 								}
 							}
@@ -263,7 +246,7 @@ public class LoginServerThread extends Thread {
 		final L2GameClient existingClient = _clients.putIfAbsent(account, client);
 		if (existingClient == null) {
 			try {
-				sendPacket(new PlayerAuthRequest(client.getAccountName(), client.getSessionId()));
+				sendPacket(new PlayerAuthRequest(client.getLogin(), client.getSessionId()));
 			} catch (IOException e) {
 				_log.warn("Error while sending player auth request.");
 			}
@@ -344,14 +327,5 @@ public class LoginServerThread extends Thread {
 	public void setServerStatus(int status) {
 		sendServerStatus(ServerStatus.STATUS, status);
 		_status = status;
-	}
-
-	public static LoginServerThread getInstance() {
-		return SingletonHolder.INSTANCE;
-	}
-
-	private static class SingletonHolder {
-
-		protected static final LoginServerThread INSTANCE = new LoginServerThread();
 	}
 }

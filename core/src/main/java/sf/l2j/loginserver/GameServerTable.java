@@ -1,6 +1,14 @@
 package sf.l2j.loginserver;
 
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import sf.l2j.L2DatabaseFactory;
+import sf.l2j.commons.data.xml.XMLDocumentFactory;
+import sf.l2j.commons.random.Rnd;
+import sf.l2j.loginserver.model.GameServerInfo;
 
 import java.io.File;
 import java.math.BigInteger;
@@ -14,17 +22,6 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import org.slf4j.Logger;
-
-import sf.l2j.commons.random.Rnd;
-
-import sf.l2j.L2DatabaseFactory;
-import sf.l2j.gameserver.xmlfactory.XMLDocumentFactory;
-import sf.l2j.loginserver.model.GameServerInfo;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 public class GameServerTable {
 

@@ -1,15 +1,10 @@
 package sf.l2j.gameserver.model.base;
 
-import java.util.EnumSet;
-import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import sf.finex.model.classes.AbstractClassComponent;
-import sf.finex.model.classes.Bladedancer;
-import sf.finex.model.classes.Gladiator;
-import sf.finex.model.classes.Swordsinger;
-import sf.finex.model.classes.Warlord;
-import sf.finex.model.classes.Warsmith;
-import sf.l2j.gameserver.model.actor.Player;
+import ru.finex.gs.model.ClassType;
+import ru.finex.gs.model.PlayerRace;
+
+import java.util.EnumSet;
 
 /**
  * This class defines all classes (ex : human fighter, darkFighter...) that a
@@ -22,65 +17,66 @@ import sf.l2j.gameserver.model.actor.Player;
  * </ul>
  */
 @Slf4j
+@Deprecated
 public enum ClassId {
-	HumanFighter(ClassRace.HUMAN, ClassType.FIGHTER, 0, "Human Fighter", null),
-	Warrior(ClassRace.HUMAN, ClassType.FIGHTER, 1, "Warrior", HumanFighter),
-	Gladiator(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Gladiator", Warrior, Gladiator.class),
-	Warlord(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Warlord", Warrior, Warlord.class),
-	Knight(ClassRace.HUMAN, ClassType.FIGHTER, 1, "Human Knight", HumanFighter),
-	Paladin(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Paladin", Knight),
-	DarkAvenger(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Dark Avenger", Knight),
-	Rogue(ClassRace.HUMAN, ClassType.FIGHTER, 1, "Rogue", HumanFighter),
-	TreasureHunter(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Treasure Hunter", Rogue),
-	Hawkeye(ClassRace.HUMAN, ClassType.FIGHTER, 2, "Hawkeye", Rogue),
-	HymanMystic(ClassRace.HUMAN, ClassType.MYSTIC, 0, "Human Mystic", null),
-	HumanWizard(ClassRace.HUMAN, ClassType.MYSTIC, 1, "Human Wizard", HymanMystic),
-	Sorcerer(ClassRace.HUMAN, ClassType.MYSTIC, 2, "Sorcerer", HumanWizard),
-	Necromancer(ClassRace.HUMAN, ClassType.MYSTIC, 2, "Necromancer", HumanWizard),
-	Warlock(ClassRace.HUMAN, ClassType.MYSTIC, 2, "Warlock", HumanWizard),
-	Cleric(ClassRace.HUMAN, ClassType.PRIEST, 1, "Cleric", HymanMystic),
-	Bishop(ClassRace.HUMAN, ClassType.PRIEST, 2, "Bishop", Cleric),
-	Prophet(ClassRace.HUMAN, ClassType.PRIEST, 2, "Prophet", Cleric),
-	ElvenFighter(ClassRace.ELF, ClassType.FIGHTER, 0, "Elven Fighter", null),
-	ElvenKnight(ClassRace.ELF, ClassType.FIGHTER, 1, "Elven Knight", ElvenFighter),
-	TempleKnight(ClassRace.ELF, ClassType.FIGHTER, 2, "Temple Knight", ElvenKnight),
-	Swordsinger(ClassRace.ELF, ClassType.FIGHTER, 2, "Sword Singer", ElvenKnight, Swordsinger.class),
-	ElvenScout(ClassRace.ELF, ClassType.FIGHTER, 1, "Elven Scout", ElvenFighter),
-	PlainsWalker(ClassRace.ELF, ClassType.FIGHTER, 2, "Plains Walker", ElvenScout),
-	SilverRanger(ClassRace.ELF, ClassType.FIGHTER, 2, "Silver Ranger", ElvenScout),
-	ElvenMystic(ClassRace.ELF, ClassType.MYSTIC, 0, "Elven Mystic", null),
-	ElvenWizard(ClassRace.ELF, ClassType.MYSTIC, 1, "Elven Wizard", ElvenMystic),
-	Spellsinger(ClassRace.ELF, ClassType.MYSTIC, 2, "Spellsinger", ElvenWizard),
-	ElementalSummoner(ClassRace.ELF, ClassType.MYSTIC, 2, "Elemental Summoner", ElvenWizard),
-	ElvenOracle(ClassRace.ELF, ClassType.PRIEST, 1, "Elven Oracle", ElvenMystic),
-	ElvenElder(ClassRace.ELF, ClassType.PRIEST, 2, "Elven Elder", ElvenOracle),
-	DarkFighter(ClassRace.DARK_ELF, ClassType.FIGHTER, 0, "Dark Fighter", null),
-	PalusKnight(ClassRace.DARK_ELF, ClassType.FIGHTER, 1, "Palus Knight", DarkFighter),
-	ShillienKnight(ClassRace.DARK_ELF, ClassType.FIGHTER, 2, "Shillien Knight", PalusKnight),
-	Bladedancer(ClassRace.DARK_ELF, ClassType.FIGHTER, 2, "Bladedancer", PalusKnight, Bladedancer.class),
-	Assassin(ClassRace.DARK_ELF, ClassType.FIGHTER, 1, "Assassin", DarkFighter),
-	AbyssWalker(ClassRace.DARK_ELF, ClassType.FIGHTER, 2, "Abyss Walker", Assassin),
-	PhantomRanger(ClassRace.DARK_ELF, ClassType.FIGHTER, 2, "Phantom Ranger", Assassin),
-	DarkMystic(ClassRace.DARK_ELF, ClassType.MYSTIC, 0, "Dark Mystic", null),
-	DarkWizard(ClassRace.DARK_ELF, ClassType.MYSTIC, 1, "Dark Wizard", DarkMystic),
-	Spellhowler(ClassRace.DARK_ELF, ClassType.MYSTIC, 2, "Spellhowler", DarkWizard),
-	PhantomSummoner(ClassRace.DARK_ELF, ClassType.MYSTIC, 2, "Phantom Summoner", DarkWizard),
-	ShillienOracle(ClassRace.DARK_ELF, ClassType.PRIEST, 1, "Shillien Oracle", DarkMystic),
-	ShillienElder(ClassRace.DARK_ELF, ClassType.PRIEST, 2, "Shillien Elder", ShillienOracle),
-	OrcFighter(ClassRace.ORC, ClassType.FIGHTER, 0, "Orc Fighter", null),
-	OrcRaider(ClassRace.ORC, ClassType.FIGHTER, 1, "Orc Raider", OrcFighter),
-	Destroyer(ClassRace.ORC, ClassType.FIGHTER, 2, "Destroyer", OrcRaider),
-	Monk(ClassRace.ORC, ClassType.FIGHTER, 1, "Monk", OrcFighter),
-	Tyrant(ClassRace.ORC, ClassType.FIGHTER, 2, "Tyrant", Monk),
-	OrcMystic(ClassRace.ORC, ClassType.MYSTIC, 0, "Orc Mystic", null),
-	OrcShaman(ClassRace.ORC, ClassType.MYSTIC, 1, "Orc Shaman", OrcMystic),
-	Overlord(ClassRace.ORC, ClassType.MYSTIC, 2, "Overlord", OrcShaman),
-	Warcryer(ClassRace.ORC, ClassType.MYSTIC, 2, "Warcryer", OrcShaman),
-	DwarvenFighter(ClassRace.DWARF, ClassType.FIGHTER, 0, "Dwarven Fighter", null),
-	Scavenger(ClassRace.DWARF, ClassType.FIGHTER, 1, "Scavenger", DwarvenFighter),
-	BountyHunter(ClassRace.DWARF, ClassType.FIGHTER, 2, "Bounty Hunter", Scavenger),
-	Artisan(ClassRace.DWARF, ClassType.FIGHTER, 1, "Artisan", DwarvenFighter, Warsmith.class),
-	Warsmith(ClassRace.DWARF, ClassType.FIGHTER, 2, "Warsmith", Artisan, Warsmith.class),
+	HumanFighter(PlayerRace.HUMAN, ClassType.FIGHTER, 0, "Human Fighter", null),
+	Warrior(PlayerRace.HUMAN, ClassType.FIGHTER, 1, "Warrior", HumanFighter),
+	Gladiator(PlayerRace.HUMAN, ClassType.FIGHTER, 2, "Gladiator", Warrior),
+	Warlord(PlayerRace.HUMAN, ClassType.FIGHTER, 2, "Warlord", Warrior),
+	Knight(PlayerRace.HUMAN, ClassType.FIGHTER, 1, "Human Knight", HumanFighter),
+	Paladin(PlayerRace.HUMAN, ClassType.FIGHTER, 2, "Paladin", Knight),
+	DarkAvenger(PlayerRace.HUMAN, ClassType.FIGHTER, 2, "Dark Avenger", Knight),
+	Rogue(PlayerRace.HUMAN, ClassType.FIGHTER, 1, "Rogue", HumanFighter),
+	TreasureHunter(PlayerRace.HUMAN, ClassType.FIGHTER, 2, "Treasure Hunter", Rogue),
+	Hawkeye(PlayerRace.HUMAN, ClassType.FIGHTER, 2, "Hawkeye", Rogue),
+	HymanMystic(PlayerRace.HUMAN, ClassType.MYSTIC, 0, "Human Mystic", null),
+	HumanWizard(PlayerRace.HUMAN, ClassType.MYSTIC, 1, "Human Wizard", HymanMystic),
+	Sorcerer(PlayerRace.HUMAN, ClassType.MYSTIC, 2, "Sorcerer", HumanWizard),
+	Necromancer(PlayerRace.HUMAN, ClassType.MYSTIC, 2, "Necromancer", HumanWizard),
+	Warlock(PlayerRace.HUMAN, ClassType.MYSTIC, 2, "Warlock", HumanWizard),
+	Cleric(PlayerRace.HUMAN, ClassType.PRIEST, 1, "Cleric", HymanMystic),
+	Bishop(PlayerRace.HUMAN, ClassType.PRIEST, 2, "Bishop", Cleric),
+	Prophet(PlayerRace.HUMAN, ClassType.PRIEST, 2, "Prophet", Cleric),
+	ElvenFighter(PlayerRace.ELF, ClassType.FIGHTER, 0, "Elven Fighter", null),
+	ElvenKnight(PlayerRace.ELF, ClassType.FIGHTER, 1, "Elven Knight", ElvenFighter),
+	TempleKnight(PlayerRace.ELF, ClassType.FIGHTER, 2, "Temple Knight", ElvenKnight),
+	Swordsinger(PlayerRace.ELF, ClassType.FIGHTER, 2, "Sword Singer", ElvenKnight),
+	ElvenScout(PlayerRace.ELF, ClassType.FIGHTER, 1, "Elven Scout", ElvenFighter),
+	PlainsWalker(PlayerRace.ELF, ClassType.FIGHTER, 2, "Plains Walker", ElvenScout),
+	SilverRanger(PlayerRace.ELF, ClassType.FIGHTER, 2, "Silver Ranger", ElvenScout),
+	ElvenMystic(PlayerRace.ELF, ClassType.MYSTIC, 0, "Elven Mystic", null),
+	ElvenWizard(PlayerRace.ELF, ClassType.MYSTIC, 1, "Elven Wizard", ElvenMystic),
+	Spellsinger(PlayerRace.ELF, ClassType.MYSTIC, 2, "Spellsinger", ElvenWizard),
+	ElementalSummoner(PlayerRace.ELF, ClassType.MYSTIC, 2, "Elemental Summoner", ElvenWizard),
+	ElvenOracle(PlayerRace.ELF, ClassType.PRIEST, 1, "Elven Oracle", ElvenMystic),
+	ElvenElder(PlayerRace.ELF, ClassType.PRIEST, 2, "Elven Elder", ElvenOracle),
+	DarkFighter(PlayerRace.DARK_ELF, ClassType.FIGHTER, 0, "Dark Fighter", null),
+	PalusKnight(PlayerRace.DARK_ELF, ClassType.FIGHTER, 1, "Palus Knight", DarkFighter),
+	ShillienKnight(PlayerRace.DARK_ELF, ClassType.FIGHTER, 2, "Shillien Knight", PalusKnight),
+	Bladedancer(PlayerRace.DARK_ELF, ClassType.FIGHTER, 2, "Bladedancer", PalusKnight),
+	Assassin(PlayerRace.DARK_ELF, ClassType.FIGHTER, 1, "Assassin", DarkFighter),
+	AbyssWalker(PlayerRace.DARK_ELF, ClassType.FIGHTER, 2, "Abyss Walker", Assassin),
+	PhantomRanger(PlayerRace.DARK_ELF, ClassType.FIGHTER, 2, "Phantom Ranger", Assassin),
+	DarkMystic(PlayerRace.DARK_ELF, ClassType.MYSTIC, 0, "Dark Mystic", null),
+	DarkWizard(PlayerRace.DARK_ELF, ClassType.MYSTIC, 1, "Dark Wizard", DarkMystic),
+	Spellhowler(PlayerRace.DARK_ELF, ClassType.MYSTIC, 2, "Spellhowler", DarkWizard),
+	PhantomSummoner(PlayerRace.DARK_ELF, ClassType.MYSTIC, 2, "Phantom Summoner", DarkWizard),
+	ShillienOracle(PlayerRace.DARK_ELF, ClassType.PRIEST, 1, "Shillien Oracle", DarkMystic),
+	ShillienElder(PlayerRace.DARK_ELF, ClassType.PRIEST, 2, "Shillien Elder", ShillienOracle),
+	OrcFighter(PlayerRace.ORC, ClassType.FIGHTER, 0, "Orc Fighter", null),
+	OrcRaider(PlayerRace.ORC, ClassType.FIGHTER, 1, "Orc Raider", OrcFighter),
+	Destroyer(PlayerRace.ORC, ClassType.FIGHTER, 2, "Destroyer", OrcRaider),
+	Monk(PlayerRace.ORC, ClassType.FIGHTER, 1, "Monk", OrcFighter),
+	Tyrant(PlayerRace.ORC, ClassType.FIGHTER, 2, "Tyrant", Monk),
+	OrcMystic(PlayerRace.ORC, ClassType.MYSTIC, 0, "Orc Mystic", null),
+	OrcShaman(PlayerRace.ORC, ClassType.MYSTIC, 1, "Orc Shaman", OrcMystic),
+	Overlord(PlayerRace.ORC, ClassType.MYSTIC, 2, "Overlord", OrcShaman),
+	Warcryer(PlayerRace.ORC, ClassType.MYSTIC, 2, "Warcryer", OrcShaman),
+	DwarvenFighter(PlayerRace.DWARF, ClassType.FIGHTER, 0, "Dwarven Fighter", null),
+	Scavenger(PlayerRace.DWARF, ClassType.FIGHTER, 1, "Scavenger", DwarvenFighter),
+	BountyHunter(PlayerRace.DWARF, ClassType.FIGHTER, 2, "Bounty Hunter", Scavenger),
+	Artisan(PlayerRace.DWARF, ClassType.FIGHTER, 1, "Artisan", DwarvenFighter),
+	Warsmith(PlayerRace.DWARF, ClassType.FIGHTER, 2, "Warsmith", Artisan),
 	DUMMY_1(null, null, -1, "dummy 1", null),
 	DUMMY_2(null, null, -1, "dummy 2", null),
 	DUMMY_3(null, null, -1, "dummy 3", null),
@@ -111,37 +107,37 @@ public enum ClassId {
 	DUMMY_28(null, null, -1, "dummy 28", null),
 	DUMMY_29(null, null, -1, "dummy 29", null),
 	DUMMY_30(null, null, -1, "dummy 30", null),
-	Duelist(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Duelist", Gladiator, Gladiator.class),
-	Dreadnought(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Dreadnought", Warlord, Warlord.class),
-	PhoenixKnight(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Phoenix Knight", Paladin),
-	HellKnight(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Hell Knight", DarkAvenger),
-	Saggitarius(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Sagittarius", Hawkeye),
-	Adventurer(ClassRace.HUMAN, ClassType.FIGHTER, 3, "Adventurer", TreasureHunter),
-	Archmage(ClassRace.HUMAN, ClassType.MYSTIC, 3, "Archmage", Sorcerer),
-	Soultaker(ClassRace.HUMAN, ClassType.MYSTIC, 3, "Soultaker", Necromancer),
-	ArcanaLord(ClassRace.HUMAN, ClassType.MYSTIC, 3, "Arcana Lord", Warlock),
-	Cardinal(ClassRace.HUMAN, ClassType.PRIEST, 3, "Cardinal", Bishop),
-	Hierophant(ClassRace.HUMAN, ClassType.PRIEST, 3, "Hierophant", Prophet),
-	EvasTemplar(ClassRace.ELF, ClassType.FIGHTER, 3, "Eva's Templar", TempleKnight),
-	SwordMuse(ClassRace.ELF, ClassType.FIGHTER, 3, "Sword Muse", Swordsinger, Swordsinger.class),
-	WindRider(ClassRace.ELF, ClassType.FIGHTER, 3, "Wind Rider", PlainsWalker),
-	MoonlightSentinel(ClassRace.ELF, ClassType.FIGHTER, 3, "Moonlight Sentinel", SilverRanger),
-	MysticMuse(ClassRace.ELF, ClassType.MYSTIC, 3, "Mystic Muse", Spellsinger),
-	ElementalMaster(ClassRace.ELF, ClassType.MYSTIC, 3, "Elemental Master", ElementalSummoner),
-	EvasSaint(ClassRace.ELF, ClassType.PRIEST, 3, "Eva's Saint", ElvenElder),
-	ShillienTemplar(ClassRace.DARK_ELF, ClassType.FIGHTER, 3, "Shillien Templar", ShillienKnight),
-	SpectralDancer(ClassRace.DARK_ELF, ClassType.FIGHTER, 3, "Spectral Dancer", Bladedancer, Bladedancer.class),
-	GhostHunter(ClassRace.DARK_ELF, ClassType.FIGHTER, 3, "Ghost Hunter", AbyssWalker),
-	GhostSentinel(ClassRace.DARK_ELF, ClassType.FIGHTER, 3, "Ghost Sentinel", PhantomRanger),
-	StormScreamer(ClassRace.DARK_ELF, ClassType.MYSTIC, 3, "Storm Screamer", Spellhowler),
-	SpectralMaster(ClassRace.DARK_ELF, ClassType.MYSTIC, 3, "Spectral Master", PhantomSummoner),
-	ShillienSaint(ClassRace.DARK_ELF, ClassType.PRIEST, 3, "Shillien Saint", ShillienElder),
-	Titan(ClassRace.ORC, ClassType.FIGHTER, 3, "Titan", Destroyer),
-	GrandGhavatari(ClassRace.ORC, ClassType.FIGHTER, 3, "Grand Khavatari", Tyrant),
-	Dominator(ClassRace.ORC, ClassType.MYSTIC, 3, "Dominator", Overlord),
-	Doomcryer(ClassRace.ORC, ClassType.MYSTIC, 3, "Doom Cryer", Warcryer),
-	FortuneSeeker(ClassRace.DWARF, ClassType.FIGHTER, 3, "Fortune Seeker", BountyHunter),
-	Maestro(ClassRace.DWARF, ClassType.FIGHTER, 3, "Maestro", Warsmith, Warsmith.class);
+	Duelist(PlayerRace.HUMAN, ClassType.FIGHTER, 3, "Duelist", Gladiator),
+	Dreadnought(PlayerRace.HUMAN, ClassType.FIGHTER, 3, "Dreadnought", Warlord),
+	PhoenixKnight(PlayerRace.HUMAN, ClassType.FIGHTER, 3, "Phoenix Knight", Paladin),
+	HellKnight(PlayerRace.HUMAN, ClassType.FIGHTER, 3, "Hell Knight", DarkAvenger),
+	Saggitarius(PlayerRace.HUMAN, ClassType.FIGHTER, 3, "Sagittarius", Hawkeye),
+	Adventurer(PlayerRace.HUMAN, ClassType.FIGHTER, 3, "Adventurer", TreasureHunter),
+	Archmage(PlayerRace.HUMAN, ClassType.MYSTIC, 3, "Archmage", Sorcerer),
+	Soultaker(PlayerRace.HUMAN, ClassType.MYSTIC, 3, "Soultaker", Necromancer),
+	ArcanaLord(PlayerRace.HUMAN, ClassType.MYSTIC, 3, "Arcana Lord", Warlock),
+	Cardinal(PlayerRace.HUMAN, ClassType.PRIEST, 3, "Cardinal", Bishop),
+	Hierophant(PlayerRace.HUMAN, ClassType.PRIEST, 3, "Hierophant", Prophet),
+	EvasTemplar(PlayerRace.ELF, ClassType.FIGHTER, 3, "Eva's Templar", TempleKnight),
+	SwordMuse(PlayerRace.ELF, ClassType.FIGHTER, 3, "Sword Muse", Swordsinger),
+	WindRider(PlayerRace.ELF, ClassType.FIGHTER, 3, "Wind Rider", PlainsWalker),
+	MoonlightSentinel(PlayerRace.ELF, ClassType.FIGHTER, 3, "Moonlight Sentinel", SilverRanger),
+	MysticMuse(PlayerRace.ELF, ClassType.MYSTIC, 3, "Mystic Muse", Spellsinger),
+	ElementalMaster(PlayerRace.ELF, ClassType.MYSTIC, 3, "Elemental Master", ElementalSummoner),
+	EvasSaint(PlayerRace.ELF, ClassType.PRIEST, 3, "Eva's Saint", ElvenElder),
+	ShillienTemplar(PlayerRace.DARK_ELF, ClassType.FIGHTER, 3, "Shillien Templar", ShillienKnight),
+	SpectralDancer(PlayerRace.DARK_ELF, ClassType.FIGHTER, 3, "Spectral Dancer", Bladedancer),
+	GhostHunter(PlayerRace.DARK_ELF, ClassType.FIGHTER, 3, "Ghost Hunter", AbyssWalker),
+	GhostSentinel(PlayerRace.DARK_ELF, ClassType.FIGHTER, 3, "Ghost Sentinel", PhantomRanger),
+	StormScreamer(PlayerRace.DARK_ELF, ClassType.MYSTIC, 3, "Storm Screamer", Spellhowler),
+	SpectralMaster(PlayerRace.DARK_ELF, ClassType.MYSTIC, 3, "Spectral Master", PhantomSummoner),
+	ShillienSaint(PlayerRace.DARK_ELF, ClassType.PRIEST, 3, "Shillien Saint", ShillienElder),
+	Titan(PlayerRace.ORC, ClassType.FIGHTER, 3, "Titan", Destroyer),
+	GrandGhavatari(PlayerRace.ORC, ClassType.FIGHTER, 3, "Grand Khavatari", Tyrant),
+	Dominator(PlayerRace.ORC, ClassType.MYSTIC, 3, "Dominator", Overlord),
+	Doomcryer(PlayerRace.ORC, ClassType.MYSTIC, 3, "Doom Cryer", Warcryer),
+	FortuneSeeker(PlayerRace.DWARF, ClassType.FIGHTER, 3, "Fortune Seeker", BountyHunter),
+	Maestro(PlayerRace.DWARF, ClassType.FIGHTER, 3, "Maestro", Warsmith);
 
 	public static final ClassId[] VALUES = values();
 
@@ -153,7 +149,7 @@ public enum ClassId {
 	/**
 	 * The ClassRace object of the class
 	 */
-	private final ClassRace _race;
+	private final PlayerRace _race;
 
 	/**
 	 * The ClassType of the class
@@ -180,36 +176,13 @@ public enum ClassId {
 	 */
 	private EnumSet<ClassId> _subclasses;
 
-	@Getter
-	private Class<? extends AbstractClassComponent> classComponent;
-
-	/**
-	 * Implicit constructor.
-	 *
-	 * @param race : Class race.
-	 * @param type : Class type.
-	 * @param level : Class level.
-	 * @param name : Class name.
-	 * @param parent : Class parent.
-	 */
-	private ClassId(ClassRace race, ClassType type, int level, String name, ClassId parent, Class<? extends AbstractClassComponent> classComponent) {
+	private ClassId(PlayerRace race, ClassType type, int level, String name, ClassId parent) {
 		_id = ordinal();
 		_race = race;
 		_type = type;
 		_level = level;
 		_name = name;
 		_parent = parent;
-		this.classComponent = classComponent;
-	}
-
-	private ClassId(ClassRace race, ClassType type, int level, String name, ClassId parent) {
-		_id = ordinal();
-		_race = race;
-		_type = type;
-		_level = level;
-		_name = name;
-		_parent = parent;
-		this.classComponent = null;
 	}
 
 	/**
@@ -222,11 +195,11 @@ public enum ClassId {
 	}
 
 	/**
-	 * Returns the {@link ClassRace} of the {@link ClassId}.
+	 * Returns the {@link PlayerRace} of the {@link ClassId}.
 	 *
-	 * @return {@link ClassRace} : The race.
+	 * @return {@link PlayerRace} : The race.
 	 */
-	public final ClassRace getRace() {
+	public final PlayerRace getRace() {
 		return _race;
 	}
 
@@ -309,7 +282,7 @@ public enum ClassId {
 			}
 
 			// Elves may not sub Dark Elves and vice versa
-			if ((_race == ClassRace.ELF && classId._race == ClassRace.DARK_ELF) || (_race == ClassRace.DARK_ELF && classId._race == ClassRace.ELF)) {
+			if ((_race == PlayerRace.ELF && classId._race == PlayerRace.DARK_ELF) || (_race == PlayerRace.DARK_ELF && classId._race == PlayerRace.ELF)) {
 				continue;
 			}
 
@@ -354,35 +327,6 @@ public enum ClassId {
 				_subclasses.removeAll(EnumSet.of(Sorcerer, Spellsinger, Spellhowler));
 				break;
 		}
-	}
-
-	/**
-	 * Returns set of subclasses available for given {@link Player}.<br>
-	 * 1) If the race of your main class is Elf or Dark Elf, you may not select
-	 * each class as a subclass to the other class.<br>
-	 * 2) You may not select Overlord and Warsmith class as a subclass.<br>
-	 * 3) You may not select a similar class as the subclass. The occupations
-	 * classified as similar classes are as follows:<br>
-	 * Paladin, Dark Avenger, Temple Knight and Shillien Knight Treasure Hunter,
-	 * Plainswalker and Abyss Walker Hawkeye, Silver Ranger and Phantom Ranger
-	 * Warlock, Elemental Summoner and Phantom Summoner Sorcerer, Spellsinger
-	 * and Spellhowler
-	 *
-	 * @param player : The {@link Player} to make checks on.
-	 * @return EnumSet<ClassId> : Available subclasses for given player.
-	 */
-	public static final EnumSet<ClassId> getAvailableSubclasses(Player player) {
-		ClassId classId = VALUES[player.getBaseClass()];
-		if (classId._level < 2) {
-			return null;
-		}
-
-		// handle 3rd level class
-		if (classId._level == 3) {
-			classId = classId._parent;
-		}
-
-		return EnumSet.copyOf(classId._subclasses);
 	}
 
 	static {

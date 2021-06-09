@@ -1,10 +1,7 @@
 package sf.l2j.loginserver.network.serverpackets;
 
-import org.slf4j.LoggerFactory;
-
 import org.slf4j.Logger;
-
-import sf.l2j.Config;
+import org.slf4j.LoggerFactory;
 
 /**
  * Fromat: d d: response
@@ -18,9 +15,6 @@ public final class GGAuth extends L2LoginServerPacket {
 
 	public GGAuth(int response) {
 		_response = response;
-		if (Config.DEBUG) {
-			_log.warn("Reason Hex: " + (Integer.toHexString(response)));
-		}
 	}
 
 	@Override
