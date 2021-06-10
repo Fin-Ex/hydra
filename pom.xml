@@ -3,24 +3,27 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>interlude</groupId>
-	<artifactId>server</artifactId>
+	<groupId>ru.finex</groupId>
+	<artifactId>finex-l2</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
 
-	<name>interlude-server</name>
-
-	<modules>
-		<module>core</module>
-		<module>mmocore</module>
-		<module>l2j-commons</module>
-	</modules>
+	<name>FinEx Lineage 2 Server</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
-		<major.minor.version>1.0</major.minor.version>
 	</properties>
+
+	<modules>
+		<module>core</module>
+		<module>mmocore</module>
+		<module>l2j-commons</module>
+        <module>network-interface-facade</module>
+        <module>proto-interlude746</module>
+        <module>authserver</module>
+		<module>worldserver</module>
+	</modules>
 
 </project>

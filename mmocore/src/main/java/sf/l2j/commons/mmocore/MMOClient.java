@@ -1,28 +1,23 @@
 package sf.l2j.commons.mmocore;
 
-import java.nio.ByteBuffer;
+import ru.finex.nif.NetworkClient;
 
 /**
  * @author KenM
- * @param <T>
  */
-public abstract class MMOClient<T extends MMOConnection<?>> {
+public abstract class MMOClient implements NetworkClient {
 
-	private final T _con;
+	private final MMOConnection _con;
 
-	public MMOClient(final T con) {
+	public MMOClient(final MMOConnection con) {
 		_con = con;
 	}
 
-	public T getConnection() {
+	@Override
+	public MMOConnection getConnection() {
 		return _con;
 	}
 
-	public abstract boolean decrypt(final ByteBuffer buf, final int size);
-
-	public abstract boolean encrypt(final ByteBuffer buf, final int size);
-
 	protected abstract void onDisconnection();
-
 	protected abstract void onForcedDisconnection();
 }

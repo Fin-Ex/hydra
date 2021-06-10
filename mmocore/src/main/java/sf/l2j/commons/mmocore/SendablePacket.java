@@ -1,10 +1,12 @@
 package sf.l2j.commons.mmocore;
 
+import ru.finex.nif.OutcomePacket;
+
 /**
  * @author KenM
  * @param <T>
  */
-public abstract class SendablePacket<T extends MMOClient<?>> extends AbstractPacket<T> {
+public abstract class SendablePacket<T extends MMOClient> extends AbstractPacket<T> implements OutcomePacket {
 
 	protected final void putInt(final int value) {
 		_buf.putInt(value);

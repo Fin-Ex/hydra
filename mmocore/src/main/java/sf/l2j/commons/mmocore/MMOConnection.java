@@ -1,5 +1,8 @@
 package sf.l2j.commons.mmocore;
 
+import ru.finex.nif.NetworkConnection;
+import ru.finex.nif.OutcomePacket;
+
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -14,9 +17,9 @@ import java.nio.channels.WritableByteChannel;
  * @author KenM
  * @param <T>
  */
-public class MMOConnection<T extends MMOClient<?>> {
+public class MMOConnection<T extends MMOClient> implements NetworkConnection {
 
-	private final SelectorThread<T> _selectorThread;
+	private final SelectorThreadImpl<T> _selectorThread;
 	private final Socket _socket;
 	private final InetAddress _address;
 
@@ -37,7 +40,7 @@ public class MMOConnection<T extends MMOClient<?>> {
 
 	private T _client;
 
-	public MMOConnection(final SelectorThread<T> selectorThread, final Socket socket, final SelectionKey key, boolean tcpNoDelay) {
+	public MMOConnection(final SelectorThreadImpl<T> selectorThread, final Socket socket, final SelectionKey key, boolean tcpNoDelay) {
 		_selectorThread = selectorThread;
 		_socket = socket;
 		_address = socket.getInetAddress();
@@ -61,11 +64,14 @@ public class MMOConnection<T extends MMOClient<?>> {
 		_client = client;
 	}
 
+	@Override
 	public final T getClient() {
 		return _client;
 	}
 
-	public final void sendPacket(final SendablePacket<T> sp) {
+	@Override
+	public final void sendPacket(OutcomePacket packet) {
+		SendablePacket<T> sp = (SendablePacket<T>) packet;
 		sp._client = _client;
 
 		if (_pendingClose) {
@@ -93,6 +99,7 @@ public class MMOConnection<T extends MMOClient<?>> {
 		return _address;
 	}
 
+	@Override
 	public final int getPort() {
 		return _port;
 	}
@@ -164,7 +171,8 @@ public class MMOConnection<T extends MMOClient<?>> {
 		return _sendQueue;
 	}
 
-	public final void close(final SendablePacket<T> sp) {
+	@Override
+	public final void close(OutcomePacket packet) {
 		if (_pendingClose) {
 			return;
 		}
@@ -173,7 +181,7 @@ public class MMOConnection<T extends MMOClient<?>> {
 			if (!_pendingClose) {
 				_pendingClose = true;
 				_sendQueue.clear();
-				_sendQueue.addLast(sp);
+				_sendQueue.addLast((SendablePacket<T>) packet);
 			}
 		}
 
