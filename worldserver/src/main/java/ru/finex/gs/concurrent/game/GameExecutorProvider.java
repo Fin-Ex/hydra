@@ -3,6 +3,8 @@ package ru.finex.gs.concurrent.game;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.inject.Singleton;
 
@@ -12,16 +14,21 @@ import javax.inject.Singleton;
 @Singleton
 public class GameExecutorProvider implements Provider<ScheduledExecutorService> {
 
-    private ScheduledExecutorService executorService;
+    private GameExecutor executorService;
 
-    public GameExecutorProvider() {
+    @Inject
+    public GameExecutorProvider(GameExecutorConfiguration conf) {
         executorService = new GameExecutor(
-            4,
+            conf.getMinimalThreads(),
             new ThreadFactoryBuilder()
                 .setNameFormat("GameThread-%d")
                 .setThreadFactory(GameThread::new)
                 .build()
         );
+
+        executorService.setKeepAliveTime(conf.getKeepAlive(), TimeUnit.MILLISECONDS);
+        executorService.setMaximumPoolSize(conf.getMaximalThreads());
+        executorService.prestartCoreThread();
     }
 
     @Override

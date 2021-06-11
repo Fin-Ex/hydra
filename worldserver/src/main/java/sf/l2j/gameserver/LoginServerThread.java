@@ -3,8 +3,10 @@ package sf.l2j.gameserver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.finex.core.events.EventBus;
+import ru.finex.gs.auth.AuthServerConfiguration;
 import ru.finex.gs.model.Client;
 import ru.finex.gs.model.event.ClientAuth;
+import ru.finex.gs.network.NetworkConfiguration;
 import sf.l2j.commons.crypt.NewCrypt;
 import sf.l2j.commons.random.Rnd;
 import sf.l2j.gameserver.network.gameserverpackets.AuthRequest;
@@ -69,6 +71,12 @@ public class LoginServerThread extends Thread {
 	@Inject @Named("Network")
 	private EventBus networkEventBus;
 
+	@Inject
+	private AuthServerConfiguration conf;
+
+	@Inject
+	private NetworkConfiguration networkConf;
+
 	public LoginServerThread() {
 		super("LoginServerThread");
 
@@ -82,9 +90,9 @@ public class LoginServerThread extends Thread {
 		while (!isInterrupted()) {
 			try {
 				// Connection
-				_log.info("Connecting to login on 127.0.0.1:9014");
+				_log.info("Connecting to login on {}:{}", conf.getHostname(), conf.getPort());
 
-				_loginSocket = new Socket("127.0.0.1", 9014);
+				_loginSocket = new Socket(conf.getHostname(), conf.getPort());
 				_in = _loginSocket.getInputStream();
 				_out = new BufferedOutputStream(_loginSocket.getOutputStream());
 
@@ -154,7 +162,7 @@ public class LoginServerThread extends Thread {
 							// now, only accept paket with the new encryption
 							_blowfish = new NewCrypt(_blowfishKey);
 
-							sendPacket(new AuthRequest(_requestId, true, _hexId, "127.0.0.1", 7777, false, _maxPlayers));
+							sendPacket(new AuthRequest(_requestId, true, _hexId, networkConf.getHostname(), networkConf.getPort(), false, _maxPlayers));
 							break;
 
 						case 0x01:

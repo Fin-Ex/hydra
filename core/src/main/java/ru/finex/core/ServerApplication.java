@@ -2,6 +2,7 @@ package ru.finex.core;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.google.inject.Module;
 import com.google.inject.Stage;
 import org.reflections.Reflections;
 import org.reflections.util.ClasspathHelper;
@@ -10,7 +11,9 @@ import ru.finex.core.inject.InjectedModule;
 import ru.finex.core.inject.LoaderModule;
 import ru.finex.core.utils.InjectorUtils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -24,7 +27,10 @@ public class ServerApplication {
         GlobalContext.rootPackage = modulePackage;
         GlobalContext.reflections = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forJavaClassPath()));
 
-        Injector globalInjector = Guice.createInjector(Stage.PRODUCTION, InjectorUtils.collectModules(modulePackage, LoaderModule.class));
+        List<Module> modules = new ArrayList<>();
+        modules.addAll(InjectorUtils.collectModules(ServerApplication.class.getPackageName(), LoaderModule.class));
+        modules.addAll(InjectorUtils.collectModules(modulePackage, LoaderModule.class));
+        Injector globalInjector = Guice.createInjector(Stage.PRODUCTION, modules);
         GlobalContext.injector = globalInjector;
 
         ServerContext serverContext = globalInjector.getInstance(ServerContext.class);

@@ -1,7 +1,5 @@
 package ru.finex.gs.concurrent.service;
 
-import lombok.Getter;
-import org.hibernate.Session;
 import ru.finex.core.concurrent.RunnableServerTask;
 
 /**
@@ -9,12 +7,8 @@ import ru.finex.core.concurrent.RunnableServerTask;
  */
 public class RunnableServiceTask extends RunnableServerTask implements ServiceTask {
 
-    @Getter
-    private final Session dbSession;
-
-    public RunnableServiceTask(Runnable runnable, Session session) {
+    public RunnableServiceTask(Runnable runnable) {
         super(runnable);
-        this.dbSession = session;
     }
 
 }

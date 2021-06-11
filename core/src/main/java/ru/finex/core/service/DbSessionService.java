@@ -8,5 +8,6 @@ import org.hibernate.Session;
 public interface DbSessionService {
 
     Session openSession();
+    Session getSession();
 
 }

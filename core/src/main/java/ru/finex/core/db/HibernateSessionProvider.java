@@ -19,6 +19,6 @@ public class HibernateSessionProvider implements Provider<Session> {
 
     @Override
     public Session get() {
-        return sessionService.openSession();
+        return sessionService.getSession();
     }
 }

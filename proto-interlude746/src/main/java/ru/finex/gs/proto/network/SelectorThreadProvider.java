@@ -1,6 +1,7 @@
 package ru.finex.gs.proto.network;
 
 import lombok.extern.slf4j.Slf4j;
+import ru.finex.gs.network.NetworkConfiguration;
 import ru.finex.nif.SelectorThread;
 import sf.l2j.commons.mmocore.IPacketHandler;
 import sf.l2j.commons.mmocore.SelectorConfig;
@@ -8,6 +9,8 @@ import sf.l2j.commons.mmocore.SelectorThreadImpl;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import java.net.InetAddress;
+import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.inject.Singleton;
 
@@ -20,7 +23,9 @@ public class SelectorThreadProvider implements Provider<SelectorThread> {
 
     private final SelectorThreadImpl<L2GameClient> selectorThread;
 
+    @Inject
     public SelectorThreadProvider(
+        NetworkConfiguration networkConfiguration,
         Provider<NetworkClientFactory> clientFactory,
         Provider<PacketExecutor> packetExecutor,
         Provider<IPacketHandler> packetHandler) {
@@ -37,7 +42,7 @@ public class SelectorThreadProvider implements Provider<SelectorThread> {
         }
 
         try {
-            selectorThread.openServerSocket(null, 7777);
+            selectorThread.openServerSocket(InetAddress.getByName(networkConfiguration.getHostname()), networkConfiguration.getPort());
         } catch (IOException e) {
             log.error("FATAL: Failed to open server socket.", e);
             System.exit(1);
