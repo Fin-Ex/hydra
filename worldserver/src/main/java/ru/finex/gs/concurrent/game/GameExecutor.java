@@ -27,7 +27,7 @@ public class GameExecutor extends ScheduledThreadPoolExecutor {
     @Override
     protected void beforeExecute(Thread t, Runnable r) {
         GameThread thread = (GameThread) t;
-        GameTask task = (GameTask) r;
+        RunnableGameTask task = (RunnableGameTask) r;
         thread.setClient(task.getClient());
         thread.setGameObject(task.getGameObject());
     }

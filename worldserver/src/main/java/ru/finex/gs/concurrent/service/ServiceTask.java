@@ -1,14 +1,12 @@
 package ru.finex.gs.concurrent.service;
 
-import ru.finex.gs.concurrent.ServerTask;
+import org.hibernate.Session;
 
 /**
  * @author m0nster.mind
  */
-public class ServiceTask extends ServerTask {
+public interface ServiceTask {
 
-    public ServiceTask(Runnable runnable) {
-        super(runnable);
-    }
+    Session getDbSession();
 
 }

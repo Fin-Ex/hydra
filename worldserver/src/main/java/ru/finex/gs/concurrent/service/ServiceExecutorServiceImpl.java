@@ -21,18 +21,28 @@ public class ServiceExecutorServiceImpl implements ServiceExecutorService {
     private ScheduledExecutorService executorService;
 
     @Override
-    public Future<?> execute(ServiceTask task) {
+    public Future<?> execute(RunnableServiceTask task) {
         return executorService.submit(task);
     }
 
     @Override
-    public Future<?> execute(ServiceTask task, long delay, TimeUnit delayUnit) {
+    public Future<?> execute(RunnableServiceTask task, long delay, TimeUnit delayUnit) {
         return executorService.schedule(task, delay, delayUnit);
     }
 
     @Override
-    public ScheduledFuture<?> execute(ServiceTask task, long delay, long period, TimeUnit timeUnit) {
+    public ScheduledFuture<?> execute(RunnableServiceTask task, long delay, long period, TimeUnit timeUnit) {
         return executorService.scheduleAtFixedRate(task, delay, period, timeUnit);
+    }
+
+    @Override
+    public <R> Future<R> execute(CallableServiceTask<?> task) {
+        return (Future<R>) executorService.submit(task);
+    }
+
+    @Override
+    public <R> Future<R> execute(CallableServiceTask<?> task, long delay, TimeUnit delayUnit) {
+        return (Future<R>) executorService.schedule(task, delay, delayUnit);
     }
 
 }

@@ -21,18 +21,28 @@ public class GameExecutorServiceImpl implements GameExecutorService {
     private ScheduledExecutorService executorService;
 
     @Override
-    public Future<?> execute(GameTask task) {
+    public Future<?> execute(RunnableGameTask task) {
         return executorService.submit(task);
     }
 
     @Override
-    public Future<?> execute(GameTask task, long delay, TimeUnit delayUnit) {
+    public Future<?> execute(RunnableGameTask task, long delay, TimeUnit delayUnit) {
         return executorService.schedule(task, delay, delayUnit);
     }
 
     @Override
-    public ScheduledFuture<?> execute(GameTask task, long delay, long period, TimeUnit timeUnit) {
+    public ScheduledFuture<?> execute(RunnableGameTask task, long delay, long period, TimeUnit timeUnit) {
         return executorService.scheduleAtFixedRate(task, delay, period, timeUnit);
+    }
+
+    @Override
+    public <R> Future<R> execute(CallableGameTask<?> task) {
+        return (Future<R>) executorService.submit(task);
+    }
+
+    @Override
+    public <R> Future<R> execute(CallableGameTask<?> task, long delay, TimeUnit delayUnit) {
+        return (Future<R>) executorService.schedule(task, delay, delayUnit);
     }
 
 }
