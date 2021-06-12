@@ -3,9 +3,9 @@ package ru.finex.core.db;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.service.ServiceRegistry;
 
-import java.io.File;
-import java.net.MalformedURLException;
 import java.net.URL;
+import javax.inject.Inject;
+import javax.inject.Named;
 import javax.inject.Provider;
 
 /**
@@ -15,23 +15,11 @@ public class ServiceRegistryProvider implements Provider<ServiceRegistry> {
 
     private final ServiceRegistry serviceRegistry;
 
-    public ServiceRegistryProvider() {
+    @Inject
+    public ServiceRegistryProvider(@Named("HibernateConfig") URL hibernateConfig) {
         serviceRegistry = new StandardServiceRegistryBuilder()
-            .configure(getConfigURL())
+            .configure(hibernateConfig)
             .build();
-    }
-
-    private URL getConfigURL() {
-        File file = new File("resources/hibernate.xml");
-        if (file.exists()) {
-            try {
-                return file.toURI().toURL();
-            } catch (MalformedURLException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
-        return getClass().getClassLoader().getResource("hibernate.xml");
     }
 
     @Override
