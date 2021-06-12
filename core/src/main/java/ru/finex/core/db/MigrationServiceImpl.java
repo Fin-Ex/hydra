@@ -6,17 +6,19 @@ import org.flywaydb.core.api.output.MigrateResult;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
 import org.hibernate.service.spi.Configurable;
+import ru.finex.core.EnvConfigurator;
 import ru.finex.core.service.MigrationService;
 import ru.finex.core.utils.Classes;
 
-import java.io.Closeable;
-import java.io.IOException;
-import java.io.UncheckedIOException;
-import java.net.URL;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 import javax.sql.DataSource;
+import java.io.Closeable;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.net.URL;
+import java.util.Properties;
 
 /**
  * @author m0nster.mind
@@ -29,12 +31,14 @@ public class MigrationServiceImpl implements MigrationService {
     private final DataSource dataSource;
 
     @Inject
-    public MigrationServiceImpl(@Named("HibernateConfig") URL hibernateConfig) {
+    public MigrationServiceImpl(@Named("HibernateConfig") URL hibernateConfig, EnvConfigurator configurator) {
         Configuration configuration = new Configuration().configure(hibernateConfig);
-        Class<?> providerClass = Classes.getClass(configuration.getProperties().getProperty("hibernate.connection.provider_class"));
+        Properties properties = configuration.getProperties();
+        configurator.configure(properties);
+        Class<?> providerClass = Classes.getClass(properties.getProperty("hibernate.connection.provider_class"));
         ConnectionProvider connectionProvider = (ConnectionProvider) Classes.createInstance(providerClass);
         if (connectionProvider instanceof Configurable) {
-            ((Configurable) connectionProvider).configure(configuration.getProperties());
+            ((Configurable) connectionProvider).configure(properties);
         }
 
         dataSource = connectionProvider.unwrap(DataSource.class);

@@ -98,7 +98,7 @@ public class CharSelectInfo extends L2GameServerPacket {
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_FACE));
 			 */
-			for (int i = 0; i < 16 * 2; i++) {
+			for (int i = 0; i < 17 * 2; i++) {
 				writeD(0);
 			}
 
@@ -109,7 +109,7 @@ public class CharSelectInfo extends L2GameServerPacket {
 			writeF(avatar.getStatus().getMaxHp());
 			writeF(avatar.getStatus().getMaxMp());
 
-			writeD(-1); // secs to delete avatar
+			writeD(0x00); // secs to delete avatar
 			writeD(ClassId.HumanFighter.ordinal());
 			writeD(0x01); // selected avatar or not
 			writeC(0); // weapon enchant

@@ -5,14 +5,9 @@ import ru.finex.gs.model.AuthFailReason;
 import ru.finex.gs.model.GameObject;
 import ru.finex.gs.model.component.base.CoordinateComponent;
 import ru.finex.gs.model.component.base.StatusComponent;
-import ru.finex.gs.model.component.player.ClanComponent;
-import ru.finex.gs.model.component.player.ClientComponent;
-import ru.finex.gs.model.component.player.PlayerComponent;
+import ru.finex.gs.model.component.player.*;
 import ru.finex.gs.model.dto.SelectedAvatarDto;
-import ru.finex.gs.proto.interlude.outcome.AuthLoginFail;
-import ru.finex.gs.proto.interlude.outcome.CharSelectInfo;
-import ru.finex.gs.proto.interlude.outcome.CharacterSelected;
-import ru.finex.gs.proto.interlude.outcome.KeyPacket;
+import ru.finex.gs.proto.interlude.outcome.*;
 import ru.finex.gs.proto.network.L2GameClient;
 import ru.finex.gs.proto.network.L2GameServerPacket;
 import ru.finex.gs.proto.network.PacketService;
@@ -71,5 +66,28 @@ public class OutcomePacketBuilderService {
 
     public L2GameServerPacket serverClose() {
         return packetService.createOutcomePacket(0x26);
+    }
+    
+    public L2GameServerPacket castleManorList() {
+        return packetService.createOutcomePacket(0xfe, 0x1b);
+    }
+    
+    public L2GameServerPacket userInfo(GameObject gameObject) {
+        UserInfo packet = packetService.createOutcomePacket(0x04);
+        packet.setRuntimeId(gameObject.getRuntimeId());
+        packet.setAbnormalComponent(gameObject.getComponent(AbnormalComponent.class));
+        packet.setClanComponent(gameObject.getComponent(ClanComponent.class));
+        packet.setClassComponent(gameObject.getComponent(ClassComponent.class));
+        packet.setCollisionComponent(gameObject.getComponent(CollisionComponent.class));
+        packet.setCoordinateComponent(gameObject.getComponent(CoordinateComponent.class));
+        packet.setCubicComponent(gameObject.getComponent(CubicComponent.class));
+        packet.setMountComponent(gameObject.getComponent(MountComponent.class));
+        packet.setPlayerComponent(gameObject.getComponent(PlayerComponent.class));
+        packet.setRecommendationComponent(gameObject.getComponent(RecommendationComponent.class));
+        packet.setSpeedComponent(gameObject.getComponent(SpeedComponent.class));
+        packet.setStateComponent(gameObject.getComponent(StateComponent.class));
+        packet.setStatusComponent(gameObject.getComponent(StatusComponent.class));
+        packet.setStoreComponent(gameObject.getComponent(StoreComponent.class));
+        return packet;
     }
 }

@@ -42,5 +42,10 @@ public class RunnableGameTask extends RunnableServerTask implements GameTask {
             this.gameObject = gameObject;
         }
     }
-
+    
+    protected RunnableGameTask(Runnable runnable) {
+        super(runnable);
+        this.client = null;
+        this.gameObject = null;
+    }
 }

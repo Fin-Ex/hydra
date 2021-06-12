@@ -4,7 +4,6 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 import lombok.experimental.UtilityClass;
 import ru.finex.core.GlobalContext;
-import ru.finex.core.inject.InjectedModule;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Modifier;
@@ -22,7 +21,7 @@ public class InjectorUtils {
     }
 
     public static List<Module> collectModules(String rootPackage, Class<? extends Annotation> annType) {
-        return GlobalContext.reflections.getTypesAnnotatedWith(InjectedModule.class)
+        return GlobalContext.reflections.getTypesAnnotatedWith(annType)
             .stream()
             .filter(e -> e.getCanonicalName().startsWith(rootPackage))
             .filter(e -> !Modifier.isAbstract(e.getModifiers()) && !Modifier.isInterface(e.getModifiers()))

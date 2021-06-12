@@ -19,5 +19,17 @@ public class SpeedComponent extends AbstractComponent {
 
     private double animMoveSpeed = 1;
     private double animAttackSpeed = 1;
+    
+    public double getClientWalkSpeed() {
+        return walkSpeed / animMoveSpeed;
+    }
+    
+    public double getClientRunSpeed() {
+        return runSpeed / animMoveSpeed;
+    }
+    
+    public double getClientSwimSpeed() {
+        return swimSpeed / animMoveSpeed;
+    }
 
 }

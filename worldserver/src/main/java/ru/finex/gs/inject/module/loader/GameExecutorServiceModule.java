@@ -5,6 +5,7 @@ import com.google.inject.name.Names;
 import ru.finex.core.inject.LoaderModule;
 import ru.finex.gs.concurrent.game.GameExecutorProvider;
 import ru.finex.gs.concurrent.game.GameExecutorServiceImpl;
+import ru.finex.gs.concurrent.game.GameTickServiceImpl;
 import ru.finex.gs.service.concurrent.GameExecutorService;
 
 import java.util.concurrent.ExecutorService;
@@ -21,6 +22,7 @@ public class GameExecutorServiceModule extends AbstractModule {
         bind(ScheduledExecutorService.class).annotatedWith(Names.named("Game")).toProvider(GameExecutorProvider.class);
         bind(ExecutorService.class).annotatedWith(Names.named("Game")).toProvider(GameExecutorProvider.class);
         bind(GameExecutorService.class).to(GameExecutorServiceImpl.class);
+        bind(GameTickServiceImpl.class).asEagerSingleton();
     }
 
 }

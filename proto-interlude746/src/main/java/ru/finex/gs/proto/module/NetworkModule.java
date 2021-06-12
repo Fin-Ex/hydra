@@ -2,6 +2,7 @@ package ru.finex.gs.proto.module;
 
 import com.google.inject.AbstractModule;
 import ru.finex.core.inject.LoaderModule;
+import ru.finex.gs.proto.interlude.AuthStateProcessor;
 import ru.finex.gs.proto.interlude.OutcomePacketBuilderService;
 import ru.finex.gs.proto.network.ClientServiceImpl;
 import ru.finex.gs.proto.network.PacketService;
@@ -18,9 +19,10 @@ public class NetworkModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        bind(PacketService.class).to(PacketService.class);
+        bind(AuthStateProcessor.class).asEagerSingleton();
+        bind(PacketService.class);
         bind(IPacketHandler.class).to(PacketService.class);
-        bind(OutcomePacketBuilderService.class).to(OutcomePacketBuilderService.class);
+        bind(OutcomePacketBuilderService.class);
         bind(SelectorThread.class).toProvider(SelectorThreadProvider.class);
         bind(ClientService.class).to(ClientServiceImpl.class);
     }

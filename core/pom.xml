@@ -10,7 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>core</artifactId>
-
+    <scm>
+        <connection>scm:svn:http://none</connection>
+        <developerConnection>scm:svn:https://none</developerConnection>
+        <url>scm:svn:https://none</url>
+    </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>

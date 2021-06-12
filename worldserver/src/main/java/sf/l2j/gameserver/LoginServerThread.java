@@ -6,23 +6,16 @@ import ru.finex.core.events.EventBus;
 import ru.finex.gs.auth.AuthServerConfiguration;
 import ru.finex.gs.model.Client;
 import ru.finex.gs.model.event.ClientAuth;
+import ru.finex.gs.model.event.ClientDisconnected;
 import ru.finex.gs.network.NetworkConfiguration;
 import sf.l2j.commons.crypt.NewCrypt;
 import sf.l2j.commons.random.Rnd;
-import sf.l2j.gameserver.network.gameserverpackets.AuthRequest;
-import sf.l2j.gameserver.network.gameserverpackets.BlowFishKey;
-import sf.l2j.gameserver.network.gameserverpackets.ChangeAccessLevel;
-import sf.l2j.gameserver.network.gameserverpackets.GameServerBasePacket;
-import sf.l2j.gameserver.network.gameserverpackets.PlayerAuthRequest;
-import sf.l2j.gameserver.network.gameserverpackets.PlayerInGame;
-import sf.l2j.gameserver.network.gameserverpackets.PlayerLogout;
-import sf.l2j.gameserver.network.gameserverpackets.ServerStatus;
-import sf.l2j.gameserver.network.loginserverpackets.AuthResponse;
-import sf.l2j.gameserver.network.loginserverpackets.InitLS;
-import sf.l2j.gameserver.network.loginserverpackets.KickPlayer;
-import sf.l2j.gameserver.network.loginserverpackets.LoginServerFail;
-import sf.l2j.gameserver.network.loginserverpackets.PlayerAuthResponse;
+import sf.l2j.gameserver.network.gameserverpackets.*;
+import sf.l2j.gameserver.network.loginserverpackets.*;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.inject.Singleton;
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -38,9 +31,6 @@ import java.security.spec.RSAPublicKeySpec;
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.inject.Singleton;
 
 @Singleton
 public class LoginServerThread extends Thread {
@@ -68,7 +58,6 @@ public class LoginServerThread extends Thread {
 	private int _maxPlayers;
 	private int _status;
 
-	@Inject @Named("Network")
 	private EventBus networkEventBus;
 
 	@Inject
@@ -83,6 +72,16 @@ public class LoginServerThread extends Thread {
 		_requestId = 1;
 		_hexId = generateHex(16);
 		_maxPlayers = 3000;
+	}
+
+	@Inject
+	public void registerListeners(@Named("Network") EventBus eventBus) {
+		this.networkEventBus = eventBus;
+		eventBus.subscribe()
+			.cast(ClientDisconnected.class)
+			.map(ClientDisconnected::getClient)
+			.filter(e -> e.getLogin() != null)
+			.forEach(e -> _clients.remove(e.getLogin()));
 	}
 
 	@Override
@@ -256,6 +255,7 @@ public class LoginServerThread extends Thread {
 		} else {
 			client.closeNow();
 			existingClient.closeNow();
+			_clients.remove(account);
 		}
 	}
 

@@ -4,9 +4,9 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-import javax.sql.DataSource;
 
 public class L2DatabaseFactory {
 
@@ -34,10 +34,6 @@ public class L2DatabaseFactory {
 			// cause there is a "long" delay on acquire connection
 			// so taking more than one connection at once will make connection pooling
 			// more effective.
-
-			// this "connection_test_table" is automatically created if not already there
-			_source.setAutomaticTestTable("connection_test_table");
-			_source.setTestConnectionOnCheckin(false);
 
 			// testing OnCheckin used with IdleConnectionTestPeriod is faster than testing on checkout
 			_source.setIdleConnectionTestPeriod(3600); // test idle connection every 60 sec

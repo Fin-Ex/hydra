@@ -1,6 +1,7 @@
 package ru.finex.gs.model.component.player;
 
 import ru.finex.gs.model.AbnormalEffect;
+import ru.finex.gs.model.component.AbstractComponent;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -8,7 +9,7 @@ import java.util.Set;
 /**
  * @author m0nster.mind
  */
-public class AbnormalComponent {
+public class AbnormalComponent extends AbstractComponent {
 
     private Set<AbnormalEffect> abnormals = new HashSet<>();
 

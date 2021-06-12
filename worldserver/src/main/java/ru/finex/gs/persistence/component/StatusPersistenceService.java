@@ -18,8 +18,10 @@ public class StatusPersistenceService implements PersistenceService<StatusEntity
     @Override
     public StatusEntity restore(int gameObjectPersistenceId) {
         return StatusEntity.builder()
-            .hp(1)
-            .mp(1)
+            .hp(100)
+            .mp(100)
+            .maxHp(100)
+            .maxMp(100)
             .build();
     }
 }

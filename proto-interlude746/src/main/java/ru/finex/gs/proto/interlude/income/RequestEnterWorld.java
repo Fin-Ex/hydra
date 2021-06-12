@@ -2,8 +2,11 @@ package ru.finex.gs.proto.interlude.income;
 
 import lombok.extern.slf4j.Slf4j;
 import ru.finex.core.events.EventBus;
+import ru.finex.gs.model.GameObject;
 import ru.finex.gs.model.event.PlayerEnterWorld;
+import ru.finex.gs.proto.interlude.OutcomePacketBuilderService;
 import ru.finex.gs.proto.network.IncomePacket;
+import ru.finex.gs.proto.network.L2GameClient;
 import ru.finex.gs.proto.network.L2GameClientPacket;
 import ru.finex.gs.proto.network.Opcode;
 
@@ -19,6 +22,9 @@ public class RequestEnterWorld extends L2GameClientPacket {
 
     @Inject @Named("Network")
     private EventBus eventBus;
+    
+    @Inject
+    private OutcomePacketBuilderService packetBuilderService;
 
     @Override
     protected void readImpl() {
@@ -27,7 +33,10 @@ public class RequestEnterWorld extends L2GameClientPacket {
 
     @Override
     protected void runImpl() {
-        eventBus.notify(new PlayerEnterWorld(getClient().getGameObject()));
-        log.info("Player {} enter to the world", getClient());
+        L2GameClient client = getClient();
+        GameObject gameObject = client.getGameObject();
+        
+        eventBus.notify(new PlayerEnterWorld(gameObject));
+        sendPacket(packetBuilderService.userInfo(gameObject));
     }
 }

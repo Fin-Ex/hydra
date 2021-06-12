@@ -3,10 +3,10 @@ package ru.finex.core.hocon;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
-import java.io.File;
-import java.util.Objects;
 import javax.inject.Provider;
 import javax.inject.Singleton;
+import java.io.File;
+import java.util.Objects;
 
 /**
  * @author m0nster.mind
@@ -37,7 +37,11 @@ public class ConfigProvider implements Provider<Config> {
 
     private Config tryLoadFromFilesystem() {
         try {
-            return ConfigFactory.parseFile(new File("resources/application.conf"));
+            File file = new File("resources/application.conf");
+            if(!file.exists()) {
+                return null;
+            }
+            return ConfigFactory.parseFile(file);
         } catch (Exception e) {
             return null;
         }

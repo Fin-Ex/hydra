@@ -3,9 +3,10 @@ package ru.finex.gs.world;
 import ru.finex.gs.model.GameObject;
 import ru.finex.gs.service.WorldService;
 
+import javax.inject.Singleton;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import javax.inject.Singleton;
 
 /**
  * @author m0nster.mind
@@ -28,5 +29,10 @@ public class WorldServiceImpl implements WorldService {
     @Override
     public GameObject getGameObject(int runtimeId) {
         return objects.get(runtimeId);
+    }
+    
+    @Override
+    public Collection<GameObject> getGameObjects() {
+        return objects.values();
     }
 }

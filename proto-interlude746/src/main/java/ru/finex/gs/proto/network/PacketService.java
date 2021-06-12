@@ -8,9 +8,9 @@ import sf.l2j.commons.mmocore.AbstractPacket;
 import sf.l2j.commons.mmocore.IPacketHandler;
 import sf.l2j.commons.mmocore.ReceivablePacket;
 
+import javax.inject.Singleton;
 import java.lang.reflect.Modifier;
 import java.nio.ByteBuffer;
-import javax.inject.Singleton;
 
 /**
  * @author m0nster.mind
@@ -68,6 +68,8 @@ public class PacketService implements IPacketHandler<L2GameClient> {
         if (packetType == null) {
             return null;
         }
+        
+        log.debug("Create outcome packet: {}", packetType.getSimpleName());
 
         return (T) Classes.createInstance(packetType);
     }
@@ -76,13 +78,15 @@ public class PacketService implements IPacketHandler<L2GameClient> {
     public ReceivablePacket<L2GameClient> handlePacket(ByteBuffer buffer, L2GameClient client) {
         Class<? extends AbstractPacket> packetType = getPacketType(buffer, incomePackets, 0);
         if (packetType == null) {
-            byte[] data = new byte[buffer.limit()];
-            buffer.position(0);
+            byte[] data = new byte[buffer.limit() - 2];
+            buffer.position(2);
             buffer.get(data);
             log.warn(HexUtil.printData(data, data.length));
             return null;
         }
 
+        log.debug("Create income packet: {}", packetType.getSimpleName());
+        
         return (ReceivablePacket<L2GameClient>) Classes.createInstance(packetType);
     }
 
@@ -96,7 +100,7 @@ public class PacketService implements IPacketHandler<L2GameClient> {
 
         PacketRegistry subRegistry = registry.getSubRegistry(opcode);
         if (subRegistry != null) {
-            return getPacketType(buffer, registry, ++opcodeCount);
+            return getPacketType(buffer, subRegistry, ++opcodeCount);
         }
 
         return registry.getPacket(opcode);
