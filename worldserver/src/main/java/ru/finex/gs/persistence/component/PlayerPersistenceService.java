@@ -4,11 +4,13 @@ import lombok.RequiredArgsConstructor;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import ru.finex.core.service.DbSessionService;
+import ru.finex.gs.concurrent.service.CallableServiceTask;
 import ru.finex.gs.model.PlayerAppearanceClass;
 import ru.finex.gs.model.PlayerRace;
 import ru.finex.gs.model.PvpMode;
 import ru.finex.gs.model.Sex;
 import ru.finex.gs.model.entity.PlayerEntity;
+import ru.finex.gs.service.concurrent.ServiceExecutorService;
 import ru.finex.gs.service.persistence.PersistenceService;
 
 import javax.inject.Inject;
@@ -21,20 +23,22 @@ import javax.inject.Singleton;
 @RequiredArgsConstructor(onConstructor_ = { @Inject })
 public class PlayerPersistenceService implements PersistenceService<PlayerEntity> {
 
+    private final ServiceExecutorService executorService;
     private final DbSessionService sessionService;
 
     @Override
     public PlayerEntity persist(PlayerEntity entity) {
-        Session session = sessionService.openSession();
-        Transaction transaction = session.beginTransaction();
         try {
-            //...
-
-            transaction.commit();
-        } finally {
-            session.close();
+            return executorService.<PlayerEntity>execute(new CallableServiceTask<>(() -> {
+                Session session = sessionService.getSession();
+                Transaction transaction = session.beginTransaction();
+                // ...
+                transaction.commit();
+                return entity;
+            })).get();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-        return entity;
     }
 
     @Override
