@@ -5,10 +5,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.finex.core.model.entity.Entity;
+import ru.finex.gs.model.Gender;
 import ru.finex.gs.model.PlayerAppearanceClass;
 import ru.finex.gs.model.PlayerRace;
 import ru.finex.gs.model.PvpMode;
-import ru.finex.gs.model.Sex;
 
 /**
  * @author m0nster.mind
@@ -22,7 +22,7 @@ public class PlayerEntity implements Entity {
     private int persistenceId;
 
     private PlayerRace race;
-    private Sex sex;
+    private Gender gender;
     private PlayerAppearanceClass appearanceClass;
     private int hairType;
     private int hairColor;

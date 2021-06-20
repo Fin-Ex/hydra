@@ -5,10 +5,10 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import ru.finex.core.service.DbSessionService;
 import ru.finex.gs.concurrent.service.CallableServiceTask;
+import ru.finex.gs.model.Gender;
 import ru.finex.gs.model.PlayerAppearanceClass;
 import ru.finex.gs.model.PlayerRace;
 import ru.finex.gs.model.PvpMode;
-import ru.finex.gs.model.Sex;
 import ru.finex.gs.model.entity.PlayerEntity;
 import ru.finex.gs.service.concurrent.ServiceExecutorService;
 import ru.finex.gs.service.persistence.PersistenceService;
@@ -53,7 +53,7 @@ public class PlayerPersistenceService implements PersistenceService<PlayerEntity
             .nameColor(0x000000)
             .pvpMode(PvpMode.NONE)
             .race(PlayerRace.HUMAN)
-            .sex(Sex.MALE)
+            .gender(Gender.MALE)
             .title("")
             .titleColor(0x000000)
             .build();

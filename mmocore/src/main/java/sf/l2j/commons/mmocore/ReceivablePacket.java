@@ -29,6 +29,12 @@ public abstract class ReceivablePacket<T extends MMOClient> extends AbstractPack
 		_buf.get(dst, offset, len);
 	}
 
+	public byte[] readB(int length) {
+		final byte[] result = new byte[length];
+		_buf.get(result);
+		return result;
+	}
+
 	protected final int readC() {
 		return _buf.get() & 0xFF;
 	}

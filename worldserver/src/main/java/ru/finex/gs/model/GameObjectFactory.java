@@ -10,6 +10,8 @@ import ru.finex.gs.inject.module.gameplay.GameObjectModule;
 import ru.finex.gs.inject.module.gameplay.PlayerModule;
 import ru.finex.gs.model.component.Component;
 import ru.finex.gs.model.component.base.CoordinateComponent;
+import ru.finex.gs.model.component.base.ParameterComponent;
+import ru.finex.gs.model.component.base.StatComponent;
 import ru.finex.gs.model.component.base.StatusComponent;
 import ru.finex.gs.model.component.player.AbnormalComponent;
 import ru.finex.gs.model.component.player.ClanComponent;
@@ -60,7 +62,9 @@ public class GameObjectFactory {
         SpeedComponent.class,
         StateComponent.class,
         StoreComponent.class,
-        VisualEquipComponent.class
+        VisualEquipComponent.class,
+        ParameterComponent.class,
+        StatComponent.class
     };
 
     private final RuntimeIdService runtimeIdService;

@@ -20,6 +20,8 @@ public class StatusEntity implements Entity {
     private double maxHp;
     private double mp;
     private double maxMp;
+    private double cp;
+    private double maxCp;
 
     @Override
     public StatusEntity clone() {

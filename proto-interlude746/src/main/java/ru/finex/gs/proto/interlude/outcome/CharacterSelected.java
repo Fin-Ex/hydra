@@ -37,7 +37,7 @@ public class CharacterSelected extends L2GameServerPacket {
 		writeD(sessionId);
 		writeD(clan.getPersistenceId());
 		writeD(0x00); // FIXME m0nster.mind: access level
-		writeD(player.getSex().ordinal());
+		writeD(player.getGender().ordinal());
 		writeD(player.getRace().ordinal());
 		writeD(player.getAppearanceClass().getNetworkId(player.getRace()));
 		writeD(0x01); // selected

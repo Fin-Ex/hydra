@@ -3,7 +3,17 @@ package ru.finex.gs.proto.interlude.outcome;
 import lombok.Data;
 import ru.finex.gs.model.component.base.CoordinateComponent;
 import ru.finex.gs.model.component.base.StatusComponent;
-import ru.finex.gs.model.component.player.*;
+import ru.finex.gs.model.component.player.AbnormalComponent;
+import ru.finex.gs.model.component.player.ClanComponent;
+import ru.finex.gs.model.component.player.ClassComponent;
+import ru.finex.gs.model.component.player.CollisionComponent;
+import ru.finex.gs.model.component.player.CubicComponent;
+import ru.finex.gs.model.component.player.MountComponent;
+import ru.finex.gs.model.component.player.PlayerComponent;
+import ru.finex.gs.model.component.player.RecommendationComponent;
+import ru.finex.gs.model.component.player.SpeedComponent;
+import ru.finex.gs.model.component.player.StateComponent;
+import ru.finex.gs.model.component.player.StoreComponent;
 import ru.finex.gs.proto.network.L2GameServerPacket;
 import ru.finex.gs.proto.network.Opcode;
 import ru.finex.gs.proto.network.OutcomePacket;
@@ -40,7 +50,7 @@ public class UserInfo extends L2GameServerPacket {
 		writeD(runtimeId);
 		writeS(playerComponent.getEntity().getName());
 		writeD(playerComponent.getEntity().getRace().ordinal());
-		writeD(playerComponent.getEntity().getSex().ordinal());
+		writeD(playerComponent.getEntity().getGender().ordinal());
 		writeD(playerComponent.getEntity().getAppearanceClass().getNetworkId(playerComponent.getEntity().getRace()));
 		writeD(1); // level
 		writeQ(0); //exp
@@ -138,7 +148,7 @@ public class UserInfo extends L2GameServerPacket {
 		writeD(0x00); //ally_id
 		writeD(0x00); //ally_crest_id
 		writeD(0x00); //_relation
-		writeC(mountComponent.getMountType());
+		writeC(mountComponent.getMountType().ordinal());
 		writeC(storeComponent.getStoreType().getId());
 		writeC(0x00); //can_crystalize
 		writeD(0x00); //pk_kills

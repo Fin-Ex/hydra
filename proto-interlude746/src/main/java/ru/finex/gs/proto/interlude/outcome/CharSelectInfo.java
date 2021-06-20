@@ -33,7 +33,7 @@ public class CharSelectInfo extends L2GameServerPacket {
 			writeD(sessionId);
 			writeD(avatar.getClan().getPersistenceId());
 			writeD(0x00); // access level
-			writeD(avatar.getPlayer().getSex().ordinal());
+			writeD(avatar.getPlayer().getGender().ordinal());
 			writeD(avatar.getPlayer().getRace().ordinal());
 			writeD(avatar.getPlayer().getAppearanceClass().getNetworkId(avatar.getPlayer().getRace()));
 			writeD(0x01); // server id
