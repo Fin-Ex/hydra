@@ -16,7 +16,17 @@ public class RequestEnterWorld extends L2GameClientPacket {
 
     @Override
     protected void readImpl() {
-
+        for (int i = 0; i < 5; i++) {
+            for (int o = 0; o < 4; o++) {
+                readC();
+            }
+        }
+        readD(); // Unknown Value
+        readD(); // Unknown Value
+        readD(); // Unknown Value
+        readD(); // Unknown Value
+        readB(64); // Unknown Byte Array
+        readD(); // Unknown Value
     }
 
     @Override

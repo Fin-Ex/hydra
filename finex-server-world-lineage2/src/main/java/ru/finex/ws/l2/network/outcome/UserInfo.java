@@ -2,6 +2,8 @@ package ru.finex.ws.l2.network.outcome;
 
 import lombok.Data;
 import ru.finex.ws.l2.component.base.CoordinateComponent;
+import ru.finex.ws.l2.component.base.ParameterComponent;
+import ru.finex.ws.l2.component.base.StatComponent;
 import ru.finex.ws.l2.component.base.StatusComponent;
 import ru.finex.ws.l2.component.player.AbnormalComponent;
 import ru.finex.ws.l2.component.player.ClanComponent;
@@ -14,17 +16,30 @@ import ru.finex.ws.l2.component.player.RecommendationComponent;
 import ru.finex.ws.l2.component.player.SpeedComponent;
 import ru.finex.ws.l2.component.player.StateComponent;
 import ru.finex.ws.l2.component.player.StoreComponent;
+import ru.finex.ws.l2.model.ClassId;
+import ru.finex.ws.l2.model.entity.ClanEntity;
+import ru.finex.ws.l2.model.entity.ParameterEntity;
+import ru.finex.ws.l2.model.entity.PlayerEntity;
+import ru.finex.ws.l2.model.entity.PositionEntity;
+import ru.finex.ws.l2.model.entity.StatEntity;
+import ru.finex.ws.l2.model.entity.StatusEntity;
 import ru.finex.ws.l2.network.Opcode;
 import ru.finex.ws.l2.network.OutcomePacket;
-import ru.finex.ws.l2.network.model.L2GameServerPacket;
+import ru.finex.ws.l2.network.model.UserInfoType;
 
 /**
  * @author finfan
  */
 @Data
-@OutcomePacket(@Opcode(0x04))
-public class UserInfo extends L2GameServerPacket {
-	
+@OutcomePacket(@Opcode(0x32)) //FIXME finfan: какие опкоды принимает юзер инфо? типо мы отслыаем только то что нам нужно? по типу?
+public class UserInfo extends AbstractMaskPacket<UserInfoType> {
+
+	private static final byte[] MASKS = new byte[] {
+		(byte) 0x00,
+		(byte) 0x00,
+		(byte) 0x00
+	};
+
 	private int runtimeId;
 	private PlayerComponent playerComponent;
 	private CollisionComponent collisionComponent;
@@ -39,11 +54,256 @@ public class UserInfo extends L2GameServerPacket {
 	private StoreComponent storeComponent;
 	private CoordinateComponent coordinateComponent;
 	private StatusComponent statusComponent;
+	private ParameterComponent parameterComponent;
+	private StatComponent statComponent;
+
+	private UserInfoType infoType;
+	private int size = 5;
+
+	//FIXME говно от mobius, что эт оя хз, но примерно думаю, что это некий размер отправляемого инфо компонента который должен пересчитываться?
+	private void calcBlockSize(UserInfoType type) {
+		switch (type) {
+			case BASIC_INFO: {
+				size += type.getBlockLength() + (playerComponent.getEntity().getName().length() * 2);
+				break;
+			}
+			case CLAN: {
+				size += type.getBlockLength() + (playerComponent.getEntity().getTitle().length() * 2);
+				break;
+			}
+			default: {
+				size += type.getBlockLength();
+				break;
+			}
+		}
+	}
 	
 	@Override
 	protected void writeImpl() {
-		writeC(0x04);
-		writeD((int) coordinateComponent.getPosition().getX());
+		writeC(0x32);
+		writeD(runtimeId);
+		writeD(size);
+		writeH(23);
+		writeB(MASKS);
+
+		PlayerEntity player = playerComponent.getEntity();
+
+		if (containsMask(UserInfoType.RELATION)) {
+			writeD(0x00);
+		}
+
+		if (containsMask(UserInfoType.BASIC_INFO)) {
+			writeH(16 + (player.getName().length() * 2)); //get().getVisibleName()
+			writeS(player.getName());
+			writeC(0x00); // isGM
+			writeC(player.getRace().ordinal());
+			writeC(player.getGender().ordinal());
+			writeD(player.getAppearanceClass().getNetworkId(player.getRace()));
+			writeD(ClassId.HumanFighter.ordinal());
+			writeC(1); // level
+		}
+
+		if (containsMask(UserInfoType.BASE_STATS)) {
+			writeH(18);
+			ParameterEntity parameters = parameterComponent.getEntity();
+			writeH(parameters.getSTR());
+			writeH(parameters.getDEX());
+			writeH(parameters.getCON());
+			writeH(parameters.getINT());
+			writeH(parameters.getWIT());
+			writeH(parameters.getMEN());
+			writeH(parameters.getLUC());
+			writeH(parameters.getCHA());
+		}
+
+		if (containsMask(UserInfoType.MAX_HPCPMP)) {
+			writeH(14);
+			StatusEntity status = statusComponent.getStatusEntity();
+			writeD((int)status.getMaxHp());
+			writeD((int)status.getMaxMp());
+			writeD((int)status.getMaxCp());
+		}
+
+		if (containsMask(UserInfoType.CURRENT_HPMPCP_EXP_SP)) {
+			writeH(38);
+			StatusEntity status = statusComponent.getStatusEntity();
+			writeD((int) Math.round(status.getHp()));
+			writeD((int) Math.round(status.getMp()));
+			writeD((int) Math.round(status.getCp()));
+			writeQ(0L); // sp
+			writeQ(0L); // exp
+			writeF(0f); // (float) (_player.getExp() - ExperienceData.getInstance().getExpForLevel(_player.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_player.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_player.getLevel()))
+		}
+
+		if (containsMask(UserInfoType.ENCHANTLEVEL)) {
+			writeH(4);
+			writeC(0); // _enchantLevel
+			writeC(0); // _armorEnchant
+		}
+
+		if (containsMask(UserInfoType.APPAREANCE)) {
+			writeH(15);
+			writeD(player.getHairType()); // visual hair type
+			writeD(player.getHairColor()); // visual haoir color
+			writeD(player.getFaceType()); //visual face type
+			writeC(0x00); //isHairAccessoryEnabled
+		}
+
+		if (containsMask(UserInfoType.STATUS)) {
+			writeH(6);
+			writeC(mountComponent.getMountType().ordinal());
+			writeC(storeComponent.getStoreType().ordinal());
+			writeC(0x00); // _player.hasDwarvenCraft() || (_player.getSkillLevel(248) > 0) ? 1 : 0
+			writeC(0x00); // _player.getAbilityPointsUsed()
+		}
+
+		if (containsMask(UserInfoType.STATS)) {
+			writeH(56);
+			StatEntity stat = statComponent.getEntity();
+			writeH(40); // stat.getActiveWeaponItem() != null ? 40 : 20
+			writeD(stat.getPAtk());
+			writeD(stat.getAttackSpeed());
+			writeD(stat.getPDef());
+			writeD(stat.getEvasion());
+			writeD(stat.getAccuracy());
+			writeD(stat.getCriticalRate());
+			writeD(stat.getMAtk());
+			writeD(stat.getCastSpeed());
+			writeD(stat.getAttackSpeed()); // Seems like atk speed - 1
+			writeD(stat.getMagicEvasion());
+			writeD(stat.getMDef());
+			writeD(stat.getMagicAccuracy());
+			writeD(stat.getMagicCriticalRate());
+		}
+
+		if (containsMask(UserInfoType.ELEMENTALS)) {
+			writeH(14);
+			writeH(0x00); // defense attribute FIRE
+			writeH(0x00); // defense attribute WATER
+			writeH(0x00); // defense attribute WIND
+			writeH(0x00); // defense attribute EARTH
+			writeH(0x00); // defense attribute HOLY
+			writeH(0x00); // defense attribute DARK
+		}
+
+		if (containsMask(UserInfoType.POSITION)) {
+			writeH(18);
+			PositionEntity position = coordinateComponent.getPosition();
+			writeD((int)position.getX());
+			writeD((int)position.getY());
+			writeD((int)position.getZ());
+			writeD(0); //_player.isInVehicle() ? _player.getVehicle().getObjectId() : 0
+		}
+
+		if (containsMask(UserInfoType.SPEED)) {
+			writeH(18);
+			writeH((int) speedComponent.getRunSpeed());
+			writeH((int) speedComponent.getWalkSpeed());
+			writeH((int) speedComponent.getSwimSpeed());
+			writeH((int) speedComponent.getSwimSpeed());
+			writeH((int) speedComponent.getFlySpeed());
+			writeH((int) speedComponent.getFlySpeed());
+			writeH((int) speedComponent.getFlySpeed());
+			writeH((int) speedComponent.getFlySpeed());
+		}
+
+		if (containsMask(UserInfoType.MULTIPLIER)) {
+			writeH(18);
+			writeF(speedComponent.getAnimMoveSpeed());
+			writeF(speedComponent.getAnimAttackSpeed());
+		}
+
+		if (containsMask(UserInfoType.COL_RADIUS_HEIGHT)) {
+			writeH(18);
+			writeF(collisionComponent.getWidth());
+			writeF(collisionComponent.getHeight());
+		}
+
+		if (containsMask(UserInfoType.ATK_ELEMENTAL)) {
+			/*writeH(5);
+			final AttributeType attackAttribute = _player.getAttackElement();
+			writeC(attackAttribute.getClientId());
+			writeH(_player.getAttackElementValue(attackAttribute));*/
+			writeH(5);
+			writeC(0x00);
+			writeH(0x00);
+		}
+
+		if (containsMask(UserInfoType.CLAN)) {
+			writeH(32 + (player.getTitle().length() * 2));
+			writeS(player.getTitle());
+			ClanEntity clan = clanComponent.getEntity();
+			writeH(0x00); // pledge type
+			writeD(clan.getPersistenceId()); // clanId
+			writeD(clan.getLargeCrestId());
+			writeD(clan.getCrestId());
+			writeD(0x00); //FIXME finfan: clan.getClanPrivileges().getBitmask()
+			writeC(0x00); // FIXME finfan: isCLanLeader player.isClanLeader() ? 0x01 : 0x00
+			writeD(0x00); // FIXME finfan: ally id
+			writeD(0x00); // FIXME finfan: ally crest id
+			writeC(0x00); // FIXME finfan: clan.isInMatchingRoom() ? 0x01 : 0x00
+		}
+
+		if (containsMask(UserInfoType.SOCIAL)) {
+			writeH(22);
+			writeC(0x00); // FIXME finfan: pvp flag
+			writeD(0x00); // FIXME finfan: Reputation
+			writeC(0x00); // FIXME finfan: noble level
+			writeC(0); //FIXME finfan: _player.isHero() || (_player.isGM() && Config.GM_HERO_AURA) ? 1 : 0
+			writeC(0x00); // FIXME finfan: pledge class
+			writeD(0); // FIXME finfan: pkkills
+			writeD(0); // FIXME finfan: pvpkills
+			writeH(recommendationComponent.getLeft());
+			writeH(recommendationComponent.getCollect());
+		}
+
+		if (containsMask(UserInfoType.VITA_FAME)) {
+			writeH(15);
+			writeD(0); // FIXME finfan: _player.getVitalityPoints()
+			writeC(0x00); // FIXME finfan: Vita Bonus
+			writeD(0x00); // FIXME finfan: _player.getFame()
+			writeD(0x00); // FIXME finfan: _player.getRaidPoints()
+		}
+
+		if (containsMask(UserInfoType.SLOTS)) {
+			writeH(9);
+			writeC(0x00); // FIXME finfan: _player.getInventory().getTalismanSlots()
+			writeC(0x00); // FIXME finfan: _player.getInventory().getBroochJewelSlots()
+			writeC(0x00); // FIXME finfan: Confirmed _player.getTeam().getId()
+			writeC(0x00); // FIXME finfan: (1 = Red, 2 = White, 3 = White Pink) dotted ring on the floor
+			writeC(0x00);
+			writeC(0x00);
+			writeC(0x00);
+		}
+
+		if (containsMask(UserInfoType.MOVEMENTS)) {
+			writeH(4);
+			writeC(0x00); //FIXME finfan: _player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0
+			writeC(stateComponent.isRunning() ? 0x01 : 0x00);
+		}
+
+		if (containsMask(UserInfoType.COLOR)) {
+			writeH(10);
+			writeD(player.getNameColor());
+			writeD(player.getTitleColor());
+		}
+
+		if (containsMask(UserInfoType.INVENTORY_LIMIT)) {
+			writeH(9);
+			writeH(0x00);
+			writeH(0x00);
+			writeH(0x00); // _player.getInventoryLimit()
+			writeC(0x00); // TODO: cursed weapon equipped
+		}
+
+		if (containsMask(UserInfoType.TRUE_HERO)) {
+			writeH(9);
+			writeD(0x00);
+			writeH(0x00);
+			writeC(0x00); //_player.isTrueHero() ? 100 : 0x00
+		}
+
+		/*writeD((int) coordinateComponent.getPosition().getX());
 		writeD((int) coordinateComponent.getPosition().getY());
 		writeD((int) coordinateComponent.getPosition().getZ());
 		writeD((int) coordinateComponent.getPosition().getH());
@@ -68,52 +328,11 @@ public class UserInfo extends L2GameServerPacket {
 		writeD(0); // curLoad
 		writeD(16500); // maxLoad
 		writeD(40); // _pAtkRange
-		
-		/*
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HAIRALL));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RFINGER));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LFINGER));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualObjectId(Inventory.PAPERDOLL_HEAD, _visual_obj_id));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RHAND));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualObjectId(Inventory.PAPERDOLL_GLOVES, _visual_obj_id));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualObjectId(Inventory.PAPERDOLL_CHEST, _visual_obj_id));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualObjectId(Inventory.PAPERDOLL_LEGS, _visual_obj_id));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualObjectId(Inventory.PAPERDOLL_FEET, _visual_obj_id));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_BACK));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RHAND));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HAIR));
-		body.writeD(_activeChar.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_FACE));
 
-
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_HAIRALL));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_REAR));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_LEAR));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_NECK));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_RFINGER));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_LFINGER));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualItemId(Inventory.PAPERDOLL_HEAD, _visual));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_RHAND));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_LHAND));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualItemId(Inventory.PAPERDOLL_GLOVES, _visual));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualItemId(Inventory.PAPERDOLL_CHEST, _visual));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualItemId(Inventory.PAPERDOLL_LEGS, _visual));
-		body.writeD(_activeChar.getInventory().getPaperdollVisualItemId(Inventory.PAPERDOLL_FEET, _visual));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_BACK));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_RHAND));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_HAIR));
-		body.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(Inventory.PAPERDOLL_FACE));
-
-		for(int slot : Inventory.PAPERDOLL_ORDER)
-			body.writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot));
-		 */
 		for (int i = 0; i < 17 * 3; i++) {
 			writeD(0x00);
 		}
-		
+
 		writeD(1); //_patk
 		writeD((int) speedComponent.getAttackSpeed()); //_patkspd
 		writeD(1); //_pdef
@@ -148,7 +367,7 @@ public class UserInfo extends L2GameServerPacket {
 		writeD(0x00); //ally_id
 		writeD(0x00); //ally_crest_id
 		writeD(0x00); //_relation
-		writeC(mountComponent.getMountType().ordinal());
+		writeC(mountComponent.getMountType());
 		writeC(storeComponent.getStoreType().getId());
 		writeC(0x00); //can_crystalize
 		writeD(0x00); //pk_kills
@@ -183,6 +402,12 @@ public class UserInfo extends L2GameServerPacket {
 		writeD(0x00); // pledge class
 		writeD(0x00); // pledge type
 		writeD(playerComponent.getEntity().getTitleColor());
-		writeD(0x00); //cursed weapon level
+		writeD(0x00); //cursed weapon level*/
 	}
+
+	@Override
+	protected byte[] getMasks() {
+		return MASKS;
+	}
+
 }

@@ -23,6 +23,10 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient> {
 
 	protected abstract void writeImpl();
 
+	protected final void writeD(boolean value) {
+		this._buf.putInt(value ? 0x01 : 0x00);
+	}
+
 	public String getType() {
 		return "[S] " + getClass().getSimpleName();
 	}

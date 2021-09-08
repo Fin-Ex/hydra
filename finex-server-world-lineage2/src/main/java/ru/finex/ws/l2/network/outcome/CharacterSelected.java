@@ -15,7 +15,7 @@ import ru.finex.ws.l2.network.model.L2GameServerPacket;
  * @author m0nster.mind
  */
 @Data
-@OutcomePacket(@Opcode(0x15))
+@OutcomePacket(@Opcode(0x0b))
 public class CharacterSelected extends L2GameServerPacket {
 
 	private int sessionId;
@@ -24,7 +24,7 @@ public class CharacterSelected extends L2GameServerPacket {
 
 	@Override
 	protected final void writeImpl() {
-		writeC(0x15);
+		writeC(0x0b);
 
 		PlayerEntity player = avatar.getPlayer();
 		ClanEntity clan = avatar.getClan();
@@ -51,29 +51,20 @@ public class CharacterSelected extends L2GameServerPacket {
 		writeD(1); // level
 		writeD(0); // karma
 		writeD(0); // pk count
-		writeD(1); // int
-		writeD(1); // str
-		writeD(1); // con
-		writeD(1); // men
-		writeD(1); // dex
-		writeD(1); // wit
-
-		for (int i = 0; i < 30; i++) {
-			writeD(0x00);
-		}
-
-		writeD(0x00);
-		writeD(0x00);
-
 		writeD(0); // game time
-
 		writeD(0x00);
-
 		writeD(ClassId.HumanFighter.ordinal());
-
-		writeD(0x00); // GG
-		writeD(0x00); // GG
-		writeD(0x00); // GG
-		writeD(0x00); // GG
+		writeB(new byte[16]);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeB(new byte[28]);
+		writeD(0x00);
 	}
 }
