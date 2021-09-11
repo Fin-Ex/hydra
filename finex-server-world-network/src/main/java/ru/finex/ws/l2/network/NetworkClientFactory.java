@@ -2,8 +2,8 @@ package ru.finex.ws.l2.network;
 
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.ServerContext;
-import ru.finex.gs.service.ClientService;
 import ru.finex.ws.l2.network.model.L2GameClient;
+import ru.finex.ws.service.ClientService;
 import sf.l2j.commons.mmocore.IClientFactory;
 import sf.l2j.commons.mmocore.MMOConnection;
 

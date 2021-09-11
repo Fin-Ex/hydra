@@ -1,10 +1,10 @@
 package ru.finex.ws.l2.network;
 
 import ru.finex.core.events.EventBus;
-import ru.finex.gs.model.Client;
-import ru.finex.gs.service.ClientService;
 import ru.finex.ws.l2.network.model.L2GameClient;
 import ru.finex.ws.l2.network.model.event.ClientDisconnected;
+import ru.finex.ws.model.Client;
+import ru.finex.ws.service.ClientService;
 
 import java.util.ArrayList;
 import java.util.List;

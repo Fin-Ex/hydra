@@ -1,4 +1,4 @@
-package ru.finex.ws.l2.module;
+package ru.finex.ws.l2.network.module;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;

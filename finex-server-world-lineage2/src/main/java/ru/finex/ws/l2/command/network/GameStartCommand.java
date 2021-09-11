@@ -2,12 +2,12 @@ package ru.finex.ws.l2.command.network;
 
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.model.GameObject;
-import ru.finex.gs.service.GameObjectService;
 import ru.finex.ws.l2.network.AbstractNetworkCommand;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.model.GameClientState;
 import ru.finex.ws.l2.network.model.L2GameClient;
 import ru.finex.ws.l2.network.model.dto.SelectedAvatarDto;
+import ru.finex.ws.service.GameObjectService;
 
 import javax.inject.Inject;
 

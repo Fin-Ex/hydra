@@ -1,0 +1,6 @@
+FROM adoptopenjdk/openjdk11:jdk-11.0.8_10-alpine
+MAINTAINER m0nster.mind
+WORKDIR /
+ADD target/finex-world-lineage2.jar finex-world-lineage2.jar
+EXPOSE 54327 11000-11050
+ENTRYPOINT ["java", "-jar", "finex-world-lineage2.jar"]

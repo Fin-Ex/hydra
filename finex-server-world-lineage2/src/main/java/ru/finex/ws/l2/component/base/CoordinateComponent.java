@@ -2,9 +2,9 @@ package ru.finex.ws.l2.component.base;
 
 import lombok.Getter;
 import ru.finex.core.persistence.PersistenceField;
-import ru.finex.gs.model.component.AbstractComponent;
 import ru.finex.ws.l2.model.entity.PositionEntity;
 import ru.finex.ws.l2.persistence.PositionPersistence;
+import ru.finex.ws.model.component.AbstractComponent;
 
 /**
  * Базовый компонент, хранящий в себе координаты игрового объекта на карте мира.

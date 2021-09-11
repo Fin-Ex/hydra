@@ -1,8 +1,8 @@
 package ru.finex.ws.l2.component.player;
 
 import lombok.Getter;
-import ru.finex.gs.model.Client;
-import ru.finex.gs.model.component.AbstractComponent;
+import ru.finex.ws.model.Client;
+import ru.finex.ws.model.component.AbstractComponent;
 
 import javax.inject.Inject;
 

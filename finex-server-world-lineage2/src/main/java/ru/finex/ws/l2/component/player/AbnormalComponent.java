@@ -1,7 +1,7 @@
 package ru.finex.ws.l2.component.player;
 
 import ru.finex.ws.l2.model.AbnormalEffect;
-import ru.finex.gs.model.component.AbstractComponent;
+import ru.finex.ws.model.component.AbstractComponent;
 
 import java.util.HashSet;
 import java.util.Set;
