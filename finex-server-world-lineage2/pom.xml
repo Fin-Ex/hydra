@@ -7,7 +7,7 @@
     <parent>
         <groupId>ru.finex.l2</groupId>
         <artifactId>finex-lineage2</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>helios64-SNAPSHOT</version>
     </parent>
     <packaging>jar</packaging>
 
@@ -51,12 +51,12 @@
         <dependency>
             <groupId>ru.finex.l2</groupId>
             <artifactId>finex-server-world-network</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>helios64-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>ru.finex.l2</groupId>
             <artifactId>finex-server-world-lineage2-auth</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>helios64-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
