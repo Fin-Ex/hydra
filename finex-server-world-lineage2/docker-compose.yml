@@ -9,8 +9,8 @@ services:
       THREAD_GAME_MAX: 2
       THREAD_SERVICE_MIN: 1
       THREAD_SERVICE_MAX: 4
-      CLUSTER_ADDRESS: 11
-      CLUSTER_INTERFACE: 1111
+      CLUSTER_ADDRESS: 127.0.0.1
+      CLUSTER_INTERFACE: 127.0.0.1
       DB_URL: "jdbc:postgresql://postgres-world:5432/finex_world?currentSchema=public"
       DB_SCHEMA: public
       DB_USER: postgres
