@@ -114,6 +114,7 @@
                 <configuration>
                     <repository>ghcr.io/finfan222/finex-interlude</repository>
                     <tag>${project.version}</tag>
+                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
                 </configuration>
             </plugin>
         </plugins>

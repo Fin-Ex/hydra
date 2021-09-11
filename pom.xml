@@ -30,6 +30,13 @@
 		</repository>
 	</repositories>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/finfan222/finex-interlude</url>
+		</repository>
+	</distributionManagement>
+
 	<modules>
 		<module>finex-server-world-lineage2</module>
         <module>finex-server-world-lineage2-auth</module>
