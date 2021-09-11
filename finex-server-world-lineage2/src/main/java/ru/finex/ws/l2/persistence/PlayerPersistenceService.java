@@ -3,15 +3,15 @@ package ru.finex.ws.l2.persistence;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import ru.finex.core.persistence.PersistenceService;
 import ru.finex.core.service.DbSessionService;
-import ru.finex.gs.concurrent.service.CallableServiceTask;
+import ru.finex.ws.concurrent.service.CallableServiceTask;
 import ru.finex.ws.l2.model.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
 import ru.finex.ws.l2.model.PlayerRace;
 import ru.finex.ws.l2.model.PvpMode;
 import ru.finex.ws.l2.model.entity.PlayerEntity;
-import ru.finex.gs.service.concurrent.ServiceExecutorService;
-import ru.finex.core.persistence.PersistenceService;
+import ru.finex.ws.service.concurrent.ServiceExecutorService;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;

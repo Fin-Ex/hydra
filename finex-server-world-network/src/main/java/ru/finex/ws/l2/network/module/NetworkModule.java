@@ -1,12 +1,12 @@
-package ru.finex.ws.l2.module;
+package ru.finex.ws.l2.network.module;
 
 import com.google.inject.AbstractModule;
 import ru.finex.core.inject.LoaderModule;
-import ru.finex.gs.service.ClientService;
+import ru.finex.nif.SelectorThread;
 import ru.finex.ws.l2.network.ClientServiceImpl;
 import ru.finex.ws.l2.network.PacketService;
 import ru.finex.ws.l2.network.SelectorThreadProvider;
-import ru.finex.nif.SelectorThread;
+import ru.finex.ws.service.ClientService;
 import sf.l2j.commons.mmocore.IPacketHandler;
 
 /**

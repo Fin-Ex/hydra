@@ -1,9 +1,10 @@
 package ru.finex.ws.l2.network;
 
 import lombok.extern.slf4j.Slf4j;
-import ru.finex.gs.network.NetworkConfiguration;
-import ru.finex.ws.l2.network.model.L2GameClient;
+import org.apache.commons.lang3.StringUtils;
 import ru.finex.nif.SelectorThread;
+import ru.finex.ws.l2.network.model.L2GameClient;
+import ru.finex.ws.l2.network.model.NetworkConfiguration;
 import sf.l2j.commons.mmocore.IPacketHandler;
 import sf.l2j.commons.mmocore.SelectorConfig;
 import sf.l2j.commons.mmocore.SelectorThreadImpl;
@@ -43,7 +44,15 @@ public class SelectorThreadProvider implements Provider<SelectorThread> {
         }
 
         try {
-            selectorThread.openServerSocket(InetAddress.getByName(networkConfiguration.getHostname()), networkConfiguration.getPort());
+            String hostname = networkConfiguration.getHostname();
+            InetAddress bindAddress;
+            if (StringUtils.isBlank(hostname) || hostname.equals("*")) {
+                bindAddress = null;
+            } else {
+                bindAddress = InetAddress.getByName(hostname);
+            }
+
+            selectorThread.openServerSocket(bindAddress, networkConfiguration.getPort());
         } catch (IOException e) {
             log.error("FATAL: Failed to open server socket.", e);
             System.exit(1);

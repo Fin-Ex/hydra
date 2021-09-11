@@ -3,7 +3,7 @@ package ru.finex.ws.l2.network;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import ru.finex.core.model.GameObject;
-import ru.finex.gs.command.InputCommandService;
+import ru.finex.ws.command.InputCommandService;
 import ru.finex.ws.l2.network.model.L2GameClient;
 import ru.finex.ws.l2.network.model.L2GameClientPacket;
 import ru.finex.ws.l2.network.model.NetworkDto;
