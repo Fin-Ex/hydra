@@ -7,6 +7,7 @@ import ru.finex.ws.l2.model.event.PlayerEnterWorld;
 import ru.finex.ws.l2.network.AbstractNetworkCommand;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.model.L2GameClient;
+import ru.finex.ws.service.GameObjectService;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -18,8 +19,7 @@ import javax.inject.Named;
 public class EnterWorldCommand extends AbstractNetworkCommand {
 
     @Inject
-    @Named("Network")
-    private EventBus eventBus;
+    private GameObjectService gameObjectService;
 
     @Inject
     private OutcomePacketBuilderService packetBuilderService;
@@ -29,7 +29,7 @@ public class EnterWorldCommand extends AbstractNetworkCommand {
         L2GameClient client = (L2GameClient) getClient();
         GameObject gameObject = client.getGameObject();
 
-        eventBus.notify(new PlayerEnterWorld(gameObject));
+        gameObjectService.getEventBus().notify(new PlayerEnterWorld(gameObject));
         client.sendPacket(packetBuilderService.userInfo(gameObject));
     }
 }

@@ -9,8 +9,7 @@ services:
       THREAD_GAME_MAX: 2
       THREAD_SERVICE_MIN: 1
       THREAD_SERVICE_MAX: 4
-      CLUSTER_ADDRESS: 127.0.0.1
-      CLUSTER_INTERFACE: 127.0.0.1
+      REDIS_ADDRESS: "redis://finex-redis:6379"
       DB_URL: "jdbc:postgresql://postgres-world:5432/finex_world?currentSchema=public"
       DB_SCHEMA: public
       DB_USER: postgres
@@ -26,3 +25,5 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: finex_world
+  finex-redis:
+    image: "redis:6.2.5-alpine"

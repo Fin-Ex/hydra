@@ -8,6 +8,7 @@ import ru.finex.ws.l2.auth.model.event.ClientAuth;
 import ru.finex.ws.l2.network.model.L2GameClient;
 import ru.finex.ws.l2.network.model.NetworkConfiguration;
 import ru.finex.ws.l2.network.model.event.ClientDisconnected;
+import ru.finex.ws.l2.network.model.event.ClientEvent;
 import ru.finex.ws.model.Client;
 import sf.l2j.commons.crypt.NewCrypt;
 import sf.l2j.commons.random.Rnd;
@@ -87,7 +88,7 @@ public class LoginServerThread extends Thread {
 	}
 
 	@Inject
-	public void registerListeners(@Named("Network") EventBus eventBus) {
+	public void registerListeners(@Named("Network") EventBus<ClientEvent> eventBus) {
 		this.networkEventBus = eventBus;
 		eventBus.subscribe()
 			.cast(ClientDisconnected.class)

@@ -6,6 +6,7 @@ import ru.finex.ws.l2.auth.model.AuthFailReason;
 import ru.finex.ws.l2.auth.model.event.ClientAuth;
 import ru.finex.ws.l2.network.model.GameClientState;
 import ru.finex.ws.l2.network.model.L2GameClient;
+import ru.finex.ws.l2.network.model.event.ClientEvent;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -21,7 +22,7 @@ public class AuthStateProcessor {
     private final OutcomePacketBuilderService packetBuilderService;
 
     @Inject
-    public void registerListeners(@Named("Network") EventBus eventBus) {
+    public void registerListeners(@Named("Network") EventBus<ClientEvent> eventBus) {
         eventBus.subscribe()
             .cast(ClientAuth.class)
             .forEach(this::clientAuthed);
