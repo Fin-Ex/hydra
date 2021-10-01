@@ -2,7 +2,7 @@ package ru.finex.ws.l2.network;
 
 import lombok.extern.slf4j.Slf4j;
 import ru.finex.core.GlobalContext;
-import ru.finex.core.utils.Classes;
+import ru.finex.core.utils.ClassUtils;
 import ru.finex.ws.l2.network.model.L2GameClient;
 import sf.l2j.commons.lang.HexUtil;
 import sf.l2j.commons.mmocore.AbstractPacket;
@@ -72,7 +72,7 @@ public class PacketService implements IPacketHandler<L2GameClient> {
         
         log.debug("Create outcome packet: {}", packetType.getSimpleName());
 
-        return (T) Classes.createInstance(packetType);
+        return (T) ClassUtils.createInstance(packetType);
     }
 
     @Override
@@ -88,7 +88,7 @@ public class PacketService implements IPacketHandler<L2GameClient> {
 
         log.debug("Create income packet: {}", packetType.getSimpleName());
         
-        return (ReceivablePacket<L2GameClient>) Classes.createInstance(packetType);
+        return (ReceivablePacket<L2GameClient>) ClassUtils.createInstance(packetType);
     }
 
     private Class<? extends AbstractPacket> getPacketType(ByteBuffer buffer, PacketRegistry registry, int opcodeCount) {
