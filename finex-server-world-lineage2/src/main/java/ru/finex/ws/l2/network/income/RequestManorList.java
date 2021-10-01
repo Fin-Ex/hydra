@@ -9,7 +9,7 @@ import ru.finex.ws.l2.network.model.NetworkDto;
 /**
  * @author finfan
  */
-@IncomePacket(value = {@Opcode(0xd0), @Opcode(0x08)}, command = RefreshManorListCommand.class)
+@IncomePacket(value = {@Opcode(0xd0), @Opcode(0x01)}, command = RefreshManorListCommand.class)
 public class RequestManorList extends L2GameClientPacket {
 
 	@Override

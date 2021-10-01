@@ -11,7 +11,7 @@ import ru.finex.ws.l2.network.model.NetworkDto;
  * @author m0nster.mind
  */
 @Slf4j
-@IncomePacket(value = @Opcode(0x03), command = EnterWorldCommand.class)
+@IncomePacket(value = @Opcode(0x11), command = EnterWorldCommand.class)
 public class RequestEnterWorld extends L2GameClientPacket {
 
     @Override

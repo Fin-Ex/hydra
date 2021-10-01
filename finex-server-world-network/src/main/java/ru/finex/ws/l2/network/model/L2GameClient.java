@@ -8,6 +8,7 @@ import ru.finex.core.model.GameObject;
 import ru.finex.ws.l2.network.BlowFishKeygen;
 import ru.finex.ws.l2.network.GameCrypt;
 import ru.finex.ws.l2.network.model.event.ClientDisconnected;
+import ru.finex.ws.l2.network.model.event.ClientEvent;
 import ru.finex.ws.model.Client;
 import sf.l2j.commons.crypt.SessionKey;
 import sf.l2j.commons.mmocore.MMOClient;
@@ -40,7 +41,7 @@ public final class L2GameClient extends MMOClient implements Client {
 	private GameObject gameObject;
 
 	@Inject @Named("Network")
-	private EventBus eventBus;
+	private EventBus<ClientEvent> eventBus;
 
 	public L2GameClient(MMOConnection<L2GameClient> con) {
 		super(con);

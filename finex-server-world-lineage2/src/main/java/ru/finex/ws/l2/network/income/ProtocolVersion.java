@@ -10,7 +10,7 @@ import ru.finex.ws.l2.network.model.dto.ProtocolVersionDto;
 /**
  * @author m0nster.mind
  */
-@IncomePacket(value = @Opcode(0x00), command = CheckProtocolVersionCommand.class)
+@IncomePacket(value = @Opcode(0x0E), command = CheckProtocolVersionCommand.class)
 public final class ProtocolVersion extends L2GameClientPacket {
 
 	@Getter

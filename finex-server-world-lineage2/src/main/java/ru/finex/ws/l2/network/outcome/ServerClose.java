@@ -7,11 +7,11 @@ import ru.finex.ws.l2.network.model.L2GameServerPacket;
 /**
  * @author m0nster.mind
  */
-@OutcomePacket(@Opcode(0x20))
+@OutcomePacket(@Opcode(0xB0))
 public class ServerClose extends L2GameServerPacket {
     @Override
     protected void writeImpl() {
-        writeC(0x20);
+        writeC(0xB0);
     }
 
 }

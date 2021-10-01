@@ -10,14 +10,14 @@ import ru.finex.ws.l2.network.model.L2GameServerPacket;
  * @author m0nster.mind
  */
 @Data
-@OutcomePacket(@Opcode(0x0a))
+@OutcomePacket(@Opcode(0x0A))
 public class AuthLoginFail extends L2GameServerPacket {
 
 	private AuthFailReason reason;
 
 	@Override
 	protected final void writeImpl() {
-		writeC(0x14);
+		writeC(0x0A);
 		writeD(reason.isSuccess());
 		writeD(reason.ordinal());
 	}

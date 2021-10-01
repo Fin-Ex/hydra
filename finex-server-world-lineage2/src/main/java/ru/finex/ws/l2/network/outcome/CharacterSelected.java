@@ -46,7 +46,7 @@ public class CharacterSelected extends L2GameServerPacket {
 		writeD((int)position.getZ());
 		writeF(status.getHp());
 		writeF(status.getMp());
-		writeD(0); // sp
+		writeQ(0); // sp
 		writeQ(0); // exp
 		writeD(1); // level
 		writeD(0); // karma
