@@ -29,7 +29,7 @@ public class GameStartCommand extends AbstractNetworkCommand {
     public void executeCommand() {
         L2GameClient client = (L2GameClient) getClient();
 
-        GameObject player = gameObjectService.createPlayer(1);
+        GameObject player = gameObjectService.createGameObject("test_player", 1);
         ClientComponent component = componentService.getComponent(player, ClientComponent.class);
         component.setClient(client);
         client.setGameObject(player);
