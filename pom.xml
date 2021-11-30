@@ -41,6 +41,7 @@
 		<module>finex-server-world-lineage2</module>
         <module>finex-server-world-lineage2-auth</module>
 		<module>finex-server-world-network</module>
+		<module>finex-server-auth-lineage2</module>
 	</modules>
 
 </project>

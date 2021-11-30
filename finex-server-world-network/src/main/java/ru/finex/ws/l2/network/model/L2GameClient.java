@@ -1,21 +1,22 @@
 package ru.finex.ws.l2.network.model;
 
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import ru.finex.core.events.EventBus;
 import ru.finex.core.model.GameObject;
 import ru.finex.ws.l2.network.BlowFishKeygen;
-import ru.finex.ws.l2.network.GameCrypt;
+import ru.finex.ws.l2.network.PacketExecutor;
 import ru.finex.ws.l2.network.model.event.ClientDisconnected;
 import ru.finex.ws.l2.network.model.event.ClientEvent;
-import ru.finex.ws.model.Client;
-import sf.l2j.commons.crypt.SessionKey;
-import sf.l2j.commons.mmocore.MMOClient;
-import sf.l2j.commons.mmocore.MMOConnection;
+import ru.finex.ws.model.ClientSession;
 
-import java.net.InetAddress;
-import java.nio.ByteBuffer;
+import java.net.SocketAddress;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -25,14 +26,13 @@ import javax.inject.Named;
  * @author KenM
  */
 @Slf4j
-public final class L2GameClient extends MMOClient implements Client {
+public final class L2GameClient extends SimpleChannelInboundHandler<NetworkDto> implements ClientSession {
 
-	@Getter private GameClientState state = GameClientState.CONNECTED;
+	@Getter private GameClientState state = GameClientState.NOT_CONNECTED;
 
 	@Getter @Setter private String login;
 
-	@Getter @Setter private SessionKey sessionId;
-	@Getter @Setter private GameCrypt crypt = new GameCrypt();
+//	@Getter @Setter private SessionKey sessionId;
 
 	@Getter private boolean isAuthedGG;
 	@Getter @Setter private boolean isDetached;
@@ -40,15 +40,36 @@ public final class L2GameClient extends MMOClient implements Client {
 	@Getter @Setter
 	private GameObject gameObject;
 
+	private Channel channel;
+
 	@Inject @Named("Network")
 	private EventBus<ClientEvent> eventBus;
 
-	public L2GameClient(MMOConnection<L2GameClient> con) {
-		super(con);
+	@Inject
+	private PacketExecutor packetExecutor;
+
+	@Override
+	public void channelActive(ChannelHandlerContext ctx) throws Exception {
+		super.channelActive(ctx);
+		channel = ctx.channel();
+		state = GameClientState.CONNECTED;
+	}
+
+	@Override
+	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+		super.channelInactive(ctx);
+		state = GameClientState.NOT_CONNECTED;
+		eventBus.notify(new ClientDisconnected(this));
+	}
+
+	@Override
+	protected void channelRead0(ChannelHandlerContext ctx, NetworkDto msg) throws Exception {
+		packetExecutor.execute(this, msg);
 	}
 
 	public byte[] enableCrypt() {
 		byte[] key = BlowFishKeygen.getRandomKey();
+		ChannelHandler crypt = channel.pipeline().get("crypt");
 		crypt.setKey(key);
 		return key;
 	}
@@ -60,71 +81,44 @@ public final class L2GameClient extends MMOClient implements Client {
 		}
 	}
 
-	@Override
-	public boolean decrypt(ByteBuffer buf, int size) {
-		crypt.decrypt(buf.array(), buf.position(), size);
-		return true;
-	}
-
-	@Override
-	public boolean encrypt(final ByteBuffer buf, final int size) {
-		crypt.encrypt(buf.array(), buf.position(), size);
-		buf.position(buf.position() + size);
-		return true;
-	}
-
 	public void setGameGuardOk(boolean val) {
 		isAuthedGG = val;
 	}
 
-	public void sendPacket(L2GameServerPacket gsp) {
+	public void sendPacket(NetworkDto dto) {
 		if (isDetached) {
 			return;
 		}
 
-		getConnection().sendPacket(gsp);
-		gsp.runImpl();
+		channel.writeAndFlush(dto);
 	}
 
-	public void close(L2GameServerPacket gsp) {
+	public void close(NetworkDto dto) {
 		isDetached = true;
-		getConnection().close(gsp);
+		channel.writeAndFlush(dto);
+		channel.close();
 	}
 
+	@SneakyThrows
 	@Override
 	public void closeNow() {
 		isDetached = true;
-		getConnection().close();
+		channel.close().sync();
 	}
 
-	@Override
-	protected void onForcedDisconnection() {
-		log.info("Client {} disconnected abnormally.", toString());
-	}
-
-	@Override
-	protected void onDisconnection() {
-		eventBus.notify(new ClientDisconnected(this));
-	}
-
-	/**
-	 * Produces the best possible string representation of this client.
-	 */
 	@Override
 	public String toString() {
-		try {
-			final InetAddress address = getConnection().getInetAddress();
-			switch (getState()) {
-				case CONNECTED:
-					return "[IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
-				case AUTHED:
-				case IN_GAME:
-					return "[Account: " + getLogin() + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
-				default:
-					throw new IllegalStateException("Missing state on switch");
-			}
-		} catch (NullPointerException e) {
-			return "[Character read failed due to disconnect]";
+		final SocketAddress address = channel.remoteAddress();
+		switch (getState()) {
+			case NOT_CONNECTED:
+				return "[IP: disconnected]";
+			case CONNECTED:
+				return "[IP: " + address.toString() + "]";
+			case AUTHED:
+			case IN_GAME:
+				return "[Account: " + getLogin() + " - IP: " + address.toString() + "]";
+			default:
+				throw new IllegalStateException("Missing state on switch");
 		}
 	}
 

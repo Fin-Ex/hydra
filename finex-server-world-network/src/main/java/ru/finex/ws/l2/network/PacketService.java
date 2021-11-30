@@ -3,7 +3,7 @@ package ru.finex.ws.l2.network;
 import lombok.extern.slf4j.Slf4j;
 import ru.finex.core.GlobalContext;
 import ru.finex.core.utils.ClassUtils;
-import ru.finex.ws.l2.network.model.L2GameClient;
+import ru.finex.ws.l2.network.serial.PacketSerializer;
 import sf.l2j.commons.lang.HexUtil;
 import sf.l2j.commons.mmocore.AbstractPacket;
 import sf.l2j.commons.mmocore.IPacketHandler;
@@ -18,7 +18,7 @@ import java.nio.ByteBuffer;
  */
 @Slf4j
 @Singleton
-public class PacketService implements IPacketHandler<L2GameClient> {
+public class PacketService {
 
     private final PacketRegistry incomePackets = new PacketRegistry();
     private final PacketRegistry outcomePackets = new PacketRegistry();
@@ -76,9 +76,9 @@ public class PacketService implements IPacketHandler<L2GameClient> {
     }
 
     @Override
-    public ReceivablePacket<L2GameClient> handlePacket(ByteBuffer buffer, L2GameClient client) {
-        Class<? extends AbstractPacket> packetType = getPacketType(buffer, incomePackets, 0);
-        if (packetType == null) {
+    public PacketSerializer<?> handlePacket(ByteBuffer buffer) {
+        PacketSerializer packetSerializer = getPacketType(buffer, incomePackets, 0);
+        if (packetSerializer == null) {
             byte[] data = new byte[buffer.limit() - 2];
             buffer.position(2);
             buffer.get(data);
@@ -88,7 +88,7 @@ public class PacketService implements IPacketHandler<L2GameClient> {
 
         log.debug("Create income packet: {}", packetType.getSimpleName());
         
-        return (ReceivablePacket<L2GameClient>) ClassUtils.createInstance(packetType);
+        return packetSerializer.serialize(buffer);
     }
 
     private Class<? extends AbstractPacket> getPacketType(ByteBuffer buffer, PacketRegistry registry, int opcodeCount) {

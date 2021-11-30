@@ -1,8 +1,11 @@
 package ru.finex.ws.l2.network.module;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.name.Names;
 import ru.finex.core.inject.LoaderModule;
+import ru.finex.network.netty.NettyNetworkService;
 import ru.finex.nif.SelectorThread;
+import ru.finex.ws.l2.network.ClientNettyNetworkServiceProvider;
 import ru.finex.ws.l2.network.ClientServiceImpl;
 import ru.finex.ws.l2.network.PacketService;
 import ru.finex.ws.l2.network.SelectorThreadProvider;
@@ -21,6 +24,7 @@ public class NetworkModule extends AbstractModule {
         bind(IPacketHandler.class).to(PacketService.class);
         bind(SelectorThread.class).toProvider(SelectorThreadProvider.class);
         bind(ClientService.class).to(ClientServiceImpl.class);
+        bind(NettyNetworkService.class).annotatedWith(Names.named("ClientNetwork")).toProvider(ClientNettyNetworkServiceProvider.class);
     }
 
 }

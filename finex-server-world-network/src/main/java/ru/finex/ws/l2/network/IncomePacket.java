@@ -17,7 +17,4 @@ public @interface IncomePacket {
     /** Опкоды пакета. */
     Opcode[] value();
 
-    /** Связанная команда с пакетом. */
-    Class<? extends AbstractNetworkCommand> command() default NoOpCommand.class;
-
 }

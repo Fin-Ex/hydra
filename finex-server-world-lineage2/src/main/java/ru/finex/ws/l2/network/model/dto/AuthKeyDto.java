@@ -2,6 +2,8 @@ package ru.finex.ws.l2.network.model.dto;
 
 import lombok.Builder;
 import lombok.Data;
+import ru.finex.ws.l2.command.network.AuthClientCommand;
+import ru.finex.ws.l2.network.Cmd;
 import ru.finex.ws.l2.network.model.NetworkDto;
 
 /**
@@ -9,6 +11,7 @@ import ru.finex.ws.l2.network.model.NetworkDto;
  */
 @Data
 @Builder
+@Cmd(AuthClientCommand.class)
 public class AuthKeyDto implements NetworkDto {
 
     private String login;

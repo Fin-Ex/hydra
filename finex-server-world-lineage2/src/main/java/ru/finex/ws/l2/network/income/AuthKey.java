@@ -10,7 +10,7 @@ import ru.finex.ws.l2.network.model.dto.AuthKeyDto;
 /**
  * @author m0nster.mind
  */
-@IncomePacket(value = @Opcode(0x2B), command = AuthClientCommand.class)
+@IncomePacket(value = @Opcode(0x2B))
 public class AuthKey extends L2GameClientPacket {
 
     @Getter
