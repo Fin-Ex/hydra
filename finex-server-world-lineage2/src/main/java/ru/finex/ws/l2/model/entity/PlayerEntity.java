@@ -17,9 +17,9 @@ import ru.finex.ws.l2.model.PvpMode;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PlayerEntity implements Entity {
+public class PlayerEntity implements Entity<Integer> {
 
-    private int persistenceId;
+    private Integer persistenceId;
 
     private PlayerRace race;
     private Gender gender;

@@ -13,8 +13,9 @@ import ru.finex.core.model.entity.Entity;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class StatEntity implements Entity {
-	private int persistenceId;
+public class StatEntity implements Entity<Integer> {
+
+	private Integer persistenceId;
 
 	private int pAtk;
 	private int pDef;

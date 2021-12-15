@@ -15,9 +15,9 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClanEntity implements Entity {
+public class ClanEntity implements Entity<Integer> {
 
-    private int persistenceId;
+    private Integer persistenceId;
 
     private int crestId;
     private byte[] crest;

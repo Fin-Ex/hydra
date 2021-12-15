@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:jdk-11.0.8_10-alpine
+FROM eclipse-temurin:17.0.1_12-jdk-alpine
 MAINTAINER m0nster.mind
 WORKDIR /
 ADD target/finex-world-lineage2.jar finex-world-lineage2.jar
