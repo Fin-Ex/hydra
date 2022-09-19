@@ -23,7 +23,7 @@
 		</repository>
 		<repository>
 			<id>github</id>
-			<url>https://maven.pkg.github.com/zcxv/*</url>
+			<url>https://maven.pkg.github.com/Fin-Ex/*</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
@@ -33,14 +33,13 @@
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<url>https://maven.pkg.github.com/finfan222/finex-interlude</url>
+			<url>https://maven.pkg.github.com/Fin-Ex/finex-server-l2</url>
 		</repository>
 	</distributionManagement>
 
 	<modules>
 		<module>finex-server-world-lineage2</module>
-        <module>finex-server-world-lineage2-auth</module>
-		<module>finex-server-world-network</module>
+		<module>finex-server-auth-lineage2</module>
 	</modules>
 
 </project>

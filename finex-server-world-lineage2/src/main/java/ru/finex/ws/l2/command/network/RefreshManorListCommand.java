@@ -1,24 +1,25 @@
 package ru.finex.ws.l2.command.network;
 
 import lombok.RequiredArgsConstructor;
-import ru.finex.ws.l2.network.AbstractNetworkCommand;
+import ru.finex.core.command.AbstractNetworkCommand;
+import ru.finex.ws.l2.network.session.GameClient;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
-import ru.finex.ws.l2.network.model.L2GameClient;
 
 import javax.inject.Inject;
 
 /**
  * @author m0nster.mind
  */
-@RequiredArgsConstructor
+@RequiredArgsConstructor(onConstructor_ = { @Inject })
 public class RefreshManorListCommand extends AbstractNetworkCommand {
+
+    private final GameClient session;
 
     @Inject
     private OutcomePacketBuilderService packetBuilderService;
 
     @Override
     public void executeCommand() {
-        L2GameClient client = (L2GameClient) getClient();
-        client.sendPacket(packetBuilderService.castleManorList());
+        session.sendPacket(packetBuilderService.castleManorList());
     }
 }

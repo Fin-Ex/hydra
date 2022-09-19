@@ -6,4 +6,5 @@
 **/.mf
 **/*.iml
 **/*.7z
+**/dependency-reduced-pom.xml
 ./test

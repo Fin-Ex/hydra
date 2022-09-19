@@ -1,10 +1,10 @@
 package ru.finex.ws.l2;
 
-import ru.finex.core.db.migration.Evolution;
+import ru.finex.evolution.Evolution;
 
 /**
  * @author m0nster.mind
  */
-@Evolution("lin2")
+@Evolution(value = "lin2", dependencies = "ws")
 public class Lineage2 {
 }

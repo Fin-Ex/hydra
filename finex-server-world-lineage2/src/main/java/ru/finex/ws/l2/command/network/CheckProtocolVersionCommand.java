@@ -1,9 +1,9 @@
 package ru.finex.ws.l2.command.network;
 
 import lombok.RequiredArgsConstructor;
-import ru.finex.ws.l2.network.AbstractNetworkCommand;
+import ru.finex.core.command.AbstractNetworkCommand;
+import ru.finex.ws.l2.network.session.GameClient;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
-import ru.finex.ws.l2.network.model.L2GameClient;
 import ru.finex.ws.l2.network.model.dto.ProtocolVersionDto;
 
 import javax.inject.Inject;
@@ -11,24 +11,24 @@ import javax.inject.Inject;
 /**
  * @author m0nster.mind
  */
-@RequiredArgsConstructor
+@RequiredArgsConstructor(onConstructor_ = { @Inject })
 public class CheckProtocolVersionCommand extends AbstractNetworkCommand {
 
     private final ProtocolVersionDto dto;
+    private final GameClient session;
 
     @Inject
     private OutcomePacketBuilderService packetBuilderService;
 
     @Override
     public void executeCommand() {
-        L2GameClient client = (L2GameClient) getClient();
         if (dto.getVersion() == -2) {
-            client.close(null);
+            session.close(null);
         }
 
         // FIXME m0nster.mind: check protocol version
 
-        client.sendPacket(packetBuilderService.keyPacket(client.enableCrypt()));
+        session.sendPacket(packetBuilderService.keyPacket(session.enableCrypt()));
     }
 
 }
