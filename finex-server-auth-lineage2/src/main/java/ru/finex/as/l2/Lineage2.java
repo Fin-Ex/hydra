@@ -1,6 +1,6 @@
 package ru.finex.as.l2;
 
-import ru.finex.core.db.migration.Evolution;
+import ru.finex.evolution.Evolution;
 
 /**
  * @author m0nster.mind

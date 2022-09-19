@@ -1,11 +1,8 @@
 package ru.finex.ws.l2.component.player;
 
 import lombok.Data;
-import lombok.Getter;
-import ru.finex.ws.model.Client;
+import ru.finex.ws.l2.network.session.GameClient;
 import ru.finex.ws.model.component.AbstractComponent;
-
-import javax.inject.Inject;
 
 /**
  * @author m0nster.mind
@@ -13,6 +10,6 @@ import javax.inject.Inject;
 @Data
 public class ClientComponent extends AbstractComponent {
 
-    private Client client;
+    private GameClient client;
 
 }

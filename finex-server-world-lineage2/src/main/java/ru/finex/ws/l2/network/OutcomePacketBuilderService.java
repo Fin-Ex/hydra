@@ -3,7 +3,7 @@ package ru.finex.ws.l2.network;
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.component.ComponentService;
 import ru.finex.core.model.GameObject;
-import ru.finex.ws.l2.auth.model.AuthFailReason;
+import ru.finex.network.netty.model.NetworkDto;
 import ru.finex.ws.l2.avatar.AvatarService;
 import ru.finex.ws.l2.component.base.CoordinateComponent;
 import ru.finex.ws.l2.component.base.StatusComponent;
@@ -19,15 +19,18 @@ import ru.finex.ws.l2.component.player.RecommendationComponent;
 import ru.finex.ws.l2.component.player.SpeedComponent;
 import ru.finex.ws.l2.component.player.StateComponent;
 import ru.finex.ws.l2.component.player.StoreComponent;
+import ru.finex.ws.l2.model.AuthFailReason;
 import ru.finex.ws.l2.model.dto.SelectedAvatarDto;
-import ru.finex.ws.l2.network.model.L2GameClient;
-import ru.finex.ws.l2.network.model.L2GameServerPacket;
-import ru.finex.ws.l2.network.outcome.AuthLoginFail;
-import ru.finex.ws.l2.network.outcome.CharSelectInfo;
-import ru.finex.ws.l2.network.outcome.CharacterSelected;
-import ru.finex.ws.l2.network.outcome.KeyPacket;
-import ru.finex.ws.l2.network.outcome.UserInfo;
+import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
+import ru.finex.ws.l2.network.model.dto.CharSelectInfoDto;
+import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
+import ru.finex.ws.l2.network.model.dto.ManorListDto;
+import ru.finex.ws.l2.network.model.dto.ServerCloseDto;
+import ru.finex.ws.l2.network.model.dto.ServerKeyDto;
+import ru.finex.ws.l2.network.model.dto.UserInfoDto;
+import ru.finex.ws.l2.network.session.GameClient;
 
+import java.util.Collections;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -38,72 +41,75 @@ import javax.inject.Singleton;
 @RequiredArgsConstructor(onConstructor_ = { @Inject })
 public class OutcomePacketBuilderService {
 
-    private final PacketService packetService;
     private final AvatarService avatarService;
     private final ComponentService componentService;
 
-    public L2GameServerPacket keyPacket(byte[] key) {
-        KeyPacket keyPacket = packetService.createOutcomePacket(0x00);
-        keyPacket.setKey(key);
-        return keyPacket;
+    public NetworkDto keyPacket(byte[] key) {
+        return ServerKeyDto.builder()
+            .key(key)
+            .serverId(0x01)
+            .languageId(0x01) // EN/NA
+            .build();
     }
 
-    public L2GameServerPacket charSelectInfo(String login, int sessionId) {
-        CharSelectInfo packet = packetService.createOutcomePacket(0x13);
-        packet.setLogin(login);
-        packet.setSessionId(sessionId);
-        packet.setAvatars(avatarService.getAvatars(login));
-        return packet;
+    public NetworkDto charSelectInfo(String login, int sessionId) {
+        return CharSelectInfoDto.builder()
+            .login(login)
+            .sessionId(sessionId)
+            .avatars(avatarService.getAvatars(login))
+            .build();
     }
 
-    public L2GameServerPacket authLoginFail(AuthFailReason reason) {
-        AuthLoginFail packet = packetService.createOutcomePacket(0x14);
-        packet.setReason(reason);
-        return packet;
+    public NetworkDto authLoginFail(AuthFailReason reason) {
+        return AuthLoginFailDto.builder()
+            .messageId(reason.getMessageId())
+            .isSuccess(reason.isSuccess())
+            .build();
     }
 
-    public L2GameServerPacket characterSelected(GameObject gameObject) {
+    public NetworkDto characterSelected(GameObject gameObject) {
         ClientComponent clientComponent = componentService.getComponent(gameObject, ClientComponent.class);
-        L2GameClient client = (L2GameClient) clientComponent.getClient();
-
-        CharacterSelected packet = packetService.createOutcomePacket(0x15);
-        packet.setRuntimeId(gameObject.getRuntimeId());
-        packet.setSessionId(client.getSessionId().playOkID1);
+        GameClient client = clientComponent.getClient();
 
         SelectedAvatarDto avatar = new SelectedAvatarDto();
         avatar.setPlayer(componentService.getComponent(gameObject, PlayerComponent.class).getEntity().clone());
         avatar.setClan(componentService.getComponent(gameObject, ClanComponent.class).getEntity().clone());
         avatar.setPosition(componentService.getComponent(gameObject, CoordinateComponent.class).getPosition().clone());
         avatar.setStatus(componentService.getComponent(gameObject, StatusComponent.class).getStatusEntity().clone());
-        packet.setAvatar(avatar);
 
-        return packet;
+        return CharacterSelectedDto.builder()
+            .runtimeId(gameObject.getRuntimeId())
+            .sessionId(0x00)
+            .avatar(avatar)
+            .build();
     }
 
-    public L2GameServerPacket serverClose() {
-        return packetService.createOutcomePacket(0x26);
+    public NetworkDto serverClose() {
+        return ServerCloseDto.INSTANCE;
     }
     
-    public L2GameServerPacket castleManorList() {
-        return packetService.createOutcomePacket(0xfe, 0x1b);
+    public NetworkDto castleManorList() {
+        return ManorListDto.builder()
+            .castleIds(Collections.emptyList())
+            .build();
     }
     
-    public L2GameServerPacket userInfo(GameObject gameObject) {
-        UserInfo packet = packetService.createOutcomePacket(0x04);
-        packet.setRuntimeId(gameObject.getRuntimeId());
-        packet.setAbnormalComponent(componentService.getComponent(gameObject, AbnormalComponent.class));
-        packet.setClanComponent(componentService.getComponent(gameObject, ClanComponent.class));
-        packet.setClassComponent(componentService.getComponent(gameObject, ClassComponent.class));
-        packet.setCollisionComponent(componentService.getComponent(gameObject, CollisionComponent.class));
-        packet.setCoordinateComponent(componentService.getComponent(gameObject, CoordinateComponent.class));
-        packet.setCubicComponent(componentService.getComponent(gameObject, CubicComponent.class));
-        packet.setMountComponent(componentService.getComponent(gameObject, MountComponent.class));
-        packet.setPlayerComponent(componentService.getComponent(gameObject, PlayerComponent.class));
-        packet.setRecommendationComponent(componentService.getComponent(gameObject, RecommendationComponent.class));
-        packet.setSpeedComponent(componentService.getComponent(gameObject, SpeedComponent.class));
-        packet.setStateComponent(componentService.getComponent(gameObject, StateComponent.class));
-        packet.setStatusComponent(componentService.getComponent(gameObject, StatusComponent.class));
-        packet.setStoreComponent(componentService.getComponent(gameObject, StoreComponent.class));
-        return packet;
+    public NetworkDto userInfo(GameObject gameObject) {
+        return UserInfoDto.builder()
+            .runtimeId(gameObject.getRuntimeId())
+            .abnormalComponent(componentService.getComponent(gameObject, AbnormalComponent.class))
+            .clanComponent(componentService.getComponent(gameObject, ClanComponent.class))
+            .classComponent(componentService.getComponent(gameObject, ClassComponent.class))
+            .collisionComponent(componentService.getComponent(gameObject, CollisionComponent.class))
+            .coordinateComponent(componentService.getComponent(gameObject, CoordinateComponent.class))
+            .cubicComponent(componentService.getComponent(gameObject, CubicComponent.class))
+            .mountComponent(componentService.getComponent(gameObject, MountComponent.class))
+            .playerComponent(componentService.getComponent(gameObject, PlayerComponent.class))
+            .recommendationComponent(componentService.getComponent(gameObject, RecommendationComponent.class))
+            .speedComponent(componentService.getComponent(gameObject, SpeedComponent.class))
+            .stateComponent(componentService.getComponent(gameObject, StateComponent.class))
+            .statusComponent(componentService.getComponent(gameObject, StatusComponent.class))
+            .storeComponent(componentService.getComponent(gameObject, StoreComponent.class))
+            .build();
     }
 }

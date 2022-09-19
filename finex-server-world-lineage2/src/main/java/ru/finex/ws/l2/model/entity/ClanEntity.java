@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.finex.core.model.entity.Entity;
+import ru.finex.core.model.entity.EntityObject;
 
 import java.util.List;
 
@@ -15,9 +15,9 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClanEntity implements Entity {
+public class ClanEntity implements EntityObject<Integer> {
 
-    private int persistenceId;
+    private Integer persistenceId;
 
     private int crestId;
     private byte[] crest;

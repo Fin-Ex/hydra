@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.finex.core.model.entity.Entity;
+import ru.finex.core.model.entity.EntityObject;
 import ru.finex.ws.l2.model.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
 import ru.finex.ws.l2.model.PlayerRace;
@@ -17,9 +17,9 @@ import ru.finex.ws.l2.model.PvpMode;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PlayerEntity implements Entity {
+public class PlayerEntity implements EntityObject<Integer> {
 
-    private int persistenceId;
+    private Integer persistenceId;
 
     private PlayerRace race;
     private Gender gender;

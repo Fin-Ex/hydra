@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.finex.core.model.entity.Entity;
+import ru.finex.core.model.entity.EntityObject;
 
 /**
  * @author m0nster.mind
@@ -13,9 +13,9 @@ import ru.finex.core.model.entity.Entity;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class StatusEntity implements Entity {
+public class StatusEntity implements EntityObject<Integer> {
 
-    private int persistenceId;
+    private Integer persistenceId;
     private double hp;
     private double maxHp;
     private double mp;

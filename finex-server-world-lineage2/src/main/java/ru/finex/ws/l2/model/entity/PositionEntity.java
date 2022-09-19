@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.finex.core.model.entity.Entity;
+import ru.finex.core.model.entity.EntityObject;
 
 /**
  * @author m0nster.mind
@@ -13,9 +13,9 @@ import ru.finex.core.model.entity.Entity;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PositionEntity implements Entity {
+public class PositionEntity implements EntityObject<Integer> {
 
-    private int persistenceId; // ID компонента, в бд: id
+    private Integer persistenceId; // ID компонента, в бд: id
     private int gameObjectPersistenceId; // ID игрового объекта в БД, к которому относится компонент, в базе: go_id
     private double x;
     private double y;
