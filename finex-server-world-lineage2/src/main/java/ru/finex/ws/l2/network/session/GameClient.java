@@ -9,7 +9,7 @@ import ru.finex.core.command.NetworkCommandQueue;
 import ru.finex.core.events.EventBus;
 import ru.finex.core.model.GameObject;
 import ru.finex.core.network.AbstractClientSession;
-import ru.finex.ws.l2.network.GameSessionEvent;
+import ru.finex.ws.l2.network.model.event.GameSessionEvent;
 import ru.finex.ws.l2.network.codec.PayloadCodec;
 import ru.finex.ws.l2.network.model.event.SessionConnected;
 import ru.finex.ws.l2.network.model.event.SessionDisconnected;

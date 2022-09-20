@@ -1,4 +1,4 @@
-package ru.finex.ws.l2.network;
+package ru.finex.ws.l2.network.model.event;
 
 import ru.finex.ws.l2.network.session.GameClient;
 

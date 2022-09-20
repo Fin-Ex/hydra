@@ -12,7 +12,7 @@ import ru.finex.network.netty.serial.OpcodeCodec;
 import ru.finex.network.netty.service.NettyNetworkService;
 import ru.finex.ws.l2.network.AuthStateProcessor;
 import ru.finex.ws.l2.network.EventLoopGroupService;
-import ru.finex.ws.l2.network.GameSessionEvent;
+import ru.finex.ws.l2.network.model.event.GameSessionEvent;
 import ru.finex.ws.l2.network.NetworkAddressProvider;
 import ru.finex.ws.l2.network.NetworkPipeline;
 import ru.finex.ws.l2.network.NetworkServiceProvider;

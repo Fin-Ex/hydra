@@ -2,6 +2,7 @@ package ru.finex.ws.l2.network;
 
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.events.EventBus;
+import ru.finex.ws.l2.network.model.event.GameSessionEvent;
 import ru.finex.ws.l2.network.model.event.SessionConnected;
 import ru.finex.ws.l2.network.session.GameClient;
 import ru.finex.ws.l2.network.session.GameClientState;
