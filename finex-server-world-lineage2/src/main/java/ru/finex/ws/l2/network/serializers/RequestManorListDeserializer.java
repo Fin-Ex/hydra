@@ -8,9 +8,12 @@ import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.ws.l2.command.network.RefreshManorListCommand;
 import ru.finex.ws.l2.network.model.dto.VoidDto;
 
+import javax.inject.Singleton;
+
 /**
  * @author m0nster.mind
  */
+@Singleton
 @IncomePacket(value = {@Opcode(0xd0), @Opcode(0x01)}, command = @Cmd(RefreshManorListCommand.class))
 public class RequestManorListDeserializer implements PacketDeserializer<VoidDto> {
 

@@ -11,27 +11,24 @@ import ru.finex.core.command.NetworkCommandQueue;
 import ru.finex.core.events.EventBus;
 import ru.finex.core.model.GameObject;
 import ru.finex.core.network.AbstractClientSession;
-import ru.finex.core.rng.RandomProviders;
+import ru.finex.core.network.NetworkCommandScoped;
 import ru.finex.network.netty.model.ClientSession;
+import ru.finex.transport.l2.model.dto.AuthSession;
 
 import javax.inject.Inject;
 
 /**
  * @author m0nster.mind
  */
+@NetworkCommandScoped
 public class GameSession extends AbstractClientSession implements ClientSession {
+
+    @Getter
+    private final AuthSession data = new AuthSession();
 
     @Getter
     @Setter
     private GameObject gameObject;
-
-    @Getter
-    @Setter
-    private int sessionId;
-
-    @Getter
-    @Setter
-    private long sessionKey;
 
     @Inject
     @Getter(AccessLevel.PROTECTED)
@@ -43,7 +40,6 @@ public class GameSession extends AbstractClientSession implements ClientSession 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
-        sessionId = RandomProviders.synchronizedRandom().get().nextInt();
         eventBus.notify(new SessionConnected(this));
     }
 
@@ -51,5 +47,10 @@ public class GameSession extends AbstractClientSession implements ClientSession 
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         super.channelInactive(ctx);
         eventBus.notify(new SessionDisconnected(this));
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

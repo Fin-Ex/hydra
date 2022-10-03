@@ -8,12 +8,12 @@ import ru.finex.ws.l2.component.player.CollisionComponent;
 import ru.finex.ws.l2.component.player.RecommendationComponent;
 import ru.finex.ws.l2.component.player.SpeedComponent;
 import ru.finex.ws.l2.model.ClassId;
-import ru.finex.ws.l2.model.entity.ClanEntity;
-import ru.finex.ws.l2.model.entity.ParameterEntity;
-import ru.finex.ws.l2.model.entity.PlayerEntity;
-import ru.finex.ws.l2.model.entity.PositionEntity;
-import ru.finex.ws.l2.model.entity.StatEntity;
-import ru.finex.ws.l2.model.entity.StatusEntity;
+import ru.finex.ws.l2.model.entity.ClanComponentEntity;
+import ru.finex.ws.l2.model.entity.ParameterComponentEntity;
+import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
+import ru.finex.ws.l2.model.entity.PositionComponentEntity;
+import ru.finex.ws.l2.model.entity.StatComponentEntity;
+import ru.finex.ws.l2.model.entity.StatusComponentEntity;
 import ru.finex.ws.l2.network.SerializerHelper;
 import ru.finex.ws.l2.network.model.UserInfoType;
 import ru.finex.ws.l2.network.model.dto.UserInfoDto;
@@ -46,7 +46,7 @@ public class UserInfoSerializer implements PacketSerializer<UserInfoDto> {
         buffer.writeShortLE(23);
         buffer.writeBytes(MASKS);
 
-        PlayerEntity player = dto.getPlayerComponent().getEntity();
+        PlayerComponentEntity player = dto.getPlayerComponent().getEntity();
 
         if (containsMask(UserInfoType.RELATION)) {
             buffer.writeIntLE(0x00);
@@ -65,7 +65,7 @@ public class UserInfoSerializer implements PacketSerializer<UserInfoDto> {
 
         if (containsMask(UserInfoType.BASE_STATS)) {
             buffer.writeShortLE(18);
-            ParameterEntity parameters = dto.getParameterComponent().getEntity();
+            ParameterComponentEntity parameters = dto.getParameterComponent().getEntity();
             buffer.writeShortLE(parameters.getSTR());
             buffer.writeShortLE(parameters.getDEX());
             buffer.writeShortLE(parameters.getCON());
@@ -78,15 +78,15 @@ public class UserInfoSerializer implements PacketSerializer<UserInfoDto> {
 
         if (containsMask(UserInfoType.MAX_HPCPMP)) {
             buffer.writeShortLE(14);
-            StatusEntity status = dto.getStatusComponent().getStatusEntity();
-            buffer.writeIntLE((int)status.getMaxHp());
-            buffer.writeIntLE((int)status.getMaxMp());
-            buffer.writeIntLE((int)status.getMaxCp());
+            StatusComponentEntity status = dto.getStatusComponent().getStatusEntity();
+            buffer.writeIntLE(status.getMaxHp().intValue());
+            buffer.writeIntLE(status.getMaxMp().intValue());
+            buffer.writeIntLE(status.getMaxCp().intValue());
         }
 
         if (containsMask(UserInfoType.CURRENT_HPMPCP_EXP_SP)) {
             buffer.writeShortLE(38);
-            StatusEntity status = dto.getStatusComponent().getStatusEntity();
+            StatusComponentEntity status = dto.getStatusComponent().getStatusEntity();
             buffer.writeIntLE((int) Math.round(status.getHp()));
             buffer.writeIntLE((int) Math.round(status.getMp()));
             buffer.writeIntLE((int) Math.round(status.getCp()));
@@ -119,7 +119,7 @@ public class UserInfoSerializer implements PacketSerializer<UserInfoDto> {
 
         if (containsMask(UserInfoType.STATS)) {
             buffer.writeShortLE(56);
-            StatEntity stat = dto.getStatComponent().getEntity();
+            StatComponentEntity stat = dto.getStatComponent().getEntity();
             buffer.writeShortLE(40); // stat.getActiveWeaponItem() != null ? 40 : 20
             buffer.writeIntLE(stat.getPAtk());
             buffer.writeIntLE(stat.getAttackSpeed());
@@ -148,10 +148,10 @@ public class UserInfoSerializer implements PacketSerializer<UserInfoDto> {
 
         if (containsMask(UserInfoType.POSITION)) {
             buffer.writeShortLE(18);
-            PositionEntity position = dto.getCoordinateComponent().getPosition();
-            buffer.writeIntLE((int)position.getX());
-            buffer.writeIntLE((int)position.getY());
-            buffer.writeIntLE((int)position.getZ());
+            PositionComponentEntity position = dto.getCoordinateComponent().getPosition();
+            buffer.writeIntLE(position.getX().intValue());
+            buffer.writeIntLE(position.getY().intValue());
+            buffer.writeIntLE(position.getZ().intValue());
             buffer.writeIntLE(0); //_player.isInVehicle() ? _player.getVehicle().getObjectId() : 0
         }
 
@@ -195,11 +195,11 @@ public class UserInfoSerializer implements PacketSerializer<UserInfoDto> {
         if (containsMask(UserInfoType.CLAN)) {
             buffer.writeShortLE(32 + (player.getTitle().length() * 2));
             SerializerHelper.writeStringNullTerm(buffer, player.getTitle());
-            ClanEntity clan = dto.getClanComponent().getEntity();
+            ClanComponentEntity clan = dto.getClanComponent().getEntity();
             buffer.writeShortLE(0x00); // pledge type
             buffer.writeIntLE(clan.getPersistenceId()); // clanId
-            buffer.writeIntLE(clan.getLargeCrestId());
-            buffer.writeIntLE(clan.getCrestId());
+            buffer.writeIntLE(clan.getPersistenceId()); // large crest id
+            buffer.writeIntLE(clan.getPersistenceId()); // crest id
             buffer.writeIntLE(0x00); //FIXME finfan: clan.getClanPrivileges().getBitmask()
             buffer.writeByte(0x00); // FIXME finfan: isCLanLeader player.isClanLeader() ? 0x01 : 0x00
             buffer.writeIntLE(0x00); // FIXME finfan: ally id

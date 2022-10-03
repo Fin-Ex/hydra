@@ -21,9 +21,9 @@ public class OpcodeCodecImpl implements OpcodeCodec {
 
     @Override
     public int[] decode(ByteBuf buffer) {
-        int opcode = buffer.readByte();
+        int opcode = buffer.readUnsignedByte();
         if (opcode == 0xd0) {
-            int subOpcode = buffer.readShortLE() & 0xffff;
+            int subOpcode = buffer.readUnsignedShortLE();
             return new int[] { opcode, subOpcode };
         }
 

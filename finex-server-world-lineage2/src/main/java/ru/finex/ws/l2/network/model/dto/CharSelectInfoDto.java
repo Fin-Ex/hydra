@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.finex.network.netty.model.NetworkDto;
-import ru.finex.ws.l2.model.dto.LobbyAvatarDto;
+import ru.finex.ws.l2.model.entity.AvatarView;
 
 import java.util.List;
 
@@ -20,6 +20,6 @@ public class CharSelectInfoDto implements NetworkDto {
 
     private String login;
     private int sessionId;
-    private List<LobbyAvatarDto> avatars;
+    private List<AvatarView> avatars;
 
 }

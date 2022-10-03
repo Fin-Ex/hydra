@@ -8,9 +8,12 @@ import ru.finex.core.network.IncomePacket;
 import ru.finex.core.network.Opcode;
 import ru.finex.network.netty.serial.PacketDeserializer;
 
+import javax.inject.Singleton;
+
 /**
  * @author m0nster.mind
  */
+@Singleton
 @IncomePacket(value = @Opcode(0x02), command = @Cmd(RequestServerLoginCommand.class))
 public class RequestServerLoginDeserializer implements PacketDeserializer<RequestServerLoginDto> {
 

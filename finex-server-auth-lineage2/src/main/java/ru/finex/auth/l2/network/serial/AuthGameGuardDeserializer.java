@@ -8,9 +8,12 @@ import ru.finex.core.network.IncomePacket;
 import ru.finex.core.network.Opcode;
 import ru.finex.network.netty.serial.PacketDeserializer;
 
+import javax.inject.Singleton;
+
 /**
  * @author m0nster.mind
  */
+@Singleton
 @IncomePacket(value = @Opcode(0x07), command = @Cmd(AuthGameGuardCommand.class))
 public class AuthGameGuardDeserializer implements PacketDeserializer<AuthGameGuardDto> {
 

@@ -5,7 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.finex.network.netty.model.NetworkDto;
-import ru.finex.ws.l2.model.dto.SelectedAvatarDto;
+import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.PlayerAppearanceClass;
+import ru.finex.ws.l2.model.PlayerRace;
 
 /**
  * @author m0nster.mind
@@ -16,8 +18,22 @@ import ru.finex.ws.l2.model.dto.SelectedAvatarDto;
 @AllArgsConstructor
 public class CharacterSelectedDto implements NetworkDto {
 
-    private int sessionId;
     private int runtimeId;
-    private SelectedAvatarDto avatar;
+    private int sessionId;
+
+    private String name;
+    private String title;
+    private PlayerRace race;
+    private Gender gender;
+    private PlayerAppearanceClass appearanceClass;
+
+    private int clanId;
+
+    private double x;
+    private double y;
+    private double z;
+
+    private double hp;
+    private double mp;
 
 }

@@ -1,6 +1,7 @@
 package ru.finex.ws.l2.command.network;
 
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 import ru.finex.core.command.AbstractNetworkCommand;
 import ru.finex.core.model.GameObject;
 import ru.finex.ws.l2.model.event.PlayerEnterWorld;
@@ -13,9 +14,11 @@ import javax.inject.Inject;
 /**
  * @author m0nster.mind
  */
+@ToString(onlyExplicitlyIncluded = true)
 @RequiredArgsConstructor(onConstructor_ = { @Inject })
 public class EnterWorldCommand extends AbstractNetworkCommand {
 
+    @ToString.Include
     private final GameClient session;
 
     @Inject
@@ -28,7 +31,7 @@ public class EnterWorldCommand extends AbstractNetworkCommand {
     public void executeCommand() {
         GameObject gameObject = session.getGameObject();
 
-        gameObjectService.getEventBus().notify(new PlayerEnterWorld(gameObject));
+//        gameObjectService.getEventBus().notify(new PlayerEnterWorld(gameObject));
         session.sendPacket(packetBuilderService.userInfo(gameObject));
     }
 }

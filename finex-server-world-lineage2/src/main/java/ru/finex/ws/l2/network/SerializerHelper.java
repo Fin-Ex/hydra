@@ -3,6 +3,8 @@ package ru.finex.ws.l2.network;
 import io.netty.buffer.ByteBuf;
 import lombok.experimental.UtilityClass;
 
+import java.nio.charset.StandardCharsets;
+
 /**
  * @author m0nster.mind
  */
@@ -15,6 +17,13 @@ public class SerializerHelper {
             sb.append(symbol);
         }
         return sb.toString();
+    }
+
+    public static String readString(ByteBuf buffer) {
+        int length = buffer.readUnsignedShortLE();
+        byte[] payload = new byte[length];
+        buffer.readBytes(payload);
+        return new String(payload, StandardCharsets.UTF_8);
     }
 
     public static void writeStringNullTerm(ByteBuf buffer, String value) {

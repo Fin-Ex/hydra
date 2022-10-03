@@ -9,9 +9,12 @@ import ru.finex.ws.l2.command.network.AuthClientCommand;
 import ru.finex.ws.l2.network.SerializerHelper;
 import ru.finex.ws.l2.network.model.dto.AuthKeyDto;
 
+import javax.inject.Singleton;
+
 /**
  * @author m0nster.mind
  */
+@Singleton
 @IncomePacket(value = @Opcode(0x2B), command = @Cmd(AuthClientCommand.class))
 public class AuthKeyDeserializer implements PacketDeserializer<AuthKeyDto> {
 
@@ -19,10 +22,8 @@ public class AuthKeyDeserializer implements PacketDeserializer<AuthKeyDto> {
     public AuthKeyDto deserialize(ByteBuf buffer) {
         return AuthKeyDto.builder()
             .login(SerializerHelper.readStringNullTerm(buffer).toLowerCase())
-            .playKey1(buffer.readIntLE())
-            .playKey2(buffer.readIntLE())
-            .loginKey1(buffer.readIntLE())
-            .loginKey2(buffer.readIntLE())
+            .worldSessionKey((long) buffer.readIntLE() << 32 | buffer.readIntLE())
+            .authSessionKey(buffer.readLongLE())
             .build();
     }
 

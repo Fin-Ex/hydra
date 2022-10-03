@@ -21,7 +21,7 @@ public class InitSerializer implements PacketSerializer<InitDto> {
     public void serialize(InitDto dto, ByteBuf buffer) {
         buffer.writeIntLE(dto.getSessionId());
         buffer.writeIntLE(dto.getProtocolRevision());
-        buffer.writeBytes(scrambleModulus(((RSAPublicKey) dto.getPublicKey()).getPublicExponent()));
+        buffer.writeBytes(scrambleModulus(((RSAPublicKey) dto.getPublicKey()).getModulus()));
         buffer.writeIntLE(0x00);
         buffer.writeIntLE(0x00);
         buffer.writeIntLE(0x00);

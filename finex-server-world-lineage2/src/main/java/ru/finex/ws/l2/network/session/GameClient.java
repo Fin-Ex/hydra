@@ -9,11 +9,12 @@ import ru.finex.core.command.NetworkCommandQueue;
 import ru.finex.core.events.EventBus;
 import ru.finex.core.model.GameObject;
 import ru.finex.core.network.AbstractClientSession;
-import ru.finex.ws.l2.network.model.event.GameSessionEvent;
+import ru.finex.core.network.NetworkCommandScoped;
+import ru.finex.transport.l2.model.dto.WorldSession;
 import ru.finex.ws.l2.network.codec.PayloadCodec;
+import ru.finex.ws.l2.network.model.event.GameSessionEvent;
 import ru.finex.ws.l2.network.model.event.SessionConnected;
 import ru.finex.ws.l2.network.model.event.SessionDisconnected;
-import ru.finex.ws.l2.utils.BlowFishKeygen;
 import ru.finex.ws.model.ClientSession;
 
 import javax.inject.Inject;
@@ -24,11 +25,13 @@ import javax.inject.Inject;
  * @author KenM
  */
 @Slf4j
+@NetworkCommandScoped
 public final class GameClient extends AbstractClientSession implements ClientSession {
+
+	@Getter private final WorldSession data = new WorldSession();
 
 	@Getter @Setter private GameClientState state = GameClientState.NOT_CONNECTED;
 
-//	@Getter @Setter private SessionKey sessionId;
 	@Getter @Setter private boolean isAuthedGG;
 	@Getter @Setter private GameObject gameObject;
 	@Inject private EventBus<GameSessionEvent> eventBus;
@@ -50,11 +53,20 @@ public final class GameClient extends AbstractClientSession implements ClientSes
 		eventBus.notify(new SessionDisconnected(this));
 	}
 
-	public byte[] enableCrypt() {
-		byte[] key = BlowFishKeygen.getRandomKey();
+	@Override
+	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+		log.error("Client disconnected due to unhandled exception", cause);
+		closeNow();
+	}
+
+	public void setCryptKey(byte[] blowfishKey) {
 		PayloadCodec crypt = (PayloadCodec) getChannel().pipeline().get("crypt");
-		crypt.setKey(key);
-		return key;
+		crypt.setKey(blowfishKey);
+	}
+
+	@Override
+	public String toString() {
+		return super.toString();
 	}
 
 }

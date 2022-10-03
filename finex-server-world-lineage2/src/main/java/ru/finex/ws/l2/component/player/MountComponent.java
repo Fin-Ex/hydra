@@ -11,6 +11,6 @@ import ru.finex.ws.model.component.AbstractComponent;
 public class MountComponent extends AbstractComponent {
 
     private int mountId;
-    private MountType mountType;
+    private MountType mountType = MountType.NONE;
 
 }

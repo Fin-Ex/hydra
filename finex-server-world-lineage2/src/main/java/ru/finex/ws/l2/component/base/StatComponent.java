@@ -2,8 +2,9 @@ package ru.finex.ws.l2.component.base;
 
 import lombok.Getter;
 import ru.finex.core.persistence.PersistenceField;
-import ru.finex.ws.l2.model.entity.StatEntity;
-import ru.finex.ws.l2.persistence.PlayerPersistenceService;
+import ru.finex.ws.l2.model.entity.StatComponentEntity;
+import ru.finex.ws.l2.persistence.PlayerComponentPersistenceService;
+import ru.finex.ws.l2.persistence.StatComponentPersistenceService;
 import ru.finex.ws.model.component.AbstractComponent;
 
 /**
@@ -11,6 +12,6 @@ import ru.finex.ws.model.component.AbstractComponent;
  */
 public class StatComponent extends AbstractComponent {
 	@Getter
-	@PersistenceField(PlayerPersistenceService.class)
-	private StatEntity entity;
+	@PersistenceField(StatComponentPersistenceService.class)
+	private StatComponentEntity entity = new StatComponentEntity();
 }

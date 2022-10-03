@@ -5,10 +5,10 @@ import ru.finex.core.network.Opcode;
 import ru.finex.core.network.OutcomePacket;
 import ru.finex.network.netty.serial.PacketSerializer;
 import ru.finex.ws.l2.model.ClassId;
-import ru.finex.ws.l2.model.entity.ClanEntity;
-import ru.finex.ws.l2.model.entity.PlayerEntity;
-import ru.finex.ws.l2.model.entity.PositionEntity;
-import ru.finex.ws.l2.model.entity.StatusEntity;
+import ru.finex.ws.l2.model.entity.ClanComponentEntity;
+import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
+import ru.finex.ws.l2.model.entity.PositionComponentEntity;
+import ru.finex.ws.l2.model.entity.StatusComponentEntity;
 import ru.finex.ws.l2.network.SerializerHelper;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
 
@@ -23,27 +23,21 @@ public class CharacterSelectedSerializer implements PacketSerializer<CharacterSe
 
     @Override
     public void serialize(CharacterSelectedDto dto, ByteBuf buffer) {
-        var avatar = dto.getAvatar();
-        PlayerEntity player = avatar.getPlayer();
-        ClanEntity clan = avatar.getClan();
-        PositionEntity position = avatar.getPosition();
-        StatusEntity status = avatar.getStatus();
-
-        SerializerHelper.writeStringNullTerm(buffer, player.getName());
+        SerializerHelper.writeStringNullTerm(buffer, dto.getName());
         buffer.writeIntLE(dto.getRuntimeId());
-        SerializerHelper.writeStringNullTerm(buffer, player.getTitle());
+        SerializerHelper.writeStringNullTerm(buffer, dto.getTitle());
         buffer.writeIntLE(dto.getSessionId());
-        buffer.writeIntLE(clan.getPersistenceId());
+        buffer.writeIntLE(dto.getClanId());
         buffer.writeIntLE(0x00); // FIXME m0nster.mind: access level
-        buffer.writeIntLE(player.getGender().ordinal());
-        buffer.writeIntLE(player.getRace().ordinal());
-        buffer.writeIntLE(player.getAppearanceClass().getNetworkId(player.getRace()));
+        buffer.writeIntLE(dto.getGender().ordinal());
+        buffer.writeIntLE(dto.getRace().ordinal());
+        buffer.writeIntLE(dto.getAppearanceClass().getNetworkId(dto.getRace()));
         buffer.writeIntLE(0x01); // selected
-        buffer.writeIntLE((int)position.getX());
-        buffer.writeIntLE((int)position.getY());
-        buffer.writeIntLE((int)position.getZ());
-        buffer.writeLongLE(Double.doubleToLongBits(status.getHp()));
-        buffer.writeLongLE(Double.doubleToLongBits(status.getMp()));
+        buffer.writeIntLE((int) dto.getX());
+        buffer.writeIntLE((int) dto.getY());
+        buffer.writeIntLE((int) dto.getZ());
+        buffer.writeLongLE(Double.doubleToLongBits(dto.getHp()));
+        buffer.writeLongLE(Double.doubleToLongBits(dto.getMp()));
         buffer.writeLongLE(0); // sp
         buffer.writeLongLE(0); // exp
         buffer.writeIntLE(1); // level

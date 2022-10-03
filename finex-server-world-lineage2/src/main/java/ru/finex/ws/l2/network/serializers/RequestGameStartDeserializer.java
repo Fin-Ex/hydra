@@ -8,9 +8,12 @@ import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.ws.l2.command.network.GameStartCommand;
 import ru.finex.ws.l2.network.model.dto.SelectedAvatarDto;
 
+import javax.inject.Singleton;
+
 /**
  * @author m0nster.mind
  */
+@Singleton
 @IncomePacket(value = @Opcode(0x12), command = @Cmd(GameStartCommand.class))
 public class RequestGameStartDeserializer implements PacketDeserializer<SelectedAvatarDto> {
 

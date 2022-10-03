@@ -2,8 +2,8 @@ package ru.finex.ws.l2.component.player;
 
 import lombok.Getter;
 import ru.finex.core.persistence.PersistenceField;
-import ru.finex.ws.l2.model.entity.ClanEntity;
-import ru.finex.ws.l2.persistence.ClanPersistenceService;
+import ru.finex.ws.l2.model.entity.ClanComponentEntity;
+import ru.finex.ws.l2.persistence.ClanComponentPersistenceService;
 import ru.finex.ws.model.component.AbstractComponent;
 
 /**
@@ -12,7 +12,7 @@ import ru.finex.ws.model.component.AbstractComponent;
 public class ClanComponent extends AbstractComponent {
 
     @Getter
-    @PersistenceField(ClanPersistenceService.class)
-    private ClanEntity entity;
+    @PersistenceField(ClanComponentPersistenceService.class)
+    private ClanComponentEntity entity = new ClanComponentEntity();
 
 }

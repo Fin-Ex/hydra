@@ -30,6 +30,8 @@ import ru.finex.ws.l2.component.player.StoreComponent;
 @AllArgsConstructor
 public class UserInfoDto implements NetworkDto {
 
+    // FIXME m0nster.mind: инкапулировать данные сюда, без entity
+
     private int runtimeId;
     private PlayerComponent playerComponent;
     private CollisionComponent collisionComponent;

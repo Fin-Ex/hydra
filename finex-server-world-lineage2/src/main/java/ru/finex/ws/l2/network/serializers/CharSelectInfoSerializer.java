@@ -5,14 +5,13 @@ import ru.finex.core.network.Opcode;
 import ru.finex.core.network.OutcomePacket;
 import ru.finex.network.netty.serial.PacketSerializer;
 import ru.finex.ws.l2.model.ClassId;
-import ru.finex.ws.l2.model.dto.LobbyAvatarDto;
-import ru.finex.ws.l2.model.entity.ClanEntity;
-import ru.finex.ws.l2.model.entity.PlayerEntity;
-import ru.finex.ws.l2.model.entity.PositionEntity;
-import ru.finex.ws.l2.model.entity.StatusEntity;
+import ru.finex.ws.l2.model.entity.AvatarView;
 import ru.finex.ws.l2.network.SerializerHelper;
 import ru.finex.ws.l2.network.model.dto.CharSelectInfoDto;
 
+import java.time.Duration;
+import java.time.Instant;
+import java.util.Optional;
 import javax.inject.Singleton;
 
 /**
@@ -33,40 +32,35 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
         buffer.writeIntLE(0x02); // if 0x01, Korean client
         buffer.writeByte(0x00); // If 0x01 suggests premium account
 
-        for (LobbyAvatarDto avatar : avatars) {
-            PlayerEntity player = avatar.getPlayer();
-            ClanEntity clan = avatar.getClan();
-            PositionEntity position = avatar.getPosition();
-            StatusEntity status = avatar.getStatus();
-
-            SerializerHelper.writeStringNullTerm(buffer, player.getName()); // Character name
-            buffer.writeIntLE(player.getPersistenceId()); // Character ID
-            SerializerHelper.writeStringNullTerm(buffer, dto.getLogin()); // Account name
+        for (AvatarView avatar : avatars) {
+            SerializerHelper.writeStringNullTerm(buffer, avatar.getName()); // Character name
+            buffer.writeIntLE(avatar.getPersistenceId()); // Character ID
+            SerializerHelper.writeStringNullTerm(buffer, avatar.getLogin()); // Account name
             buffer.writeIntLE(dto.getSessionId()); // Account ID
-            buffer.writeIntLE(0x00); // Clan ID
-            buffer.writeIntLE(0x00); // Builder level
+            buffer.writeIntLE(avatar.getClanId()); // Clan ID
+            buffer.writeIntLE(avatar.getBuilderLevel()); // Builder level
 
-            buffer.writeIntLE(player.getGender().ordinal()); // Sex
-            buffer.writeIntLE(player.getRace().ordinal()); // Race
-            buffer.writeIntLE(avatar.getPlayer().getAppearanceClass().getNetworkId(avatar.getPlayer().getRace()));
+            buffer.writeIntLE(avatar.getGender().ordinal()); // Sex
+            buffer.writeIntLE(avatar.getRace().ordinal()); // Race
+            buffer.writeIntLE(avatar.getAppearanceClass().getNetworkId(avatar.getRace()));
 
             buffer.writeIntLE(0x01); // GameServerName
 
-            buffer.writeIntLE((int) position.getX());
-            buffer.writeIntLE((int) position.getY());
-            buffer.writeIntLE((int) position.getZ());
-            buffer.writeLongLE(Double.doubleToLongBits(status.getHp()));
-            buffer.writeLongLE(Double.doubleToLongBits(status.getMp()));
+            buffer.writeIntLE(avatar.getX().intValue());
+            buffer.writeIntLE(avatar.getY().intValue());
+            buffer.writeIntLE(avatar.getZ().intValue());
+            buffer.writeLongLE(Double.doubleToLongBits(avatar.getHp()));
+            buffer.writeLongLE(Double.doubleToLongBits(avatar.getMp()));
 
-            buffer.writeLongLE(0x00); // sp
-            buffer.writeLongLE(0x00); // exp
+            buffer.writeLongLE(avatar.getSp()); // sp
+            buffer.writeLongLE(avatar.getExp()); // exp
 
-            buffer.writeLongLE(Double.doubleToLongBits(0f)); //(float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))
+            buffer.writeLongLE(Double.doubleToLongBits(avatar.getExpPercent())); //(float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))
 
-            buffer.writeIntLE(1); // level
-            buffer.writeIntLE(0); // reputation
-            buffer.writeIntLE(0); // pkkills
-            buffer.writeIntLE(0); // pvpkills
+            buffer.writeIntLE(avatar.getLevel()); // level
+            buffer.writeIntLE(avatar.getReputation()); // reputation
+            buffer.writeIntLE(avatar.getPkCount()); // pkkills
+            buffer.writeIntLE(avatar.getPvpCount()); // pvpkills
 
             buffer.writeIntLE(0x00);
             buffer.writeIntLE(0x00);
@@ -107,14 +101,18 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
             buffer.writeShortLE(0x00); // Gloves enchant level
             buffer.writeShortLE(0x00); // Boots enchant level
 
-            buffer.writeIntLE(player.getHairType());
-            buffer.writeIntLE(player.getHairColor());
-            buffer.writeIntLE(player.getFaceType());
+            buffer.writeIntLE(avatar.getHairType());
+            buffer.writeIntLE(avatar.getHairColor());
+            buffer.writeIntLE(avatar.getFaceType());
 
-            buffer.writeLongLE(Double.doubleToLongBits(status.getMaxHp())); // Maximum HP
-            buffer.writeLongLE(Double.doubleToLongBits(status.getMaxMp())); // Maximum MP
+            buffer.writeLongLE(Double.doubleToLongBits(avatar.getMaxHp())); // Maximum HP
+            buffer.writeLongLE(Double.doubleToLongBits(avatar.getMaxMp())); // Maximum MP
 
-            buffer.writeIntLE(0x00); // charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0
+            long remainsSecondsToDelete = Optional.ofNullable(avatar.getDeleteDate())
+                    .map(deleteDate -> Duration.between(Instant.now(), avatar.getDeleteDate())
+                        .toSeconds()
+                    ).orElse(0L);
+            buffer.writeIntLE((int) remainsSecondsToDelete);
             buffer.writeIntLE(ClassId.HumanFighter.ordinal());
             buffer.writeIntLE(0x01);  // selected avatar or not
 
@@ -125,20 +123,20 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
             // buffer.writeIntLE(charInfoPackage.getTransformId()); // Used to display Transformations
             buffer.writeIntLE(0x00); // Currently on retail when you are on character select you don't see your transformation.
 
-            buffer.writeIntLE(0x00); // Pet NpcId
-            buffer.writeIntLE(0x00); // Pet level
-            buffer.writeIntLE(0x00); // Pet Food
-            buffer.writeIntLE(0x00); // Pet Food Level
-            buffer.writeLongLE(Double.doubleToLongBits(0x00)); // Current pet HP
-            buffer.writeLongLE(Double.doubleToLongBits(0x00)); // Current pet MP
+            buffer.writeIntLE(avatar.getPetPrototypeId()); // Pet NpcId
+            buffer.writeIntLE(avatar.getPetLevel()); // Pet level
+            buffer.writeIntLE(avatar.getPetFood()); // Pet Food
+            buffer.writeIntLE(avatar.getPetFoodLevel()); // Pet Food Level
+            buffer.writeLongLE(Double.doubleToLongBits(avatar.getPetHp())); // Current pet HP
+            buffer.writeLongLE(Double.doubleToLongBits(avatar.getPetMp())); // Current pet MP
 
-            buffer.writeIntLE(0); // Vitality points
-            buffer.writeIntLE(0); // Vitality Percent, finfan: was (int) Config.RATE_VITALITY_EXP_MULTIPLIER * 100
-            buffer.writeIntLE(0x00); // Remaining vitality item uses finfan: was charInfoPackage.getVitalityItemsUsed()
-            buffer.writeIntLE(0x01); // Char is active or not ???? finfan: was charInfoPackage.getAccessLevel() == -100 ? 0x00 : 0x01
-            buffer.writeByte(0x00); // isNoble
-            buffer.writeByte(0x00); // Hero glow
-            buffer.writeByte(0x00); // Show hair accessory if enabled finfan: was charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00
+            buffer.writeIntLE(avatar.getVitalityCount()); // Vitality points
+            buffer.writeIntLE(avatar.getVitalityPercent()); // Vitality Percent, finfan: was (int) Config.RATE_VITALITY_EXP_MULTIPLIER * 100
+            buffer.writeIntLE(avatar.getVitalityItemsUsed()); // Remaining vitality item uses finfan: was charInfoPackage.getVitalityItemsUsed()
+            buffer.writeIntLE(avatar.getIsAccessible() ? 0x01 : 0x00); // Char is active or not ???? finfan: was charInfoPackage.getAccessLevel() == -100 ? 0x00 : 0x01
+            buffer.writeByte(avatar.getIsNoble() ? 0x01 : 0x00); // isNoble
+            buffer.writeByte(avatar.getIsHero() ? 0x01 : 0x00); // Hero glow
+            buffer.writeByte(avatar.getIsShowHairAccessory() ? 0x01 : 0x00); // Show hair accessory if enabled finfan: was charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00
         }
     }
     

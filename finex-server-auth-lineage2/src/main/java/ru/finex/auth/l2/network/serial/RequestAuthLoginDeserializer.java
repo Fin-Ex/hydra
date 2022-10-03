@@ -3,7 +3,7 @@ package ru.finex.auth.l2.network.serial;
 import io.netty.buffer.ByteBuf;
 import lombok.RequiredArgsConstructor;
 import ru.finex.auth.l2.command.network.RequestAuthLoginCommand;
-import ru.finex.auth.l2.network.AuthCodecService;
+import ru.finex.auth.l2.service.AuthCodecService;
 import ru.finex.auth.l2.network.model.dto.RequestAuthLoginDto;
 import ru.finex.core.network.Cmd;
 import ru.finex.core.network.IncomePacket;

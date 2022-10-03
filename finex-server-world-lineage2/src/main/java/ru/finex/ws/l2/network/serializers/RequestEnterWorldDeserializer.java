@@ -8,9 +8,12 @@ import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.ws.l2.command.network.EnterWorldCommand;
 import ru.finex.ws.l2.network.model.dto.VoidDto;
 
+import javax.inject.Singleton;
+
 /**
  * @author m0nster.mind
  */
+@Singleton
 @IncomePacket(value = @Opcode(0x11), command = @Cmd(EnterWorldCommand.class))
 public class RequestEnterWorldDeserializer implements PacketDeserializer<VoidDto> {
 

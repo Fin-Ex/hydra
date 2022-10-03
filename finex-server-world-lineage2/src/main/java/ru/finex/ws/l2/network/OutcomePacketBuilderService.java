@@ -2,10 +2,12 @@ package ru.finex.ws.l2.network;
 
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.component.ComponentService;
+import ru.finex.core.hocon.ConfigResource;
 import ru.finex.core.model.GameObject;
 import ru.finex.network.netty.model.NetworkDto;
-import ru.finex.ws.l2.avatar.AvatarService;
 import ru.finex.ws.l2.component.base.CoordinateComponent;
+import ru.finex.ws.l2.component.base.ParameterComponent;
+import ru.finex.ws.l2.component.base.StatComponent;
 import ru.finex.ws.l2.component.base.StatusComponent;
 import ru.finex.ws.l2.component.player.AbnormalComponent;
 import ru.finex.ws.l2.component.player.ClanComponent;
@@ -20,15 +22,20 @@ import ru.finex.ws.l2.component.player.SpeedComponent;
 import ru.finex.ws.l2.component.player.StateComponent;
 import ru.finex.ws.l2.component.player.StoreComponent;
 import ru.finex.ws.l2.model.AuthFailReason;
-import ru.finex.ws.l2.model.dto.SelectedAvatarDto;
+import ru.finex.ws.l2.model.entity.ClanComponentEntity;
+import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
+import ru.finex.ws.l2.model.entity.PositionComponentEntity;
+import ru.finex.ws.l2.model.entity.StatusComponentEntity;
 import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
 import ru.finex.ws.l2.network.model.dto.CharSelectInfoDto;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
+import ru.finex.ws.l2.network.model.dto.LeaveWorldDto;
 import ru.finex.ws.l2.network.model.dto.ManorListDto;
 import ru.finex.ws.l2.network.model.dto.ServerCloseDto;
-import ru.finex.ws.l2.network.model.dto.ServerKeyDto;
 import ru.finex.ws.l2.network.model.dto.UserInfoDto;
+import ru.finex.ws.l2.network.model.dto.VersionCheckDto;
 import ru.finex.ws.l2.network.session.GameClient;
+import ru.finex.ws.l2.service.AvatarService;
 
 import java.util.Collections;
 import javax.inject.Inject;
@@ -43,10 +50,13 @@ public class OutcomePacketBuilderService {
 
     private final AvatarService avatarService;
     private final ComponentService componentService;
+    @ConfigResource(basePath = "ru.finex.ws.l2.service.SessionService")
+    private int serverId;
 
-    public NetworkDto keyPacket(byte[] key) {
-        return ServerKeyDto.builder()
+    public NetworkDto versionCheck(byte[] key, boolean isValid) {
+        return VersionCheckDto.builder()
             .key(key)
+            .isValid(isValid)
             .serverId(0x01)
             .languageId(0x01) // EN/NA
             .build();
@@ -71,16 +81,25 @@ public class OutcomePacketBuilderService {
         ClientComponent clientComponent = componentService.getComponent(gameObject, ClientComponent.class);
         GameClient client = clientComponent.getClient();
 
-        SelectedAvatarDto avatar = new SelectedAvatarDto();
-        avatar.setPlayer(componentService.getComponent(gameObject, PlayerComponent.class).getEntity().clone());
-        avatar.setClan(componentService.getComponent(gameObject, ClanComponent.class).getEntity().clone());
-        avatar.setPosition(componentService.getComponent(gameObject, CoordinateComponent.class).getPosition().clone());
-        avatar.setStatus(componentService.getComponent(gameObject, StatusComponent.class).getStatusEntity().clone());
+        PlayerComponentEntity player = componentService.getComponent(gameObject, PlayerComponent.class).getEntity();
+        ClanComponentEntity clan = componentService.getComponent(gameObject, ClanComponent.class).getEntity();
+        PositionComponentEntity position = componentService.getComponent(gameObject, CoordinateComponent.class).getPosition();
+        StatusComponentEntity status = componentService.getComponent(gameObject, StatusComponent.class).getStatusEntity();
 
         return CharacterSelectedDto.builder()
             .runtimeId(gameObject.getRuntimeId())
-            .sessionId(0x00)
-            .avatar(avatar)
+            .sessionId(client.getData().getSessionId())
+            .name(player.getName())
+            .title(player.getTitle())
+            .race(player.getRace())
+            .gender(player.getGender())
+            .appearanceClass(player.getAppearanceClass())
+            .clanId(clan.getClanId())
+            .x(position.getX())
+            .y(position.getY())
+            .z(position.getZ())
+            .hp(status.getHp())
+            .mp(status.getMp())
             .build();
     }
 
@@ -97,19 +116,25 @@ public class OutcomePacketBuilderService {
     public NetworkDto userInfo(GameObject gameObject) {
         return UserInfoDto.builder()
             .runtimeId(gameObject.getRuntimeId())
+            .playerComponent(componentService.getComponent(gameObject, PlayerComponent.class))
+            .collisionComponent(componentService.getComponent(gameObject, CollisionComponent.class))
+            .speedComponent(componentService.getComponent(gameObject, SpeedComponent.class))
+            .cubicComponent(componentService.getComponent(gameObject, CubicComponent.class))
+            .stateComponent(componentService.getComponent(gameObject, StateComponent.class))
             .abnormalComponent(componentService.getComponent(gameObject, AbnormalComponent.class))
             .clanComponent(componentService.getComponent(gameObject, ClanComponent.class))
-            .classComponent(componentService.getComponent(gameObject, ClassComponent.class))
-            .collisionComponent(componentService.getComponent(gameObject, CollisionComponent.class))
-            .coordinateComponent(componentService.getComponent(gameObject, CoordinateComponent.class))
-            .cubicComponent(componentService.getComponent(gameObject, CubicComponent.class))
-            .mountComponent(componentService.getComponent(gameObject, MountComponent.class))
-            .playerComponent(componentService.getComponent(gameObject, PlayerComponent.class))
             .recommendationComponent(componentService.getComponent(gameObject, RecommendationComponent.class))
-            .speedComponent(componentService.getComponent(gameObject, SpeedComponent.class))
-            .stateComponent(componentService.getComponent(gameObject, StateComponent.class))
-            .statusComponent(componentService.getComponent(gameObject, StatusComponent.class))
+            .mountComponent(componentService.getComponent(gameObject, MountComponent.class))
+            .classComponent(componentService.getComponent(gameObject, ClassComponent.class))
             .storeComponent(componentService.getComponent(gameObject, StoreComponent.class))
+            .coordinateComponent(componentService.getComponent(gameObject, CoordinateComponent.class))
+            .statusComponent(componentService.getComponent(gameObject, StatusComponent.class))
+            .parameterComponent(componentService.getComponent(gameObject, ParameterComponent.class))
+            .statComponent(componentService.getComponent(gameObject, StatComponent.class))
             .build();
+    }
+
+    public NetworkDto leaveWorld() {
+        return LeaveWorldDto.INSTANCE;
     }
 }

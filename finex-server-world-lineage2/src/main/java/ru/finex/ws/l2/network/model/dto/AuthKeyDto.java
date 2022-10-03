@@ -18,9 +18,7 @@ import ru.finex.network.netty.model.NetworkDto;
 public class AuthKeyDto implements NetworkDto {
 
     private String login;
-    private int playKey1;
-    private int playKey2;
-    private int loginKey1;
-    private int loginKey2;
+    private long worldSessionKey;
+    private long authSessionKey;
 
 }
