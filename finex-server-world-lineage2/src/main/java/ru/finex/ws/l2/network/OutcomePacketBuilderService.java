@@ -3,7 +3,7 @@ package ru.finex.ws.l2.network;
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.component.ComponentService;
 import ru.finex.core.hocon.ConfigResource;
-import ru.finex.core.model.GameObject;
+import ru.finex.core.object.GameObject;
 import ru.finex.network.netty.model.NetworkDto;
 import ru.finex.ws.l2.component.base.CoordinateComponent;
 import ru.finex.ws.l2.component.base.ParameterComponent;

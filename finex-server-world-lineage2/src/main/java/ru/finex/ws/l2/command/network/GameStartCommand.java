@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import ru.finex.core.command.AbstractNetworkCommand;
 import ru.finex.core.component.ComponentService;
-import ru.finex.core.model.GameObject;
+import ru.finex.core.object.GameObject;
 import ru.finex.ws.l2.component.player.ClientComponent;
 import ru.finex.ws.l2.component.player.PlayerComponent;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;

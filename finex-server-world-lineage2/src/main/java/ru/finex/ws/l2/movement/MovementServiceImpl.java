@@ -2,7 +2,7 @@ package ru.finex.ws.l2.movement;
 
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.component.ComponentService;
-import ru.finex.core.model.GameObject;
+import ru.finex.core.object.GameObject;
 import ru.finex.ws.l2.component.base.CoordinateComponent;
 
 import javax.inject.Inject;

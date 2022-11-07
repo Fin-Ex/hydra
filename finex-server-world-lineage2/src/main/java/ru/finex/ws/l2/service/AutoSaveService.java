@@ -2,7 +2,7 @@ package ru.finex.ws.l2.service;
 
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.events.EventBus;
-import ru.finex.core.model.GameObject;
+import ru.finex.core.object.GameObject;
 import ru.finex.core.persistence.GameObjectPersistenceService;
 import ru.finex.ws.l2.network.model.event.GameSessionEvent;
 import ru.finex.ws.l2.network.model.event.SessionDisconnected;

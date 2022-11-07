@@ -9,9 +9,9 @@ import ru.finex.auth.l2.network.model.event.SessionDisconnected;
 import ru.finex.auth.l2.network.model.event.SessionEvent;
 import ru.finex.core.command.NetworkCommandQueue;
 import ru.finex.core.events.EventBus;
-import ru.finex.core.model.GameObject;
 import ru.finex.core.network.AbstractClientSession;
 import ru.finex.core.network.NetworkCommandScoped;
+import ru.finex.core.object.GameObject;
 import ru.finex.network.netty.model.ClientSession;
 import ru.finex.transport.l2.model.dto.AuthSession;
 

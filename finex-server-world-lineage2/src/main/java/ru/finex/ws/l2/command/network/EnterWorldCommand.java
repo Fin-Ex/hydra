@@ -3,10 +3,9 @@ package ru.finex.ws.l2.command.network;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import ru.finex.core.command.AbstractNetworkCommand;
-import ru.finex.core.model.GameObject;
-import ru.finex.ws.l2.model.event.PlayerEnterWorld;
-import ru.finex.ws.l2.network.session.GameClient;
+import ru.finex.core.object.GameObject;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
+import ru.finex.ws.l2.network.session.GameClient;
 import ru.finex.ws.service.GameObjectService;
 
 import javax.inject.Inject;
