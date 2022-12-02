@@ -26,14 +26,8 @@ import ru.finex.ws.l2.model.entity.ClanComponentEntity;
 import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
 import ru.finex.ws.l2.model.entity.PositionComponentEntity;
 import ru.finex.ws.l2.model.entity.StatusComponentEntity;
-import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
-import ru.finex.ws.l2.network.model.dto.CharSelectInfoDto;
-import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
-import ru.finex.ws.l2.network.model.dto.LeaveWorldDto;
-import ru.finex.ws.l2.network.model.dto.ManorListDto;
-import ru.finex.ws.l2.network.model.dto.ServerCloseDto;
-import ru.finex.ws.l2.network.model.dto.UserInfoDto;
-import ru.finex.ws.l2.network.model.dto.VersionCheckDto;
+import ru.finex.ws.l2.model.enums.CharCreateFailReason;
+import ru.finex.ws.l2.network.model.dto.*;
 import ru.finex.ws.l2.network.session.GameClient;
 import ru.finex.ws.l2.service.AvatarService;
 
@@ -136,5 +130,45 @@ public class OutcomePacketBuilderService {
 
     public NetworkDto leaveWorld() {
         return LeaveWorldDto.INSTANCE;
+    }
+
+    public ValidateLocationDto validateLocation(GameObject gameObject) {
+        CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
+        return ValidateLocationDto.builder()
+            .heading((int) component.getPosition().getH())
+            .x(component.getPosition().getX().intValue())
+            .y(component.getPosition().getY().intValue())
+            .z(component.getPosition().getZ().intValue())
+            .vehicleId(0x00) // fixme: must be a vehicle id
+            .build();
+    }
+
+    public MoveToLocationDto moveToLocation(GameObject gameObject, int destX, int destY, int destZ) {
+        CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
+        return MoveToLocationDto.builder()
+            .runtimeId(gameObject.getRuntimeId())
+            .startX(component.getPosition().getX().intValue())
+            .startY(component.getPosition().getY().intValue())
+            .startZ(component.getPosition().getZ().intValue())
+            .destinationZ(destZ)
+            .destinationX(destX)
+            .destinationY(destY)
+            .build();
+    }
+
+    public StopMoveDto stopMove(GameObject gameObject) {
+        CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
+        PositionComponentEntity position = component.getPosition();
+        return StopMoveDto.builder()
+            .x(position.getX().intValue())
+            .y(position.getY().intValue())
+            .z(position.getZ().intValue())
+            .runtimeId(gameObject.getRuntimeId())
+            .heading((int) position.getH())
+            .build();
+    }
+
+    public CharCreateFailDto charCreateFail(CharCreateFailReason reason) {
+        return CharCreateFailDto.builder().error(reason).build();
     }
 }

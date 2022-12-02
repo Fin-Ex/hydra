@@ -46,4 +46,22 @@ public class StatusComponentEntity implements EntityObject<Integer> {
     @NotNull
     private Double maxCp;
 
+    public void fillAllByMax() {
+        hp = maxHp;
+        mp = maxMp;
+        cp = maxCp;
+    }
+
+    public void setHp(double hp) {
+        this.hp = hp;
+    }
+
+    public void setMp(double mp) {
+        this.mp = mp;
+    }
+
+    public void setCp(double cp) {
+        this.cp = cp;
+    }
+
 }

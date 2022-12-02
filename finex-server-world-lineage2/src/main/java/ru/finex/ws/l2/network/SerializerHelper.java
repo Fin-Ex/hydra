@@ -34,4 +34,15 @@ public class SerializerHelper {
         buffer.writeChar(0x00);
     }
 
+    public static void writeString(ByteBuf buffer, String value) {
+        if(value != null) {
+            buffer.writeShortLE(value.length());
+            for (int i = 0; i < value.length(); i++) {
+                buffer.writeChar(Character.reverseBytes(value.charAt(i)));
+            }
+        } else {
+            buffer.writeShort(0x00);
+        }
+    }
+
 }

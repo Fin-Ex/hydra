@@ -21,16 +21,12 @@ public class EnterWorldCommand extends AbstractNetworkCommand {
     private final GameClient session;
 
     @Inject
-    private GameObjectService gameObjectService;
-
-    @Inject
     private OutcomePacketBuilderService packetBuilderService;
 
     @Override
     public void executeCommand() {
         GameObject gameObject = session.getGameObject();
-
-//        gameObjectService.getEventBus().notify(new PlayerEnterWorld(gameObject));
         session.sendPacket(packetBuilderService.userInfo(gameObject));
+        session.sendPacket(packetBuilderService.validateLocation(gameObject));
     }
 }
