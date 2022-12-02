@@ -5,6 +5,6 @@ package ru.finex.ws.l2.network.model;
  */
 public interface NetworkComponent {
 
-    int getMask();
+    int getFlag();
 
 }

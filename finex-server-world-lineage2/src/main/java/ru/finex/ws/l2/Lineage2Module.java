@@ -3,6 +3,7 @@ package ru.finex.ws.l2;
 import com.google.inject.AbstractModule;
 import com.google.inject.Scopes;
 import com.google.inject.TypeLiteral;
+import com.google.inject.multibindings.MapBinder;
 import com.google.inject.name.Names;
 import ru.finex.core.events.EventBus;
 import ru.finex.core.events.local.LocalEventBus;
@@ -17,13 +18,16 @@ import ru.finex.ws.l2.network.NetworkPipeline;
 import ru.finex.ws.l2.network.NetworkServiceProvider;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.codec.OpcodeCodecImpl;
+import ru.finex.ws.l2.network.model.UserInfoComponent;
 import ru.finex.ws.l2.network.model.event.GameSessionEvent;
+import ru.finex.ws.l2.network.serializers.userinfo.UIComponentSerializer;
 import ru.finex.ws.l2.service.AutoSaveService;
 import ru.finex.ws.l2.service.ClientServiceImpl;
 import ru.finex.ws.l2.service.SessionService;
 import ru.finex.ws.service.ClientService;
 
 import java.net.InetSocketAddress;
+import java.util.stream.Stream;
 
 /**
  * @author m0nster.mind
@@ -45,6 +49,20 @@ public class Lineage2Module extends AbstractModule {
         bind(NettyNetworkService.class).annotatedWith(Names.named("ClientNetwork")).toProvider(NetworkServiceProvider.class).in(Scopes.SINGLETON);
         bind(OpcodeCodec.class).to(OpcodeCodecImpl.class);
         bind(new TypeLiteral<EventBus<GameSessionEvent>>() { }).toInstance(new LocalEventBus<>());
+
+        registerUIComponents();
+    }
+
+    private void registerUIComponents() {
+        var uiComponents = MapBinder.newMapBinder(
+            binder(),
+            new TypeLiteral<UserInfoComponent>() { },
+            new TypeLiteral<UIComponentSerializer>() { },
+            Names.named("UIComponents")
+        );
+
+        Stream.of(UserInfoComponent.values())
+            .forEach(e -> uiComponents.addBinding(e).to(e.getSerializer()));
     }
 
 }

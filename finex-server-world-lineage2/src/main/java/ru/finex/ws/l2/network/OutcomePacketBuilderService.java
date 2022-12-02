@@ -26,6 +26,7 @@ import ru.finex.ws.l2.model.entity.ClanComponentEntity;
 import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
 import ru.finex.ws.l2.model.entity.PositionComponentEntity;
 import ru.finex.ws.l2.model.entity.StatusComponentEntity;
+import ru.finex.ws.l2.network.model.UserInfoComponent;
 import ru.finex.ws.l2.model.enums.CharCreateFailReason;
 import ru.finex.ws.l2.network.model.dto.*;
 import ru.finex.ws.l2.network.session.GameClient;
@@ -125,6 +126,7 @@ public class OutcomePacketBuilderService {
             .statusComponent(componentService.getComponent(gameObject, StatusComponent.class))
             .parameterComponent(componentService.getComponent(gameObject, ParameterComponent.class))
             .statComponent(componentService.getComponent(gameObject, StatComponent.class))
+            .components(UserInfoComponent.all())
             .build();
     }
 
