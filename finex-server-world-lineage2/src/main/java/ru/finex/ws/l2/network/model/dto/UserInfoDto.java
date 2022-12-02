@@ -20,6 +20,9 @@ import ru.finex.ws.l2.component.player.RecommendationComponent;
 import ru.finex.ws.l2.component.player.SpeedComponent;
 import ru.finex.ws.l2.component.player.StateComponent;
 import ru.finex.ws.l2.component.player.StoreComponent;
+import ru.finex.ws.l2.network.model.UserInfoComponent;
+
+import java.util.List;
 
 /**
  * @author m0nster.mind
@@ -48,5 +51,21 @@ public class UserInfoDto implements NetworkDto {
     private StatusComponent statusComponent;
     private ParameterComponent parameterComponent;
     private StatComponent statComponent;
+
+    private List<UserInfoComponent> components;
+
+    public boolean containsComponent(UserInfoComponent component) {
+        return components.contains(component);
+    }
+
+    public byte[] mask() {
+        byte[] flags = new byte[UserInfoComponent.octets()];
+        for (int i = 0; i < components.size(); i++) {
+            var component = components.get(i);
+            flags[component.getPosition()] |= component.getFlag();
+        }
+
+        return flags;
+    }
 
 }
