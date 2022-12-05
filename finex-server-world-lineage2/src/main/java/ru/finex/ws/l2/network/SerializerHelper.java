@@ -47,15 +47,15 @@ public class SerializerHelper {
 
     public static void writeReverseIntLE(ByteBuf buffer, int value) {
         buffer.writeByte(reverse((byte) value));
-        buffer.writeByte((byte) (value >>> 8));
-        buffer.writeByte((byte) (value >>> 16));
-        buffer.writeByte((byte) (value >>> 24));
+        buffer.writeByte(reverse((byte) (value >>> 8)));
+        buffer.writeByte(reverse((byte) (value >>> 16)));
+        buffer.writeByte(reverse((byte) (value >>> 24)));
     }
 
     public static void writeReverseMediumLE(ByteBuf buffer, int value) {
         buffer.writeByte(reverse((byte) value));
-        buffer.writeByte((byte) (value >>> 8));
-        buffer.writeByte((byte) (value >>> 16));
+        buffer.writeByte(reverse((byte) (value >>> 8)));
+        buffer.writeByte(reverse((byte) (value >>> 16)));
     }
 
     public static byte reverse(byte value) {
