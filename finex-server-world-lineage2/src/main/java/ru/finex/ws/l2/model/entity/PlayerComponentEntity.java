@@ -32,7 +32,7 @@ import ru.finex.ws.l2.model.PvpMode;
 @AllArgsConstructor
 @SequenceGenerator(name = "game_object_player_components_id_seq",
     sequenceName = "game_object_player_components_id_seq", allocationSize = 1)
-public class PlayerComponentEntity implements EntityObject<Integer> {
+public class PlayerComponentEntity implements EntityObject<Integer>, GameObjectRelation {
 
     @Id
     @Column(name = "id")

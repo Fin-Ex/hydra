@@ -23,7 +23,7 @@ import ru.finex.core.model.entity.EntityObject;
 @AllArgsConstructor
 @SequenceGenerator(name = "game_object_parameter_components_id_seq",
 	sequenceName = "game_object_parameter_components_id_seq", allocationSize = 1)
-public class ParameterComponentEntity implements EntityObject<Integer> {
+public class ParameterComponentEntity implements EntityObject<Integer>, GameObjectRelation {
 
 	@Id
 	@Column(name = "id")

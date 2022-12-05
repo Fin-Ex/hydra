@@ -23,7 +23,7 @@ import ru.finex.core.model.entity.EntityObject;
 @AllArgsConstructor
 @SequenceGenerator(name = "game_object_status_components_id_seq",
     sequenceName = "game_object_status_components_id_seq", allocationSize = 1)
-public class StatusComponentEntity implements EntityObject<Integer> {
+public class StatusComponentEntity implements EntityObject<Integer>, GameObjectRelation {
 
     @Id
     @Column(name = "id")
@@ -45,23 +45,5 @@ public class StatusComponentEntity implements EntityObject<Integer> {
     private Double cp;
     @NotNull
     private Double maxCp;
-
-    public void fillAllByMax() {
-        hp = maxHp;
-        mp = maxMp;
-        cp = maxCp;
-    }
-
-    public void setHp(double hp) {
-        this.hp = hp;
-    }
-
-    public void setMp(double mp) {
-        this.mp = mp;
-    }
-
-    public void setCp(double cp) {
-        this.cp = cp;
-    }
 
 }
