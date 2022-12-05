@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import ru.finex.core.network.Opcode;
 import ru.finex.core.network.OutcomePacket;
 import ru.finex.network.netty.serial.PacketSerializer;
+import ru.finex.ws.l2.network.SerializerHelper;
 import ru.finex.ws.l2.network.model.UserInfoComponent;
 import ru.finex.ws.l2.network.model.dto.UserInfoDto;
 import ru.finex.ws.l2.network.serializers.userinfo.UIComponentSerializer;
@@ -34,7 +35,7 @@ public class UserInfoSerializer implements PacketSerializer<UserInfoDto> {
         int position = buffer.writerIndex();
         buffer.skipBytes(4);
         buffer.writeShortLE(UserInfoComponent.count());
-        buffer.writeBytes(dto.mask());
+        SerializerHelper.writeReverseMediumLE(buffer, dto.flags());
 
         writeComponents(dto, buffer);
 

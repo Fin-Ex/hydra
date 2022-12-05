@@ -37,44 +37,41 @@ import java.util.List;
 @RequiredArgsConstructor
 public enum UserInfoComponent implements NetworkComponent {
 	// three octets
-	RELATION(0x00, 1 << 7, UIRelationComponent.class),
-	BASIC_INFO(0x00, 1 << 6, UIBasicInfoComponent.class),
-	BASE_STATS(0x00, 1 << 5, UIBaseStatsComponent.class),
-	MAX_STATUS(0x00, 1 << 4, UIMaxStatusComponent.class),
-	STATUS(0x00, 1 << 3, UIStatusComponent.class),
-	ENCHANT(0x00, 1 << 2, UIEnchantComponent.class),
-	VISUAL(0x00, 1 << 1, UIVisualComponent.class),
-	STATUS_FLAG(0x00, 1 << 0, UIStatusFlagComponent.class),
+	RELATION(UIRelationComponent.class),
+	BASIC_INFO(UIBasicInfoComponent.class),
+	BASE_STATS(UIBaseStatsComponent.class),
+	MAX_STATUS(UIMaxStatusComponent.class),
+	STATUS(UIStatusComponent.class),
+	ENCHANT(UIEnchantComponent.class),
+	VISUAL(UIVisualComponent.class),
+	STATUS_FLAG(UIStatusFlagComponent.class),
 	
-	STAT(0x01, 1 << 7, UIStatComponent.class),
-	ELEMENTAL(0x01, 1 << 6, UIElementalComponent.class),
-	POSITION(0x01, 1 << 5, UIPositionComponent.class),
-	SPEED(0x01, 1 << 4, UISpeedComponent.class),
-	ANIMATION(0x01, 1 << 3, UIAnimationComponent.class),
-	COLLIDER(0x01, 1 << 2, UIColliderComponent.class),
-	ATK_ELEMENTAL(0x01, 1 << 1, UIAtkElementalComponent.class),
-	CLAN(0x01, 1 << 0, UIClanComponent.class),
+	STAT(UIStatComponent.class),
+	ELEMENTAL(UIElementalComponent.class),
+	POSITION(UIPositionComponent.class),
+	SPEED(UISpeedComponent.class),
+	ANIMATION(UIAnimationComponent.class),
+	COLLIDER(UIColliderComponent.class),
+	ATK_ELEMENTAL(UIAtkElementalComponent.class),
+	CLAN(UIClanComponent.class),
 	
-	SOCIAL(0x02, 1 << 7, UISocialComponent.class),
-	VITA_FAME(0x02, 1 << 6, UIVitaFameComponent.class),
-	SLOT(0x02, 1 << 5, UISlotComponent.class),
-	MOVE_TYPE(0x02, 1 << 4, UIMoveTypeComponent.class),
-	COLOR(0x02, 1 << 3, UIColorComponent.class),
-	INVENTORY_LIMIT(0x02, 1 << 2, UIInventoryLimitComponent.class),
-	HERO(0x02, 1 << 1, UIHeroComponent.class);
+	SOCIAL(UISocialComponent.class),
+	VITA_FAME(UIVitaFameComponent.class),
+	SLOT(UISlotComponent.class),
+	MOVE_TYPE(UIMoveTypeComponent.class),
+	COLOR(UIColorComponent.class),
+	INVENTORY_LIMIT(UIInventoryLimitComponent.class),
+	HERO(UIHeroComponent.class);
 
-	/** The byte position. */
-	@Getter private final int position;
-	/** The mask flag. */
-	@Getter private final int flag;
 	@Getter private final Class<? extends UIComponentSerializer> serializer;
+
+	@Override
+	public int getFlag() {
+		return 1 << ordinal();
+	}
 
 	public static List<UserInfoComponent> all() {
 		return Arrays.asList(values());
-	}
-
-	public static int octets() {
-		return 3;
 	}
 
 	public static int count() {

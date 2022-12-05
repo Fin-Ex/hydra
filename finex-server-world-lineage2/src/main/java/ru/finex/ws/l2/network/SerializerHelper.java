@@ -45,4 +45,24 @@ public class SerializerHelper {
         }
     }
 
+    public static void writeReverseIntLE(ByteBuf buffer, int value) {
+        buffer.writeByte(reverse((byte) value));
+        buffer.writeByte((byte) (value >>> 8));
+        buffer.writeByte((byte) (value >>> 16));
+        buffer.writeByte((byte) (value >>> 24));
+    }
+
+    public static void writeReverseMediumLE(ByteBuf buffer, int value) {
+        buffer.writeByte(reverse((byte) value));
+        buffer.writeByte((byte) (value >>> 8));
+        buffer.writeByte((byte) (value >>> 16));
+    }
+
+    public static byte reverse(byte value) {
+        value = (byte) ((value & 0xF0) >> 4 | (value & 0x0F) << 4);
+        value = (byte) ((value & 0xCC) >> 2 | (value & 0x33) << 2);
+        value = (byte) ((value & 0xAA) >> 1 | (value & 0x55) << 1);
+        return value;
+    }
+
 }

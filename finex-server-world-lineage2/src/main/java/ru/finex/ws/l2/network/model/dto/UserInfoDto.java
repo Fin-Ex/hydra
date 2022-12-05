@@ -58,11 +58,11 @@ public class UserInfoDto implements NetworkDto {
         return components.contains(component);
     }
 
-    public byte[] mask() {
-        byte[] flags = new byte[UserInfoComponent.octets()];
+    public int flags() {
+        int flags = 0;
         for (int i = 0; i < components.size(); i++) {
             var component = components.get(i);
-            flags[component.getPosition()] |= component.getFlag();
+            flags |= component.getFlag();
         }
 
         return flags;
