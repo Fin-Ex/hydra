@@ -13,7 +13,7 @@ import ru.finex.ws.l2.component.player.AbnormalComponent;
 import ru.finex.ws.l2.component.player.ClanComponent;
 import ru.finex.ws.l2.component.player.ClassComponent;
 import ru.finex.ws.l2.component.player.ClientComponent;
-import ru.finex.ws.l2.component.player.CollisionComponent;
+import ru.finex.ws.l2.component.player.ColliderComponent;
 import ru.finex.ws.l2.component.player.CubicComponent;
 import ru.finex.ws.l2.component.player.MountComponent;
 import ru.finex.ws.l2.component.player.PlayerComponent;
@@ -112,7 +112,7 @@ public class OutcomePacketBuilderService {
         return UserInfoDto.builder()
             .runtimeId(gameObject.getRuntimeId())
             .playerComponent(componentService.getComponent(gameObject, PlayerComponent.class))
-            .collisionComponent(componentService.getComponent(gameObject, CollisionComponent.class))
+            .collisionComponent(componentService.getComponent(gameObject, ColliderComponent.class))
             .speedComponent(componentService.getComponent(gameObject, SpeedComponent.class))
             .cubicComponent(componentService.getComponent(gameObject, CubicComponent.class))
             .stateComponent(componentService.getComponent(gameObject, StateComponent.class))

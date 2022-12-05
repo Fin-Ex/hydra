@@ -20,7 +20,7 @@ public class ChangeMoveTypeSerializer implements PacketSerializer<ChangeMoveType
     public void serialize(ChangeMoveTypeDto dto, ByteBuf buffer) {
         buffer.writeIntLE(dto.getRuntimeId());
         buffer.writeIntLE(MoveType.findBy(dto.isRunning()));
-        buffer.writeIntLE(0x00); // c2
+        buffer.writeIntLE(0x00); // ground type
     }
 
 }

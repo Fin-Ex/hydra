@@ -5,7 +5,7 @@ import lombok.ToString;
 import ru.finex.core.command.AbstractNetworkCommand;
 import ru.finex.core.component.ComponentService;
 import ru.finex.ws.l2.component.base.CoordinateComponent;
-import ru.finex.ws.l2.component.player.CollisionComponent;
+import ru.finex.ws.l2.component.player.ColliderComponent;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.model.dto.MoveBackwardToLocationDto;
 import ru.finex.ws.l2.network.session.GameClient;
@@ -25,7 +25,7 @@ public class MoveBackwardToLocationCommand extends AbstractNetworkCommand {
 	@Override
 	public void executeCommand() {
 		CoordinateComponent coordinateComponent = componentService.getComponent(session.getGameObject(), CoordinateComponent.class);
-		CollisionComponent collisionComponent = componentService.getComponent(session.getGameObject(), CollisionComponent.class);
+		ColliderComponent collisionComponent = componentService.getComponent(session.getGameObject(), ColliderComponent.class);
 		coordinateComponent.moveToLocation(session, dto, outcomePacketBuilderService, collisionComponent);
 	}
 }

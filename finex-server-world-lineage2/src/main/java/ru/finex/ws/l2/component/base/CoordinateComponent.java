@@ -3,7 +3,7 @@ package ru.finex.ws.l2.component.base;
 import lombok.Getter;
 import ru.finex.core.object.GameObject;
 import ru.finex.core.persistence.PersistenceField;
-import ru.finex.ws.l2.component.player.CollisionComponent;
+import ru.finex.ws.l2.component.player.ColliderComponent;
 import ru.finex.ws.l2.model.entity.PositionComponentEntity;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.model.dto.ActionFailedDto;
@@ -31,7 +31,7 @@ public class CoordinateComponent extends AbstractComponent {
     public void moveToLocation(ClientSession session,
                                MoveBackwardToLocationDto dto,
                                OutcomePacketBuilderService outcomePacketBuilderService,
-                               CollisionComponent collisionComponent) {
+                               ColliderComponent collisionComponent) {
 
         GameObject gameObject = getGameObject();
 

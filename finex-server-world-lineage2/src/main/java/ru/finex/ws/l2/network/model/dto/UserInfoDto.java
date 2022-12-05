@@ -12,7 +12,7 @@ import ru.finex.ws.l2.component.base.StatusComponent;
 import ru.finex.ws.l2.component.player.AbnormalComponent;
 import ru.finex.ws.l2.component.player.ClanComponent;
 import ru.finex.ws.l2.component.player.ClassComponent;
-import ru.finex.ws.l2.component.player.CollisionComponent;
+import ru.finex.ws.l2.component.player.ColliderComponent;
 import ru.finex.ws.l2.component.player.CubicComponent;
 import ru.finex.ws.l2.component.player.MountComponent;
 import ru.finex.ws.l2.component.player.PlayerComponent;
@@ -37,7 +37,7 @@ public class UserInfoDto implements NetworkDto {
 
     private int runtimeId;
     private PlayerComponent playerComponent;
-    private CollisionComponent collisionComponent;
+    private ColliderComponent collisionComponent;
     private SpeedComponent speedComponent;
     private CubicComponent cubicComponent;
     private StateComponent stateComponent;

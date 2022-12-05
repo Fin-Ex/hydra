@@ -12,7 +12,7 @@ import ru.finex.ws.l2.component.player.AbnormalComponent;
 import ru.finex.ws.l2.component.player.ClanComponent;
 import ru.finex.ws.l2.component.player.ClassComponent;
 import ru.finex.ws.l2.component.player.ClientComponent;
-import ru.finex.ws.l2.component.player.CollisionComponent;
+import ru.finex.ws.l2.component.player.ColliderComponent;
 import ru.finex.ws.l2.component.player.CubicComponent;
 import ru.finex.ws.l2.component.player.MountComponent;
 import ru.finex.ws.l2.component.player.RecommendationComponent;
@@ -42,7 +42,7 @@ import ru.finex.ws.l2.component.prototype.VisualEquipPrototype;
 @Register(prototype = ClanPrototype.class, component = ClanComponent.class)
 @Register(prototype = ClassPrototype.class, component = ClassComponent.class)
 @Register(prototype = ClientPrototype.class, component = ClientComponent.class)
-@Register(prototype = CollisionPrototype.class, component = CollisionComponent.class)
+@Register(prototype = CollisionPrototype.class, component = ColliderComponent.class)
 @Register(prototype = CubicPrototype.class, component = CubicComponent.class)
 @Register(prototype = MountPrototype.class, component = MountComponent.class)
 @Register(prototype = RecommendationPrototype.class, component = RecommendationComponent.class)
