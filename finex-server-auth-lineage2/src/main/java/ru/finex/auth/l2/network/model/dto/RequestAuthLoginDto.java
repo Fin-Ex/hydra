@@ -22,4 +22,10 @@ public class RequestAuthLoginDto implements NetworkDto {
     /** NcSoft OTP code. */
     private int ncOtp;
 
+    private int sessionId;
+    private int unk1;
+    private int unk2;
+    private int unk3;
+    private int unk4;
+
 }

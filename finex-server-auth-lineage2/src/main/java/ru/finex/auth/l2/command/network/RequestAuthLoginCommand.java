@@ -36,6 +36,11 @@ public class RequestAuthLoginCommand extends AbstractNetworkCommand {
     @Transactional
     @Override
     public void executeCommand() {
+        if (session.getData().getSessionId() != dto.getSessionId()) {
+            session.close(packets.loginFail(FailReason.REASON_ACCESS_FAILED));
+            return;
+        }
+
         session.setLogin(dto.getLogin());
 
         AuthState state = authorize();
@@ -53,6 +58,8 @@ public class RequestAuthLoginCommand extends AbstractNetworkCommand {
             // check active world sessions
             session.sendPacket(packets.loginOk(session));
         } else {
+            sessionService.revokeAuthorize(dto.getLogin());
+            authService.logoutUser(dto.getLogin());
             session.close(packets.loginFail(FailReason.REASON_ACCOUNT_IN_USE));
         }
     }
