@@ -12,7 +12,7 @@ public class StatusMapper implements ComponentPrototypeMapper<StatusPrototype, S
     @Override
     public StatusComponent map(StatusPrototype prototype) {
         var component = new StatusComponent();
-        var entity = component.getStatusEntity();
+        var entity = component.getEntity();
         entity.setCp(prototype.getCp());
         entity.setHp(prototype.getHp());
         entity.setMp(prototype.getMp());

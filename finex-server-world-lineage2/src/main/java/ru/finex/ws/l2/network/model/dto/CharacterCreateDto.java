@@ -10,6 +10,12 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import ru.finex.core.network.NetworkCommandScoped;
 import ru.finex.network.netty.model.NetworkDto;
+import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Race;
+import ru.finex.ws.l2.validation.GenderSubset;
+import ru.finex.ws.l2.validation.RaceSubset;
+import ru.finex.ws.l2.validation.ValidGenderHairStyle;
+import ru.finex.ws.l2.validation.ValidStarterClass;
 
 /**
  * @author m0nster.mind
@@ -19,6 +25,7 @@ import ru.finex.network.netty.model.NetworkDto;
 @NoArgsConstructor
 @AllArgsConstructor
 @NetworkCommandScoped
+@ValidGenderHairStyle
 public class CharacterCreateDto implements NetworkDto {
 
     @NotNull
@@ -26,12 +33,16 @@ public class CharacterCreateDto implements NetworkDto {
     @Pattern(regexp = "[\\w\\d]{1,16}")
     private String name;
 
-    @Range(min = 0, max = 6)
-    private int race;
+    @NotNull
+    @RaceSubset({ Race.HUMAN, Race.ELF, Race.DARK_ELF, Race.ORC, Race.DWARF, Race.KAMAEL, Race.ERTHEIA })
+    private Race race;
 
-    @Range(min = 0, max = 1)
-    private byte sex;
+    @NotNull
+    @GenderSubset({ Gender.MALE, Gender.FEMALE })
+    private Gender gender;
 
+    @NotNull
+    @ValidStarterClass
     private int classId;
 
     @Range(min = 0, max = 100)
@@ -53,12 +64,12 @@ public class CharacterCreateDto implements NetworkDto {
     private int AGI; // WIT
 
     @Range(min = 0, max = 6)
-    private byte hairStyle;
+    private int hairType;
 
     @Range(min = 0, max = 3)
-    private byte hairColor;
+    private int hairColor;
 
     @Range(min = 0, max = 2)
-    private byte face;
+    private int face;
 
 }

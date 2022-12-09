@@ -19,8 +19,8 @@ import org.hibernate.validator.constraints.Range;
 import ru.finex.core.model.entity.EntityObject;
 import ru.finex.ws.l2.model.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
-import ru.finex.ws.l2.model.PlayerRace;
 import ru.finex.ws.l2.model.PvpMode;
+import ru.finex.ws.l2.model.enums.Race;
 
 /**
  * @author m0nster.mind
@@ -47,7 +47,7 @@ public class PlayerComponentEntity implements EntityObject<Integer>, GameObjectR
 
     @NotNull
     @Enumerated(EnumType.ORDINAL)
-    private PlayerRace race;
+    private Race race;
     @NotNull
     @Enumerated(EnumType.ORDINAL)
     private Gender gender;

@@ -9,6 +9,8 @@
 
     <logger name="ru.finex.ws.l2.network.codec" level="DEBUG"/>
     <logger name="ru.finex.core.db.impl.SessionReference" level="DEBUG"/>
+    <logger name="ru.finex.ws.l2.service" level="DEBUG"/>
+    <logger name="ru.finex.ws.command" level="DEBUG"/>
 
     <root level="info">
         <appender-ref ref="CONSOLE"/>

@@ -22,10 +22,10 @@ public class CoordinateComponent extends AbstractComponent {
 
     @Getter
     @PersistenceField(PositionComponentPersistence.class)
-    private PositionComponentEntity position = new PositionComponentEntity();
+    private PositionComponentEntity entity = new PositionComponentEntity();
 
     public void setXYZ(double x, double y, double z) {
-        position.setXYZ(x, y, z);
+        entity.setXYZ(x, y, z);
     }
 
     public void moveToLocation(ClientSession session,
@@ -53,9 +53,9 @@ public class CoordinateComponent extends AbstractComponent {
     }
 
     public void validatePosition(ClientSession session, ValidateLocationDto dto) {
-        final int realX = position.getX().intValue();
-        final int realY = position.getY().intValue();
-        int realZ = position.getZ().intValue();
+        final int realX = entity.getX().intValue();
+        final int realY = entity.getY().intValue();
+        int realZ = entity.getZ().intValue();
 
         int _x = dto.getX();
         int _y = dto.getY();
@@ -80,22 +80,22 @@ public class CoordinateComponent extends AbstractComponent {
 
         if (diffSq < 360000) // if too large, messes observation
         {
-            position.setXYZ(realX, realY, realZ);
+            entity.setXYZ(realX, realY, realZ);
 
             if ((diffSq > 250000) || (Math.abs(dz) > 200)) {
                 if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - realZ) < 800)) {
-                    position.setXYZ(realX, realY, realZ);
+                    entity.setXYZ(realX, realY, realZ);
                 } else {
-                    position.setXYZ(_x, _y, _z);
-                    position.setH(dto.getHeading());
+                    entity.setXYZ(_x, _y, _z);
+                    entity.setH(dto.getHeading());
                     session.sendPacket(dto);
                     return;
                 }
             }
         }
 
-        position.setXYZ(_x, _y, _z);
-        position.setH(dto.getHeading());
+        entity.setXYZ(_x, _y, _z);
+        entity.setH(dto.getHeading());
         session.sendPacket(dto);
     }
 }

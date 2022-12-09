@@ -22,8 +22,8 @@ public class UIBasicInfoComponent implements UIComponentSerializer {
         buffer.writeByte(0x00); // isGM
         buffer.writeByte(player.getRace().ordinal());
         buffer.writeByte(player.getGender().ordinal());
-        buffer.writeIntLE(player.getAppearanceClass().getNetworkId(player.getRace()));
-        buffer.writeIntLE(ClassId.HumanFighter.ordinal());
+        buffer.writeIntLE(player.getAppearanceClass().getNetworkId(player.getRace(), player.getGender()));
+        buffer.writeIntLE(ClassId.HUMAN_FIGHTER.ordinal());
         buffer.writeByte(1); // level
     }
 

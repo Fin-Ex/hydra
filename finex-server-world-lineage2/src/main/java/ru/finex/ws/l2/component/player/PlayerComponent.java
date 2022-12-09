@@ -15,12 +15,4 @@ public class PlayerComponent extends AbstractComponent {
     @PersistenceField(PlayerComponentPersistenceService.class)
     private PlayerComponentEntity entity = new PlayerComponentEntity();
 
-    public void setLogin(String login) {
-        if (entity.getLogin() != null) {
-            return;
-        }
-
-        entity.setLogin(login);
-    }
-
 }

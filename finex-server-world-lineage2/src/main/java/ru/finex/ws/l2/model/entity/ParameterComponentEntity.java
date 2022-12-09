@@ -51,11 +51,9 @@ public class ParameterComponentEntity implements EntityObject<Integer>, GameObje
 	@Range(min = 0, max = 100)
 	@Column(name = "men", nullable = false)
 	private int MEN;
-	@Deprecated
 	@Range(min = 0, max = 100)
 	@Column(name = "luc", nullable = false)
 	private int LUC;
-	@Deprecated
 	@Range(min = 0, max = 100)
 	@Column(name = "cha", nullable = false)
 	private int CHA;

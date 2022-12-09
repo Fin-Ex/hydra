@@ -13,6 +13,6 @@ public class StatusComponent extends AbstractComponent {
 
     @Getter
     @PersistenceField(StatusComponentPersistenceService.class)
-    private StatusComponentEntity statusEntity = new StatusComponentEntity();
+    private StatusComponentEntity entity = new StatusComponentEntity();
 
 }

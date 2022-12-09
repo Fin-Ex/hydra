@@ -9,13 +9,13 @@ import ru.finex.ws.model.component.AbstractComponent;
 @Data
 public class SpeedComponent extends AbstractComponent {
 
-    private double walkSpeed = 80;
-    private double runSpeed = 115;
-    private double swimSpeed = 50;
+    private double walkSpeed;
+    private double runSpeed;
+    private double swimSpeed;
     private double flySpeed = 0;
 
-    private double attackSpeed = 111;
-    private double castSpeed = 222;
+    private double attackSpeed;
+    private double castSpeed;
 
     private double animMoveSpeed = 1;
     private double animAttackSpeed = 1;

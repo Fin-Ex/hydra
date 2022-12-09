@@ -11,6 +11,6 @@ import ru.finex.ws.model.component.AbstractComponent;
 public class ClassComponent extends AbstractComponent {
 
     @Getter @Setter
-    private ClassId classId = ClassId.HumanFighter;
+    private ClassId classId;
 
 }

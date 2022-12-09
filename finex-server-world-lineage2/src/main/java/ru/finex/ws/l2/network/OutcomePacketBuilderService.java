@@ -22,17 +22,31 @@ import ru.finex.ws.l2.component.player.SpeedComponent;
 import ru.finex.ws.l2.component.player.StateComponent;
 import ru.finex.ws.l2.component.player.StoreComponent;
 import ru.finex.ws.l2.model.AuthFailReason;
+import ru.finex.ws.l2.model.entity.AvatarPrototypeView;
 import ru.finex.ws.l2.model.entity.ClanComponentEntity;
 import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
 import ru.finex.ws.l2.model.entity.PositionComponentEntity;
 import ru.finex.ws.l2.model.entity.StatusComponentEntity;
-import ru.finex.ws.l2.network.model.UserInfoComponent;
 import ru.finex.ws.l2.model.enums.CharCreateFailReason;
-import ru.finex.ws.l2.network.model.dto.*;
+import ru.finex.ws.l2.network.model.UserInfoComponent;
+import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
+import ru.finex.ws.l2.network.model.dto.CharCreateFailDto;
+import ru.finex.ws.l2.network.model.dto.CharSelectInfoDto;
+import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
+import ru.finex.ws.l2.network.model.dto.LeaveWorldDto;
+import ru.finex.ws.l2.network.model.dto.ManorListDto;
+import ru.finex.ws.l2.network.model.dto.MoveToLocationDto;
+import ru.finex.ws.l2.network.model.dto.NewCharacterSuccessDto;
+import ru.finex.ws.l2.network.model.dto.ServerCloseDto;
+import ru.finex.ws.l2.network.model.dto.StopMoveDto;
+import ru.finex.ws.l2.network.model.dto.UserInfoDto;
+import ru.finex.ws.l2.network.model.dto.ValidateLocationDto;
+import ru.finex.ws.l2.network.model.dto.VersionCheckDto;
 import ru.finex.ws.l2.network.session.GameClient;
 import ru.finex.ws.l2.service.AvatarService;
 
 import java.util.Collections;
+import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -61,7 +75,7 @@ public class OutcomePacketBuilderService {
         return CharSelectInfoDto.builder()
             .login(login)
             .sessionId(sessionId)
-            .avatars(avatarService.getAvatars(login))
+            .avatars(avatarService.get(login))
             .build();
     }
 
@@ -78,8 +92,8 @@ public class OutcomePacketBuilderService {
 
         PlayerComponentEntity player = componentService.getComponent(gameObject, PlayerComponent.class).getEntity();
         ClanComponentEntity clan = componentService.getComponent(gameObject, ClanComponent.class).getEntity();
-        PositionComponentEntity position = componentService.getComponent(gameObject, CoordinateComponent.class).getPosition();
-        StatusComponentEntity status = componentService.getComponent(gameObject, StatusComponent.class).getStatusEntity();
+        PositionComponentEntity position = componentService.getComponent(gameObject, CoordinateComponent.class).getEntity();
+        StatusComponentEntity status = componentService.getComponent(gameObject, StatusComponent.class).getEntity();
 
         return CharacterSelectedDto.builder()
             .runtimeId(gameObject.getRuntimeId())
@@ -96,6 +110,10 @@ public class OutcomePacketBuilderService {
             .hp(status.getHp())
             .mp(status.getMp())
             .build();
+    }
+
+    public NetworkDto newCharacterSuccess(List<AvatarPrototypeView> prototypes) {
+        return new NewCharacterSuccessDto(prototypes);
     }
 
     public NetworkDto serverClose() {
@@ -137,10 +155,10 @@ public class OutcomePacketBuilderService {
     public ValidateLocationDto validateLocation(GameObject gameObject) {
         CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
         return ValidateLocationDto.builder()
-            .heading((int) component.getPosition().getH())
-            .x(component.getPosition().getX().intValue())
-            .y(component.getPosition().getY().intValue())
-            .z(component.getPosition().getZ().intValue())
+            .heading((int) component.getEntity().getH())
+            .x(component.getEntity().getX().intValue())
+            .y(component.getEntity().getY().intValue())
+            .z(component.getEntity().getZ().intValue())
             .vehicleId(0x00) // fixme: must be a vehicle id
             .build();
     }
@@ -149,9 +167,9 @@ public class OutcomePacketBuilderService {
         CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
         return MoveToLocationDto.builder()
             .runtimeId(gameObject.getRuntimeId())
-            .startX(component.getPosition().getX().intValue())
-            .startY(component.getPosition().getY().intValue())
-            .startZ(component.getPosition().getZ().intValue())
+            .startX(component.getEntity().getX().intValue())
+            .startY(component.getEntity().getY().intValue())
+            .startZ(component.getEntity().getZ().intValue())
             .destinationZ(destZ)
             .destinationX(destX)
             .destinationY(destY)
@@ -160,7 +178,7 @@ public class OutcomePacketBuilderService {
 
     public StopMoveDto stopMove(GameObject gameObject) {
         CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
-        PositionComponentEntity position = component.getPosition();
+        PositionComponentEntity position = component.getEntity();
         return StopMoveDto.builder()
             .x(position.getX().intValue())
             .y(position.getY().intValue())

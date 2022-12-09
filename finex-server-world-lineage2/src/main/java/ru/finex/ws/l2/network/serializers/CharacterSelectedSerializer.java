@@ -5,10 +5,6 @@ import ru.finex.core.network.Opcode;
 import ru.finex.core.network.OutcomePacket;
 import ru.finex.network.netty.serial.PacketSerializer;
 import ru.finex.ws.l2.model.ClassId;
-import ru.finex.ws.l2.model.entity.ClanComponentEntity;
-import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
-import ru.finex.ws.l2.model.entity.PositionComponentEntity;
-import ru.finex.ws.l2.model.entity.StatusComponentEntity;
 import ru.finex.ws.l2.network.SerializerHelper;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
 
@@ -31,7 +27,7 @@ public class CharacterSelectedSerializer implements PacketSerializer<CharacterSe
         buffer.writeIntLE(0x00); // FIXME m0nster.mind: access level
         buffer.writeIntLE(dto.getGender().ordinal());
         buffer.writeIntLE(dto.getRace().ordinal());
-        buffer.writeIntLE(dto.getAppearanceClass().getNetworkId(dto.getRace()));
+        buffer.writeIntLE(dto.getAppearanceClass().getNetworkId(dto.getRace(), dto.getGender()));
         buffer.writeIntLE(0x01); // selected
         buffer.writeIntLE((int) dto.getX());
         buffer.writeIntLE((int) dto.getY());
@@ -45,7 +41,7 @@ public class CharacterSelectedSerializer implements PacketSerializer<CharacterSe
         buffer.writeIntLE(0); // pk count
         buffer.writeIntLE(0); // game time
         buffer.writeIntLE(0x00);
-        buffer.writeIntLE(ClassId.HumanFighter.ordinal());
+        buffer.writeIntLE(ClassId.HUMAN_FIGHTER.ordinal());
         buffer.writeBytes(new byte[16]);
         buffer.writeIntLE(0x00);
         buffer.writeIntLE(0x00);
@@ -56,7 +52,7 @@ public class CharacterSelectedSerializer implements PacketSerializer<CharacterSe
         buffer.writeIntLE(0x00);
         buffer.writeIntLE(0x00);
         buffer.writeIntLE(0x00);
-        buffer.writeBytes(new byte[28]);
+        buffer.skipBytes(28);
         buffer.writeIntLE(0x00);
     }
 

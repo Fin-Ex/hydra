@@ -4,7 +4,6 @@ import io.netty.buffer.ByteBuf;
 import ru.finex.core.network.Opcode;
 import ru.finex.core.network.OutcomePacket;
 import ru.finex.network.netty.serial.PacketSerializer;
-import ru.finex.ws.l2.model.ClassId;
 import ru.finex.ws.l2.model.entity.AvatarView;
 import ru.finex.ws.l2.network.SerializerHelper;
 import ru.finex.ws.l2.network.model.dto.CharSelectInfoDto;
@@ -27,8 +26,8 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
 
         buffer.writeIntLE(avatars.size());
         buffer.writeIntLE(7); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-        buffer.writeByte(0x00); // if 1 can't create new char
-        buffer.writeByte(0x02); // 0=can't play, 1=can play free until level 85, 2=100% free play
+        buffer.writeByte(avatars.size() >= 7 ? 0x01 : 0x00); // if 1 can't create new char
+        buffer.writeByte(0x01); // 0=can't play, 1=can play free until level 85, 2=100% free play
         buffer.writeIntLE(0x02); // if 0x01, Korean client
         buffer.writeByte(0x00); // If 0x01 suggests premium account
 
@@ -42,7 +41,7 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
 
             buffer.writeIntLE(avatar.getGender().ordinal()); // Sex
             buffer.writeIntLE(avatar.getRace().ordinal()); // Race
-            buffer.writeIntLE(avatar.getAppearanceClass().getNetworkId(avatar.getRace()));
+            buffer.writeIntLE(avatar.getClassId()); // base class
 
             buffer.writeIntLE(0x01); // GameServerName
 
@@ -113,7 +112,7 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
                         .toSeconds()
                     ).orElse(0L);
             buffer.writeIntLE((int) remainsSecondsToDelete);
-            buffer.writeIntLE(ClassId.HumanFighter.ordinal());
+            buffer.writeIntLE(avatar.getClassId()); // class (not base)
             buffer.writeIntLE(0x01);  // selected avatar or not
 
             buffer.writeByte(0); // enchant weapon

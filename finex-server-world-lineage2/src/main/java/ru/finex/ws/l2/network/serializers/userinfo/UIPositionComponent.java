@@ -14,7 +14,7 @@ public class UIPositionComponent implements UIComponentSerializer {
 
     @Override
     public void writeComponent(UserInfoDto dto, ByteBuf buffer) {
-        PositionComponentEntity position = dto.getCoordinateComponent().getPosition();
+        PositionComponentEntity position = dto.getCoordinateComponent().getEntity();
         buffer.writeIntLE(position.getX().intValue());
         buffer.writeIntLE(position.getY().intValue());
         buffer.writeIntLE(position.getZ().intValue());

@@ -14,7 +14,7 @@ public class UIMaxStatusComponent implements UIComponentSerializer {
 
     @Override
     public void writeComponent(UserInfoDto dto, ByteBuf buffer) {
-        StatusComponentEntity status = dto.getStatusComponent().getStatusEntity();
+        StatusComponentEntity status = dto.getStatusComponent().getEntity();
         buffer.writeIntLE(status.getMaxHp().intValue());
         buffer.writeIntLE(status.getMaxMp().intValue());
         buffer.writeIntLE(status.getMaxCp().intValue());

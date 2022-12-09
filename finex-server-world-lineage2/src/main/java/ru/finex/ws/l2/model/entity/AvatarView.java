@@ -13,7 +13,7 @@ import org.hibernate.annotations.Immutable;
 import ru.finex.core.model.entity.EntityObject;
 import ru.finex.ws.l2.model.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
-import ru.finex.ws.l2.model.PlayerRace;
+import ru.finex.ws.l2.model.enums.Race;
 
 import java.time.Instant;
 
@@ -42,7 +42,7 @@ public class AvatarView implements EntityObject<Integer> {
     @Enumerated(EnumType.ORDINAL)
     private Gender gender;
     @Enumerated(EnumType.ORDINAL)
-    private PlayerRace race;
+    private Race race;
     @Enumerated(EnumType.ORDINAL)
     private PlayerAppearanceClass appearanceClass;
 
@@ -87,5 +87,9 @@ public class AvatarView implements EntityObject<Integer> {
     private transient Boolean isNoble = false;
     private transient Boolean isHero = false;
     private transient Boolean isShowHairAccessory = false;
+
+    public int getClassId() {
+        return appearanceClass.getNetworkId(race, gender);
+    }
 
 }

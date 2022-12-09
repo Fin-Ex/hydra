@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import ru.finex.core.prototype.ComponentPrototype;
 import ru.finex.ws.l2.model.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
-import ru.finex.ws.l2.model.PlayerRace;
+import ru.finex.ws.l2.model.enums.Race;
 
 /**
  * @author m0nster.mind
@@ -14,7 +14,7 @@ import ru.finex.ws.l2.model.PlayerRace;
 @NoArgsConstructor
 public class PlayerPrototype implements ComponentPrototype {
 
-    private PlayerRace race;
+    private Race race;
     private Gender gender;
     private PlayerAppearanceClass appearanceClass;
     private int hairType;

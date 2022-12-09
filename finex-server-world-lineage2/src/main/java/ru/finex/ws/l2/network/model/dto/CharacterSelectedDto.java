@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import ru.finex.network.netty.model.NetworkDto;
 import ru.finex.ws.l2.model.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
-import ru.finex.ws.l2.model.PlayerRace;
+import ru.finex.ws.l2.model.enums.Race;
 
 /**
  * @author m0nster.mind
@@ -23,7 +23,7 @@ public class CharacterSelectedDto implements NetworkDto {
 
     private String name;
     private String title;
-    private PlayerRace race;
+    private Race race;
     private Gender gender;
     private PlayerAppearanceClass appearanceClass;
 

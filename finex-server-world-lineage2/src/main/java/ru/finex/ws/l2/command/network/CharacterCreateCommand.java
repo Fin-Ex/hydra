@@ -1,10 +1,12 @@
 package ru.finex.ws.l2.command.network;
 
+import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import ru.finex.core.command.AbstractNetworkCommand;
 import ru.finex.ws.l2.model.enums.CharCreateFailReason;
+import ru.finex.ws.l2.model.exception.AppearanceClassNotFoundException;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.model.dto.CharCreateOk;
 import ru.finex.ws.l2.network.model.dto.CharacterCreateDto;
@@ -29,14 +31,13 @@ public class CharacterCreateCommand extends AbstractNetworkCommand {
 	@Override
 	public void executeCommand() {
 		try {
-			avatarService.createAvatar(dto);
-		} catch (Exception e) {
-			log.debug("", e);
+			avatarService.create(dto, session.getLogin());
+			session.sendPacket(CharCreateOk.INSTANCE);
+		} catch (ValidationException | AppearanceClassNotFoundException e) {
+			log.debug("Validation failed, DTO: {}", dto, e);
 			session.sendPacket(packets.charCreateFail(CharCreateFailReason.REASON_CREATION_FAILED));
-			return;
 		}
 
-		session.sendPacket(CharCreateOk.INSTANCE);
 		session.sendPacket(packets.charSelectInfo(session.getLogin(), session.getData().getSessionId()));
 	}
 }

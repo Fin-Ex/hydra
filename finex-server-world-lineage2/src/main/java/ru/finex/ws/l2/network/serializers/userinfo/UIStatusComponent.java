@@ -14,7 +14,7 @@ public class UIStatusComponent implements UIComponentSerializer {
 
     @Override
     public void writeComponent(UserInfoDto dto, ByteBuf buffer) {
-        StatusComponentEntity status = dto.getStatusComponent().getStatusEntity();
+        StatusComponentEntity status = dto.getStatusComponent().getEntity();
         buffer.writeIntLE((int) Math.round(status.getHp()));
         buffer.writeIntLE((int) Math.round(status.getMp()));
         buffer.writeIntLE((int) Math.round(status.getCp()));

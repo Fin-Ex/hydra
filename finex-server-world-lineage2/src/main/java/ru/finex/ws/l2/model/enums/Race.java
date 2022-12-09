@@ -20,8 +20,7 @@ package ru.finex.ws.l2.model.enums;
  * Creature races enumerated.
  * @author Zealar
  */
-public enum Race
-{
+public enum Race {
 	HUMAN,
 	ELF,
 	DARK_ELF,
@@ -51,5 +50,9 @@ public enum Race
 
 	public int getId() {
 		return ordinal();
+	}
+
+	public static Race ofId(int id) {
+		return values()[id];
 	}
 }

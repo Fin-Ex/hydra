@@ -67,12 +67,9 @@ create table if not exists game_object_player_components(
     gender int not null check(gender >= 0 and gender < 3),
 # -- fighter/wizard
     appearance_class int not null check(appearance_class >= 0 and appearance_class <= 1),
-# -- FIXME m0nster.mind: correct max value
-    hair_type int not null check(hair_type >= 0 and hair_type < 10),
-# -- FIXME m0nster.mind: correct max value
-    hair_color int not null check(hair_color >= 0 and hair_type < 10),
-# -- FIXME m0nster.mind: correct max value
-    face_type int not null check(face_type >= 0 and face_type < 10),
+    hair_type int not null check(hair_type >= 0 and hair_type < 7),
+    hair_color int not null check(hair_color >= 0 and hair_type < 4),
+    face_type int not null check(face_type >= 0 and face_type < 3),
 # -- none, half, flag
     pvp_mode int not null check(pvp_mode >= 0 and pvp_mode < 3) default 0,
     "name" varchar(16) unique not null,
@@ -128,29 +125,71 @@ create table if not exists game_object_status_components(
 );
 create unique index if not exists game_object_status_components_game_object_id_idx on game_object_status_components(game_object_id);
 
-insert into game_object_prototypes(id, "name") values (1, 'test_player') on conflict(id) do nothing;
-insert into game_object_component_prototypes(id, component, prototype_id, data) values
-    (1, 'ru.finex.ws.l2.component.prototype.CoordinatePrototype', 1, '{ "x": 82698, "y": 148638, "z": -3473 }'),
-    (2, 'ru.finex.ws.l2.component.prototype.StatusPrototype', 1, '{ "hp": 100, "maxHp": 100, "mp": 100, "maxMp": 100, "cp": 100, "maxCp": 100 }'),
-    (3, 'ru.finex.ws.l2.component.prototype.AbnormalPrototype', 1, '{}'),
-    (4, 'ru.finex.ws.l2.component.prototype.ClanPrototype', 1, '{}'),
-    (5, 'ru.finex.ws.l2.component.prototype.ClassPrototype', 1, '{}'),
-    (6, 'ru.finex.ws.l2.component.prototype.ClientPrototype', 1, '{}'),
-    (7, 'ru.finex.ws.l2.component.prototype.CollisionPrototype', 1, '{}'),
-    (8, 'ru.finex.ws.l2.component.prototype.CubicPrototype', 1, '{}'),
-    (9, 'ru.finex.ws.l2.component.prototype.MountPrototype', 1, '{}'),
-    (11, 'ru.finex.ws.l2.component.prototype.PlayerPrototype', 1, '{ "race": "HUMAN", "gender": "MALE", "appearanceClass": "FIGHTER", "hairType": 0, "hairColor": 0, "faceType": 0, "nameColor": -1, "titleColor": -1 }'),
-    (12, 'ru.finex.ws.l2.component.prototype.RecommendationPrototype', 1, '{}'),
-    (13, 'ru.finex.ws.l2.component.prototype.SpeedPrototype', 1, '{}'),
-    (14, 'ru.finex.ws.l2.component.prototype.StatePrototype', 1, '{}'),
-    (15, 'ru.finex.ws.l2.component.prototype.StorePrototype', 1, '{}'),
-    (16, 'ru.finex.ws.l2.component.prototype.VisualEquipPrototype', 1, '{}'),
-    (17, 'ru.finex.ws.l2.component.prototype.ParameterPrototype', 1, '{}'),
-    (18, 'ru.finex.ws.l2.component.prototype.StatPrototype', 1, '{}')
-    on conflict(id) do update set
-        component = EXCLUDED.component,
-        prototype_id = EXCLUDED.prototype_id,
-        data = EXCLUDED.data;
+do $$
+declare
+    abstract_id int;;
+    abstract_race_id int;;
+    abstract_class_id int;;
+    proto_id int;;
+begin
+    insert into game_object_prototypes("name") values ('player_abstract') returning id into abstract_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_id, '{ "hairType": 0, "hairColor": 0, "faceType": 0, "nameColor": -1, "titleColor": -1 }'),
+        ('ru.finex.ws.l2.component.prototype.ClientPrototype', abstract_id, '{}'),
+        ('ru.finex.ws.l2.component.prototype.AbnormalPrototype', abstract_id, '{}'),
+        ('ru.finex.ws.l2.component.prototype.ClanPrototype', abstract_id, '{}'),
+        ('ru.finex.ws.l2.component.prototype.StatePrototype', abstract_id, '{}'),
+        ('ru.finex.ws.l2.component.prototype.StorePrototype', abstract_id, '{}'),
+        ('ru.finex.ws.l2.component.prototype.CubicPrototype', abstract_id, '{}'),
+        ('ru.finex.ws.l2.component.prototype.MountPrototype', abstract_id, '{}'),
+        ('ru.finex.ws.l2.component.prototype.RecommendationPrototype', abstract_id, '{}'),
+        ('ru.finex.ws.l2.component.prototype.VisualEquipPrototype', abstract_id, '{}');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_abstract_human', abstract_id) returning id into abstract_race_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.CoordinatePrototype', abstract_race_id, '{ "x": -114539, "y": 260101, "z": -1192 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_race_id, '{ "race": "HUMAN" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_race_id, '{ "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_race_id, '{ "criticalRate": 4, "magicCriticalRate": 5 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_human_fighter', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 80, "maxHp": 80, "mp": 30, "maxMp": 30, "cp": 32, "maxCp": 32 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 0 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "FIGHTER" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 80, "runSpeed": 132, "swimSpeed": 50, "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 88, "dex": 55, "con": 82, "int": 39, "wit": 39, "men": 38, "luc": 34, "cha": 41 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 4, "mAtk": 6, "pDef": 80, "mDef": 41 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_human_fighter_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 9, "height": 23 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_human_fighter_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 8, "height": 23.5 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_human_mystic', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 101, "maxHp": 101, "mp": 40, "maxMp": 40, "cp": 50.5, "maxCp": 50.5 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 10 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "WIZARD" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 78, "runSpeed": 124, "swimSpeed": 50 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 38, "dex": 27, "con": 41, "int": 79, "wit": 78, "men": 78, "luc": 34, "cha": 41 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 3, "mAtk": 6, "pDef": 54, "mDef": 41 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_human_mystic_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7.5, "height": 22.8 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_human_mystic_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 6.5, "height": 22.5 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+end $$;
 
 create or replace view game_object_avatars as
     select
