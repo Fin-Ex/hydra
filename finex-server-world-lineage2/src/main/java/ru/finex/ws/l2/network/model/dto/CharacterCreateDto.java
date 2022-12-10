@@ -6,15 +6,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import ru.finex.core.network.NetworkCommandScoped;
 import ru.finex.network.netty.model.NetworkDto;
 import ru.finex.ws.l2.model.Gender;
 import ru.finex.ws.l2.model.enums.Race;
+import ru.finex.ws.l2.validation.GenderHairType;
 import ru.finex.ws.l2.validation.GenderSubset;
 import ru.finex.ws.l2.validation.RaceSubset;
-import ru.finex.ws.l2.validation.ValidGenderHairStyle;
+import ru.finex.ws.l2.validation.ValidGenderHairType;
 import ru.finex.ws.l2.validation.ValidStarterClass;
 
 /**
@@ -25,12 +25,11 @@ import ru.finex.ws.l2.validation.ValidStarterClass;
 @NoArgsConstructor
 @AllArgsConstructor
 @NetworkCommandScoped
-@ValidGenderHairStyle
-public class CharacterCreateDto implements NetworkDto {
+@ValidGenderHairType
+public class CharacterCreateDto implements NetworkDto, GenderHairType {
 
     @NotNull
-    @Length(min = 1, max = 16)
-    @Pattern(regexp = "[\\w\\d]{1,16}")
+    @Pattern(regexp = "^[\\w\\d]{3,16}$")
     private String name;
 
     @NotNull
@@ -52,16 +51,16 @@ public class CharacterCreateDto implements NetworkDto {
     private int STR;
 
     @Range(min = 0, max = 100)
-    private int VIT; // CON
+    private int CON;
 
     @Range(min = 0, max = 100)
-    private int SPRT; // MEN
+    private int MEN;
 
     @Range(min = 0, max = 100)
     private int DEX;
 
     @Range(min = 0, max = 100)
-    private int AGI; // WIT
+    private int WIT;
 
     @Range(min = 0, max = 6)
     private int hairType;

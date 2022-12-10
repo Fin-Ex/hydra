@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import ru.finex.core.command.AbstractNetworkCommand;
-import ru.finex.ws.l2.model.enums.CharCreateFailReason;
+import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 import ru.finex.ws.l2.model.exception.AppearanceClassNotFoundException;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.model.dto.CharCreateOk;
@@ -35,9 +35,10 @@ public class CharacterCreateCommand extends AbstractNetworkCommand {
 			session.sendPacket(CharCreateOk.INSTANCE);
 		} catch (ValidationException | AppearanceClassNotFoundException e) {
 			log.debug("Validation failed, DTO: {}", dto, e);
-			session.sendPacket(packets.charCreateFail(CharCreateFailReason.REASON_CREATION_FAILED));
+			session.sendPacket(packets.charCreateFail(CharacterCreateReason.REASON_CREATION_FAILED));
+		} catch (Exception e) {
+			log.error("Fail to create avatar '{}' for session: {}", dto, session, e);
+			session.sendPacket(packets.charCreateFail(CharacterCreateReason.REASON_CREATION_FAILED));
 		}
-
-		session.sendPacket(packets.charSelectInfo(session.getLogin(), session.getData().getSessionId()));
 	}
 }

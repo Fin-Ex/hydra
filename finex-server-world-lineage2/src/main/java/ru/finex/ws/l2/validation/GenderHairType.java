@@ -5,9 +5,9 @@ import ru.finex.ws.l2.model.Gender;
 /**
  * @author m0nster.mind
  */
-public interface GenderHairStyle {
+public interface GenderHairType {
 
     Gender getGender();
-    int getHairStyle();
+    int getHairType();
 
 }
