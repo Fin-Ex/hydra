@@ -44,9 +44,6 @@ public class StatComponentEntity implements EntityObject<Integer>, GameObjectRel
 	@NotNull
 	private Integer evasion;
 	@NotNull
-	@Min(1)
-	private Integer attackSpeed; // FIXME m0nster.mind: хранится в speed component
-	@NotNull
 	private Integer criticalRate;
 
 	@NotNull
@@ -55,13 +52,10 @@ public class StatComponentEntity implements EntityObject<Integer>, GameObjectRel
 	@NotNull
 	private Integer mDef;
 	@NotNull
-	@Min(1)
-	private Integer castSpeed; // FIXME m0nster.mind: хранится в speed component
-	@Min(1)
 	private Integer magicCriticalRate;
-	@Min(1)
+	@NotNull
 	private Integer magicEvasion;
-	@Min(1)
+	@NotNull
 	private Integer magicAccuracy;
 
 	@Override

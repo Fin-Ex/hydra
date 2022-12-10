@@ -1,7 +1,9 @@
 package ru.finex.ws.l2.model.entity;
 
-import jakarta.persistence.Entity;
-import lombok.Data;
+import jakarta.persistence.Column;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import ru.finex.core.model.entity.Projection;
 import ru.finex.ws.l2.model.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
 import ru.finex.ws.l2.model.enums.Race;
@@ -9,60 +11,47 @@ import ru.finex.ws.l2.model.enums.Race;
 import java.util.Optional;
 
 /**
- * Note: real mapping is declared in l2_Avatar.xml
  * @author m0nster.mind
  */
-@Data
-@Entity
-public class AvatarPrototypeView {
+@Projection
+public interface AvatarPrototypeView {
 
-    private transient String name;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    Race getRace();
 
-    private String race;
-    private String gender;
-    private String appearanceClass;
+    @Enumerated(EnumType.STRING)
+    Gender getGender();
 
-    private int STR;
-    private int DEX;
-    private int CON;
-    private int INT;
-    private int WIT;
-    private int MEN;
-    private int LUC;
-    private int CHA;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    PlayerAppearanceClass getAppearanceClass();
 
-    public AvatarPrototypeView(String race, String gender, String appearanceClass, Integer STR, Integer DEX, Integer CON, Integer INT,
-        Integer WIT, Integer MEN, Integer LUC, Integer CHA) {
-        this.race = race;
-        this.gender = gender;
-        this.appearanceClass = appearanceClass;
-        this.STR = STR;
-        this.DEX = DEX;
-        this.CON = CON;
-        this.INT = INT;
-        this.WIT = WIT;
-        this.MEN = MEN;
-        this.LUC = LUC;
-        this.CHA = CHA;
-    }
+    @Column(name = "str", nullable = false)
+    Integer getSTR();
 
-    public Race getRace() {
-        return Optional.ofNullable(race)
-            .map(Race::valueOf)
-            .orElse(null);
-    }
+    @Column(name = "dex", nullable = false)
+    Integer getDEX();
 
-    public Gender getGender() {
-        return Optional.ofNullable(gender)
-            .map(Gender::valueOf)
-            .orElse(null);
-    }
+    @Column(name = "con", nullable = false)
+    Integer getCON();
 
-    public PlayerAppearanceClass getAppearanceClass() {
-        return PlayerAppearanceClass.valueOf(appearanceClass);
-    }
+    @Column(name = "int", nullable = false)
+    Integer getINT();
 
-    public int getClassId() {
+    @Column(name = "wit", nullable = false)
+    Integer getWIT();
+
+    @Column(name = "men", nullable = false)
+    Integer getMEN();
+
+    @Column(name = "luc", nullable = false)
+    Integer getLUC();
+
+    @Column(name = "cha", nullable = false)
+    Integer getCHA();
+
+    default int getClassId() {
         Race race = Optional.ofNullable(getRace())
             .orElse(Race.HUMAN);
 

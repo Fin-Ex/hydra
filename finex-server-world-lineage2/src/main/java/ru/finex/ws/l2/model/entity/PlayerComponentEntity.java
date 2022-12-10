@@ -9,12 +9,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import ru.finex.core.model.entity.EntityObject;
 import ru.finex.ws.l2.model.Gender;
@@ -67,13 +67,14 @@ public class PlayerComponentEntity implements EntityObject<Integer>, GameObjectR
     @Enumerated(EnumType.ORDINAL)
     private PvpMode pvpMode;
     @NotNull
-    @Max(16)
+    @Length(max = 16)
     private String name;
     @NotNull
     @ColumnDefault("-1")
     private Integer nameColor;
     @NotNull
-    @Max(16)
+    @Length(max = 16)
+    @ColumnDefault("")
     private String title;
     @NotNull
     @ColumnDefault("-1")

@@ -20,4 +20,10 @@ public class StatPrototype implements ComponentPrototype {
     private int criticalRate;
     private int magicCriticalRate;
 
+    private int accuracy;
+    private int magicAccuracy;
+
+    private int evasion;
+    private int magicEvasion;
+
 }

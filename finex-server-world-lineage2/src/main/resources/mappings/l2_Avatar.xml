@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<entity-mappings version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd">
+<entity-mappings version="3.1" xmlns="https://jakarta.ee/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence/orm https://jakarta.ee/xml/ns/persistence/orm/orm_3_1.xsd">
 
-    <named-native-query name="AvatarRepository.findPrototypeByName" result-set-mapping="AvatarRepository.findPrototypeByName">
+    <named-native-query name="AvatarRepository.findPrototypeByName">
         <query>
 <![CDATA[
 with prototypes as (
@@ -30,9 +30,9 @@ with prototypes as (
 ),
 player_proto as (
 	select
-		cast(data->>'race' as varchar) race,
-		cast(data->>'gender' as varchar) gender,
-		cast(data->>'appearanceClass' as varchar) appearance_class
+		data->>'race' race,
+		data->>'gender' gender,
+		data->>'appearanceClass' appearance_class
 	from prototypes
 	where component = 'ru.finex.ws.l2.component.prototype.PlayerPrototype'
 ),
@@ -58,25 +58,11 @@ select
 	parameter_proto.con con,
 	parameter_proto."int" "int",
 	parameter_proto.wit wit,
+	parameter_proto.men men,
 	parameter_proto.luc luc,
 	parameter_proto.cha cha
 from player_proto, parameter_proto
 ]]>
         </query>
     </named-native-query>
-    
-    <sql-result-set-mapping name="AvatarRepository.findPrototypeByName">
-        <constructor-result target-class="ru.finex.ws.l2.model.entity.AvatarPrototypeView">
-            <column name="race" class="java.lang.String"/>
-            <column name="gender" class="java.lang.String"/>
-            <column name="appearance_class" class="java.lang.String"/>
-            <column name="str" class="java.lang.Integer"/>
-            <column name="dex" class="java.lang.Integer"/>
-            <column name="con" class="java.lang.Integer"/>
-            <column name="int" class="java.lang.Integer"/>
-            <column name="wit" class="java.lang.Integer"/>
-            <column name="luc" class="java.lang.Integer"/>
-            <column name="cha" class="java.lang.Integer"/>
-        </constructor-result>
-    </sql-result-set-mapping>
 </entity-mappings>

@@ -1,5 +1,7 @@
 package ru.finex.ws.l2.service;
 
+import jakarta.transaction.Transactional;
+import jakarta.transaction.Transactional.TxType;
 import jakarta.validation.Valid;
 import jakarta.validation.ValidationException;
 import jakarta.validation.executable.ValidateOnExecution;
@@ -51,6 +53,7 @@ public class AvatarService {
         return avatarRepository.findByLogin(login);
     }
 
+    @Transactional(TxType.REQUIRES_NEW)
     @ValidateOnExecution
     public void create(@Valid CharacterCreateDto dto, String login) throws ValidationException, AppearanceClassNotFoundException {
         String prototypeName = getPrototypeName(ClassId.ofId(dto.getClassId()), dto.getGender());
@@ -79,19 +82,24 @@ public class AvatarService {
 
         entity.setLogin(login);
         entity.setName(dto.getName());
+        entity.setTitle(StringUtils.EMPTY);
         entity.setAppearanceClass(PlayerAppearanceClass.ofClassId(dto.getClassId(), dto.getRace(), dto.getGender()));
         entity.setGender(dto.getGender());
         entity.setRace(dto.getRace());
         entity.setFaceType(dto.getFace());
         entity.setHairColor(dto.getHairColor());
         entity.setHairType(dto.getHairType());
+        entity.setNameColor(-1);
+        entity.setTitleColor(-1);
     }
 
     public List<AvatarPrototypeView> getPrototypes() {
         return StreamEx.of(ClassId.values())
             .filter(e -> e.getParent() == null) // only starter classes
-            .map(this::getPrototype)
-            .filter(Optional::isPresent)
+            .flatMap(classId -> StreamEx.of(Gender.values())
+                .map(gender -> getPrototypeName(classId, gender))
+                .map(this::getPrototype)
+            ).filter(Optional::isPresent)
             .map(Optional::get)
             .distinct(AvatarPrototypeView::getClassId) // remove duplicates
             .collect(Collectors.toList());

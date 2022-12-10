@@ -68,13 +68,13 @@ create table if not exists game_object_player_components(
 # -- fighter/wizard
     appearance_class int not null check(appearance_class >= 0 and appearance_class <= 1),
     hair_type int not null check(hair_type >= 0 and hair_type < 7),
-    hair_color int not null check(hair_color >= 0 and hair_type < 4),
+    hair_color int not null check(hair_color >= 0 and hair_color < 4),
     face_type int not null check(face_type >= 0 and face_type < 3),
 # -- none, half, flag
     pvp_mode int not null check(pvp_mode >= 0 and pvp_mode < 3) default 0,
     "name" varchar(16) unique not null,
     name_color int not null default -1,
-    title varchar(16) not null,
+    title varchar(16) not null default '',
     title_color int not null default -1
 );
 create unique index if not exists game_object_player_components_game_object_id_idx on game_object_player_components(game_object_id);
@@ -102,11 +102,9 @@ create table if not exists game_object_stat_components(
     p_def int not null,
     accuracy int not null,
     evasion int not null,
-    attack_speed int not null check(attack_speed > 0),
     critical_rate int not null,
     m_atk int not null check(m_atk > 0),
     m_def int not null,
-    cast_speed int not null check(cast_speed > 0),
     magic_critical_rate int not null,
     magic_evasion int not null,
     magic_accuracy int not null
@@ -135,6 +133,7 @@ begin
     insert into game_object_prototypes("name") values ('player_abstract') returning id into abstract_id;;
     insert into game_object_component_prototypes(component, prototype_id, data) values
         ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_id, '{ "hairType": 0, "hairColor": 0, "faceType": 0, "nameColor": -1, "titleColor": -1 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_id, '{ "accuracy": 0, "evasion": 0, "magicEvasion": 0, "magicAccuracy": 0 }'),
         ('ru.finex.ws.l2.component.prototype.ClientPrototype', abstract_id, '{}'),
         ('ru.finex.ws.l2.component.prototype.AbnormalPrototype', abstract_id, '{}'),
         ('ru.finex.ws.l2.component.prototype.ClanPrototype', abstract_id, '{}'),

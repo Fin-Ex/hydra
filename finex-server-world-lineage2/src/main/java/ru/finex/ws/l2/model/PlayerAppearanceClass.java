@@ -33,7 +33,7 @@ public enum PlayerAppearanceClass {
         @Override
         public int getNetworkId(Race race, Gender gender) throws AppearanceClassNotFoundException {
             ClassId id = switch (race) {
-                case HUMAN -> ClassId.HumanWizard;
+                case HUMAN -> ClassId.HUMAN_MYSTIC;
                 case ELF -> ClassId.ElvenWizard;
                 case DARK_ELF -> ClassId.DarkWizard;
                 case ORC -> ClassId.OrcMystic;
