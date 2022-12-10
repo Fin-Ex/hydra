@@ -16,11 +16,15 @@
  */
 package ru.finex.ws.l2.model.enums;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
 /**
  * Creature races enumerated.
  * @author Zealar
  */
-public enum Race {
+@Getter
+public enum Race implements IdEnum {
 	HUMAN,
 	ELF,
 	DARK_ELF,
@@ -48,6 +52,7 @@ public enum Race {
 	UNDEAD,
 	FRIEND; // FRIEND ordinal has to be confirmed
 
+	@Override
 	public int getId() {
 		return ordinal();
 	}

@@ -1,9 +1,11 @@
 package ru.finex.ws.l2.model.enums;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
-public enum Elements {
+@RequiredArgsConstructor
+public enum Elements implements IdEnum {
 	NONE(-2),
 	FIRE(0),
 	WATER(1),
@@ -14,7 +16,4 @@ public enum Elements {
 
 	private final int id;
 
-	Elements(int id) {
-		this.id = id;
-	}
 }

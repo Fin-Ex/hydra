@@ -3,15 +3,15 @@ package ru.finex.ws.l2.model.enums;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+@Getter
 @RequiredArgsConstructor
-public enum MoveType {
-	Walk(0),
-	Run(1);
+public enum MoveType implements IdEnum {
+	WALK(0),
+	RUN(1);
 
-	@Getter
 	private final int id;
 
 	public static int findBy(boolean isRunning) {
-		return isRunning ? Run.id : Walk.id;
+		return isRunning ? RUN.id : WALK.id;
 	}
 }

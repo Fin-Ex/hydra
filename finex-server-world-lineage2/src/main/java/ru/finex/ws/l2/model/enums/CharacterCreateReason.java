@@ -1,6 +1,6 @@
 package ru.finex.ws.l2.model.enums;
 
-public enum CharCreateFailReason {
+public enum CharacterCreateReason implements IdEnum {
 	REASON_CREATION_FAILED,
 	REASON_TOO_MANY_CHARACTERS,
 	REASON_NAME_ALREADY_EXISTS,
@@ -9,6 +9,7 @@ public enum CharCreateFailReason {
 	REASON_CREATE_NOT_ALLOWED,
 	REASON_CHOOSE_ANOTHER_SERVER;
 
+	@Override
 	public int getId() {
 		return ordinal();
 	}
