@@ -34,24 +34,18 @@ public class CharacterSelectedSerializer implements PacketSerializer<CharacterSe
         buffer.writeIntLE((int) dto.getZ());
         buffer.writeLongLE(Double.doubleToLongBits(dto.getHp()));
         buffer.writeLongLE(Double.doubleToLongBits(dto.getMp()));
-        buffer.writeLongLE(0); // sp
-        buffer.writeLongLE(0); // exp
-        buffer.writeIntLE(1); // level
+        buffer.writeLongLE(dto.getSp());
+        buffer.writeLongLE(dto.getExp());
+        buffer.writeIntLE(dto.getLevel());
         buffer.writeIntLE(0); // karma
         buffer.writeIntLE(0); // pk count
         buffer.writeIntLE(0); // game time
         buffer.writeIntLE(0x00);
-        buffer.writeIntLE(ClassId.HUMAN_FIGHTER.ordinal());
-        buffer.writeBytes(new byte[16]);
-        buffer.writeIntLE(0x00);
-        buffer.writeIntLE(0x00);
-        buffer.writeIntLE(0x00);
-        buffer.writeIntLE(0x00);
-        buffer.writeIntLE(0x00);
-        buffer.writeIntLE(0x00);
-        buffer.writeIntLE(0x00);
-        buffer.writeIntLE(0x00);
-        buffer.writeIntLE(0x00);
+        buffer.writeIntLE(dto.getClassId().getId());
+        buffer.skipBytes(16);
+        buffer.skipBytes(16);
+        buffer.skipBytes(4);
+        buffer.skipBytes(16);
         buffer.skipBytes(28);
         buffer.writeIntLE(0x00);
     }

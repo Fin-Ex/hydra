@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.finex.network.netty.model.NetworkDto;
+import ru.finex.ws.l2.model.enums.ClassId;
 import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
 import ru.finex.ws.l2.model.enums.Race;
@@ -26,6 +27,7 @@ public class CharacterSelectedDto implements NetworkDto {
     private Race race;
     private Gender gender;
     private PlayerAppearanceClass appearanceClass;
+    private ClassId classId;
 
     private int clanId;
 
@@ -35,5 +37,9 @@ public class CharacterSelectedDto implements NetworkDto {
 
     private double hp;
     private double mp;
+
+    private long sp;
+    private long exp;
+    private int level;
 
 }

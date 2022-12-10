@@ -12,6 +12,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import ru.finex.core.model.entity.EntityObject;
 
 import java.time.Instant;
@@ -35,6 +36,11 @@ public class GameObjectEntity implements EntityObject<Integer> {
 
     @CreationTimestamp
     private Instant createDate;
+
+    @CreationTimestamp
+    @UpdateTimestamp
+    private Instant updateTime;
+
     private Instant deleteDate;
 
 }

@@ -57,6 +57,10 @@ public class ClassComponentEntity implements EntityObject<Integer>, GameObjectRe
     @Min(0)
     private Long exp;
 
+    @NotNull
+    @Min(0)
+    private Long sp;
+
 //    @NotNull
 //    @ColumnDefault("true")
 //    private Boolean isActive;

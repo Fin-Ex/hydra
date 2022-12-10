@@ -3,6 +3,7 @@
 create table if not exists game_objects(
     id serial primary key,
     create_date timestamp default transaction_timestamp(),
+    update_date timestamp default transaction_timestamp()
     delete_date timestamp
 );
 
@@ -129,6 +130,7 @@ create table if not exists game_object_class_components(
     class_id int not null check(class_id >= 0),
     "level" int not null check("level" > 0) default 1,
     exp bigint not null check(exp >= 0) default 0,
+    sp bigint not null check(sp >= 0) default 0,
     is_active int not null check(is_active = 0 or is_active = 1) default 1
 );
 create index if not exists game_object_class_components_game_object_id_idx on game_object_class_components(game_object_id);
@@ -215,11 +217,15 @@ create or replace view game_object_avatars as
         pos.z,
         status.hp,
         status.mp,
+        class.sp,
+        class.exp,
+        class."level",
         player.hair_type,
         player.hair_color,
         player.face_type,
         status.max_hp,
         status.max_mp,
+        game_object.update_date,
         game_object.delete_date
     from game_objects game_object
     join game_object_player_components player on game_object.id = player.game_object_id

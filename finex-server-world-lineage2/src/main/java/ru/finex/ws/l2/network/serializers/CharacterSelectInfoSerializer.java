@@ -10,6 +10,7 @@ import ru.finex.ws.l2.network.model.dto.CharacterSelectInfoDto;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Comparator;
 import java.util.Optional;
 import javax.inject.Singleton;
 
@@ -23,6 +24,10 @@ public class CharacterSelectInfoSerializer implements PacketSerializer<Character
     @Override
     public void serialize(CharacterSelectInfoDto dto, ByteBuf buffer) {
         var avatars = dto.getAvatars();
+        Integer activeAvatarId = avatars.stream()
+            .max(Comparator.comparing(AvatarView::getUpdateDate))
+            .map(AvatarView::getPersistenceId)
+            .orElse(0);
 
         buffer.writeIntLE(avatars.size());
         buffer.writeIntLE(7); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
@@ -147,7 +152,7 @@ public class CharacterSelectInfoSerializer implements PacketSerializer<Character
                     ).orElse(0L);
             buffer.writeIntLE((int) remainsSecondsToDelete);
             buffer.writeIntLE(avatar.getClassId().getId()); // active class
-            buffer.writeIntLE(0x01);  // selected avatar or not
+            buffer.writeIntLE(activeAvatarId.equals(avatar.getPersistenceId()) ? 0x01 : 0x00);  // selected avatar or not
 
             buffer.writeByte(0); // enchant weapon
             buffer.writeIntLE(0); // augmentation id 1

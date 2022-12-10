@@ -17,6 +17,7 @@ public class ClassMapper implements ComponentPrototypeMapper<ClassPrototype, Cla
         entity.setClassId(ClassId.ofId(prototype.getClassId()));
         entity.setLevel(1);
         entity.setExp(0L);
+        entity.setSp(0L);
         return component;
     }
 

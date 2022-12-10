@@ -92,10 +92,12 @@ public class OutcomePacketBuilderService {
         ClientComponent clientComponent = componentService.getComponent(gameObject, ClientComponent.class);
         GameClient client = clientComponent.getClient();
 
-        PlayerComponentEntity player = componentService.getComponent(gameObject, PlayerComponent.class).getEntity();
-        ClanComponentEntity clan = componentService.getComponent(gameObject, ClanComponent.class).getEntity();
-        PositionComponentEntity position = componentService.getComponent(gameObject, CoordinateComponent.class).getEntity();
-        StatusComponentEntity status = componentService.getComponent(gameObject, StatusComponent.class).getEntity();
+        var player = componentService.getComponent(gameObject, PlayerComponent.class).getEntity();
+        var clan = componentService.getComponent(gameObject, ClanComponent.class).getEntity();
+        var position = componentService.getComponent(gameObject, CoordinateComponent.class).getEntity();
+        var status = componentService.getComponent(gameObject, StatusComponent.class).getEntity();
+        var clazz = componentService.getComponent(gameObject, ClassComponent.class).getEntity();
+
 
         return CharacterSelectedDto.builder()
             .runtimeId(gameObject.getRuntimeId())
@@ -105,12 +107,16 @@ public class OutcomePacketBuilderService {
             .race(player.getRace())
             .gender(player.getGender())
             .appearanceClass(player.getAppearanceClass())
+            .classId(clazz.getClassId())
             .clanId(clan.getClanId())
             .x(position.getX())
             .y(position.getY())
             .z(position.getZ())
             .hp(status.getHp())
             .mp(status.getMp())
+            .sp(clazz.getSp())
+            .exp(clazz.getExp())
+            .level(clazz.getLevel())
             .build();
     }
 

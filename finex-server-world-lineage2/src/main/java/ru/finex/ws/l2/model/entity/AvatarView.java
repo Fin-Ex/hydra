@@ -57,11 +57,11 @@ public class AvatarView implements EntityObject<Integer> {
     private Double hp;
     private Double mp;
 
-    private transient Long sp = 0L;
-    private transient Long exp = 0L;
+    private Long sp;
+    private Long exp;
     private transient Double expPercent = 0.;
 
-    private transient Integer level = 1;
+    private Integer level;
     private transient Integer reputation = 0;
     private transient Integer pkCount = 0;
     private transient Integer pvpCount = 0;
@@ -73,6 +73,7 @@ public class AvatarView implements EntityObject<Integer> {
     private Double maxHp;
     private Double maxMp;
 
+    private Instant updateDate;
     private Instant deleteDate;
 
     private transient Integer petPrototypeId = 0;
