@@ -29,11 +29,13 @@ import ru.finex.ws.l2.model.entity.PositionComponentEntity;
 import ru.finex.ws.l2.model.entity.StatusComponentEntity;
 import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 import ru.finex.ws.l2.model.enums.CharacterNameReason;
+import ru.finex.ws.l2.model.enums.Ex2ndPasswordReason;
 import ru.finex.ws.l2.network.model.UserInfoComponent;
 import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
 import ru.finex.ws.l2.network.model.dto.CharacterCreateFailDto;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectInfoDto;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
+import ru.finex.ws.l2.network.model.dto.Ex2ndPasswordCheckDto;
 import ru.finex.ws.l2.network.model.dto.IsCharacterNameCreatableDto;
 import ru.finex.ws.l2.network.model.dto.LeaveWorldDto;
 import ru.finex.ws.l2.network.model.dto.ManorListDto;
@@ -126,6 +128,10 @@ public class OutcomePacketBuilderService {
 
     public NetworkDto characterNameCreatable(CharacterNameReason reason) {
         return new IsCharacterNameCreatableDto(reason.getId());
+    }
+
+    public NetworkDto passwordCheck(Ex2ndPasswordReason reason) {
+        return new Ex2ndPasswordCheckDto(reason.getId());
     }
 
     public NetworkDto serverClose() {
