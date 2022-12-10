@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import ru.finex.core.model.entity.Projection;
-import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
 import ru.finex.ws.l2.model.enums.Race;
 

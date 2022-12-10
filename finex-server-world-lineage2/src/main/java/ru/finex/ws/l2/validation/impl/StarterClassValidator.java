@@ -2,7 +2,7 @@ package ru.finex.ws.l2.validation.impl;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import ru.finex.ws.l2.model.ClassId;
+import ru.finex.ws.l2.model.enums.ClassId;
 import ru.finex.ws.l2.validation.ValidStarterClass;
 
 /**

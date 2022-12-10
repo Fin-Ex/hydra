@@ -6,7 +6,7 @@ import ru.finex.core.network.OutcomePacket;
 import ru.finex.network.netty.serial.PacketSerializer;
 import ru.finex.ws.l2.model.entity.AvatarView;
 import ru.finex.ws.l2.network.SerializerHelper;
-import ru.finex.ws.l2.network.model.dto.CharSelectInfoDto;
+import ru.finex.ws.l2.network.model.dto.CharacterSelectInfoDto;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -18,10 +18,10 @@ import javax.inject.Singleton;
  */
 @Singleton
 @OutcomePacket(@Opcode(0x09))
-public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfoDto> {
+public class CharacterSelectInfoSerializer implements PacketSerializer<CharacterSelectInfoDto> {
     
     @Override
-    public void serialize(CharSelectInfoDto dto, ByteBuf buffer) {
+    public void serialize(CharacterSelectInfoDto dto, ByteBuf buffer) {
         var avatars = dto.getAvatars();
 
         buffer.writeIntLE(avatars.size());
@@ -39,9 +39,9 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
             buffer.writeIntLE(avatar.getClanId()); // Clan ID
             buffer.writeIntLE(avatar.getBuilderLevel()); // Builder level
 
-            buffer.writeIntLE(avatar.getGender().ordinal()); // Sex
-            buffer.writeIntLE(avatar.getRace().ordinal()); // Race
-            buffer.writeIntLE(avatar.getClassId()); // base class
+            buffer.writeIntLE(avatar.getGender().getId()); // Sex
+            buffer.writeIntLE(avatar.getRace().getId()); // Race
+            buffer.writeIntLE(avatar.getAppearanceClassIdNetwork()); // base class
 
             buffer.writeIntLE(0x01); // GameServerName
 
@@ -53,7 +53,6 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
 
             buffer.writeLongLE(avatar.getSp()); // sp
             buffer.writeLongLE(avatar.getExp()); // exp
-
             buffer.writeLongLE(Double.doubleToLongBits(avatar.getExpPercent())); //(float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))
 
             buffer.writeIntLE(avatar.getLevel()); // level
@@ -72,27 +71,62 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
             buffer.writeIntLE(0x00); // Ertheia
             buffer.writeIntLE(0x00); // Ertheia
 
-            for (int slot = 0; slot < 32; slot++) {
+            for (int slot = 0; slot < 33; slot++) {
+                /*
+                    Inventory.PAPERDOLL_UNDER,
+                    Inventory.PAPERDOLL_REAR,
+                    Inventory.PAPERDOLL_LEAR,
+                    Inventory.PAPERDOLL_NECK,
+                    Inventory.PAPERDOLL_RFINGER,
+                    Inventory.PAPERDOLL_LFINGER,
+                    Inventory.PAPERDOLL_HEAD,
+                    Inventory.PAPERDOLL_RHAND,
+                    Inventory.PAPERDOLL_LHAND,
+                    Inventory.PAPERDOLL_GLOVES,
+                    Inventory.PAPERDOLL_CHEST,
+                    Inventory.PAPERDOLL_LEGS,
+                    Inventory.PAPERDOLL_FEET,
+                    Inventory.PAPERDOLL_CLOAK,
+                    Inventory.PAPERDOLL_RHAND,
+                    Inventory.PAPERDOLL_HAIR,
+                    Inventory.PAPERDOLL_HAIR2,
+                    Inventory.PAPERDOLL_RBRACELET,
+                    Inventory.PAPERDOLL_LBRACELET,
+                    Inventory.PAPERDOLL_DECO1,
+                    Inventory.PAPERDOLL_DECO2,
+                    Inventory.PAPERDOLL_DECO3,
+                    Inventory.PAPERDOLL_DECO4,
+                    Inventory.PAPERDOLL_DECO5,
+                    Inventory.PAPERDOLL_DECO6,
+                    Inventory.PAPERDOLL_BELT,
+                    Inventory.PAPERDOLL_BROOCH,
+                    Inventory.PAPERDOLL_BROOCH_JEWEL1,
+                    Inventory.PAPERDOLL_BROOCH_JEWEL2,
+                    Inventory.PAPERDOLL_BROOCH_JEWEL3,
+                    Inventory.PAPERDOLL_BROOCH_JEWEL4,
+                    Inventory.PAPERDOLL_BROOCH_JEWEL5,
+                    Inventory.PAPERDOLL_BROOCH_JEWEL6
+                 */
                 buffer.writeIntLE(0x00);
             }
 
-            for (int slot = 0; slot < 9; slot++) {
+            for (int slot = 0; slot < 8; slot++) {
                 buffer.writeIntLE(0x00);
                 //FIXME finfan: тут используем следующие слоты следуя L2JMobius
 				/*
-					private static final int[] PAPERDOLL_ORDER_VISUAL_ID = new int[] {
-						Inventory.PAPERDOLL_RHAND,
-						Inventory.PAPERDOLL_LHAND,
-						Inventory.PAPERDOLL_GLOVES,
-						Inventory.PAPERDOLL_CHEST,
-						Inventory.PAPERDOLL_LEGS,
-						Inventory.PAPERDOLL_FEET,
-						Inventory.PAPERDOLL_RHAND, <-- что это за хуета? дупликат? должно быть LRHAND?
-						Inventory.PAPERDOLL_HAIR,
-						Inventory.PAPERDOLL_HAIR2,
-					};
+					Inventory.PAPERDOLL_RHAND,
+					Inventory.PAPERDOLL_LHAND,
+					Inventory.PAPERDOLL_RHAND, <-- что это за хуета? дупликат? должно быть LRHAND?
+					Inventory.PAPERDOLL_GLOVES,
+					Inventory.PAPERDOLL_CHEST,
+					Inventory.PAPERDOLL_LEGS,
+					Inventory.PAPERDOLL_FEET,
+					Inventory.PAPERDOLL_HAIR,
+					Inventory.PAPERDOLL_HAIR2
 				 */
             }
+
+            buffer.writeIntLE(0x00);
 
             buffer.writeShortLE(0x00); // Upper Body enchant level
             buffer.writeShortLE(0x00); // Lower Body enchant level
@@ -108,11 +142,11 @@ public class CharSelectInfoSerializer implements PacketSerializer<CharSelectInfo
             buffer.writeLongLE(Double.doubleToLongBits(avatar.getMaxMp())); // Maximum MP
 
             long remainsSecondsToDelete = Optional.ofNullable(avatar.getDeleteDate())
-                    .map(deleteDate -> Duration.between(Instant.now(), avatar.getDeleteDate())
+                    .map(deleteDate -> Duration.between(Instant.now(), deleteDate)
                         .toSeconds()
                     ).orElse(0L);
             buffer.writeIntLE((int) remainsSecondsToDelete);
-            buffer.writeIntLE(avatar.getClassId()); // class (not base)
+            buffer.writeIntLE(avatar.getClassId().getId()); // active class
             buffer.writeIntLE(0x01);  // selected avatar or not
 
             buffer.writeByte(0); // enchant weapon

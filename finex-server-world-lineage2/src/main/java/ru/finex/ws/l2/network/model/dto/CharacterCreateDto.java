@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Range;
 import ru.finex.core.network.NetworkCommandScoped;
 import ru.finex.network.netty.model.NetworkDto;
-import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.enums.Race;
 import ru.finex.ws.l2.validation.GenderHairType;
 import ru.finex.ws.l2.validation.GenderSubset;

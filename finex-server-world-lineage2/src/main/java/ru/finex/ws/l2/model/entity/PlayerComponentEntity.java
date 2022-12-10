@@ -17,7 +17,7 @@ import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import ru.finex.core.model.entity.EntityObject;
-import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
 import ru.finex.ws.l2.model.PvpMode;
 import ru.finex.ws.l2.model.enums.Race;

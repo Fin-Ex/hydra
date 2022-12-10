@@ -1,5 +1,7 @@
 package ru.finex.ws.l2.model;
 
+import ru.finex.ws.l2.model.enums.ClassId;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.enums.Race;
 import ru.finex.ws.l2.model.exception.AppearanceClassNotFoundException;
 
@@ -10,8 +12,8 @@ public enum PlayerAppearanceClass {
 
     FIGHTER {
         @Override
-        public int getNetworkId(Race race, Gender gender) throws AppearanceClassNotFoundException {
-            ClassId id = switch (race) {
+        public ClassId getClassId(Race race, Gender gender) throws AppearanceClassNotFoundException {
+            return switch (race) {
                 case HUMAN -> ClassId.HUMAN_FIGHTER;
                 case ELF -> ClassId.ElvenFighter;
                 case DARK_ELF -> ClassId.DarkFighter;
@@ -25,14 +27,12 @@ public enum PlayerAppearanceClass {
                 case ERTHEIA -> ClassId.ERTHEIA_FIGHTER;
                 default -> throw new AppearanceClassNotFoundException(race);
             };
-
-            return id.getId();
         }
     },
     WIZARD {
         @Override
-        public int getNetworkId(Race race, Gender gender) throws AppearanceClassNotFoundException {
-            ClassId id = switch (race) {
+        public ClassId getClassId(Race race, Gender gender) throws AppearanceClassNotFoundException {
+            return switch (race) {
                 case HUMAN -> ClassId.HUMAN_MYSTIC;
                 case ELF -> ClassId.ElvenWizard;
                 case DARK_ELF -> ClassId.DarkWizard;
@@ -46,12 +46,14 @@ public enum PlayerAppearanceClass {
                 case ERTHEIA -> ClassId.ERTHEIA_WIZARD;
                 default -> throw new AppearanceClassNotFoundException(race);
             };
-
-            return id.getId();
         }
     };
 
-    public abstract int getNetworkId(Race race, Gender gender) throws AppearanceClassNotFoundException;
+    public abstract ClassId getClassId(Race race, Gender gender) throws AppearanceClassNotFoundException;
+
+    public int getNetworkId(Race race, Gender gender) throws AppearanceClassNotFoundException {
+        return getClassId(race, gender).getId();
+    }
 
     public static PlayerAppearanceClass ofClassId(int classId, Race race, Gender gender)
         throws AppearanceClassNotFoundException {

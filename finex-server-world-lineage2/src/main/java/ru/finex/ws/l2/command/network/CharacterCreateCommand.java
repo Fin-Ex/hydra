@@ -8,7 +8,7 @@ import ru.finex.core.command.AbstractNetworkCommand;
 import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 import ru.finex.ws.l2.model.exception.AppearanceClassNotFoundException;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
-import ru.finex.ws.l2.network.model.dto.CharCreateOk;
+import ru.finex.ws.l2.network.model.dto.CharacterCreateOk;
 import ru.finex.ws.l2.network.model.dto.CharacterCreateDto;
 import ru.finex.ws.l2.network.session.GameClient;
 import ru.finex.ws.l2.service.AvatarService;
@@ -32,7 +32,7 @@ public class CharacterCreateCommand extends AbstractNetworkCommand {
 	public void executeCommand() {
 		try {
 			avatarService.create(dto, session.getLogin());
-			session.sendPacket(CharCreateOk.INSTANCE);
+			session.sendPacket(CharacterCreateOk.INSTANCE);
 		} catch (ValidationException | AppearanceClassNotFoundException e) {
 			log.debug("Validation failed, DTO: {}", dto, e);
 			session.sendPacket(packets.charCreateFail(CharacterCreateReason.REASON_CREATION_FAILED));

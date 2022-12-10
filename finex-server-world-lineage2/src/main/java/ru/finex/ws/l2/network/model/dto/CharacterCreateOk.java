@@ -7,8 +7,8 @@ import ru.finex.network.netty.model.NetworkDto;
  * @author finfan
  */
 @Data
-public class CharCreateOk implements NetworkDto {
+public class CharacterCreateOk implements NetworkDto {
 
-	public static final CharCreateOk INSTANCE = new CharCreateOk();
+	public static final CharacterCreateOk INSTANCE = new CharacterCreateOk();
 
 }

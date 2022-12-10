@@ -7,7 +7,7 @@ import ru.finex.core.command.AbstractNetworkCommand;
 import ru.finex.core.component.ComponentService;
 import ru.finex.core.object.GameObject;
 import ru.finex.ws.l2.component.player.ClientComponent;
-import ru.finex.ws.l2.model.ClassId;
+import ru.finex.ws.l2.model.enums.ClassId;
 import ru.finex.ws.l2.model.entity.AvatarView;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.model.dto.SelectedAvatarDto;
@@ -49,7 +49,7 @@ public class GameStartCommand extends AbstractNetworkCommand {
         }
 
         AvatarView avatar = avatars.get(selectedAvatar);
-        String prototypeName = avatarService.getPrototypeName(ClassId.ofId(avatar.getClassId()), avatar.getGender());
+        String prototypeName = avatarService.getPrototypeName(avatar.getAppearanceClassId(), avatar.getGender());
         GameObject gameObject = gameObjectService.createGameObject(prototypeName, avatar.getPersistenceId());
         ClientComponent component = componentService.getComponent(gameObject, ClientComponent.class);
         component.setClient(session);

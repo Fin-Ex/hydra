@@ -6,7 +6,7 @@ import ru.finex.core.network.IncomePacket;
 import ru.finex.core.network.Opcode;
 import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.ws.l2.command.network.CharacterCreateCommand;
-import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.enums.Race;
 import ru.finex.ws.l2.network.SerializerHelper;
 import ru.finex.ws.l2.network.model.dto.CharacterCreateDto;

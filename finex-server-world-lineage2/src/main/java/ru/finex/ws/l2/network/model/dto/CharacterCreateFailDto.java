@@ -4,22 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.finex.core.network.NetworkCommandScoped;
 import ru.finex.network.netty.model.NetworkDto;
-import ru.finex.ws.l2.model.entity.AvatarView;
+import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 
-import java.util.List;
-
-/**
- * @author m0nster.mind
- */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CharSelectInfoDto implements NetworkDto {
+@NetworkCommandScoped
+public class CharacterCreateFailDto implements NetworkDto {
 
-    private String login;
-    private int sessionId;
-    private List<AvatarView> avatars;
+	private CharacterCreateReason error;
 
 }

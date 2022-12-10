@@ -1,6 +1,6 @@
 package ru.finex.ws.l2.validation;
 
-import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Gender;
 
 /**
  * @author m0nster.mind

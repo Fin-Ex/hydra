@@ -3,7 +3,7 @@ package ru.finex.ws.l2.component.prototype;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.finex.core.prototype.ComponentPrototype;
-import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
 import ru.finex.ws.l2.model.enums.Race;
 

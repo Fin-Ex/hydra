@@ -4,9 +4,7 @@ import io.netty.buffer.ByteBuf;
 import ru.finex.core.network.Opcode;
 import ru.finex.core.network.OutcomePacket;
 import ru.finex.network.netty.serial.PacketSerializer;
-import ru.finex.ws.l2.model.enums.MoveType;
-import ru.finex.ws.l2.network.model.dto.ChangeMoveTypeDto;
-import ru.finex.ws.l2.network.model.dto.CharCreateFailDto;
+import ru.finex.ws.l2.network.model.dto.CharacterCreateFailDto;
 
 import javax.inject.Singleton;
 
@@ -15,10 +13,10 @@ import javax.inject.Singleton;
  */
 @Singleton
 @OutcomePacket(@Opcode(0x10))
-public class CharCreateFailSerializer implements PacketSerializer<CharCreateFailDto> {
+public class CharacterCreateFailSerializer implements PacketSerializer<CharacterCreateFailDto> {
 
     @Override
-    public void serialize(CharCreateFailDto dto, ByteBuf buffer) {
+    public void serialize(CharacterCreateFailDto dto, ByteBuf buffer) {
         buffer.writeIntLE(dto.getError().getId());
     }
 

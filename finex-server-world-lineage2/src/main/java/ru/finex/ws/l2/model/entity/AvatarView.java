@@ -11,8 +11,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Immutable;
 import ru.finex.core.model.entity.EntityObject;
-import ru.finex.ws.l2.model.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
+import ru.finex.ws.l2.model.enums.ClassId;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.enums.Race;
 
 import java.time.Instant;
@@ -45,6 +46,9 @@ public class AvatarView implements EntityObject<Integer> {
     private Race race;
     @Enumerated(EnumType.ORDINAL)
     private PlayerAppearanceClass appearanceClass;
+
+    @Enumerated(EnumType.ORDINAL)
+    private ClassId classId;
 
     private Double x;
     private Double y;
@@ -88,7 +92,11 @@ public class AvatarView implements EntityObject<Integer> {
     private transient Boolean isHero = false;
     private transient Boolean isShowHairAccessory = false;
 
-    public int getClassId() {
+    public ClassId getAppearanceClassId() {
+        return appearanceClass.getClassId(race, gender);
+    }
+
+    public int getAppearanceClassIdNetwork() {
         return appearanceClass.getNetworkId(race, gender);
     }
 

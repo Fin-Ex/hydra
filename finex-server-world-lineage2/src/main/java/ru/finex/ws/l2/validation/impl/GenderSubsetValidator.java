@@ -3,7 +3,7 @@ package ru.finex.ws.l2.validation.impl;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.apache.commons.lang3.ArrayUtils;
-import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.validation.GenderSubset;
 
 /**

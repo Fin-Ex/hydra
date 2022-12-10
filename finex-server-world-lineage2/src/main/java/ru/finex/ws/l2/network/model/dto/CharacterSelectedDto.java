@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.finex.network.netty.model.NetworkDto;
-import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;
 import ru.finex.ws.l2.model.enums.Race;
 

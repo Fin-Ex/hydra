@@ -1,6 +1,6 @@
 package ru.finex.ws.l2.model.exception;
 
-import ru.finex.ws.l2.model.Gender;
+import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.enums.Race;
 
 /**

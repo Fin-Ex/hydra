@@ -31,8 +31,8 @@ import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 import ru.finex.ws.l2.model.enums.CharacterNameReason;
 import ru.finex.ws.l2.network.model.UserInfoComponent;
 import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
-import ru.finex.ws.l2.network.model.dto.CharCreateFailDto;
-import ru.finex.ws.l2.network.model.dto.CharSelectInfoDto;
+import ru.finex.ws.l2.network.model.dto.CharacterCreateFailDto;
+import ru.finex.ws.l2.network.model.dto.CharacterSelectInfoDto;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
 import ru.finex.ws.l2.network.model.dto.IsCharacterNameCreatableDto;
 import ru.finex.ws.l2.network.model.dto.LeaveWorldDto;
@@ -74,7 +74,7 @@ public class OutcomePacketBuilderService {
     }
 
     public NetworkDto charSelectInfo(String login, int sessionId) {
-        return CharSelectInfoDto.builder()
+        return CharacterSelectInfoDto.builder()
             .login(login)
             .sessionId(sessionId)
             .avatars(avatarService.get(login))
@@ -194,7 +194,7 @@ public class OutcomePacketBuilderService {
             .build();
     }
 
-    public CharCreateFailDto charCreateFail(CharacterCreateReason reason) {
-        return CharCreateFailDto.builder().error(reason).build();
+    public CharacterCreateFailDto charCreateFail(CharacterCreateReason reason) {
+        return CharacterCreateFailDto.builder().error(reason).build();
     }
 }

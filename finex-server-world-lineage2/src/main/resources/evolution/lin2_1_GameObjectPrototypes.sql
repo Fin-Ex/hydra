@@ -123,6 +123,16 @@ create table if not exists game_object_status_components(
 );
 create unique index if not exists game_object_status_components_game_object_id_idx on game_object_status_components(game_object_id);
 
+create table if not exists game_object_class_components(
+    id serial primary key,
+    game_object_id int not null references game_objects(id) on delete cascade on update cascade,
+    class_id int not null check(class_id >= 0),
+    "level" int not null check("level" > 0) default 1,
+    exp bigint not null check(exp >= 0) default 0,
+    is_active int not null check(is_active = 0 or is_active = 1) default 1
+);
+create index if not exists game_object_class_components_game_object_id_idx on game_object_class_components(game_object_id);
+
 do $$
 declare
     abstract_id int;;
@@ -199,6 +209,7 @@ create or replace view game_object_avatars as
         player.gender,
         player.race,
         player.appearance_class,
+        class.class_id,
         pos.x,
         pos.y,
         pos.z,
@@ -214,12 +225,13 @@ create or replace view game_object_avatars as
     join game_object_player_components player on game_object.id = player.game_object_id
     join game_object_clan_components clan on game_object.id = clan.game_object_id
     join game_object_position_components pos on game_object.id = pos.game_object_id
-    join game_object_status_components status on game_object.id = status.game_object_id;
+    join game_object_status_components status on game_object.id = status.game_object_id
+    join game_object_class_components class on game_object.id = class.game_object_id and class.is_active = 1;
 
 # --- !Downs
 
 drop view if exists game_object_avatars cascade;
-delete from game_object_prototypes where id = 1;
+drop table if exists game_object_class_components cascade;
 drop table if exists game_object_status_components cascade;
 drop table if exists game_object_stat_components  cascade;
 drop table if exists game_object_parameter_components cascade;

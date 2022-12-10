@@ -1,8 +1,7 @@
-package ru.finex.ws.l2.model;
+package ru.finex.ws.l2.model.enums;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import ru.finex.ws.l2.model.enums.Race;
 
 import java.util.EnumSet;
 import java.util.stream.Stream;
@@ -19,7 +18,7 @@ import java.util.stream.Stream;
  */
 @Slf4j
 @Deprecated
-public enum ClassId {
+public enum ClassId implements IdEnum {
 	HUMAN_FIGHTER(Race.HUMAN, "Human Fighter", null),
 	Warrior(Race.HUMAN, "Warrior", HUMAN_FIGHTER),
 	Gladiator(Race.HUMAN, "Gladiator", Warrior),

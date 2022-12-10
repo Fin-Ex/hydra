@@ -4,7 +4,7 @@ import io.netty.buffer.ByteBuf;
 import ru.finex.core.network.Opcode;
 import ru.finex.core.network.OutcomePacket;
 import ru.finex.network.netty.serial.PacketSerializer;
-import ru.finex.ws.l2.model.ClassId;
+import ru.finex.ws.l2.model.enums.ClassId;
 import ru.finex.ws.l2.network.SerializerHelper;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
 
