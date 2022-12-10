@@ -21,6 +21,6 @@ public class GoToLobbyCommand extends AbstractNetworkCommand {
 
     @Override
     public void executeCommand() {
-        packets.charSelectInfo(session.getLogin(), session.getData().getSessionId());
+        session.sendPacket(packets.charSelectInfo(session.getLogin(), session.getData().getSessionId()));
     }
 }
