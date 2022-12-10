@@ -21,4 +21,7 @@ public interface PlayerComponentRepository extends CrudRepository<PlayerComponen
     @Query("SELECT player.login FROM PlayerComponentEntity player WHERE player.login = :login")
     Long findGameObjectPersistenceIdByLogin(@NotNull String login) throws NoResultException;
 
+    @Query("SELECT count(*) > 0 FROM PlayerComponentEntity player WHERE player.name = :name")
+    Boolean existsName(String name);
+
 }

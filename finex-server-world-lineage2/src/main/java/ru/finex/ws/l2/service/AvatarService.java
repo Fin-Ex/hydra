@@ -20,8 +20,10 @@ import ru.finex.ws.l2.model.entity.GameObjectEntity;
 import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
 import ru.finex.ws.l2.model.exception.AppearanceClassNotFoundException;
 import ru.finex.ws.l2.network.model.dto.CharacterCreateDto;
+import ru.finex.ws.l2.network.model.dto.RequestCharacterNameCreatableDto;
 import ru.finex.ws.l2.repository.AvatarRepository;
 import ru.finex.ws.l2.repository.GameObjectRepository;
+import ru.finex.ws.l2.service.component.PlayerService;
 import ru.finex.ws.service.GameObjectService;
 
 import java.util.List;
@@ -43,6 +45,7 @@ public class AvatarService {
     private final GameObjectService gameObjectService;
     private final GameObjectPersistenceService persistenceService;
     private final ComponentService componentService;
+    private final PlayerService playerService;
 
     public List<AvatarView> get(String login) {
         return avatarRepository.findByLogin(login);
@@ -58,6 +61,11 @@ public class AvatarService {
         persistenceService.persist(gameObject);
 
         log.debug("New avatar {} created!", gameObject);
+    }
+
+    @ValidateOnExecution
+    public boolean isCreatable(@Valid RequestCharacterNameCreatableDto dto) throws ValidationException {
+        return !playerService.isExists(dto.getName());
     }
 
     private int createGameObject() {
@@ -94,9 +102,7 @@ public class AvatarService {
     }
 
     private Optional<AvatarPrototypeView> getPrototype(String name) {
-        Optional<AvatarPrototypeView> optional = avatarRepository.findPrototypeByName(name);
-        //optional.ifPresent(e -> e.setName(name)); // there is fake field from DB
-        return optional;
+        return avatarRepository.findPrototypeByName(name);
     }
 
     public String getPrototypeName(ClassId classId, Gender gender) {

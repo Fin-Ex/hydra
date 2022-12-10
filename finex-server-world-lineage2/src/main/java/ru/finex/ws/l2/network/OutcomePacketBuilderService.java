@@ -27,12 +27,14 @@ import ru.finex.ws.l2.model.entity.ClanComponentEntity;
 import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
 import ru.finex.ws.l2.model.entity.PositionComponentEntity;
 import ru.finex.ws.l2.model.entity.StatusComponentEntity;
-import ru.finex.ws.l2.model.enums.CharCreateFailReason;
+import ru.finex.ws.l2.model.enums.CharacterCreateReason;
+import ru.finex.ws.l2.model.enums.CharacterNameReason;
 import ru.finex.ws.l2.network.model.UserInfoComponent;
 import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
 import ru.finex.ws.l2.network.model.dto.CharCreateFailDto;
 import ru.finex.ws.l2.network.model.dto.CharSelectInfoDto;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
+import ru.finex.ws.l2.network.model.dto.IsCharacterNameCreatableDto;
 import ru.finex.ws.l2.network.model.dto.LeaveWorldDto;
 import ru.finex.ws.l2.network.model.dto.ManorListDto;
 import ru.finex.ws.l2.network.model.dto.MoveToLocationDto;
@@ -116,6 +118,10 @@ public class OutcomePacketBuilderService {
         return new NewCharacterSuccessDto(prototypes);
     }
 
+    public NetworkDto characterNameCreatable(CharacterNameReason reason) {
+        return new IsCharacterNameCreatableDto(reason.getId());
+    }
+
     public NetworkDto serverClose() {
         return ServerCloseDto.INSTANCE;
     }
@@ -188,7 +194,7 @@ public class OutcomePacketBuilderService {
             .build();
     }
 
-    public CharCreateFailDto charCreateFail(CharCreateFailReason reason) {
+    public CharCreateFailDto charCreateFail(CharacterCreateReason reason) {
         return CharCreateFailDto.builder().error(reason).build();
     }
 }

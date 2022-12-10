@@ -5,6 +5,7 @@ import ru.finex.core.component.ComponentService;
 import ru.finex.core.object.GameObject;
 import ru.finex.ws.l2.component.player.PlayerComponent;
 import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
+import ru.finex.ws.l2.repository.PlayerComponentRepository;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -17,7 +18,12 @@ import javax.inject.Singleton;
 @RequiredArgsConstructor(onConstructor_ = { @Inject })
 public class PlayerService {
 
+    private final PlayerComponentRepository repository;
     private final ComponentService componentService;
+
+    public boolean isExists(String name) {
+        return repository.existsName(name);
+    }
 
     public void setLogin(GameObject gameObject, String login) {
         PlayerComponentEntity entity = getEntity(gameObject);
