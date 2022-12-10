@@ -54,13 +54,13 @@ public class PlayerComponentEntity implements EntityObject<Integer>, GameObjectR
     @NotNull
     @Enumerated(EnumType.ORDINAL)
     private PlayerAppearanceClass appearanceClass;
-    @Range(min = 0, max = 9) // TODO m0nster.mind: correct max value
+    @Range(min = 0, max = 6)
     @NotNull
     private Integer hairType;
-    @Range(min = 0, max = 9) // TODO m0nster.mind: correct max value
+    @Range(min = 0, max = 3)
     @NotNull
     private Integer hairColor;
-    @Range(min = 0, max = 9) // TODO m0nster.mind: correct max value
+    @Range(min = 0, max = 2)
     @NotNull
     private Integer faceType;
     @NotNull
