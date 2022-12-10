@@ -13,7 +13,7 @@ import javax.inject.Inject;
 
 @ToString(onlyExplicitlyIncluded = true)
 @RequiredArgsConstructor(onConstructor_ = {@Inject})
-public class RequestRestartCommand extends AbstractNetworkCommand {
+public class RestartCommand extends AbstractNetworkCommand {
 
 	@ToString.Include
 	private final RequestRestartDto dto;
