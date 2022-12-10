@@ -19,7 +19,9 @@ import javax.inject.Inject;
 @RequiredArgsConstructor(onConstructor_ = { @Inject})
 public class CheckAvatarNameCommand extends AbstractNetworkCommand {
 
+    @ToString.Include
     private final RequestCharacterNameCreatableDto dto;
+    @ToString.Include
     private final GameClient session;
 
     private final AvatarService avatarService;

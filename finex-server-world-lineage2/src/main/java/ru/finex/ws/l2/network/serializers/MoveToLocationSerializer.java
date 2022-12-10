@@ -1,15 +1,10 @@
 package ru.finex.ws.l2.network.serializers;
 
 import io.netty.buffer.ByteBuf;
-import ru.finex.core.network.Cmd;
-import ru.finex.core.network.IncomePacket;
 import ru.finex.core.network.Opcode;
 import ru.finex.core.network.OutcomePacket;
-import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.network.netty.serial.PacketSerializer;
-import ru.finex.ws.l2.command.network.ValidatePositionCommand;
 import ru.finex.ws.l2.network.model.dto.MoveToLocationDto;
-import ru.finex.ws.l2.network.model.dto.ValidateLocationDto;
 
 import javax.inject.Singleton;
 
@@ -26,8 +21,8 @@ public class MoveToLocationSerializer implements PacketSerializer<MoveToLocation
         buffer.writeIntLE(dto.getDestinationX());
         buffer.writeIntLE(dto.getDestinationY());
         buffer.writeIntLE(dto.getDestinationZ());
-        buffer.writeIntLE(dto.getStartX());
-        buffer.writeIntLE(dto.getStartY());
-        buffer.writeIntLE(dto.getStartZ());
+        buffer.writeIntLE(dto.getPositionX());
+        buffer.writeIntLE(dto.getPositionY());
+        buffer.writeIntLE(dto.getPositionZ());
     }
 }

@@ -17,7 +17,9 @@ public class RestartCommand extends AbstractNetworkCommand {
 
 	@ToString.Include
 	private final RequestRestartDto dto;
+	@ToString.Include
 	private final GameClient session;
+
 	private final OutcomePacketBuilderService outcomePacketBuilderService;
 
 	@Override

@@ -18,7 +18,9 @@ import javax.inject.Inject;
 @RequiredArgsConstructor(onConstructor_ = {@Inject})
 public class NewCharacterCommand extends AbstractNetworkCommand {
 
+    @ToString.Include
     private final GameClient session;
+
     private final OutcomePacketBuilderService packets;
     private final AvatarService avatarService;
 

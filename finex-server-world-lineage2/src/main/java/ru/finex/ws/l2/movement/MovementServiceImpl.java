@@ -20,7 +20,7 @@ public class MovementServiceImpl implements MovementService {
     @Override
     public void moveTo(GameObject gameObject, double x, double y, double z) {
         CoordinateComponent coordinateComponent = componentService.getComponent(gameObject, CoordinateComponent.class);
-        coordinateComponent.setXYZ(x, y, z);
+        coordinateComponent.setPosition(x, y, z);
     }
 
 }

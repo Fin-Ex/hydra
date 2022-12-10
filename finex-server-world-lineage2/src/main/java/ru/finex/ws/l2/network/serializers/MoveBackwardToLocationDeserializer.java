@@ -6,7 +6,6 @@ import ru.finex.core.network.IncomePacket;
 import ru.finex.core.network.Opcode;
 import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.ws.l2.command.network.MoveBackwardToLocationCommand;
-import ru.finex.ws.l2.command.network.ValidatePositionCommand;
 import ru.finex.ws.l2.network.model.dto.MoveBackwardToLocationDto;
 
 import javax.inject.Singleton;
@@ -24,9 +23,9 @@ public class MoveBackwardToLocationDeserializer implements PacketDeserializer<Mo
             .destinationX(buffer.readIntLE())
             .destinationY(buffer.readIntLE())
             .destinationZ(buffer.readIntLE())
-            .startX(buffer.readIntLE())
-            .startY(buffer.readIntLE())
-            .startZ(buffer.readIntLE())
+            .positionX(buffer.readIntLE())
+            .positionY(buffer.readIntLE())
+            .positionZ(buffer.readIntLE())
             .mode(buffer.readIntLE())
             .build();
     }

@@ -15,6 +15,7 @@ import javax.inject.Inject;
 @RequiredArgsConstructor(onConstructor_ = { @Inject})
 public class GoToLobbyCommand extends AbstractNetworkCommand {
 
+    @ToString.Include
     private final GameClient session;
 
     private final OutcomePacketBuilderService packets;

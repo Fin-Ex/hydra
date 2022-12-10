@@ -3,6 +3,7 @@ package ru.finex.ws.l2.network;
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.component.ComponentService;
 import ru.finex.core.hocon.ConfigResource;
+import ru.finex.core.math.vector.Vector3f;
 import ru.finex.core.object.GameObject;
 import ru.finex.network.netty.model.NetworkDto;
 import ru.finex.ws.l2.component.base.CoordinateComponent;
@@ -23,10 +24,7 @@ import ru.finex.ws.l2.component.player.StateComponent;
 import ru.finex.ws.l2.component.player.StoreComponent;
 import ru.finex.ws.l2.model.AuthFailReason;
 import ru.finex.ws.l2.model.entity.AvatarPrototypeView;
-import ru.finex.ws.l2.model.entity.ClanComponentEntity;
-import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
 import ru.finex.ws.l2.model.entity.PositionComponentEntity;
-import ru.finex.ws.l2.model.entity.StatusComponentEntity;
 import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 import ru.finex.ws.l2.model.enums.CharacterNameReason;
 import ru.finex.ws.l2.model.enums.Ex2ndPasswordReason;
@@ -177,20 +175,20 @@ public class OutcomePacketBuilderService {
             .x(component.getEntity().getX().intValue())
             .y(component.getEntity().getY().intValue())
             .z(component.getEntity().getZ().intValue())
-            .vehicleId(0x00) // fixme: must be a vehicle id
+            .vehicleId(0x00) // FIXME finfan: must be a vehicle id
             .build();
     }
 
-    public MoveToLocationDto moveToLocation(GameObject gameObject, int destX, int destY, int destZ) {
+    public MoveToLocationDto moveToLocation(GameObject gameObject) {
         CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
         return MoveToLocationDto.builder()
             .runtimeId(gameObject.getRuntimeId())
-            .startX(component.getEntity().getX().intValue())
-            .startY(component.getEntity().getY().intValue())
-            .startZ(component.getEntity().getZ().intValue())
-            .destinationZ(destZ)
-            .destinationX(destX)
-            .destinationY(destY)
+            .positionX(component.getEntity().getX().intValue())
+            .positionY(component.getEntity().getY().intValue())
+            .positionZ(component.getEntity().getZ().intValue())
+            .destinationX((int) component.getDestination().getX())
+            .destinationY((int) component.getDestination().getY())
+            .destinationZ((int) component.getDestination().getZ())
             .build();
     }
 
@@ -198,10 +196,10 @@ public class OutcomePacketBuilderService {
         CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
         PositionComponentEntity position = component.getEntity();
         return StopMoveDto.builder()
+            .runtimeId(gameObject.getRuntimeId())
             .x(position.getX().intValue())
             .y(position.getY().intValue())
             .z(position.getZ().intValue())
-            .runtimeId(gameObject.getRuntimeId())
             .heading((int) position.getH())
             .build();
     }

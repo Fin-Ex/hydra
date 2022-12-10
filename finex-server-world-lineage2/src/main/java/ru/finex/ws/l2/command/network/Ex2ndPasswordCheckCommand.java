@@ -16,6 +16,7 @@ import javax.inject.Inject;
 @RequiredArgsConstructor(onConstructor_ = { @Inject})
 public class Ex2ndPasswordCheckCommand extends AbstractNetworkCommand {
 
+    @ToString.Include
     private final GameClient session;
 
     private final OutcomePacketBuilderService packets;

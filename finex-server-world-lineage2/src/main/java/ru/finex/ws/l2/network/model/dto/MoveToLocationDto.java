@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 import ru.finex.core.network.NetworkCommandScoped;
 import ru.finex.network.netty.model.NetworkDto;
 
+/**
+ * @author finfan
+ */
 @Data
 @Builder
 @NoArgsConstructor
@@ -15,9 +18,9 @@ import ru.finex.network.netty.model.NetworkDto;
 public class MoveToLocationDto implements NetworkDto {
 
 	private int runtimeId;
-	private int startX;
-	private int startY;
-	private int startZ;
+	private int positionX;
+	private int positionY;
+	private int positionZ;
 	private int destinationX;
 	private int destinationY;
 	private int destinationZ;

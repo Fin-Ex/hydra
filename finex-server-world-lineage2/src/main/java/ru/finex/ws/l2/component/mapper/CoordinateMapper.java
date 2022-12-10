@@ -12,7 +12,7 @@ public class CoordinateMapper implements ComponentPrototypeMapper<CoordinateProt
     @Override
     public CoordinateComponent map(CoordinatePrototype prototype) {
         var component = new CoordinateComponent();
-        component.setXYZ(prototype.getX(), prototype.getY(), prototype.getZ());
+        component.setPosition(prototype.getX(), prototype.getY(), prototype.getZ());
         return component;
     }
 
