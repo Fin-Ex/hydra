@@ -37,9 +37,8 @@ public class GameObjectEntity implements EntityObject<Integer> {
     @CreationTimestamp
     private Instant createDate;
 
-    @CreationTimestamp
     @UpdateTimestamp
-    private Instant updateTime;
+    private Instant updateDate;
 
     private Instant deleteDate;
 

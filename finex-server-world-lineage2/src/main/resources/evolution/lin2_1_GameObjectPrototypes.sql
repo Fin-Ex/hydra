@@ -3,7 +3,7 @@
 create table if not exists game_objects(
     id serial primary key,
     create_date timestamp default transaction_timestamp(),
-    update_date timestamp default transaction_timestamp()
+    update_date timestamp default transaction_timestamp(),
     delete_date timestamp
 );
 
