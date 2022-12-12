@@ -17,7 +17,7 @@ public class MoveToLocationSerializer implements PacketSerializer<MoveToLocation
 
     @Override
     public void serialize(MoveToLocationDto dto, ByteBuf buffer) {
-        buffer.writeIntLE(dto.getRuntimeId() + 1);
+        buffer.writeIntLE(dto.getRuntimeId());
         buffer.writeIntLE(dto.getDestinationX());
         buffer.writeIntLE(dto.getDestinationY());
         buffer.writeIntLE(dto.getDestinationZ());
