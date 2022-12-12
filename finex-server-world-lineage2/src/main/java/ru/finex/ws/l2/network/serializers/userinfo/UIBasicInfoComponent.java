@@ -19,7 +19,7 @@ public class UIBasicInfoComponent implements UIComponentSerializer {
         PlayerComponentEntity player = dto.getPlayerComponent().getEntity();
         ActiveClassComponentEntity activeClass = dto.getClassComponent().getEntity();
 
-        SerializerHelper.writeStringNullTerm(buffer, player.getName());
+        SerializerHelper.writeString(buffer, player.getName());
         buffer.writeByte(0x00); // isGM
         buffer.writeByte(player.getRace().ordinal());
         buffer.writeByte(player.getGender().ordinal());

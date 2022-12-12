@@ -17,8 +17,9 @@ public class UIClanComponent implements UIComponentSerializer {
     @Override
     public void writeComponent(UserInfoDto dto, ByteBuf buffer) {
         PlayerComponentEntity player = dto.getPlayerComponent().getEntity();
-        SerializerHelper.writeStringNullTerm(buffer, player.getTitle());
         ClanComponentEntity clan = dto.getClanComponent().getEntity();
+
+        SerializerHelper.writeString(buffer, player.getTitle());
         buffer.writeShortLE(0x00); // pledge type
         buffer.writeIntLE(clan.getPersistenceId()); // clanId
         buffer.writeIntLE(clan.getPersistenceId()); // large crest id

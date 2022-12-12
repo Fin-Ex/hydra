@@ -33,14 +33,16 @@ public class UserInfoSerializer implements PacketSerializer<UserInfoDto> {
         buffer.writeIntLE(dto.getRuntimeId());
 
         int position = buffer.writerIndex();
-        buffer.skipBytes(4);
+        buffer.writeIntLE(0x00); // write it later
         buffer.writeShortLE(UserInfoComponent.count());
         SerializerHelper.writeReverseMediumLE(buffer, dto.flags());
 
         writeComponents(dto, buffer);
 
         // plus runtimeId & opcode
-        buffer.setIntLE(position, buffer.writerIndex() - position + 5);
+        int size = buffer.writerIndex() - position + 5;
+        log.debug("UI Packet size: {}", size);
+        buffer.setIntLE(position, size);
     }
 
     private void writeComponents(UserInfoDto dto, ByteBuf buffer) {
@@ -56,13 +58,15 @@ public class UserInfoSerializer implements PacketSerializer<UserInfoDto> {
 
             int position = buffer.writerIndex();
             if (serializer.isSized()) {
-                buffer.skipBytes(2);
+                buffer.writeShortLE(0x00); // write it later
             }
 
             serializer.writeComponent(dto, buffer);
 
             if (serializer.isSized()) {
-                buffer.setShortLE(position, buffer.writerIndex() - position);
+                int componentSize = buffer.writerIndex() - position;
+                log.debug("UI[{}] Component size: {}", component.name(), componentSize);
+                buffer.setShortLE(position, componentSize);
             }
         }
     }

@@ -42,11 +42,7 @@ public class CharacterSelectedSerializer implements PacketSerializer<CharacterSe
         buffer.writeIntLE(0); // game time
         buffer.writeIntLE(0x00);
         buffer.writeIntLE(dto.getClassId().getId());
-        buffer.skipBytes(16);
-        buffer.skipBytes(16);
-        buffer.skipBytes(4);
-        buffer.skipBytes(16);
-        buffer.skipBytes(28);
+        buffer.writerIndex(buffer.writerIndex() + 16 + 16 + 4 + 16 + 28);
         buffer.writeIntLE(0x00);
     }
 
