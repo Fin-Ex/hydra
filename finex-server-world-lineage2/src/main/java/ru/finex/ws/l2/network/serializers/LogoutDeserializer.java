@@ -6,7 +6,7 @@ import ru.finex.core.network.IncomePacket;
 import ru.finex.core.network.Opcode;
 import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.ws.l2.command.network.LogoutCommand;
-import ru.finex.ws.l2.network.model.dto.LogoutDto;
+import ru.finex.ws.l2.network.model.dto.VoidDto;
 
 import javax.inject.Singleton;
 
@@ -15,11 +15,11 @@ import javax.inject.Singleton;
  */
 @Singleton
 @IncomePacket(value = @Opcode(0x00), command = @Cmd(LogoutCommand.class))
-public class LogoutDeserializer implements PacketDeserializer<LogoutDto> {
+public class LogoutDeserializer implements PacketDeserializer<VoidDto> {
 
     @Override
-    public LogoutDto deserialize(ByteBuf buffer) {
-        return LogoutDto.INSTANCE;
+    public VoidDto deserialize(ByteBuf buffer) {
+        return null;
     }
 
 }

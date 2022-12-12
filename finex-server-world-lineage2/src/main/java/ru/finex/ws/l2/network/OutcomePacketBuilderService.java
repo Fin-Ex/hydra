@@ -3,7 +3,6 @@ package ru.finex.ws.l2.network;
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.component.ComponentService;
 import ru.finex.core.hocon.ConfigResource;
-import ru.finex.core.math.vector.Vector3f;
 import ru.finex.core.object.GameObject;
 import ru.finex.network.netty.model.NetworkDto;
 import ru.finex.ws.l2.component.base.CoordinateComponent;
@@ -28,7 +27,9 @@ import ru.finex.ws.l2.model.entity.PositionComponentEntity;
 import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 import ru.finex.ws.l2.model.enums.CharacterNameReason;
 import ru.finex.ws.l2.model.enums.Ex2ndPasswordReason;
+import ru.finex.ws.l2.model.enums.RestartReason;
 import ru.finex.ws.l2.network.model.UserInfoComponent;
+import ru.finex.ws.l2.network.model.dto.AllFortressInfoDto;
 import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
 import ru.finex.ws.l2.network.model.dto.CharacterCreateFailDto;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectInfoDto;
@@ -39,6 +40,7 @@ import ru.finex.ws.l2.network.model.dto.LeaveWorldDto;
 import ru.finex.ws.l2.network.model.dto.ManorListDto;
 import ru.finex.ws.l2.network.model.dto.MoveToLocationDto;
 import ru.finex.ws.l2.network.model.dto.NewCharacterSuccessDto;
+import ru.finex.ws.l2.network.model.dto.RestartResponseDto;
 import ru.finex.ws.l2.network.model.dto.ServerCloseDto;
 import ru.finex.ws.l2.network.model.dto.StopMoveDto;
 import ru.finex.ws.l2.network.model.dto.UserInfoDto;
@@ -137,9 +139,11 @@ public class OutcomePacketBuilderService {
     }
     
     public NetworkDto castleManorList() {
-        return ManorListDto.builder()
-            .castleIds(Collections.emptyList())
-            .build();
+        return new ManorListDto(Collections.emptyList());
+    }
+
+    public NetworkDto allFortressInfo() {
+        return new AllFortressInfoDto(Collections.emptyList());
     }
     
     public NetworkDto userInfo(GameObject gameObject) {
@@ -162,6 +166,10 @@ public class OutcomePacketBuilderService {
             .statComponent(componentService.getComponent(gameObject, StatComponent.class))
             .components(UserInfoComponent.all())
             .build();
+    }
+
+    public NetworkDto restart(RestartReason reason) {
+        return new RestartResponseDto(reason.getId());
     }
 
     public NetworkDto leaveWorld() {
@@ -205,6 +213,6 @@ public class OutcomePacketBuilderService {
     }
 
     public CharacterCreateFailDto charCreateFail(CharacterCreateReason reason) {
-        return CharacterCreateFailDto.builder().error(reason).build();
+        return new CharacterCreateFailDto(reason.getId());
     }
 }

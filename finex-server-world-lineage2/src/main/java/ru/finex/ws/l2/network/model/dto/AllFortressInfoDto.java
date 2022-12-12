@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.finex.network.netty.model.NetworkDto;
 
+import java.util.List;
+
 /**
  * @author m0nster.mind
  */
@@ -13,8 +15,8 @@ import ru.finex.network.netty.model.NetworkDto;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RestartResponseDto implements NetworkDto {
+public class AllFortressInfoDto implements NetworkDto {
 
-    private int result;
+    private List<Integer> fortressIds;
 
 }

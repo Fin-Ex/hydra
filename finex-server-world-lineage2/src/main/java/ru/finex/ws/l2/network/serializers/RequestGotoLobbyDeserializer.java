@@ -6,7 +6,7 @@ import ru.finex.core.network.IncomePacket;
 import ru.finex.core.network.Opcode;
 import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.ws.l2.command.network.GoToLobbyCommand;
-import ru.finex.ws.l2.network.model.dto.RequestGotoLobbyDto;
+import ru.finex.ws.l2.network.model.dto.VoidDto;
 
 import javax.inject.Singleton;
 
@@ -15,11 +15,11 @@ import javax.inject.Singleton;
  */
 @Singleton
 @IncomePacket(value = {@Opcode(0xd0), @Opcode(0x33)}, command = @Cmd(GoToLobbyCommand.class))
-public class RequestGotoLobbyDeserializer implements PacketDeserializer<RequestGotoLobbyDto> {
+public class RequestGotoLobbyDeserializer implements PacketDeserializer<VoidDto> {
 
     @Override
-    public RequestGotoLobbyDto deserialize(ByteBuf buffer) {
-        return RequestGotoLobbyDto.INSTANCE;
+    public VoidDto deserialize(ByteBuf buffer) {
+        return null;
     }
 
 }

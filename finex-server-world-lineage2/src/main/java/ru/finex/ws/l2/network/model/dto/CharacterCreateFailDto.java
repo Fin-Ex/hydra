@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.finex.core.network.NetworkCommandScoped;
 import ru.finex.network.netty.model.NetworkDto;
-import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 
 @Data
 @Builder
@@ -15,6 +14,6 @@ import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 @NetworkCommandScoped
 public class CharacterCreateFailDto implements NetworkDto {
 
-	private CharacterCreateReason error;
+	private int messageId;
 
 }

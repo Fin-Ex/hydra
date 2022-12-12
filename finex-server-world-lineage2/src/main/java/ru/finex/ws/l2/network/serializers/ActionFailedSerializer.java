@@ -9,6 +9,9 @@ import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
 
 import javax.inject.Singleton;
 
+/**
+ * @author finfan
+ */
 @Singleton
 @OutcomePacket(@Opcode(0x1F))
 public class ActionFailedSerializer implements PacketSerializer<ActionFailedDto> {

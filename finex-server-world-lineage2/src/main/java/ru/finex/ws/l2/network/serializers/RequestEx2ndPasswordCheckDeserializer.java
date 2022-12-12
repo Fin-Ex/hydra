@@ -6,7 +6,7 @@ import ru.finex.core.network.IncomePacket;
 import ru.finex.core.network.Opcode;
 import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.ws.l2.command.network.Ex2ndPasswordCheckCommand;
-import ru.finex.ws.l2.network.model.dto.RequestEx2ndPasswordCheckDto;
+import ru.finex.ws.l2.network.model.dto.VoidDto;
 
 import javax.inject.Singleton;
 
@@ -15,11 +15,11 @@ import javax.inject.Singleton;
  */
 @Singleton
 @IncomePacket(value = {@Opcode(0xd0), @Opcode(0xa6)}, command = @Cmd(Ex2ndPasswordCheckCommand.class))
-public class RequestEx2ndPasswordCheckDeserializer implements PacketDeserializer<RequestEx2ndPasswordCheckDto> {
+public class RequestEx2ndPasswordCheckDeserializer implements PacketDeserializer<VoidDto> {
 
     @Override
-    public RequestEx2ndPasswordCheckDto deserialize(ByteBuf buffer) {
-        return RequestEx2ndPasswordCheckDto.INSTANCE;
+    public VoidDto deserialize(ByteBuf buffer) {
+        return null;
     }
 
 }

@@ -17,7 +17,7 @@ public class CharacterCreateFailSerializer implements PacketSerializer<Character
 
     @Override
     public void serialize(CharacterCreateFailDto dto, ByteBuf buffer) {
-        buffer.writeIntLE(dto.getError().getId());
+        buffer.writeIntLE(dto.getMessageId());
     }
 
 }

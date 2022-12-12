@@ -6,7 +6,7 @@ import ru.finex.core.network.IncomePacket;
 import ru.finex.core.network.Opcode;
 import ru.finex.network.netty.serial.PacketDeserializer;
 import ru.finex.ws.l2.command.network.NewCharacterCommand;
-import ru.finex.ws.l2.network.model.dto.NewCharacterDto;
+import ru.finex.ws.l2.network.model.dto.VoidDto;
 
 import javax.inject.Singleton;
 
@@ -15,11 +15,11 @@ import javax.inject.Singleton;
  */
 @Singleton
 @IncomePacket(value = @Opcode(0x13), command = @Cmd(NewCharacterCommand.class))
-public class NewCharacterDeserializer implements PacketDeserializer<NewCharacterDto> {
+public class NewCharacterDeserializer implements PacketDeserializer<VoidDto> {
 
     @Override
-    public NewCharacterDto deserialize(ByteBuf buffer) {
-        return NewCharacterDto.INSTANCE;
+    public VoidDto deserialize(ByteBuf buffer) {
+        return null;
     }
 
 }
