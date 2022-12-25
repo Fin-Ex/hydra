@@ -12,9 +12,11 @@ import java.util.Optional;
  * @author m0nster.mind
  */
 @Valid
-public interface ClanComponentRepository extends CrudRepository<ClanComponentEntity, Integer> {
+public interface ClanComponentRepository extends CrudRepository<ClanComponentEntity, Integer>,
+    GameObjectRelationRepository<ClanComponentEntity> {
 
-    @Query("SELECT clan FROM ClanComponentEntity clan WHERE clan.gameObjectPersistenceId = :gameObjectPersistenceId")
+    @Query("SELECT e FROM ClanComponentEntity e WHERE e.gameObjectPersistenceId = :gameObjectPersistenceId")
+    @Override
     Optional<ClanComponentEntity> findByGameObjectPersistenceId(@NotNull Integer gameObjectPersistenceId);
 
 }

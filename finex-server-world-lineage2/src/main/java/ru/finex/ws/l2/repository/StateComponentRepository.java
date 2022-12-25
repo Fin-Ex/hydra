@@ -12,9 +12,11 @@ import java.util.Optional;
  * @author m0nster.mind
  */
 @Valid
-public interface StateComponentRepository extends CrudRepository<StateComponentEntity, Integer> {
+public interface StateComponentRepository extends CrudRepository<StateComponentEntity, Integer>,
+    GameObjectRelationRepository<StateComponentEntity> {
 
     @Query("SELECT e FROM StateComponentEntity e WHERE e.gameObjectPersistenceId = :gameObjectPersistenceId")
+    @Override
     Optional<StateComponentEntity> findByGameObjectPersistenceId(@NotNull Integer gameObjectPersistenceId);
 
 }
