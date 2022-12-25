@@ -1,5 +1,5 @@
 # FinEx World Server - Lineage 2
-## Create avatar
+## Create avatar (obsolete)
 ```sql
 do $$ 
 declare

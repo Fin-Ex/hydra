@@ -11,7 +11,8 @@ import javax.inject.Singleton;
  * @author m0nster.mind
  */
 @Singleton
-public class PlayerComponentPersistenceService extends AbstractComponentPersistenceService<PlayerComponentEntity>
+public class PlayerComponentPersistenceService
+    extends AbstractComponentPersistenceService<PlayerComponentEntity, PlayerComponentRepository>
     implements PersistenceService<PlayerComponentEntity> {
 
     @Inject

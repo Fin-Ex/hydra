@@ -10,9 +10,6 @@ import java.util.Optional;
  */
 public interface GameObjectRelationRepository<T extends GameObjectRelation> {
 
-    T create(T entity);
-    T update(T entity);
-
     Optional<T> findByGameObjectPersistenceId(@NotNull Integer gameObjectPersistenceId);
 
 }

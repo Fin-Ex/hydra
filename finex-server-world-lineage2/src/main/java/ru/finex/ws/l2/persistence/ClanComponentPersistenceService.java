@@ -11,7 +11,8 @@ import javax.inject.Singleton;
  * @author m0nster.mind
  */
 @Singleton
-public class ClanComponentPersistenceService extends AbstractComponentPersistenceService<ClanComponentEntity>
+public class ClanComponentPersistenceService
+    extends AbstractComponentPersistenceService<ClanComponentEntity, ClanComponentRepository>
     implements PersistenceService<ClanComponentEntity> {
 
     @Inject

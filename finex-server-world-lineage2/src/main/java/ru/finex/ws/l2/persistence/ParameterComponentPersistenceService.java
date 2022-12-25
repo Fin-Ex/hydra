@@ -11,7 +11,8 @@ import javax.inject.Singleton;
  * @author m0nster.mind
  */
 @Singleton
-public class ParameterComponentPersistenceService extends AbstractComponentPersistenceService<ParameterComponentEntity>
+public class ParameterComponentPersistenceService
+    extends AbstractComponentPersistenceService<ParameterComponentEntity, ParameterComponentRepository>
     implements PersistenceService<ParameterComponentEntity> {
 
     @Inject
