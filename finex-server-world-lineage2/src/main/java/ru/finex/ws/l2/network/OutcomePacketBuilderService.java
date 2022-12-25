@@ -5,25 +5,26 @@ import ru.finex.core.component.ComponentService;
 import ru.finex.core.hocon.ConfigResource;
 import ru.finex.core.object.GameObject;
 import ru.finex.network.netty.model.NetworkDto;
-import ru.finex.ws.l2.component.base.CoordinateComponent;
-import ru.finex.ws.l2.component.base.ParameterComponent;
-import ru.finex.ws.l2.component.base.StatComponent;
-import ru.finex.ws.l2.component.base.StatusComponent;
-import ru.finex.ws.l2.component.player.AbnormalComponent;
-import ru.finex.ws.l2.component.player.ClanComponent;
-import ru.finex.ws.l2.component.player.ClassComponent;
-import ru.finex.ws.l2.component.player.ClientComponent;
-import ru.finex.ws.l2.component.player.ColliderComponent;
-import ru.finex.ws.l2.component.player.CubicComponent;
-import ru.finex.ws.l2.component.player.MountComponent;
-import ru.finex.ws.l2.component.player.PlayerComponent;
-import ru.finex.ws.l2.component.player.RecommendationComponent;
-import ru.finex.ws.l2.component.player.SpeedComponent;
-import ru.finex.ws.l2.component.player.StateComponent;
-import ru.finex.ws.l2.component.player.StoreComponent;
+import ru.finex.ws.l2.component.AbnormalComponent;
+import ru.finex.ws.l2.component.ClanComponent;
+import ru.finex.ws.l2.component.ClassComponent;
+import ru.finex.ws.l2.component.ClientComponent;
+import ru.finex.ws.l2.component.ColliderComponent;
+import ru.finex.ws.l2.component.CoordinateComponent;
+import ru.finex.ws.l2.component.CubicComponent;
+import ru.finex.ws.l2.component.MountComponent;
+import ru.finex.ws.l2.component.ParameterComponent;
+import ru.finex.ws.l2.component.PlayerComponent;
+import ru.finex.ws.l2.component.RecommendationComponent;
+import ru.finex.ws.l2.component.SpeedComponent;
+import ru.finex.ws.l2.component.StatComponent;
+import ru.finex.ws.l2.component.StateComponent;
+import ru.finex.ws.l2.component.StatusComponent;
+import ru.finex.ws.l2.component.StoreComponent;
 import ru.finex.ws.l2.model.AuthFailReason;
 import ru.finex.ws.l2.model.entity.AvatarPrototypeView;
 import ru.finex.ws.l2.model.entity.PositionComponentEntity;
+import ru.finex.ws.l2.model.entity.StateComponentEntity;
 import ru.finex.ws.l2.model.enums.CharacterCreateReason;
 import ru.finex.ws.l2.model.enums.CharacterNameReason;
 import ru.finex.ws.l2.model.enums.Ex2ndPasswordReason;
@@ -31,6 +32,7 @@ import ru.finex.ws.l2.model.enums.RestartReason;
 import ru.finex.ws.l2.network.model.UserInfoComponent;
 import ru.finex.ws.l2.network.model.dto.AllFortressInfoDto;
 import ru.finex.ws.l2.network.model.dto.AuthLoginFailDto;
+import ru.finex.ws.l2.network.model.dto.ChangeMoveTypeDto;
 import ru.finex.ws.l2.network.model.dto.CharacterCreateFailDto;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectInfoDto;
 import ru.finex.ws.l2.network.model.dto.CharacterSelectedDto;
@@ -130,6 +132,10 @@ public class OutcomePacketBuilderService {
         return new IsCharacterNameCreatableDto(reason.getId());
     }
 
+    public NetworkDto charCreateFail(CharacterCreateReason reason) {
+        return new CharacterCreateFailDto(reason.getId());
+    }
+
     public NetworkDto passwordCheck(Ex2ndPasswordReason reason) {
         return new Ex2ndPasswordCheckDto(reason.getId());
     }
@@ -176,7 +182,7 @@ public class OutcomePacketBuilderService {
         return LeaveWorldDto.INSTANCE;
     }
 
-    public ValidateLocationDto validateLocation(GameObject gameObject) {
+    public NetworkDto validateLocation(GameObject gameObject) {
         CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
         return ValidateLocationDto.builder()
             .heading((int) component.getEntity().getH())
@@ -187,7 +193,7 @@ public class OutcomePacketBuilderService {
             .build();
     }
 
-    public MoveToLocationDto moveToLocation(GameObject gameObject) {
+    public NetworkDto moveToLocation(GameObject gameObject) {
         CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
         return MoveToLocationDto.builder()
             .runtimeId(gameObject.getRuntimeId())
@@ -200,7 +206,7 @@ public class OutcomePacketBuilderService {
             .build();
     }
 
-    public StopMoveDto stopMove(GameObject gameObject) {
+    public NetworkDto stopMove(GameObject gameObject) {
         CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
         PositionComponentEntity position = component.getEntity();
         return StopMoveDto.builder()
@@ -212,7 +218,13 @@ public class OutcomePacketBuilderService {
             .build();
     }
 
-    public CharacterCreateFailDto charCreateFail(CharacterCreateReason reason) {
-        return new CharacterCreateFailDto(reason.getId());
+    public NetworkDto changeMoveType(GameObject gameObject) {
+        StateComponent component = componentService.getComponent(gameObject, StateComponent.class);
+        StateComponentEntity entity = component.getEntity();
+        return ChangeMoveTypeDto.builder()
+            .runtimeId(gameObject.getRuntimeId())
+            .isRunning(entity.getIsRunning())
+            .build();
     }
+
 }

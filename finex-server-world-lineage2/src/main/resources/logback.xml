@@ -12,6 +12,7 @@
     <logger name="ru.finex.ws.l2.command" level="DEBUG"/>
     <logger name="ru.finex.ws.l2.network.codec" level="DEBUG"/>
     <logger name="ru.finex.ws.l2.service" level="DEBUG"/>
+    <logger name="ru.finex.ws.l2.network.serializers" level="DEBUG"/>
 
 
     <root level="info">

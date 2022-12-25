@@ -1,7 +1,7 @@
 package ru.finex.ws.l2.component.mapper;
 
 import ru.finex.core.prototype.ComponentPrototypeMapper;
-import ru.finex.ws.l2.component.player.ColliderComponent;
+import ru.finex.ws.l2.component.ColliderComponent;
 import ru.finex.ws.l2.component.prototype.ColliderPrototype;
 
 /**

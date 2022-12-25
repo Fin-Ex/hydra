@@ -13,7 +13,7 @@ import javax.inject.Singleton;
  */
 @Singleton
 @RequiredArgsConstructor(onConstructor_ = { @Inject})
-public class ClassComponentPersistenceService implements PersistenceService<ActiveClassComponentEntity> {
+public class ActiveClassComponentPersistenceService implements PersistenceService<ActiveClassComponentEntity> {
 
     private final ActiveClassComponentRepository repository;
 

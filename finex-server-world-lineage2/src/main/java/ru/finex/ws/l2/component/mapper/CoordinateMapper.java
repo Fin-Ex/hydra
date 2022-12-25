@@ -1,7 +1,7 @@
 package ru.finex.ws.l2.component.mapper;
 
 import ru.finex.core.prototype.ComponentPrototypeMapper;
-import ru.finex.ws.l2.component.base.CoordinateComponent;
+import ru.finex.ws.l2.component.CoordinateComponent;
 import ru.finex.ws.l2.component.prototype.CoordinatePrototype;
 
 /**

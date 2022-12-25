@@ -3,7 +3,7 @@ package ru.finex.ws.l2.service.component;
 import lombok.RequiredArgsConstructor;
 import ru.finex.core.component.ComponentService;
 import ru.finex.core.object.GameObject;
-import ru.finex.ws.l2.component.player.PlayerComponent;
+import ru.finex.ws.l2.component.PlayerComponent;
 import ru.finex.ws.l2.model.entity.PlayerComponentEntity;
 import ru.finex.ws.l2.repository.PlayerComponentRepository;
 
@@ -12,7 +12,7 @@ import javax.inject.Singleton;
 
 /**
  * @author m0nster.mind
- * @see ru.finex.ws.l2.component.player.PlayerComponent PlayerComponent
+ * @see PlayerComponent PlayerComponent
  */
 @Singleton
 @RequiredArgsConstructor(onConstructor_ = { @Inject })

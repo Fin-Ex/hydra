@@ -1,14 +1,12 @@
 package ru.finex.ws.l2.service.component;
 
 import lombok.RequiredArgsConstructor;
-import ru.finex.core.component.ComponentService;
 import ru.finex.core.component.impl.AbstractComponentLogicService;
 import ru.finex.core.math.vector.Vector3f;
 import ru.finex.core.object.GameObject;
-import ru.finex.core.tick.TickService;
-import ru.finex.ws.l2.component.base.CoordinateComponent;
-import ru.finex.ws.l2.component.player.ClientComponent;
-import ru.finex.ws.l2.component.player.SpeedComponent;
+import ru.finex.ws.l2.component.ClientComponent;
+import ru.finex.ws.l2.component.CoordinateComponent;
+import ru.finex.ws.l2.component.SpeedComponent;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.session.GameClient;
 
@@ -22,8 +20,6 @@ import javax.inject.Singleton;
 @RequiredArgsConstructor(onConstructor_ = {@Inject})
 public class CoordinateService extends AbstractComponentLogicService<CoordinateComponent> {
 
-    private final ComponentService componentService;
-    private final TickService tickService;
     private final OutcomePacketBuilderService packets;
 
     /**
@@ -32,13 +28,13 @@ public class CoordinateService extends AbstractComponentLogicService<CoordinateC
      * @param destination destination position
      */
     public void move(GameObject gameObject, Vector3f destination) {
-        CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
+        CoordinateComponent component = getComponent(gameObject);
         component.setStartMovementPosition(null);
         component.setDestination(destination);
     }
 
     public void setPosition(GameObject gameObject, Vector3f position) {
-        CoordinateComponent component = componentService.getComponent(gameObject, CoordinateComponent.class);
+        CoordinateComponent component = getComponent(gameObject);
         component.setPosition(position);
     }
 

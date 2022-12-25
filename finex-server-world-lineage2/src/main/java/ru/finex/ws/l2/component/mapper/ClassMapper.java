@@ -1,7 +1,7 @@
 package ru.finex.ws.l2.component.mapper;
 
 import ru.finex.core.prototype.ComponentPrototypeMapper;
-import ru.finex.ws.l2.component.player.ClassComponent;
+import ru.finex.ws.l2.component.ClassComponent;
 import ru.finex.ws.l2.component.prototype.ClassPrototype;
 import ru.finex.ws.l2.model.enums.ClassId;
 

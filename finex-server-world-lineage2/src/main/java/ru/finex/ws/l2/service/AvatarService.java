@@ -12,7 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 import ru.finex.core.component.ComponentService;
 import ru.finex.core.object.GameObject;
 import ru.finex.core.persistence.GameObjectPersistenceService;
-import ru.finex.ws.l2.component.player.PlayerComponent;
+import ru.finex.ws.l2.component.PlayerComponent;
 import ru.finex.ws.l2.model.enums.ClassId;
 import ru.finex.ws.l2.model.enums.Gender;
 import ru.finex.ws.l2.model.PlayerAppearanceClass;

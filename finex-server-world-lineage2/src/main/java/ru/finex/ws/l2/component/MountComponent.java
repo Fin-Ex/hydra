@@ -1,6 +1,7 @@
-package ru.finex.ws.l2.component.player;
+package ru.finex.ws.l2.component;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import ru.finex.ws.l2.model.MountType;
 import ru.finex.ws.model.component.AbstractComponent;
 
@@ -8,6 +9,7 @@ import ru.finex.ws.model.component.AbstractComponent;
  * @author m0nster.mind
  */
 @Data
+@EqualsAndHashCode(callSuper = true)
 public class MountComponent extends AbstractComponent {
 
     private int mountId;

@@ -112,6 +112,14 @@ create table if not exists game_object_stat_components(
 );
 create unique index if not exists game_object_stat_components_game_object_id_idx on game_object_stat_components(game_object_id);
 
+create table if not exists game_object_state_components(
+    id serial primary key,
+    game_object_id int unique not null references game_objects(id) on delete cascade on update cascade,
+    is_running bool not null,
+    is_sitting bool not null
+);
+create unique index if not exists game_object_state_components_game_object_id_idx on game_object_state_components(game_object_id);
+
 create table if not exists game_object_status_components(
     id serial primary key,
     game_object_id int unique not null references game_objects(id) on delete cascade on update cascade,
@@ -149,7 +157,7 @@ begin
         ('ru.finex.ws.l2.component.prototype.ClientPrototype', abstract_id, '{}'),
         ('ru.finex.ws.l2.component.prototype.AbnormalPrototype', abstract_id, '{}'),
         ('ru.finex.ws.l2.component.prototype.ClanPrototype', abstract_id, '{}'),
-        ('ru.finex.ws.l2.component.prototype.StatePrototype', abstract_id, '{}'),
+        ('ru.finex.ws.l2.component.prototype.StatePrototype', abstract_id, '{ "isRunning": true, "isSitting": false }'),
         ('ru.finex.ws.l2.component.prototype.StorePrototype', abstract_id, '{}'),
         ('ru.finex.ws.l2.component.prototype.CubicPrototype', abstract_id, '{}'),
         ('ru.finex.ws.l2.component.prototype.MountPrototype', abstract_id, '{}'),

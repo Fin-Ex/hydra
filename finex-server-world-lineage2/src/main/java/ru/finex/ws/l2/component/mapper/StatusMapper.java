@@ -1,7 +1,7 @@
 package ru.finex.ws.l2.component.mapper;
 
 import ru.finex.core.prototype.ComponentPrototypeMapper;
-import ru.finex.ws.l2.component.base.StatusComponent;
+import ru.finex.ws.l2.component.StatusComponent;
 import ru.finex.ws.l2.component.prototype.StatusPrototype;
 
 /**

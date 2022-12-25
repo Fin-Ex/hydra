@@ -1,7 +1,7 @@
 package ru.finex.ws.l2.network.serializers.userinfo;
 
 import io.netty.buffer.ByteBuf;
-import ru.finex.ws.l2.component.player.RecommendationComponent;
+import ru.finex.ws.l2.component.RecommendationComponent;
 import ru.finex.ws.l2.network.model.dto.UserInfoDto;
 
 import javax.inject.Singleton;

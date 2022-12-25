@@ -13,8 +13,9 @@ public class UIMoveTypeComponent implements UIComponentSerializer {
 
     @Override
     public void writeComponent(UserInfoDto dto, ByteBuf buffer) {
+        var entity = dto.getStateComponent().getEntity();
         buffer.writeByte(0x00); //FIXME finfan: _player.isInsideZone(ZoneId.WATER) ? 1 : _player.isFlyingMounted() ? 2 : 0
-        buffer.writeByte(dto.getStateComponent().isRunning() ? 0x01 : 0x00);
+        buffer.writeByte(entity.getIsRunning() ? 0x01 : 0x00);
     }
 
 }

@@ -1,17 +1,22 @@
-package ru.finex.ws.l2.component.base;
+package ru.finex.ws.l2.component;
 
-import lombok.Getter;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Setter;
 import ru.finex.core.persistence.PersistenceField;
 import ru.finex.ws.l2.model.entity.StatComponentEntity;
-import ru.finex.ws.l2.persistence.PlayerComponentPersistenceService;
-import ru.finex.ws.l2.persistence.StatComponentPersistenceService;
 import ru.finex.ws.model.component.AbstractComponent;
 
 /**
  * @author finfan
  */
+@Data
+@EqualsAndHashCode(callSuper = true)
 public class StatComponent extends AbstractComponent {
-	@Getter
-	@PersistenceField(StatComponentPersistenceService.class)
+
+	@Setter(AccessLevel.NONE)
+	@PersistenceField
 	private StatComponentEntity entity = new StatComponentEntity();
+
 }

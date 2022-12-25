@@ -1,11 +1,12 @@
-package ru.finex.ws.l2.component.base;
+package ru.finex.ws.l2.component;
 
-import lombok.Getter;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Setter;
 import ru.finex.core.math.vector.Vector3f;
 import ru.finex.core.persistence.PersistenceField;
 import ru.finex.ws.l2.model.entity.PositionComponentEntity;
-import ru.finex.ws.l2.persistence.PositionComponentPersistence;
 import ru.finex.ws.model.component.AbstractComponent;
 
 /**
@@ -13,18 +14,15 @@ import ru.finex.ws.model.component.AbstractComponent;
  *
  * @author m0nster.mind
  */
+@Data
+@EqualsAndHashCode(callSuper = true)
 public class CoordinateComponent extends AbstractComponent {
 
-    @Getter
-    @PersistenceField(PositionComponentPersistence.class)
+    @Setter(AccessLevel.NONE)
+    @PersistenceField
     private PositionComponentEntity entity = new PositionComponentEntity();
 
-    @Getter
-    @Setter
     private Vector3f destination;
-
-    @Getter
-    @Setter
     private Vector3f startMovementPosition;
 
     public Vector3f getPositionAsVector3f() {

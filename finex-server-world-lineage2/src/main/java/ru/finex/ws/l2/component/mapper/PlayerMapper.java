@@ -1,7 +1,7 @@
 package ru.finex.ws.l2.component.mapper;
 
 import ru.finex.core.prototype.ComponentPrototypeMapper;
-import ru.finex.ws.l2.component.player.PlayerComponent;
+import ru.finex.ws.l2.component.PlayerComponent;
 import ru.finex.ws.l2.component.prototype.PlayerPrototype;
 import ru.finex.ws.l2.model.PvpMode;
 

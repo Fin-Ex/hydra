@@ -1,5 +1,7 @@
-package ru.finex.ws.l2.component.player;
+package ru.finex.ws.l2.component;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import ru.finex.ws.l2.model.AbnormalEffect;
 import ru.finex.ws.model.component.AbstractComponent;
 
@@ -9,6 +11,8 @@ import java.util.Set;
 /**
  * @author m0nster.mind
  */
+@ToString
+@EqualsAndHashCode(callSuper = true)
 public class AbnormalComponent extends AbstractComponent {
 
     private final Set<AbnormalEffect> abnormals = new HashSet<>();
