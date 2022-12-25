@@ -12,7 +12,6 @@ import ru.finex.ws.l2.component.ClientComponent;
 import ru.finex.ws.l2.component.CubicComponent;
 import ru.finex.ws.l2.component.MountComponent;
 import ru.finex.ws.l2.component.RecommendationComponent;
-import ru.finex.ws.l2.component.StateComponent;
 import ru.finex.ws.l2.component.StoreComponent;
 import ru.finex.ws.l2.component.VisualEquipComponent;
 import ru.finex.ws.l2.component.prototype.AbnormalPrototype;
@@ -21,7 +20,6 @@ import ru.finex.ws.l2.component.prototype.ClientPrototype;
 import ru.finex.ws.l2.component.prototype.CubicPrototype;
 import ru.finex.ws.l2.component.prototype.MountPrototype;
 import ru.finex.ws.l2.component.prototype.RecommendationPrototype;
-import ru.finex.ws.l2.component.prototype.StatePrototype;
 import ru.finex.ws.l2.component.prototype.StorePrototype;
 import ru.finex.ws.l2.component.prototype.VisualEquipPrototype;
 
@@ -34,7 +32,6 @@ import ru.finex.ws.l2.component.prototype.VisualEquipPrototype;
 @Register(prototype = CubicPrototype.class, component = CubicComponent.class)
 @Register(prototype = MountPrototype.class, component = MountComponent.class)
 @Register(prototype = RecommendationPrototype.class, component = RecommendationComponent.class)
-@Register(prototype = StatePrototype.class, component = StateComponent.class)
 @Register(prototype = StorePrototype.class, component = StoreComponent.class)
 @Register(prototype = VisualEquipPrototype.class, component = VisualEquipComponent.class)
 @RequiredArgsConstructor
