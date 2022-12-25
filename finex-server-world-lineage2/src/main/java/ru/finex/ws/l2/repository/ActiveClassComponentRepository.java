@@ -14,7 +14,7 @@ import java.util.Optional;
 @Valid
 public interface ActiveClassComponentRepository extends CrudRepository<ActiveClassComponentEntity, Integer> {
 
-    @Query("SELECT component FROM ActiveClassComponentEntity component WHERE component.gameObjectPersistenceId = :gameObjectPersistenceId")
+    @Query("SELECT e FROM ActiveClassComponentEntity e WHERE e.gameObjectPersistenceId = :gameObjectPersistenceId")
     Optional<ActiveClassComponentEntity> findByGameObjectPersistenceId(@NotNull Integer gameObjectPersistenceId);
 
 }

@@ -14,7 +14,7 @@ import java.util.List;
 @Valid
 public interface InactiveClassComponentRepository extends CrudRepository<InactiveClassComponentEntity, Integer> {
 
-    @Query("SELECT component FROM ClassComponentEntity component WHERE component.gameObjectPersistenceId = :gameObjectPersistenceId")
+    @Query("SELECT e FROM InactiveClassComponentEntity e WHERE e.gameObjectPersistenceId = :gameObjectPersistenceId")
     List<InactiveClassComponentEntity> findByGameObjectPersistenceId(@NotNull Integer gameObjectPersistenceId);
 
 }
