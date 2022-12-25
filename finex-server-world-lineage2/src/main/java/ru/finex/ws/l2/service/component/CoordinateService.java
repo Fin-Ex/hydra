@@ -1,20 +1,17 @@
 package ru.finex.ws.l2.service.component;
 
 import lombok.RequiredArgsConstructor;
-import ru.finex.core.component.Component;
 import ru.finex.core.component.ComponentService;
+import ru.finex.core.component.impl.AbstractComponentLogicService;
 import ru.finex.core.math.vector.Vector3f;
 import ru.finex.core.object.GameObject;
+import ru.finex.core.tick.TickService;
 import ru.finex.ws.l2.component.base.CoordinateComponent;
 import ru.finex.ws.l2.component.player.ClientComponent;
 import ru.finex.ws.l2.component.player.SpeedComponent;
 import ru.finex.ws.l2.network.OutcomePacketBuilderService;
 import ru.finex.ws.l2.network.session.GameClient;
-import ru.finex.ws.tick.RegisterTick;
-import ru.finex.ws.tick.TickService;
-import ru.finex.ws.tick.TickStage;
 
-import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -23,7 +20,7 @@ import javax.inject.Singleton;
  */
 @Singleton
 @RequiredArgsConstructor(onConstructor_ = {@Inject})
-public class CoordinateService {
+public class CoordinateService extends AbstractComponentLogicService<CoordinateComponent> {
 
     private final ComponentService componentService;
     private final TickService tickService;
@@ -45,15 +42,8 @@ public class CoordinateService {
         component.setPosition(position);
     }
 
-    @RegisterTick(TickStage.PHYSICS)
-    public void onPhysicsUpdate() {
-        List<Component> components = componentService.getComponents(CoordinateComponent.class);
-        for (int i = 0; i < components.size(); i++) {
-            onPhysicsUpdateComponent((CoordinateComponent) components.get(i));
-        }
-    }
-
-    private void onPhysicsUpdateComponent(CoordinateComponent component) {
+    @Override
+    protected void onPhysics(CoordinateComponent component) {
         Vector3f target = component.getDestination();
         if (target == null) {
             return;
