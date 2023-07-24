@@ -15,10 +15,10 @@ public enum PlayerAppearanceClass {
         public ClassId getClassId(Race race, Gender gender) throws AppearanceClassNotFoundException {
             return switch (race) {
                 case HUMAN -> ClassId.HUMAN_FIGHTER;
-                case ELF -> ClassId.ElvenFighter;
-                case DARK_ELF -> ClassId.DarkFighter;
-                case ORC -> ClassId.OrcFighter;
-                case DWARF -> ClassId.DwarvenFighter;
+                case ELF -> ClassId.ELVEN_FIGHTER;
+                case DARK_ELF -> ClassId.DARK_FIGHTER;
+                case ORC -> ClassId.ORC_FIGHTER;
+                case DWARF -> ClassId.DWARVEN_FIGHTER;
                 case KAMAEL -> switch (gender) {
                     case MALE -> ClassId.MALE_SOLDIER;
                     case FEMALE -> ClassId.FEMALE_SOLDIER;
@@ -34,10 +34,10 @@ public enum PlayerAppearanceClass {
         public ClassId getClassId(Race race, Gender gender) throws AppearanceClassNotFoundException {
             return switch (race) {
                 case HUMAN -> ClassId.HUMAN_MYSTIC;
-                case ELF -> ClassId.ElvenWizard;
-                case DARK_ELF -> ClassId.DarkWizard;
-                case ORC -> ClassId.OrcMystic;
-                case DWARF -> ClassId.DwarvenFighter;
+                case ELF -> ClassId.ELVEN_MYSTIC;
+                case DARK_ELF -> ClassId.DARK_MYSTIC;
+                case ORC -> ClassId.ORC_MYSTIC;
+                case DWARF -> ClassId.DWARVEN_FIGHTER;
                 case KAMAEL -> switch (gender) {
                     case MALE -> ClassId.MALE_SOLDIER;
                     case FEMALE -> ClassId.FEMALE_SOLDIER;

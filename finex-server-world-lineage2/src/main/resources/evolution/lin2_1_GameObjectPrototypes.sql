@@ -164,6 +164,9 @@ begin
         ('ru.finex.ws.l2.component.prototype.RecommendationPrototype', abstract_id, '{}'),
         ('ru.finex.ws.l2.component.prototype.VisualEquipPrototype', abstract_id, '{}');;
 
+#   ---------------------
+#   -- HUMAN Classes
+#   ---------------------
     insert into game_object_prototypes("name", parent_id) values ('player_abstract_human', abstract_id) returning id into abstract_race_id;;
     insert into game_object_component_prototypes(component, prototype_id, data) values
         ('ru.finex.ws.l2.component.prototype.CoordinatePrototype', abstract_race_id, '{ "x": -114539, "y": 260101, "z": -1192 }'),
@@ -208,6 +211,258 @@ begin
     insert into game_object_component_prototypes(component, prototype_id, data) values
         ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 6.5, "height": 22.5 }'),
         ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+#   ---------------------
+#   -- ELVEN Classes
+#   ---------------------
+    insert into game_object_prototypes("name", parent_id) values ('player_abstract_elf', abstract_id) returning id into abstract_race_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.CoordinatePrototype', abstract_race_id, '{ "x": -114628, "y": 259915, "z": -1192 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_race_id, '{ "race": "ELF" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_race_id, '{ "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_race_id, '{ "criticalRate": 4, "magicCriticalRate": 5 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_elven_fighter', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 89, "maxHp": 89, "mp": 30, "maxMp": 30, "cp": 35, "maxCp": 35 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 18 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "FIGHTER" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 90, "runSpeed": 143, "swimSpeed": 50, "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 82, "dex": 61, "con": 82, "int": 41, "wit": 38, "men": 37, "luc": 34, "cha": 41 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 4, "mAtk": 6, "pDef": 79, "mDef": 32 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_elven_fighter_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7.5, "height": 24 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_elven_fighter_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7.5, "height": 23 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_elven_mystic', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 104, "maxHp": 104, "mp": 40, "maxMp": 40, "cp": 52, "maxCp": 52 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 25 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "WIZARD" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 85, "runSpeed": 129, "swimSpeed": 50 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 36, "dex": 32, "con": 38, "int": 74, "wit": 84, "men": 77, "luc": 34, "cha": 41 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 3, "mAtk": 6, "pDef": 54, "mDef": 32 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_elven_mystic_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7.5, "height": 24 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_elven_mystic_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7.5, "height": 23 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+#   ---------------------
+#   -- DARK ELVEN Classes
+#   ---------------------
+    insert into game_object_prototypes("name", parent_id) values ('player_abstract_dark_elf', abstract_id) returning id into abstract_race_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.CoordinatePrototype', abstract_race_id, '{ "x": -114628, "y": 259915, "z": -1192 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_race_id, '{ "race": "DARK_ELF" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_race_id, '{ "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_race_id, '{ "criticalRate": 4, "magicCriticalRate": 5 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_dark_fighter', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 94, "maxHp": 94, "mp": 30, "maxMp": 30, "cp": 37, "maxCp": 37 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 31 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "FIGHTER" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 85, "runSpeed": 139, "swimSpeed": 50, "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 92, "dex": 56, "con": 77, "int": 42, "wit": 39, "men": 35, "luc": 32, "cha": 43 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 4, "mAtk": 6, "pDef": 80, "mDef": 41 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_dark_fighter_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7.5, "height": 24 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_dark_fighter_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7, "height": 23.5 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_dark_mystic', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 106, "maxHp": 106, "mp": 40, "maxMp": 40, "cp": 53, "maxCp": 53 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 38 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "WIZARD" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 85, "runSpeed": 128, "swimSpeed": 50 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 39, "dex": 30, "con": 37, "int": 85, "wit": 77, "men": 73, "luc": 32, "cha": 43 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 3, "mAtk": 6, "pDef": 54, "mDef": 32 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_dark_mystic_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7.5, "height": 24 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_dark_mystic_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7.5, "height": 23 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+#   ---------------------
+#   -- ORC Classes
+#   ---------------------
+    insert into game_object_prototypes("name", parent_id) values ('player_abstract_orc', abstract_id) returning id into abstract_race_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.CoordinatePrototype', abstract_race_id, '{ "x": -114628, "y": 259915, "z": -1192 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_race_id, '{ "race": "ORC" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_race_id, '{ "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_race_id, '{ "criticalRate": 4, "magicCriticalRate": 5 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_orc_fighter', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 80, "maxHp": 80, "mp": 30, "maxMp": 30, "cp": 40, "maxCp": 40 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 44 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "FIGHTER" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 70, "runSpeed": 130, "swimSpeed": 50, "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 88, "dex": 50, "con": 87, "int": 37, "wit": 38, "men": 41, "luc": 32, "cha": 43 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 4, "mAtk": 6, "pDef": 80, "mDef": 41 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_orc_fighter_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 11, "height": 28 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_orc_fighter_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7, "height": 27 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_orc_mystic', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 95, "maxHp": 95, "mp": 40, "maxMp": 40, "cp": 47.5, "maxCp": 47.5 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 49 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "WIZARD" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 85, "runSpeed": 128, "swimSpeed": 50 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 40, "dex": 23, "con": 43, "int": 77, "wit": 74, "men": 84, "luc": 32, "cha": 43 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 3, "mAtk": 6, "pDef": 54, "mDef": 32 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_orc_mystic_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7, "height": 27.5 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_orc_mystic_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 8, "height": 25.5 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+#   ---------------------
+#   -- DWARF Classes
+#   -- * Have only fighter class type
+#   ---------------------
+    insert into game_object_prototypes("name", parent_id) values ('player_abstract_dwarf', abstract_id) returning id into abstract_race_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.CoordinatePrototype', abstract_race_id, '{ "x": -114628, "y": 259915, "z": -1192 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_race_id, '{ "race": "DWARF" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_race_id, '{ "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_race_id, '{ "criticalRate": 4, "magicCriticalRate": 5 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_dwarven_fighter', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 80, "maxHp": 80, "mp": 30, "maxMp": 30, "cp": 56, "maxCp": 56 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 53 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "FIGHTER" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 80, "runSpeed": 131, "swimSpeed": 50, "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 87, "dex": 53, "con": 85, "int": 39, "wit": 37, "men": 40, "luc": 35, "cha": 40 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 4, "mAtk": 6, "pDef": 80, "mDef": 41 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_dwarven_fighter_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 9, "height": 18 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_dwarven_fighter_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 5, "height": 19 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+#   ---------------------
+#   -- KAMAEL Classes
+#   -- * Have different male & female base classes
+#   ---------------------
+    insert into game_object_prototypes("name", parent_id) values ('player_abstract_kamael', abstract_id) returning id into abstract_race_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.CoordinatePrototype', abstract_race_id, '{ "x": -114628, "y": 259915, "z": -1192 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_race_id, '{ "race": "KAMAEL" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_race_id, '{ "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_race_id, '{ "criticalRate": 4, "magicCriticalRate": 5 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_male_soldier', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 95, "maxHp": 95, "mp": 30, "maxMp": 30, "cp": 47.5, "maxCp": 47.5 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 123 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "FIGHTER" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 87, "runSpeed": 140, "swimSpeed": 50, "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 88, "dex": 57, "con": 80, "int": 43, "wit": 36, "men": 37, "luc": 33, "cha": 42 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 4, "mAtk": 6, "pDef": 80, "mDef": 41 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_male_soldier_male', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 8, "height": 25.2 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_female_soldier', abstract_race_id) returning id into abstract_class_id;;
+        insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 97, "maxHp": 97, "mp": 40, "maxMp": 40, "cp": 48.5, "maxCp": 48.5 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 124 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "FIGHTER" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 87, "runSpeed": 140, "swimSpeed": 50, "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 88, "dex": 57, "con": 80, "int": 43, "wit": 36, "men": 37, "luc": 33, "cha": 42 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 4, "mAtk": 6, "pDef": 80, "mDef": 41 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_female_soldier_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 7, "height": 22.6 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "FEMALE" }');;
+
+#   ---------------------
+#   -- ERTHEIA Classes
+#   -- * Don't have a male classes
+#   ---------------------
+    insert into game_object_prototypes("name", parent_id) values ('player_abstract_ertheia', abstract_id) returning id into abstract_race_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.CoordinatePrototype', abstract_race_id, '{ "x": -114628, "y": 259915, "z": -1192 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_race_id, '{ "race": "ERTHEIA" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_race_id, '{ "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_race_id, '{ "criticalRate": 4, "magicCriticalRate": 5 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_ertheia_fighter', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 80, "maxHp": 80, "mp": 30, "maxMp": 30, "cp": 40, "maxCp": 40 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 182 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "FIGHTER" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 88, "runSpeed": 141, "swimSpeed": 50, "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 89, "dex": 52, "con": 84, "int": 40, "wit": 37, "men": 39, "luc": 34, "cha": 41 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 4, "mAtk": 6, "pDef": 80, "mDef": 41 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_ertheia_fighter_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 6.5, "height": 19.2 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_ertheia_wizard', abstract_race_id) returning id into abstract_class_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.StatusPrototype', abstract_class_id, '{ "hp": 101, "maxHp": 101, "mp": 40, "maxMp": 40, "cp": 50.5, "maxCp": 50.5 }'),
+        ('ru.finex.ws.l2.component.prototype.ClassPrototype', abstract_class_id, '{ "classId": 183 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', abstract_class_id, '{ "appearanceClass": "WIZARD" }'),
+        ('ru.finex.ws.l2.component.prototype.SpeedPrototype', abstract_class_id, '{ "walkSpeed": 86, "runSpeed": 131, "swimSpeed": 50, "attackSpeed": 300, "castSpeed": 333 }'),
+        ('ru.finex.ws.l2.component.prototype.ParameterPrototype', abstract_class_id, '{ "str": 37, "dex": 27, "con": 42, "int": 78, "wit": 76, "men": 81, "luc": 34, "cha": 41 }'),
+        ('ru.finex.ws.l2.component.prototype.StatPrototype', abstract_class_id, '{ "pAtk": 4, "mAtk": 6, "pDef": 54, "mDef": 41 }');;
+
+    insert into game_object_prototypes("name", parent_id) values ('player_ertheia_wizard_female', abstract_class_id) returning id into proto_id;;
+    insert into game_object_component_prototypes(component, prototype_id, data) values
+        ('ru.finex.ws.l2.component.prototype.ColliderPrototype', proto_id, '{ "width": 6.5, "height": 19.2 }'),
+        ('ru.finex.ws.l2.component.prototype.PlayerPrototype', proto_id, '{ "gender": "MALE" }');;
 end $$;
 
 create or replace view game_object_avatars as
