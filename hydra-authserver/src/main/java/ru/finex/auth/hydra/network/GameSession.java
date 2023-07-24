@@ -23,6 +23,8 @@ import javax.inject.Inject;
 @NetworkCommandScoped
 public class GameSession extends AbstractClientSession implements ClientSession {
 
+    private static final String CTX_LOGIN = "Login";
+
     @Getter
     private final AuthSession data = new AuthSession();
 
@@ -47,6 +49,14 @@ public class GameSession extends AbstractClientSession implements ClientSession 
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         super.channelInactive(ctx);
         eventBus.notify(new SessionDisconnected(this));
+    }
+
+    public String getLogin() {
+        return getContext().get(CTX_LOGIN).toString();
+    }
+
+    public void setLogin(String login) {
+        getContext().put(CTX_LOGIN, login);
     }
 
     @Override

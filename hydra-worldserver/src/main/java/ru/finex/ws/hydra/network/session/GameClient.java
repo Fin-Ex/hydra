@@ -28,6 +28,8 @@ import javax.inject.Inject;
 @NetworkCommandScoped
 public final class GameClient extends AbstractClientSession implements ClientSession {
 
+	private static final String CTX_LOGIN = "Login";
+
 	@Getter private final WorldSession data = new WorldSession();
 
 	@Getter @Setter private GameClientState state = GameClientState.NOT_CONNECTED;
@@ -62,6 +64,14 @@ public final class GameClient extends AbstractClientSession implements ClientSes
 	public void setCryptKey(byte[] blowfishKey) {
 		PayloadCodec crypt = (PayloadCodec) getChannel().pipeline().get("crypt");
 		crypt.setKey(blowfishKey);
+	}
+
+	public String getLogin() {
+		return getContext().get(CTX_LOGIN).toString();
+	}
+
+	public void setLogin(String login) {
+		getContext().put(CTX_LOGIN, login);
 	}
 
 	@Override
