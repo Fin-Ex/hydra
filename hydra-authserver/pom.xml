@@ -106,7 +106,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ru.finex.as.WorldServerApplication</mainClass>
+                            <mainClass>ru.finex.auth.AuthServerApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
