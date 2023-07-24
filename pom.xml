@@ -3,12 +3,12 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>ru.finex.l2</groupId>
-	<artifactId>finex-lineage2</artifactId>
+	<groupId>ru.finex.hydra</groupId>
+	<artifactId>hydra</artifactId>
 	<version>helios64-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>FinEx Lineage 2 Server</name>
+	<name>FinEx Hydra Server</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,14 +35,14 @@
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<url>https://maven.pkg.github.com/Fin-Ex/finex-server-l2</url>
+			<url>https://maven.pkg.github.com/Fin-Ex/hydra</url>
 		</repository>
 	</distributionManagement>
 
 	<modules>
-		<module>finex-server-world-lineage2</module>
-		<module>finex-server-auth-lineage2</module>
-        <module>finex-server-transport-lineage2</module>
+		<module>hydra-worldserver</module>
+		<module>hydra-authserver</module>
+        <module>hydra-transport</module>
     </modules>
 
 </project>

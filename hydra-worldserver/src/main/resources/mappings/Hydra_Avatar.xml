@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings version="3.1" xmlns="https://jakarta.ee/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence/orm https://jakarta.ee/xml/ns/persistence/orm/orm_3_1.xsd">
+
+    <named-native-query name="AvatarRepository.findPrototypeByName">
+        <query>
+            <![CDATA[
+with prototypes as (
+	with recursive prototypes as (
+			with recursive game_object_sets as (
+					select id, "name", parent_id, 1 as "order"
+							from game_object_prototypes
+							where "name" = :name
+					union
+					select game_objects.id, game_objects."name", game_objects.parent_id, game_object_sets."order" + 1 as "order"
+							from game_object_prototypes game_objects
+							join game_object_sets on game_object_sets.parent_id = game_objects.id
+			)
+			select prototype.*, game_object."name", game_object."order"
+					from game_object_sets game_object
+					join game_object_component_prototypes prototype on game_object.id = prototype.prototype_id
+			union
+			select prototype.*, prototypes."name", prototypes."order" + 1 as "order"
+					from game_object_component_prototypes prototype
+					join prototypes on prototypes.parent_id = prototype.id
+	)
+	select component, jsonb_merge_object(data) as data
+			from prototypes
+			group by component
+),
+player_proto as (
+	select
+		data->>'race' race,
+		data->>'gender' gender,
+		data->>'appearanceClass' appearance_class
+	from prototypes
+	where component = 'ru.finex.ws.hydra.component.prototype.PlayerPrototype'
+),
+parameter_proto as (
+	select
+		cast(data->>'str' as int) str,
+		cast(data->>'dex' as int) dex,
+		cast(data->>'con' as int) con,
+		cast(data->>'int' as int) "int",
+		cast(data->>'wit' as int) wit,
+		cast(data->>'men' as int) men,
+		cast(data->>'luc' as int) luc,
+		cast(data->>'cha' as int) cha
+	from prototypes
+	where component = 'ru.finex.ws.hydra.hydra.component.prototype.ParameterPrototype'
+)
+select
+	player_proto.race race,
+	player_proto.gender gender,
+	player_proto.appearance_class appearance_class,
+	parameter_proto.str str,
+	parameter_proto.dex dex,
+	parameter_proto.con con,
+	parameter_proto."int" "int",
+	parameter_proto.wit wit,
+	parameter_proto.men men,
+	parameter_proto.luc luc,
+	parameter_proto.cha cha
+from player_proto, parameter_proto
+]]>
+        </query>
+    </named-native-query>
+</entity-mappings>

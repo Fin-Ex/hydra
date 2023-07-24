@@ -1,0 +1,6 @@
+FROM eclipse-temurin:17.0.1_12-jdk-alpine
+MAINTAINER m0nster.mind
+WORKDIR /
+ADD target/hydra-worldserver.jar hydra-worldserver.jar
+EXPOSE 54327 11000-11050
+ENTRYPOINT ["java", "-jar", "hydra-worldserver.jar"]

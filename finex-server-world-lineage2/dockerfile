@@ -1,6 +1,0 @@
-FROM eclipse-temurin:17.0.1_12-jdk-alpine
-MAINTAINER m0nster.mind
-WORKDIR /
-ADD target/finex-world-lineage2.jar finex-world-lineage2.jar
-EXPOSE 54327 11000-11050
-ENTRYPOINT ["java", "-jar", "finex-world-lineage2.jar"]
