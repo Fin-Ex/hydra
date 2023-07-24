@@ -1,4 +1,4 @@
-# FinEx Auth Server - Lineage 2
+# Hydra Auth Server
 ## Create account
 Account test/test
 ```sql

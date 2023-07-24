@@ -1,4 +1,4 @@
-# FinEx World Server - Lineage 2
+# Hydra World Server
 ## Create avatar (obsolete)
 ```sql
 do $$ 
